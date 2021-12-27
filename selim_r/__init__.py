@@ -14,24 +14,26 @@ from flask import Flask, render_template
 #app = Flask(__name__)
 
 if __name__ == '__main__':
-    print('Damit der Server startet, müsst ihr die app.py eine ebene höher starten :)')
+    print('Ihr müsst ein  Verzeichnis "drüber", wo ,app.py drin ist den Befehl "flask run" im Terminal eingeben '
+          'oder "python app.py" als Befehl im Terminal eingeben, oder '
+          'das über den Playbutton oben rechts in PyCharm einstellen ')
+
+#wir generieren einfach jedes Mal einen neuen Secret Key beim Testen
+secret = os.urandom(20)
+
 
 def create_app(test_config=None):
-    # wir generieren einfach jedes Mal einen neuen Secret Key beim Testen
-
-    secret = os.urandom(20)
-
     app = Flask(__name__, instance_relative_config=True)
-
-    print('Server app created.')
-
     app.config.from_mapping(
     ENV="development",
     TESTING=True,
     SECRET_KEY=secret,
-    DEBUG=True)
+    DEBUG=True,
 
-    print('Config loaded. Debug: '+str(app.debug))
+    #DATABASE=os.path.join(app.instance_path, 'localDB.sqlite'),
+    )
+
+    print('Config loaded, Debug is: '+str(app.debug))
 
     #db.init_app(app)
     with app.app_context():

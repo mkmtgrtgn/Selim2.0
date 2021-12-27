@@ -24,13 +24,16 @@ from selim_r import create_app
 print('Starting Server')
 
 if __name__ == '__main__':
-    print('Den Server müsstet ihr hier über die Konsole mit dem '
-          'Befehl "flask run" starten oder oben links neben dem Play-Symboleinstellen,'
-          ' dass Flask gestartet wird :)')
+    print('Den Server müsstet ihr in diesem Verzeichnis mit "flask run" höher starten '
+          'oder in PyCharm Flask als Interpreter für das Projekt  auswählen :)')
+
 
 app = create_app()
-if __name__ == 'main':
+if __name__ == 'main' or __name__ =='__main__':
     app.run()
+    if __name__ == '__main__':
+        print('Den Server könnt ihr in diesem Verzeichnis auch mit "flask run" starten '
+              'oder in PyCharm Flask als Interpreter für das Projekt  auswählen :)')
 
     print('Server running')
 '''
