@@ -48,8 +48,8 @@ Wenn ihr Fragen habt macht sie bitte am Besten im Learnweb Forum oder in GitHub 
 
    
 Wenn ihr schon ein bisschen mehr machen wollt, könnt ihr in main.py auch eigene Routen und HTML Dateien erstellen nach dem Muster:</br>
-   @main_bp.route('/meineWunschURL')</br>
-    > def wasIhrWolltAberMerkenBrauchtManSpäterFürAndereSachen():</p>
+@main_bp.route('/meineWunschURL')</br>
+     def wasIhrWolltAberMerkenBrauchtManSpäterFürAndereSachen():</p>
     > > return render_template('name_von_eurem.html', seitenname='Ich werde bei den Tabs als Title angezeigt')</p>
    
    
