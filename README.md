@@ -12,7 +12,7 @@ Ablauf um den Server zu starten: </br>
 1. einfacherer Weg : Ggf. Entwicklungsumgebung wie PyCharm für Python installieren ( https://www.jetbrains.com/shop/eform/students ) 
    Dann könnt ihr einfach app.py -> Rechtsklick -> Run  starten :)</br>
    
-1*.Um den Server zu Starten navigiert ihr in der CLI / Terminal / Konsole in das Verzeichnis Selim (nicht selim_r) 
+1.* Um den Server zu Starten navigiert ihr in der CLI / Terminal / Konsole in das Verzeichnis Selim (nicht selim_r) 
    (ihr seid in .../Überverzeichnis/Selim, Inhalt: selium_r, requirements.txt, app.py, etc. ) 
    schreibt "flask run" und der Server startet auf 127.0.0.1:5000</br>
    
