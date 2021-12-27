@@ -23,6 +23,11 @@ from selim_r import create_app
 
 print('Starting Server')
 
+if __name__ == '__main__':
+    print('Den Server müsstet ihr hier über die Konsole mit dem '
+          'Befehl "flask run" starten oder oben links neben dem Play-Symboleinstellen,'
+          ' dass Flask gestartet wird :)')
+
 app = create_app()
 if __name__ == 'main':
     app.run()

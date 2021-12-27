@@ -13,20 +13,25 @@ from flask import Flask, render_template
 
 #app = Flask(__name__)
 
-#wir generieren einfach jedes Mal einen neuen Secret Key beim Testen
-secret = os.urandom(20)
-
+if __name__ == '__main__':
+    print('Damit der Server startet, müsst ihr die app.py eine ebene höher starten :)')
 
 def create_app(test_config=None):
+    # wir generieren einfach jedes Mal einen neuen Secret Key beim Testen
+
+    secret = os.urandom(20)
+
     app = Flask(__name__, instance_relative_config=True)
+
+    print('Server app created.')
+
     app.config.from_mapping(
     ENV="development",
     TESTING=True,
     SECRET_KEY=secret,
-    DEBUG=True,
+    DEBUG=True)
 
-    #DATABASE=os.path.join(app.instance_path, 'localDB.sqlite'),
-    )
+    print('Config loaded. Debug: '+str(app.debug))
 
     #db.init_app(app)
     with app.app_context():
