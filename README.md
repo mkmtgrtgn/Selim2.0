@@ -2,13 +2,55 @@
 Ein Projekt um die Selim Seite wieder aufzufrischen.
 Bisher habe ich einen kleinen Server außenrum gebaut und ein grundlegendes Template - das alles kann und soll gerne noch überarbeitet und erweitert werden :)
 
-Grundlegender Ablauf um den Server zu starten: 
-1. Python3 muss auf eurem Rechner installiert sein ( und die verwendeten Bibliotheken https://pip.pypa.io/en/stable/user_guide/#requirements-files ) 
-1. einfacherer Weg : Ggf. Entwicklungsumgebung wie PyCharm für Python installieren ( https://www.jetbrains.com/shop/eform/students )
-2. Im CLI / Terminal / Konsole navigiert ihr in das Verzeichnis Selim (nicht selim_r) (ihr seid in .../Überverzeichnis/Selim ) 
-   schreibt "flask run" und der Server startet auf 127.0.0.1:5000 -- über PyCharm könnt ihr einfach app.py -> Rechtsklick -> Run  starten :)
-   Gebt ihr jetzt die IP 127.0.0.1:5000 in der URL-Zeile des Browsers ein, sollte euch die "neue" Selim Seite angezeigt werden.
+Grundlegende Voraussetzungen: 
+
+1. Python3 muss auf eurem Rechner installiert sein ( und die verwendeten Bibliotheken, also bisher erstmal Flask die in dem requirements.txt 
+   zu finden sind, könnt ihr so installieren: https://pip.pypa.io/en/stable/user_guide/#requirements-files ) 
+
+Ablauf um den Server zu starten: 
+
+1. einfacherer Weg : Ggf. Entwicklungsumgebung wie PyCharm für Python installieren ( https://www.jetbrains.com/shop/eform/students ) 
+   Dann könnt ihr einfach app.py -> Rechtsklick -> Run  starten :)
    
-Ändert ihr etwas an den Dateien des Servers, kann es sein, dass die Änderungen nicht direkt in der Seite im Browser angezeigt werden (Caching), dann ist oft ein Server-Neustart hilfreich - ansonsten happy Coding und Ausprobieren!
+1*.Um den Server zu Starten navigiert ihr in der CLI / Terminal / Konsole in das Verzeichnis Selim (nicht selim_r) 
+   (ihr seid in .../Überverzeichnis/Selim, Inhalt: selium_r, requirements.txt, app.py, etc. ) 
+   schreibt "flask run" und der Server startet auf 127.0.0.1:5000
+   
+Gebt ihr jetzt die IP 127.0.0.1:5000 in der URL-Zeile des Browsers ein, sollte euch die "neue" Selim Seite angezeigt werden.
+   
+Ändert ihr etwas an den Dateien des Servers 
+z.B. HTML Dateien finden sich in selim_r/main/main_templates, da könnt ihr erstmal am HTML rumbasteln. In inhalt.html und lnks.html den zwei
+bisher sichtbaren Seiten seht ihr am Anfang diesen Code 
+
+Läuft soweit alles, könnt ihr erstmal die lnks.html Datei bearbeiten - das Resultat seht ihr dann immer wenn ihr in der Navbar 
+auf alles außer Selim (das führt zur "Startseite"/inhalt.html) klickt; URL 127.0.0.1:5000/nochNIX (wahrscheinlich).
+
+
+Bsp. 
+lnks.html
+____________________________________________________________-
+   {% extends 'main.html' %}
+   {% block inhalt %}
+   <h1>Überschrift: Herhören Herhören </h1>
+   -> hier könnt ihr euer HTML schreiben und es wird in die hintergrundfarbene Box geschrieben 
+   ( der Block wird in <div id="content"> aus main.html eingefügt)
+
+   {% endblock}
+                                   
+Werden die Änderungen nicht direkt in der Seite im Browser angezeigt werden (wegen Caching und so), dann ist oft ein Server-Neustart hilfreich 
+- ansonsten happy Coding und einfach Ausprobieren!
   
+                                                                                                  
+Die navbar.html könnt ihr natürlich auch gerne bearbeiten bzw. euch das mal anschauen, 
+ich habe da einfach so ne "Standard" Bootstrap Navbar leicht modifiziert - was genau anders ist findet ihr 
+unter /Selim/static/css/main.css und könnt da natürlich auch gerne noch was ändern oder schöner machen :)
+
 Wenn ihr Fragen habt macht sie bitte am Besten im Learnweb Forum oder in GitHub öffentlich, sodass andere mit denselben Fragen aus der Antwort lernen können und auch andere die das      wissen antworten können :)
+
+   
+Wenn ihr schon ein bisschen mehr machen wollt, könnt ihr in main.py auch eigene Routen und HTML Dateien erstellen nach dem Muster:
+   @main_bp.route('/meineWunschURL')
+      def wasIhrWolltAberMerkenBrauchtManSpäterFürAndereSachen():
+         return render_template('name_von_eurem.html', seitenname='Ich werde bei den Tabs als Title angezeigt')
+   
+   
