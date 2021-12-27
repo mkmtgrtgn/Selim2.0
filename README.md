@@ -1,20 +1,20 @@
 # Selim2.0
 Ein Projekt um die Selim Seite wieder aufzufrischen.
-Bisher habe ich einen kleinen Server außenrum gebaut und ein grundlegendes Template - das alles kann und soll gerne noch überarbeitet und erweitert werden :)
+Bisher habe ich einen kleinen Server außenrum gebaut und ein grundlegendes Template - das alles kann und soll gerne noch überarbeitet und erweitert werden :)</br>
 
 Grundlegende Voraussetzungen: 
 
 1. Python3 muss auf eurem Rechner installiert sein ( und die verwendeten Bibliotheken, also bisher erstmal Flask die in dem requirements.txt 
-   zu finden sind, könnt ihr so installieren: https://pip.pypa.io/en/stable/user_guide/#requirements-files ) 
+   zu finden sind, könnt ihr so installieren: https://pip.pypa.io/en/stable/user_guide/#requirements-files ) </br>
 
-Ablauf um den Server zu starten: 
+Ablauf um den Server zu starten: </br>
 
 1. einfacherer Weg : Ggf. Entwicklungsumgebung wie PyCharm für Python installieren ( https://www.jetbrains.com/shop/eform/students ) 
-   Dann könnt ihr einfach app.py -> Rechtsklick -> Run  starten :)
+   Dann könnt ihr einfach app.py -> Rechtsklick -> Run  starten :)</br>
    
 1*.Um den Server zu Starten navigiert ihr in der CLI / Terminal / Konsole in das Verzeichnis Selim (nicht selim_r) 
    (ihr seid in .../Überverzeichnis/Selim, Inhalt: selium_r, requirements.txt, app.py, etc. ) 
-   schreibt "flask run" und der Server startet auf 127.0.0.1:5000
+   schreibt "flask run" und der Server startet auf 127.0.0.1:5000</br>
    
 Gebt ihr jetzt die IP 127.0.0.1:5000 in der URL-Zeile des Browsers ein, sollte euch die "neue" Selim Seite angezeigt werden.
    
@@ -33,7 +33,7 @@ ____________________________________________________________</br>
    {% block inhalt %}</br>
    <h1>Überschrift: Herhören Herhören </h1></br>
    -> hier könnt ihr euer HTML schreiben und es wird in die hintergrundfarbene Box geschrieben </br>
-   ( der Block wird in &ltdiv id="content"&gt aus main.html eingefügt)%lt/br&gt
+   ( der Block wird in &ltdiv id="content"&gt aus main.html eingefügt)&lt/br&gt
 </br>
    {% endblock}</br>
                                    </br>
@@ -43,9 +43,9 @@ Werden die Änderungen nicht direkt in der Seite im Browser angezeigt werden (we
                                                                                                   
 Die navbar.html könnt ihr natürlich auch gerne bearbeiten bzw. euch das mal anschauen, 
 ich habe da einfach so ne "Standard" Bootstrap Navbar leicht modifiziert - was genau anders ist findet ihr 
-unter /Selim/static/css/main.css und könnt da natürlich auch gerne noch was ändern oder schöner machen :)
+unter /Selim/static/css/main.css und könnt da natürlich auch gerne noch was ändern oder schöner machen :)</br>
 
-Wenn ihr Fragen habt macht sie bitte am Besten im Learnweb Forum oder in GitHub öffentlich, sodass andere mit denselben Fragen aus der Antwort lernen können und auch andere die das      wissen antworten können :)
+Wenn ihr Fragen habt macht sie bitte am Besten im Learnweb Forum oder in GitHub öffentlich, sodass andere mit denselben Fragen aus der Antwort lernen können und auch andere die das      wissen antworten können</br>
 
    
 Wenn ihr schon ein bisschen mehr machen wollt, könnt ihr in main.py auch eigene Routen und HTML Dateien erstellen nach dem Muster:
