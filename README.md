@@ -26,17 +26,17 @@ Läuft soweit alles, könnt ihr erstmal die lnks.html Datei bearbeiten - das Res
 auf alles außer Selim (das führt zur "Startseite"/inhalt.html) klickt; URL 127.0.0.1:5000/nochNIX (wahrscheinlich).
 
 
-Bsp. 
-lnks.html
-____________________________________________________________-
-   {% extends 'main.html' %}
-   {% block inhalt %}
-   <h1>Überschrift: Herhören Herhören </h1>
-   -> hier könnt ihr euer HTML schreiben und es wird in die hintergrundfarbene Box geschrieben 
-   ( der Block wird in <div id="content"> aus main.html eingefügt)
-
-   {% endblock}
-                                   
+Bsp. </br>
+lnks.html</br>
+____________________________________________________________</br>
+   {% extends 'main.html' %}</br>
+   {% block inhalt %}</br>
+   <h1>Überschrift: Herhören Herhören </h1></br>
+   -> hier könnt ihr euer HTML schreiben und es wird in die hintergrundfarbene Box geschrieben </br>
+   ( der Block wird in <div id="content"> aus main.html eingefügt)</br>
+</br>
+   {% endblock}</br>
+                                   </br>
 Werden die Änderungen nicht direkt in der Seite im Browser angezeigt werden (wegen Caching und so), dann ist oft ein Server-Neustart hilfreich 
 - ansonsten happy Coding und einfach Ausprobieren!
   
