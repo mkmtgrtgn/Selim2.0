@@ -31,7 +31,7 @@ lnks.html</br>
 ____________________________________________________________</br>
    {% extends 'main.html' %}</br>
    {% block inhalt %}</br>
-   &lth1&gtÜberschrift: Herhören Herhören &lt/h1&gt</br>
+   &lt h1 &gt Überschrift: Herhören Herhören &lt /h1 &gt </br>
    -> hier könnt ihr euer HTML schreiben und es wird in die hintergrundfarbene Box geschrieben </br>
    ( der Block wird in &ltdiv id="content"&gt aus main.html eingefügt)&lt/br&gt
 </br>
