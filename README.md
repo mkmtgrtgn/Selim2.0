@@ -19,15 +19,14 @@ Oder Um den Server zu Starten navigiert ihr in der CLI / Terminal / Konsole in d
 Gebt ihr jetzt die IP 127.0.0.1:5000 in der URL-Zeile des Browsers ein, sollte euch die "neue" Selim Seite angezeigt werden.
    
 Ändert ihr etwas an den Dateien des Servers 
-z.B. HTML Dateien finden sich in selim_r/main/main_templates, da könnt ihr erstmal am HTML rumbasteln. In inhalt.html und lnks.html den zwei
-bisher sichtbaren Seiten seht ihr am Anfang diesen Code 
+z.B. HTML Dateien finden sich in selim_r/main/main_templates, da könnt ihr erstmal am HTML rumbasteln.
 
 Läuft soweit alles, könnt ihr erstmal die lnks.html Datei bearbeiten - das Resultat seht ihr dann immer wenn ihr in der Navbar 
 auf alles außer Selim (das führt zur "Startseite"/inhalt.html) klickt; URL 127.0.0.1:5000/nochNIX (wahrscheinlich).
 
 
 Bsp. </br>
-lnks.html</br>
+lnks.html sieht geöffnet so ähnlich aus:</br>
 ____________________________________________________________</br>
    {% extends 'main.html' %}</br>
    {% block inhalt %}</br>
