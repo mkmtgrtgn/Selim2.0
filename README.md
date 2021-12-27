@@ -47,12 +47,12 @@ unter /Selim/static/css/main.css und könnt da natürlich auch gerne noch was ä
 Wenn ihr Fragen habt macht sie bitte am Besten im Learnweb Forum oder in GitHub öffentlich, sodass andere mit denselben Fragen aus der Antwort lernen können und auch andere die das      wissen antworten können</br>
 
    
-Wenn ihr schon ein bisschen mehr machen wollt, könnt ihr in main.py auch eigene Routen und HTML Dateien erstellen nach dem Muster:</br>
-*hier wird die Route auf den Blueprint main_bp "registriert" und kann über den Server geservet werden* 
+Wenn ihr schon ein bisschen mehr machen wollt, könnt ihr in main.py auch eigene Routen und HTML Dateien erstellen nach dem Muster:</br></br>
+*hier wird die Route auf den Blueprint main_bp "registriert" und kann über den Server geservet werden* </br>
 @main_bp.route('/meineWunschURL')</br>
 *def ist das Schlüsselwort um eine Funktion zu definieren* </br>
 - def wasIhrWolltAberMerkenBrauchtManSpäterFürAndereSachen():</br>
-*render_template ist die Methode, die letztendlich auf das HTML File verweist zu dem die Route führen soll*
+*render_template ist die Methode, die letztendlich auf das HTML File verweist zu dem die Route führen soll*</br>
 - - return render_template('name_von_eurem.html', seitenname='Ich werde bei den Tabs als Title angezeigt')</p>
    
    
