@@ -1,6 +1,6 @@
 # Selim2.0
 Ein Projekt um die Selim Seite wieder aufzufrischen.
-Bisher habe ich einen kleinen Server außenrum gebaut und ein grundlegendes Template - das alles kann und soll gerne noch überarbeitet und erweitert werden :)</br>
+Bisher habe ich einen kleinen Server außenrum gebaut und ein grundlegendes Template - das natürlich noch nicht alles kann und soll gerne noch überarbeitet und erweitert werden :)</br>
 
 Grundlegende Voraussetzungen: 
 
