@@ -48,11 +48,11 @@ Wenn ihr Fragen habt macht sie bitte am Besten im Learnweb Forum oder in GitHub 
 
    
 Wenn ihr schon ein bisschen mehr machen wollt, könnt ihr in main.py auch eigene Routen und HTML Dateien erstellen nach dem Muster:</br>
-*hier wird die Route auf den Blueprint main_bp "registriert" und kann über den Server geservet werden</br>
+*hier wird die Route auf den Blueprint main_bp "registriert" und kann über den Server geservet werden* </br>
 @main_bp.route('/meineWunschURL')</br>
-*def ist das Schlüsselwort um eine Funktion zu definieren *</br>
+*def ist das Schlüsselwort um eine Funktion zu definieren* </br>
 - def wasIhrWolltAberMerkenBrauchtManSpäterFürAndereSachen():</p>
-*render_template ist die Methode, die letztendlich auf das HTML File verweist zu dem die Route führen soll
+*render_template ist die Methode, die letztendlich auf das HTML File verweist zu dem die Route führen soll*
 - - return render_template('name_von_eurem.html', seitenname='Ich werde bei den Tabs als Title angezeigt')</p>
    
    
