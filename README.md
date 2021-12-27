@@ -33,6 +33,7 @@ ____________________________________________________________</br>
    ( der Block wird in &lt;div id="content"&gt; aus main.html eingefügt)</br>;
 </br>
    {% endblock}</br>
+____________________________________________________________</br>
                                    </br>
 Werden die Änderungen nicht direkt in der Seite im Browser angezeigt werden (wegen Caching und so), dann ist oft ein Server-Neustart hilfreich 
 - ansonsten happy Coding und einfach Ausprobieren!
