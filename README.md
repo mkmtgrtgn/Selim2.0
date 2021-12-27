@@ -9,10 +9,10 @@ Grundlegende Voraussetzungen:
 
 Ablauf um den Server zu starten: </br>
 
-1. einfacherer Weg : Ggf. Entwicklungsumgebung wie PyCharm für Python installieren ( https://www.jetbrains.com/shop/eform/students ) 
+Einfacherer Weg : Ggf. Entwicklungsumgebung wie PyCharm für Python installieren ( https://www.jetbrains.com/shop/eform/students ) 
    Dann könnt ihr einfach app.py -> Rechtsklick -> Run  starten :)</br>
    
-1.* Um den Server zu Starten navigiert ihr in der CLI / Terminal / Konsole in das Verzeichnis Selim (nicht selim_r) 
+Oder Um den Server zu Starten navigiert ihr in der CLI / Terminal / Konsole in das Verzeichnis Selim (nicht selim_r) 
    (ihr seid in .../Überverzeichnis/Selim, Inhalt: selium_r, requirements.txt, app.py, etc. ) 
    schreibt "flask run" und der Server startet auf 127.0.0.1:5000</br>
    
@@ -33,7 +33,7 @@ ____________________________________________________________</br>
    {% block inhalt %}</br>
    &lt;h1&gt; Überschrift: Herhören Herhören &lt;/h1&gt; </br>
    -> hier könnt ihr euer HTML schreiben und es wird in die hintergrundfarbene Box geschrieben </br>
-   ( der Block wird in &lt;div id="content"&gt; aus main.html eingefügt)&lt;/br&gt;
+   ( der Block wird in &lt;div id="content"&gt; aus main.html eingefügt)</br>;
 </br>
    {% endblock}</br>
                                    </br>
