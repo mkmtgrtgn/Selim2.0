@@ -51,7 +51,7 @@ Wenn ihr schon ein bisschen mehr machen wollt, könnt ihr in main.py auch eigene
 *hier wird die Route auf den Blueprint main_bp "registriert" und kann über den Server geservet werden* </br>
 @main_bp.route('/meineWunschURL')</br>
 - *def ist das Schlüsselwort um eine Funktion zu definieren* </br>
-- def wasIhrWolltAberMerkenBrauchtManSpäterFürAndereSachen():</br>
+- def funktionsName():</br>
 - - *render_template ist die Methode, die letztendlich auf das HTML File verweist zu dem die Route führen soll*</br>
 - - return render_template('name_von_eurem.html', seitenname='Ich werde bei den Tabs als Title angezeigt')</p>
    
