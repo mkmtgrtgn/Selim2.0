@@ -9,17 +9,15 @@ Grundlegende Voraussetzungen:
 
 Ablauf um den Server zu starten: </br>
 
-Einfacherer Weg : Ggf. Entwicklungsumgebung wie PyCharm für Python installieren ( https://www.jetbrains.com/shop/eform/students ) 
+1. Einfacherer Weg : Ggf. Entwicklungsumgebung wie PyCharm für Python installieren ( https://www.jetbrains.com/shop/eform/students ) 
    Dann könnt ihr einfach app.py -> Rechtsklick -> Run  starten :)</br>
    
-Oder Um den Server zu Starten navigiert ihr in der CLI / Terminal / Konsole in das Verzeichnis Selim (nicht selim_r) 
+2.Oder Um den Server zu Starten navigiert ihr in der CLI / Terminal / Konsole in das Verzeichnis Selim (nicht selim_r) 
    (ihr seid in .../Überverzeichnis/Selim, Inhalt: selium_r, requirements.txt, app.py, etc. ) 
-   schreibt "flask run" und der Server startet auf 127.0.0.1:5000</br>
-   
-Gebt ihr jetzt die IP 127.0.0.1:5000 in der URL-Zeile des Browsers ein, sollte euch die "neue" Selim Seite angezeigt werden.
-   
-Ändert ihr etwas an den Dateien des Servers 
-z.B. HTML Dateien finden sich in selim_r/main/main_templates, da könnt ihr erstmal am HTML rumbasteln.
+   schreibt "flask run" und der Server startet auf 127.0.0.1:5000. </br> 
+   Gebt ihr jetzt die IP 127.0.0.1:5000 in der URL-Zeile des Browsers ein, sollte euch die "neue" Selim Seite angezeigt werden.</br>
+   Ändert ihr etwas an den Dateien des Servers</br>
+   z.B. HTML Dateien finden sich in selim_r/main/main_templates, da könnt ihr erstmal am HTML rumbasteln.</br>
 
 Läuft soweit alles, könnt ihr erstmal die lnks.html Datei bearbeiten - das Resultat seht ihr dann immer wenn ihr in der Navbar 
 auf alles außer Selim (das führt zur "Startseite"/inhalt.html) klickt; URL 127.0.0.1:5000/nochNIX (wahrscheinlich).
