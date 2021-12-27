@@ -33,7 +33,7 @@ ____________________________________________________________</br>
    {% block inhalt %}</br>
    <h1>Überschrift: Herhören Herhören </h1></br>
    -> hier könnt ihr euer HTML schreiben und es wird in die hintergrundfarbene Box geschrieben </br>
-   ( der Block wird in <div id="content"> aus main.html eingefügt)</br>
+   ( der Block wird in &ltdiv id="content"&gt aus main.html eingefügt)%lt/br&gt
 </br>
    {% endblock}</br>
                                    </br>
