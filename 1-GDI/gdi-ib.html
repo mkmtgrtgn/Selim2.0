@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS und JS Bundle -->
+    <link href="../static/css/bootstrap.css" rel="stylesheet">
+    <link href="gdi.css" rel="stylesheet">
+
+    <!-- Der Font muss noch importiert werden -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;600;700&display=swap" rel="stylesheet">
+    <title>Selim 2.0</title>
+</head>
+<body>
+<div class="navi">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon navbar-light"></span>
+            </button>
+            <a class="navbar-brand" href="#">Selim</a>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-linki active" aria-current="page" href="../home.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-linki dropdown-toggle" href="#" id="navDrop1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Module
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navDrop1">
+                            <li><a class="dropdown-item bg" href="../1-GDI/gdi.html">GDI</a></li>
+                            <li><a class="dropdown-item bg" href="../2-IR1/ir1.html">IR1</a></li>
+                            <li><a class="dropdown-item bg" href="../3-IR2/ir2.html">IR2</a></li>
+                            <li><a class="dropdown-item bg" href="../4-IR3/ir3.html">IR3</a></li>
+                            <li><a class="dropdown-item bg" href="../5-FIS/fis.html">FIS</a></li>
+
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item bg" href="#">und was ganz anderes</a></li>
+                        </ul>
+                    </li>
+      		    <li class="nav-item dropdown">
+                        <a class="nav-linki dropdown-toggle" href="#" id="navDrop1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Themen
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navDrop1">
+                            <li><a class="dropdown-item bg" href="gdi-iw.html">Grundlagen IW</a></li>
+                            <li><a class="dropdown-item bg" href="gdi-ib.html">Informationsbegriff</a></li>
+                            <li><a class="dropdown-item bg" href="gdi-mmi.html">Mensch-Maschine Interaktion</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item bg" href="#">und was ganz anderes</a></li>
+                        </ul>
+                    </li>                   
+		    <li class="nav-item dropdown">
+                        <a class="nav-linki dropdown-toggle" href="#" id="navDrop2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Account?
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navDrop2">
+                            <li><a class="dropdown-item bg" href="#">Dieses Thema</a></li>
+                            <li><a class="dropdown-item bg" href="#">Jenes Thema</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item bg" href="#">und was ganz anderes</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="optionale Suche?" aria-label="optionale Suche!">
+                    <button class="btn btn-outline-success" type="submit">Such!</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</div>
+
+
+  <div id="content">
+    <h1 class="text-center">
+      <span class="badge rounded-pill bg-warning">THEMA</span>
+      Informationsbegriff
+    </h1>
+
+    <div class="container">
+      <p>Der Informationsbegriff spielt in vielen wissenschaftlichen Disziplinen eine Rolle und wird ganz verschieden interpretiert.
+      Neben der Informationswissenschaft beschäftigen sich z.B. auch die Informatik, die Nachrichtentechnik und die Betriebswirtschaftslehre mit Information.
+      Aus Sicht der Informationswissenschaft handelt es sich bei Infromationen um <strong>angewandtes Wissen</strong>. Dennoch ist diese Sichtweise nicht der einzig richtige Standpunkt.
+      Deshalb ist es wichtig, die informationswissenschaftliche Perspektive klar zu definieren und von anderen Sichtweisen abzugrenzen zu können.</p><br>
+
+      <p><strong>Informationsbegriff Abstraktionsebenen - </strong> Vor allem im Bereich des Wissensmanagements werden Informationen als strukturierte Daten verstanden:</p>
+
+
+      <div id="accordion">
+        <div class="card">
+          <div class="card-header">
+            <a class="btn" data-bs-toggle="collapse" href="#collapseOne">
+              <b>Wissen</b>
+            </a>
+          </div>
+          <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
+            <div class="card-body">
+              Die Informationen werden durch den entsprechenden Kontext zu Wissen (z.B. "Importe aus den USA sind günstig"),
+              das nach diesem Modell der höchsten Abstraktionsebene entspricht.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTwo">
+              <b>Information</b>
+          </a>
+          </div>
+          <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+            <div class="card-body">
+              Auf der Informationsebene werden die Daten strukturiert (z.B. "Devisen-kurs Dollar zu Euro").
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseThree">
+              <b>Daten</b>
+            </a>
+          </div>
+          <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
+            <div class="card-body">
+              Daten bilden die unterste Ebene (z.B. "0,83").
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <br><br>
+
+
+      <ul class="list-group">
+        <li class="list-group-item">
+          <strong>Merke:</strong> In der Informationswissenschaft unterscheidet man ebenfalls zwischen Daten, Information und Wissen.<br>
+          Information ist hier jedoch angewandtes Wissen!
+        </li>
+        <li class="list-group-item">
+          <strong>Daten</strong> sind Angaben in formalisierter Form, die noch nicht strukturiert oder verknüpft sind. Sie sind der Rohstoff für Wissen.
+        </li>
+        <li class="list-group-item">
+          <strong>Wissen</strong> ist dabei der Bestand an Modellen über Objekte und Sachverhalte der Welt, die in Personen, Gruppen oder Systemen vorhanden sind.
+        </li>
+        <li class="list-group-item">
+          <strong>Information</strong> ist die Teilmenge von Wissen, die von einer Person oder einer Gruppe zur Lösung eines Problems benötigt wird.<br>
+          Bei der Aufbereitung von Information in Informationssystemen entsteht dabei ein Mehrwert für den Nutzer.
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+</body>
+
+<script src="../static/js/bootstrap.bundle.js"></script>
