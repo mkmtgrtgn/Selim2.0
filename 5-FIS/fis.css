@@ -3,7 +3,6 @@ body{
     --schriftfarbe:#232B2B;
     --hintergrund: #D8EBEB;
     --hauptfarbe: #B2D8D8;
-
 }
 
 #body::-webkit-scrollbar {
@@ -22,8 +21,7 @@ h1, h2, h3 {
 
 .navi{
     background-image: linear-gradient(180deg, var(--hauptfarbe), 60%, var(--hintergrund));
-    font-size:20px;
-    border-radius: 0px 0px 10px 20px;
+    font-size:24px;
 
 }
 
@@ -53,7 +51,7 @@ Hier wollte er die Farbe sonst nicht ändern
     background-color: var(--hintergrund);
     padding:4%;
     border:solid rgba(128, 128, 128, 0.42);
-    border-radius: 32px;
+    border-radius: 16px;
     box-shadow: slategray 6px 8px 4px 6px;
     margin:4vh 5vw;
     display:block;

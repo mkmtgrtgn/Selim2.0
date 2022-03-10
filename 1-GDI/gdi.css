@@ -3,7 +3,6 @@ body{
     --schriftfarbe:#232B2B;
     --hintergrund: #D8EBEB;
     --hauptfarbe: #B2D8D8;
-
 }
 
 #body::-webkit-scrollbar {
@@ -11,7 +10,6 @@ body{
 }
 
 h1, h2, h3 {
-    padding:1vw;
 }
 
 .navbar-brand {
@@ -23,8 +21,7 @@ h1, h2, h3 {
 
 .navi{
     background-image: linear-gradient(180deg, var(--hauptfarbe), 60%, var(--hintergrund));
-    font-size:20px;
-    border-radius: 0px 0px 10px 20px;
+    font-size:24px;
 
 }
 
@@ -53,8 +50,8 @@ Hier wollte er die Farbe sonst nicht ändern
 #content {
     background-color: var(--hintergrund);
     padding:4%;
-    border:dotted gray;
-    border-radius: 32px;
+    border:solid rgba(128, 128, 128, 0.42);
+    border-radius: 16px;
     box-shadow: slategray 6px 8px 4px 6px;
     margin:4vh 5vw;
     display:block;
@@ -66,4 +63,34 @@ Hier wollte er die Farbe sonst nicht ändern
     corner-radius:4px;
     background-image: linear-gradient(180deg, var(--hauptfarbe), var(--hintergrund));
 
+}
+
+.kleine_ueber {
+    font-weight: 600;
+}
+
+p {
+    margin:1vw;
+}
+
+.fragenblock {
+    border: dotted var(--hauptfarbe)  4px;
+    padding:1vw;
+
+}
+
+.antworten {
+    padding:4px;
+    display:flex;
+    flex-direction: column;
+}
+.antwort {
+    margin: 1vw;
+    border-radius: 6px;
+    background-color:rgba(255, 255, 255, 0.8);
+}
+
+quizbutton {
+    display:inline-block;
+    float:right;
 }
