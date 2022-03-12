@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS und JS Bundle -->
     <link href="../static/css/bootstrap.css" rel="stylesheet">
     <link href="../main.css" rel="stylesheet">
-
+    <!-- Quiz importieren nicht vergessen -->
     <link href="../static/css/quiz.css" rel="stylesheet">
 
     <!-- Der Font muss noch importiert werden -->
@@ -65,20 +65,6 @@
     </nav>
 </div>
 
-<div id="quiz">
-
-    <div class="frage">
-        Welche Zahlen sind kleiner als 3? || 1 ** 2  || 3 ** 4 ** 5 ** 6
-    </div>
-
-    <div class="frage">
-        die Frage in Text || rrrrichtig ** Zeile die den ganzen Bildschirm überspannt und ganz viel Text Platz oder Content Plat || falsch
-    </div>
-     <div class="frage">
-        Was ist Informatik? || rrrrichtig ** das mit den 1en und 0en ** computer sinnvoll einsetzen ** cool|| falsch ** einfach
-    </div>
-
-</div>
 
 <div id="content">
 
@@ -91,7 +77,27 @@
                 <p> <strong class="tooltip-test" title="Sers">Ganze</strong> EINE MÄCHTIGE RIIIEESIGE Zeile die den ganzen Bildschirm überspannt und ganz viel Text Platz oder Content Platz hat</p>
             </div>
         </div>
+
+
+
+
         <!-- Alles hier drunter braucht ihr fuer das Quiz (in ein container element) -->
+
+
+        <div id="quiz">
+
+            <div class="frage">
+                Welche Zahlen sind kleiner als 3? || 1 ** 2  || 3 ** 4 ** 5 ** 6
+            </div>
+
+            <div class="frage">
+                die Frage in Text || rrrrichtig ** Zeile die den ganzen Bildschirm überspannt und ganz viel Text Platz oder Content Plat || falsch
+            </div>
+            <div class="frage">
+                Was ist Informatik? || rrrrichtig ** das mit den 1en und 0en ** computer sinnvoll einsetzen ** cool|| falsch ** einfach
+            </div>
+
+        </div>
 
         <div class="row">
             <div class="col">
@@ -118,9 +124,9 @@
                                     <button id = "quizmaster" onclick="antwortChecken()"
                                             type="button" class="btn btn-outline-success">Antwort überprüfen</button>
                                 </div>
-                                 <div class="row justify-content-md-center">
-                                <div id = "erfolgsnachricht" class="col-md-auto"></div>
-                            </div>
+                                <div class="row justify-content-md-center">
+                                    <div id = "erfolgsnachricht" class="col-md-auto"></div>
+                                </div>
                                 <div class="row">
                                     <div class="col md-12">
                                         <div class="progress">
@@ -137,6 +143,8 @@
             </div>
         </div>
 
+
+    <!-- Quiz bis hierhin! -->
 
     </div>
 </div>
