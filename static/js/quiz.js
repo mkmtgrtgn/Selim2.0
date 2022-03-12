@@ -198,7 +198,7 @@ class Fragenkatalog {
         }
 
     }
-    // Zeigt den Fortschritt des Spielers an und signalisiert 100%
+    // Zeigt den Fortschritt des Spielers an und signalisiert 100% richtig
     updateProg(n) {
             let bar = document.getElementById("fortschritt");
             let prog = Math.floor(100 * ((this.quizze.length-n) / this.quizze.length));
@@ -214,7 +214,7 @@ class Fragenkatalog {
                 title.innerHTML = "Super, du hast alles richtig beantwortet!";
                 let quizbtn = document.getElementById("quizmaster");
                 let weiter = document.createElement("h6");
-                weiter.innerHTML = "Wiederholen?";
+                weiter.innerHTML = "Weitermachen?";
                 weiter.className = "btn btn-outline-primary m-1";
                 quizbtn.style.display = "none";
                 weiter.addEventListener("click", function() {
