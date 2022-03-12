@@ -1,0 +1,79 @@
+
+.fragenblock {
+    border: dotted var(--hauptfarbe)  4px;
+    padding:1vw;
+
+}
+
+.antworten {
+    padding:4px;
+    display:flex;
+    flex-direction: column;
+}
+.antwort {
+    margin: 1vw;
+    border-radius: 6px;
+    background-color:rgba(255, 255, 255, 0.8);
+}
+
+.quizantwort {
+    margin:12px;
+    border-radius: 4px;
+    border: solid 2px rgba(128, 128, 128, 0.66);
+    padding:6px 6px 6px 16px ;
+    font-size: medium;
+    background-color: lightgray;
+    font-weight: bold;
+}
+
+
+.wahreAntwort {
+    background-color: rgba(60, 207, 60, 0.7);
+    font-weight: 700;
+    font-size: large;
+    color:green;
+}
+.falscheAntwort {
+    background-color: rgba(186, 23, 51, 0.5);
+    text-decoration: line-through;
+    color:red;
+}
+
+.selected {
+    background-color: rgba(23, 85, 186, 0.5);
+}
+
+.richtigBeantwortet {
+    border: solid 4px rgba(11, 174, 11, 0.7);
+    background-color: rgba(144, 238, 144, 0.8);
+}
+
+
+.nichtBeantwortet {
+    border: dashed 2px rgba(207, 8, 44, 0.8);
+}
+
+
+.falschBeantwortet {
+    border: dashed 2px red;
+}
+
+#quiz {
+    display:none;
+}
+
+.allesrichtig {
+    border: dashed 4px green;
+    background-color: rgba(144, 238, 144, 0.5);
+}
+.richtigIgnoriert {
+    border: solid 4px rgba(196, 116, 116, 0.7);
+    background-color: rgba(186, 23, 51, 0.1);
+    text-decoration: line-through;
+}
+
+#erfolgsnachricht {
+    font-weight: bolder;
+    color: rgba(33, 102, 4, 0.8);
+    font-size:xx-large;
+}
