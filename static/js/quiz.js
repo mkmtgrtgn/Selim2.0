@@ -17,6 +17,7 @@ class Quizelement {
         this.node.innerHTML = htmlNode;
     }
 }
+
 //Zum einen die Frage
 class Quizfrage extends Quizelement {
     constructor(node) {
@@ -157,9 +158,13 @@ class Fragenkatalog {
             //bisschen motivierende Sprueche schaden ja nicht
             let erfolgsnachricht = document.getElementById("erfolgsnachricht");
             let spr = [":)", "Super!", "Alles richtig!", "Eins A", "Weiter so!"];
+
             let rnd = Math.floor(Math.random()*spr.length);
             erfolgsnachricht.innerHTML = spr[rnd];
-            const nr = setTimeout(meldungWeg, 1200);
+            if((this.reps >this.quizze.length+5)%2===3) {
+                erfolgsnachricht.innerHTML = "na langweilig? :p";
+            }
+            const nr = setTimeout(meldungWeg, 800);
 
             //Fortschrittsbalken updaten
             if( n>0 ) {

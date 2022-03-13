@@ -1,3 +1,7 @@
+#quiz {
+    display:none;
+}
+
 .quizantwort {
     margin:12px;
     border-radius: 4px;
