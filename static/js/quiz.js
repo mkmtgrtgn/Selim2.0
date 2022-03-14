@@ -17,6 +17,7 @@ class Quizelement {
         this.node.innerHTML = htmlNode;
     }
 }
+
 //Zum einen die Frage
 class Quizfrage extends Quizelement {
     constructor(node) {
@@ -157,9 +158,13 @@ class Fragenkatalog {
             //bisschen motivierende Sprueche schaden ja nicht
             let erfolgsnachricht = document.getElementById("erfolgsnachricht");
             let spr = [":)", "Super!", "Alles richtig!", "Eins A", "Weiter so!"];
+
             let rnd = Math.floor(Math.random()*spr.length);
             erfolgsnachricht.innerHTML = spr[rnd];
-            const nr = setTimeout(meldungWeg, 1200);
+            if((this.reps >this.quizze.length+5)%2===3) {
+                erfolgsnachricht.innerHTML = "na langweilig? :p";
+            }
+            const nr = setTimeout(meldungWeg, 800);
 
             //Fortschrittsbalken updaten
             if( n>0 ) {
@@ -198,7 +203,7 @@ class Fragenkatalog {
         }
 
     }
-    // Zeigt den Fortschritt des Spielers an und signalisiert 100%
+    // Zeigt den Fortschritt des Spielers an und signalisiert 100% richtig
     updateProg(n) {
             let bar = document.getElementById("fortschritt");
             let prog = Math.floor(100 * ((this.quizze.length-n) / this.quizze.length));
@@ -214,7 +219,7 @@ class Fragenkatalog {
                 title.innerHTML = "Super, du hast alles richtig beantwortet!";
                 let quizbtn = document.getElementById("quizmaster");
                 let weiter = document.createElement("h6");
-                weiter.innerHTML = "Wiederholen?";
+                weiter.innerHTML = "Weitermachen?";
                 weiter.className = "btn btn-outline-primary m-1";
                 quizbtn.style.display = "none";
                 weiter.addEventListener("click", function() {

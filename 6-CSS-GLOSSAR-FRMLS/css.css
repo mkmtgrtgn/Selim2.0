@@ -95,16 +95,14 @@ quizbutton {
     float:right;
 }
 
-
-.hr-line{
+.hr-line {
     width: 60%;
     margin: auto;
-
   }
-  /* Style the buttons that are used to open and close the glossar body */
+
+  /* Container der Wörter */
   .glossar-wort {
-      /* background-color: #eee; */
-      color: #444;
+      color: #232B2B;
       cursor: pointer;
       padding: 30px 20px;
       width: 60%;
@@ -113,34 +111,33 @@ quizbutton {
       transition: 0.4s;
       margin: auto;
   }
+  
   .glossar-definition {
-      margin: auto;
-      /* text-align: center; */
-     width: 50%;
-     padding: auto;
+    margin: auto;
+    /* Definition des Wortes wird mittig unter dem Wort angezeigt. Die Definition ist responsive */
+    padding: auto;
+}
 
-  }
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-
+  /* Hovert der Benutzer über das Feld, wird es wie in der NavBar hell hervorgehoben */
   .glossar-wort:hover {
       background-color: #F9F9F9;
+      /* runde Ecken, sodass es zum Grundgerüst passt */
+      border-radius: 6px;
   }
-  /* Style hidden by default */
+
+  /* Design der Definition */
   .glossar-definition {
       padding: 0 18px;
       background-color: white;
       display: none;
       overflow: hidden;
+      /* runde Ecken der Definition */
+      border-radius: 6px;
   }
-  .glossar-wort:after {
-      content: '\02795';
-      /* "plus" sign (+) */
-      font-size: 13px;
-      color: #777;
-      float: right;
-      margin-left: 5px;
-  }
-  .active:after {
-      content: "\2796";
-      /* - Zeichen */
-  }
+
+  .page-header {
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
+    border-bottom: 1px solid #7c9797;
+}
+  
