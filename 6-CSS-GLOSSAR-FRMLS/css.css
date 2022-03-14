@@ -120,27 +120,16 @@ quizbutton {
      padding: auto;
 
   }
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  /* Hovert der Benutzer über das Feld, wird es weiß hervorgehoben */
 
   .glossar-wort:hover {
       background-color: #F9F9F9;
   }
-  /* Style hidden by default */
+  /* Design der Definition */
   .glossar-definition {
       padding: 0 18px;
       background-color: white;
       display: none;
       overflow: hidden;
   }
-  .glossar-wort:after {
-      content: '\02795';
-      /* "plus" sign (+) */
-      font-size: 13px;
-      color: #777;
-      float: right;
-      margin-left: 5px;
-  }
-  .active:after {
-      content: "\2796";
-      /* - Zeichen */
-  }
+  
