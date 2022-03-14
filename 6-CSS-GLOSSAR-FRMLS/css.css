@@ -95,16 +95,14 @@ quizbutton {
     float:right;
 }
 
-
 .hr-line{
-    width: 60%;
+    width: 65%;
     margin: auto;
-
   }
-  /* Style the buttons that are used to open and close the glossar body */
+
+  /* Container der Wörter */
   .glossar-wort {
-      /* background-color: #eee; */
-      color: #444;
+      color: #232B2B;
       cursor: pointer;
       padding: 30px 20px;
       width: 60%;
@@ -113,23 +111,27 @@ quizbutton {
       transition: 0.4s;
       margin: auto;
   }
+  
   .glossar-definition {
-      margin: auto;
-      /* text-align: center; */
-     width: 50%;
-     padding: auto;
+    margin: auto;
+    /* Definition des Wortes wird mittig unter dem Wort angezeigt. Die Definition ist responsive */
+    padding: auto;
+}
 
-  }
-  /* Hovert der Benutzer über das Feld, wird es weiß hervorgehoben */
-
+  /* Hovert der Benutzer über das Feld, wird es wie in der NavBar hell hervorgehoben */
   .glossar-wort:hover {
       background-color: #F9F9F9;
+      /* runde Ecken, sodass es zum Grundgerüst passt */
+      border-radius: 6px;
   }
+
   /* Design der Definition */
   .glossar-definition {
       padding: 0 18px;
       background-color: white;
       display: none;
       overflow: hidden;
+      /* runde Ecken der Definition */
+      border-radius: 6px;
   }
   
