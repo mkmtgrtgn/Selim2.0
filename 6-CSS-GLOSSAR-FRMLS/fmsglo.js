@@ -163,7 +163,7 @@ class Fragenkatalog {
 
             //bisschen motivierende Sprueche schaden ja nicht
             let erfolgsnachricht = document.getElementById("erfolgsnachricht");
-            let spr = [":)", "Super!", "Alles richtig!", "Eins A", "Weiter so!"];
+            let spr = ["Sehr gut!", "Super!", "Alles richtig!", "Perfekt!", "Weiter so!"];
             let rnd = Math.floor(Math.random()*spr.length);
             erfolgsnachricht.innerHTML = spr[rnd];
             const nr = setTimeout(meldungWeg, 1200);
