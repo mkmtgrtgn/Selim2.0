@@ -221,3 +221,26 @@ p {
     color: rgba(33, 102, 4, 0.8);
     font-size:xx-large;
 }
+
+/* Hier geht es um den Scroll Up Button */
+
+/* Position des Buttons rechts in der Ecke */
+#btnScrollToTop {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 25%;
+    background: #7c9797;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    color: #ffffff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/*Klickt der Nutzer auf den Button wird er anders gekennzeichnet*/
+#btnScrollToTop:active {
+    background: #b2d8d8;
+}

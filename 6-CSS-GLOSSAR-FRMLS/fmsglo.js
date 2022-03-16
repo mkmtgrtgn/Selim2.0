@@ -337,3 +337,18 @@ function meldungWeg() {
             let erfolgsnachricht = document.getElementById("erfolgsnachricht");
             erfolgsnachricht.innerHTML ="";
 }
+
+//Fixed Button Elemente
+
+const btnScrollToTop = document.querySelector("#btnScrollToTop");
+
+btnScrollToTop.addEventListener("click", function () {
+    //window.scrollTo(0, 0);
+    // ich habe mich für diese Variante entschieden. Hat eine bessere Animation
+    window.scrollTo({
+        //komplett nach oben aber sanfter
+        top:0,
+        left: 0,
+        behavior: "smooth"
+    });
+});
