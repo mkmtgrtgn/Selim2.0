@@ -62,6 +62,77 @@
             <div class="col">
                 <h1>Glossar</h1>
                 <p>Vielleicht fügen wir hier hin ein Quiz zu unserem Glossar hinzu? Das Quiz fundiert dann so ähnlich wie ein Vokabeltest.</p></br>
+                <div id="quiz">
+
+                    <div class="frage">
+                        Welches der folgenden Beschreibungen beschreibt ein Attribut? || Ist die Eigenschaft einer Entität oder einer Relation, z.B. der Titel einer Vorlesung.  || Art und Weise, wie der Benutzer seine Anfrage in einer dem System verständlichen Form formuliert. ** Ein Attribut ist ein Kurzreferat, das kurz und klar den Inhalt eines Dokuments wiedergibt. Zusätzlich ist es ein Verfahren zur Inhaltserschließung. ** Ein Attribut ist eine Stemming-Methode, dabei werden Präfixe und/oder Suffixe in einer bestimmten Reihenfolge entfernt.
+                    </div>
+        
+                    <div class="frage">
+                        Was ist das Boole'sche Retrieval? Wähle eine oder mehrere Antworten aus. ||   Das Boole'sche Retrieval ist ein klassisches Verfahren des Information Retrieval und basiert auf dem Exact Match Paradigma. ** Es prüft, ob eine wohldefinierte Bedingung erfüllt ist, oder nicht, basierend auf der Boole'schen Algebra.  || Das Boole'sche Retrieval beschreibt ein Verfahren, um Texte zu analysieren und diese klassifizieren zu können.
+                    </div>
+        
+        
+                    <div class="frage">
+                        Was bedeutet das Akronym CLIR? ||   Cross Language Information Retrieval || Calling Line Identification Restriction
+                    </div>
+        
+                    <div class="frage">
+                        Was sind Deskriptoren? Wähle eine oder mehrere Antworten aus. ||   Eine einfache Art der inhaltlichen Beschreibung von (Text-)Dokumenten ist die mit Hilfe von Stich- und Schlagwörtern. Diese werden Deskriptoren genannt, wenn sie im Rahmen eines → Thesaurus (=kontrolliertes Vokabular) zur inhaltlichen Beschreibung vorgesehen werden (= Vorzugsbenennungen). || Deskriptoren legen die Eigenschaften, Struktur und Konsistenzbedingungen für in die Datenbank zu speichernde Datenelemente fest.
+                    </div>
+        
+                    <div class="frage">
+                        Was ist der Recall? Wähle eine oder mehrere Antworten aus. || Der Recall ist der Quotient aus allen relevanten gefundenen Dokumenten und allen relevanten Dokumenten. ** Recall beschreibt die Vollständigkeit eines Ergebnisses. || Der Recall beschreibt die Redundanz (latein. redundare"im Überfluss vorhanden sein") bezeichnet allgemein das mehrfache Vorhandensein funktionsgleicher, inhaltsgleicher oder wesensgleicher Objekte.
+                    </div>
+                    <div class="frage">
+                        Was bedeutet das Akronym URL? || Uniform Resource Locator || Unicode Reformation Locator ** Unicorn Resource Locator
+                    </div>
+        
+                </div>
+        
+                <div class="row">
+                    <div class="col">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            Vokabeltest starten
+                        </button>
+        
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content" id="modalCont">
+        
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Fragen</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+        
+                                    <div class="modal-body" >
+        
+                                        <div class="container" id="fragendiv">
+        
+                                            <h5 id="qfrage" class = "quizfrage">Hierzu gibt es keine Fragen.</h5>
+                                        </div>
+                                        <div class="modal-footer row ">
+                                            <button id = "quizmaster" onclick="antwortChecken()"
+                                                    type="button" class="btn btn-outline-success">Antwort überprüfen</button>
+                                        </div>
+                                        <div class="row justify-content-md-center">
+                                            <div id = "erfolgsnachricht" class="col-md-auto"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col md-12">
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" id="fortschritt" style="width: 1%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                    </div>
+        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                     <div>
                     <a href="#A">A</a>
                     <a href="#B">B</a>
