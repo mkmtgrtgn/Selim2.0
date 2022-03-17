@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Bootstrap CSS und JS Bundle -->
+    <link href="../static/css/bootstrap.css" rel="stylesheet">
+    <link href="ir2.css" rel="stylesheet">
+    
+    <!-- Der Font muss noch importiert werden -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;600;700&display=swap" rel="stylesheet">
+    <title>Selim 2.0 Seite 28</title>
+</head>
+<body>
+    
+    <div class="navi">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon navbar-light"></span>
+                </button>
+                <a class="navbar-brand" href="#">Selim</a>
+                
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-linki active" aria-current="page" href="../home.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-linki dropdown-toggle" href="#" id="navDrop1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Module
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navDrop1">
+                                <li><a class="dropdown-item bg" href="../1-GDI/gdi.html">GDI</a></li>
+                                <li><a class="dropdown-item bg" href="../2-IR1/ir1.html">IR1</a></li>
+                                <li><a class="dropdown-item bg" href="../3-IR2/ir2.html">IR2</a></li>
+                                <li><a class="dropdown-item bg" href="../4-IR3/ir3.html">IR3</a></li>
+                                <li><a class="dropdown-item bg" href="../5-FIS/fis.html">FIS</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-linki active" aria-current="page" href="../6-CSS-GLOSSAR-FRMLS/glossar.html">Glossar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-linki active" aria-current="page" href="../6-CSS-GLOSSAR-FRMLS/formelsammlung.html">Formelsammlung</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div id="content">
+        
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1>Übung 12: Relevance Feedback nach der Rocchio Formel</h1>
+                    
+                    <a href="template.html">Erstes Template</a>
+                    <p>Aufgabe: Berechnen Sie mittels des Rocchio-Algorithmus und mit gegebenen Vektoren die modifizierte Feedback Anfrage Q1.</p>
+                </div>
+            </div>
+            
+            <div id="roccTask">
+                <table id="roccVar">
+                    <tr class="roccHeadRow">
+                        <th>relevante Dok.</th>
+                        <th>relevante Dok.</th>
+                        <th>nicht - relevante Dok.</th>
+                        <th>Orginale Anfrage</th>
+                        <th colspan="2">Konstante</th>
+                        <th class="inputCol">deine Berechnung</th>
+                        <th class="solutionCol">Lösung</th>
+                    </tr>
+                    <tr class="roccHeadShort">
+                        <th>R1</th>
+                        <th>R2</th>
+                        <th>S1</th>
+                        <th>Q0</th>
+                        <th>&beta;</th>
+                        <th>&gamma;</th>
+                        <th class="inputCol">Q1</th>
+                        <th class="solutionCol"></th>
+                    </tr>
+                    <tr id="roccRow1">
+                        <td>0,030</td>
+                        <td>0,020</td>
+                        <td>0,030</td>
+                        <td>0,00</td>
+                        <td class="roccKonst" rowspan="9">0,75</td>
+                        <td class="roccKonst" rowspan="9">0,25</td>
+                        <td class="inputCol"></td>
+                        <td class="solutionCol">0,011</td>
+                    </tr>
+                    <tr id="roccRow2">
+                        <td>0,00</td>
+                        <td>0,009</td>
+                        <td>0,010</td>
+                        <td>0,00</td>
+                        <td class="inputCol"></td>
+                        <td class="solutionCol">0,000875</td>
+                    </tr>
+                    <tr id="roccRow3">
+                        <td>0,00</td>
+                        <td>0,020</td>
+                        <td>0,020</td>
+                        <td>0,00</td>
+                        <td class="inputCol"></td>
+                        <td class="solutionCol">0,002</td>
+                    </tr>
+                    <tr id="roccRow4">
+                        <td>0,025</td>
+                        <td>0,002</td>
+                        <td>0,00</td>
+                        <td>0,00</td>
+                        <td class="inputCol"></td>
+                        <td class="solutionCol">0,01</td>
+                    </tr>
+                    <tr id="roccRow5">
+                        <td>0,025</td>
+                        <td>0,050</td>
+                        <td>0,005</td>
+                        <td>0,500</td>
+                        <td class="inputCol"></td>
+                        <td class="solutionCol">0,527</td>
+                    </tr>
+                    <tr id="roccRow6">
+                        <td>0,050</td>
+                        <td>0,025</td>
+                        <td>0,025</td>
+                        <td>0,00 </td>
+                        <td class="inputCol"></td>
+                        <td class="solutionCol">0,022</td>
+                    </tr>
+                    <tr id="roccRow7">
+                        <td>0,00</td>
+                        <td>0,100</td>
+                        <td>0,00</td>
+                        <td>0,450</td>
+                        <td class="inputCol"></td>
+                        <td class="solutionCol">0,488</td>
+                    </tr>
+                    <tr id="roccRow8">
+                        <td>0,00</td>
+                        <td>0,100</td>
+                        <td>0,020</td>
+                        <td>0,00 </td>
+                        <td class="inputCol"></td>
+                        <td class="solutionCol">0,033</td>
+                    </tr>
+                    <tr id="roccRow9">
+                        <td>0,120</td>
+                        <td>0,120</td>
+                        <td>0,00</td>
+                        <td>0,950</td>
+                        <td class="inputCol"></td>
+                        <td class="solutionCol">1,04</td>
+                    </tr>
+                    
+                </table>
+                <button id="roccBtnSolution" class="btn btn-primary">Lösung anzeigen</button>
+            </div>
+        </div>
+    </div>
+    
+    
+</body>
+
+<script src="../static/js/bootstrap.bundle.js"></script>
+</html>
