@@ -9,8 +9,8 @@ body{
   display: none;
 }
 
-h1, h2, h3 {
-}
+/*h1, h2, h3 {
+}*/ 
 
 .navbar-brand {
     margin-left: 1vw;
@@ -60,7 +60,7 @@ Hier wollte er die Farbe sonst nicht ändern
 }
 
 .bg:hover {
-    corner-radius:4px;
+    corner-radius: 4px; /*Unknown property: 'corner-radius'css(unknownProperties)*/
     background-image: linear-gradient(180deg, var(--hauptfarbe), var(--hintergrund));
 
 }
@@ -93,7 +93,7 @@ p {
 
 quizbutton {
     display:inline-block;
-    float: right;
+    float: right; /*inline-block is ignored due to the float. If 'float' has a value other than 'none', the box is floated and 'display' is treated as 'block'css(propertyIgnoredDueToDisplay)*/
 }
 
 
