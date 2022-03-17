@@ -120,6 +120,10 @@ quizbutton {
 }
 
 /* für seite 28*/
+#roccTask{
+    padding-bottom: 2%;
+}
+
 #roccVar{
     margin: 2%;
     width: 90%;
@@ -129,10 +133,6 @@ th {
     padding: 3px;
     background-color: var(--hauptfarbe);
     text-align: center;
-}
-
-tr:hover {
-    background-color: white;
 }
 
 button{
@@ -154,7 +154,6 @@ button:hover {
 }
 
 #roccBtnSolution {
-    margin: 3%;
     float:right;
 
 }
@@ -171,4 +170,10 @@ button:hover {
         text-align: left;
     }
 
+}
+
+.roccResultInput {
+    width: 50%;
+    margin-left: 25%;
+    text-align: center;
 }
