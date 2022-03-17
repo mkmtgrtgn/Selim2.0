@@ -9,8 +9,8 @@ body{
   display: none;
 }
 
-h1, h2, h3 {
-}
+/*h1, h2, h3 {
+}*/ 
 
 .navbar-brand {
     margin-left: 1vw;
@@ -60,7 +60,7 @@ Hier wollte er die Farbe sonst nicht ändern
 }
 
 .bg:hover {
-    corner-radius:4px;
+    corner-radius: 4px; /*Unknown property: 'corner-radius'css(unknownProperties)*/
     background-image: linear-gradient(180deg, var(--hauptfarbe), var(--hintergrund));
 
 }
@@ -71,6 +71,7 @@ Hier wollte er die Farbe sonst nicht ändern
 
 p {
     margin:1vw;
+    text-align: justify;
 }
 
 .fragenblock {
@@ -92,5 +93,87 @@ p {
 
 quizbutton {
     display:inline-block;
+    float: right; /*inline-block is ignored due to the float. If 'float' has a value other than 'none', the box is floated and 'display' is treated as 'block'css(propertyIgnoredDueToDisplay)*/
+}
+
+
+/*für IR2*/
+
+.progress {
+    color: var(--hauptfarbe);
+    background-color: white;
+}
+
+#pageNavigation {
+    padding-top: 2%;
+    float: right;
+}
+
+/*für seite 19*/
+.task8 {
+    padding-bottom: 0.5%;
+}
+
+/*für seite 25*/
+#relFeedbackMet{
+    margin: 20px;
+}
+
+/* für seite 28*/
+#roccTask{
+    padding-bottom: 2%;
+}
+
+#roccVar{
+    margin: 2%;
+    width: 90%;
+}
+
+th {
+    padding: 3px;
+    background-color: var(--hauptfarbe);
+    text-align: center;
+}
+
+button{
+    background-color: #e1e6e6;
+    font-size: 18px;
+    border: none; 
+    /*Methode um den Inhalt der Buttons vertikal und horizontal zu zentrieren*/
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px #6f7172;  
+}
+
+button:hover {
+    background-color: #fbfcfc;
+    transform: scale(1.2);
+}
+
+#roccBtnSolution {
     float:right;
+
+}
+
+@media screen and (max-width: 690px) {
+    #roccVar {
+        margin: 0;
+    }
+    .roccHeadRow, .inputCol {
+        display: none;
+    }
+    
+    th {
+        text-align: left;
+    }
+
+}
+
+.roccResultInput {
+    width: 50%;
+    margin-left: 25%;
+    text-align: center;
 }
