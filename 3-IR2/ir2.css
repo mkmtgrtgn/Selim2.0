@@ -104,6 +104,11 @@ quizbutton {
     background-color: white;
 }
 
+#pageNavigation {
+    padding-top: 2%;
+    float: right;
+}
+
 /*für seite 19*/
 .task8 {
     padding-bottom: 0.5%;
