@@ -560,9 +560,54 @@
                 <hr class="hr-line">
                 <h2 id="T" class="page-header">  T</h2>
                 <div>
-                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Formel</h2>
+                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">TF-IDF</h2>
                     <div class="glossar-definition">
-                        <p>Formeldefinition</p>
+                        <p>Term frequency-inverse document frequency (tf-idf) gewichtet das Wort, das sehr selten vorkommt, d.h. es erfasst die Einzigartigkeit.</p><br>
+                        <p>Es ist das Vorkommen eines Wortes in einem einzigen Dokument, aber im gesamten Korpus.</p><br>
+                        <math style=\"font-family:stix;font-size:16px;\" xmlns=\"http://www.w3.org/1998/Math/MathML\">
+                            <mstyle mathsize=\"16px\">
+                                <msub>
+                                    <mi>w</mi>
+                                    <mrow>
+                                        <mi>i</mi>
+                                        <mo>,</mo>
+                                        <mo>&#xA0;</mo>
+                                        <mi>j</mi>
+                                        <mo>&#xA0;</mo>
+                                        <mo>=</mo>
+                                        <mo>&#xA0;</mo>
+                                        <mi>t</mi>
+                                        <msub>
+                                            <mi>f</mi>
+                                            <mrow>
+                                                <mi>i</mi>
+                                                <mo>,</mo>
+                                                <mo>&#xA0;</mo>
+                                                <mi>j</mi>
+                                                <mo>&#xA0;</mo>
+                                            </mrow>
+                                        </msub>
+                                    </mrow>
+                                </msub>
+                                <mo>&#xD7;</mo>
+                                <mo>&#xA0;</mo>
+                                <mi>log</mi>
+                                <mo>&#xA0;</mo>
+                                <mfenced>
+                                    <mfrac>
+                                        <mi>N</mi>
+                                        <mrow>
+                                            <mi>d</mi>
+                                            <msub>
+                                                <mi>f</mi>
+                                                <mi>i</mi>
+                                            </msub>
+                                        </mrow>
+                                    </mfrac>
+                                </mfenced>
+                            </mstyle><br>
+                            <br>
+
                     </div>
                 </div>
                 <hr class="hr-line">
@@ -655,9 +700,47 @@
                 <hr class="hr-line">
                 <h2 id="Z" class="page-header">  Z</h2>
                 <div>
-                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Formel</h2>
+                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Zipf's Law</h2>
                     <div class="glossar-definition">
-                        <p>Formeldefinition</p>
+                        <p>Das Zipfsche Gesetz ist ein Modell, mit dessen Hilfe man bei bestimmten Größen, die in eine Rangfolge gebracht werden, deren Wert aus ihrem Rang abschätzen kann.</p><br>
+
+                        <math style=\"font-family:stix;font-size:16px;\" xmlns=\"http://www.w3.org/1998/Math/MathML\">
+                            <mstyle mathsize=\"16px\">
+                                <mi>F</mi>
+                                <mfenced>
+                                    <mi>w</mi>
+                                </mfenced>
+                                <mo>&#xA0;</mo>
+                                <mo>=</mo>
+                                <mo>&#xA0;</mo>
+                                <mfrac>
+                                    <mi>C</mi>
+                                    <mrow>
+                                        <mi>r</mi>
+                                        <msup>
+                                            <mfenced>
+                                                <mi>w</mi>
+                                            </mfenced>
+                                            <mi>a</mi>
+                                        </msup>
+                                    </mrow>
+                                </mfrac>
+                                <mo>&#xA0;</mo>
+                                <mspace linebreak=\"newline\"/>
+                                    <mspace linebreak=\"newline\"/>
+                                        <mi>a</mi>
+                                        <mo>&#xA0;</mo>
+                                        <mo>&#x2248;</mo>
+                                        <mn>1</mn>
+                                        <mo>,</mo>
+                                        <mo>&#xA0;</mo>
+                                        <mi>C</mi>
+                                        <mo>&#x2248;</mo>
+                                        <mn>0</mn>
+                                        <mo>,</mo>
+                                        <mn>1</mn>
+                            </mstyle>
+
                     </div>
                 </div>
                 <hr class="hr-line">
@@ -672,4 +755,3 @@
 
 <script src="../static/js/bootstrap.bundle.js"></script>
 
-<--Hat sich was verändert?-->
