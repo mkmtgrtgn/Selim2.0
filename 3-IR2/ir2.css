@@ -92,5 +92,17 @@ p {
 
 quizbutton {
     display:inline-block;
-    float:right;
+    float: right;
+}
+
+
+/*für IR2*/
+
+.progress {
+    color: var(--hauptfarbe);
+    background-color: white;
+}
+/*für seite 25*/
+#relFeedbackMet{
+    margin: 20px;
 }
