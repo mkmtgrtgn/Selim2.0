@@ -1,57 +1,12 @@
 # Selim2.0
-Ein Projekt um die Selim Seite wieder aufzufrischen.
-Bisher habe ich einen kleinen Server außenrum gebaut und ein grundlegendes Template - das natürlich noch nicht alles sondern kann und soll gerne noch überarbeitet und erweitert werden :)</br>
+So jetzt habe ich das ganze Mal ohne Server gebastelt.
 
-Grundlegende Voraussetzungen: 
+1. Ihr findet in der Ordnerstruktur für jede Gruppe eure eigene "Landing Page" auf die in der Navigationsleiste verwiesen wird
+2. Das wäre wahrscheinlich ein guter Punkt für ne Übersichtsseite   
+3. Das Template könnt ihr beliebig kopieren um neue Seiten hinzuzufügen.
+4. Wenn ihr ein eigenes Design bzw. Änderungen am Design machen wollt - findet ihr in jedem Ordner noch eine .css Datei mit der ihr nur das Design in eurem Gruppenordner ändern könnt. 
+5. Ich habe quiz.js für Multiple Choice Abfragen gebastelt - einfach das Modal aus quiz.html kopieren und Fragen als <div class="frage"> f || a1 ** a2 || fa ** fa2 ** fa3 </div> anhängen Frage || Richtige Antwort ** ra || Falsche Antwort ** fa ** fa2  -- Benötigt Modal und quiz-Div 
 
-1. Python3 muss auf eurem Rechner installiert sein ( und die verwendeten Bibliotheken, also bisher erstmal Flask die in dem requirements.txt 
-   zu finden sind, könnt ihr so installieren: https://pip.pypa.io/en/stable/user_guide/#requirements-files ) </br>
+Ihr könnt jetzt einfach aus der untersten Ordnerstruktur raus home.html öffnen und solltet (wenn alles gut geht) dann einfach ne Website im Browser sehen über die ihr auf Seiten von den jeweiligen Gruppen kommt. Ich hab das bei Gruppe 1 schon mal direkt so eingebaut, mit den Files die sie als letztes hochgeladen haben - nähere Erklärungen gibts aber in dem Video:
 
-Ablauf um den Server zu starten: </br>
-
-1. Einfacherer Weg : Ggf. Entwicklungsumgebung wie PyCharm für Python installieren ( https://www.jetbrains.com/shop/eform/students ) 
-   Dann könnt ihr einfach app.py -> Rechtsklick -> Run  starten :)</br>
-   
-2. Oder Um den Server zu Starten navigiert ihr in der CLI / Terminal / Konsole in das Verzeichnis Selim (nicht selim_r) 
-   (ihr seid in .../Überverzeichnis/Selim, Inhalt: selium_r, requirements.txt, app.py, etc. ) 
-   schreibt "flask run" und der Server startet auf 127.0.0.1:5000. </br> 
-   Gebt ihr jetzt die IP 127.0.0.1:5000 in der URL-Zeile des Browsers ein, sollte euch die "neue" Selim Seite angezeigt werden.</br>
-   Ändert ihr etwas an den Dateien des Servers</br>
-   z.B. HTML Dateien finden sich in selim_r/main/main_templates, da könnt ihr erstmal am HTML rumbasteln.</br>
-
-Läuft soweit alles, könnt ihr erstmal die lnks.html Datei bearbeiten - das Resultat seht ihr dann immer wenn ihr in der Navbar 
-auf alles außer Selim (das führt zur "Startseite"/inhalt.html) klickt; URL 127.0.0.1:5000/nochNIX (wahrscheinlich).
-
-
-Bsp. </br>
-lnks.html sieht geöffnet so ähnlich aus:</br>
-____________________________________________________________</br>
-   {% extends 'main.html' %}</br>
-   {% block inhalt %}</br>
-   &lt;h1&gt; Überschrift: Herhören Herhören &lt;/h1&gt; </br>
-   -> hier könnt ihr euer HTML schreiben und es wird in die hintergrundfarbene Box geschrieben </br>
-   ( der Block wird in &lt;div id="content"&gt; aus main.html eingefügt)</br>;
-</br>
-   {% endblock}</br>
-____________________________________________________________</br>
-                                   </br>
-Werden die Änderungen nicht direkt in der Seite im Browser angezeigt werden (wegen Caching und so), dann ist oft ein Server-Neustart hilfreich 
-- ansonsten happy Coding und einfach Ausprobieren!
-  
-                                                                                                  
-Die navbar.html könnt ihr natürlich auch gerne bearbeiten bzw. euch das mal anschauen, 
-ich habe da einfach so ne "Standard" Bootstrap Navbar leicht modifiziert - was genau anders ist findet ihr 
-unter /Selim/static/css/main.css und könnt da natürlich auch gerne noch was ändern oder schöner machen :)</br>
-
-Wenn ihr Fragen habt macht sie bitte am Besten im Learnweb Forum oder in GitHub öffentlich, sodass andere mit denselben Fragen aus der Antwort lernen können und auch andere die das      wissen antworten können</br>
-
-   
-Wenn ihr schon ein bisschen mehr machen wollt, könnt ihr in main.py auch eigene Routen und HTML Dateien erstellen nach dem Muster:</br></br>
-*hier wird die Route auf den Blueprint main_bp "registriert" und kann über den Server geservet werden* </br>
-@main_bp.route('/meineWunschURL')</br>
-- *def ist das Schlüsselwort um eine Funktion zu definieren* </br>
-- def funktionsName():</br>
-- - *render_template ist die Methode, die letztendlich auf das HTML File verweist zu dem die Route führen soll*</br>
-- - return render_template('name_von_eurem.html', seitenname='Ich werde bei den Tabs als Title angezeigt')</p>
-   
-   
+https://drive.google.com/drive/folders/1rGa_TpGFUWhbhvKawwBJ_5NJWjwAOG4m?usp=sharing
