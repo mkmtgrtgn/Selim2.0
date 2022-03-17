@@ -71,6 +71,7 @@ Hier wollte er die Farbe sonst nicht ändern
 
 p {
     margin:1vw;
+    text-align: justify;
 }
 
 .fragenblock {
@@ -102,7 +103,67 @@ quizbutton {
     color: var(--hauptfarbe);
     background-color: white;
 }
+
+/*für seite 19*/
+.task8 {
+    padding-bottom: 0.5%;
+}
+
 /*für seite 25*/
 #relFeedbackMet{
     margin: 20px;
+}
+
+/* für seite 28*/
+#roccVar{
+    margin: 2%;
+    width: 90%;
+}
+
+th {
+    padding: 3px;
+    background-color: var(--hauptfarbe);
+    text-align: center;
+}
+
+tr:hover {
+    background-color: white;
+}
+
+button{
+    background-color: #e1e6e6;
+    font-size: 18px;
+    border: none; 
+    /*Methode um den Inhalt der Buttons vertikal und horizontal zu zentrieren*/
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px #6f7172;  
+}
+
+button:hover {
+    background-color: #fbfcfc;
+    transform: scale(1.2);
+}
+
+#roccBtnSolution {
+    margin: 3%;
+    float:right;
+
+}
+
+@media screen and (max-width: 690px) {
+    #roccVar {
+        margin: 0;
+    }
+    .roccHeadRow, .inputCol {
+        display: none;
+    }
+    
+    th {
+        text-align: left;
+    }
+
 }
