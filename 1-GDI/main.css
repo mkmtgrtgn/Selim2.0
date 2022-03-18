@@ -59,6 +59,15 @@ Hier wollte er die Farbe sonst nicht ändern
     min-height:42vh;
 }
 
+#content_lp {
+    background-color: var(--hauptfarbe);
+    padding:1%;
+    border:solid rgba(128, 128, 128, 0.42);
+    border-radius: 16px;
+    display:block;
+    overflow:auto;
+}
+
 .bg:hover {
     corner-radius:4px;
     background-image: linear-gradient(180deg, var(--hauptfarbe), var(--hintergrund));
