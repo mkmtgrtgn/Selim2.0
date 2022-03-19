@@ -6,7 +6,7 @@ body{
 }
 
 #body::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 /*h1, h2, h3 {
@@ -22,20 +22,20 @@ body{
 .navi{
     background-image: linear-gradient(180deg, var(--hauptfarbe), 60%, var(--hintergrund));
     font-size:24px;
-
+    
 }
 
 .nav-linki:hover {
     color:white;
     font-weight: 600;
-
+    
 }
 
 /*
 Da man Bootstrap-Klassen nicht so leicht überschreiben kann, einfach kopieren und ändern
 - andernfalls einfach Bootstrap als Datei downloaden und selber modifizieren (nav-link->i).
 Hier wollte er die Farbe sonst nicht ändern
- */
+*/
 .nav-linki {
     color:var(--schriftfarbe);
     display: block;
@@ -44,7 +44,7 @@ Hier wollte er die Farbe sonst nicht ändern
     padding-left: 1rem;
     text-decoration: none;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
-
+    
 }
 
 #content {
@@ -62,7 +62,7 @@ Hier wollte er die Farbe sonst nicht ändern
 .bg:hover {
     corner-radius: 4px; /*Unknown property: 'corner-radius'css(unknownProperties)*/
     background-image: linear-gradient(180deg, var(--hauptfarbe), var(--hintergrund));
-
+    
 }
 
 .kleine_ueber {
@@ -77,7 +77,7 @@ p {
 .fragenblock {
     border: dotted var(--hauptfarbe)  4px;
     padding:1vw;
-
+    
 }
 
 .antworten {
@@ -107,6 +107,11 @@ quizbutton {
 #pageNavigation {
     padding-top: 2%;
     float: right;
+}
+
+table{
+    table-layout: auto;
+    width: 100%;
 }
 
 /*für seite 19*/
@@ -166,9 +171,9 @@ button:hover {
     transform: scale(1.2);
 }
 
-#roccBtnSolution {
+#roccBtnSolution, #table13BtnSolution {
     float:right;
-
+    
 }
 
 @media screen and (max-width: 690px) {
@@ -182,7 +187,7 @@ button:hover {
     th {
         text-align: left;
     }
-
+    
 }
 
 .roccResultInput {
@@ -195,4 +200,48 @@ button:hover {
 .textGroupIndent {
     margin-left: 5%;
     padding-bottom: 1%;
+}
+
+/* für seite 30*/
+
+#task13{
+    padding-bottom: 2%;
+}
+
+.col {
+    margin-top: 1%;
+    margin-right: 4%;
+    margin-bottom: 1%;
+}
+
+
+.dtmTable {
+    width: 80px;
+}
+
+.dtmRowSol{
+    height: 35px;
+}
+
+@media screen and (max-width: 690px) {
+    #dtm13 {
+        margin-top: 0;
+        margin-right: 0%;
+    }
+    
+    .dtmTable {
+        width: 80px;
+    }
+    
+}
+@media screen and (max-width: 400px) {
+    .dtmTable {
+        width: 50px;
+    }
+    #dtmTableHead {
+        overflow:hidden;
+    }
+    #dtmTableHead:hover {
+        overflow: visible;
+    }
 }
