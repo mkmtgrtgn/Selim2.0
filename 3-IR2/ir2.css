@@ -190,3 +190,9 @@ button:hover {
     margin-left: 25%;
     text-align: center;
 }
+
+/* für seite 29*/
+.textGroupIndent {
+    margin-left: 5%;
+    padding-bottom: 1%;
+}
