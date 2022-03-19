@@ -61,6 +61,7 @@ h1, h2, h3 {
 .progress {
     color: var(--hauptfarbe);
     margin-bottom: 2%;
+    margin-top: 5%;
 }
 
 #pageNavigation {
