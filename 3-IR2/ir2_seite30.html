@@ -55,118 +55,198 @@
     <div id="content">
         
         <div class="container">
+            
+            <h1>Übung 13: Indexierung und Retrieval</h1>
+            <h3>Aufgabe 1</h3>
+            <p>Indexierung und Ermittlung der idf-Werte</p>
+            <p>Dokumente: 5</p>
+            <p>Anfrage 1:   Dieter Baumann, Nandrolon <br> Anfrage 2:   Leichtathlet, Olympiasieger</p>         
+            
             <div class="row">
                 <div class="col">
-                    <h1>Übung 13: Indexierung und Retrieval</h1>
-                    <h3>Aufgabe 1</h3>
-                    <p>Indexierung und Ermittlung der idf-Werte</p>
-                    <p>Dokumente: 5</p>
-                    <p>Anfrage 1:   Dieter Baumann, Nandrolon <br> Anfrage 2:   Leichtathlet, Olympiasieger</p>         
-
                     <div id="task13">
-                        <table id="dtm13">
+                        <table class="dtm13">
                             <tr class="dtmTableHead">
-                                <th><h4>DTM</h4></th>
-                                <th>Dieter Baumann</th>
+                                <th>DTM</th>
+                                <th>Dieter<br>Baumann</th>
                                 <th>Nandrolon</th>
                                 <th>Olympia</th>
                                 <th>Leicht-<br>athletik</th>
                                 <th>Sport</th>
                             </tr>
-                    
-                            <tr id="dtmRow1">
-                                <td><input class="dtmTable"></td>
-                                <td><input class="dtmTable"></td>
-                                <td><input class="dtmTable"></td>
-                                <td><input class="dtmTable"></td>
-                                <td><input class="dtmTable"></td>
-                                <td><input class="dtmTable"></td>
-                            </tr>
-                            <tr id="dtmRow2">
-                                <td><input class="dtmTable"></td>
-                                <td><input class="dtmTable"></td>
-                                <td><input class="dtmTable"></td>
-                                <td><input class="dtmTable"></td>
-                                <td><input class="dtmTable"></td>
-                                <td><input class="dtmTable"></td>
-                            </tr>
-                            <tr id="dtmRow3">
-                                <td><input class="dtmTable"></td>
-                                <td><input class="dtmTable"></td>
-                                <td><input class="dtmTable"></td>
-                                <td><input class="dtmTable"></td>
-                                <td><input class="dtmTable"></td>
-                                <td><input class="dtmTable"></td>
-                            </tr>
-                            <tr id="dtmRow4">
-                                <td><input class="dtmTable"></td>
-                                <td><input class="dtmTable"></td>
-                                <td><input class="dtmTable"></td>
-                                <td><input class="dtmTable"></td>
-                                <td><input class="dtmTable"></td>
-                                <td><input class="dtmTable"></td>
-                            </tr>
-                            <tr id="dtmRow5">
-                                <td><input class="dtmTable"></td>
-                                <td><input class="dtmTable"></td>
-                                <td><input class="dtmTable"></td>
-                                <td><input class="dtmTable"></td>
-                                <td><input class="dtmTable"></td>
-                                <td><input class="dtmTable"></td>
-                            </tr>
-                            <tr id="dtmRow6">
-                                <td><input class="dtmTable"></td>
-                                <td><input class="dtmTable"></td>
-                                <td><input class="dtmTable"></td>
-                                <td><input class="dtmTable"></td>
-                                <td><input class="dtmTable"></td>
-                                <td><input class="dtmTable"></td>
-                            </tr>
-                            <tr id="dtmRow7">
-                                <td><input class="dtmTable"></td>
-                                <td><input class="dtmTable"></td>
-                                <td><input class="dtmTable"></td>
-                                <td><input class="dtmTable"></td>
-                                <td><input class="dtmTable"></td>
-                                <td><input class="dtmTable"></td>
-                            </tr>
-                            <tr id="dtmRow8">
-                                <td><input class="dtmTable"></td>
-                                <td><input class="dtmTable"></td>
-                                <td><input class="dtmTable"></td>
-                                <td><input class="dtmTable"></td>
-                                <td><input class="dtmTable"></td>
-                                <td><input class="dtmTable"></td>
-                            </tr>
                             
+                            <tr class="dtmRow">
+                                <td>D1</td>
+                                <td><input class="dtmTable"></td>
+                                <td><input class="dtmTable"></td>
+                                <td><input class="dtmTable"></td>
+                                <td><input class="dtmTable"></td>
+                                <td><input class="dtmTable"></td>
+                            </tr>
+                            <tr class="dtmRow">
+                                <td>D2</td>
+                                <td><input class="dtmTable"></td>
+                                <td><input class="dtmTable"></td>
+                                <td><input class="dtmTable"></td>
+                                <td><input class="dtmTable"></td>
+                                <td><input class="dtmTable"></td>
+                            </tr>
+                            <tr class="dtmRow">
+                                <td>D3</td>
+                                <td><input class="dtmTable"></td>
+                                <td><input class="dtmTable"></td>
+                                <td><input class="dtmTable"></td>
+                                <td><input class="dtmTable"></td>
+                                <td><input class="dtmTable"></td>
+                            </tr>
+                            <tr class="dtmRow">
+                                <td>D4</td>
+                                <td><input class="dtmTable"></td>
+                                <td><input class="dtmTable"></td>
+                                <td><input class="dtmTable"></td>
+                                <td><input class="dtmTable"></td>
+                                <td><input class="dtmTable"></td>
+                            </tr>
+                            <tr class="dtmRow">
+                                <td>D5</td>
+                                <td><input class="dtmTable"></td>
+                                <td><input class="dtmTable"></td>
+                                <td><input class="dtmTable"></td>
+                                <td><input class="dtmTable"></td>
+                                <td><input class="dtmTable"></td>
+                            </tr>
+                            <tr class="dtmRow">
+                                <td>idf</td>
+                                <td><input class="dtmTable"></td>
+                                <td><input class="dtmTable"></td>
+                                <td><input class="dtmTable"></td>
+                                <td><input class="dtmTable"></td>
+                                <td><input class="dtmTable"></td>
+                            </tr>
+                            <tr class="dtmRow">
+                                <td>Q1</td>
+                                <td><input class="dtmTable"></td>
+                                <td><input class="dtmTable"></td>
+                                <td><input class="dtmTable"></td>
+                                <td><input class="dtmTable"></td>
+                                <td><input class="dtmTable"></td>
+                            </tr>
+                            <tr class="dtmRow">
+                                <td>Q2</td>
+                                <td><input class="dtmTable"></td>
+                                <td><input class="dtmTable"></td>
+                                <td><input class="dtmTable"></td>
+                                <td><input class="dtmTable"></td>
+                                <td><input class="dtmTable"></td>
+                            </tr>
                             
                         </table>
+                        <br>
                         <button id="table13BtnSolution" class="btn btn-primary">Lösung anzeigen</button>
                     </div>
-
-                    <div class="progress">
-                        <div class="progress-bar" role="progressbar" aria-valuenow="88.24"
-                        aria-valuemin="0" aria-valuemax="100" style="width:88.24%">
-                          <span class="sr-only">88,24% Complete</span>
-                        </div>
-                      </div>
-
-                      <nav aria-label="Page navigation example" id="pageNavigation">
-                        <ul class="pagination">
-                            <li class="page-item"><a class="page-link" href="ir2_seite1.html">zum Modulanfang</a></li>
-                            <li class="page-item"><a class="page-link" href="ir2_seite29.html">zurück</a></li>
-                            <li class="page-item"><a class="page-link" href="ir2_seite31.html">weiter</a></li>
-                            <li class="page-item"><a class="page-link" href="ir2_seite34.html">zum Modulende</a></li>
-                        </ul>
-                    </nav>
-                    
+                </div>
+                <div class="col">
+                    <div id="task13Sol">
+                        <table class="dtm13">
+                            <tr id="dtmTableHeadSol">
+                                <th>DTM</th>
+                                <th>Dieter<br>Baumann</th>
+                                <th>Nandrolon</th>
+                                <th>Olympia</th>
+                                <th>Leicht-<br>athletik</th>
+                                <th>Sport</th>
+                            </tr>
+                            
+                            <tr class="dtmRowSol">
+                                <td>D1</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr class="dtmRowSol">
+                                <td>D2</td>
+                                <td>2</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                            <tr class="dtmRowSol">
+                                <td>D3</td>
+                                <td>2</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>0</td>
+                            </tr>
+                            <tr class="dtmRowSol">
+                                <td>D4</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>0</td>
+                            </tr>
+                            <tr class="dtmRowSol">
+                                <td>D5</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr class="dtmRowSol">
+                                <td>idf</td>
+                                <td>1</td>
+                                <td>2,5</td>
+                                <td>1,67</td>
+                                <td>1,67</td>
+                                <td>2,5</td>
+                            </tr>
+                            <tr class="dtmRowSol">
+                                <td>Q1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr class="dtmRowSol">
+                                <td>Q2</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>0</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="88.24"
+                    aria-valuemin="0" aria-valuemax="100" style="width:88.24%">
+                    <span class="sr-only">88,24% Complete</span>
                 </div>
             </div>
             
-            
+            <nav aria-label="Page navigation example" id="pageNavigation">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="ir2_seite1.html">zum Modulanfang</a></li>
+                    <li class="page-item"><a class="page-link" href="ir2_seite29.html">zurück</a></li>
+                    <li class="page-item"><a class="page-link" href="ir2_seite31.html">weiter</a></li>
+                    <li class="page-item"><a class="page-link" href="ir2_seite34.html">zum Modulende</a></li>
+                </ul>
+            </nav>
             
         </div>
     </div>
+    
+    
+    
+    
     
 </body>
 
