@@ -166,7 +166,7 @@ button:hover {
     transform: scale(1.2);
 }
 
-#roccBtnSolution {
+#roccBtnSolution, #table13BtnSolution {
     float:right;
 
 }
@@ -195,4 +195,14 @@ button:hover {
 .textGroupIndent {
     margin-left: 5%;
     padding-bottom: 1%;
+}
+
+/* für seite 30*/
+
+#task13{
+    padding-bottom: 2%;
+}
+
+.dtmTable {
+    width: min-content;
 }
