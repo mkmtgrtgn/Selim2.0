@@ -114,6 +114,19 @@ quizbutton {
     padding-bottom: 0.5%;
 }
 
+.form8 {
+    margin-bottom: 2%;
+}
+
+.task8abc {
+    margin: 3px;
+}
+
+.div.card.card-body {
+    padding: 10px;
+    width: min-content;
+}
+
 /*für seite 25*/
 #relFeedbackMet{
     margin: 20px;

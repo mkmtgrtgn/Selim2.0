@@ -59,7 +59,7 @@
                 <div class="col">
                     <h1>Übung 8: Inverse Dokumenthäufigkeit</h1>
                     
-
+                    
                     <div>
                         <p class="task8"> Gegeben ist ein Dokument mit folgenden Termen und ihren Häufigkeiten:
                             D:	Term A (3), Term B (2), Term C (1) <br>
@@ -75,29 +75,66 @@
                             Tipp: inverse Dokumenthäufigkeit = inverse document frequency = idf
                         </p>
                     </div>
-                    
-                    <div class="progress">
-                        <div class="progress-bar" role="progressbar" aria-valuenow="55.88"
-                        aria-valuemin="0" aria-valuemax="100" style="width:55.88%">
-                        <span class="sr-only">55,88% Complete</span>
+                    <div>
+                        <form class="form8">
+                            <label for="termA">Term A = </label> 
+                            <input type="text" id="termA" class="task8abc" name="termA">
+                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExampleA" aria-expanded="false" aria-controls="multiCollapseExampleA">Lösung für A</button>
+                            <div class="collapse multi-collapse" id="multiCollapseExampleA">
+                                <div class="card card-body">
+                                    idf=log(10000/50)=5.3
+                                </div>
+                            </div>
+                            <br>
+                            <label for="termB">Term B = </label>
+                            <input type="text" id="termB" class="task8abc" name="termB">
+                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExampleB" aria-expanded="false" aria-controls="multiCollapseExampleB">Lösung für B</button>
+                            <div class="collapse multi-collapse" id="multiCollapseExampleB">
+                                <div class="card card-body">
+                                    idf = log(10000/1300)=2.0 
+                                </div>
+                            </div>
+                            <br>
+                            <label for="termC">Term C = </label>
+                            <input type="text" id="termC" class="task8abc" name="termC">
+                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExampleC" aria-expanded="false" aria-controls="multiCollapseExampleC">Lösung für C</button>
+                            <div class="collapse multi-collapse" id="multiCollapseExampleC">
+                                <div class="card card-body">
+                                    idf = log(10000/250) =3.7
+                                </div>
+                            </div>
+                            <br>
+                        </form>
                     </div>
+                    
+                    
                 </div>
-                <nav aria-label="Page navigation example" id="pageNavigation">
-                    <ul class="pagination">
-                        <li class="page-item"><a class="page-link" href="ir2_seite1.html">zum Modulanfang</a></li>
-                        <li class="page-item"><a class="page-link" href="ir2_seite18.html">zurück</a></li>
-                        <li class="page-item"><a class="page-link" href="ir2_seite20.html">weiter</a></li>
-                        <li class="page-item"><a class="page-link" href="ir2_seite34.html">zum Modulende</a></li>
-                    </ul>
-                </nav>
                 
+                
+                
+                
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="55.88"
+                    aria-valuemin="0" aria-valuemax="100" style="width:55.88%">
+                    <span class="sr-only">55,88% Complete</span>
+                </div>
             </div>
+            <nav aria-label="Page navigation example" id="pageNavigation">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="ir2_seite1.html">zum Modulanfang</a></li>
+                    <li class="page-item"><a class="page-link" href="ir2_seite18.html">zurück</a></li>
+                    <li class="page-item"><a class="page-link" href="ir2_seite20.html">weiter</a></li>
+                    <li class="page-item"><a class="page-link" href="ir2_seite34.html">zum Modulende</a></li>
+                </ul>
+            </nav>
+            
         </div>
-        
-        
-        
     </div>
+    
+    
+    
 </div>
+
 
 </body>
 
