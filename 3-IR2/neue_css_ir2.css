@@ -137,7 +137,7 @@ button:hover {
     margin-left: 25%;
     text-align: center;
 }
-/* für seite 30*/
+/* für seite 30 ff.*/
 
 #task13{
     padding-bottom: 2%;
@@ -154,7 +154,7 @@ button:hover {
 }
 
 .dtmTable {
-    width: 80px;
+    width: 90px;
 }
 
 .dtmRowSol{
@@ -182,4 +182,19 @@ button:hover {
     #dtmTableHead:hover {
         overflow: visible;
     }
+}
+
+#content133 {
+    margin-top: 2.5%;
+}
+
+.headerTH {
+ text-align: center;
+}
+
+#exampleBox{
+    border: solid;
+    border-color: var(--verlinkungaktiv);
+    padding: 0;
+    margin-bottom: 2%;
 }
