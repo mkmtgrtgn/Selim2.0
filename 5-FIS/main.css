@@ -110,3 +110,92 @@ quizbutton {
 	border: 1px solid FF0000;
 	background-color: FF0000;
 }
+.aufgabe1 {
+    margin: 0px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
+    background-color: rgb(190,220,220);
+    border: 1px solid black;
+}
+
+/* Hervorhebung durch blau */
+.highlight {
+    color: #0186BC;
+}
+
+video {
+    border: 1px solid #333;
+}
+
+
+@media (min-width: 1200px) {
+video {
+  min-width: 500px;
+}
+}
+/* Venn Diagramm */
+.VenContainer {
+	background-color: #cccccc;
+}
+.vennDiagramm1 {
+	background-color: yellow;
+	border-radius: 50% 0 0 50%;
+}
+.vennDiagramm2 {
+	background-color: #008000;
+}
+.vennDiagramm3 {
+	background-color: blue;
+	border-radius: 0 50% 50% 0;
+}
+.glossar .panel {
+	margin-bottom: 0;
+}
+
+.buttonsLGAnsicht a {
+	margin-right: 5px;
+}
+/* Drag & Drop Tabelle */
+.fixed-td-width td {
+	width: 33%;
+	height: 70px;
+}
+
+@media(max-width: 768px) {
+	.fixed-td-width td {
+		width: 33%;
+		height: 100px;
+	}
+}
+
+.draggable {
+	cursor: move;
+}
+
+code {
+	color: #0186BC;
+}
+
+hr {
+	border-top: 1px solid #000;
+}
+
+.aufgabe2 {
+	margin-top: 50px;
+}
+
+#lueckentext>.selects {
+	display: inline;
+	width: auto;
+}
+
+.marked {
+	background-color: #0186BC;
+}
+
+#cursor-change > strong {
+	cursor: pointer;
+}
+
+.mbs {
+	margin-bottom: 10px;
+}
