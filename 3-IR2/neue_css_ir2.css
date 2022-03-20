@@ -91,7 +91,7 @@ h1, h2, h3 {
 
 th {
     padding: 3px;
-    background-color: var(--hauptfarbe);
+    background-color: var(--verlinkungaktiv);
     text-align: center;
 }
 
@@ -136,4 +136,50 @@ button:hover {
     width: 50%;
     margin-left: 25%;
     text-align: center;
+}
+/* für seite 30*/
+
+#task13{
+    padding-bottom: 2%;
+}
+
+.col {
+    margin-top: 1%;
+    margin-right: 4%;
+    margin-bottom: 1%;
+}
+
+.dtm13 {
+    background-color: var(--containerfarbe);
+}
+
+.dtmTable {
+    width: 80px;
+}
+
+.dtmRowSol{
+    height: 28px;
+}
+
+@media screen and (max-width: 690px) {
+    #dtm13 {
+        margin-top: 0;
+        margin-right: 0%;
+    }
+    
+    .dtmTable {
+        width: 80px;
+    }
+    
+}
+@media screen and (max-width: 400px) {
+    .dtmTable {
+        width: 50px;
+    }
+    #dtmTableHead {
+        overflow:hidden;
+    }
+    #dtmTableHead:hover {
+        overflow: visible;
+    }
 }
