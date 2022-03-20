@@ -171,7 +171,7 @@ button:hover {
     transform: scale(1.2);
 }
 
-#roccBtnSolution, #table13BtnSolution {
+#roccBtnSolution, .btn-primary{
     float:right;
     
 }
@@ -220,7 +220,7 @@ button:hover {
 }
 
 .dtmRowSol{
-    height: 35px;
+    height: 28px;
 }
 
 @media screen and (max-width: 690px) {
