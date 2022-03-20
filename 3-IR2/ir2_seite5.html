@@ -74,6 +74,66 @@
                         In der Tabelle sind die Phasen einer Indexierung aufgelistet. Bringen 
                         Sie diese in eine sinnvolle Reihenfolge.</span>
 
+                    <table class="dragAdropTable">
+                        <tr>
+                            <td width="10%"><b>1.</b></td>
+                            <td width="45%" class ="droptarget"></td>
+                            <td id ="lösung">Dokument</td>
+                        </tr>
+                        <tr>
+                            <td width="10%"><b>2.</b></td>
+                            <td width="45%" class ="droptarget"></td>
+                            <td id ="lösung">Analyse der Struktur</td>
+                        </tr>
+                        <tr>
+                            <td width="10%"><b>3.</b></td>
+                            <td width="45%" class ="droptarget"></td>
+                            <td id ="lösung">Lexikalische Analyse</td>
+                        </tr>
+                        <tr>
+                            <td width="10%" class ="question"><b>4.</b></td>
+                            <td width="45%" class ="droptarget"></td>
+                            <td id ="lösung">Eliminierung der Stoppwörter</td>
+                        </tr>
+                        <tr>
+                            <td width="10%"><b>5.</b></td>
+                            <td width="45%" class ="droptarget"></td>
+                            <td id ="lösung">Stemming</td>
+                        </tr>
+                        <tr>
+                            <td width="10%"><b>6.</b></td>
+                            <td width="45%" class ="droptarget"></td>
+                            <td id ="lösung">Kompositazerlegung</td>
+                        </tr>
+                        <tr>
+                            <td width="10%"><b>7.</b></td>
+                            <td width="45%" class ="droptarget"></td>
+                            <td id ="lösung">Vergabe der Deskriptoren</td>
+                        </tr>
+                        <tr>
+                            <td width="10%"><b>8.</b></td>
+                            <td width="45%" class ="droptarget"></td>
+                            <td id ="lösung">Invertierter Index</td>
+                        </tr>
+                    </table> 
+                    <div class ="Antworten" id ="antworten">
+                        <p draggable="true" class="dragtarget" id="dragtarget">Stemming</p>
+                        <p draggable="true" class="dragtarget" id="dragtarget">Dokument</p>
+                        <p draggable="true" class="dragtarget" id="dragtarget">Lexikalische Analyse</p>
+                        <p draggable="true" class="dragtarget" id="dragtarget">Invertierter Index</p>
+                        <p draggable="true" class="dragtarget" id="dragtarget">Analyse der Struktur</p>
+                        <p draggable="true" class="dragtarget" id="dragtarget">Kompositazerlegung</p>
+                        <p draggable="true" class="dragtarget" id="dragtarget">Vergabe der Deskriptoren</p>
+                        <p draggable="true" class="dragtarget" id="dragtarget">Eliminierung der Stoppwörter</p>
+                    </div> 
+                    <br>
+                    <div>
+                    <button onclick="überprüfen" id="checkAnswer" class="btn btn-primary">Lösung anzeigen</button> 
+                    </div>
+                    <div>
+                        <p id="demo"></p>
+                        <p id="result"></p>
+                    </div>
                     <div class="progress">
                         <div class="progress-bar" role="progressbar" aria-valuenow="73"
                         aria-valuemin="0" aria-valuemax="100" style="width:73.5%">
@@ -266,5 +326,69 @@
     </div>
 </div>
 </div>
+<script type="text/javascript">var dragP;
+    /* Events fired on the drag target */
+    
+    document.addEventListener("dragstart", function (event) {
+        // The dataTransfer.setData() method sets the data type and the value of the dragged data
+        // event.dataTransfer.setData("Text", event.target.id);
+        dragP = event.target;
+
+        // Change the opacity of the draggable element
+        event.target.style.opacity = "0.4";
+    }); 
+    // Output some text when finished dragging the p element and reset the opacity
+    document.addEventListener("dragend", function (event) {
+        event.target.style.opacity = "1";
+        event.target.style.width ="100%";
+    });
+    
+    /* Events fired on the drop target */
+    
+    // When the draggable p element enters the droptarget, change the DIVS's border style
+    document.addEventListener("dragenter", function (event) {
+        if (event.target.className == "droptarget") {
+            event.target.style.border = "3px dotted black";
+        }
+    });
+    
+    // By default, data/elements cannot be dropped in other elements. To allow a drop, we must prevent the default handling of the element
+    document.addEventListener("dragover", function (event) {
+        event.preventDefault();
+    });
+    
+    // When the draggable p element leaves the droptarget, reset the DIVS's border style
+    document.addEventListener("dragleave", function (event) {
+        if (event.target.className == "droptarget") {
+            event.target.style.border = "";
+        }
+    });
+    
+    /* On drop - Prevent the browser default handling of the data (default is open as link on drop)
+       Reset the color of the output text and DIV's border-color
+       Get the dragged data with the dataTransfer.getData() method
+       The dragged data is the id of the dragged element ("drag1")
+       Append the dragged element into the drop element
+    */
+    
+    document.addEventListener("drop", function (event) {
+        event.preventDefault();
+        let targetDiv = event.target;
+        if (targetDiv.className == "droptarget") {
+            document.getElementById("demo").style.color = "red";
+            targetDiv.style.border = "";
+            if (targetDiv.childElementCount != 0){
+                let childP = targetDiv.getElementsByTagName("p")[0];
+                document.getElementById("answer").appendChild(childP);
+            }
+            targetDiv.appendChild(dragP);
+            dragP = null;
+        }
+        
+    });
+  
+    
+   
+    </script>
 </body>
 </html>
