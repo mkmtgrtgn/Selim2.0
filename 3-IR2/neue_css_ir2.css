@@ -198,3 +198,53 @@ button:hover {
     padding: 0;
     margin-bottom: 2%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Drag and Drop Seiten */
+.dragAdropTable {
+    width: 50%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-collapse: separate;
+    border: 2px solid white;
+    border-spacing: 0;
+    text-align: left;
+    background-color: var(--containerfarbe);
+}
+.dragAdropTable td {
+    text-align: center;
+    padding: 5px 12px;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white; 
+ 
+  }
+.dragtarget {
+    background-color: var(--containerfarbe);
+    text-align: center;
+    width: 20%;
+    float:left;
+    margin:2px;
+  }
+#checkAnswer {
+    float: right;
+}
