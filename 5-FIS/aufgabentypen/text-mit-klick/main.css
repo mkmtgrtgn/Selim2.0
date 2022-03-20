@@ -94,19 +94,3 @@ quizbutton {
     display:inline-block;
     float:right;
 }
-/* Klasse zur Hervorhebung richtiger Antworten */
-
-.correct {
-	color: #008000;
-	border: 1px solid 008000;
-	background-color: 008000;
-
-}
-
-/* Klasse zur Hervorhebung falscher Antworten */
-
-.wrong {
-	color: #FF0000;
-	border: 1px solid FF0000;
-	background-color: FF0000;
-}

@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Fakteninformationssysteme</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="style/bootstrap.min.css" rel="stylesheet">
+	<!--<link href="./style/style.css" rel="stylesheet">-->
+	<link href="style/style.css" rel="stylesheet">
+
+    <!-- Custom styles for this template 
+    <link href="navbar-fixed-top.css" rel="stylesheet">-->
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top headerSelim">
+		<div class="container">
+			<div class="navbar-header">
+				<!-- Hauptnavibutton -->
+				<button type="button" class="navbar-toggle collapsed pull-left btn-lg navButton" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<span class="navbar-brand hidden-md hidden-lg">SELiM - FIS</span>
+				<!-- iWis Tipp Button -->
+				<button type="button" class="navbar-toggle collapsed pull-right btn-lg invisible" data-toggle="modal" data-target="#iwistippmobil">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="glyphicon glyphicon-question-sign"></span>
+				</button>
+
+			</div>
+			<div class="row">
+				<div class="col-md-9 col-lg-9">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-4 hidden-xs hidden-sm ">
+							<h1>SELiM - Fakteninformationssysteme</h1>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12">
+						<!-- das klappt aus -->
+							<div id="navbar" class="navbar-collapse collapse">
+							  <ul class="nav navbar-nav">
+								<li class="active"><a href="/selim/miniTemplateSystem/index.php">Startseite</a></li>
+								<li><a href="#about">Mein Profil</a></li>
+								<li class="dropdown">
+								  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Alle SELiM Module <span class="caret"></span></a>
+								  <ul class="dropdown-menu">
+									<li><a href="https://www.uni-hildesheim.de/selim/Modul_GDI/GDI_Einstieg.php" target="_blank">Grundbegriffe IW   <span class='glyphicon glyphicon-new-window'></span></a></li>
+									<li><a href="https://www.uni-hildesheim.de/selim/Modul_IR/IR_1_bekog_SELIM/inhalt.php" target="_blank">Information Retrieval 1   <span class='glyphicon glyphicon-new-window'></span></a></li>
+									<li><a href="https://www.uni-hildesheim.de/selim/Modul_IR/IR_2_bekog_SELIM/r_inhalt.php" target="_blank">Information Retrieval 2   <span class='glyphicon glyphicon-new-window'></span></a></li>
+									<!--<li role="separator" class="divider"></li>
+									<li class="dropdown-header">Nav header</li>-->
+									<li><a href="/selim/miniTemplateSystem/module/evaIR/inhalt_eva.php">Evaluierung von IR Systemen</a></li>
+									<li><a href="/selim/miniTemplateSystem/module/fis/inhalt_fis.php">Fakteninformationssysteme</a></li>
+									<li><a href="/selim/miniTemplateSystem/module/mue/inhalt_mue.php">Maschinelle Übersetzung</a></li>
+								  </ul>
+								</li>
+								<li><a href="/selim/miniTemplateSystem/glossar/glossar.php">Glossar</a></li>
+								<li><a href="/selim/miniTemplateSystem/formelsammlung/formelsammlung.php">Formelsammlung</a></li>
+							  </ul>
+							</div><!--/.nav-collapse -->
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-lg-3">
+					<div id="iwistipp" class="navbar-collapse collapse pull-right invisible">
+					<ul class="nav navbar-nav">
+						<li class="dropdown">
+						  <a href="#" class="dropdown-toggle iwisTipp" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Bitte iWi um Hilfe"></a>
+						  <ul class="dropdown-menu dropdown-menu-right well">
+							<li><h2></h2></li>
+							<li>
+								<p>
+								</p>
+							</li>
+						  </ul>
+						</li>
+					</ul>
+				</div>
+				</div>
+			</div>
+		  <!-- iWi's Tipp und Navigation zum Ausklappen -->
+		  
+		</div><!-- /.container-->
+    </nav>
+<!-- Modal -->
+<div class="modal fade" id="iwistippmobil" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel"></h4>
+			</div>
+			<div class="modal-body">
+				
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Schließen</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<!-- Content Bereich beginnt -->
+	<div class="container">
+
+      <!-- Warpper um den Inhalt, de für Abstand zum fixed Header sorgt -->
+      <div class="jumbotron">
+
+
+<div class="paragraph">
+<h2>Kardinalitäten</h2>
+<div class="row">
+	<div class="col-md-12">
+		<p>Kardinalitäten geben darüber Auskunft, in welchem Verhältnis zwei Entitätstypen über einen 
+bestimmten Beziehungstyp miteinander verbunden sind. Es werden folgende Kardinalitätsverhältnisse unterschieden:<br/><br/>
+<p>
+<strong>1 : 1 Beziehungen</strong><img class='img-responsive' src='images/fis/1zu1.png' alt='1 zu 1 Beziehung'><br/>
+Jeder Entity-Typ steht mit höchstens einem Entity-Typ in Beziehung, z.B. Relation-Typ 'verheiratet' zwischen Personen
+</p>
+<p>
+<strong>1 : n Beziehungen</strong><img class='img-responsive' src='images/fis/1zun.png' alt='1 zu n Beziehung'><br/>
+Jeder Entity-Typ steht mit n>= 0 (keinem, einem oder mehreren) Entity-Typen in Beziehung, z.B. Professor kann mehrere 
+Diplomanden betreuen
+</p>
+<p>
+<strong>m : n Beziehungen</strong><img class='img-responsive' src='images/fis/mzun.png' alt='m zu n Beziehung'><br/>
+Keine Restriktion zwischen Paaren von Entity-Typen, z.B. jeder Studierende kann mehrere Vorlesungen belegen; jede 
+Vorlesung kann von mehreren Studierenden belegt werden
+</p></p>
+	</div>
+</div>
+</div>
+
+</div> <!-- schließt den Content Container "Jumbotron (.jumbotron)
+    <!-- Pfeilbuttons!!!!! :) -->
+	<div class="row {$hide}">
+	<div class="col-lg-7 col-lg-offset-3 text-center">
+		<div class="btn-group text-center" role="group">
+			<!-- Button 1 (ganz links) -->
+			<a class="btn btn-default btn-lg" href="inhalt_fis.php" role="button">
+				<span class="glyphicon glyphicon-step-backward" aria-hidden="true"></span>
+			</a>
+			<!-- Button 2 -->
+			<a class="btn btn-default text-left btn-lg" href="fis_8.php" role="button">
+				<span class="glyphicon glyphicon-triangle-left" aria-hidden="true"></span>
+				<span class="hidden-xs">vorherige Seite</span>
+			</a>
+			<!-- Dropdown Seitenzahl -->
+			<div class="btn-group dropup" role="group">
+			  <button class="btn btn-default dropdown-toggle btn-lg" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				10
+				<span class="caret"></span>
+			  </button>
+			  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+				<li><a href='inhalt_fis.php'>1</a></li><li><a href='fis_1.php'>2</a></li><li><a href='fis_2.php'>3</a></li><li><a href='fis_3.php'>4</a></li><li><a href='fis_4.php'>5</a></li><li><a href='fis_5.php'>6</a></li><li><a href='fis_6.php'>7</a></li><li><a href='fis_7.php'>8</a></li><li><a href='fis_8.php'>9</a></li><li><a href='fis_10.php'>11</a></li><li><a href='fis_11.php'>12</a></li><li><a href='fis_12.php'>13</a></li><li><a href='fis_13.php'>14</a></li><li><a href='fis_14.php'>15</a></li><li><a href='fis_15.php'>16</a></li><li><a href='fis_16.php'>17</a></li><li><a href='fis_17.php'>18</a></li><li><a href='fis_18.php'>19</a></li><li><a href='fis_19.php'>20</a></li><li><a href='fis_20.php'>21</a></li><li><a href='fis_21.php'>22</a></li><li><a href='fis_22.php'>23</a></li><li><a href='fis_23.php'>24</a></li><li><a href='fis_24.php'>25</a></li><li><a href='fis_25.php'>26</a></li><li><a href='fis_26.php'>27</a></li><li><a href='fis_27.php'>28</a></li><li><a href='fis_28.php'>29</a></li><li><a href='fis_29.php'>30</a></li><li><a href='fis_30.php'>31</a></li><li><a href='fis_31.php'>32</a></li><li><a href='fis_32.php'>33</a></li><li><a href='fis_33.php'>34</a></li><li><a href='fis_34.php'>35</a></li><li><a href='fis_35.php'>36</a></li><li><a href='fis_36.php'>37</a></li><li><a href='fis_37.php'>38</a></li><li><a href='fis_38.php'>39</a></li><li><a href='fis_39.php'>40</a></li><li><a href='fis_40.php'>41</a></li><li><a href='fis_41.php'>42</a></li><li><a href='fis_42.php'>43</a></li><li><a href='fis_43.php'>44</a></li><li><a href='fis_44.php'>45</a></li><li><a href='fis_45.php'>46</a></li><li><a href='fis_46.php'>47</a></li><li><a href='fis_47.php'>48</a></li><li><a href='fis_48.php'>49</a></li>
+			  </ul>
+			</div>
+			<!-- Button 3  -->
+			<a class="btn btn-default text-left btn-lg" href="fis_10.php" role="button">
+				<span class="hidden-xs">nächste Seite</span>
+				<span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+			</a>
+			<!-- Button 4 (ganz rechts) -->
+			<a class="btn btn-default btn-lg" href="fis_48.php" role="button">
+				<span class="glyphicon glyphicon-step-forward" aria-hidden="true"></span>
+			</a>
+		</div>
+		</div>
+	</div> <!-- row der Pfeilbuttons -->
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.0-rc.2/jquery-ui.js"></script>
+	<script type="text/javascript" src="script/jquery.ui.touch-punch.js"></script>
+    <!--<script src="../../dist/js/bootstrap.min.js"></script>-->
+	<script language="JavaScript" src="/selim/miniTemplateSystem//Bootstrap/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/selim/miniTemplateSystem//assets/js/ie10-viewport-bug-workaround.js"></script>
+	<!-- JavaScript Datei mit möglichen Funktionen zur Validierung etc. -->
+	<script type="text/javascript" src="/selim/miniTemplateSystem/script/script.js"></script>
+</body>
+</html>

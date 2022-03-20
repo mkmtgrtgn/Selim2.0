@@ -1,0 +1,301 @@
+@import url('http://fonts.cdnfonts.com/css/sofia-pro');
+
+body
+{
+	background-color: white;
+}
+
+.jumbotron {
+	font-family: "Sofia Pro", sans-serif;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+.jumbotron tr {
+	border: 0;
+}
+
+.jumbotron td {
+	width: 50%;
+	border-top: none !important;
+}
+
+.jumbotron td p {
+	font-weight: 400;
+}
+
+.container {
+	max-width: 100%;
+}
+
+/*.jumbotron h2 {
+	font-size: 6rem;
+}*/
+
+@media (min-width: 960px) {
+	.jumbotron
+	{
+		margin-top: 200px;
+		padding: 0px;
+		background-color: transparent;
+	}
+	.jumbotron h2 {
+		font-size: 2.5rem;
+		color: green;
+	}
+	.jumbotron p {
+		font-size: 1.5rem;
+		font-weight: 300;
+	}
+	.jumbotron li {
+		font-size: 1.5rem;
+		font-weight: 300;
+	}
+	.paragraph {
+		background-color: Azure;
+		padding: 2px 20px 2px 20px;
+		box-shadow: 0px 0px 5px SlateGray;
+	}
+	.aufgabe1 {
+		margin: 0px 10px 10px 10px;
+		padding: 10px 10px 10px 10px;
+		background-color: rgb(190,220,220);
+		border: 1px solid black;
+	}
+	.custombtn {
+		float: right;
+		margin-right: 5%;
+		margin-bottom: 16px;
+		background-color: Ivory;
+		color: black;
+		font-weight: 300;
+		border: 1px solid green;
+		border-radius: 0px;
+	}
+	.custombtn:hover {
+		border: 1px solid green;
+	}
+	.navButton
+	{
+		margin-left: 15px;
+	}
+	.headerSelim, .headerSelim .navbar-brand
+	{
+		border-bottom: 3px solid #0186BC;
+		background-color: #ffffff;
+	}
+	.headerSelim .navbar-brand {
+		border-bottom: none;
+	}
+
+	.iwisTipp /*.navbar-collapse.collapse*/
+	{
+		background: url('./iwi-klein.png') no-repeat 0 0 transparent;
+		height: 120px !important;
+		display: block;
+		width: 98px;
+	}
+	.padding {
+		padding: 15px;
+	}
+
+	blockquote {
+		border-left-color: #0186BC;
+	}
+
+	#iwistipp h2 {
+		white-space: nowrap;
+		min-width: 250px;
+	}
+
+	/* Hervorhebung durch blau */
+	.highlight {
+		color: #0186BC;
+	}
+
+	video {
+		border: 1px solid #333;
+	}
+}
+
+@media (min-width: 1200px) {
+	video {
+	  min-width: 500px;
+	}
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 959px) {
+	.jumbotron
+	{
+		margin-top: 120px;
+		padding: 0px;
+		background-color: transparent;
+	}
+	.jumbotron h2 {
+		font-size: 2.5rem;
+	}
+	.jumbotron p {
+		font-size: 1.5rem;
+		font-weight: 300;
+	}
+	.jumbotron li {
+		font-size: 1.5rem;
+		font-weight: 300;
+	}
+	.paragraph {
+		background-color: transparent;
+		padding: 2px 20px 2px 20px;
+	}
+	.aufgabe1 {
+		margin: 0px 10px 10px 10px;
+		padding: 10px 10px 10px 10px;
+		background-color: transparent;
+		border: 1px solid black;
+	}
+	.custombtn {
+		float: right;
+		margin-right: 5%;
+		margin-bottom: 16px;
+		background-color: Ivory;
+		color: black;
+		font-weight: 300;
+		border: 1px solid black;
+		border-radius: 0px;
+	}
+	.custombtn:hover {
+		border: 1px solid gray;
+	}
+}
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 767px) {
+	.jumbotron
+	{
+		margin-top: 50px;
+		padding: 0px;
+		background-color: transparent;
+	}
+	.jumbotron h2 {
+		font-size: 2.5rem;
+	}
+	.jumbotron p {
+		font-size: 1.5rem;
+		font-weight: 300;
+	}
+	.jumbotron li {
+		font-size: 1.5rem;
+		font-weight: 300;
+	}
+	.paragraph {
+		background-color: transparent;
+		padding: 2px 20px 2px 20px;
+	}
+	.aufgabe1 {
+		margin: 0px 10px 10px 10px;
+		padding: 10px 10px 10px 10px;
+		background-color: transparent;
+		border: 1px solid black;
+	}
+	.custombtn {
+		float: right;
+		margin-right: 5%;
+		margin-bottom: 16px;
+		background-color: Ivory;
+		color: black;
+		font-weight: 300;
+		border: 1px solid black;
+		border-radius: 0px;
+	}
+	.custombtn:hover {
+		border: 1px solid gray;
+	}
+}
+/* Radiobuttons haben linksbÃ¼ndigen Text */
+.btn.radioButton {
+	text-align: left;
+	white-space: normal;
+}
+/* Klasse zur Hervorhebung richtiger Antworten */
+
+.correct {
+	color: #008000;
+	border: 1px solid 008000;
+	background-color: 008000;
+
+}
+
+/* Klasse zur Hervorhebung falscher Antworten */
+
+.wrong {
+	color: #FF0000;
+	border: 1px solid FF0000;
+	background-color: FF0000;
+}
+
+/* Venn Diagramm */
+.VenContainer {
+	background-color: #cccccc;
+}
+.vennDiagramm1 {
+	background-color: yellow;
+	border-radius: 50% 0 0 50%;
+}
+.vennDiagramm2 {
+	background-color: #008000;
+}
+.vennDiagramm3 {
+	background-color: blue;
+	border-radius: 0 50% 50% 0;
+}
+.glossar .panel {
+	margin-bottom: 0;
+}
+
+.buttonsLGAnsicht a {
+	margin-right: 5px;
+}
+
+/* Drag & Drop Tabelle */
+.fixed-td-width td {
+	width: 33%;
+	height: 70px;
+}
+
+@media(max-width: 768px) {
+	.fixed-td-width td {
+		width: 33%;
+		height: 100px;
+	}
+}
+
+.draggable {
+	cursor: move;
+}
+
+code {
+	color: #0186BC;
+}
+
+hr {
+	border-top: 1px solid #000;
+}
+
+.aufgabe2 {
+	margin-top: 50px;
+}
+
+#lueckentext>.selects {
+	display: inline;
+	width: auto;
+}
+
+.marked {
+	background-color: #0186BC;
+}
+
+#cursor-change > strong {
+	cursor: pointer;
+}
+
+.mbs {
+	margin-bottom: 10px;
+}
