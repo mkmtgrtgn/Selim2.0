@@ -95,7 +95,6 @@ quizbutton {
     float:right;
 }
 /* Klasse zur Hervorhebung richtiger Antworten */
-
 .correct {
 	color: #008000;
 	border: 1px solid 008000;
@@ -104,33 +103,10 @@ quizbutton {
 }
 
 /* Klasse zur Hervorhebung falscher Antworten */
-
 .wrong {
 	color: #FF0000;
 	border: 1px solid FF0000;
 	background-color: FF0000;
-}
-.aufgabe1 {
-    margin: 0px 10px 10px 10px;
-    padding: 10px 10px 10px 10px;
-    background-color: rgb(190,220,220);
-    border: 1px solid black;
-}
-
-/* Hervorhebung durch blau */
-.highlight {
-    color: #0186BC;
-}
-
-video {
-    border: 1px solid #333;
-}
-
-
-@media (min-width: 1200px) {
-video {
-  min-width: 500px;
-}
 }
 /* Venn Diagramm */
 .VenContainer {
@@ -198,4 +174,26 @@ hr {
 
 .mbs {
 	margin-bottom: 10px;
+}
+/* Hervorhebung durch blau */
+.highlight {
+    color: #0186BC;
+}
+
+video {
+    border: 1px solid #333;
+}
+
+
+@media (min-width: 1200px) {
+video {
+  min-width: 500px;
+}
+}
+
+.aufgabe1 {
+    margin: 0px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
+    background-color: rgb(190,220,220);
+    border: 1px solid black;
 }
