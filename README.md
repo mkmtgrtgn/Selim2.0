@@ -6,7 +6,7 @@ So jetzt habe ich das ganze Mal ohne Server gebastelt.
 3. Das Template könnt ihr beliebig kopieren um neue Seiten hinzuzufügen.
 4. Wenn ihr ein eigenes Design bzw. Änderungen am Design machen wollt - findet ihr in jedem Ordner noch eine .css Datei mit der ihr nur das Design in eurem Gruppenordner ändern könnt. 
 5. Ich habe quiz.js für Multiple Choice Abfragen gebastelt - einfach den kommentierten Bereich aus quiz.html kopieren und Fragen als 
-<div id="quiz">
+&lt;div id="quiz">
 <div class="frage"> Frage || Richtige Antwort ** rA || Falsche Antwort ** fa ** fa2 </div>  
 ... </div> anhängen
   -- Zusätzlich das script quiz.js laden... 
