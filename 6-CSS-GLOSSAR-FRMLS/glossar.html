@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="de">
+<html lang="de" xmlns="http://www.w3.org/1999/html">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -13,6 +13,7 @@
 
     <!-- Der Font muss noch importiert werden -->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Selim 2.0</title>
 </head>
 <body>
@@ -22,7 +23,16 @@
             <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon navbar-light"></span>
             </button>
-            <a class="navbar-brand" href="#">Selim</a>
+        <!-- Navbar Brand: Logo der Uni Hildesheim-->
+            <a class="navbar-brand">
+                <!--Desktop und Tablet/großer oder mittel-großer Viewport; Klick auf Bild soll dann auf die erste Seite/eine Einfürungsseite führen-->
+                <span class="d-none d-sm-block">
+                    <!--Uni-Logo links in der Ecke-->
+                    <img class="d-inline-block align-text-center" src="uni_logo.png" width="70" height="70" alt="Universität Hildesheim" style="padding-right: 20;">
+                </span>
+                <!--Handy/kleiner Viewport - Abkürzung der Bezeichnung unseres Viewports-->
+                <span class="d-sm-none">Glossar</span>
+            </a>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -61,7 +71,92 @@
         <div class="row">
             <div class="col">
                 <h1>Glossar</h1>
-                <p>Vielleicht fügen wir hier hin ein Quiz zu unserem Glossar hinzu? Das Quiz fundiert dann so ähnlich wie ein Vokabeltest.</p></br>
+                <button id="btnScrollToTop">
+                    <i class="material-icons">arrow_upward</i>
+                </button>
+                <p> 
+                    Du möchtest dein Wissen testen? Klicke auf "Vokabeltest starten" und lerne wichtige Wörter zu den Modulen auswendig.
+                    Falls du dir das Glossar auch offline ansehen möchtest, klicke auf "Glossar downloaden". Es öffnet sich eine PDF-Datei.
+                    Speicher die Datei auf deinem Gerät und lerne auch offline die wichtigsten Definitionen der Module.
+                </p>
+                <div id="quiz">
+
+                    <div class="frage">
+                        Welches der folgenden Beschreibungen beschreibt ein Attribut? || Ist die Eigenschaft einer Entität oder einer Relation, z.B. der Titel einer Vorlesung.  || Art und Weise, wie der Benutzer seine Anfrage in einer dem System verständlichen Form formuliert. ** Ein Attribut ist ein Kurzreferat, das kurz und klar den Inhalt eines Dokuments wiedergibt. Zusätzlich ist es ein Verfahren zur Inhaltserschließung. ** Ein Attribut ist eine Stemming-Methode, dabei werden Präfixe und/oder Suffixe in einer bestimmten Reihenfolge entfernt.
+                    </div>
+        
+                    <div class="frage">
+                        Was ist das Boole'sche Retrieval? Wähle eine oder mehrere Antworten aus. ||   Das Boole'sche Retrieval ist ein klassisches Verfahren des Information Retrieval und basiert auf dem Exact Match Paradigma. ** Es prüft, ob eine wohldefinierte Bedingung erfüllt ist, oder nicht, basierend auf der Boole'schen Algebra.  || Das Boole'sche Retrieval beschreibt ein Verfahren, um Texte zu analysieren und diese klassifizieren zu können.
+                    </div>
+        
+        
+                    <div class="frage">
+                        Was bedeutet das Akronym CLIR? ||   Cross Language Information Retrieval || Calling Line Identification Restriction
+                    </div>
+        
+                    <div class="frage">
+                        Was sind Deskriptoren? Wähle eine oder mehrere Antworten aus. ||   Eine einfache Art der inhaltlichen Beschreibung von (Text-)Dokumenten ist die mit Hilfe von Stich- und Schlagwörtern. Diese werden Deskriptoren genannt, wenn sie im Rahmen eines → Thesaurus (=kontrolliertes Vokabular) zur inhaltlichen Beschreibung vorgesehen werden (= Vorzugsbenennungen). || Deskriptoren legen die Eigenschaften, Struktur und Konsistenzbedingungen für in die Datenbank zu speichernde Datenelemente fest.
+                    </div>
+        
+                    <div class="frage">
+                        Was ist der Recall? Wähle eine oder mehrere Antworten aus. || Der Recall ist der Quotient aus allen relevanten gefundenen Dokumenten und allen relevanten Dokumenten. ** Recall beschreibt die Vollständigkeit eines Ergebnisses. || Der Recall beschreibt die Redundanz (latein. redundare"im Überfluss vorhanden sein") bezeichnet allgemein das mehrfache Vorhandensein funktionsgleicher, inhaltsgleicher oder wesensgleicher Objekte.
+                    </div>
+                    <div class="frage">
+                        Was bedeutet das Akronym URL? || Uniform Resource Locator || Unicode Reformation Locator ** Unicorn Resource Locator
+                    </div>
+        
+                </div>
+        
+                <div class="row">
+                    <div class="col">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            Vokabeltest starten
+                        </button>
+                    </div>
+                    <div class="col">
+                        <a class="btn btn-primary" href="glossar.pdf" download target="_blank" title="Jetzt Glossar downloaden!">
+                            Glossar downloaden
+                        </a>
+
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content" id="modalCont">
+        
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Fragen</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+        
+                                    <div class="modal-body" >
+        
+                                        <div class="container" id="fragendiv">
+        
+                                            <h5 id="qfrage" class = "quizfrage">Hierzu gibt es keine Fragen.</h5>
+                                        </div>
+                                        <div class="modal-footer row ">
+                                            <button id = "quizmaster" onclick="antwortChecken()"
+                                                    type="button" class="btn btn-outline-success">Antwort überprüfen</button>
+                                        </div>
+                                        <div class="row justify-content-md-center">
+                                            <div id = "erfolgsnachricht" class="col-md-auto"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col md-12">
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" id="fortschritt" style="width: 1%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                    </div>
+        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </br>
+                    </br>
                     <div>
                     <a href="#A">A</a>
                     <a href="#B">B</a>
@@ -92,75 +187,59 @@
 
                     <h2 id="A" class="page-header">   A</h2>
                     <div>
-                        <!-- faq question -->
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Abstract</h2>
-                        <!-- faq answer -->
                         <div class="glossar-definition">
-                            <p> Ein Abstract ist ein Kurzreferat, das kurz und klar den Inhalt eines Dokuments wiedergibt. Zusätzlich ist es ein Verfahren zur Inhaltserschließung. Es  ist also eine Reduktion eines Textes auf die inhaltskennzeichnenden Inhalte. Die Suche während des IR-Prozesses erfolgt über den Abstract, was eine schnellere Suche zur Folge hat. Die Erstellung eines Abstracts erfolgt entweder manuell/intellektuell durch einen Experten oder den Autor oder automatisch durch ein  computergestütztes System.
+                            <p> Ein Abstract ist ein Kurzreferat, das kurz und klar den Inhalt eines Dokuments wiedergibt. Zusätzlich ist es ein Verfahren zur <a href="glossar.html#I" title="Begriffe mit I">Inhaltserschließung</a>. Es  ist also eine Reduktion eines Textes auf die inhaltskennzeichnenden Inhalte. Die Suche während des IR-Prozesses erfolgt über den Abstract, was eine schnellere Suche zur Folge hat. Die Erstellung eines Abstracts erfolgt entweder manuell/intellektuell durch einen Experten oder den Autor oder automatisch durch ein  computergestütztes System.
                             </p>
                         </div>
                     </div>
                     <hr class="hr-line">
                     <div>
-                        <!-- faq question -->
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Affix removal stemmer</h2>
-                        <!-- faq answer -->
                         <div class="glossar-definition">
-                            <p> Ist eine Stemming-Methode. Affix removal stemmer arbeiten regelbasiert, dabei werden Präfixe und/oder Suffixe in einer bestimmten Reihenfolge entfernt. So wird auf den Wortstamm hingearbeitet.</p>
+                            <p> Ist eine Stemming-Methode. Affix removal stemmer arbeiten regelbasiert, dabei werden Präfixe und/oder Suffixe in einer bestimmten Reihenfolge entfernt. So wird auf den Wortstamm hingearbeitet. Mehr zum <a href="glossar.html#S" title="Begriffe mit S">Stemming</a> findest du unter dem Link.</p>
                         </div>
                     </div>
                     <hr class="hr-line">
                     <div>
-                        <!-- faq question -->
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Anfragesprache</h2>
-                        <!-- faq answer -->
                         <div class="glossar-definition">
                             <p> Art und Weise, wie der Benutzer seine Anfrage in einer dem System verständlichen Form formuliert (z.B. formal oder natürlichsprachlich).</p>
                         </div>
                     </div>
                     <hr class="hr-line">
                     <div>
-                        <!-- faq question -->
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Attribut</h2>
-                        <!-- faq answer -->
                         <div class="glossar-definition">
-                            <p> Ein Attribut ist die Eigenschaft einer Entität oder einer Relation, z.B. der Titel einer Vorlesung. In einem Entitätstyp existiert immer ein Primärschlüssel , ein Attribut (oder eine Kombination von Attributen), das die einzelnen Entitäten eindeutig identifiziert, z.B. die Matrikelnummer eines Studierenden.</p>
+                            <p> Ein Attribut ist die Eigenschaft einer <a href="glossar.html#E" title="Begriffe mit E">Entität</a> oder einer Relation, z.B. der Titel einer Vorlesung. In einem Entitätstyp existiert immer ein Primärschlüssel , ein Attribut (oder eine Kombination von Attributen), das die einzelnen Entitäten eindeutig identifiziert, z.B. die Matrikelnummer eines Studierenden.</p>
                         </div>
                     </div>
                     <hr class="hr-line">
                     <h2 id="B" class="page-header">   B</h2>
                     <div>
-                        <!-- faq question -->
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Benutzeroberfläche</h2>
-                        <!-- faq answer -->
                         <div class="glossar-definition">
                             <p>Grafisch-direktmanipulative Benutzungsoberflächen zeichnen sich vor allem dadurch aus, dass durch direkte Manipulation (z.B. Mausklicks) veränderbar sind und ein sofortiges Feedback an den Benutzer ermöglichen (z.B. Bestätigung oder Nachfrage bei der Durchführung eines Arbeitsschrittes wie Dateien löschen). Die Elemente einer BOF z. B. folgende: Menüs, Schaltflächen, Fenster-Technik, Formulare, Ikons, Buttons</p>
                         </div>
                     </div>
                     <hr class="hr-line">
                     <div>
-                        <!-- faq question -->
-                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Boole'sche Retrieval</h2>
-                        <!-- faq answer -->
+                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Boole'sches Retrieval</h2>
                         <div class="glossar-definition">
-                            <p>Das Boole'sche Retrieval ist ein klassisches Verfahren des Information Retrieval und basiert auf dem Exact Match Paradigma. Es prüft, ob eine wohldefinierte Bedingung erfüllt ist, oder nicht, basierend auf der Boole'schen Algebra. Die Grundidee ist es, Mengenoperationen auf Mengen von Dokumenten oder Objekten anzuwenden, die durch Attributwerte charakterisiert sind. Dabei werden die Terme der Anfragen mit Operatoren verknüpft, übliche Operatoren sind u.a.:  	AND	OR	und NOT</p>
+                            <p>Das Boole'sche Retrieval ist ein klassisches Verfahren des <a href="glossar.html#I" title="Begriffe mit I">Information Retrieval</a> und basiert auf dem Exact Match Paradigma. Es prüft, ob eine wohldefinierte Bedingung erfüllt ist, oder nicht, basierend auf der Boole'schen Algebra. Die Grundidee ist es, Mengenoperationen auf Mengen von Dokumenten oder Objekten anzuwenden, die durch Attributwerte charakterisiert sind. Dabei werden die Terme der Anfragen mit Operatoren verknüpft, übliche Operatoren sind u.a.:  	AND	OR	und NOT</p>
                         </div>
                     </div>
                     <hr class="hr-line">
                     <h2 id="C" class="page-header">   C</h2>
                     <div>
-                        <!-- faq question -->
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Clustering</h2>
-                        <!-- faq answer -->
                         <div class="glossar-definition">
-                            <p>Clustering beschreibt eine Art der Klassifizierung von thematisch ähnlichen Objekten und ist ein Verfahren zur Inhaltserschließung. Dokumente, die einem Cluster zugeordnet werden sind sich also ähnlich. Man kann entweder viele Dokumente in wenig Clustern oder wenig Dokumente in vielen Clustern zusammenfassen. Die einzelnen Cluster können sich auch überschneiden, das bedeutet, dass bestimmte Dokumente aufgrund ihres Inhalts zu mehreren Clustern gehören können.</p>
+                            <p>Clustering beschreibt eine Art der Klassifizierung von thematisch ähnlichen Objekten und ist ein Verfahren zur <a href="glossar.html#I" title="Begriffe mit I">Inhaltserschließung</a>. Dokumente, die einem Cluster zugeordnet werden sind sich also ähnlich. Man kann entweder viele Dokumente in wenig Clustern oder wenig Dokumente in vielen Clustern zusammenfassen. Die einzelnen Cluster können sich auch überschneiden, das bedeutet, dass bestimmte Dokumente aufgrund ihres Inhalts zu mehreren Clustern gehören können.</p>
                         </div>
                     </div>
                     <hr class="hr-line">
                     <div>
-                        <!-- faq question -->
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Cross Language Information Retrieval (CLIR)</h2>
-                        <!-- faq answer -->
                         <div class="glossar-definition">
                             <p>CLIR ist ein Akronym für Cross Language Information Retrieval und bedeutet, dass über die Sprachgrenzen hinaus nach Informationen gesucht werden kann. So kann beispielsweise eine Suchanfrage auf englisch in verschiedene Sprachen übersetzt werden. Somit werden dann nicht nur Dokumente auf englisch gefunden, sondern auch auf anderen Sprachen, die die Antworten für die Suchanfrage liefern.</p>
                         </div>
@@ -168,18 +247,14 @@
                     <hr class="hr-line">
                     <h2 id="D" class="page-header">   D</h2>
                     <div>
-                        <!-- faq question -->
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Data Control Language (DCL)</h2>
-                        <!-- faq answer -->
                         <div class="glossar-definition">
                             <p>Die Data Control Language, dient der Steuerung von Zugriffsrechten auf die Datenbank. Mit der DCL können somit Privilegien an Benutzer oder auch auf Objekte gezielt gesteuert werden.</p>
                         </div>
                     </div>
                     <hr class="hr-line">
                     <div>
-                        <!-- faq question -->
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Data Definition Language (DDL)</h2>
-                        <!-- faq answer -->
                         <div class="glossar-definition">
                             <p>Die Data Definition Language (Datendefinitionssprache) dient zur Einrichtung, Änderung oder Löschung von Datenbankobjekten wie z. B. Tabellen, Indizes usw. Zu den DDL-Anweisungen gehören:
                             CREATE, um Tabellen zu erstellen.
@@ -190,9 +265,7 @@
                     </div>
                     <hr class="hr-line">
                     <div>
-                        <!-- faq question -->
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Data Manipulation Language (DML)</h2>
-                        <!-- faq answer -->
                         <div class="glossar-definition">
                             <p>Mit der Data Manipulation Language (Datenmanipulationssprache) können Daten selektiert, geändert und gelöscht werden. Zu den wichtigsten Anweisungen gehören:
                             INSERT
@@ -203,27 +276,21 @@
                     </div>
                     <hr class="hr-line">
                     <div>
-                        <!-- faq question -->
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Datenbank</h2>
-                        <!-- faq answer -->
                         <div class="glossar-definition">
                             <p>Unter einer Datenbank versteht man eine auf Dauer für flexiblen und sicheren Gebrauch ausgelegte Datenorganisation, die sowohl eine Datenbasis als auch die zugehörige Datenverwaltung umfasst.</p>
                         </div>
                     </div>
                     <hr class="hr-line">
                     <div>
-                        <!-- faq question -->
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Datenmodell</h2>
-                        <!-- faq answer -->
                         <div class="glossar-definition">
                             <p>Ein Datenmodell legt die Eigenschaften, Struktur und Konsistenzbedingungen für in die Datenbank zu speichernde Datenelemente fest.</p>
                         </div>
                     </div>
                     <hr class="hr-line">
                     <div>
-                        <!-- faq question -->
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Deskriptoren</h2>
-                        <!-- faq answer -->
                         <div class="glossar-definition">
                             <p>Eine einfache Art der inhaltlichen Beschreibung von (Text-)Dokumenten ist die mit Hilfe von Stich- und Schlagwörtern. Diese werden Deskriptoren genannt, wenn sie im Rahmen eines → Thesaurus (=kontrolliertes Vokabular) zur inhaltlichen Beschreibung vorgesehen werden (= Vorzugsbenennungen). In einem solchen Thesaurus gibt es auch sogenannte "Nichtdeskriptoren", die mit Deskriptoren in einer inhaltlichen Beziehung stehen, die aber aus Gründen der Einheitlichkeit der Indexierung nicht verwendet werden sollen und stattdessen auf einen an ihrer Stelle zu verwendenden Deskriptor verweisen. Deskriptoren werden entweder von einem Indexierer (intellektuelle Indexierung) oder von automatischen oder computergestützten Indexierungssystemen vergeben.</p>
                         </div>
@@ -231,40 +298,33 @@
                     <hr class="hr-line">
                     <h2 id="E" class="page-header">   E</h2>
                     <div>
-                        <!-- faq question -->
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Effektivität</h2>
-                        <!-- faq answer -->
                         <div class="glossar-definition">
                             <p>Effektivität bezeichnet die Unterstützung, die das System dem Benutzer bei der Lösung seines Informationsproblems bietet.</p>
                         </div>
                     </div>
                     <hr class="hr-line">
                     <div>
-                        <!-- faq question -->
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Effizienz</h2>
-                        <!-- faq answer -->
                         <div class="glossar-definition">
                             <p>Effizienz bezeichnet die Nutzung von Systemressourcen (CPU-Zeit, Ein-/Ausgabe-Operationen, Speicherplatz, Antwortzeit) bei der Bewältigung einer Aufgabe.</p>
                         </div>
                     </div>
                     <hr class="hr-line">
                     <div>
-                        <!-- faq question -->
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Elementarparameter</h2>
-                        <!-- faq answer -->
                         <div class="glossar-definition">
                             <p>Die Elementarparameter a, b, c, d enthalten die Anzahl der Dokumente, die sich in den einzelnen Teilmengen befinden, und dienen zur Berechnung von recall und precision.</p>
                         </div>
                     </div>
                     <hr class="hr-line">
                     <div>
-                        <!-- faq question -->
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">E-Maß</h2>
-                        <!-- faq answer -->
+                        
                         <div class="glossar-definition">
-                            <p>Um eine einzige Maßzahl zu gewinnen, mit der IR-Systeme verglichen werden können, müssen die beiden Standardmaße recall und precision miteinander verknüpft werden. Dies geschieht mit Hilfe des e-Maßes.</p>
-                            <math style=\"font-family:stix;font-size:16px;\" xmlns=\"http://www.w3.org/1998/Math/MathML\">
-                            <mstyle mathsize=\"16px\">
+                            <p>Um eine einzige Maßzahl zu gewinnen, mit der IR-Systeme verglichen werden können, müssen die beiden Standardmaße recall und precision miteinander verknüpft werden. Dies geschieht mit Hilfe des <a href="formelsammlung.html#E" target="_blank" title="Alle Formeln zu Buchstabe E">E-Maßes:</p><br>
+                            <math>
+                            <mstyle displaystyle="true">
                                 <mi>e</mi>
                                 <mo>=</mo>
                                 <mn>1</mn>
@@ -298,23 +358,19 @@
                                 </mfrac>
                             </mstyle>
                             </math>
-                            <p>Achtung: Falls r = 0 oder p = 0, ergibt sich immer e = 1. Man kann dem Ergebnis jedoch nicht entnehmen, welcher Wert dazu beiträgt! Falls r = p, ergeben sich auch bei variierendem ß immer gleiche Werte für e, da ß gekürzt werden kann.</p>
+                            <p>Achtung: Falls r = 0 oder p = 0, ergibt sich immer e = 1. Man kann dem Ergebnis jedoch nicht entnehmen, welcher Wert dazu beiträgt! Falls r = p, ergeben sich auch bei variierendem ß immer gleiche Werte für e, da ß gekürzt werden kann.</p><br>
                         </div>
                     </div>
                     <hr class="hr-line">
                     <div>
-                        <!-- faq question -->
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Entität</h2>
-                        <!-- faq answer -->
                         <div class="glossar-definition">
                             <p>Als Entität (auch Informationsobjekt) wird in der Datenmodellierung ein eindeutig zu bestimmendes Objekt bezeichnet, über das Informationen gespeichert oder verarbeitet werden sollen.</p>
                         </div>
                     </div>
                     <hr class="hr-line">
                     <div>
-                        <!-- faq question -->
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Entity-Relationship-Modell (ERM)</h2>
-                        <!-- faq answer -->
                         <div class="glossar-definition">
                             <p>ERM ist ein Akronym für das Entity-Relationship-Modell. Dieses ist ein konzeptionelles Datenmodell zur Erstellung eines Datenbauplans für ein Informationssystem.</p>
                         </div>
@@ -326,8 +382,8 @@
                         <div class="glossar-definition">
                             <p>Fachinformationen sind aufbereitete und zur Verfügung gehaltene Information über verschiedene Wissensbereiche, speziell Fachwissen.</p>
                         </div>
+                        <hr class="hr-line">
                     </div>
-                    <hr class="hr-line">
                     <h2 id="G" class="page-header">  G</h2>
                     <div>
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">GET (HTTP Request)</h2>
@@ -335,6 +391,30 @@
                             <p>Unter einem HTTP-Request versteht man die Anfrage eines HTTP-Clients (z.B. Browser) an den HTTP-Server. Jeder Request wird durch die Angabe einer Methode eingeleitet, um dem Server zu sagen, was er mit dem Request machen soll. Die GET-Methode wird verwendet, um Informationen aus dem gegebenen Server mit Hilfe einem gegeben URI abzurufen. Anfragen mit Hilfe von GET  sollten nur Daten abrufen und sonst keine weiteren Auswirkungen auf die Daten haben.</p>
                         </div>
                     </div>
+                        <hr class="hr-line">
+                        <div>
+                            <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Gewichtung im Information Retrieval</h2>
+                            <div class="glossar-definition">
+                                <p>Die Gewichtung im Information Retrieval berechnet die Gewichtung der Relevanz von Dokumenten
+                                    im Exact Match Paradigm. Ein wichtiger Bestandteil der Gewichtung ist
+                                    die <a href="formelsammlung.html#I" target="_blank" title="Formel zur idf">IDF</a>. <br/>
+                                    Eine weitere wichtiger Bestandteil der Gewichtung ist die <a href="formelsammlung.html#I" target="_blank" title="Formel zur idf_norm">normalized IDF</a>. <br/>
+                                    Die Harmonisierung von Termgewichten kann mit der <a href="formelsammlung.html#H" target="_blank" title="Formel zur Harmonic Sum"> Harmonic Sum</a> durchgeführt werden.
+                                </p>
+                            </div>
+                        </div>
+                        <hr class="hr-line">
+                        <div>
+                            <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Grundformenreduktion</h2>
+                            <div class="glossar-definition">
+                                <p>
+                                Die Grundformenreduktion ist Teil der informationslinguistischen Indexierung im Information Retrieval.
+                                Dabei werden verschiedene morphologische Varianten einen Wortes auf die grammatikalische Grundform
+                                (bei Substantiven auf Nom. Sg.; bei Verben auf den Infinitiv) zurückgeführt.
+                                Eine weitere Reduktionsmethode ist das <a href="glossar.html#S" title="Begriffe mit S">Stemming.</a>
+                                </p>
+                            </div>
+                        </div>
                     <hr class="hr-line">
                     <h2 id="H" class="page-header">  H</h2>
                     <div>
@@ -416,6 +496,17 @@
                     </div>
                     <hr class="hr-line">
                     <div>
+                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Inhaltserschließung</h2>
+                        <div class="glossar-definition">
+                            <p>Die Inhaltserschließung ist die Vorbarbeit des Retrievals. Es erfolgt eine Dokumentenanalyse
+                                mit anschließender Dokument-Repräsentation. Darauf folgt eine Ähnlichkeitsberechnung und im
+                                besten Falle ein Match zwischen Suchanfrage und Dokument. Die Ähnlichkeitsberechnung erfolgt
+                                mit Hilfe des <a href="formelsammlung.html#C" target="_blank" title="Formeln mit C">Cosinus-Maß</a>
+                            </p>
+                        </div>
+                    </div>
+                    <hr class="hr-line">
+                    <div>
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Internet</h2>
                         <div class="glossar-definition">
                             <p>weltweite Vernetzung von lokalen Netzwerken durch standardisierte Datenprotokolle (Netzverbund).</p>
@@ -428,6 +519,13 @@
                             <p>Eine Instanz ist eine konkrete Realisierung eines Modells. Beispiel: In der Programmierung ist ein Objekt ist eine Instanz einer Klasse.</p>
                         </div>
                     </div>
+                    <hr class="hr-line">
+                    <div>
+                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Information Retrieval</h2>
+                        <div class="glossar-definition">
+                            <p>Information Retrieval (IR) ist in erster Linie textuelle Analyse und Repräsentation von Texten. IR umfasst die Erschließung und das Wiederauffinden von Informationsobjekten. </p>
+                            </div>
+                        </div>
                     <hr class="hr-line">
                     <div>
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">IR-Systeme</h2>
@@ -558,7 +656,8 @@
                     <div>
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Precision </h2>
                         <div class="glossar-definition">
-                            <p>Quotient aus allen gefundenen relevanten Dokumenten und allen gefundenen Dokumenten.Precision beschreibt die Genauigkeit eines Ergebnisses.</p>
+                            <p>Quotient aus allen gefundenen relevanten Dokumenten und allen gefundenen Dokumenten. <a href="formelsammlung.html#P" target="_blank" title="Alle Formeln zu Buchstabe P">Precision</a> beschreibt die Genauigkeit eines Ergebnisses. Das <a href="formelsammlung.html#F" target="_blank" title="Formel zum F-Maß">F-Maß</a> ist wichtig für die Berechnung eines kombinierten Maßes aus Recall und Precision.</p><br>
+                            <br>
                         </div>
                     </div>
                     <hr class="hr-line">
@@ -595,7 +694,8 @@
                     <div>
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Recall</h2>
                         <div class="glossar-definition">
-                            <p>Quotient aus allen relevanten gefundenen Dokumenten und allen relevanten Dokumenten. Recall beschreibt die Vollständigkeit eines Ergebnisses.</p>
+                            <p>Quotient aus allen relevanten gefundenen Dokumenten und allen relevanten Dokumenten. <a href="formelsammlung.html#R" target="_blank" title="Alle Formeln zu Buchstabe R">Recall</a> beschreibt die Vollständigkeit eines Ergebnisses. Das <a href="formelsammlung.html#F" target="_blank" title="Formel zum F-Maß">F-Maß</a> ist wichtig für die Berechnung eines kombinierten Maßes aus Recall und Precision.</p><br>
+
                         </div>
                     </div>
                     <hr class="hr-line">
@@ -628,6 +728,13 @@
                     </div>
                     <hr class="hr-line">
                     <h2 id="S" class="page-header">  S</h2>
+                        <div>
+                            <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Schlagwort</h2>
+                            <div class="glossar-definition">
+                                <p>Als Schlagwort wird ein Ausdruck oder Spruch bezeichnet, durch den besondere Beachtung erzeugt werden soll. Davon zu unterscheiden ist das Schlagwort in der Bedeutung „Stichwort, Deskriptor“, wie es der inhaltlichen Erschließung von Dokumenten mittels Verschlagwortung gebraucht wird, zum Beispiel in Bibliotheken.</p>
+                            </div>
+                        </div>
+                        <hr class="hr-line">
                     <div>
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Schluessel</h2>
                         <div class="glossar-definition">
@@ -656,6 +763,34 @@
                         </div>
                     </div>
                     <hr class="hr-line">
+                    <div>
+                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Stemming</h2>
+                        <div class="glossar-definition">
+                            <p>Ein Stichwort ist in der Dokumentation ein Wort, das der inhaltlichen Erschließung eines Dokumentes dient. Vom Standpunkt des Suchenden aus ist es der Suchbegriff.</p>
+                        </div>
+                    </div>
+                        <hr class="hr-line">
+                        <div>
+                            <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Stichwort</h2>
+                            <div class="glossar-definition">
+                                <p></p>
+                            </div>
+                        </div>
+                    <hr class="hr-line">
+                        <div>
+                            <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Suchanfrage</h2>
+                            <div class="glossar-definition">
+                                <p>Die Suchanfrage ist der Ausgangspunkt des Retrievals. Es ist eine konkrete Suchanfrage des Nutzers an ein <a href="glossar.html#I" title="Begriffe mit I"> IR-System</a>.</p>
+                            </div>
+                        </div>
+                        <hr class="hr-line">
+                        <div>
+                            <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Synonymie</h2>
+                            <div class="glossar-definition">
+                                <p>Synonyme oder Synonyma sind sprachliche Ausdrücke oder Zeichen, die zueinander in der Beziehung der Synonymie stehen – einer der grundlegenden Typen von Bedeutungsbeziehungen bzw. Sinnrelationen.</p>
+                            </div>
+                        </div>
+                        <hr class="hr-line">
                     <h2 id="T" class="page-header">  T</h2>
                     <div>
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">TCP IP</h2>
@@ -680,91 +815,97 @@
                     <hr class="hr-line">
                     <h2 id="U" class="page-header">  U</h2>
                     <div>
-                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Wort</h2>
+                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Usability-Test</h2>
                         <div class="glossar-definition">
-                            <p>Definition</p>
+                            <p>Bei diesen Tests lösen potentielle Benutzer vorgegebene Aufgaben und stehen dabei unter Beobachtung von Entwicklern und z.B. Psychologen. Ihre Interaktionen mit der Software werden mit Log-Dateien, Video- und Tonaufnahmen über mehrere Testreihen hinweg dokumentiert und anschließend analysiert.
+                                Ziel ist es durch Identifikation von ergonomischen Problemen bei der Interaktion mit einem Softwaresystem gezielt Verbesserungen zur Steigerung der Gebrauchstauglichkeit einer Software zu erreichen.
+                            </p>
                         </div>
                     </div>
                     <hr class="hr-line">
                     <div>
-                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Wort</h2>
+                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">URL</h2>
                         <div class="glossar-definition">
-                            <p>Definition</p>
+                            <p>Uniform Resource Locator; Ein eindeutiger Identifikator bzw. Adresse eines HTML-Dokuments im Internet. Die URL besteht aus einer Domäne und der Angabe des Ortes des Dokuments auf dem Server.</p>
                         </div>
                     </div>
                     <hr class="hr-line">
                     <h2 id="V" class="page-header">  V</h2>
                     <div>
-                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Wort</h2>
+                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Vektor</h2>
                         <div class="glossar-definition">
-                            <p>Definition</p>
+                            <p>Ein Vektor ist eine mathematische Repräsentation eines Objektes durch seine Eigenschaften.</p>
                         </div>
                     </div>
                     <hr class="hr-line">
                     <div>
-                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Wort</h2>
+                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">VPN-Client</h2>
                         <div class="glossar-definition">
-                            <p>Definition</p>
+                            <p>Mit VPN oder Virtual Private Network können User über das Internet eine sichere Verbindung zu einem anderen öffentlichen Netzwerk herzustellen. Ein VPN-Client ist eine softwarebasierte Technologie, die diese sichere Verbindung zwischen dem Benutzer und einem VPN-Server herstellt
+                            </p>
                         </div>
                     </div>
                     <hr class="hr-line">
                     <h2 id="W" class="page-header">  W</h2>
                     <div>
-                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Wort</h2>
+                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Wissen</h2>
                         <div class="glossar-definition">
-                            <p>Definition</p>
+                            <p>Wissen definiert gespeicherte Erkenntnisse, die durch Erfahrungen oder Lernen erworben werden.
+                            </p>
                         </div>
                     </div>
                     <hr class="hr-line">
                     <div>
-                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Wort</h2>
+                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Wissensrepräsentation</h2>
                         <div class="glossar-definition">
-                            <p>Definition</p>
+                            <p>Als Repräsentation werden mentale Organisationsformen beschrieben, die das individuelle Wissen, Prozesse der Veränderung dieses Wissens und die Ableitung von neuem Wissen durch bewusste, unbewusste Schlussfolgerungsprozesse und die Generierung von Handlungsplänen umfasst.</p>
                         </div>
                     </div>
                     <hr class="hr-line">
+                        <div>
+                            <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Weaver-Memorandum</h2>
+                            <div class="glossar-definition">
+                                <p>Das Fachgebiet der MÜ entstand Anfang der 50er Jahre. Wegweisend war das sogenannte Weaver-Memorandum (1949), das die Möglichkeit der Übersetzung von Sprache durch den Computer propagierte, indem es den Übersetzungsprozess mit einer Art „Decodieren“ gleichsetzt
+                                </p>
+                            </div>
+                        </div>
+                        <hr class="hr-line">
                     <h2 id="X" class="page-header">  X</h2>
                     <div>
-                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Wort</h2>
+                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">XML</h2>
                         <div class="glossar-definition">
-                            <p>Definition</p>
-                        </div>
-                    </div>
-                    <hr class="hr-line">
-                    <div>
-                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Wort</h2>
-                        <div class="glossar-definition">
-                            <p>Definition</p>
+                            <p>XML (Extensible Markup Language) ist ein text-basiertes Format für den Austausch strukturierter Information. Dies können Dokumente, Konfigurationen, Bücher, Rechnungen und vieles mehr sein und ist aus der Not entstanden, dass HTML an seine Grenzen gestoßen ist.</p>
                         </div>
                     </div>
                     <hr class="hr-line">
                     <h2 id="Y" class="page-header">  Y</h2>
                     <div>
-                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Wort</h2>
+                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Yale-Web-Styleguide</h2>
                         <div class="glossar-definition">
-                            <p>Definition</p>
+                            <p>Der Yale UI Style Guide wurde erstellt, um Entwicklern dabei zu helfen, Schnittstellen zu erstellen, die der visuellen Identität/ Vision von Yale entsprechen.</p>
                         </div>
                     </div>
                     <hr class="hr-line">
-                    <div>
-                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Wort</h2>
-                        <div class="glossar-definition">
-                            <p>Definition</p>
-                        </div>
-                    </div>
-                    <hr class="hr-line">
+
                     <h2 id="Z" class="page-header">  Z</h2>
+                        <div>
+                            <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Zeichenkette</h2>
+                            <div class="glossar-definition">
+                                <p>Eine Zeichenkette ist eine endliche Folge von Zeichen (z. B. Buchstaben, Ziffern, Sonderzeichen und Steuerzeichen) aus einem definierten Zeichensatz. Zeichen können sich in einer Zeichenkette wiederholen, die Reihenfolge der Zeichen ist definiert. Eine Zeichenkette kann auch leer sein, also kein Zeichen enthalten und die Länge 0 haben.</p>
+                            </div>
+                        </div>
+                        <hr class="hr-line">
                     <div>
-                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Wort</h2>
+                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">ZIP-Dateiformat</h2>
                         <div class="glossar-definition">
-                            <p>Definition</p>
+                            <p>ZIP ist ein Format für komprimierte Dateien, das einerseits den Platzbedarf reduziert und andererseits als Containerdatei fungiert, in der mehrere zusammengehörige Dateien oder auch ganze Verzeichnisbäume zusammengefasst werden können.</p>
                         </div>
                     </div>
                     <hr class="hr-line">
             </div>
         </div>
 
-
+        </div>
     </div>
 </div>
 <script type="text/javascript" src="fmsglo.js"></script>

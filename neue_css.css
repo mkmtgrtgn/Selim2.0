@@ -1,0 +1,57 @@
+body {
+    font-family: Quicksand;
+    --schriftfarbe: #232B2B;
+    --containerfarbe: #D8EBEB;
+    --verlinkungsfarbe: #DEC6AC;
+    --verlinkungaktiv: #8EACAC;
+}
+
+h1, h2, h3 {
+    padding:1vw; /*1% of view port width */
+    color: var(--schriftfarbe);
+}
+
+.navbar {
+    background-color: var(--containerfarbe);
+    position: sticky;
+    margin-left: -1vw;
+    margin-right: -1vw;
+}
+
+.navbar-brand {
+    color: var(--schriftfarbe);
+}
+.navbar-nav > li > a{
+    color: var(--schriftfarbe);
+    transition: color 0.3s;
+}
+.navbar-nav > li > ul{
+    background-color: #D8EBEB;
+    border-top: none;
+    border-bottom: none;
+}
+.navbar-nav > li > ul > li {
+    transition: 0.3s;
+}
+
+.page-pick .dropdown-menu {
+    max-height: 300px;
+    overflow: auto;
+  }
+
+
+.navbar-nav > li > a:hover{
+    color: var(--verlinkungaktiv);
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;..");
+  }
+
+
+.page-pick {
+    background-color: var(--containerfarbe);
+}
+.page-pick > ul {
+    background-color: var(--containerfarbe);
+}
+

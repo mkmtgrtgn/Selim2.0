@@ -13,6 +13,7 @@
 
     <!-- Der Font muss noch importiert werden -->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Selim 2.0</title>
 </head>
 <body>
@@ -22,7 +23,16 @@
             <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon navbar-light"></span>
             </button>
-            <a class="navbar-brand" href="#">Selim</a>
+            <!-- Navbar Brand: Logo der Uni Hildesheim-->
+            <a class="navbar-brand">
+                <!--Desktop und Tablet/großer oder mittel-großer Viewport; Klick auf Bild soll dann auf die erste Seite/eine Einfürungsseite führen-->
+                <span class="d-none d-sm-block">
+                    <!--Uni-Logo links in der Ecke-->
+                    <img class="d-inline-block align-text-center" src="uni_logo.png" width="70" height="70" alt="Universität Hildesheim" style="padding-right: 20;">
+                </span>
+                <!--Handy/kleiner Viewport - Abkürzung der Bezeichnung unseres Viewports-->
+                <span class="d-sm-none">Formel</span>
+            </a>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -60,6 +70,9 @@
 
         <div class="col">
             <h1>Formelsammlung</h1>
+            <button id="btnScrollToTop">
+                <i class="material-icons">arrow_upward</i>
+            </button>
             <p>Hier findest du alle Formeln für jedes Modul alphabetisch geordnet. Klick dich gerne durch.</p></br>
             <div>
                 <a href="#A">A</a>
@@ -89,7 +102,7 @@
                 <a href="#Y">Y</a>
                 <a href="#Z">Z</a>
 
-                <h2 id="A">   A</h2>
+                <h2 id="A" class="page-header">   A</h2>
                 <div>
                     <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Formel</h2>
                     <!-- faq answer -->
@@ -112,7 +125,7 @@
                     </div>
                 </div>
                 <hr class="hr-line">
-                <h2 id="B">   B</h2>
+                <h2 id="B" class="page-header">   B</h2>
                 <div>
                     <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Formel</h2>
                     <div class="glossar-definition">
@@ -127,7 +140,46 @@
                     </div>
                 </div>
                 <hr class="hr-line">
-                <h2 id="C">   C</h2>
+                <h2 id="C" class="page-header">   C</h2>
+                <div>
+                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Cosinus-Maß</h2>
+                    <div class="glossar-definition">
+                        <p><math style=\"font-family:stix;font-size:16px;\" xmlns=\"http://www.w3.org/1998/Math/MathML\">
+                            <mstyle mathsize=\"16px\"><mi>cos</mi><mfenced><mrow><mi>d</mi><mi>o</mi><msub><mi>c</mi>
+                                <mi>a</mi></msub><mo>,</mo><mi>q</mi><mi>u</mi><mi>e</mi><mi>r</mi><msub><mi>y</mi>
+                                <mi>q</mi></msub></mrow></mfenced><mo>=</mo><mfrac><mrow><munderover><mo>&#x2211;</mo><mrow>
+                                <mi>t</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mfenced><mrow><mi>W</mi><mi>e</mi>
+                                <mi>i</mi><mi>g</mi><mi>h</mi><msub><mi>t</mi><mrow><mi>t</mi><mi>d</mi></mrow></msub>
+                                <mo>&#xD7;</mo><mi>W</mi><mi>e</mi><mi>i</mi><mi>g</mi><mi>h</mi><msub><mi>t</mi><mrow>
+                                    <mi>t</mi><mi>q</mi></mrow></msub></mrow></mfenced></mrow><msqrt><mfenced><mrow><munderover>
+                                <mo>&#x2211;</mo><mrow><mi>t</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>W</mi>
+                                <mi>e</mi><mi>i</mi><mi>g</mi><mi>h</mi><msup><msub><mi>t</mi><mrow><mi>t</mi><mi>d</mi>
+                                </mrow></msub><mn>2</mn></msup></mrow></mfenced><mo>&#xD7;</mo><mfenced><mrow><munderover>
+                                <mo>&#x2211;</mo><mrow><mi>t</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>W</mi>
+                                <mi>e</mi><mi>i</mi><mi>g</mi><mi>h</mi><msup><msub><mi>t</mi><mrow><mi>t</mi><mi>q</mi></mrow>
+                                </msub><mn>2</mn></msup></mrow></mfenced></msqrt></mfrac></mstyle></math> <br/>
+                            Das Cosinus-Maß dient der Ähnlichkeitsberechnung zwischen der Anfrage- und Dokumentenrepräsentation im Ranking-Prozess des Information Retrieval.
+                        </p>
+                    </div>
+                </div>
+                <hr class="hr-line">
+                <div>
+                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Cohens Kappa</h2>
+                    <div class="glossar-definition">
+                        <p><math style=\"font-family:stix;font-size:16px;\" xmlns=\"http://www.w3.org/1998/Math/MathML\">
+                            <mstyle mathsize=\"16px\"><mi>K</mi><mo>=</mo><mfrac><mrow><msub><mi>p</mi><mi>o</mi></msub>
+                                <mo>-</mo><msub><mi>P</mi><mi>c</mi></msub></mrow><mrow><mn>1</mn><mo>-</mo><msub><mi>P</mi>
+                                <mi>c</mi></msub></mrow></mfrac></mstyle></math> <br/>
+                            Po = Die beobachtete Übereinstimmung (observed agreement) <br/>
+                            Pc = Die Zufallsübereinstimmung (chance agreement) <br/>
+                            Der Cohens Kappa Koeffizient wird im Information Retrieval in der Dokumentenbewertung angewendet,
+                            wenn es mehrere Annotatoren gibt. Mit Hilfe des Cohens Kappa Koeffizienten kann man die (statistisch erwartbare) Zufallsübereinstimmung
+                            mit der beobachteten Übereinstimmung berechnen. Damit wird die Übereinstimmung der Annotatoren gemessen.
+                        </p>
+                    </div>
+                </div>
+                <hr class="hr-line">
+                <h2 id="D" class="page-header">   D</h2>
                 <div>
                     <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Formel</h2>
                     <div class="glossar-definition">
@@ -142,28 +194,13 @@
                     </div>
                 </div>
                 <hr class="hr-line">
-                <h2 id="D">   D</h2>
-                <div>
-                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Formel</h2>
-                    <div class="glossar-definition">
-                        <p>Formeldefinition</p>
-                    </div>
-                </div>
-                <hr class="hr-line">
-                <div>
-                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Formel</h2>
-                    <div class="glossar-definition">
-                        <p>Formeldefinition</p>
-                    </div>
-                </div>
-                <hr class="hr-line">
-                <h2 id="E">   E</h2>
+                <h2 id="E" class="page-header">   E</h2>
                 <div>
                     <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">E-Maß</h2>
                     <div class="glossar-definition">
-                        <p>Formeldefinition:</p>
-                        <math style=\"font-family:stix;font-size:16px;\" xmlns=\"http://www.w3.org/1998/Math/MathML\">
-                            <mstyle mathsize=\"16px\">
+                        <p>Formeldefinition <a href="glossar.html#E" target="_blank" title="Alle Glossardefinitionen zu Buchstabe E">zum E-Maß:</a></p><br>
+                        <math>
+                            <mstyle displaystyle="true">
                                 <mi>e</mi>
                                 <mo>=</mo>
                                 <mn>1</mn>
@@ -198,8 +235,6 @@
                             </mstyle>
                         </math><br>
 
-                        <a href="glossar.html#E" target="_blank" title="Glossardefinition zu E-Maß">Weitere Informationen im Glossar</a><br>
-
                     </div>
                 </div>
                 <hr class="hr-line">
@@ -210,11 +245,16 @@
                     </div>
                 </div>
                 <hr class="hr-line">
-                <h2 id="F">  F</h2>
+                <h2 id="F" class="page-header">  F</h2>
                 <div>
-                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Formel</h2>
+                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">F-Maß</h2>
                     <div class="glossar-definition">
-                        <p>Formeldefinition</p>
+                        <p><math style=\"font-family:stix;font-size:16px;\" xmlns=\"http://www.w3.org/1998/Math/MathML\">
+                            <mstyle mathsize=\"16px\"><mi>F</mi><mo>=</mo><mfenced><mfrac><mrow><mn>2</mn><mi>P</mi>
+                                <mi>R</mi></mrow><mrow><mi>P</mi><mo>+</mo><mi>R</mi></mrow></mfrac></mfenced></mstyle></math> <br/>
+                            Das F-Maß berechnet die Gesamtperformance von Recall und Precision, d.h. das F-Maß ist ein
+                            kombiniertes Maß. Ein hoher F-Maß wert zeigt, dass beide Parameter gut bewertet sind.
+                        </p>
                     </div>
                 </div>
                 <hr class="hr-line">
@@ -225,11 +265,21 @@
                     </div>
                 </div>
                 <hr class="hr-line">
-                <h2 id="H">  H</h2>
+                <h2 id="H" class="page-header">  H</h2>
                 <div>
-                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Formel</h2>
+                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Harmonic Sum</h2>
                     <div class="glossar-definition">
-                        <p>Formeldefinition</p>
+                        <p><math style=\"font-family:stix;font-size:16px;\" xmlns=\"http://www.w3.org/1998/Math/MathML\">
+                            <mstyle mathsize=\"16px\"><msub><mi>H</mi><mrow><mi>n</mi><mo> </mo></mrow></msub><mo>=</mo>
+                                <munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover>
+                                <mfrac><mn>1</mn><mi>k</mi></mfrac><mo> </mo><mo>=</mo><mo> </mo><mn>1</mn><mo>+</mo><mfrac>
+                                    <mn>1</mn><mn>2</mn></mfrac><mo>+</mo><mo> </mo><mfrac><mn>1</mn><mn>3</mn></mfrac>
+                                <mo>+</mo><mfrac><mn>1</mn><mn>4</mn></mfrac><mo>+</mo><mo>·</mo><mo>·</mo><mo>·</mo>
+                                <mo>+</mo><mfrac><mn>1</mn><mi>n</mi></mfrac></mstyle></math> <br/>
+                            Die Formel für die Harmonic Sum verhält sich ähnlich zum log(n)). Sie wird als Approximation
+                            an den Logarithmus verwendet. Das bedeutet Term Gewichte werden reduziert und harmonisiert,
+                            sobald sie häufiger als ein mal vorkommen.
+                        </p>
                     </div>
                 </div>
                 <hr class="hr-line">
@@ -240,22 +290,43 @@
                     </div>
                 </div>
                 <hr class="hr-line">
-                <h2 id="I">  I</h2>
+                <h2 id="I" class="page-header">  I</h2>
                 <div>
-                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Formel</h2>
+                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Inverse Document Frequency (idf)</h2>
                     <div class="glossar-definition">
-                        <p>Formeldefinition</p>
+                        <p><math style=\"font-family:stix;font-size:16px;\" xmlns=\"http://www.w3.org/1998/Math/MathML\">
+                            <mstyle mathsize=\"16px\"><mi>i</mi><mi>d</mi><msub><mi>f</mi><mi>i</mi></msub><mo>=</mo><mi>log</mi>
+                                <mfrac><mrow><mi>A</mi><mi>n</mi><mi>z</mi><mi>a</mi><mi>h</mi><mi>l</mi><mo>&#xA0;</mo>
+                                    <mi>d</mi><mi>e</mi><mi>r</mi><mo>&#xA0;</mo><mi>D</mi><mi>o</mi><mi>k</mi><mi>u</mi>
+                                    <mi>m</mi><mi>e</mi><mi>n</mi><mi>t</mi><mi>e</mi><mo>&#xA0;</mo><mi>a</mi><mi>l</mi>
+                                    <mi>l</mi><mi>e</mi><mi>r</mi><mo>&#xA0;</mo><mi>K</mi><mi>o</mi><mi>l</mi><mi>l</mi>
+                                    <mi>e</mi><mi>k</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi><mi>e</mi><mi>n</mi></mrow>
+                                    <mrow><mi>A</mi><mi>n</mi><mi>z</mi><mi>a</mi><mi>h</mi><mi>l</mi><mo>&#xA0;</mo>
+                                        <mi>d</mi><mi>e</mi><mi>r</mi><mo>&#xA0;</mo><mi>D</mi><mi>o</mi><mi>k</mi><mi>u</mi>
+                                        <mi>m</mi><mi>e</mi><mi>n</mi><mi>t</mi><mi>e</mi><mo>&#xA0;</mo><mi>m</mi><mi>i</mi>
+                                        <mi>t</mi><mo>&#xA0;</mo><mi>T</mi><mi>e</mi><mi>r</mi><mi>m</mi><mi>i</mi><mi>n</mi>
+                                        <mi>i</mi></mrow></mfrac></mstyle></math> <br/>
+                            IDF beschreibt den Ausgleich der Gewichtung von häufig und seltener vorkommenden Termen.
+                        </p>
                     </div>
                 </div>
                 <hr class="hr-line">
                 <div>
-                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Formel</h2>
+                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">idf normalized</h2>
                     <div class="glossar-definition">
-                        <p>Formeldefinition</p>
+                        <p><math style=\"font-family:stix;font-size:16px;\" xmlns=\"http://www.w3.org/1998/Math/MathML\">
+                            <mstyle mathsize=\"16px\"><mi>i</mi><mi>d</mi><mi>f</mi><mi>n</mi><mi>o</mi><mi>r</mi><mi>m</mi>
+                                <mo> </mo><mfenced><mrow><mi>t</mi><mo>,</mo><mi>c</mi></mrow></mfenced><mo>=</mo><mfrac>
+                                    <mrow><mi>i</mi><mi>d</mi><mi>f</mi><mfenced><mrow><mi>t</mi><mo>,</mo><mi>c</mi></mrow>
+                                    </mfenced></mrow><mrow><mi>m</mi><mi>a</mi><mi>x</mi><mi>i</mi><mi>d</mi><mi>f</mi>
+                                    <mfenced><mi>c</mi></mfenced></mrow></mfrac></mstyle></math> <br/>
+                            t = term <br/>
+                            c = collection
+                        </p>
                     </div>
                 </div>
                 <hr class="hr-line">
-                <h2 id="J">  J</h2>
+                <h2 id="J" class="page-header">  J</h2>
                 <div>
                     <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Formel</h2>
                     <div class="glossar-definition">
@@ -270,7 +341,24 @@
                     </div>
                 </div>
                 <hr class="hr-line">
-                <h2 id="K">  K</h2>
+                <h2 id="K" class="page-header">  K</h2>
+                <div>
+                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Kendalls Tau</h2>
+                    <div class="glossar-definition">
+                        <p>Kendalls Tau ist ein Maß für den Zusammenhang zwischen den Beobachtungen zweier mindestens ordinalskalierter Merkmale. Die Formel ist dafür wie folgt:
+                            <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>&#x3C4;</mi><mo>=</mo><mfrac><mrow><mn>2</mn><mo>(</mo><msub><mi>n</mi><mi>p</mi></msub><mo>-</mo><msub><mi>n</mi><mi>i</mi></msub><mo>)</mo></mrow><mrow><mi>n</mi><mo>(</mo><mi>n</mi><mo>-</mo><mn>1</mn><mo>)</mo></mrow></mfrac></math>
+                        </p>
+                    </div>
+                </div>
+                <hr class="hr-line">
+                <div>
+                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Kullback-Leibler-Divergenz</h2>
+                    <div class="glossar-definition">
+                        <p>Die KL-Divergenz bezeichnet ein Maß für die Unterschiedlichkeit zweier Wahrscheinlichkeitsverteilungen P und Q. Der Ausdruck dafür ist: <math xmlns="http://www.w3.org/1998/Math/MathML"><munder><mo>&#x2211;</mo><mrow><mi>x</mi><mo>&#x2208;</mo><mi>X</mi></mrow></munder><mi>P</mi><mo>(</mo><mi>x</mi><mo>)</mo><mi>log</mi><mfrac><mrow><mi>P</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mrow><mi>Q</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mfrac></math> </p>
+                    </div>
+                </div>
+                <hr class="hr-line">
+                <h2 id="L" class="page-header">  L</h2>
                 <div>
                     <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Formel</h2>
                     <div class="glossar-definition">
@@ -285,11 +373,13 @@
                     </div>
                 </div>
                 <hr class="hr-line">
-                <h2 id="L">  L</h2>
+                <h2 id="M" class="page-header">  M</h2>
                 <div>
-                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Formel</h2>
+                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">mean Average Precision (MAP)</h2>
                     <div class="glossar-definition">
-                        <p>Formeldefinition</p>
+                        <p>Die MAP-Formel beschreibt den Mittelwert der Präzisionen einzelner Anfrage aus einer Menge an Anfragen Q:
+                            <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>M</mi><mi>A</mi><mi>P</mi><mo>(</mo><mi>Q</mi><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mrow><mo>|</mo><mi>Q</mi><mo>|</mo></mrow></mfrac><munder><mo>&#x2211;</mo><mrow><mi>q</mi><mo>&#x2208;</mo><mi>Q</mi></mrow></munder><mi>A</mi><mi>v</mi><mi>e</mi><mi>P</mi><mo>(</mo><mi>q</mi><mo>)</mo></math>
+                        </p>
                     </div>
                 </div>
                 <hr class="hr-line">
@@ -300,29 +390,14 @@
                     </div>
                 </div>
                 <hr class="hr-line">
-                <h2 id="M">  M</h2>
-                <div>
-                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Formel</h2>
-                    <div class="glossar-definition">
-                        <p>Formeldefinition</p>
-                    </div>
-                </div>
-                <hr class="hr-line">
-                <div>
-                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Formel</h2>
-                    <div class="glossar-definition">
-                        <p>Formeldefinition</p>
-                    </div>
-                </div>
-                <hr class="hr-line">
-                <h2 id="N">  N</h2>
+                <h2 id="N" class="page-header">  N</h2>
                     <div>
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">N-Gramm</h2>
                         <div class="glossar-definition">
                             <p>Unter N-Gramm versteht man eine Sequenz von N aufeinanderfolgenden Fragmenten/ Einheiten in einem Text. So gibt es beispielsweise Bigramme, Trigramme etc. Diese Fragmente können Buchstaben oder Phoneme sein.</p>
                             <p>Formeldefinition:</p>
-                            <math style=\"font-family:stix;font-size:16px;\" xmlns=\"http://www.w3.org/1998/Math/MathML\">
-                                <mstyle mathsize=\"16px\">
+                            <math>
+                                <mstyle displaystyle="true">
                                     <mi>Ä</mi>
                                     <mfenced>
                                         <mrow>
@@ -413,21 +488,21 @@
                     </div>
                 </div>
                 <hr class="hr-line">
-                <h2 id="O">  O</h2>
+                <h2 id="O" class="page-header">  O</h2>
                 <div>
-                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Formel</h2>
+                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Okapi BM25</h2>
                     <div class="glossar-definition">
-                        <p>Formeldefinition</p>
+                        <p>Okapi BM25 ist eine Ranking-Funktion, die von Suchmaschinen verwendet wird, um die Relevanz von Dokumenten für eine bestimmte Suchanfrage einzuschätzen. Die Formel lautet lautet wie folgt: <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>s</mi><mi>c</mi><mi>o</mi><mi>r</mi><mi>e</mi><mo>(</mo><mi>D</mi><mo>,</mo><mi>Q</mi><mo>)</mo><mo>=</mo><munderover><mo>&#x2211;</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>I</mi><mi>D</mi><mi>F</mi><mo>(</mo><msub><mi>q</mi><mi>i</mi></msub><mo>)</mo><mfrac><mrow><mi>f</mi><mo>(</mo><msub><mi>q</mi><mi>i</mi></msub><mo>,</mo><mi>D</mi><mo>)</mo><mo>(</mo><msub><mi>k</mi><mn>1</mn></msub><mo>+</mo><mn>1</mn><mo>)</mo></mrow><mrow><mi>f</mi><mo>(</mo><msub><mi>q</mi><mi>i</mi></msub><mo>,</mo><mi>D</mi><mo>)</mo><mo>+</mo><msub><mi>k</mi><mn>1</mn></msub><mo>(</mo><mn>1</mn><mo>-</mo><mi>b</mi><mo>+</mo><mi>b</mi><mfrac><mrow><mo>|</mo><mi>D</mi><mo>|</mo></mrow><mrow><mi>a</mi><mi>v</mi><mi>g</mi><mi>d</mi><mi>l</mi></mrow></mfrac><mo>)</mo></mrow></mfrac></math>  </p>
                     </div>
                 </div>
                 <hr class="hr-line">
-                <h2 id="P">  P</h2>
+                <h2 id="P" class="page-header">  P</h2>
                 <div>
                     <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Precision</h2>
                     <div class="glossar-definition">
-                        <p>Formeldefinition:</p>
-                        <math style=\"font-family:stix;font-size:16px;\" xmlns=\"http://www.w3.org/1998/Math/MathML\">
-                            <mstyle mathsize=\"16px\">
+                        <p>Formeldefinition <a href="glossar.html#P" target="_blank" title="Alle Glossardefinitionen zu Buchstabe P">zu Precision:</a></p><br>
+                        <math>
+                            <mstyle displaystyle="true">
                                 <mi>p</mi>
                                 <mo>=</mo>
                                 <mfrac>
@@ -440,7 +515,6 @@
                                 </mfrac>
                             </mstyle>
                         </math><br>
-                        <a href="glossar.html#P" target="_blank" title="Glossardefinition zu Precision">Weitere Informationen im Glossar</a><br>
                     </div>
                 </div>
                 <hr class="hr-line">
@@ -451,7 +525,7 @@
                     </div>
                 </div>
                 <hr class="hr-line">
-                <h2 id="Q">  Q</h2>
+                <h2 id="Q" class="page-header">  Q</h2>
                 <div>
                     <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Formel</h2>
                     <div class="glossar-definition">
@@ -466,13 +540,13 @@
                     </div>
                 </div>
                 <hr class="hr-line">
-                <h2 id="R">  R</h2>
+                <h2 id="R" class="page-header">  R</h2>
                 <div>
                     <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Recall</h2>
                     <div class="glossar-definition">
-                        <p>Formeldefinition:</p>
-                        <math style=\"font-family:stix;font-size:16px;\" xmlns=\"http://www.w3.org/1998/Math/MathML\">
-                            <mstyle mathsize=\"16px\"/>
+                        <p>Formeldefinition <a href="glossar.html#R" target="_blank" title="Alle Glossardefinitionen zu Buchstabe R">zu Recall:</a></p><br>
+                        <math>
+                            <mstyle displaystyle="true">
                             <mi>r</mi>
                             <mo>=</mo>
                             <mfrac><mi>a</mi>
@@ -485,7 +559,6 @@
                             </mstyle>
                         </math>
                         <br>
-                        <a href="glossar.html#R" target="_blank" title="Glossardefinition zu Recall">Weitere Informationen im Glossar</a><br>
                     </div>
                 </div>
                 <hr class="hr-line">
@@ -496,59 +569,50 @@
                     </div>
                 </div>
                 <hr class="hr-line">
-                <h2 id="S">  S</h2>
+                <h2 id="S" class="page-header">  S</h2>
                 <div>
-                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Formel</h2>
+                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Stichprobenvarianz</h2>
                     <div class="glossar-definition">
-                        <p>Formeldefinition</p>
+                        <p>Unter der Stichprobenvarianz versteht man die durchschnittliche quadratische Abweichung der Beobachtungswerte von ihrem Mittelwert.</p><br>
+
+                        <math style=\"font-family:stix;font-size:16px;\" xmlns=\"http://www.w3.org/1998/Math/MathML\">
+                            <mstyle mathsize=\"16px\">
+                                <msup>
+                                    <mi>S</mi>
+                                    <mn>2</mn>
+                                </msup>
+                                <mo>=</mo>
+                                <mo>&#xA0;</mo>
+                                <mfrac>
+                                    <mrow><mo>&#x2211;</mo>
+                                        <msup>
+                                            <mfenced>
+                                                <mrow>
+                                                    <msub>
+                                                        <mi>x</mi>
+                                                        <mi>i</mi>
+                                                    </msub>
+                                                    <mo>-</mo>
+                                                    <mover>
+                                                        <mi>x</mi>
+                                                        <mo>&#xAF;</mo>
+                                                    </mover>
+                                                </mrow>
+                                            </mfenced>
+                                            <mn>2</mn>
+                                        </msup>
+                                    </mrow>
+                                    <mrow>
+                                        <mi>n</mi>
+                                        <mo>-</mo>
+                                        <mn>1</mn>
+                                    </mrow>
+                                </mfrac>
+                            </mstyle>
+
                     </div>
                 </div>
                 <hr class="hr-line">
-                <div>
-                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Formel</h2>
-                    <div class="glossar-definition">
-                        <p>Formeldefinition</p>
-                    </div>
-                </div>
-                <hr class="hr-line">
-                <div>
-                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Formel</h2>
-                    <div class="glossar-definition">
-                        <p>Formeldefinition</p>
-                    </div>
-                </div>
-                <hr class="hr-line">
-                <h2 id="T">  T</h2>
-                <div>
-                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Formel</h2>
-                    <div class="glossar-definition">
-                        <p>Formeldefinition</p>
-                    </div>
-                </div>
-                <hr class="hr-line">
-                <div>
-                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Formel</h2>
-                    <div class="glossar-definition">
-                        <p>Formeldefinition</p>
-                    </div>
-                </div>
-                <hr class="hr-line">
-                <h2 id="U">  U</h2>
-                <div>
-                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Formel</h2>
-                    <div class="glossar-definition">
-                        <p>Formeldefinition</p>
-                    </div>
-                </div>
-                <hr class="hr-line">
-                <div>
-                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Formel</h2>
-                    <div class="glossar-definition">
-                        <p>Formeldefinition</p>
-                    </div>
-                </div>
-                <hr class="hr-line">
-                <h2 id="V">  V</h2>
                 <div>
                     <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Formel</h2>
                     <div class="glossar-definition">
@@ -563,7 +627,67 @@
                     </div>
                 </div>
                 <hr class="hr-line">
-                <h2 id="W">  W</h2>
+                <h2 id="T" class="page-header">  T</h2>
+                <div>
+                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">TF-IDF</h2>
+                    <div class="glossar-definition">
+                        <p>Term frequency-inverse document frequency (tf-idf) gewichtet das Wort, das sehr selten vorkommt, d.h. es erfasst die Einzigartigkeit.</p><br>
+                        <p>Es ist das Vorkommen eines Wortes in einem einzigen Dokument, aber im gesamten Korpus.</p><br>
+                        <math style=\"font-family:stix;font-size:16px;\" xmlns=\"http://www.w3.org/1998/Math/MathML\">
+                            <mstyle mathsize=\"16px\">
+                                <msub>
+                                    <mi>w</mi>
+                                    <mrow>
+                                        <mi>i</mi>
+                                        <mo>,</mo>
+                                        <mo>&#xA0;</mo>
+                                        <mi>j</mi>
+                                        <mo>&#xA0;</mo>
+                                        <mo>=</mo>
+                                        <mo>&#xA0;</mo>
+                                        <mi>t</mi>
+                                        <msub>
+                                            <mi>f</mi>
+                                            <mrow>
+                                                <mi>i</mi>
+                                                <mo>,</mo>
+                                                <mo>&#xA0;</mo>
+                                                <mi>j</mi>
+                                                <mo>&#xA0;</mo>
+                                            </mrow>
+                                        </msub>
+                                    </mrow>
+                                </msub>
+                                <mo>&#xD7;</mo>
+                                <mo>&#xA0;</mo>
+                                <mi>log</mi>
+                                <mo>&#xA0;</mo>
+                                <mfenced>
+                                    <mfrac>
+                                        <mi>N</mi>
+                                        <mrow>
+                                            <mi>d</mi>
+                                            <msub>
+                                                <mi>f</mi>
+                                                <mi>i</mi>
+                                            </msub>
+                                        </mrow>
+                                    </mfrac>
+                                </mfenced>
+                            </mstyle><br>
+                            <br>
+
+                    </div>
+                </div>
+                <hr class="hr-line">
+                <div>
+                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Formel</h2>
+                    <div class="glossar-definition">
+                        <p>Formeldefinition</p>
+                    </div>
+                </div>
+                <hr class="hr-line">
+                <h2 id="U" class="page-header">  U</h2>
                 <div>
                     <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Formel</h2>
                     <div class="glossar-definition">
@@ -578,7 +702,55 @@
                     </div>
                 </div>
                 <hr class="hr-line">
-                <h2 id="X">  X</h2>
+                <h2 id="V" class="page-header">  V</h2>
+                <div>
+                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Vektorraum-Modell</h2>
+                    <div class="glossar-definition">
+                        <p>Das Vektorraum-Retrieval (engl.: Vector Space Model (VSM)) ist ein Verfahren zur Informationsbeschaffung bei dem die Informationen als Punkte in einem hochdimensionalen, metrischen Vektorraum repräsentiert werden. Zur Auswertung wird die mathematische Distanz zwischen dem Suchvektor und dem Dokument-/Informationsvektor verwendet
+                            Sei T={t<sub>1</sub>,...,t<sub>n</sub>} eine endliche Menge von Termen und D={d<sub>1</sub>,...,d<sub>m</sub>} eine Menge von Dokumenten. Für jedes Dokument d<sub>i</sub> in D sei zu jedem Term t<sub>k</sub> in T ein reelles Gewicht w<sub>i,k</sub> gegeben. Die Gewichte des Dokuments d<sub>i</sub> lassen sich zu einem Vektor w<sub>i</sub>=(w<sub>i,1</sub>,...,w<sub>i,n</sub>) im R<sup>n</sup> zusammenfassen. Dieser Vektor beschreibt das Dokument im Vektorraummodell: Er ist seine Repräsentation und wird Dokumentvektor genannt.
+                            Auch Anfragen (Queries ) werden durch Vektoren q in R<sup>n</sup> repräsentiert. Wie bei der Repräsentation der Dokumente wird die Anfrage durch eine Menge gewichteter Terme dargestellt. Der Vektor der Gewichte wird Anfragevektor oder Query-Vektor genannt.
+                            Schließlich sei eine Ähnlichkeitsfunktion s:R<sup>n</sup>&times; R<sup>n</sup> ->R definiert, mit der jedem Paar aus zwei Vektoren x,y aus R<sup>n</sup> ein reeller Ähnlichkeitswert s(x,y) zugewiesen wird.
+
+                        </p>
+                    </div>
+                </div>
+                <hr class="hr-line">
+                <div>
+                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Formel</h2>
+                    <div class="glossar-definition">
+                        <p>Formeldefinition</p>
+                    </div>
+                </div>
+                <hr class="hr-line">
+                <h2 id="W" class="page-header">  W</h2>
+                <div>
+                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Wahrscheinlichkeit</h2>
+                    <div class="glossar-definition">
+                        <p>Die Wahrscheinlichkeit (auf Englisch probability) ist also ein Maß, das bestimmt wie sehr erwartet wird, dass genau dieses Ereignis eintritt.</p><br>
+
+                        <math style=\"font-family:stix;font-size:16px;\" xmlns=\"http://www.w3.org/1998/Math/MathML\">
+                            <mstyle mathsize=\"16px\">
+                                <mi>P</mi>
+                                <mfenced><mi>E</mi></mfenced>
+                                <mo>&#xA0;</mo>
+                                <mo>=</mo>
+                                <mo>&#xA0;</mo>
+                                <mfrac>
+                                    <mi>E</mi>
+                                    <mi>n</mi>
+                                </mfrac>
+                            </mstyle>
+                    </div>
+                </div>
+                <hr class="hr-line">
+                <div>
+                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Formel</h2>
+                    <div class="glossar-definition">
+                        <p>Formeldefinition</p>
+                    </div>
+                </div>
+                <hr class="hr-line">
+                <h2 id="X" class="page-header">  X</h2>
                 <div>
                     <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Formel</h2>
                     <div class="glossar-definition">
@@ -593,7 +765,7 @@
                     </div>
                 </div>
                 <hr class="hr-line">
-                <h2 id="Y">  Y</h2>
+                <h2 id="Y" class="page-header">  Y</h2>
                 <div>
                     <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Formel</h2>
                     <div class="glossar-definition">
@@ -608,11 +780,49 @@
                     </div>
                 </div>
                 <hr class="hr-line">
-                <h2 id="Z">  Z</h2>
+                <h2 id="Z" class="page-header">  Z</h2>
                 <div>
-                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Formel</h2>
+                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Zipf's Law</h2>
                     <div class="glossar-definition">
-                        <p>Formeldefinition</p>
+                        <p>Das Zipfsche Gesetz ist ein Modell, mit dessen Hilfe man bei bestimmten Größen, die in eine Rangfolge gebracht werden, deren Wert aus ihrem Rang abschätzen kann.</p><br>
+
+                        <math style=\"font-family:stix;font-size:16px;\" xmlns=\"http://www.w3.org/1998/Math/MathML\">
+                            <mstyle mathsize=\"16px\">
+                                <mi>F</mi>
+                                <mfenced>
+                                    <mi>w</mi>
+                                </mfenced>
+                                <mo>&#xA0;</mo>
+                                <mo>=</mo>
+                                <mo>&#xA0;</mo>
+                                <mfrac>
+                                    <mi>C</mi>
+                                    <mrow>
+                                        <mi>r</mi>
+                                        <msup>
+                                            <mfenced>
+                                                <mi>w</mi>
+                                            </mfenced>
+                                            <mi>a</mi>
+                                        </msup>
+                                    </mrow>
+                                </mfrac>
+                                <mo>&#xA0;</mo>
+                                <mspace linebreak=\"newline\"/>
+                                    <mspace linebreak=\"newline\"/>
+                                        <mi>a</mi>
+                                        <mo>&#xA0;</mo>
+                                        <mo>&#x2248;</mo>
+                                        <mn>1</mn>
+                                        <mo>,</mo>
+                                        <mo>&#xA0;</mo>
+                                        <mi>C</mi>
+                                        <mo>&#x2248;</mo>
+                                        <mn>0</mn>
+                                        <mo>,</mo>
+                                        <mn>1</mn>
+                            </mstyle>
+
                     </div>
                 </div>
                 <hr class="hr-line">
