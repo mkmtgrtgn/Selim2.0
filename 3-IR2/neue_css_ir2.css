@@ -1,0 +1,261 @@
+body {
+    font-family: Quicksand;
+    --schriftfarbe: #232B2B;
+    --containerfarbe: #D8EBEB;
+    --verlinkungsfarbe: #DEC6AC;
+    --verlinkungaktiv: #8EACAC;
+}
+
+h1, h2, h3 {
+    padding:1vw; /*1% of view port width */
+    color: var(--schriftfarbe);
+}
+
+.navbar {
+    background-color: var(--containerfarbe);
+    position: sticky;
+    margin-left: -1vw;
+    margin-right: -1vw;
+}
+
+.navbar-brand {
+    color: var(--schriftfarbe);
+}
+.navbar-nav > li > a{
+    color: var(--schriftfarbe);
+    transition: color 0.3s;
+}
+.navbar-nav > li > ul{
+    background-color: #D8EBEB;
+    border-top: none;
+    border-bottom: none;
+}
+.navbar-nav > li > ul > li {
+    transition: 0.3s;
+}
+
+.page-pick .dropdown-menu {
+    max-height: 300px;
+    overflow: auto;
+  }
+
+
+.navbar-nav > li > a:hover{
+    color: var(--verlinkungaktiv);
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;..");
+  }
+
+
+.page-pick {
+    background-color: var(--containerfarbe);
+}
+.page-pick > ul {
+    background-color: var(--containerfarbe);
+}
+
+
+/*für IR2*/
+
+.progress {
+    color: var(--hauptfarbe);
+    margin-bottom: 2%;
+    margin-top: 5%;
+}
+
+#pageNavigation {
+    padding-top: 2%;
+    float: right;
+}
+
+th {
+    padding: 3px;
+    background-color: var(--verlinkungaktiv);
+    text-align: center;
+}
+
+td{
+    background-color: var(--containerfarbe);
+}
+
+button{
+    background-color: #e1e6e6;
+    font-size: 18px;
+    border: none; 
+    /*Methode um den Inhalt der Buttons vertikal und horizontal zu zentrieren*/
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px #6f7172;  
+}
+
+button:hover {
+    background-color: #fbfcfc;
+    transform: scale(1.2);
+}
+/*für seite 19*/
+.task8 {
+    padding-bottom: 0.5%;
+}
+
+/*für seite 25*/
+#relFeedbackMet{
+    margin: 20px;
+}
+
+/* für seite 28*/
+#roccTask{
+    padding-bottom: 2%;
+    width: max-content;
+    display: flex;
+}
+
+#roccVar{
+    margin: 2%;
+}
+
+#solution12 {
+    width: 20%;
+    margin-top:50px;
+}
+.solutionCol {
+    height: 32px;
+}
+
+#roccBtnSolution {
+    float:right;
+    display: flex;
+
+}
+.roccResultInput {
+    width: 100%;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 600px) {
+    #roccVar {
+        margin: 0;
+    }
+    .roccHeadRow {
+        display: none;
+    }
+    th {
+        text-align: left;
+        width: 60px;
+    }
+    .roccResultInput {
+        width: 70px;
+    }
+
+}
+
+
+/* für seite 30 ff.*/
+
+#task13{
+    padding-bottom: 2%;
+}
+
+.col {
+    margin-top: 1%;
+    margin-right: 4%;
+    margin-bottom: 1%;
+}
+
+.dtmTable {
+    width: 90px;
+}
+
+.dtmRowSol{
+    height: 28px;
+}
+
+@media screen and (max-width: 690px) {
+    #dtm13 {
+        margin-top: 0;
+        margin-right: 0%;
+    }
+    
+    .dtmTable {
+        width: 80px;
+    }
+    
+}
+@media screen and (max-width: 400px) {
+    .dtmTable {
+        width: 50px;
+    }
+    #dtmTableHead {
+        overflow:hidden;
+    }
+    #dtmTableHead:hover {
+        overflow: visible;
+    }
+}
+
+#content133 {
+    margin-top: 2.5%;
+}
+
+.headerTH {
+ text-align: center;
+}
+
+#exampleBox{
+    border: solid;
+    border-color: var(--verlinkungaktiv);
+    padding: 0;
+    margin-bottom: 2%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Drag and Drop Seiten */
+.dragAdropTable {
+    width: 50%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-collapse: separate;
+    border: 2px solid white;
+    border-spacing: 0;
+    text-align: left;
+    background-color: var(--containerfarbe);
+}
+.dragAdropTable td {
+    text-align: center;
+    padding: 5px 12px;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white; 
+ 
+  }
+.dragtarget {
+    background-color: var(--containerfarbe);
+    text-align: center;
+    width: 20%;
+    float:left;
+    margin:2px;
+  }
+#checkAnswer {
+    float: right;
+}
