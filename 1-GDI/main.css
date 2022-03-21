@@ -10,13 +10,17 @@ body{
 }
 
 h1, h2, h3 {
+  padding:1vw; /*1% of view port width */
+  color: var(--schriftfarbe);
 }
 
 .navbar-brand {
+  /*
     margin-left: 1vw;
     font-weight: 600;
-    color:var(--schriftfarbe);
     font-size:42px;
+  */
+    color:var(--schriftfarbe);
 }
 
 .navi{
