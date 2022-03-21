@@ -10,6 +10,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!--für MathJax-->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <!-- Header, Navbar und Pageination von DARIA MASLOV-->
 </head>
 <body>
@@ -78,473 +82,555 @@
                         <p>	
                             Berechnen Sie die Ähnlichkeit zwischen Anfragen und Dokumenten. Nutzen Sie dazu den Dice'sche Koeffizienten (s.u.). Stellen Sie dann ein Ranking auf (je höher der Wert, desto größer ist die Ähnlichkeit zwischen Dokument und Anfrage)
                         </p>
-                        <div id="exampleBox" class="row">
-                            <div class="col">
-                                <h4>Beispielrechnung: <br> für Anfrage 1 und Dok 1:</h4>
-                            </div>
-                            <div class="col">
-                                <p> 2 * (2*1 + 2,5*1 + 1,67*0 + 0*0 + 0*0) = 9 <br>
-                                    (2+2,5+1,67+0+0) + (1+1+0+0+0) = 8,17 <br>
-                                    9 / 8,17 = 1,10</p>        
-                            </div>
-                            <div class="col"></div>
-                        </div>
-                            
-                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#previousSol132" aria-expanded="false"
-                            aria-controls="multiCollapseExampleC">Lösung aus 13.2</button> 
-                            <br>  
-                            
-                            <div class="collapse multi-collapse" id="previousSol132">
-                                
-                                <div class="card card-body">
-                                    
-                                    <div id="task132Sol">
-                                        <table class="dtm13">
-                                            <tr id="dtmTableHeadSol">
-                                                <th>DTM</th>
-                                                <th>Dieter<br>Baumann</th>
-                                                <th>Nandrolon</th>
-                                                <th>Olympia</th>
-                                                <th>Leicht-<br>athletik</th>
-                                                <th>Sport</th>
-                                            </tr>
+                        <!--Formel -->
+                        <div id="formel-32">
+                            <math display="block">
+                                <semantics>
+                                    <mrow>
+                                        <mi>s</mi><mi>i</mi><mi>m</mi><mo stretchy="false">(</mo><mi>A</mi><mi>n</mi><mi>f</mi><mi>r</mi><mi>a</mi><mi>g</mi><mi>e</mi><mi>A</mi><mo>,</mo><mi>D</mi><mi>o</mi><mi>k</mi><mi>u</mi><mi>m</mi><mi>e</mi><mi>n</mi><mi>t</mi><mi>D</mi><mo stretchy='false'>)</mo><mo>=</mo><mfrac>
+                                            <mrow>
+                                                <mn>2</mn><mo>*</mo><mstyle displaystyle="true">
+                                                    <msubsup>
+                                                        <mo>&#x2211;</mo>
+                                                        <mrow>
+                                                            <mi>k</mi><mn>1</mn></mrow>
+                                                            <mi>n</mi>
+                                                        </msubsup>
+                                                        <mrow>
+                                                            <mo stretchy="false">(</mo><mi>T</mi><mi>e</mi><mi>r</mi><msub>
+                                                                <mi>m</mi>
+                                                                <mi>k</mi>
+                                                            </msub>
+                                                            <mi>a</mi><mo>*</mo><mi>T</mi><mi>e</mi><mi>r</mi><msub>
+                                                                <mi>m</mi>
+                                                                <mi>k</mi>
+                                                            </msub>
+                                                            <mi>d</mi><mo stretchy="false">)</mo></mrow>
+                                                        </mstyle></mrow>
+                                                        <mrow>
+                                                            <mstyle displaystyle="true">
+                                                                <msubsup>
+                                                                    <mo>&#x2211;</mo>
+                                                                    <mrow>
+                                                                        <mi>k</mi><mn>1</mn></mrow>
+                                                                        <mi>n</mi>
+                                                                    </msubsup>
+                                                                    <mrow>
+                                                                        <mi>T</mi><mi>e</mi><mi>r</mi><msub>
+                                                                            <mi>m</mi>
+                                                                            <mi>k</mi>
+                                                                        </msub>
+                                                                        <mi>a</mi><mo>+</mo><mstyle displaystyle="true">
+                                                                            <msubsup>
+                                                                                <mo>&#x2211;</mo>
+                                                                                <mrow>
+                                                                                    <mi>k</mi><mn>1</mn></mrow>
+                                                                                    <mi>n</mi>
+                                                                                </msubsup>
+                                                                                <mrow>
+                                                                                    <mi>T</mi><mi>e</mi><mi>r</mi><msub>
+                                                                                        <mi>m</mi>
+                                                                                        <mi>k</mi>
+                                                                                    </msub>
+                                                                                    <mi>d</mi></mrow>
+                                                                                </mstyle></mrow>
+                                                                            </mstyle></mrow>
+                                                                        </mfrac>
+                                                                    </mrow>
+                                                                    <annotation encoding="MathType-MTEF">MathType@MTEF@5@5@+=
+                                                                        feaahqart1ev3aaatCvAUfeBSjuyZL2yd9gzLbvyNv2CaerbuLwBLn
+                                                                        hiov2DGi1BTfMBaeXatLxBI9gBaerbd9wDYLwzYbItLDharqqtubsr
+                                                                        4rNCHbGeaGqiVu0Je9sqqrpepC0xbbL8F4rqqrFfpeea0xe9Lq=Jc9
+                                                                        vqaqpepm0xbba9pwe9Q8fs0=yqaqpepae9pg0FirpepeKkFr0xfr=x
+                                                                        fr=xb9adbaqaaeGaciGaaiaabeqaamaabaabaaGcbaGaam4CaiaadM
+                                                                        gacaWGTbGaaiikaiaadgeacaWGUbGaamOzaiaadkhacaWGHbGaam4z
+                                                                        aiaadwgacaWGbbGaaiilaiaadseacaWGVbGaam4AaiaadwhacaWGTb
+                                                                        Gaamyzaiaad6gacaWG0bGaamiraiaacMcacqGH9aqpdaWcaaqaaiaa
+                                                                        ikdacaGGQaWaaabmaeaacaGGOaGaamivaiaadwgacaWGYbGaamyBam
+                                                                        aaBaaaleaacaWGRbaabeaakiaadggacaGGQaGaamivaiaadwgacaWG
+                                                                        YbGaamyBamaaBaaaleaacaWGRbaabeaakiaadsgacaGGPaaaleaaca
+                                                                        WGRbGaaGymaaqaaiaad6gaa0GaeyyeIuoaaOqaamaaqadabaGaamiv
+                                                                        aiaadwgacaWGYbGaamyBamaaBaaaleaacaWGRbaabeaakiaadggacq
+                                                                        GHRaWkdaaeWaqaaiaadsfacaWGLbGaamOCaiaad2gadaWgaaWcbaGa
+                                                                        am4AaaqabaGccaWGKbaaleaacaWGRbGaaGymaaqaaiaad6gaa0Gaey
+                                                                        yeIuoaaSqaaiaadUgacaaIXaaabaGaamOBaaqdcqGHris5aaaaaaa@7462@
+                                                                    </annotation>
+                                                                </semantics>
+                                                            </math>
+                                                        </div>
+                                                        <!--Formel Ende-->
+                                                        
+                                                        
+                                                        
+                                                        
+                                                        
+                                                        <div id="exampleBox" class="row">
+                                                            <div class="col">
+                                                                <h4>Beispielrechnung: <br> für Anfrage 1 und Dok 1:</h4>
+                                                            </div>
+                                                            <div class="col">
+                                                                <p> 2 * (2*1 + 2,5*1 + 1,67*0 + 0*0 + 0*0) = 9 <br>
+                                                                    (2+2,5+1,67+0+0) + (1+1+0+0+0) = 8,17 <br>
+                                                                    9 / 8,17 = 1,10</p>        
+                                                                </div>
+                                                                <div class="col"></div>
+                                                            </div>
+                                                            
+                                                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#previousSol132" aria-expanded="false"
+                                                            aria-controls="multiCollapseExampleC">Lösung aus 13.2</button> 
+                                                            <br>  
+                                                            
+                                                            <div class="collapse multi-collapse" id="previousSol132">
+                                                                
+                                                                <div class="card card-body">
+                                                                    
+                                                                    <div id="task132Sol">
+                                                                        <table class="dtm13">
+                                                                            <tr id="dtmTableHeadSol">
+                                                                                <th>DTM</th>
+                                                                                <th>Dieter<br>Baumann</th>
+                                                                                <th>Nandrolon</th>
+                                                                                <th>Olympia</th>
+                                                                                <th>Leicht-<br>athletik</th>
+                                                                                <th>Sport</th>
+                                                                            </tr>
+                                                                            
+                                                                            <tr class="dtmRowSol">
+                                                                                <td>D1</td>
+                                                                                <td>2</td>
+                                                                                <td>2,5</td>
+                                                                                <td>1,67</td>
+                                                                                <td>0</td>
+                                                                                <td>0</td>
+                                                                            </tr>
+                                                                            <tr class="dtmRowSol">
+                                                                                <td>D2</td>
+                                                                                <td>2</td>
+                                                                                <td>0</td>
+                                                                                <td>1,67</td>
+                                                                                <td>0</td>
+                                                                                <td>2,5</td>
+                                                                            </tr>
+                                                                            <tr class="dtmRowSol">
+                                                                                <td>D3</td>
+                                                                                <td>2</td>
+                                                                                <td>0</td>
+                                                                                <td>0</td>
+                                                                                <td>1,67</td>
+                                                                                <td>0</td>
+                                                                            </tr>
+                                                                            <tr class="dtmRowSol">
+                                                                                <td>D4</td>
+                                                                                <td>1</td>
+                                                                                <td>5</td>
+                                                                                <td>1,67</td>
+                                                                                <td>1,67</td>
+                                                                                <td>0</td>
+                                                                            </tr>
+                                                                            <tr class="dtmRowSol">
+                                                                                <td>D5</td>
+                                                                                <td>1</td>
+                                                                                <td>0</td>
+                                                                                <td>0</td>
+                                                                                <td>1,67</td>
+                                                                                <td>1,67</td>
+                                                                            </tr>
+                                                                            <tr class="dtmRowSol">
+                                                                                <td>idf</td>
+                                                                                <td>1</td>
+                                                                                <td>2,5</td>
+                                                                                <td>1,67</td>
+                                                                                <td>1,67</td>
+                                                                                <td>2,5</td>
+                                                                            </tr>
+                                                                            <tr class="dtmRowSol">
+                                                                                <td>Q1</td>
+                                                                                <td>1</td>
+                                                                                <td>1</td>
+                                                                                <td>0</td>
+                                                                                <td>0</td>
+                                                                                <td>0</td>
+                                                                            </tr>
+                                                                            <tr class="dtmRowSol">
+                                                                                <td>Q2</td>
+                                                                                <td>0</td>
+                                                                                <td>0</td>
+                                                                                <td>1</td>
+                                                                                <td>1</td>
+                                                                                <td>0</td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            
+                                                            <div class="row" id="content133">
+                                                                <div class="col">
+                                                                    
+                                                                    <table class="dtm13">
+                                                                        <tr>
+                                                                            <th class="headerTH" colspan="3">Ähnlichkeit</th>
+                                                                        </tr>
+                                                                        <tr class="dtmTableHead">
+                                                                            <th></th>
+                                                                            <th>Anfrage 1</th>
+                                                                            <th>Anfrage 2</th>
+                                                                        </tr>
+                                                                        <tr class="dtmRow">
+                                                                            <th>Dok. 1</th>
+                                                                            <td><input class="dtmTable"></td>
+                                                                            <td><input class="dtmTable"></td>
+                                                                        </tr>
+                                                                        <tr class="dtmRow">
+                                                                            <th>Dok. 2</th>
+                                                                            <td><input class="dtmTable"></td>
+                                                                            <td><input class="dtmTable"></td>
+                                                                        </tr>
+                                                                        <tr class="dtmRow">
+                                                                            <th>Dok. 3</th>
+                                                                            <td><input class="dtmTable"></td>
+                                                                            <td><input class="dtmTable"></td>
+                                                                        </tr>
+                                                                        <tr class="dtmRow">
+                                                                            <th>Dok. 4</th>
+                                                                            <td><input class="dtmTable"></td>
+                                                                            <td><input class="dtmTable"></td>
+                                                                        </tr>
+                                                                        <tr class="dtmRow">
+                                                                            <th>Dok. 5</th>
+                                                                            <td><input class="dtmTable"></td>
+                                                                            <td><input class="dtmTable"></td>
+                                                                        </tr>
+                                                                    </table>
+                                                                    
+                                                                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                                                                    data-bs-target="#similaritySol" aria-expanded="false"
+                                                                    aria-controls="multiCollapseExampleC">Lösung: Ähnlichkeit</button> 
+                                                                    <br>  
+                                                                    
+                                                                    <div class="collapse multi-collapse" id="similaritySol">
+                                                                        <div class="card card-body"> 
+                                                                            <table class="dtm13">
+                                                                                <tr class="dtmTableHead">
+                                                                                    <th></th>
+                                                                                    <th>Anfrage 1</th>
+                                                                                    <th>Anfrage 2</th>
+                                                                                </tr>
+                                                                                <tr class="dtmRow">
+                                                                                    <th>Dok. 1</th>
+                                                                                    <td>1,1</td>
+                                                                                    <td>0,41</td>
+                                                                                </tr>
+                                                                                <tr class="dtmRow">
+                                                                                    <th>Dok. 2</th>
+                                                                                    <td>0,49</td>
+                                                                                    <td>0,41</td>
+                                                                                </tr>
+                                                                                <tr class="dtmRow">
+                                                                                    <th>Dok. 3</th>
+                                                                                    <td>0,71</td>
+                                                                                    <td>0,59</td>
+                                                                                </tr>
+                                                                                <tr class="dtmRow">
+                                                                                    <th>Dok. 4</th>
+                                                                                    <td>1,06</td>
+                                                                                    <td>0,59</td>
+                                                                                </tr>
+                                                                                <tr class="dtmRow">
+                                                                                    <th>Dok. 5</th>
+                                                                                    <td>0,28</td>
+                                                                                    <td>0,47</td> 
+                                                                                </tr>
+                                                                            </table>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                <div class="col">
+                                                                    <div id="ranking133">
+                                                                        <table class="dtm13">
+                                                                            <tr>
+                                                                                <th class="headerTH" colspan="3">Ranking</th>
+                                                                            </tr>
+                                                                            <tr class="dtmTableHead">
+                                                                                <th></th>
+                                                                                <th>Anfrage 1</th>
+                                                                                <th>Anfrage 2</th>
+                                                                            </tr>
+                                                                            
+                                                                            <tr class="dtmRow">
+                                                                                <th>Platz 1</th>
+                                                                                <td><input class="dtmTable"></td>
+                                                                                <td><input class="dtmTable"></td>
+                                                                                
+                                                                            </tr>
+                                                                            <tr class="dtmRow">
+                                                                                <th>Platz 2</th>
+                                                                                <td><input class="dtmTable"></td>
+                                                                                <td><input class="dtmTable"></td>
+                                                                                
+                                                                            </tr>
+                                                                            <tr class="dtmRow">
+                                                                                <th>Platz 3</th>
+                                                                                <td><input class="dtmTable"></td>
+                                                                                <td><input class="dtmTable"></td>
+                                                                                
+                                                                            </tr>
+                                                                            <tr class="dtmRow">
+                                                                                <th>Platz 4</th>
+                                                                                <td><input class="dtmTable"></td>
+                                                                                <td><input class="dtmTable"></td>
+                                                                                
+                                                                            </tr>
+                                                                            <tr class="dtmRow">
+                                                                                <th>Platz 5</th>
+                                                                                <td><input class="dtmTable"></td>
+                                                                                <td><input class="dtmTable"></td>
+                                                                                
+                                                                            </tr>
+                                                                        </table>
+                                                                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                                                                        data-bs-target="#rankingSol" aria-expanded="false"
+                                                                        aria-controls="multiCollapseExampleC">Lösung: Ranking</button> 
+                                                                        <br>  
+                                                                        
+                                                                        <div class="collapse multi-collapse" id="rankingSol">
+                                                                            <div class="card card-body"> 
+                                                                                <table class="dtm13">
+                                                                                    <tr class="dtmTableHead">
+                                                                                        <th></th>
+                                                                                        <th>Anfrage 1</th>
+                                                                                        <th>Anfrage 2</th>
+                                                                                    </tr>
+                                                                                    <tr class="dtmRow">
+                                                                                        <th>Platz 1</th>
+                                                                                        <td>Dok. 1</td>
+                                                                                        <td>Dok. 3, 4</td>
+                                                                                    </tr>
+                                                                                    <tr class="dtmRow">
+                                                                                        <th>Platz 2</th>
+                                                                                        <td>Dok. 4</td>
+                                                                                        <td>Dok. 3, 4</td>
+                                                                                    </tr>
+                                                                                    <tr class="dtmRow">
+                                                                                        <th>Platz 3</th>
+                                                                                        <td>Dok. 3</td>
+                                                                                        <td>Dok. 5</td>
+                                                                                    </tr>
+                                                                                    <tr class="dtmRow">
+                                                                                        <th>Platz 4</th>
+                                                                                        <td>Dok. 2</td>
+                                                                                        <td>Dok. 1, 2</td>
+                                                                                    </tr>
+                                                                                    <tr class="dtmRow">
+                                                                                        <th>Platz 5</th>
+                                                                                        <td>Dok. 5</td>
+                                                                                        <td>Dok. 1, 2</td> 
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <!--Fortschrittsanzeige-->            
+                                                                <div class="progress">
+                                                                    <div class="progress-bar" role="progressbar" aria-valuenow="94.12"
+                                                                    aria-valuemin="0" aria-valuemax="100" style="width:94%">
+                                                                    <span class="sr-only">94,12% Complete</span>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        
+                                                    </div> 
+                                                </div>
+                                            </div> 
                                             
-                                            <tr class="dtmRowSol">
-                                                <td>D1</td>
-                                                <td>2</td>
-                                                <td>2,5</td>
-                                                <td>1,67</td>
-                                                <td>0</td>
-                                                <td>0</td>
-                                            </tr>
-                                            <tr class="dtmRowSol">
-                                                <td>D2</td>
-                                                <td>2</td>
-                                                <td>0</td>
-                                                <td>1,67</td>
-                                                <td>0</td>
-                                                <td>2,5</td>
-                                            </tr>
-                                            <tr class="dtmRowSol">
-                                                <td>D3</td>
-                                                <td>2</td>
-                                                <td>0</td>
-                                                <td>0</td>
-                                                <td>1,67</td>
-                                                <td>0</td>
-                                            </tr>
-                                            <tr class="dtmRowSol">
-                                                <td>D4</td>
-                                                <td>1</td>
-                                                <td>5</td>
-                                                <td>1,67</td>
-                                                <td>1,67</td>
-                                                <td>0</td>
-                                            </tr>
-                                            <tr class="dtmRowSol">
-                                                <td>D5</td>
-                                                <td>1</td>
-                                                <td>0</td>
-                                                <td>0</td>
-                                                <td>1,67</td>
-                                                <td>1,67</td>
-                                            </tr>
-                                            <tr class="dtmRowSol">
-                                                <td>idf</td>
-                                                <td>1</td>
-                                                <td>2,5</td>
-                                                <td>1,67</td>
-                                                <td>1,67</td>
-                                                <td>2,5</td>
-                                            </tr>
-                                            <tr class="dtmRowSol">
-                                                <td>Q1</td>
-                                                <td>1</td>
-                                                <td>1</td>
-                                                <td>0</td>
-                                                <td>0</td>
-                                                <td>0</td>
-                                            </tr>
-                                            <tr class="dtmRowSol">
-                                                <td>Q2</td>
-                                                <td>0</td>
-                                                <td>0</td>
-                                                <td>1</td>
-                                                <td>1</td>
-                                                <td>0</td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                            
-                            
-                            <div class="row" id="content133">
-                                <div class="col">
-                                    
-                                    <table class="dtm13">
-                                        <tr>
-                                            <th class="headerTH" colspan="3">Ähnlichkeit</th>
-                                        </tr>
-                                        <tr class="dtmTableHead">
-                                            <th></th>
-                                            <th>Anfrage 1</th>
-                                            <th>Anfrage 2</th>
-                                        </tr>
-                                        <tr class="dtmRow">
-                                            <th>Dok. 1</th>
-                                            <td><input class="dtmTable"></td>
-                                            <td><input class="dtmTable"></td>
-                                        </tr>
-                                        <tr class="dtmRow">
-                                            <th>Dok. 2</th>
-                                            <td><input class="dtmTable"></td>
-                                            <td><input class="dtmTable"></td>
-                                        </tr>
-                                        <tr class="dtmRow">
-                                            <th>Dok. 3</th>
-                                            <td><input class="dtmTable"></td>
-                                            <td><input class="dtmTable"></td>
-                                        </tr>
-                                        <tr class="dtmRow">
-                                            <th>Dok. 4</th>
-                                            <td><input class="dtmTable"></td>
-                                            <td><input class="dtmTable"></td>
-                                        </tr>
-                                        <tr class="dtmRow">
-                                            <th>Dok. 5</th>
-                                            <td><input class="dtmTable"></td>
-                                            <td><input class="dtmTable"></td>
-                                        </tr>
-                                    </table>
-                                    
-                                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#similaritySol" aria-expanded="false"
-                                    aria-controls="multiCollapseExampleC">Lösung: Ähnlichkeit</button> 
-                                    <br>  
-                                    
-                                    <div class="collapse multi-collapse" id="similaritySol">
-                                        <div class="card card-body"> 
-                                            <table class="dtm13">
-                                                <tr class="dtmTableHead">
-                                                    <th></th>
-                                                    <th>Anfrage 1</th>
-                                                    <th>Anfrage 2</th>
-                                                </tr>
-                                                <tr class="dtmRow">
-                                                    <th>Dok. 1</th>
-                                                    <td>1,1</td>
-                                                    <td>0,41</td>
-                                                </tr>
-                                                <tr class="dtmRow">
-                                                    <th>Dok. 2</th>
-                                                    <td>0,49</td>
-                                                    <td>0,41</td>
-                                                </tr>
-                                                <tr class="dtmRow">
-                                                    <th>Dok. 3</th>
-                                                    <td>0,71</td>
-                                                    <td>0,59</td>
-                                                </tr>
-                                                <tr class="dtmRow">
-                                                    <th>Dok. 4</th>
-                                                    <td>1,06</td>
-                                                    <td>0,59</td>
-                                                </tr>
-                                                <tr class="dtmRow">
-                                                    <th>Dok. 5</th>
-                                                    <td>0,28</td>
-                                                    <td>0,47</td> 
-                                                </tr>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="col">
-                                    <div id="ranking133">
-                                        <table class="dtm13">
-                                            <tr>
-                                                <th class="headerTH" colspan="3">Ranking</th>
-                                            </tr>
-                                            <tr class="dtmTableHead">
-                                                <th></th>
-                                                <th>Anfrage 1</th>
-                                                <th>Anfrage 2</th>
-                                            </tr>
-                                            
-                                            <tr class="dtmRow">
-                                                <th>Platz 1</th>
-                                                <td><input class="dtmTable"></td>
-                                                <td><input class="dtmTable"></td>
-                                                
-                                            </tr>
-                                            <tr class="dtmRow">
-                                                <th>Platz 2</th>
-                                                <td><input class="dtmTable"></td>
-                                                <td><input class="dtmTable"></td>
-                                                
-                                            </tr>
-                                            <tr class="dtmRow">
-                                                <th>Platz 3</th>
-                                                <td><input class="dtmTable"></td>
-                                                <td><input class="dtmTable"></td>
-                                                
-                                            </tr>
-                                            <tr class="dtmRow">
-                                                <th>Platz 4</th>
-                                                <td><input class="dtmTable"></td>
-                                                <td><input class="dtmTable"></td>
-                                                
-                                            </tr>
-                                            <tr class="dtmRow">
-                                                <th>Platz 5</th>
-                                                <td><input class="dtmTable"></td>
-                                                <td><input class="dtmTable"></td>
-                                                
-                                            </tr>
-                                        </table>
-                                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#rankingSol" aria-expanded="false"
-                                        aria-controls="multiCollapseExampleC">Lösung: Ranking</button> 
-                                        <br>  
-                                        
-                                        <div class="collapse multi-collapse" id="rankingSol">
-                                            <div class="card card-body"> 
-                                                <table class="dtm13">
-                                                    <tr class="dtmTableHead">
-                                                        <th></th>
-                                                        <th>Anfrage 1</th>
-                                                        <th>Anfrage 2</th>
-                                                    </tr>
-                                                    <tr class="dtmRow">
-                                                        <th>Platz 1</th>
-                                                        <td>Dok. 1</td>
-                                                        <td>Dok. 3, 4</td>
-                                                    </tr>
-                                                    <tr class="dtmRow">
-                                                        <th>Platz 2</th>
-                                                        <td>Dok. 4</td>
-                                                        <td>Dok. 3, 4</td>
-                                                    </tr>
-                                                    <tr class="dtmRow">
-                                                        <th>Platz 3</th>
-                                                        <td>Dok. 3</td>
-                                                        <td>Dok. 5</td>
-                                                    </tr>
-                                                    <tr class="dtmRow">
-                                                        <th>Platz 4</th>
-                                                        <td>Dok. 2</td>
-                                                        <td>Dok. 1, 2</td>
-                                                    </tr>
-                                                    <tr class="dtmRow">
-                                                        <th>Platz 5</th>
-                                                        <td>Dok. 5</td>
-                                                        <td>Dok. 1, 2</td> 
-                                                    </tr>
-                                                </table>
+                                            <!--Seitenzahl-->
+                                            <div class="row justify-content-center">
+                                                <div class="col-lg-8 col-lg-offset-3 text-center">
+                                                    <div class="page-pick">
+                                                        <div class="btn-group dropup">
+                                                            <a class="btn text-left btn-lg" href="#" role="button">
+                                                                <span class="d-none d-lg-block"><i class="bi bi-arrow-left-circle-fill">vorherige Seite</i></span>
+                                                                <span class="d-lg-none"><i class="bi bi-arrow-left-circle-fill"></i></span> 
+                                                            </a>
+                                                            <button type="button" class="btn btn-lg" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                <span class="d-none d-md-block">13. Koordination der Standardmaße <i class="bi bi-chevron-compact-up"></i></span>
+                                                                <span class="d-md-none">Seite 14 <i class="bi bi-chevron-compact-up"></i></span>
+                                                            </button>
+                                                            <ul class="dropdown-menu">
+                                                                <!--Link ändern-->
+                                                                <li><a class="dropdown-item " href="#" >
+                                                                    <span class="d-none d-md-block">1. Einordnung des Themas</span>
+                                                                    <span class="d-md-none">Seite 1</span> 
+                                                                </a></li>
+                                                                <!--Link ändern-->
+                                                                <li><a class="dropdown-item" href="#" >
+                                                                    <span class="d-none d-md-block">2. Wichtige Begriffe</span>
+                                                                    <span class="d-md-none">Seite 2</span> 
+                                                                </a></li>
+                                                                <!--Link ändern-->
+                                                                <li><a class="dropdown-item" href="allgemeine Kriterien.html" >
+                                                                    <span class="d-none d-md-block">3. Begriffszusammenhänge</span>
+                                                                    <span class="d-md-none">Seite 3</span> 
+                                                                </a></li>
+                                                                <li><a class="dropdown-item" href="allgemeine Kriterien.html" >
+                                                                    <span class="d-none d-md-block">4. Allgemeine Bewertungskriterien</span>
+                                                                    <span class="d-md-none">Seite 4</span> 
+                                                                </a></li>
+                                                                <li><a class="dropdown-item" href="ir2_seite5.html" >
+                                                                    <span class="d-none d-md-block">5. Der Relevanzbegriff</span>
+                                                                    <span class="d-md-none">Seite 5</span> 
+                                                                </a></li>
+                                                                <li><a class="dropdown-item" href="#" >
+                                                                    <span class="d-none d-md-block">6. Bewertungskriterien: Übungsaufgabe</span>
+                                                                    <span class="d-md-none">Seite 6</span> 
+                                                                </a></li>
+                                                                <li><a class="dropdown-item" href="#" >
+                                                                    <span class="d-none d-md-block">7. Die Elementarparameter</span>
+                                                                    <span class="d-md-none">Seite 7</span> 
+                                                                </a></li>
+                                                                <li><a class="dropdown-item" href="#" >
+                                                                    <span class="d-none d-md-block">8. Das Standardmaß "Recall"</span>
+                                                                    <span class="d-md-none">Seite 8</span> 
+                                                                </a></li>
+                                                                <li><a class="dropdown-item" href="precision.html" >
+                                                                    <span class="d-none d-md-block">9. Das Standardmaß "Precision"</span>
+                                                                    <span class="d-md-none">Seite 9</span> 
+                                                                </a></li>
+                                                                <li><a class="dropdown-item" href="elemtarParameterAufgabe.html" >
+                                                                    <span class="d-none d-md-block">10. Elementarparameter: Übungsaufgabe</span>
+                                                                    <span class="d-md-none">Seite 10</span> 
+                                                                </a></li>
+                                                                <li><a class="dropdown-item" href="recalltest.html" >
+                                                                    <span class="d-none d-md-block">11. Recall: Übungsaufgabe</span>
+                                                                    <span class="d-md-none">Seite 11</span> 
+                                                                </a></li>
+                                                                <li><a class="dropdown-item" href="elementarparameter p.html" >
+                                                                    <span class="d-none d-md-block">12. Precision: Übungsaufgabe</span>
+                                                                    <span class="d-md-none">Seite 12</span> 
+                                                                </a></li>
+                                                                <!--Link ändern-->
+                                                                <li><a class="dropdown-item" href="allgemeine Kriterien.html" >
+                                                                    <span class="d-none d-md-block">13. R + P: Übungsaufgabe 1</span>
+                                                                    <span class="d-md-none">Seite 13</span> 
+                                                                </a></li>
+                                                                <!--Link ändern-->
+                                                                <li><a class="dropdown-item" href="allgemeine Kriterien.html" >
+                                                                    <span class="d-none d-md-block">14. R + P: Übungsaufgabe 2</span>
+                                                                    <span class="d-md-none">Seite 14</span> 
+                                                                </a></li>
+                                                                
+                                                                <li><a class="dropdown-item" href="#" >
+                                                                    <span class="d-none d-md-block">15. Sonderfälle bei der Berechnung</span>
+                                                                    <span class="d-md-none">Seite 15</span> 
+                                                                </a></li>
+                                                                <li><a class="dropdown-item" href="koordinationStandardmasse.html" >
+                                                                    <span class="d-none d-md-block">16. Koordination der Standardmaße</span>
+                                                                    <span class="d-md-none">Seite 16</span> 
+                                                                </a></li>
+                                                                <li><a class="dropdown-item" href="kombinationMasszahlen.html" >
+                                                                    <span class="d-none d-md-block">17. Kombination der Maßzahlen: e-Maß</span>
+                                                                    <span class="d-md-none">Seite 17</span> 
+                                                                </a></li>
+                                                                <li><a class="dropdown-item" href="emassAufgabe.html" >
+                                                                    <span class="d-none d-md-block">18. e-Maß: Übungsaufgabe 1</span>
+                                                                    <span class="d-md-none">Seite 18</span> 
+                                                                </a></li>
+                                                                <!--Link ändern-->
+                                                                <li><a class="dropdown-item" href="ir2_seite19.html" >
+                                                                    <span class="d-none d-md-block">Übung 8: Inverse Dokumenthäufigkeit</span>
+                                                                    <span class="d-md-none">Seite 19</span> 
+                                                                </a></li>
+                                                                <!--Link ändern-->
+                                                                <li><a class="dropdown-item" href="emassAufgabe.html" >
+                                                                    <span class="d-none d-md-block">20. Benutzerstandpunkt</span>
+                                                                    <span class="d-md-none">Seite 20</span> 
+                                                                </a></li>
+                                                                <!--Link ändern-->
+                                                                <li><a class="dropdown-item" href="emassAufgabe.html" >
+                                                                    <span class="d-none d-md-block">21. Benutzerstandpunkt: Übung 1</span>
+                                                                    <span class="d-md-none">Seite 21 </span> 
+                                                                </a></li>
+                                                                <!--Link ändern-->
+                                                                <li><a class="dropdown-item" href="emassAufgabe.html" >
+                                                                    <span class="d-none d-md-block">22. Benutzerstandpunkt: Übung 2</span>
+                                                                    <span class="d-md-none">Seite 22</span> 
+                                                                </a></li>
+                                                                <!--Link ändern-->
+                                                                <li><a class="dropdown-item" href="emassAufgabe.html" >
+                                                                    <span class="d-none d-md-block">23. Benutzerstandpunkt: Übung 3</span>
+                                                                    <span class="d-md-none">Seite 23</span> 
+                                                                </a></li>
+                                                                <!--Link ändern-->
+                                                                <li><a class="dropdown-item" href="emassAufgabe.html" >
+                                                                    <span class="d-none d-md-block">24. Fazit und Feedback</span>
+                                                                    <span class="d-md-none">Seite 24</span> 
+                                                                </a></li>
+                                                                <!--Link ändern-->
+                                                                <li><a class="dropdown-item" href="ir2_seite25.html" >
+                                                                    <span class="d-none d-md-block">25. Relevance Feedback - Methoden</span>
+                                                                    <span class="d-md-none">Seite 25</span> 
+                                                                </a></li>
+                                                                <!--Link ändern-->
+                                                                <li><a class="dropdown-item" href="ir2_seite26.html" >
+                                                                    <span class="d-none d-md-block">26. Fazit und Feedback</span>
+                                                                    <span class="d-md-none">Seite 26</span> 
+                                                                </a></li>
+                                                                <!--Link ändern-->
+                                                                <li><a class="dropdown-item" href="ir2_seite27.html" >
+                                                                    <span class="d-none d-md-block">27. Fazit und Feedback</span>
+                                                                    <span class="d-md-none">Seite 27</span> 
+                                                                </a></li>
+                                                                <!--Link ändern-->
+                                                                <li><a class="dropdown-item" href="ir2_seite28.html" >
+                                                                    <span class="d-none d-md-block">Übung 12: Rocchio Formel</span>
+                                                                    <span class="d-md-none">Seite 28</span> 
+                                                                </a></li>
+                                                                <!--Link ändern-->
+                                                                <li><a class="dropdown-item" href="ir2_seite29.html" >
+                                                                    <span class="d-none d-md-block">Übung 13: Indexierung und Retrieval</span>
+                                                                    <span class="d-md-none">Seite 29</span> 
+                                                                </a></li>
+                                                                <!--Link ändern-->
+                                                                <li><a class="dropdown-item" href="ir2_seite30.html" >
+                                                                    <span class="d-none d-md-block">Übung 13.1: Indexierung und Retrieval</span>
+                                                                    <span class="d-md-none">Seite 30</span> 
+                                                                </a></li>
+                                                                <!--Link ändern-->
+                                                                <li><a class="dropdown-item" href="ir2_seite31.html" >
+                                                                    <span class="d-none d-md-block">Übung 13.2: Indexierung und Retrieval</span>
+                                                                    <span class="d-md-none">Seite 31</span> 
+                                                                </a></li>
+                                                                <!--Link ändern-->
+                                                                <li><a class="dropdown-item" href="ir2_seite32.html" >
+                                                                    <span class="d-none d-md-block">Übung 13.3: Indexierung und Retrieval</span>
+                                                                    <span class="d-md-none">Seite 32</span> 
+                                                                </a></li>
+                                                                <!--Link ändern-->
+                                                                <li><a class="dropdown-item" href="ir2_seite33.html" >
+                                                                    <span class="d-none d-md-block">33. Exkurs: Suchmaschinen</span>
+                                                                    <span class="d-md-none">Seite 33</span> 
+                                                                </a></li>
+                                                                <!--Link ändern-->
+                                                                <li><a class="dropdown-item" href="ir2_seite34.html" >
+                                                                    <span class="d-none d-md-block">34. Modulzusammenfassung</span>
+                                                                    <span class="d-md-none">Seite 34</span> 
+                                                                </a></li>
+                                                                
+                                                            </ul>
+                                                            <a class="btn text-left btn-lg" href="kombinationMasszahlen.html" role="button">
+                                                                <span class="d-none d-lg-block"> nächste Seite <i class="bi bi-arrow-right-circle-fill"></i></span>
+                                                                <span class="d-lg-none"><i class="bi bi-arrow-right-circle-fill"></i></span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <!--Fortschrittsanzeige-->            
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="94.12"
-                                    aria-valuemin="0" aria-valuemax="100" style="width:94%">
-                                    <span class="sr-only">94,12% Complete</span>
-                                </div>
-                            </div>
-                            
-                        </div>
-                        
-                    </div> 
-                </div>
-            </div> 
-            
-            <!--Seitenzahl-->
-            <div class="row justify-content-center">
-                <div class="col-lg-8 col-lg-offset-3 text-center">
-                    <div class="page-pick">
-                        <div class="btn-group dropup">
-                            <a class="btn text-left btn-lg" href="#" role="button">
-                                <span class="d-none d-lg-block"><i class="bi bi-arrow-left-circle-fill">vorherige Seite</i></span>
-                                <span class="d-lg-none"><i class="bi bi-arrow-left-circle-fill"></i></span> 
-                            </a>
-                            <button type="button" class="btn btn-lg" data-bs-toggle="dropdown" aria-expanded="false">
-                                <span class="d-none d-md-block">13. Koordination der Standardmaße <i class="bi bi-chevron-compact-up"></i></span>
-                                <span class="d-md-none">Seite 14 <i class="bi bi-chevron-compact-up"></i></span>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <!--Link ändern-->
-                                <li><a class="dropdown-item " href="#" >
-                                    <span class="d-none d-md-block">1. Einordnung des Themas</span>
-                                    <span class="d-md-none">Seite 1</span> 
-                                </a></li>
-                                <!--Link ändern-->
-                                <li><a class="dropdown-item" href="#" >
-                                    <span class="d-none d-md-block">2. Wichtige Begriffe</span>
-                                    <span class="d-md-none">Seite 2</span> 
-                                </a></li>
-                                <!--Link ändern-->
-                                <li><a class="dropdown-item" href="allgemeine Kriterien.html" >
-                                    <span class="d-none d-md-block">3. Begriffszusammenhänge</span>
-                                    <span class="d-md-none">Seite 3</span> 
-                                </a></li>
-                                <li><a class="dropdown-item" href="allgemeine Kriterien.html" >
-                                    <span class="d-none d-md-block">4. Allgemeine Bewertungskriterien</span>
-                                    <span class="d-md-none">Seite 4</span> 
-                                </a></li>
-                                <li><a class="dropdown-item" href="ir2_seite5.html" >
-                                    <span class="d-none d-md-block">5. Der Relevanzbegriff</span>
-                                    <span class="d-md-none">Seite 5</span> 
-                                </a></li>
-                                <li><a class="dropdown-item" href="#" >
-                                    <span class="d-none d-md-block">6. Bewertungskriterien: Übungsaufgabe</span>
-                                    <span class="d-md-none">Seite 6</span> 
-                                </a></li>
-                                <li><a class="dropdown-item" href="#" >
-                                    <span class="d-none d-md-block">7. Die Elementarparameter</span>
-                                    <span class="d-md-none">Seite 7</span> 
-                                </a></li>
-                                <li><a class="dropdown-item" href="#" >
-                                    <span class="d-none d-md-block">8. Das Standardmaß "Recall"</span>
-                                    <span class="d-md-none">Seite 8</span> 
-                                </a></li>
-                                <li><a class="dropdown-item" href="precision.html" >
-                                    <span class="d-none d-md-block">9. Das Standardmaß "Precision"</span>
-                                    <span class="d-md-none">Seite 9</span> 
-                                </a></li>
-                                <li><a class="dropdown-item" href="elemtarParameterAufgabe.html" >
-                                    <span class="d-none d-md-block">10. Elementarparameter: Übungsaufgabe</span>
-                                    <span class="d-md-none">Seite 10</span> 
-                                </a></li>
-                                <li><a class="dropdown-item" href="recalltest.html" >
-                                    <span class="d-none d-md-block">11. Recall: Übungsaufgabe</span>
-                                    <span class="d-md-none">Seite 11</span> 
-                                </a></li>
-                                <li><a class="dropdown-item" href="elementarparameter p.html" >
-                                    <span class="d-none d-md-block">12. Precision: Übungsaufgabe</span>
-                                    <span class="d-md-none">Seite 12</span> 
-                                </a></li>
-                                <!--Link ändern-->
-                                <li><a class="dropdown-item" href="allgemeine Kriterien.html" >
-                                    <span class="d-none d-md-block">13. R + P: Übungsaufgabe 1</span>
-                                    <span class="d-md-none">Seite 13</span> 
-                                </a></li>
-                                <!--Link ändern-->
-                                <li><a class="dropdown-item" href="allgemeine Kriterien.html" >
-                                    <span class="d-none d-md-block">14. R + P: Übungsaufgabe 2</span>
-                                    <span class="d-md-none">Seite 14</span> 
-                                </a></li>
-                                
-                                <li><a class="dropdown-item" href="#" >
-                                    <span class="d-none d-md-block">15. Sonderfälle bei der Berechnung</span>
-                                    <span class="d-md-none">Seite 15</span> 
-                                </a></li>
-                                <li><a class="dropdown-item" href="koordinationStandardmasse.html" >
-                                    <span class="d-none d-md-block">16. Koordination der Standardmaße</span>
-                                    <span class="d-md-none">Seite 16</span> 
-                                </a></li>
-                                <li><a class="dropdown-item" href="kombinationMasszahlen.html" >
-                                    <span class="d-none d-md-block">17. Kombination der Maßzahlen: e-Maß</span>
-                                    <span class="d-md-none">Seite 17</span> 
-                                </a></li>
-                                <li><a class="dropdown-item" href="emassAufgabe.html" >
-                                    <span class="d-none d-md-block">18. e-Maß: Übungsaufgabe 1</span>
-                                    <span class="d-md-none">Seite 18</span> 
-                                </a></li>
-                                <!--Link ändern-->
-                                <li><a class="dropdown-item" href="ir2_seite19.html" >
-                                    <span class="d-none d-md-block">Übung 8: Inverse Dokumenthäufigkeit</span>
-                                    <span class="d-md-none">Seite 19</span> 
-                                </a></li>
-                                <!--Link ändern-->
-                                <li><a class="dropdown-item" href="emassAufgabe.html" >
-                                    <span class="d-none d-md-block">20. Benutzerstandpunkt</span>
-                                    <span class="d-md-none">Seite 20</span> 
-                                </a></li>
-                                <!--Link ändern-->
-                                <li><a class="dropdown-item" href="emassAufgabe.html" >
-                                    <span class="d-none d-md-block">21. Benutzerstandpunkt: Übung 1</span>
-                                    <span class="d-md-none">Seite 21 </span> 
-                                </a></li>
-                                <!--Link ändern-->
-                                <li><a class="dropdown-item" href="emassAufgabe.html" >
-                                    <span class="d-none d-md-block">22. Benutzerstandpunkt: Übung 2</span>
-                                    <span class="d-md-none">Seite 22</span> 
-                                </a></li>
-                                <!--Link ändern-->
-                                <li><a class="dropdown-item" href="emassAufgabe.html" >
-                                    <span class="d-none d-md-block">23. Benutzerstandpunkt: Übung 3</span>
-                                    <span class="d-md-none">Seite 23</span> 
-                                </a></li>
-                                <!--Link ändern-->
-                                <li><a class="dropdown-item" href="emassAufgabe.html" >
-                                    <span class="d-none d-md-block">24. Fazit und Feedback</span>
-                                    <span class="d-md-none">Seite 24</span> 
-                                </a></li>
-                                <!--Link ändern-->
-                                <li><a class="dropdown-item" href="ir2_seite25.html" >
-                                    <span class="d-none d-md-block">25. Relevance Feedback - Methoden</span>
-                                    <span class="d-md-none">Seite 25</span> 
-                                </a></li>
-                                <!--Link ändern-->
-                                <li><a class="dropdown-item" href="ir2_seite26.html" >
-                                    <span class="d-none d-md-block">26. Fazit und Feedback</span>
-                                    <span class="d-md-none">Seite 26</span> 
-                                </a></li>
-                                <!--Link ändern-->
-                                <li><a class="dropdown-item" href="ir2_seite27.html" >
-                                    <span class="d-none d-md-block">27. Fazit und Feedback</span>
-                                    <span class="d-md-none">Seite 27</span> 
-                                </a></li>
-                                <!--Link ändern-->
-                                <li><a class="dropdown-item" href="ir2_seite28.html" >
-                                    <span class="d-none d-md-block">Übung 12: Rocchio Formel</span>
-                                    <span class="d-md-none">Seite 28</span> 
-                                </a></li>
-                                <!--Link ändern-->
-                                <li><a class="dropdown-item" href="ir2_seite29.html" >
-                                    <span class="d-none d-md-block">Übung 13: Indexierung und Retrieval</span>
-                                    <span class="d-md-none">Seite 29</span> 
-                                </a></li>
-                                <!--Link ändern-->
-                                <li><a class="dropdown-item" href="ir2_seite30.html" >
-                                    <span class="d-none d-md-block">Übung 13.1: Indexierung und Retrieval</span>
-                                    <span class="d-md-none">Seite 30</span> 
-                                </a></li>
-                                <!--Link ändern-->
-                                <li><a class="dropdown-item" href="ir2_seite31.html" >
-                                    <span class="d-none d-md-block">Übung 13.2: Indexierung und Retrieval</span>
-                                    <span class="d-md-none">Seite 31</span> 
-                                </a></li>
-                                <!--Link ändern-->
-                                <li><a class="dropdown-item" href="ir2_seite32.html" >
-                                    <span class="d-none d-md-block">Übung 13.3: Indexierung und Retrieval</span>
-                                    <span class="d-md-none">Seite 32</span> 
-                                </a></li>
-                                <!--Link ändern-->
-                                <li><a class="dropdown-item" href="ir2_seite33.html" >
-                                    <span class="d-none d-md-block">33. Exkurs: Suchmaschinen</span>
-                                    <span class="d-md-none">Seite 33</span> 
-                                </a></li>
-                                <!--Link ändern-->
-                                <li><a class="dropdown-item" href="ir2_seite34.html" >
-                                    <span class="d-none d-md-block">34. Modulzusammenfassung</span>
-                                    <span class="d-md-none">Seite 34</span> 
-                                </a></li>
-                                
-                            </ul>
-                            <a class="btn text-left btn-lg" href="kombinationMasszahlen.html" role="button">
-                                <span class="d-none d-lg-block"> nächste Seite <i class="bi bi-arrow-right-circle-fill"></i></span>
-                                <span class="d-lg-none"><i class="bi bi-arrow-right-circle-fill"></i></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </body>
-    </html>
+                                    </body>
+                                    </html>

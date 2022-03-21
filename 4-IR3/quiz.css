@@ -1,0 +1,52 @@
+#quiz {
+    display:none;
+}
+
+.quizantwort {
+    margin:12px;
+    border-radius: 4px;
+    border: solid 2px #8EACAC;
+    padding:6px 6px 6px 16px ;
+    font-size: medium;
+    background-color: #D8EBEB;
+}
+
+.wahreAntwort {
+    background-color: rgb(212, 250, 212);
+    border: none;
+}
+
+.falscheAntwort {
+    background-color: rgb(221, 161, 171);
+    color:rgb(71, 22, 22);
+    border: solid 4px rgb(155, 50, 50);
+}
+
+.selected {
+    background-color: #8EACAC;
+}
+
+.richtigBeantwortet {
+    border: solid 4px rgb(38, 77, 38);
+    background-color: rgb(151, 187, 151);
+}
+
+.allesrichtig {
+    border: solid 2px rgb(38, 77, 38);
+    background-color: rgb(151, 187, 151);
+}
+
+
+.richtigIgnoriert {
+    border: none;
+    background-color: lightgray;
+    color: black;
+}
+
+.quiz-button {
+    margin: 4vw;
+}
+
+.progress-bar {
+    background-color:#488048
+}

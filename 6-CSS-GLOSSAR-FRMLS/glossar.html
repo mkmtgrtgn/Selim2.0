@@ -23,7 +23,16 @@
             <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon navbar-light"></span>
             </button>
-            <a class="navbar-brand" href="#">Selim</a>
+        <!-- Navbar Brand: Logo der Uni Hildesheim-->
+            <a class="navbar-brand">
+                <!--Desktop und Tablet/großer oder mittel-großer Viewport; Klick auf Bild soll dann auf die erste Seite/eine Einfürungsseite führen-->
+                <span class="d-none d-sm-block">
+                    <!--Uni-Logo links in der Ecke-->
+                    <img class="d-inline-block align-text-center" src="uni_logo.png" width="70" height="70" alt="Universität Hildesheim" style="padding-right: 20;">
+                </span>
+                <!--Handy/kleiner Viewport - Abkürzung der Bezeichnung unseres Viewports-->
+                <span class="d-sm-none">Glossar</span>
+            </a>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -65,7 +74,11 @@
                 <button id="btnScrollToTop">
                     <i class="material-icons">arrow_upward</i>
                 </button>
-                <p>Du möchtest dein Wissen testen? Klicke auf "Vokabeltest starten" und lerne wichtige Wörter zu den Modulen auswendig.</p>
+                <p> 
+                    Du möchtest dein Wissen testen? Klicke auf "Vokabeltest starten" und lerne wichtige Wörter zu den Modulen auswendig.
+                    Falls du dir das Glossar auch offline ansehen möchtest, klicke auf "Glossar downloaden". Es öffnet sich eine PDF-Datei.
+                    Speicher die Datei auf deinem Gerät und lerne auch offline die wichtigsten Definitionen der Module.
+                </p>
                 <div id="quiz">
 
                     <div class="frage">
@@ -95,12 +108,16 @@
                 </div>
         
                 <div class="row">
-                    <!--Button soll in der Mitte angezeigt werden-->
-                    <div class="col text-center">
+                    <div class="col">
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                             Vokabeltest starten
                         </button>
-        
+                    </div>
+                    <div class="col">
+                        <a class="btn btn-primary" href="glossar.pdf" download target="_blank" title="Jetzt Glossar downloaden!">
+                            Glossar downloaden
+                        </a>
+
                         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content" id="modalCont">
@@ -139,126 +156,6 @@
                     </div>
                 </div>
                 </br>
-                <!--Test der A-Z Buttons-->
-                <div class="row buttonsLGAnsicht hidden-sm hidden-xs">
-                    <div class="col-md-12 col-lg-12">
-                        <a class="btn btn-info btn-lg" disabled='disabled' href="#Raute">#</a>
-                        <a class="btn btn-info btn-lg"  href="#A">A</a>
-                        <a class="btn btn-info btn-lg" disabled='disabled' href="#B">B</a>
-                        <a class="btn btn-info btn-lg" disabled='disabled' href="#C">C</a>
-                        <a class="btn btn-info btn-lg"  href="#D">D</a>
-                        <a class="btn btn-info btn-lg"  href="#E">E</a>
-                        <a class="btn btn-info btn-lg"  href="#F">F</a>
-                        <a class="btn btn-info btn-lg" disabled='disabled' href="#G">G</a>
-                        <a class="btn btn-info btn-lg" disabled='disabled' href="#H">H</a>
-                        <a class="btn btn-info btn-lg"  href="#I">I</a>
-                        <a class="btn btn-info btn-lg" disabled='disabled' href="#J">J</a>
-                        <a class="btn btn-info btn-lg"  href="#K">K</a>
-                        <a class="btn btn-info btn-lg"  href="#L">L</a>
-                        <a class="btn btn-info btn-lg" disabled='disabled' href="#M">M</a>
-                        <br />
-                        <br />
-                        <a class="btn btn-info btn-lg"  href="#N">N</a>
-                        <a class="btn btn-info btn-lg" disabled='disabled' href="#O">O</a>
-                        <a class="btn btn-info btn-lg"  href="#P">P</a>
-                        <a class="btn btn-info btn-lg" disabled='disabled' href="#Q">Q</a>
-                        <a class="btn btn-info btn-lg" disabled='disabled' href="#R">R</a>
-                        <a class="btn btn-info btn-lg" d href="#S">S</a>
-                        <a class="btn btn-info btn-lg"  href="#T">T</a>
-                        <a class="btn btn-info btn-lg" disabled='disabled' href="#U">U</a>
-                        <a class="btn btn-info btn-lg" disabled='disabled' href="#V">V</a>
-                        <a class="btn btn-info btn-lg" disabled='disabled' href="#W">W</a>
-                        <a class="btn btn-info btn-lg" disabled='disabled' href="#X">X</a>
-                        <a class="btn btn-info btn-lg" disabled='disabled' href="#Y">Y</a>
-                        <a class="btn btn-info btn-lg" disabled='disabled' href="#Z">Z</a>
-                        <a class="btn btn-info btn-lg" disabled='disabled' href="#Plus">+</a>
-                    </div>
-                </div>
-                </br>
-                <!--irgendwas funktioniert da nicht-->
-                <div class="container">
-                    <div class="row">
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">A</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">B</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">C</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">D</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">E</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">F</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">G</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">H</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">I</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">J</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">K</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">L</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">M</button>
-                      </div>
-                      <div class="w-100"></div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">N</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">O</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">P</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">Q</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">R</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">S</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">T</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">U</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">V</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">W</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">X</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">Y</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">Z</button>
-                      </div>
-                    </div>
-                </div>
                     </br>
                     <div>
                     <a href="#A">A</a>
