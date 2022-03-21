@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6. Bewertungskriterien - Übung</title>
+    <link rel="stylesheet" href="neue_css.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Autorisiert von DARIA MASLOV-->
+</head>
+<body>
+    <div class="container-fluid">
+
+        <!--Navigationsleiste-->
+        <nav class="navbar navbar-light navbar-expand-lg navbar-fixed-top">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Navbar Brand: Logo der Uni Hildesheim, sowie unser Modulname-->
+                <a class="navbar-brand">
+                    <!--Desktop und Tablet/großer oder mittel-großer Viewport; Klick auf Bild soll dann auf die erste Seite/eine Einfürungsseite führen-->
+                    <span class="d-none d-sm-block">
+                        <!--Uni-Logo sowie lange Bezweichnung unseres Moduls-->
+                        <img class="d-inline-block align-text-center" src="assets/uni_logo.png" width="70" height="70" alt="Universität Hildesheim" style="padding-right: 20;">
+                        <a href="0_Allgemein.html" class= "brand-IR3">SELiM - Evaluierung IR</a>
+                        
+                    </span>
+                    <!--Handy/kleiner Viewport - Abkürzung der Bezeichnung unseres Viewports-->
+                    <span class="d-sm-none">IR3</span> 
+                </a>
+                
+                <!--Menü für verschiedene Module-->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.uni-hildesheim.de/selim/miniTemplateSystem/index.php">Startseite</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Alle SELiM Module</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="https://www.uni-hildesheim.de/selim/Modul_GDI/GDI_Einstieg.php" >Grundbegriffe IW</a></li>
+                                <li><a class="dropdown-item" href="https://www.uni-hildesheim.de/selim/Modul_IR/IR_1_bekog_SELIM/inhalt.php">Information Retrieval 1</a></li>
+                                <li><a class="dropdown-item" href="https://www.uni-hildesheim.de/selim/Modul_IR/IR_2_bekog_SELIM/r_inhalt.php">Information Retrieval 2</a></li>
+                                <li><a class="dropdown-item" href="0_Allgemein.html">Evaluierung von IR Systemen</a></li>
+                                <li><a class="dropdown-item" href="https://www.uni-hildesheim.de/selim/miniTemplateSystem/module/fis/inhalt_fis.php">Fakteninformationssysteme</a></li>
+                                <li><a class="dropdown-item" href="https://www.uni-hildesheim.de/selim/miniTemplateSystem/module/mue/inhalt_mue.php">Maschinelle Übersetzung</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.uni-hildesheim.de/selim/miniTemplateSystem/glossar/glossar.php">Glossar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.uni-hildesheim.de/selim/miniTemplateSystem/formelsammlung/formelsammlung.php">Formelsammlung</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </nav>
+
+        
+
+        <!--Seiteninhalt-->
+
+        <div class="container-fluid">
+
+
+            <!--Titel der Seite-->
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <h1>Bewertungskriterien</h1>
+                </div>
+
+                <div class="row justify-content-center">
+                    
+                <!--Textinhalt/Übunsaufgabe/Bilder-->
+                    <div class="col-md-6">
+                        <p>Welche Eigenschaften sind der Relevanz zuzuordnen?</p>
+                    <form name="multiplechoice" id="multiplechoice">
+                        <div>
+                            <p><input type="checkbox" id="bewertungskriteriena" name="Bewertungskriterien" value="a"> Relevanz ist schwer auf eine binäre Skala abzubilden.</p>
+                            <p><input type="checkbox" id="bewertungskriterienb" name="Bewertungskriterien" value="b"> Relevanz ist eine absolute Größe.</p>
+                            <p><input type="checkbox" id="bewertungskriterienc" name="Bewertungskriterien" value="c"> Relevanz ist Situationsabhängig</p>
+                            <p><input type="checkbox" id="bewertungskriteriend" name="Bewertungskriterien" value="d"> Relevanz ist gut messbar.</p>
+                       </div>
+                    </br>
+                            <button type="button" class = "button" onclick="ueberpruefeBewertungskriterienAufgabe()">Überprüfen</button>
+                    </form>
+                    </div>
+                </div>
+        </div>
+
+
+        <!--Seitenzahl-->
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-lg-offset-3 text-center page-navigation">
+                <!--Seitennavigation-->
+                <div class="btn-group dropup">
+
+                    <!--Vorherige Seite-->
+                    <a class="btn text-left btn-lg" href="5_Relevanzbegriff.html" role="button">
+                        <span class="d-none d-lg-block"><i class="bi bi-arrow-left-circle-fill"></i> vorherige Seite</i></span>
+                        <span class="d-lg-none"><i class="bi bi-arrow-left-circle-fill"></i></span> 
+                    </a>
+                    <!-- Derzeitige Seite -->
+                    <button type="button" class="btn btn-lg" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="d-none d-md-block">6. Bewertungskriterien: Übungsaufgabe <i class="bi bi-chevron-compact-up"></i></span>
+                        <span class="d-md-none">Seite 6 <i class="bi bi-chevron-compact-up"></i></span>
+                    </button>
+
+
+                    <ul class="dropdown-menu dropup-navigation">
+
+                        <li><a class="dropdown-item " href="1_Einordnung_in_das_Thema.html" >
+                            <span class="d-none d-md-block">1. Einordnung des Themas</span>
+                            <span class="d-md-none">Seite 1</span> 
+                        </a></li>
+                        <!--Link ändern-->
+                        <li><a class="dropdown-item" href="#" >
+                            <span class="d-none d-md-block">2. Wichtige Begriffe</span>
+                            <span class="d-md-none">Seite 2</span> 
+                        </a></li>
+                        <!--Link ändern-->
+                        <li><a class="dropdown-item" href="#" >
+                            <span class="d-none d-md-block">3. Begriffszusammenhänge</span>
+                            <span class="d-md-none">Seite 3</span> 
+                        </a></li>
+
+                        <li><a class="dropdown-item" href="4_Allgemeine_Kriterien.html" >
+                            <span class="d-none d-md-block">4. Allgemeine Bewertungskriterien</span>
+                            <span class="d-md-none">Seite 4</span> 
+                        </a></li>
+
+                        <li><a class="dropdown-item" href="5_Relevanzbegriff.html" >
+                            <span class="d-none d-md-block">5. Der Relevanzbegriff</span>
+                            <span class="d-md-none">Seite 5</span> 
+                        </a></li>
+
+                        <li><a class="dropdown-item" href="6_Bewertungskriterien_Uebung.html" >
+                            <span class="d-none d-md-block">6. Bewertungskriterien: Übungsaufgabe</span>
+                            <span class="d-md-none">Seite 6</span> 
+                        </a></li>
+
+                        <li><a class="dropdown-item" href="7_Elementarparameter.html" >
+                            <span class="d-none d-md-block">7. Die Elementarparameter</span>
+                            <span class="d-md-none">Seite 7</span> 
+                        </a></li>
+
+                        <li><a class="dropdown-item" href="8_Standardmass_Recall.html" >
+                            <span class="d-none d-md-block">8. Das Standardmaß "Recall"</span>
+                            <span class="d-md-none">Seite 8</span> 
+                        </a></li>
+
+                        <li><a class="dropdown-item" href="9_Standardmass_Precision.html" >
+                            <span class="d-none d-md-block">9. Das Standardmaß "Precision"</span>
+                            <span class="d-md-none">Seite 9</span> 
+                        </a></li>
+
+                        <li><a class="dropdown-item" href="10_Elementarparameter_Uebung.html" >
+                            <span class="d-none d-md-block">10. Elementarparameter: Übungsaufgabe</span>
+                            <span class="d-md-none">´Seite 10</span> 
+                        </a></li>
+
+                        <li><a class="dropdown-item" href="11_Recall_Uebung.html" >
+                            <span class="d-none d-md-block">11. Recall: Übungsaufgabe</span>
+                            <span class="d-md-none">Seite 11</span> 
+                        </a></li>
+
+                        <li><a class="dropdown-item" href="12_Precision_Uebung.html" >
+                            <span class="d-none d-md-block">12. Precision: Übungsaufgabe</i></span>
+                            <span class="d-md-none">Seite 12</span> 
+                        </a></li>
+                        <!--Link einfügen-->
+                        <li><a class="dropdown-item" href="#" >
+                            <span class="d-none d-md-block">13. R + P: Übungsaufgabe 1</span>
+                            <span class="d-md-none">Seite 13</span> 
+                        </a></li>
+                        <!--Link einfügen-->
+                        <li><a class="dropdown-item" href="#" >
+                            <span class="d-none d-md-block">14. R + P: Übungsaufgabe 2</span>
+                            <span class="d-md-none">Seite 14</span> 
+                        </a></li>
+                        <!--Link einfügen-->
+                        <li><a class="dropdown-item" href="#" >
+                            <span class="d-none d-md-block">15. Sonderfälle bei der Berechnung</span>
+                            <span class="d-md-none">Seite 15</span> 
+                        </a></li>
+
+                        <li><a class="dropdown-item" href="16_Koordination_Standardmasse.html" >
+                            <span class="d-none d-md-block">16. Koordination der Standardmaße</span>
+                            <span class="d-md-none">Seite 16</span> 
+                        </a></li>
+
+                        <li><a class="dropdown-item" href="17_Kombination_Masszahlen_E_Mass.html" >
+                            <span class="d-none d-md-block">17. Kombination der Maßzahlen: e-Maß</span>
+                            <span class="d-md-none">Seite 17</span> 
+                        </a></li>
+
+                        <li><a class="dropdown-item" href="18_E_Mass_Uebung_1.html" >
+                            <span class="d-none d-md-block">18. e-Maß: Übungsaufgabe 1</span>
+                            <span class="d-md-none">Seite 18</span> 
+                        </a></li>
+                        <!--Link einfuegen-->
+                        <li><a class="dropdown-item" href="#" >
+                            <span class="d-none d-md-block">19. e-Maß: Übungsaufgabe 2</span>
+                            <span class="d-md-none">Seite 19</span> 
+                        </a></li>
+            
+                        <li><a class="dropdown-item" href="20_Benutzerstandpunk.html" >
+                            <span class="d-none d-md-block">20. Benutzerstandpunkt</span>
+                            <span class="d-md-none">Seite 20</span> 
+                        </a></li>
+    
+                        <li><a class="dropdown-item" href="21_BSP_Uebung_1.html" >
+                            <span class="d-none d-md-block">21. Benutzerstandpunkt: Übung 1</span>
+                            <span class="d-md-none">Seite 21 </span> 
+                        </a></li>
+
+                        <li><a class="dropdown-item" href="22_BSP_Uebung_2.html" >
+                            <span class="d-none d-md-block">22. Benutzerstandpunkt: Übung 2</span>
+                            <span class="d-md-none">Seite 22</span> 
+                        </a></li>
+
+                        <li><a class="dropdown-item" href="23_BSP_Uebung_3.html" >
+                            <span class="d-none d-md-block">23. Benutzerstandpunkt: Übung 3</span>
+                            <span class="d-md-none">Seite 23</span> 
+                        </a></li>
+
+                        <li><a class="dropdown-item" href="24_Abschlusstestat.html" >
+                            <span class="d-none d-md-block">Abschlusstestat</span>
+                            <span class="d-md-none">Seite 24</span> 
+                        </a></li>
+                        
+                        <li><a class="dropdown-item" href="25_Fazit_Feedback.html" >
+                            <span class="d-none d-md-block">Fazit und Feedback</span>
+                            <span class="d-md-none">Seite 25</span> 
+                        </a></li>
+
+                    </ul>
+
+                        <!--nächste Seite-->
+                    <a class="btn text-left btn-lg" href="7_Elementarparameter.html" role="button">
+                        <span class="d-none d-lg-block"> nächste Seite <i class="bi bi-arrow-right-circle-fill"></i></span>
+                        <span class="d-lg-none"><i class="bi bi-arrow-right-circle-fill"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script src="js_functions.js"></script>
+</html>

@@ -1,0 +1,94 @@
+body {
+    font-family: Quicksand;
+    --schriftfarbe: #232B2B;
+    --containerfarbe: #D8EBEB;
+    --verlinkungsfarbe: #DEC6AC;
+    --verlinkungaktiv: #8EACAC;
+}
+
+/**Loslegen Button**/
+.button-loslegen {
+    color: var(--schriftfarbe);
+    text-decoration: none;
+    font-size: xx-large;
+    padding: 1.5vw;
+    background-color: var(--containerfarbe);
+    border-radius: 10%;
+    border: solid 2px var(--schriftfarbe);
+}
+.button-loslegen:hover {
+    color: var(--verlinkungsfarbe);
+}
+
+
+/**Navigationsleiste**/
+.navbar > h1, h2, h3 {
+    padding:1vw; /*1% of view port width */
+    color: var(--schriftfarbe);
+}
+
+.navbar {
+    background-color: var(--containerfarbe);
+    position: sticky;
+    margin-left: -1vw;
+    margin-right: -1vw;
+}
+.brand-IR3 {
+    text-decoration: none;
+    color: var(--schriftfarbe);
+    padding: 0.5vw;
+    font-size: 1.4rem;
+}
+
+
+
+.navbar-nav > li > a{
+    color: var(--schriftfarbe);
+    transition: color 0.3s;
+}
+.navbar-nav > li > ul{
+    background-color: #D8EBEB;
+    border-top: none;
+    border-bottom: none;
+}
+
+.navbar-nav > li > a:hover{
+    color: var(--verlinkungaktiv);
+}
+.navbar-toggler-icon {
+    color: var(--schriftfarbe);
+}
+
+
+
+/**Seitennavigation**/
+.dropup-navigation {
+    max-height: 300px;
+    overflow: auto;
+    background-color: #8EACAC;
+  }
+
+.page-navigation {
+    background-color: var(--containerfarbe);
+}
+.page-navigation > ul {
+    color: var(--containerfarbe);
+}
+
+
+
+.row {
+    padding-top: 1vw;
+}
+
+.button {
+    padding: 0.5vw;
+    border-radius: 10px;
+    background-color: var(--containerfarbe);
+    color: var(--schriftfarbe);
+    border-color: var(--schriftfarbe);
+}
+.button:hover {
+    color: var(--containerfarbe);
+    background-color:  var(--schriftfarbe);
+}
