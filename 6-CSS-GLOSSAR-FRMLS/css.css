@@ -245,9 +245,9 @@ p {
     background: #b2d8d8;
 }
 
-/*Button*/
+/*Button Layout. Buttun-Abstand ändert sich, sobald maximale Breite erreicht wird.*/
 @media only screen and (max-width:800px){
-    .buchstaben_button_klasse {
-      margin: 20px;
+    .buchstaben {
+      margin: 5px;
     }
   }
