@@ -69,30 +69,14 @@ h1, h2, h3 {
     float: right;
 }
 
-/*für seite 19*/
-.task8 {
-    padding-bottom: 0.5%;
-}
-
-/*für seite 25*/
-#relFeedbackMet{
-    margin: 20px;
-}
-
-/* für seite 28*/
-#roccTask{
-    padding-bottom: 2%;
-}
-
-#roccVar{
-    margin: 2%;
-    width: 90%;
-}
-
 th {
     padding: 3px;
     background-color: var(--verlinkungaktiv);
     text-align: center;
+}
+
+td{
+    background-color: var(--containerfarbe);
 }
 
 button{
@@ -112,31 +96,64 @@ button:hover {
     background-color: #fbfcfc;
     transform: scale(1.2);
 }
+/*für seite 19*/
+.task8 {
+    padding-bottom: 0.5%;
+}
+
+/*für seite 25*/
+#relFeedbackMet{
+    margin: 20px;
+}
+
+/* für seite 28*/
+#roccTask{
+    padding-bottom: 2%;
+    width: max-content;
+    display: flex;
+}
+
+#roccVar{
+    margin: 2%;
+}
+
+#solution12 {
+    width: 20%;
+    margin-top:50px;
+}
+.solutionCol {
+    height: 32px;
+}
 
 #roccBtnSolution {
     float:right;
+    display: flex;
 
 }
+.roccResultInput {
+    width: 100%;
+    text-align: center;
+}
 
-@media screen and (max-width: 690px) {
+
+@media screen and (max-width: 600px) {
     #roccVar {
         margin: 0;
     }
-    .roccHeadRow, .inputCol {
+    .roccHeadRow {
         display: none;
     }
-    
     th {
         text-align: left;
+        width: 60px;
+    }
+    .roccResultInput {
+        width: 70px;
     }
 
 }
 
-.roccResultInput {
-    width: 50%;
-    margin-left: 25%;
-    text-align: center;
-}
+
 /* für seite 30 ff.*/
 
 #task13{
@@ -147,10 +164,6 @@ button:hover {
     margin-top: 1%;
     margin-right: 4%;
     margin-bottom: 1%;
-}
-
-.dtm13 {
-    background-color: var(--containerfarbe);
 }
 
 .dtmTable {
