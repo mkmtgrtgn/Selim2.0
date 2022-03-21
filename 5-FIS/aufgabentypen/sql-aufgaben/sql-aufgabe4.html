@@ -15,6 +15,7 @@
     <title>Selim 2.0</title>
 </head>
 
+<!-- Navbar -->
 <div class="navi">
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
@@ -58,28 +59,90 @@
     </nav>
 </div>
 
+<!-- Inhalt -->
 <div id="content">
 
-
     <div class="container">
-        <div class="row">
-            <div class="col">
-                <h1>SQL Magic</h1>
-                <p>Work Work Work Work Work Work</p>
-            </div>
-        </div>
+        <span class="row">
+            <span class="col">
+                <h3>Aufgabe 4: SQL-Anweisung</h3>
+                <p>Ein Kollege von dir hat bereits die Daten deiner neuen Mitarbeiter in die Datenbank eingefügt.
+                    <br>
+                    Aufgrund der guten Auftragslage stellt deine Firma spontan einen weiteren <em>Programmierer</em>
+                    ein.
+                </p>
+                <!--<br>-->
+                <p>Formuliere eine SQL-Anweisung mit der du den untenstehenden Datensatz in die Tabelle
+                    <strong>Personal</strong>
+                    einfügst:
+                </p>
 
+                <!-- TODO: Eventuell Tipp wenn gefragt geben: Tabelle besteht aus folgenden fünf Spalten: PersNr, Name, FamStatus, Position, Gehalt-->
+                <p><strong>7, Steffen Wolfram, verheiratet, Programmierer,
+                        4800</strong></p>
+                <hr>
+                <!-- Optionen Buttons -->
+                <div class="container">
+                    <!-- TODO: Labels fett -->
+                    <label class="form-label">Wähle einen SQL-Audruck aus:</label>
+                    <div class="col">
+                        <button id="select" class="btn btn-light" onClick="addSQL()">SELECT</button>
+                        <button id="star" class="btn btn-light" onClick="addSQL()">*</button>
+                        <button id="from" class="btn btn-light" onClick="addSQL()">FROM</button>
+                        <button id="insertInto" class="btn btn-light" onClick="addSQL()">INSERT INTO</button>
+                        <button id="update" class="btn btn-light" onClick="addSQL()">UPDATE</button>
+                        <button id="set" class="btn btn-light" onClick="addSQL()">SET</button>
+                        <button id="delete" class="btn btn-light" onClick="addSQL()">DELETE FROM</button>
+                        <button id="where" class="btn btn-light" onClick="addSQL()">WHERE</button>
+                        <button id="equals" class="btn btn-light" onClick="addSQL()">=</button>
+                        <button id="equalsNot" class="btn btn-light" onClick="addSQL()">!=</button>
+                        <button id="smallerAs" class="btn btn-light" onClick="addSQL()">
+                            < </button>
+                                <button id="biggerAs" class="btn btn-light" onClick="addSQL()">></button>
+                    </div>
+                </div>
+                <br>
+                <!-- Eingabefelder -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <!-- Textfeld Eingabe -->
+                            <p>Bitte hier SQL-Anweisung angeben:</p>
+                            <textarea class="form-control" id="textAreaLoesung"
+                                rows="3">Deine SQL-Anweisung..</textarea>
+                        </div>
 
-        <!--<div class="row">
-            <div class="col">
-                Zwei Reihenelemente nebenbeinander
-            </div>
-            <div class="col">
+                        <div class="col">
+                            <p>Wähle eine Tabellenspalte aus:</p>
+                            <div class="row">
+                                <div class="col">
+                                    <!-- Select Menue für die Tabellenspalten -->
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Spaltennamen..</option>
+                                        <option value="1">PersNr</option>
+                                        <option value="2">Name</option>
+                                        <option value="3">FamStatus</option>
+                                        <option value="4">Position</option>
+                                        <option value="5">Gehalt</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <button id="addSqlOptions" type="button" class="btn btn-primary"
+                                        onClick="addSQL()">Hinzufügen</button>
+                                </div>
+                            </div>
+                        </div>
 
-                Zwei Reihenelemente nebenbeinander
-            </div>
-        </div> -->
-
+                    </div>
+                    <!-- Validieren Button -->
+                    <div class="col">
+                        <p></p>
+                        <button id="validateSql" type="button" class="btn btn-primary"
+                            onClick="validateSQL()">Überprüfen</button>
+                    </div>
+                </div>
+            </span>
+        </span>
 
     </div>
 </div>
@@ -87,3 +150,4 @@
 <body>
 
     <script src="../../../static/js/bootstrap.bundle.js"></script>
+    <script type="javascript" src="sql-aufgabe4.js"></script>
