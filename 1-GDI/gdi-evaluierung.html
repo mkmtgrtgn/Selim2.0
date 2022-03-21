@@ -14,56 +14,78 @@
     <title>Selim 2.0</title>
 </head>
 <body>
-<div class="navi">
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="navbar-brand" href="#">Selim</a>
+  <div class="navi">
+      <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+              <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon navbar-light"></span>
+              </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-linki active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-linki" href="#">Übungen</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-linki dropdown-toggle" href="#" id="navDrop1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Lernen
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navDrop1">
-                            <li><a class="dropdown-item bg" href="#">Dieses Thema</a></li>
-                            <li><a class="dropdown-item bg" href="#">Jenes Thema</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item bg" href="#">und was ganz anderes</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-linki dropdown-toggle" href="#" id="navDrop2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Account?
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navDrop2">
-                            <li><a class="dropdown-item bg" href="#">Dieses Thema</a></li>
-                            <li><a class="dropdown-item bg" href="#">Jenes Thema</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item bg" href="#">und was ganz anderes</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="optionale Suche?" aria-label="optionale Suche!">
-                    <button class="btn btn-outline-success" type="submit">Such!</button>
-                </form>
-            </div>
-        </div>
-    </nav>
-</div>
+              <a class="navbar-brand">
+                  <span class="d-none d-sm-block">
+                      <img class="d-inline-block align-text-center" src="../uni_logo.png" width="70" height="70" alt="Universität Hildesheim" style="padding-right: 20;">
+                      SELiM - Grundbegriffe der IW
+                  </span>
+                  <span class="d-sm-none">GDI</span>
+              </a>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                          <a class="nav-linki active" aria-current="page" href="../home.html">Home</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                          <a class="nav-linki dropdown-toggle" href="#" id="navDrop1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Module
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navDrop1">
+                              <li><a class="dropdown-item bg" href="../1-GDI/gdi.html">GDI</a></li>
+                              <li><a class="dropdown-item bg" href="../2-IR1/ir1.html">IR1</a></li>
+                              <li><a class="dropdown-item bg" href="../3-IR2/ir2.html">IR2</a></li>
+                              <li><a class="dropdown-item bg" href="../4-IR3/ir3.html">IR3</a></li>
+                              <li><a class="dropdown-item bg" href="../5-FIS/fis.html">FIS</a></li>
+                          </ul>
+                      </li>
+
+                      <li class="nav-item">
+                          <a class="nav-linki active" aria-current="page" href="../6-CSS-GLOSSAR-FRMLS/glossar.html">Glossar</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-linki active" aria-current="page" href="../6-CSS-GLOSSAR-FRMLS/formelsammlung.html">Formelsammlung</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+  </div>
 
 
 <div id="content">
+    
+    <div class="container">
+
+    <div id="content_lp">
+      <div class="row" >
+          <div class="col">
+            <h3>Lernpfad</h3>
+            <p>
+              <div class="btn-group">
+                <a href="gdi.html" class="btn btn-primary">Inhaltsverzeichnis</a>
+                <a href="gdi.html" class="btn btn-primary">Zurück</a>
+                <a href="gdi-ib.html" class="btn btn-primary">Vorwärts</a>
+              </div>
+            </p>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped bg-success" role="progressbar"
+              aria-valuenow="5" aria-valuemin="0" aria-valuemax="100" style="width:5%">
+                <!--<strong>40% abgeschlossen</strong>!-->
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <br>
+    
       <h1 >
       <span class="badge rounded-pill bg-warning">THEMA</span> 
       Evaluierung
