@@ -244,3 +244,10 @@ p {
 #btnScrollToTop:active {
     background: #b2d8d8;
 }
+
+/*Button*/
+@media only screen and (max-width:800px){
+    .buchstaben_button_klasse {
+      margin: 20px;
+    }
+  }
