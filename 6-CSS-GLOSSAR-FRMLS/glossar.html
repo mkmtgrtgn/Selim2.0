@@ -23,7 +23,16 @@
             <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon navbar-light"></span>
             </button>
-            <a class="navbar-brand" href="#">Selim</a>
+        <!-- Navbar Brand: Logo der Uni Hildesheim-->
+            <a class="navbar-brand">
+                <!--Desktop und Tablet/großer oder mittel-großer Viewport; Klick auf Bild soll dann auf die erste Seite/eine Einfürungsseite führen-->
+                <span class="d-none d-sm-block">
+                    <!--Uni-Logo links in der Ecke-->
+                    <img class="d-inline-block align-text-center" src="uni_logo.png" width="70" height="70" alt="Universität Hildesheim" style="padding-right: 20;">
+                </span>
+                <!--Handy/kleiner Viewport - Abkürzung der Bezeichnung unseres Viewports-->
+                <span class="d-sm-none">Glossar</span>
+            </a>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -65,7 +74,11 @@
                 <button id="btnScrollToTop">
                     <i class="material-icons">arrow_upward</i>
                 </button>
-                <p>Du möchtest dein Wissen testen? Klicke auf "Vokabeltest starten" und lerne wichtige Wörter zu den Modulen auswendig.</p>
+                <p> 
+                    Du möchtest dein Wissen testen? Klicke auf "Vokabeltest starten" und lerne wichtige Wörter zu den Modulen auswendig.
+                    Falls du dir das Glossar auch offline ansehen möchtest, klicke auf "Glossar downloaden". Es öffnet sich eine PDF-Datei.
+                    Speicher die Datei auf deinem Gerät und lerne auch offline die wichtigsten Definitionen der Module.
+                </p>
                 <div id="quiz">
 
                     <div class="frage">
@@ -99,10 +112,12 @@
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                             Vokabeltest starten
                         </button>
+                    </div>
                     <div class="col">
                         <a class="btn btn-primary" href="glossar.pdf" download target="_blank" title="Jetzt Glossar downloaden!">
                             Glossar downloaden
                         </a>
+
                         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content" id="modalCont">
