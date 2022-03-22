@@ -94,6 +94,26 @@ quizbutton {
     display:inline-block;
     float:right;
 }
+
+/* Hervorhebung richtiger und falscher Antworten beim Aufgabentyp Listenauswahl */
+.list-correct {
+    color: #fff;
+    border: 1px solid #198754;
+    background-color: #198754;
+}
+
+.list-wrong {
+    color: #fff;
+    border: 1px solid #dc3545;
+    background-color: #dc3545;
+}
+
+/* Code Formatierung beim Aufgabentyp Listenauswahl*/
+.list-code {
+    color: #586C6C;
+    line-height: 300%;
+}
+
 /* Klasse zur Hervorhebung richtiger Antworten */
 .correct {
 	color: #008000;
