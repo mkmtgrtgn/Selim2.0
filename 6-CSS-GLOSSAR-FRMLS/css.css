@@ -1,3 +1,4 @@
+/*setzten von Variabeln*/
 body{
     font-family: Quicksand;
     --schriftfarbe:#232B2B;
@@ -10,8 +11,11 @@ body{
 }
 
 h1, h2, h3 {
+    padding:1vw;
+    color: var(--schriftfarbe);
 }
 
+/* Navigation Menü */
 .navbar-brand {
     margin-left: 1vw;
     font-weight: 600;
@@ -31,11 +35,6 @@ h1, h2, h3 {
 
 }
 
-/*
-Da man Bootstrap-Klassen nicht so leicht überschreiben kann, einfach kopieren und ändern
-- andernfalls einfach Bootstrap als Datei downloaden und selber modifizieren (nav-link->i).
-Hier wollte er die Farbe sonst nicht ändern
- */
 .nav-linki {
     color:var(--schriftfarbe);
     display: block;
@@ -98,50 +97,50 @@ p {
 .hr-line {
     width: 60%;
     margin: auto;
-  }
+}
 
-  /* Container der Wörter */
-  .glossar-wort {
-      color: #232B2B;
-      cursor: pointer;
-      padding: 30px 20px;
-      width: 60%;
-      border: none;
-      outline: none;
-      transition: 0.4s;
-      margin: auto;
-  }
+  /* Container der Wörter sowohl für Glossar aber auch Formelsammlung */
+.glossar-wort {
+    color: #232B2B;
+    cursor: pointer;
+    padding: 30px 20px;
+    width: 60%;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    margin: auto;
+}
   
-  .glossar-definition {
+.glossar-definition {
     margin: auto;
     /* Definition des Wortes wird mittig unter dem Wort angezeigt. Die Definition ist responsive */
     padding: auto;
 }
 
   /* Hovert der Benutzer über das Feld, wird es wie in der NavBar hell hervorgehoben */
-  .glossar-wort:hover {
-      background-color: #F9F9F9;
-      /* runde Ecken, sodass es zum Grundgerüst passt */
-      border-radius: 6px;
-  }
+.glossar-wort:hover {
+    background-color: #F9F9F9;
+    /* runde Ecken, sodass es zum Grundgerüst passt */
+    border-radius: 6px;
+}
 
   /* Design der Definition */
-  .glossar-definition {
-      padding: 0 18px;
-      background-color: white;
-      display: none;
-      overflow: hidden;
-      /* runde Ecken der Definition */
-      border-radius: 6px;
-  }
+.glossar-definition {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+    /* runde Ecken der Definition */
+    border-radius: 6px;
+}
 
-  .page-header {
+.page-header {
     padding-bottom: 9px;
     margin: 40px 0 20px;
     border-bottom: 1px solid #7c9797;
 }
 
-/* Fürs Quiz */
+/* Fürs das Quiz bzw. den Vokabeltest im Glossar */
 
 .fragenblock {
     border: dotted var(--hauptfarbe)  4px;
@@ -170,7 +169,6 @@ p {
     font-weight: bold;
 }
 
-
 .wahreAntwort {
     background-color: rgba(60, 207, 60, 0.7);
     font-weight: 700;
@@ -192,11 +190,9 @@ p {
     background-color: rgba(144, 238, 144, 0.8);
 }
 
-
 .nichtBeantwortet {
     border: dashed 2px rgba(207, 8, 44, 0.8);
 }
-
 
 .falschBeantwortet {
     border: dashed 2px red;
@@ -224,7 +220,7 @@ p {
 
 /* Hier geht es um den Scroll Up Button */
 
-/* Position des Buttons rechts in der Ecke */
+/* Position des Fixierten Buttons rechts in der Ecke */
 #btnScrollToTop {
     position: fixed;
     right: 10px;
@@ -244,6 +240,8 @@ p {
 #btnScrollToTop:active {
     background: #b2d8d8;
 }
+
+/* Hier geht es um die responsiveness der A-Z Buttons im Glossar */
 
 /*Button Layout. Buttun-Abstand ändert sich, sobald maximale Breite erreicht wird.*/
 @media only screen and (max-width:800px){
