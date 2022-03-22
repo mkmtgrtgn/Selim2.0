@@ -13,16 +13,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;600;700&display=swap" rel="stylesheet">
     <title>Selim 2.0</title>
 
-    <!-- CSS Code Farbe -->
-    <style>
-        code {
-            color: #232B2B;
-        }
-
-        .normal-code {
-            color: #586C6C;
-        }
-    </style>
 </head>
 
 <body>
@@ -74,8 +64,8 @@
                 <h1>Aufgabe 16</h1>
                 <h2>Anfragen über mehrere Relationen: SQL SELECT-Anweisung</h2>
                 <p>Welcher Mitarbeiter (Name) hat der Kundin 'Erna Schneider' einen Auftrag vermittelt? Wähle die richtige Antwort aus.<br />Die drei dazugehörigen Tabellen befinden sich
-                    <a href="#Tabelle" data-bs-toggle="collapse">hier</a>.
-                    <div id="Tabelle" class="collapse">
+                    <a href="#tabelle-datensatz" data-bs-toggle="collapse">hier</a>.
+                    <div id="tabelle-datensatz" class="collapse">
                         <table class="table table-bordered table-responsive table-hover caption-top">
                             <caption>Ausgangstabelle Personal</caption>
                             <thead>
@@ -219,16 +209,16 @@
             <div class="col">
                 <div class="btn-group-vertical">
                     <input type="radio" class="btn-check solution" name="options" id="option1">
-                    <label class="btn btn-outline-primary" for="option1"><code>Kunde.Nr = Auftrag.KundNr AND Personal.PersNr = Auftrag.PersNr AND Kunde.Name = 'Erna Schneider';</code></label>
+                    <label class="btn btn-outline-primary" for="option1"><code class="sc-code">Kunde.Nr = Auftrag.KundNr AND Personal.PersNr = Auftrag.PersNr AND Kunde.Name = 'Erna Schneider';</code></label>
                     
                     <input type="radio" class="btn-check" name="options" id="option2">
-                    <label class="btn btn-outline-primary" for="option2"><code>Personal.PersNr = Auftrag.PersNr AND Kunde.Name = 'Erna Schneider';</code></label>
+                    <label class="btn btn-outline-primary" for="option2"><code class="sc-code">Personal.PersNr = Auftrag.PersNr AND Kunde.Name = 'Erna Schneider';</code></label>
                     
                     <input type="radio" class="btn-check" name="options" id="option3">
-                    <label class="btn btn-outline-primary" for="option3"><code>Kunde.Nr = Auftrag.KundNr AND Personal.Name = Auftrag.PersNr AND Kunde.Name = 'Erna Schneider';</code></label>
+                    <label class="btn btn-outline-primary" for="option3"><code class="sc-code">Kunde.Nr = Auftrag.KundNr AND Personal.Name = Auftrag.PersNr AND Kunde.Name = 'Erna Schneider';</code></label>
     
                     <input type="radio" class="btn-check" name="options" id="option4">
-                    <label class="btn btn-outline-primary" for="option4"><code>Kunde = Auftrag.KundNr AND Personal.PersNr = Auftrag.PersNrAND Kunde.Name = 'Erna Schneider';</code></label>
+                    <label class="btn btn-outline-primary" for="option4"><code class="sc-code">Kunde = Auftrag.KundNr AND Personal.PersNr = Auftrag.PersNrAND Kunde.Name = 'Erna Schneider';</code></label>
                 </div>
             </div>
         </div>

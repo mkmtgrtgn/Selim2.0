@@ -13,16 +13,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;600;700&display=swap" rel="stylesheet">
     <title>Selim 2.0</title>
 
-    <!-- CSS Code Farbe -->
-    <style>
-        code {
-            color: #232B2B;
-        }
-
-        .normal-code {
-            color: #586C6C;
-        }
-    </style>
 </head>
 
 <body>
@@ -74,8 +64,8 @@
                 <h1>Aufgabe 15</h1>
                 <h2>Anfragen über mehrere Relationen: SQL SELECT-Anweisung</h2>
                 <p>Welche der untenstehenden <code class="normal-code">SELECT</code>-Anweisungen liefert als Ergebnis 'Verkäufer'? Wähle die richtige Antwort aus.<br />Die beiden dazugehörigen Tabellen befinden sich
-                    <a href="#Tabelle" data-bs-toggle="collapse">hier</a>.
-                    <div id="Tabelle" class="collapse">
+                    <a href="#tabelle-datensatz" data-bs-toggle="collapse">hier</a>.
+                    <div id="tabelle-datensatz" class="collapse">
                         <table class="table table-bordered table-responsive table-hover caption-top">
                             <caption>Ausgangstabelle Kunde</caption>
                             <thead>
@@ -155,16 +145,16 @@
             <div class="col">
                 <div class="btn-group-vertical">
                     <input type="radio" class="btn-check" name="options" id="option1">
-                    <label class="btn btn-outline-primary" for="option1"><code>SELECT AuftragNr FROM Kunde WHERE Kunde.Nr = KundNr AND Name = 'Schreiner & Söhne';</code></label>
+                    <label class="btn btn-outline-primary" for="option1"><code class="sc-code">SELECT AuftragNr FROM Kunde WHERE Kunde.Nr = KundNr AND Name = 'Schreiner & Söhne';</code></label>
                     
                     <input type="radio" class="btn-check solution" name="options" id="option2">
-                    <label class="btn btn-outline-primary" for="option2"><code>SELECT AuftragNr FROM Kunde, Auftrag WHERE Kunde.Nr = KundNr AND Name = 'Schreiner & Söhne';</code></label>
+                    <label class="btn btn-outline-primary" for="option2"><code class="sc-code">SELECT AuftragNr FROM Kunde, Auftrag WHERE Kunde.Nr = KundNr AND Name = 'Schreiner & Söhne';</code></label>
                     
                     <input type="radio" class="btn-check" name="options" id="option3">
-                    <label class="btn btn-outline-primary" for="option3"><code>SELECT KundNr FROM Auftrag WHERE Kunde.Nr = 3;</code></label>
+                    <label class="btn btn-outline-primary" for="option3"><code class="sc-code">SELECT KundNr FROM Auftrag WHERE Kunde.Nr = 3;</code></label>
     
                     <input type="radio" class="btn-check" name="options" id="option4">
-                    <label class="btn btn-outline-primary" for="option4"><code>SELECT Nr FROM Kunde, Auftrag WHERE Name = 'Schreiner & Söhne';</code></label>
+                    <label class="btn btn-outline-primary" for="option4"><code class="sc-code">SELECT Nr FROM Kunde, Auftrag WHERE Name = 'Schreiner & Söhne';</code></label>
                 </div>
             </div>
         </div>
