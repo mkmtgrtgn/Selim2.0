@@ -12,21 +12,7 @@
     <!-- Der Font muss noch importiert werden -->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;600;700&display=swap" rel="stylesheet">
     <title>Selim 2.0</title>
-
-    <!-- CSS Validierung Select -->
-    <style>
-        .correct {
-            color: #fff;
-            border: 1px solid #198754;
-            background-color: #198754;
-        }
     
-        .wrong {
-            color: #fff;
-            border: 1px solid #dc3545;
-            background-color: #dc3545;
-        }
-    </style>
 </head>
 
 <body>
@@ -96,7 +82,7 @@
             <div class="col-md-2">
                 <p>Feld 1</p>
                 <select class="form-control-sm selects">
-                    <option selected> </option>
+                    <option value="default" selected> </option>
                     <option value="0">1</option>
                     <option value="1">n</option>
                     <option value="2">m</option>
@@ -105,7 +91,7 @@
             <div class="col-md-2">
                 <p>Feld 2</p>
                 <select class="form-control-sm selects">
-                    <option selected> </option>
+                    <option value="default" selected> </option>
                     <option value="1">1</option>
                     <option value="0">n</option>
                     <option value="2">m</option>
@@ -114,7 +100,7 @@
             <div class="col-md-2">
                 <p>Feld 3</p>
                 <select class="form-control-sm selects">
-                    <option selected> </option>
+                    <option value="default" selected> </option>
                     <option value="0">1</option>
                     <option value="1">n</option>
                     <option value="2">m</option>
@@ -123,7 +109,7 @@
             <div class="col-md-2">
                 <p>Feld 4</p>
                 <select class="form-control-sm selects">
-                    <option selected> </option>
+                    <option value="default" selected> </option>
                     <option value="1">1</option>
                     <option value="0">n</option>
                     <option value="2">m</option>
@@ -132,7 +118,7 @@
             <div class="col-md-2">
                 <p>Feld 5</p>
                 <select class="form-control-sm selects">
-                    <option selected> </option>
+                    <option value="default" selected> </option>
                     <option value="1">1</option>
                     <option value="0">n</option>
                     <option value="2">m</option>
@@ -141,7 +127,7 @@
             <div class="col-md-2">
                 <p>Feld 6</p>
                 <select class="form-control-sm selects">
-                    <option selected> </option>
+                    <option value="default" selected> </option>
                     <option value="0">1</option>
                     <option value="1">n</option>
                     <option value="2">m</option>
@@ -152,6 +138,7 @@
         <div class="row mt-5 mb-5 pt-3">
             <div class="col">
                 <p><button type="button" class="btn btn-primary float-end" onClick="checkSelects()">Kontrollieren</button></p>
+                <p><button type="button" class="btn btn-primary float-end" onClick="resetSelects()">Zurücksetzen</button></p>
             </div>  
         </div>
 
