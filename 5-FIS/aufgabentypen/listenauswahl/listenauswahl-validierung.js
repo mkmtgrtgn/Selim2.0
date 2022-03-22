@@ -1,16 +1,22 @@
 /* Validierung Select */
 
 function checkSelects() {
-    jQuery("body").find("select.selects.hidden").remove();
-    jQuery("#alertBox").removeClass("padding bg-danger bg-success");
-    jQuery(".selects").removeClass("correct");
-    jQuery(".selects").removeClass("wrong");
+    jQuery(".selects").removeClass("list-correct list-wrong");
     jQuery(".selects").each(function(i,v) {
-        if(jQuery(v).val() == '1') {
-            jQuery(v).addClass("correct");
+        if(jQuery(v).val() == "1") {
+            jQuery(v).addClass("list-correct");
         } 
         else {
-            jQuery(v).addClass("wrong");
+            jQuery(v).addClass("list-wrong");
         }
     });
 }
+
+function resetSelects() {
+    jQuery(".selects").removeClass("list-correct list-wrong");
+    jQuery(".selects").each(function(i,v) {
+        if(jQuery(v).val() != "default") {
+            jQuery(v).val("default");
+        } 
+    });
+} 
