@@ -1,5 +1,5 @@
 // Funktion zur PrÃ¼fung von Input Eingaben
-function dasher(Student, Correct) {
+/*function dasher(Student, Correct) {
     var studentAnswer = Student.value;
     var correctAnswer = Correct;
     result = ""
@@ -208,7 +208,7 @@ function dasher(Student, Correct) {
             jQuery('.aufgabe3').toggle();
         }
     }
-    jQuery('.toggleMoreInformation').click(function() {
+    /*jQuery('.toggleMoreInformation').click(function() {
         jQuery(this).parent().siblings(".ausklappen").toggleClass("hidden");
     });
     jQuery('#loesung1').keyup(function () {
@@ -299,7 +299,7 @@ function dasher(Student, Correct) {
     });
     jQuery("#drop8").droppable({
         accept: "#drag5"
-    });
+    });*/
     
     //Alles fÃ¼r Aufgabe 1
     jQuery('#cursor-change>strong').click(function () {
@@ -362,7 +362,7 @@ function dasher(Student, Correct) {
         jQuery('#cursor-change>strong').removeClass('marked');
     }
     
-    function addSQL() {
+    /*function addSQL() {
         if(event.target.id == 'select') {
             jQuery('#loesung1').val(jQuery('#loesung1').val() + 'SELECT ');
         } else if(event.target.id == 'star') {
@@ -1141,4 +1141,5 @@ function dasher(Student, Correct) {
             jQuery('#correction').append("<p class='wrong'>Das Statement ist leider nicht richtig, unten wird die originale Fehlermeldung des Systems angezeigt!</p>");
         }
         document.querySelector('#status').innerHTML +=  "<div class='well'><strong>" + error.message + "</strong></div>";
-    }
+    }*/
+    
