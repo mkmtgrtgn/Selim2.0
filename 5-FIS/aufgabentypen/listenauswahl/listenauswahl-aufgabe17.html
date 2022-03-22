@@ -13,25 +13,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;600;700&display=swap" rel="stylesheet">
     <title>Selim 2.0</title>
 
-    <!-- CSS Validierung Select und Code Formatierung -->
-    <style>
-        .correct {
-            color: #fff;
-            border: 1px solid #198754;
-            background-color: #198754;
-        }
-    
-        .wrong {
-            color: #fff;
-            border: 1px solid #dc3545;
-            background-color: #dc3545;
-        }
-
-        code {
-            color: #586C6C;
-            line-height: 300%;
-        }
-    </style>
 </head>
 
 <body>
@@ -82,32 +63,32 @@
             <div class="col">
                 <h1>Aufgabe 17</h1>
                 <h2>Anfragen über mehrere Relationen: SQL SELECT-Anweisung</h2>
-                <p>Du möchtest die Namen der Mitarbeiter einer Handelskette wissen, die in der Filiale 'Am Dammtor' arbeiten. <br /> Wie lautet die <code>SELECT</code>-Anweisung?</p>
+                <p>Du möchtest die Namen der Mitarbeiter einer Handelskette wissen, die in der Filiale 'Am Dammtor' arbeiten. <br /> Wie lautet die <code class="list-code">SELECT</code>-Anweisung?</p>
             </div>
         </div>
 
         <div class="row mt-2">
             <div class="col">
                 <form class="form-inline ms-4">
-                    <code >SELECT</code>
+                    <code class="list-code">SELECT</code>
                     <select class="form-control-sm selects">
-                        <option selected> </option>
+                        <option value="default" selected> </option>
                         <option value="4">Name</option>
                         <option value="2">Filiale.PersNr</option>
                         <option value="0">Filiale.Name</option>
                         <option value="3">Personal.FilialNr</option>
                         <option value="1">Personal.Name</option>
                     </select>
-                    <code>FROM</code>
+                    <code class="list-code">FROM</code>
                     <select class="form-control-sm selects">
-                        <option selected> </option>
+                        <option value="default" selected> </option>
                         <option value="2">Filiale</option>
                         <option value="1">Filiale, Personal</option>
                         <option value="3">Personal</option>
                     </select>
-                    <code>WHERE</code>
+                    <code class="list-code">WHERE</code>
                     <select class="form-control-sm selects">
-                        <option selected> </option>
+                        <option value="default" selected> </option>
                         <option value="2">FilialNr</option>
                         <option value="1">Filiale.Name</option>
                         <option value="3">Personal.Name</option>
@@ -115,7 +96,7 @@
                         <option value="5">Name</option>
                     </select>
                     <select class="form-control-sm selects">
-                        <option selected> </option>
+                        <option value="default" selected> </option>
                         <option value="3">\></option>
                         <option value="2">\>=</option>
                         <option value="1">=</option>
@@ -123,22 +104,22 @@
                         <option value="5">\&lt\></option>
                     </select>
                     <select class="form-control-sm selects">
-                        <option selected> </option>
+                        <option value="default" selected> </option>
                         <option value="3">Name</option>
                         <option value="2">Filiale.FilialNr</option>
                         <option value="1">'Am Dammtor'</option>
                         <option value="4">'City'</option>
                     </select>
-                    <code>AND</code>
+                    <code class="list-code">AND</code>
                     <select class="form-control-sm selects">
-                        <option selected> </option>
+                        <option value="default" selected> </option>
                         <option value="1">Filiale.FilialNr</option>
                         <option value="2">FilialNr</option>
                         <option value="3">Name</option>
                         <option value="4">Filiale.Name</option>
                     </select>
                     <select class="form-control-sm selects">
-                        <option selected> </option>
+                        <option value="default" selected> </option>
                         <option value="3">\></option>
                         <option value="2">\>=</option>
                         <option value="1">=</option>
@@ -146,7 +127,7 @@
                         <option value="5">\&lt\></option>
                     </select>
                     <select class="form-control-sm selects">
-                        <option selected> </option>
+                        <option value="default" selected> </option>
                         <option value="3">Filiale.Name</option>
                         <option value="2">'Am Dammtor'</option>
                         <option value="4">FilialNr</option>
@@ -159,6 +140,7 @@
         <div class="row mt-5 mb-5 pt-4">
             <div class="col">
                 <p><button type="button" class="btn btn-primary float-end" onClick="checkSelects()">Kontrollieren</button></p>
+                <p><button type="button" class="btn btn-primary float-end" onClick="resetSelects()">Zurücksetzen</button></p>
             </div>  
         </div>
 
