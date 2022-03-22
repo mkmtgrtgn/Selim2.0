@@ -246,6 +246,6 @@ p {
 /*Button Layout. Buttun-Abstand ändert sich, sobald maximale Breite erreicht wird.*/
 @media only screen and (max-width:800px){
     .buchstaben {
-      margin: 5px;
+      margin: 3px;
     }
   }
