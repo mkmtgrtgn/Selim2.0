@@ -16,87 +16,99 @@
 </head>
 
 <body>
-<div class="navi">
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon navbar-light"></span>
-            </button>
-            <a class="navbar-brand" href="#">Selim</a>
+    <div class="navi">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon navbar-light"></span>
+                </button>
+                <a class="navbar-brand" href="#">Selim</a>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-linki active" aria-current="page" href="../../../home.html">Home</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-linki dropdown-toggle" href="#" id="navDrop1" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Module
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navDrop1">
-                            <li><a class="dropdown-item bg" href="../../../1-GDI/gdi.html">GDI</a></li>
-                            <li><a class="dropdown-item bg" href="../../../2-IR1/ir1.html">IR1</a></li>
-                            <li><a class="dropdown-item bg" href="../../../3-IR2/ir2.html">IR2</a></li>
-                            <li><a class="dropdown-item bg" href="../../../4-IR3/ir3.html">IR3</a></li>
-                            <li><a class="dropdown-item bg" href="../../../5-FIS/fis.html">FIS</a></li>
-                        </ul>
-                    </li>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-linki active" aria-current="page" href="../../../home.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-linki dropdown-toggle" href="#" id="navDrop1" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Module
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navDrop1">
+                                <li><a class="dropdown-item bg" href="../../../1-GDI/gdi.html">GDI</a></li>
+                                <li><a class="dropdown-item bg" href="../../../2-IR1/ir1.html">IR1</a></li>
+                                <li><a class="dropdown-item bg" href="../../../3-IR2/ir2.html">IR2</a></li>
+                                <li><a class="dropdown-item bg" href="../../../4-IR3/ir3.html">IR3</a></li>
+                                <li><a class="dropdown-item bg" href="../../../5-FIS/fis.html">FIS</a></li>
+                            </ul>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-linki active" aria-current="page"
-                            href="../../../6-CSS-GLOSSAR-FRMLS/glossar.html">Glossar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-linki active" aria-current="page"
-                            href="../../../6-CSS-GLOSSAR-FRMLS/formelsammlung.html">Formelsammlung</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</div>
-
-<div id="content">
-
-
-    <div class="container">
-        <div class="paragraph">
-            <h2>Aufgabe 1 ERM</h2>
-            <p>Klick bitte auf die Worte im untenstehenden Text, die Deiner Meinung nach als Objekttypen 
-            (Entity-Typen, Relationship-Typen) realisiert werden müssen.</p>
-            <div class="row aufgabe1">
-                <div class="col-md-12">
-                    <p id="cursor-change">Die <strong id='bib'>Bibliothek</strong> benötigt ein <strong id='is'>Informationssystem</strong> mit welchem 
-            <strong id='info'>Informationen</strong> über das <strong id='verleihen'>Verleihen</strong> und <strong class='vormerken'>Vormerken</strong> der 
-            <strong class='video'>Videofilme</strong> verwaltet werden sollen.<br/><br/>Die <strong class='ausleiher'>Ausleiher</strong> 
-            können gleichzeitig mehrere <strong class='video'>Videofilme</strong> ausleihen 
-            und die <strong class='video'>Videofilme</strong> können auch mehrmals <strong class='vormerken'>vorgemerkt</strong> 
-            werden.<br/><br/>Die <strong class='ausleiher'>Ausleiher</strong> müssen <strong id='strafen'>Strafen</strong> für verspätete 
-            <strong id='rueckgaben'>Rückgaben</strong> <strong id='zahlen'>zahlen</strong>.</p>
+                        <li class="nav-item">
+                            <a class="nav-linki active" aria-current="page"
+                                href="../../../6-CSS-GLOSSAR-FRMLS/glossar.html">Glossar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-linki active" aria-current="page"
+                                href="../../../6-CSS-GLOSSAR-FRMLS/formelsammlung.html">Formelsammlung</a>
+                        </li>
+                    </ul>
                 </div>
-            <button type="button" class="btn btn-default custombtn" onClick="markWords()">Überprüfen</button>
             </div>
-            </div>
+        </nav>
     </div>
 
-</div>
+    <div id="content">
+
+
+        <div class="container">
+            <div class="paragraph">
+                <h2>Aufgabe 1 ERM</h2>
+                <p>Klick bitte auf die Worte im untenstehenden Text, die Deiner Meinung nach als Objekttypen
+                    (Entity-Typen, Relationship-Typen) realisiert werden müssen.</p>
+                <div class="row aufgabe1">
+                    <div class="col-md-12">
+                        <p id="cursor-change">Die <strong id='bib'>Bibliothek</strong> benötigt ein <strong
+                                id='is'>Informationssystem</strong> mit welchem
+                            <strong id='info'>Informationen</strong> über das <strong id='verleihen'>Verleihen</strong>
+                            und <strong class='vormerken'>Vormerken</strong> der
+                            <strong class='video'>Videofilme</strong> verwaltet werden sollen.<br /><br />Die <strong
+                                class='ausleiher'>Ausleiher</strong>
+                            können gleichzeitig mehrere <strong class='video'>Videofilme</strong> ausleihen
+                            und die <strong class='video'>Videofilme</strong> können auch mehrmals <strong
+                                class='vormerken'>vorgemerkt</strong>
+                            werden.<br /><br />Die <strong class='ausleiher'>Ausleiher</strong> müssen <strong
+                                id='strafen'>Strafen</strong> für verspätete
+                            <strong id='rueckgaben'>Rückgaben</strong> <strong id='zahlen'>zahlen</strong>.
+                        </p>
+                    </div>
+                    <button type="button" class="btn btn-default custombtn" onClick="markWords()">Überprüfen</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </body>
-    
-    
 
-  <!-- Bootstrap core JavaScript
+
+
+<!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script type="text/javascript"src="https://code.jquery.com/ui/1.12.0-rc.2/jquery-ui.js"></script>
-    <script type="text/javascript" src="../../../static/java script/jquery.ui.touch-punch.js"></script>
-    <!--<script src="../../dist/js/bootstrap.min.js"></script>-->
-	<script type="text/javascript" src="../../../static/java script/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script type="text/javascript" src="../../../static/java script/ie10-viewport-bug-workaround.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/ui/1.12.0-rc.2/jquery-ui.js"></script>
+<script type="text/javascript" src="../../../static/java script/jquery.ui.touch-punch.js"></script>
+<!--<script src="../../dist/js/bootstrap.min.js"></script>-->
+<!--<script type="text/javascript" src="../../../static/java script/bootstrap.min.js"></script>-->
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script type="text/javascript" src="../../../static/java script/ie10-viewport-bug-workaround.js"></script>
 
-	<!-- JavaScript Datei mit möglichen Funktionen zur Validierung etc. -->
-	<script type="text/javascript" src="../../../static/js/skript.js"></script>
+<!-- JavaScript Datei mit möglichen Funktionen zur Validierung etc. -->
+<script type="text/javascript" src="../../../static/js/skript.js"></script>
