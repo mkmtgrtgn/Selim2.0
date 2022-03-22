@@ -108,10 +108,20 @@ quizbutton {
     background-color: #dc3545;
 }
 
-/* Code Formatierung beim Aufgabentyp Listenauswahl*/
+/* Code Formatierung beim Aufgabentyp Listenauswahl */
 .list-code {
     color: #586C6C;
     line-height: 300%;
+}
+
+/* Code Farbe innerhalb von Text */
+.normal-code {
+    color: #586C6C;
+}
+
+/* Code Farbe auf Buttons beim Aufgabentyp Single Choice */
+.sc-code {
+    color: #232B2B;
 }
 
 /* Klasse zur Hervorhebung richtiger Antworten */
