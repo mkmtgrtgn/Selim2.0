@@ -86,19 +86,19 @@
                     <!-- TODO: Labels fett -->
                     <label class="form-label">Wähle einen SQL-Audruck aus:</label>
                     <div class="col">
-                        <button id="select" class="btn btn-light" onClick="addSQL()">SELECT</button>
-                        <button id="star" class="btn btn-light" onClick="addSQL()">*</button>
-                        <button id="from" class="btn btn-light" onClick="addSQL()">FROM</button>
-                        <button id="insertInto" class="btn btn-light" onClick="addSQL()">INSERT INTO</button>
-                        <button id="update" class="btn btn-light" onClick="addSQL()">UPDATE</button>
-                        <button id="set" class="btn btn-light" onClick="addSQL()">SET</button>
-                        <button id="delete" class="btn btn-light" onClick="addSQL()">DELETE FROM</button>
-                        <button id="where" class="btn btn-light" onClick="addSQL()">WHERE</button>
-                        <button id="equals" class="btn btn-light" onClick="addSQL()">=</button>
-                        <button id="equalsNot" class="btn btn-light" onClick="addSQL()">!=</button>
-                        <button id="smallerAs" class="btn btn-light" onClick="addSQL()">
+                        <button id="select" class="btn btn-light" onClick="addSQL(event)">SELECT</button>
+                        <button id="star" class="btn btn-light" onClick="addSQL(event)">*</button>
+                        <button id="from" class="btn btn-light" onClick="addSQL(event)">FROM</button>
+                        <button id="insertInto" class="btn btn-light" onClick="addSQL(event)">INSERT INTO</button>
+                        <button id="update" class="btn btn-light" onClick="addSQL(event)">UPDATE</button>
+                        <button id="set" class="btn btn-light" onClick="addSQL(event)">SET</button>
+                        <button id="delete" class="btn btn-light" onClick="addSQL(event)">DELETE FROM</button>
+                        <button id="where" class="btn btn-light" onClick="addSQL(event)">WHERE</button>
+                        <button id="equals" class="btn btn-light" onClick="addSQL(event)">=</button>
+                        <button id="equalsNot" class="btn btn-light" onClick="addSQL(event)">!=</button>
+                        <button id="smallerAs" class="btn btn-light" onClick="addSQL(event)">
                             < </button>
-                                <button id="biggerAs" class="btn btn-light" onClick="addSQL()">></button>
+                                <button id="biggerAs" class="btn btn-light" onClick="addSQL(event)">></button>
                     </div>
                 </div>
                 <br>
@@ -117,7 +117,7 @@
                             <div class="row">
                                 <div class="col">
                                     <!-- Select Menue für die Tabellenspalten -->
-                                    <select class="form-select" aria-label="Default select example">
+                                    <select id="selectedValue" class="form-select" aria-label="Default select example">
                                         <option selected>Spaltennamen..</option>
                                         <option value="1">PersNr</option>
                                         <option value="2">Name</option>
@@ -128,7 +128,7 @@
                                 </div>
                                 <div class="col">
                                     <button id="addSqlOptions" type="button" class="btn btn-primary"
-                                        onClick="addSQL()">Hinzufügen</button>
+                                        onClick="addColumnValue()">Hinzufügen</button>
                                 </div>
                             </div>
                         </div>
@@ -152,6 +152,6 @@
 <!-- Bootstrap -->
 <script src="../../../static/js/bootstrap.bundle.js"></script>
 <!-- Functions -->
-<script type="text/javascript" src="sql-aufgabe4.js"></script>
+<script type="text/javascript" src="js/sql-aufgabe4.js"></script>
 
 <body>
