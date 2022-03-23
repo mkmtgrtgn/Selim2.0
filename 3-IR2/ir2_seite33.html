@@ -71,10 +71,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col">
-                      
+                        
                         <h1>Exkurs: Suchmaschinen</h1>
-                    
-                   
+                        
+                        
                         <div class="row">
                             <div class="col">
                                 <p>
@@ -87,6 +87,7 @@
                                     
                                     Metasuchmaschinen haben hingegen keine eigenen Kataloge, sondern leiten die <a href="../6-CSS-GLOSSAR-FRMLS/glossar.html">Anfrage</a> an andere Suchmaschinen weiter und erstellen ein Ranking der zurückgegebenen Ergebnisse.
                                 </p>
+                                
                             </div>
                             <div class="col">
                                 <div class="text-center">
@@ -95,7 +96,18 @@
                             </div>
                         </div>
                         
-                                
+                        <!--Toggle Button "mehr"-->
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" 
+                        data-bs-target="#expandText" aria-expanded="false" aria-controls="expandText">
+                            mehr
+                        </button>
+                        
+                        <div id="expandText" class="collapse multi-collapse">
+                            <div class="card card-body">
+                                Die meisten Suchmaschinen bieten ebenfalls einen Katalog an. Der Unterschied zwischen einer Suchmaschine und einem Katalog besteht darin, dass hier die Internetseiten manuell indexiert und in Themengebiete (ähnlich den Kategorien einer Bibliotheksklassifikation) eingeordnet werden. Der Benutzer hat die Möglichkeit, von der Homepage des Kataloganbieters aus in den angebotenen Kategorien zu stöbern und kann durch immer weiteres bzw. tieferes Eindringen in die hierarchische Struktur von allgemeinen zu immer spezifischer werdenden Themengebieten gelangen.
+                            </div>
+                        </div>
+                        
                         <!--Fortschrittsanzeige-->        
                         <div class="progress">
                             <div class="progress-bar" role="progressbar" aria-valuenow="97"
@@ -103,17 +115,14 @@
                             <span class="sr-only">97% Complete</span>
                         </div>
                     </div>
-                        
 
-
-        
                 </div>
             </div> 
         </div>
-      </div> 
+    </div> 
     
-     <!--Seitenzahl-->
-        <div class="row justify-content-center">
+    <!--Seitenzahl-->
+    <div class="row justify-content-center">
         <div class="col-lg-8 col-lg-offset-3 text-center">
             <div class="page-pick">
                 <div class="btn-group dropup">
@@ -293,7 +302,7 @@
                 </div>
             </div>
         </div>
-        </div>
     </div>
+</div>
 </body>
 </html>
