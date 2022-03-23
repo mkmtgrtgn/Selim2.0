@@ -164,13 +164,13 @@ div.gallery {
 }
 
 div.gallery img {
-    width: 50%;
-    margin-left: 18px;
+    width: 30%;
+    margin-left: 28px;
     margin-top: 2px;
 }
 
 div.desc {
-    padding: 5px;
+    padding: 2px;
     text-align: center;
 }
 
