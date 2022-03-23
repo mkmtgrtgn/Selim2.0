@@ -1,17 +1,18 @@
 <!doctype html>
 <html lang="de" xmlns="http://www.w3.org/1999/html">
 <head>
-    <!-- Required meta tags -->
+    <!-- Metadaten -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS und JS Bundle -->
+    <!-- Bootstrap CSS und JS Bundle. Verbindung zum Ordner. -->
     <link href="../static/css/bootstrap.css" rel="stylesheet">
     <link href="css.css" rel="stylesheet">
+    <!--Javascript basierende Bibliothek, damit Formeln mit der Spezifikation MathML vom Brwoser richtig interpretiert werden.-->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-    <!-- Der Font muss noch importiert werden -->
+    <!-- Font Quicksand ist Lizenzfrei -->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Glossar</title>
@@ -43,6 +44,7 @@
                         <a class="nav-linki dropdown-toggle" href="#" id="navDrop1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Module
                         </a>
+                        <!--Verlinkungen zu den Modulen-->
                         <ul class="dropdown-menu" aria-labelledby="navDrop1">
                             <li><a class="dropdown-item bg" href="../1-GDI/gdi.html">Grundbegriffe IW</a></li>
                             <li><a class="dropdown-item bg" href="../2-IR1/ir1.html">Information Retrieval 1</a></li>
@@ -80,6 +82,7 @@
                     Falls du dir das Glossar auch offline ansehen möchtest, klicke auf "Glossar downloaden". Es öffnet sich eine PDF-Datei.
                     Speicher die Datei auf deinem Gerät und lerne auch offline die wichtigsten Definitionen der Module.
                 </p>
+                <!--Hier haben wir das Quiz bzw. den Vokabeltest eingefügt.-->
                 <div id="quiz">
 
                     <div class="frage">
@@ -166,6 +169,7 @@
                 </div>
                     </br>
                     </br>
+                    <!--Buttons von A-Z responsive. Dienen zur einfacheren Navigation zu den jeweiligen Wörtern.-->
                     <div class="row hidden-sm hidden-xs text-center">
                         <div class="col-md-12 col-lg-12">
                             <a class="btn btn-primary buchstaben" href="#A" title="Zu Wörtern mit A">A</a>
@@ -196,7 +200,7 @@
                             <a class="btn btn-primary buchstaben" href="#Z" title="Zu Wörtern mit Z">Z</a>
                         </div>
                     </div>
-
+                    <!--Hier sind die Wörter A-Z mit ihrer jeweiligen Definition drin. Wir haben es versucht mir einfachen Klassen wie glossar wort und glossar definition darzustellen. Interne Verlinkungen werden auch getätigt.-->
                     <h2 id="A" class="page-header">   A</h2>
                     <div>
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Abstract</h2>
@@ -335,6 +339,7 @@
                         
                         <div class="glossar-definition">
                             <p>Um eine einzige Maßzahl zu gewinnen, mit der IR-Systeme verglichen werden können, müssen die beiden Standardmaße recall und precision miteinander verknüpft werden. Dies geschieht mit Hilfe des <a href="formelsammlung.html#E" target="_blank" title="Alle Formeln zu Buchstabe E">E-Maßes:</a></p><br>
+                            <!--Verwendung von der Spezifikation MathML-->
                             <math>
                             <mstyle displaystyle="true">
                                 <mi>e</mi>
@@ -914,11 +919,43 @@
                         </div>
                     </div>
                     <hr class="hr-line">
+                    <p class="page-header"></p>
             </div>
         </div>
-
-        </div>
     </div>
+    </br>
+    </br>
+    <footer>
+        <!--Liste der Unternavigation A-Z. Die Buchstaben A-Z werden nicht unterstrichen. Dies sieht schicker aus und im Handy-Modus nicht so bedrückend. Style dazu im css.-->
+        <ul>
+            <li><a href="#A" title="Zu Wörtern mit A">A</a></li>
+            <li><a href="#B" title="Zu Wörtern mit B">B</a></li>
+            <li><a href="#C" title="Zu Wörtern mit C">C</a></li>
+            <li><a href="#D" title="Zu Wörtern mit D">D</a></li>  
+            <li><a href="#E" title="Zu Wörtern mit E">E</a></li>  
+            <li><a href="#F" title="Zu Wörtern mit F">F</a></li>  
+            <li><a href="#G" title="Zu Wörtern mit G">G</a></li>  
+            <li><a href="#H" title="Zu Wörtern mit H">H</a></li>  
+            <li><a href="#I" title="Zu Wörtern mit I">I</a></li>  
+            <li><a href="#J" title="Zu Wörtern mit J">J</a></li>  
+            <li><a href="#K" title="Zu Wörtern mit K">K</a></li>  
+            <li><a href="#L" title="Zu Wörtern mit L">L</a></li>  
+            <li><a href="#M" title="Zu Wörtern mit M">M</a></li>
+            <li><a href="#N" title="Zu Wörtern mit N">N</a></li>
+            <li><a href="#O" title="Zu Wörtern mit O">O</a></li>
+            <li><a href="#P" title="Zu Wörtern mit P">P</a></li>
+            <li><a href="#Q" title="Zu Wörtern mit Q">Q</a></li>
+            <li><a href="#R" title="Zu Wörtern mit R">R</a></li>
+            <li><a href="#S" title="Zu Wörtern mit S">S</a></li>
+            <li><a href="#T" title="Zu Wörtern mit T">T</a></li>
+            <li><a href="#U" title="Zu Wörtern mit U">U</a></li>
+            <li><a href="#V" title="Zu Wörtern mit V">V</a></li>
+            <li><a href="#W" title="Zu Wörtern mit W">W</a></li>
+            <li><a href="#X" title="Zu Wörtern mit X">X</a></li>
+            <li><a href="#Y" title="Zu Wörtern mit Y">Y</a></li>
+            <li><a href="#Z" title="Zu Wörtern mit Z">Z</a></li>
+        </ul>
+    </footer>
 </div>
 <script type="text/javascript" src="fmsglo.js"></script>
 </body>
