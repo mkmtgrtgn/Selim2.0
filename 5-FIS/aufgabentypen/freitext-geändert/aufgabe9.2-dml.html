@@ -65,8 +65,8 @@
 
         <div class="container">
             <div class="paragraph">
-                <h2>Aufgabe 9.1 DML</h2>
-                <p>Wo liegt der Fehler in der folgenden Anweisung? Wähle die richtige Antwort aus.<br />Die dazugehörige Tabelle befindet sich
+                <h2>Aufgabe 9.2 DML</h2>
+                <p>Was ist problematisch an der folgenden Anweisung? Wähle die richtige Antwort aus.<br />Die dazugehörige Tabelle befindet sich
                     <a href="#tabelle-datensatz" data-bs-toggle="collapse">hier</a>.
                     <div id="tabelle-datensatz" class="collapse">
                         <table class="table table-bordered table-responsive table-hover caption-top">
@@ -128,12 +128,12 @@
                     </div>
                 </p>
 
-                 <code class="normal-code">UPDATE Personal ('Kathrin Schuster', 'geschieden');</code>
+                 <code class="normal-code">DELETE FROM Personal;</code>
                 <div class="row aufgabe1">
                     <div class="col-md-12">
-                        <p id="cursor-change"><strong id='bib'>a) Die Anweisung UPDATE ist falsch, denn um Werte in der Tabelle Personal zu aktualisieren, braucht man INSERT TO.</strong> </p>
-                        <p id="cursor-change"><strong id='info'>b) Die Anweisung ist falsch, da Kathrin Schuster bereits geschieden ist. Durch die Anweisung UPDATE würde sich der Familienstatus also nicht ändern.</strong> </p>
-                        <p id="cursor-change"><strong id='verleihen'>c) Diese Anweisung vermischt die Funktion UPDATE mit der Funktion INSERT. Um Werte in der Tabelle Personal zu aktualisieren, ist die folgende Syntax zu verwenden: UPDATE Personal SET FamStatus = 'geschieden' WHERE Name = 'Kathrin Schuster';.</strong> </p>       
+                        <p id="cursor-change"><strong id='verleihen'>a) Die Anweisung ist problematisch, da durch diese alle Zeilen der Personal-Tabelle und somit die gesamte Tabelle gelöscht wird.</strong> </p>
+                        <p id="cursor-change"><strong id='info'>b) Die Anweisung ist eigentlich nicht problematisch, sondern effizient, da viel auf einmal gelöscht werden kann.</strong> </p>
+                        <p id="cursor-change"><strong id='bib'>c) Die Problematik besteht darin, dass die Anweisung zu kurz ist.</strong> </p>       
                         
                         
                     </div>

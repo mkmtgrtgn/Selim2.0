@@ -65,8 +65,8 @@
 
         <div class="container">
             <div class="paragraph">
-                <h2>Aufgabe 9.1 DML</h2>
-                <p>Wo liegt der Fehler in der folgenden Anweisung? Wähle die richtige Antwort aus.<br />Die dazugehörige Tabelle befindet sich
+                <h2>Aufgabe 9.3 DML</h2>
+                <p>Funktioniert die folgende Anweisung? Wähle die richtige Antwort aus.<br />Die dazugehörige Tabelle befindet sich
                     <a href="#tabelle-datensatz" data-bs-toggle="collapse">hier</a>.
                     <div id="tabelle-datensatz" class="collapse">
                         <table class="table table-bordered table-responsive table-hover caption-top">
@@ -128,12 +128,12 @@
                     </div>
                 </p>
 
-                 <code class="normal-code">UPDATE Personal ('Kathrin Schuster', 'geschieden');</code>
+                 <code class="normal-code">INSERT INTO Personal SET Gehalt = 900 WHERE Name = 'Kathrin Schuster';</code>
                 <div class="row aufgabe1">
                     <div class="col-md-12">
-                        <p id="cursor-change"><strong id='bib'>a) Die Anweisung UPDATE ist falsch, denn um Werte in der Tabelle Personal zu aktualisieren, braucht man INSERT TO.</strong> </p>
-                        <p id="cursor-change"><strong id='info'>b) Die Anweisung ist falsch, da Kathrin Schuster bereits geschieden ist. Durch die Anweisung UPDATE würde sich der Familienstatus also nicht ändern.</strong> </p>
-                        <p id="cursor-change"><strong id='verleihen'>c) Diese Anweisung vermischt die Funktion UPDATE mit der Funktion INSERT. Um Werte in der Tabelle Personal zu aktualisieren, ist die folgende Syntax zu verwenden: UPDATE Personal SET FamStatus = 'geschieden' WHERE Name = 'Kathrin Schuster';.</strong> </p>       
+                        <p id="cursor-change"><strong id='bib'>a) Ja. Die Anweisung funktioniert, da durch diese das Gehalt von Kathrin Schuster auf 900 Euro gesetzt wird.</strong> </p>
+                        <p id="cursor-change"><strong id='verleihen'>b) Nein. Hier werden der UPDATE- und der INSERT-Befehl kombiniert. Richtig wäre entweder INSERT INTO Personal (Gehalt) VALUES (900) WHERE Name = 'Kathrin Schuster'; oder UPDATE Personal SET Gehalt = 900 WHERE Name = 'Kathrin Schuster';.</strong> </p>
+                        <p id="cursor-change"><strong id='info'>c) Nein, die Anweisung ist falsch, da eine Anweisung mit INSERT TO in diesem Zusammenhang nie einen Sinn machen würde.</strong> </p>       
                         
                         
                     </div>
