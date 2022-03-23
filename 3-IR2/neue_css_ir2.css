@@ -96,6 +96,7 @@ button:hover {
     background-color: #fbfcfc;
     transform: scale(1.2);
 }
+
 /*für seite 19*/
 .task8 {
     padding-bottom: 0.5%;
@@ -197,27 +198,27 @@ button:hover {
     }
 }
 
-#content133 {
-    margin-top: 2.5%;
-}
 
-.headerTH {
- text-align: center;
-}
+
+
+
+/* für Seite 32*/
 
 #exampleBox{
     border: solid;
     border-color: var(--verlinkungaktiv);
     padding: 0;
+    padding-top: 1%;
     margin-bottom: 2%;
 }
 
+.headerDice {
+    text-align: center;
+   }
 
-
-
-
-
-
+#content133 {
+    margin-top: 2.5%;
+}
 
 
 
