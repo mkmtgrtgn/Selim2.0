@@ -1,11 +1,11 @@
+/*Hier ist die JavaScript Funktion zu unserer Formelsammlung und zu dem Glossar*/
 var faq = document.getElementsByClassName("glossar-wort");
 var i;
 for (i = 0; i < faq.length; i++) {
     faq[i].addEventListener("click", function () {
-        /* Toggle between adding and removing the "active" class,
-        to highlight the button that controls the panel */
+        /* Toggle wenn man auf das Wort/die Formel klickt */
         this.classList.toggle("active");
-        /* Toggle between hiding and showing the active panel */
+        /* Toggle zwischen verstecken und zeigen des Inhaltes, also der Definition des Wortes oder der Formel */
         var body = this.nextElementSibling;
         if (body.style.display === "block") {
             body.style.display = "none";
@@ -15,7 +15,7 @@ for (i = 0; i < faq.length; i++) {
     });
 }
 
-/*Quiz von Tobi*/
+/*Quiz von Tobi aus Gruppe 7, einige Elemente wurden von unserer Gruppe angepasst.*/
 
 //Elternklasse einer Abfrage
 class Quizelement {
