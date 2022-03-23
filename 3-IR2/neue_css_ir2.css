@@ -39,7 +39,6 @@ h1, h2, h3 {
     overflow: auto;
 }
 
-
 .navbar-nav > li > a:hover{
     color: var(--verlinkungaktiv);
 }
@@ -53,6 +52,72 @@ h1, h2, h3 {
 }
 .page-pick > ul {
     background-color: var(--containerfarbe);
+}
+
+/*
+Da man Bootstrap-Klassen nicht so leicht überschreiben kann, einfach kopieren und ändern
+- andernfalls einfach Bootstrap als Datei downloaden und selber modifizieren (nav-link->i).
+Hier wollte er die Farbe sonst nicht ändern
+folgender Teil ist aus der alten CSS
+*/
+
+.nav-linki {
+    color:var(--schriftfarbe);
+    display: block;
+    padding: 0.5rem 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+
+#content {
+    background-color: var(--hintergrund);
+    padding:4%;
+    border:solid rgba(128, 128, 128, 0.42);
+    border-radius: 16px;
+    box-shadow: slategray 6px 8px 4px 6px;
+    margin:4vh 5vw;
+    display:block;
+    overflow:auto;
+    min-height:42vh;
+}
+
+.bg:hover {
+    corner-radius: 4px; /*Unknown property: 'corner-radius'css(unknownProperties)*/
+    background-image: linear-gradient(180deg, var(--hauptfarbe), var(--hintergrund));
+    
+}
+
+.kleine_ueber {
+    font-weight: 600;
+}
+
+p {
+    margin:1vw;
+    text-align: justify;
+}
+
+.fragenblock {
+    border: dotted var(--hauptfarbe)  4px;
+    padding:1vw;
+    
+}
+
+.antworten {
+    padding:4px;
+    display:flex;
+    flex-direction: column;
+}
+.antwort {
+    margin: 1vw;
+    border-radius: 6px;
+    background-color:rgba(255, 255, 255, 0.8);
+}
+
+quizbutton {
+    display:inline-block;
+    float: right; /*inline-block is ignored due to the float. If 'float' has a value other than 'none', the box is floated and 'display' is treated as 'block'css(propertyIgnoredDueToDisplay)*/
 }
 
 
