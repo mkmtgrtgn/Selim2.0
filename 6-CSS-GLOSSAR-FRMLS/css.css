@@ -228,7 +228,7 @@ p {
     width: 50px;
     height: 50px;
     border-radius: 25%;
-    background: #7c9797;
+    background: #0e6ffd;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     color: #ffffff;
     border: none;
@@ -248,4 +248,13 @@ p {
     .buchstaben {
       margin: 3px;
     }
+  }
+
+/* Orientierung für den Unteren Bereich des Glossars und der Formelsammlung */  
+footer {
+    background-color:#F2F2F2;
+    border:1px solid #DEDCD9;
+    /*gerundete Ecken*/
+    border-radius:5px;
+    clear:both;
   }
