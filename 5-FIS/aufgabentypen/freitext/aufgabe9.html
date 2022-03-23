@@ -61,10 +61,17 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h1>Aufgabe 10</h1>
-                <h2>SQL SELECT-Anweisung</h2>
-                <p>Welches Ergebnis liefert die folgende <code class="normal-code">SELECT</code>-Anweisung? Wähle die richtige Antwort aus.<br />Die dazugehörige Tabelle befindet sich
-                    <a href="#tabelle-datensatz" data-bs-toggle="collapse">hier</a>.
+                <h1>Aufgabe 9</h1>
+                <h2>SQL-Anweisungen</h2>
+                <p>Wo liegt der Fehler in den folgenden Anweisungen? Wähle die richtige Antwort aus.<br />
+
+                    <a href="#tabelle-datensatz" data-bs-toggle="collapse">Zur Tabelle</a>
+                    
+            
+                    <div class="row justify-content-center text-center">
+                <div class="col-md-8 bg-light rounded">
+                    <p><code class="normal-code">UPDATE Personal SET FamStatus = 'geschieden' WHERE Name = 'Kathrin Schuster';</code></p>
+                    
                     <div id="tabelle-datensatz" class="collapse">
                         <table class="table table-bordered table-responsive table-hover caption-top">
                             <caption>Ausgangstabelle Personal</caption>
@@ -125,32 +132,215 @@
                     </div>
                 </p>
             </div>
-
-            <div class="row justify-content-center text-center">
-                <div class="col-md-8 bg-light rounded">
-                    <p><code class="normal-code">SELECT Name FROM Personal WHERE FamStatus = 'ledig' AND Gehalt &lt= 4800;</code></p>
                 </div>
             </div>
         </div>
-
+        
         <div class="row mt-3 justify-content-center text-center">
             <div class="col">
                 <div class="btn-group">
-                    <input type="radio" class="btn-check" name="options" id="option1">
-                    <label class="btn btn-outline-primary" for="option1">Mario Förster, Hans Müller</label>
+                    <input type="radio" class="btn-check" name="options" id="rueckgaben">
+                    <label class="btn btn-outline-primary" for="option5">Mario Förster, Hans Müller</label>
                     
-                    <input type="radio" class="btn-check" name="options" id="option2">
-                    <label class="btn btn-outline-primary" for="option2">Thomas Meyer</label>
+                    <input type="radio" class="btn-check" name="options" id="info">
+                    <label class="btn btn-outline-primary" for="option6">Thomas Meyer</label>
                     
-                    <input type="radio" class="btn-check" name="options" id="option3">
-                    <label class="btn btn-outline-primary" for="option3">Mario Förster</label>
+                    <input type="radio" class="btn-check" name="options" id="zahlen">
+                    <label class="btn btn-outline-primary" for="option7">Mario Förster</label>
     
-                    <input type="radio" class="btn-check solution" name="options" id="option4">
-                    <label class="btn btn-outline-primary" for="option4">Thomas Meyer, Mario Förster</label>
+        
+                </div>
+            </div>
+
+            <div class="row aufgabe1">
+                <div class="col-md-12">
+                    <p id="cursor-change" Die <strong id='rueckgaben'></strong> <strong id='info'>Informationen</strong> <strong id='rueckgaben'>Rückgaben</strong> <strong id='zahlen'>zahlen</strong>
+                    
+                    </p>
+                </div>
+                
+                <div class="row mb-5">
+                    <div class="col">
+                        <p><button type="button" class="btn btn-primary float-end" onClick="markWords()">Überprüfen</button></p>
+                    </div>  
+                </div>
+            </div>    
+
+            <div class="row justify-content-center text-center">
+                <div class="col-md-8 bg-light rounded">
+                    <p><code class="normal-code">DELETE FROM Personal;</code></p>
+                    
+                    <div id="tabelle-datensatz" class="collapse">
+                        <table class="table table-bordered table-responsive table-hover caption-top">
+                            <caption>Ausgangstabelle Personal</caption>
+                            <thead>
+                                <tr>
+                                    <th>PersNr</th>
+                                    <th>Name</th>
+                                    <th>FamStatus</th>
+                                    <th>Position</th>
+                                    <th>Gehalt</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Maria Schmidt</td>
+                                    <td>verheiratet</td>
+                                    <td>Sekretärin</td>
+                                    <td>4900</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Thomas Meyer</td>
+                                    <td>ledig</td>
+                                    <td>Praktikant</td>
+                                    <td>2000</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Hans Müller</td>
+                                    <td>ledig</td>
+                                    <td>Programmierer</td>
+                                    <td>5000</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Jürgen Schmidt</td>
+                                    <td>verheiratet</td>
+                                    <td>Verkäufer</td>
+                                    <td>5000</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Kathrin Schuster</td>
+                                    <td>geschieden</td>
+                                    <td>Personalleiterin</td>
+                                    <td>5400</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Mario Förster</td>
+                                    <td>ledig</td>
+                                    <td>Verkäufer</td>
+                                    <td>4800</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </p>
+            </div>
                 </div>
             </div>
         </div>
-      
+        
+        <div class="row mt-3 justify-content-center text-center">
+            <div class="col">
+                <div class="btn-group">
+                    <input type="radio" class="btn-check" name="options" id="option8">
+                    <label class="btn btn-outline-primary" for="option8">Mario Förster, Hans Müller</label>
+                    
+                    <input type="radio" class="btn-check" name="options" id="option9">
+                    <label class="btn btn-outline-primary" for="option9">Thomas Meyer</label>
+                    
+                    <input type="radio" class="btn-check" name="options" id="option10">
+                    <label class="btn btn-outline-primary" for="option10">Mario Förster</label>
+    
+            
+                </div>
+            </div>
+
+
+            <div class="row justify-content-center text-center">
+                <div class="col-md-8 bg-light rounded">
+                    <p><code class="normal-code">INSERT INTO Personal SET Gehalt = 900 WHERE Name = 'Kathrin Schuster';</code></p>
+                    
+                    <div id="tabelle-datensatz" class="collapse">
+                        <table class="table table-bordered table-responsive table-hover caption-top">
+                            <caption>Ausgangstabelle Personal</caption>
+                            <thead>
+                                <tr>
+                                    <th>PersNr</th>
+                                    <th>Name</th>
+                                    <th>FamStatus</th>
+                                    <th>Position</th>
+                                    <th>Gehalt</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Maria Schmidt</td>
+                                    <td>verheiratet</td>
+                                    <td>Sekretärin</td>
+                                    <td>4900</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Thomas Meyer</td>
+                                    <td>ledig</td>
+                                    <td>Praktikant</td>
+                                    <td>2000</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Hans Müller</td>
+                                    <td>ledig</td>
+                                    <td>Programmierer</td>
+                                    <td>5000</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Jürgen Schmidt</td>
+                                    <td>verheiratet</td>
+                                    <td>Verkäufer</td>
+                                    <td>5000</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Kathrin Schuster</td>
+                                    <td>geschieden</td>
+                                    <td>Personalleiterin</td>
+                                    <td>5400</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Mario Förster</td>
+                                    <td>ledig</td>
+                                    <td>Verkäufer</td>
+                                    <td>4800</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </p>
+            </div>
+                </div>
+            </div>
+        
+        <div class="row mt-3 justify-content-center text-center">
+            <div class="col">
+                <div class="btn-group">
+                    <input type="radio" class="btn-check" name="options" id="zahlen">
+                    <label class="btn btn-outline-primary" for="option11">Hier werden UPDATE und INSERT kombiniert. 
+                        Richtig wäre entweder INSERT INTO Personal (Gehalt) VALUES (900) WHERE Name = 'Kathrin Schuster'; 
+                        oder UPDATE Personal SET Gehalt = 900 WHERE Name = 'Kathrin Schuster';.</label>
+                    
+                    <input type="radio" class="btn-check" name="options" id="rueckgaben">
+                    <label class="btn btn-outline-primary" for="option12">An dieser Anweisung ist nichts falsch. Man kann einen solchen Befehl nutzen.</label>
+                    
+                    <input type="radio" class="btn-check" name="options" id="info">
+                    <label class="btn btn-outline-primary" for="option13">Der einzige Fehler besteht darin, dass INSERT INTO genutzt wird. Der einzig richtige 
+                        Befehl wäre hier UPDATE Personal SET Gehalt = 900 WHERE Name = 'Kathrin Schuster';. INSERT TO kann man in diesem Fall gar nicht nutzen.
+                    </label>
+    
+                    
+                </div>
+            </div>
+        </div>
+            
+            
+
         <div class="row mt-2">
             <div class="col-md-3">
                 <p id="alertBox"></p>
@@ -163,9 +353,9 @@
             </div>  
         </div>
 
-        <div class="progress" style="height:25px">
+        <!--<div class="progress" style="height:25px">
             <div class="progress-bar progress-bar-striped" style="width:73%">73%</div>
-        </div>
+        </div>-->
 
     </div>
 </div>
