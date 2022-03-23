@@ -250,11 +250,24 @@ p {
     }
   }
 
-/* Orientierung für den Unteren Bereich des Glossars und der Formelsammlung */  
-footer {
-    background-color:#F2F2F2;
-    border:1px solid #DEDCD9;
-    /*gerundete Ecken*/
-    border-radius:5px;
-    clear:both;
-  }
+/* Orientierung für den Unteren Bereich des Glossars und der Formelsammlung. A-Z */  
+
+/*Fußzeile ul soll 20px
+Abstand auf allen Seiten haben und nicht
+im Listenstil*/
+footer ul{
+   float:left;
+   list-style:none;
+   padding:0px;
+   margin:20px;
+}
+
+footer ul li a {
+   text-decoration: none;
+}
+/*Richtet die Liste in der Fußzeile
+in einer Reihe.*/
+footer li{
+    margin-right:15px;
+    display:inline;
+}
