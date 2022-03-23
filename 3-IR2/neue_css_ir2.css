@@ -37,7 +37,7 @@ h1, h2, h3 {
 .page-pick .dropdown-menu {
     max-height: 300px;
     overflow: auto;
-  }
+}
 
 
 .navbar-nav > li > a:hover{
@@ -45,7 +45,7 @@ h1, h2, h3 {
 }
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;..");
-  }
+}
 
 
 .page-pick {
@@ -129,13 +129,12 @@ button:hover {
 #roccBtnSolution {
     float:right;
     display: flex;
-
+    
 }
 .roccResultInput {
     width: 100%;
     text-align: center;
 }
-
 
 @media screen and (max-width: 600px) {
     #roccVar {
@@ -151,20 +150,32 @@ button:hover {
     .roccResultInput {
         width: 70px;
     }
-
 }
 
 
 /* für seite 30 ff.*/
+.col {
+    margin: 1%;
+}
+
+div.gallery {
+    border: 1px solid #ccc;
+    width: 90px;
+}
+
+div.gallery img {
+    width: 50%;
+    margin-left: 18px;
+    margin-top: 2px;
+}
+
+div.desc {
+    padding: 5px;
+    text-align: center;
+}
 
 #task13{
     padding-bottom: 1%;
-}
-
-.col {
-    margin-top: 1%;
-    margin-right: 4%;
-    margin-bottom: 1%;
 }
 
 .dtmTable {
@@ -214,7 +225,7 @@ button:hover {
 
 .headerDice {
     text-align: center;
-   }
+}
 
 #content133 {
     margin-top: 2.5%;
@@ -248,15 +259,15 @@ button:hover {
     padding: 5px 12px;
     border-bottom: 2px solid white;
     border-right: 2px solid white; 
- 
-  }
+    
+}
 .dragtarget {
     background-color: var(--containerfarbe);
     text-align: center;
     width: 20%;
     float:left;
     margin:2px;
-  }
+}
 #checkAnswer {
     float: right;
 }
