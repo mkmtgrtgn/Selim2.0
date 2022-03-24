@@ -999,6 +999,90 @@
                     </div>
                 </div>
                 <hr class="hr-line">
+            <div>
+                <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Rocchio Algorithmus</h2>
+                <div class="glossar-definition">
+                    <p>Die übliche Relevance Feedback Methode ist die von Rocchio (Rocchio 1971),
+                        die in Verbindung mit dem <a href="formelsammlung.html#V"
+                                                     title="Alle Glossardefinitionen zu Buchstabe V">Vektor-Raum-Modell</a>
+                        genutzt wird.
+                        <br>
+                        <math>
+                            <mstyle displaystyle="true">
+                                <msub>
+                                    <mi>Q</mi>
+                                    <mn>1</mn>
+                                </msub>
+                                <mo>=</mo>
+                                <msub>
+                                    <mi>Q</mi>
+                                    <mn>0</mn>
+                                </msub>
+                                <mo>+</mo>
+                                <mi>&#x3B2;</mi>
+                                <munderover>
+                                    <mo>&#x2211;</mo>
+                                    <mrow>
+                                        <mi>i</mi>
+                                        <mo>=</mo>
+                                        <mn>1</mn>
+                                    </mrow>
+                                    <msub>
+                                        <mi>n</mi>
+                                        <mn>1</mn>
+                                    </msub>
+                                </munderover>
+                                <mfrac>
+                                    <msub>
+                                        <mi>R</mi>
+                                        <mi>i</mi>
+                                    </msub>
+                                    <msub>
+                                        <mi>n</mi>
+                                        <mi>i</mi>
+                                    </msub>
+                                </mfrac>
+                                <mo>-</mo>
+                                <mi>&#x3B3;</mi>
+                                <munderover>
+                                    <mo>&#x2211;</mo>
+                                    <mrow>
+                                        <mi>i</mi>
+                                        <mo>=</mo>
+                                        <mn>1</mn>
+                                    </mrow>
+                                    <msub>
+                                        <mi>n</mi>
+                                        <mn>2</mn>
+                                    </msub>
+                                </munderover>
+                                <mfrac>
+                                    <msub>
+                                        <mi>S</mi>
+                                        <mi>i</mi>
+                                    </msub>
+                                    <msub>
+                                        <mi>n</mi>
+                                        <mn>2</mn>
+                                    </msub>
+                                </mfrac>
+                            </mstyle>
+                        </math>
+                        <br/>
+                        wobei: Q1 = der Vektor der optimierten Suchanfrage <br/>
+                        Q0 = der Vektor der ursprünglichen Sugachanfrage <br/>
+                        Ri = der Vektor des relevanten Dokuments i<br/>
+                        Si = der Vektor des nicht relevanten Dokuments i<br/>
+                        n1 = Anzahl der als relevant bewerteten Dokumente<br/>
+                        n2 = Anzahl der als nicht relevant bewerteten Dokumente<br/>
+                        &beta; und &gamma; bestimmen die Gewichtung von relevanten und nicht relevanten Termen;
+                        die Werte sind nach eigenem Ermessen zu setzen. Studien zufolge werden sie am besten auf &beta;=
+                        0,75
+                        und &gamma;= 0,25 gesetzt.
+                    </p>
+                </div>
+            </div>
+            <hr class="hr-line">
                 <h2 id="S" class="page-header">  S</h2>
                 <div>
                     <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Stichprobenvarianz</h2>
