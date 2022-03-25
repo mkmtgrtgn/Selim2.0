@@ -1,5 +1,5 @@
 body {
-    font-family: Quicksand;
+    font-family: 'Quicksand' !important;
     --schriftfarbe: #232B2B;
     --containerfarbe: #D8EBEB;
     --verlinkungsfarbe: #DEC6AC;
