@@ -1,5 +1,4 @@
-/* Validierung Single Choice Radio Button */
-
+/* Single Choice Radio Button Funktion zur Korrektur */
 function radioVal() {
     jQuery("#alertBox").removeClass("padding bg-success bg-danger");
     jQuery("input.solution:checked").parent().addClass("correct");
