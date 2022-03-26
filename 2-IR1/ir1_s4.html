@@ -79,20 +79,134 @@
 
         <div class="container">
             <div class="row">
-                <div class="col">
-                    <h1>Aufgabe 1</h1>
 
-                    <p>Der Information Retrieval Prozess ergibt sich aus der Interaktion eines Benutzers mit einem
-                        Information Retrieval System. Bring die Phasen dieses Informationsprozesses in eine sinnvolle
-                        Reihenfolge (1 bis 6).</p>
+                <h1>Aufgabe 1</h1>
+
+                <p>Der Information Retrieval Prozess ergibt sich aus der Interaktion eines Benutzers mit einem
+                    Information Retrieval System. Bring die Phasen dieses Informationsprozesses in eine sinnvolle
+                    Reihenfolge (1 bis 6).</p>
+
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <strong>Abgleich von Suchanfrage und Dokumentenbestand</strong>
+                </div>
+                
+                <div class="col">
+                    <select id="loesung4" class="form-select" aria-label="Default select example">
+                        <option selected>Phase...</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </div>
+            </div>
+            <br/>
+            <div class="row">
+                <div class="col">
+                    <strong>Informationsbedürfnis des Benutzers</strong>
+                </div>
+                
+                <div class="col">
+                    <select id="loesung1" class="form-select" aria-label="Default select example">
+                        <option selected>Phase...</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </div>
+            </div>
+            <br/>
+            <div class="row">
+                <div class="col">
+                    <strong>Verarbeitung der Suchanfrage durch das System</strong>
+                </div>
+                
+                <div class="col">
+                    <select id="loesung3"class="form-select" aria-label="Default select example">
+                        <option selected>Phase...</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </div>
+            </div>
+            <br/>
+            <div class="row">
+                <div class="col">
+                    <strong>Formulierung und Eingabe der Suchanfrage</strong>
+                </div>
+                
+                <div class="col">
+                    <select id="loesung2" class="form-select" aria-label="Default select example">
+                        <option selected>Phase...</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </div>
+            </div>
+            <br/>
+            <div class="row">
+                <div class="col">
+                    <strong>Benutzer sieht die für ihn relevanten Dokumente ein</strong>
+                </div>
+                
+                <div class="col">
+                    <select id="loesung6" class="form-select" aria-label="Default select example">
+                        <option selected>Phase...</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </div>
+            </div>
+<br/>
+            <div class="row">
+                <div class="col">
+                    <strong>Graphisch aufbereitete Präsentation der relevanten Dokumente</strong>
+                </div>
+                
+                <div class="col">
+                    <select id="loesung5" class="form-select" aria-label="Default select example">
+                        <option selected>Phase...</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
                 </div>
             </div>
 
-
+            <button id="buttonUeberpruefen" type="button" class="btn btn-primary" onClick="validateSolution()">Überprüfen</button>
 
         </div>
     </div>
 
 </body>
 
+<!-- jQuery -->
+<script src="./static/jQuery/jquery-3.6.0.min.js"></script>
+
 <script src="../static/js/bootstrap.bundle.js"></script>
+
+<!-- Functions -->
+<script type="text/javascript" src="js/s4_a1.js"></script>
