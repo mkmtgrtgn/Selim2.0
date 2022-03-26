@@ -48,7 +48,9 @@ body {
     background-color: var(--hintergrund);
 }
 
-
+.falsche-antwort {
+    background-color: red;
+}
 
 /*
 Da man Bootstrap-Klassen nicht so leicht überschreiben kann, einfach kopieren und ändern
