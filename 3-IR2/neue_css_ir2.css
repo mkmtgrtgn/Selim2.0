@@ -125,8 +125,9 @@ quizbutton {
 
 .progress {
     color: var(--hauptfarbe);
-    margin-bottom: 2%;
     margin-top: 3%;
+    top:60px;
+    position: relative;
 }
 
 #pageNavigation {
@@ -304,15 +305,16 @@ div.desc {
 
 /*Drag and Drop Seiten */
 .dragAdropTable {
-    width: 50%;
+    width: 40%;
     margin-left:auto;
     margin-right:auto;
     margin-top: 2%;
     margin-bottom: 2%;
-    border-collapse: separate;
+    border-collapse: collapse;
     border: 2px solid white;
     border-spacing: 0;
     text-align: left;
+    justify-content: space-around;
     background-color: var(--containerfarbe);
 }
 .dragAdropTable td {
@@ -320,6 +322,10 @@ div.desc {
     padding: 5px 12px;
     border-bottom: 2px solid white;
     border-right: 2px solid white; 
+    
+}
+.dragAdropTable th {
+    text-align: center; 
     
 }
 .dragtarget {
@@ -332,3 +338,5 @@ div.desc {
 #checkAnswer {
     float: right;
 }
+
+
