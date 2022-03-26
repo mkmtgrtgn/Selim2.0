@@ -90,10 +90,23 @@ p {
     background-color:rgba(255, 255, 255, 0.8);
 }
 
-quizbutton {
+.sql-answer {
+    padding: 12px;
+    font-size: 18px;
+}
+
+.hide {
+    display: none;
+}
+
+#correctStatement {
+    background-color: #53c553;
+}
+
+/* quizbutton {
     display:inline-block;
     float:right;
-}
+} */
 
 /* Formatierung des Abschlussquizzes nach dem Template von Gruppe 7*/
 
