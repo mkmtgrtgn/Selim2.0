@@ -4,10 +4,10 @@ function addSQL(event) {
     var valueTextField = jQuery('#textAreaLoesung').val();
 
     // Ersten Wert zurueck setzen bei Eingabe
-    if (valueTextField == 'Deine SQL-Anweisung..') {
-        jQuery('#textAreaLoesung').val('');
-        valueTextField = '';
-    }
+    //if (valueTextField == 'Deine SQL-Anweisung..') {
+    //    jQuery('#textAreaLoesung').val('');
+    //    valueTextField = '';
+    //}
 
     if (event.target.id == 'select') {
         // SELECT Option
@@ -45,6 +45,9 @@ function addSQL(event) {
     } else if (event.target.id == 'biggerAs') {
         // Groesser Option
         jQuery('#textAreaLoesung').val(valueTextField + '> ');
+    } else if (event.target.id == 'values') {
+        // Groesser Option
+        jQuery('#textAreaLoesung').val(valueTextField + 'VALUES ');
     }
 }
 
@@ -54,10 +57,10 @@ function addColumnValue() {
     var valueTextField = jQuery('#textAreaLoesung').val();
 
     // Ersten Wert zurueck setzen bei Eingabe
-    if (valueTextField == 'Deine SQL-Anweisung..') {
-        jQuery('#textAreaLoesung').val('');
-        valueTextField = '';
-    }
+    //if (valueTextField == 'Deine SQL-Anweisung..') {
+    //    jQuery('#textAreaLoesung').val('');
+    //    valueTextField = '';
+    //}
 
     if (jQuery('#selectedValue option:selected').text().toLowerCase() == 'persnr') {
         // Personalnummer Spalte aus der Tabelle Personal
@@ -77,7 +80,89 @@ function addColumnValue() {
     }
 }
 
+/** Validiert die Nutzereingaben */
 function validateSQL() {
+    // Textfeld Wert
+    let valueTextField = jQuery('#textAreaLoesung').val();
+
+    /** Richtige Loesung "INSERT INTO Personal VALUES (7, 'Steffen Wolfram', 'verheiratet', 'Programmierer', 4800)"; */
+    let arrayWerte = valueTextField.split('(');
+    let statement1 = arrayWerte[0].split(' ').filter(val => {
+        return val !== '';
+    });
+    let statement2 = arrayWerte[1]
+        .replaceAll(')', '')
+        .replaceAll("'", "")
+        .replaceAll('"', '')
+        .replaceAll(' ', '')
+        .split(',')
+        .filter(val => {
+            return val !== '';
+        });
+
+    // console.log(statement1, statement2);
+    let hinweise = '';
+
+    let correct = true;
+
+    if (statement1.length != 4) {
+        correct = false;
+    }
+    if (statement1.length != 5) {
+        correct = false;
+    }
+
+    if (!correct) {
+        hinweise += "das Statement"
+    }
+
+    if (correct) {
+
+        if (statement1[0].toLowerCase() !== 'insert') {
+            hinweise += " " + statement1[0] + ',';
+            correct = false;
+        }
+        if (statement1[1].toLowerCase() !== 'into') {
+            hinweise += " " + statement1[1] + ',';
+            correct = false;
+        }
+        if (statement1[2] !== 'Personal') {
+            hinweise += " " + statement1[2] + ',';
+            correct = false;
+        }
+        if (statement1[3].toLowerCase() !== 'values') {
+            hinweise += " " + statement1[3];
+            correct = false;
+        }
+        if (statement2[0] !== '7') {
+            hinweise += " " + statement2[0];
+            correct = false;
+        }
+        if (statement2[1] !== 'SteffenWolfram') {
+            hinweise += " " + statement2[1];
+            correct = false;
+        }
+        if (statement2[2] !== 'verheiratet') {
+            hinweise += " " + statement2[2];
+            correct = false;
+        }
+        if (statement2[3] !== 'Programmierer') {
+            hinweise += " " + statement2[3];
+            correct = false;
+        }
+        if (statement2[4] !== '4800') {
+            hinweise += " " + statement2[4];
+            correct = false;
+        }
+
+        hinweise = hinweise.replace(' ', '');
+
+    }
+    if (correct) {
+        document.getElementById('correction').innerHTML = "<p class='right-answer'>Richtige Loesung</p>";
+    } else {
+        document.getElementById('correction').innerHTML = `<p class='wrong-answer'>Leider nicht das richtige Statement. Bitte überprüfe <strong>${hinweise}</strong> und probiere es nochmal.</p>`;
+    }
 
 }
 

@@ -99,6 +99,7 @@
                         <button id="smallerAs" class="btn btn-light" onClick="addSQL(event)">
                             < </button>
                                 <button id="biggerAs" class="btn btn-light" onClick="addSQL(event)">></button>
+                                <button id="values" class="btn btn-light" onClick="addSQL(event)">VALUES</button>
                     </div>
                 </div>
                 <br>
@@ -108,8 +109,8 @@
                         <div class="col">
                             <!-- Textfeld Eingabe -->
                             <p>Bitte hier SQL-Anweisung eingeben:</p>
-                            <textarea class="form-control" id="textAreaLoesung"
-                                rows="3">Deine SQL-Anweisung..</textarea>
+                            <textarea class="form-control" id="textAreaLoesung" rows="3"
+                                placeholder="Deine SQL-Anweisung.."></textarea>
                         </div>
 
                         <div class="col">
@@ -137,11 +138,12 @@
                     <!-- Validieren Button -->
                     <div class="col">
                         <p></p>
-                        <button id="validateSql" type="button" class="btn btn-primary"
-                            onClick="validateSQL()">Überprüfen</button>
+                        <button type="button" class="btn btn-primary" onClick="validateSQL()">Überprüfen</button>
                     </div>
+                    <div class="col" id="correction">
+                        <!--Richtige Loesung: INSERT INTO Personal VALUES (7, "Steffen Wolfram", "verheiratet", "Programmierer", 4800)-->
 
-                    <div id="correction"></div>
+                    </div>
                 </div>
             </span>
         </span>
