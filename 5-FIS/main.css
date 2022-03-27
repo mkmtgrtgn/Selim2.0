@@ -55,6 +55,18 @@ Hier wollte er die Farbe sonst nicht ändern
 
 }
 
+/* Disabled Link Navbar */
+.nav-linkd {
+    color: #475656;
+    display: block;
+    padding: .5rem 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    text-decoration: none;
+    pointer-events: none;
+
+}
+
 #content {
     background-color: var(--hintergrund);
     padding:4%;
