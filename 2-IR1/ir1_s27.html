@@ -79,63 +79,67 @@
 
         <div class="container">
             <div class="row">
-                <div class="col">
-                    <h1>Aufgabe 10: Dokumentenanalyse</h1>
-                </div>
+
+                <h1>Aufgabe 10: Dokumentenanalyse</h1>
+                <p>Nach dem "Run" auf den lang erwarteten vierten Harry-Band, zieht auch schon der fünfte Band nach,
+                    obwohl ein Erscheinungstermin noch längst nicht feststeht (der Verlag kann noch keine
+                    Terminangaben machen, Frau Rowling selbst hält sich ebenfalls noch bedeckt), warten Fans aus
+                    aller Welt auf die Fortsetzung des Harry-Abenteuers. Jetzt scheint es sicher zu sein: erst 2003
+                    wird er vorliegen, sowohl in der englischen als auch in der deutschen Ausgabe.
+                </p>
+
             </div>
-
-
             <div class="row">
-                <div class="col">
-                    <p>Nach dem "Run" auf den lang erwarteten vierten Harry-Band, zieht auch schon der fünfte Band nach,
-                        obwohl ein Erscheinungstermin noch längst nicht feststeht (der Verlag kann noch keine
-                        Terminangaben machen, Frau Rowling selbst hält sich ebenfalls noch bedeckt), warten Fans aus
-                        aller Welt auf die Fortsetzung des Harry-Abenteuers. Jetzt scheint es sicher zu sein: erst 2003
-                        wird er vorliegen, sowohl in der englischen als auch in der deutschen Ausgabe.
-                    </p>
-                </div>
-            </div>
-            <br>
-            <td>
-                <div class="center">
+                <div class="col" class="center">
                     <p>Indexiere den Text und gehen dabei wie ein automatisches System vor. Entferne die
                         Stoppwörter und reduziere die Terme auf ihre Stamm- und Grundformen. Schreib die
                         Deskriptoren in das erste Eingabefenster.
-                        <input type="text" name="textfield3">
+
                     </p>
                 </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop">
-                            Überprüfen
-                        </button>
-                    </div>
+                <div class="col">
+                    <br />
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Deine Lösung...">
                 </div>
-                <br>
-                </br>
-            </td>
-            <td>
-                <div class="center">
+            </div>
+
+            <button type="button" class="btn btn-primary float-end" onClick="validate(event)" id="antwort1">
+                Überprüfen
+            </button>
+            <br/>
+            <div id="rueckmeldung"></div>
+
+            <br/>
+            <br/>
+
+            <div class="row">
+                <div class="col" class="center">
                     <p>Nutze das zweite Eingabefenster dazu, den Text manuell zu indexieren (ohne kontrolliertes
                         Vokabular). Diskutiere die Unterschiede und die damit verbundenen Auswirkungen auf das
                         Retrieval.
-                        <input type="text" name="textfield3">
                     </p>
                 </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop">
-                            Überprüfen
-                        </button>
-                    </div>
+                <div class="col">
+                    <br />
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Deine Lösung...">
                 </div>
-            </td>
+            </div>
+
+            <button type="button" class="btn btn-primary float-end" onClick="solution(event)" id="antwort2">
+                Überprüfen
+            </button>
+            <br/>
+            <div id="rueckmeldung2"></div>
 
         </div>
     </div>
 
 </body>
 
+<!-- jQuery -->
+<script src="js/jquery-3.6.0.min.js"></script>
+
 <script src="../static/js/bootstrap.bundle.js"></script>
+
+<!-- Functions -->
+<script type="text/javascript" src="js/s27.js"></script>
