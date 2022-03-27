@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="neue_css_ir2.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Header, Navbar und Pageination von DARIA MASLOV-->
+     <!-- Der Font muss noch importiert werden -->
+     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;600;700&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid">
+
+        <!--Navigationsleiste-->
+        <nav class="navbar navbar-light navbar-expand-lg navbar-fixed-top">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Navbar Brand: Logo der Uni Hildesheim, sowie unser Modulname-->
+                <a class="navbar-brand">
+                    <!--Desktop und Tablet/großer oder mittel-großer Viewport; Klick auf Bild soll dann auf die erste Seite/eine Einfürungsseite führen-->
+                    <span class="d-none d-sm-block">
+                        <!--Uni-Logo sowie lange Bezweichnung unseres Moduls-->
+                        <img class="d-inline-block align-text-center" src="../uni_logo.png" width="70" height="70" alt="Universität Hildesheim" style="padding-right: 20;">
+                        SELiM - IR Retrievalstrategien
+                        
+                    </span>
+                    <!--Handy/kleiner Viewport - Abkürzung der Bezeichnung unseres Viewports-->
+                    <span class="d-sm-none">IR2</span> 
+                </a>
+                
+                <!--Menü für verschiedene Module-->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.uni-hildesheim.de/selim/miniTemplateSystem/index.php">Startseite</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Alle SELiM Module</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="https://www.uni-hildesheim.de/selim/Modul_GDI/GDI_Einstieg.php" >Grundbegriffe IW</a></li>
+                                <li><a class="dropdown-item" href="https://www.uni-hildesheim.de/selim/Modul_IR/IR_1_bekog_SELIM/inhalt.php">Information Retrieval 1</a></li>
+                                <li><a class="dropdown-item" href="https://www.uni-hildesheim.de/selim/Modul_IR/IR_3_bekog_SELIM/r_inhalt.php">Information Retrieval 3</a></li>
+                                <li><a class="dropdown-item" href="https://www.uni-hildesheim.de/selim/miniTemplateSystem/module/evaIR/inhalt_eva.php">Evaluierung von IR Systemen</a></li>
+                                <li><a class="dropdown-item" href="https://www.uni-hildesheim.de/selim/miniTemplateSystem/module/fis/inhalt_fis.php">Fakteninformationssysteme</a></li>
+                                <li><a class="dropdown-item" href="https://www.uni-hildesheim.de/selim/miniTemplateSystem/module/mue/inhalt_mue.php">Maschinelle Übersetzung</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.uni-hildesheim.de/selim/miniTemplateSystem/glossar/glossar.php">Glossar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.uni-hildesheim.de/selim/miniTemplateSystem/formelsammlung/formelsammlung.php">Formelsammlung</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--Seiteninhalt /// Hier könnt ihr euren Inhalt eintragen-->
+    <div id="content">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1>&Uuml;bung 11: Relevance Feedback</h1>
+                    
+                    <span style="padding-bottom:5px;"><b><font size="4">Aufgabe:</font></b></span>
+                    <span>Relevance Feedback Methoden sind entwickelt worden, um den Informationsbedarf eines Nutzers besser zu bestimmen. Bringen Sie die Elemente des Informationsprozesses mit einem IR-System, das Relevance Feedback berücksichtigt in eine sinnvolle Reihenfolge. </span>
+                </div>
+            </div> 
+            <div class = "tables26">
+                <table class="dragAdropTable26">
+                    <tr>
+                        <td width="10%"><b>1.</b></td>
+                        <td class ="droptarget26"></td>
+                    </tr>
+                    <tr>
+                        <td width="10%"><b>2.</b></td>
+                        <td class ="droptarget26"></td>
+                    </tr>
+                    <tr>
+                        <td width="10%"><b>3.</b></td>
+                        <td class ="droptarget26"></td>
+                    </tr>
+                    <tr>
+                        <td width="10%" class ="question"><b>4.</b></td>
+                        <td class ="droptarget26"></td>
+                    </tr>
+                    <tr>
+                        <td width="10%"><b>5.</b></td>
+                        <td class ="droptarget26"></td>
+                    </tr>
+                    <tr>
+                        <td width="10%"><b>6.</b></td>
+                        <td class ="droptarget26"></td>
+                </table>
+                <div class="collapse multi-collapse" id="solution26">
+              
+                            <table class="solutionTable26">
+                                <tr >
+                                    <th colspan="2">Lösung</th>
+                                </tr>
+                                <tr>
+                                    <td width="10%"><b>1.</b></td>
+                                    <td>Nutzer stellt Anfrage an das System</td>
+                                </tr>
+                                <tr>
+                                    <td width="10%"><b>2.</b></td>
+                                    <td>System berechnet relevante Dokumente</td>
+                                </tr>
+                                <tr>
+                                    <td width="10%"><b>3.</b></td>
+                                    <td>Ranking als Ausgabe</td>
+                                </tr>
+                                <tr>
+                                    <td width="10%"><b>4.</b></td>
+                                    <td>Relevanzbeurteilungen des Benutzers</td>
+                                </tr>
+                                <tr>
+                                    <td width="10%"><b>5.</b></td>
+                                    <td>Modifizierung der Anfrage</td>
+                                </tr>
+                                <tr>
+                                    <td width="10%"><b>6.</b></td>
+                                   <td>System berechnet erneut relevante Dokumente</td>
+                                </tr>
+                                </table>
+                            
+                        </div>
+                    
+                    </div>
+                    <div class ="Antworten" id ="antworten">
+                        <p draggable="true" class="dragtarget26" id="dragtarget">Relevanzbeurteilungen des Benutzers</p>
+                        <p draggable="true" class="dragtarget26" id="dragtarget">Nutzer stellt Anfrage an das System</p>
+                        <p draggable="true" class="dragtarget26" id="dragtarget">Ranking als Ausgabe</p>
+                        <p draggable="true" class="dragtarget26" id="dragtarget">System berechnet relevante Dokumente</p>
+                        <p draggable="true" class="dragtarget26" id="dragtarget">System berechnet erneut relevante Dokumente</p>
+                        <p draggable="true" class="dragtarget26" id="dragtarget">Modifizierung der Anfrage </p>
+                    </div> 
+                    <br>
+                 
+                    <button id="checkAnswer26" class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#solution26" aria-expanded="false"
+                    aria-controls="multiCollapseExampleC">Lösung anzeigen</button> 
+                  
+                    <div>
+                        <p id="demo"></p>
+                        <p id="result"></p>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="73"
+                        aria-valuemin="0" aria-valuemax="100" style="width:73.5%">
+                        <span class="sr-only">73,53% Complete</span>
+                        </div>
+                    </div>
+             
+        </div>
+    </div>       
+<!--Seitenzahl-->
+<div class="row justify-content-center">
+    <div class="col-lg-8 col-lg-offset-3 text-center">
+        <div class="page-pick">
+            <div class="btn-group dropup">
+                <a class="btn text-left btn-lg" href="ir2_seite25.html" role="button">
+                    <span class="d-none d-lg-block"><i class="bi bi-arrow-left-circle-fill"></i> vorherige Seite</i></span>
+                    <span class="d-lg-none"><i class="bi bi-arrow-left-circle-fill"></i></span> 
+                </a>
+                <button type="button" class="btn btn-lg" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="d-none d-md-block">26. &Uuml;bung 11: Relevance Feedback <i class="bi bi-chevron-compact-up"></i></span>
+                    <span class="d-md-none">Seite 26 <i class="bi bi-chevron-compact-up"></i></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <!--Link ändern-->
+                    <li><a class="dropdown-item " href="#" >
+                        <span class="d-none d-md-block">1. Lernziele</span>
+                        <span class="d-md-none">Seite 1</span> 
+                    </a></li>
+                    <!--Link ändern-->
+                    <li><a class="dropdown-item" href="#" >
+                        <span class="d-none d-md-block">2. Wiederholung: Was ist Information Retrieval</span>
+                        <span class="d-md-none">Seite 2</span> 
+                    </a></li>
+                    <!--Link ändern-->
+                    <li><a class="dropdown-item" href="#" >
+                        <span class="d-none d-md-block">3. Wiederholung: Information Retrieval Systeme</span>
+                        <span class="d-md-none">Seite 3</span> 
+                    </a></li>
+                    <li><a class="dropdown-item" href="#" >
+                        <span class="d-none d-md-block">4. &Uuml;bung 1: Inhaltserschließung</span>
+                        <span class="d-md-none">Seite 4</span> 
+                    </a></li>
+                    <li><a class="dropdown-item" href="ir2_seite5.html" >
+                        <span class="d-none d-md-block">5. &Uuml;bung 2: Dokumentenanalyse</span>
+                        <span class="d-md-none">Seite 5</span> 
+                    </a></li>
+                    <li><a class="dropdown-item" href="ir2_seite6.html" >
+                        <span class="d-none d-md-block">6. Retrieval</span>
+                        <span class="d-md-none">Seite 6</span> 
+                    </a></li>
+                    <li><a class="dropdown-item" href="ir2_seite7.html" >
+                        <span class="d-none d-md-block">7. &Uuml;bung 3: Wichtige Begriffe </span>
+                        <span class="d-md-none">Seite 7</span> 
+                    </a></li>
+                    <li><a class="dropdown-item" href="ir2_seite8.html" >
+                        <span class="d-none d-md-block">8. Retrieval als Ähnlichkeitsmessung</span>
+                        <span class="d-md-none">Seite 8</span> 
+                    </a></li>
+                    <li><a class="dropdown-item" href="ir2_seite9.html" >
+                        <span class="d-none d-md-block">9. IR-Paradigma</span>
+                        <span class="d-md-none">Seite 9</span> 
+                    </a></li>
+                    <li><a class="dropdown-item" href="ir2_seite10.html" >
+                        <span class="d-none d-md-block">10. Boole'sches Retrieval Modell</span>
+                        <span class="d-md-none">´Seite 10</span> 
+                    </a></li>
+                    <li><a class="dropdown-item" href="#" >
+                        <span class="d-none d-md-block">11. &Uuml;bung 4: Boole'sches Modell</span>
+                        <span class="d-md-none">Seite 11</span> 
+                    </a></li>
+                    <li><a class="dropdown-item" href="#" >
+                        <span class="d-none d-md-block">12. &Uuml;bung 5: Boole'sches Retrieval</span>
+                        <span class="d-md-none">Seite 12</span> 
+                    </a></li>
+                    <!--Link ändern-->
+                    <li><a class="dropdown-item" href="#" >
+                        <span class="d-none d-md-block">13. &Uuml;bung 6: Boole'sches Retrieval</span>
+                        <span class="d-md-none">Seite 13</span> 
+                    </a></li>
+                    <!--Link ändern-->
+                    <li><a class="dropdown-item" href="#" >
+                        <span class="d-none d-md-block">14. Ranking</span>
+                        <span class="d-md-none">Seite 14</span> 
+                    </a></li>
+                    
+                    <li><a class="dropdown-item" href="#" >
+                        <span class="d-none d-md-block">15. Beispiel: Ranking</span>
+                        <span class="d-md-none">Seite 15</span> 
+                    </a></li>
+                    <li><a class="dropdown-item" href="#" >
+                        <span class="d-none d-md-block">16. Gewichtete Indexierung</span>
+                        <span class="d-md-none">Seite 16</span> 
+                    </a></li>
+                    <li><a class="dropdown-item" href="ir2_seite17.html" >
+                        <span class="d-none d-md-block">17. Inverse Dokumenthäufigkeit</span>
+                        <span class="d-md-none">Seite 17</span> 
+                    </a></li>
+                    <li><a class="dropdown-item" href="#" >
+                        <span class="d-none d-md-block">18. &Uuml;bung 7: Inverse Dokumenthäufigkeit</span>
+                        <span class="d-md-none">Seite 18</span> 
+                    </a></li>
+                    <!--Link ändern-->
+                    <li><a class="dropdown-item" href="ir2_seite19.html" >
+                        <span class="d-none d-md-block">19.  &Uuml;bung 8: Inverse Dokumenthäufigkeit</span>
+                        <span class="d-md-none">Seite 19</span> 
+                    </a></li>
+                    <!--Link ändern-->
+                    <li><a class="dropdown-item" href="#" >
+                        <span class="d-none d-md-block">Ähnlichkeitsberechnung</span>
+                        <span class="d-md-none">Seite 20</span> 
+                    </a></li>
+                    <!--Link ändern-->
+                    <li><a class="dropdown-item" href="#" >
+                        <span class="d-none d-md-block">Vektor Raum Modell</span>
+                        <span class="d-md-none">Seite 21 </span> 
+                    </a></li>
+                    <!--Link ändern-->
+                    <li><a class="dropdown-item" href="#" >
+                        <span class="d-none d-md-block">22. Dokument Term Matrix</span>
+                        <span class="d-md-none">Seite 22</span> 
+                    </a></li>
+                    <!--Link ändern-->
+                    <li><a class="dropdown-item" href="#" >
+                        <span class="d-none d-md-block">23. &Uuml;bung 9: Vektor Raum Modell</span>
+                        <span class="d-md-none">Seite 23</span> 
+                    </a></li>
+                    <!--Link ändern-->
+                    <li><a class="dropdown-item" href="#" >
+                        <span class="d-none d-md-block">24. &Uuml;bung 10: Retrievalmodelle</span>
+                        <span class="d-md-none">Seite 24</span> 
+                    </a></li>
+                    <!--Link ändern-->
+                    <li><a class="dropdown-item" href="ir2_seite25.html" >
+                        <span class="d-none d-md-block">25. Relevance Feedback - Methoden</span>
+                        <span class="d-md-none">Seite 25</span> 
+                    </a></li>
+                    <!--Link ändern-->
+                    <li><a class="dropdown-item" href="ir2_seite26.html" >
+                        <span class="d-none d-md-block">26. &Uuml;bung 11: Relevance Feedback</span>
+                        <span class="d-md-none">Seite 26</span> 
+                    </a></li>
+                    <!--Link ändern-->
+                    <li><a class="dropdown-item" href="ir2_seite27.html" >
+                        <span class="d-none d-md-block">27. Relevance Feedback - Methoden</span>
+                        <span class="d-md-none">Seite 27</span> 
+                    </a></li>
+                    <!--Link ändern-->
+                    <li><a class="dropdown-item" href="ir2_seite28.html" >
+                        <span class="d-none d-md-block">28. &Uuml;bung 12: Relevance Feedback nach der Rocchio Formel</span>
+                        <span class="d-md-none">Seite 28</span> 
+                    </a></li>
+                    <!--Link ändern-->
+                    <li><a class="dropdown-item" href="ir2_seite29.html" >
+                        <span class="d-none d-md-block">29. &Uuml;bung 13: Indexierung und Retrieval</span>
+                        <span class="d-md-none">Seite 29</span> 
+                    </a></li>
+                    <!--Link ändern-->
+                    <li><a class="dropdown-item" href="ir2_seite30.html" >
+                        <span class="d-none d-md-block">30. &Uuml;bung 13: Indexierung und Retrieval</span>
+                        <span class="d-md-none">Seite 30</span> 
+                    </a></li>
+                    <!--Link ändern-->
+                    <li><a class="dropdown-item" href="ir2_seite31.html" >
+                        <span class="d-none d-md-block">31. &Uuml;bung 13: Indexierung und Retrieval</span>
+                        <span class="d-md-none">Seite 31</span> 
+                    </a></li>
+                    <!--Link ändern-->
+                    <li><a class="dropdown-item" href="ir2_seite32.html" >
+                        <span class="d-none d-md-block">32. &Uuml;bung 13: Gewichtete Indexierung und Retrieval</span>
+                        <span class="d-md-none">Seite 32</span> 
+                    </a></li>
+                    <!--Link ändern-->
+                    <li><a class="dropdown-item" href="ir2_seite33.html" >
+                        <span class="d-none d-md-block">33. Exkurs: Suchmaschinen</span>
+                        <span class="d-md-none">Seite 33</span> 
+                    </a></li>
+                    <!--Link ändern-->
+                    <li><a class="dropdown-item" href="ir2_seite34.html" >
+                        <span class="d-none d-md-block">34. Zusammenfassung</span>
+                        <span class="d-md-none">Seite 34</span> 
+                    </a></li>
+                </ul>
+                <a class="btn text-left btn-lg" href="ir2_seite27.html" role="button">
+                    <span class="d-none d-lg-block"> nächste Seite <i class="bi bi-arrow-right-circle-fill"></i></span>
+                    <span class="d-lg-none"><i class="bi bi-arrow-right-circle-fill"></i></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script type="text/javascript">var dragP;
+    /* Events fired on the drag target */
+    
+    document.addEventListener("dragstart", function (event) {
+        // The dataTransfer.setData() method sets the data type and the value of the dragged data
+        // event.dataTransfer.setData("Text", event.target.id);
+        dragP = event.target;
+
+        // Change the opacity of the draggable element
+        event.target.style.opacity = "0.4";
+    }); 
+    // Output some text when finished dragging the p element and reset the opacity
+    document.addEventListener("dragend", function (event) {
+        event.target.style.opacity = "1";
+        event.target.style.width ="100%";
+    });
+    
+    /* Events fired on the drop target */
+    
+    // When the draggable p element enters the droptarget, change the DIVS's border style
+    document.addEventListener("dragenter", function (event) {
+        if (event.target.className == "droptarget26") {
+            event.target.style.border = "3px dotted black";
+        }
+    });
+    
+    // By default, data/elements cannot be dropped in other elements. To allow a drop, we must prevent the default handling of the element
+    document.addEventListener("dragover", function (event) {
+        event.preventDefault();
+    });
+    
+    // When the draggable p element leaves the droptarget, reset the DIVS's border style
+    document.addEventListener("dragleave", function (event) {
+        if (event.target.className == "droptarget26") {
+            event.target.style.border = "";
+        }
+    });
+    
+    /* On drop - Prevent the browser default handling of the data (default is open as link on drop)
+       Reset the color of the output text and DIV's border-color
+       Get the dragged data with the dataTransfer.getData() method
+       The dragged data is the id of the dragged element ("drag1")
+       Append the dragged element into the drop element
+    */
+    
+    document.addEventListener("drop", function (event) {
+        event.preventDefault();
+        let targetDiv = event.target;
+        if (targetDiv.className == "droptarget26") {
+            document.getElementById("demo").style.color = "red";
+            targetDiv.style.border = "";
+            if (targetDiv.childElementCount != 0){
+                let childP = targetDiv.getElementsByTagName("p")[0];
+                document.getElementById("answer").appendChild(childP);
+            }
+            targetDiv.appendChild(dragP);
+            dragP = null;
+        }
+        
+    });
+    </script>
+</body>
+</html>

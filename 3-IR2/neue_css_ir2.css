@@ -427,6 +427,116 @@ div.desc {
     border-bottom: 2px solid white;
     border-right: 2px solid white;  
 }
+/*Seite 9*/
+.moreTextBtn {
+    color:#8EACAC;
+    margin-left:20px;
+}
+.moreText {
+    display: none;
+}
+.moreText--show {
+    display: inline;
+}
+.moreText2 {
+    display: none;
+}
+.moreText2--show {
+    display: inline;
+}
+.moreText3 {
+    display: none;
+}
+.moreText3--show {
+    display: inline;
+}
+/*Seite 10*/
+.text10 {
+    margin-left:60px;
+}
+/*Seite 17*/
+.text17 {
+    text-align: center;
+}
+.text172 {
+    text-align: center;
+    font-family: 'Quicksand' !important;
+    font-size: 25px;
+}
+/*Seite 26*/
+.tables26 {
+    display: flex;
+    justify-content: space;  
+}
+.dragAdropTable26 {
+    width: 30%;
+    margin-top: 2%;
+    margin-left: 20%;
+    margin-bottom: 2%;
+    border-collapse: collapse;
+    border: 2px solid white;
+    border-spacing: 0;
+    text-align: left;
+    justify-content: space-around;
+    background-color: var(--containerfarbe);
+}
+.dragAdropTable26 td {
+    
+    padding: 5px 12px;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;  
+}
+.solutionTable26 {
+    width: 110%;
+    margin-left:5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-collapse: collapse;
+    border: 2px solid white;
+    border-spacing: 0;
+    text-align: left;
+    justify-content: space-around;
+    background-color: var(--containerfarbe);
+}
+.solutionTable26 td {
+    text-align: left;
+    padding: 5px 12px;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white; 
+}
+.solutionTable26 th {
+    text-align: center; 
+}
+.dragtarget26 {
+    background-color: var(--containerfarbe);
+    text-align: center;
+    width: 30%;
+    float:left;
+    margin:2px;
+}
+#checkAnswer26 {
+    float: right;
+}
+/*Seite27*/
+.table27 {
+    width: 45%;
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-bottom: 2%;
+    border-collapse: collapse;
+    border: 2px solid white;
+    border-spacing: 0;
+    text-align: left;
+    justify-content: space-around;
+    background-color: var(--containerfarbe);
+}
+.table27 td{
+    padding: 5px 12px;
+    border-bottom: 2px solid white;  
+}
+.imgPage27 {
+    text-align: center;
+}
 
 /*Informations-Box für wichtige Informationen*/
 .infobox {
