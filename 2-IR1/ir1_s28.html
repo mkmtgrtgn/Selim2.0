@@ -102,14 +102,11 @@
                             Dokumente
                             gefunden.</p>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#staticBackdrop">
-                                Überprüfen
-                            </button>
-                        </div>
-                    </div>
+                    <button type="button" class="btn btn-primary float-end" onClick="validate(event)" id="antwort2">
+                        Überprüfen
+                    </button>
+                    <br/>
+                    <div id="rueckmeldung"></div>
                 </div>
 
             </div>
@@ -133,14 +130,11 @@
                             kann das zur Folge haben, daß irrelevante Dokumente in Betracht gezogen werden, also eine
                             Verschlechterung der Precision. </p>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#staticBackdrop">
-                                Überprüfen
-                            </button>
-                        </div>
-                    </div>
+                    <button type="button" class="btn btn-primary float-end" onClick="solution(event)" id="antwort2">
+                        Überprüfen
+                    </button>
+                    <br/>
+                    <div id="rueckmeldung2"></div>
 
                 </div>
             </div>
@@ -151,4 +145,10 @@
 
 </body>
 
+<!-- jQuery -->
+<script src="js/jquery-3.6.0.min.js"></script>
+
 <script src="../static/js/bootstrap.bundle.js"></script>
+
+<!-- Functions -->
+<script type="text/javascript" src="js/s28.js"></script>
