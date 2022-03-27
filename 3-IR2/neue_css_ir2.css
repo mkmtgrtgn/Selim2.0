@@ -364,7 +364,6 @@ div.desc {
 }
 .dragAdropTable7 {
     width: 70%;
-   
     margin-top: 2%;
     margin-bottom: 2%;
     border-collapse: collapse;
@@ -411,4 +410,20 @@ div.desc {
 #checkAnswer7 {
     float: right;
 }
-
+/*Seite 8*/
+.table8 {
+    width: 40%;
+    margin-left:20px;
+    border-collapse: collapse;
+    border: 2px solid white;
+    border-spacing: 0;
+    text-align: left;
+    justify-content: space-around;
+    background-color: var(--containerfarbe);
+}
+.table8 td {
+    
+    padding: 5px 12px;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;  
+}
