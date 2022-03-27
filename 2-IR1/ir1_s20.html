@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS und JS Bundle -->
+    <link href="../static/css/bootstrap.css" rel="stylesheet">
+    <link href="ir1.css" rel="stylesheet">
+
+    <!-- Der Font muss noch importiert werden -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;600;700&display=swap" rel="stylesheet">
+    <title>Selim 2.0</title>
+</head>
+<body>
+
+    <div class="navi">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon navbar-light"></span>
+                </button>
+                <!-- Navbar Brand: Logo der Uni Hildesheim-->
+                <a class="navbar-brand">
+                    <!--Desktop und Tablet/großer oder mittel-großer Viewport; Klick auf Bild soll dann auf die erste Seite/eine Einfürungsseite führen-->
+                    <span class="d-none d-sm-block">
+                        <!--Uni-Logo links in der Ecke-->
+                        <img class="d-inline-block align-text-center" src="../uni_logo.png" width="70" height="70"
+                            alt="Universität Hildesheim" style="padding-right: 20;">
+                    </span>
+                    <!--Handy/kleiner Viewport - Abkürzung der Bezeichnung unseres Viewports-->
+                    <span class="d-sm-none">Glossar</span>
+                </a>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-linki active" aria-current="page" href="../home.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-linki dropdown-toggle" href="#" id="navDrop1" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Module
+                            </a>
+                            <!--Verlinkungen zu den Modulen-->
+                            <ul class="dropdown-menu" aria-labelledby="navDrop1">
+                                <li><a class="dropdown-item bg" href="../1-GDI/gdi.html">Grundbegriffe IW</a></li>
+                                <li><a class="dropdown-item bg" href="../2-IR1/ir1.html">Information Retrieval 1</a>
+                                </li>
+                                <li><a class="dropdown-item bg" href="../3-IR2/ir2.html">Information Retrieval 2</a>
+                                </li>
+                                <li><a class="dropdown-item bg" href="../4-IR3/0_Allgemein.html">Information Retrieval
+                                        3</a></li>
+                                <li><a class="dropdown-item bg" href="../5-FIS/fis.html">Fakteninformationssysteme</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-linki active" aria-current="page" href="glossar.html">Glossar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-linki active" aria-current="page"
+                                href="formelsammlung.html">Formelsammlung</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div id="content">
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Stoppwortlisten</h1>
+                    
+                <div class="well" align="center"><p>Stoppwörter sind Wörter, die für die Textbedeutung irrelevant sind. Im Deutschen sind dies z.B. Artikel oder Konjunktionen.</p></div>
+            </div>
+        </div>
+        <p>Stoppwörter werden in sogenannten Stoppwortlisten (Negativlisten) festgehalten und über diese identifiziert. Meist haben sie einen Umfang von 100-1000 Wörtern. Jeder Term eines Dokuments wird mit der Stoppwortliste abgeglichen und bei Übereinstimmung elimiert. </p>
+            <p>Durch Verwendung von Stoppwortlisten wird der Umfang eines Textes auf etwa die Hälfte reduziert, was erhebliche Auswirkungen auf die spätere Verarbeitung hat. Stoppwortlisten müssen sorgfältig gewartet werden, um Fehler auszuschließen. So taucht das Wort "es" fast in jeder Stoppwortliste auf. In einem chemischen Text könnte es allerdings auch für das Element Einsteinium stehen. Groß- und Kleinschreibung kommen in diesem Fall nicht zum Tragen. 
+            </p>
+
+        <div class="row">
+            <div class="col">
+             
+            </tr>
+        </table>
+         
+        <table width='453' align='center'>
+                 <tr>
+                   <td width='84' valign='top'>Beispiele:</td>
+                   <td width='117'><a href='#'><img src='../../images/ir1/stopliste_de.gif' alt='Stopwortliste f&uuml;r Deutsch' width='100' height='100' border='0' onClick='MM_openBrWindow('bsp_stoppwortliste.php','StoppwortlisteDeutsch','scrollbars=yes,width=200,height=400')'></a></td>
+                   <td width='112' align='center' valign='middle'><a href='#'><img src='../../images/ir1/stopliste_en.gif' alt='Stoppwortliste f&uuml;r Englisch' width='100' height='100' border='0' onClick='MM_openBrWindow('bsp_stoppwortliste_en.php','StoppwortlisteEnglisch','scrollbars=yes,width=200,height=400')'></a></td>
+                   <td width='120' align='center' valign='middle'><a href='#'><img src='../../images/ir1/stopliste_fr.gif' alt='Stoppwortliste f&uuml;r Franz&ouml;sisch' width='100' height='100' border='0' onClick='MM_openBrWindow('bsp_stoppwortliste_fr.php','StoppwortlisteFranzoesisch','scrollbars=yes,width=200,height=400')'></a></td>
+                 </tr>
+        </table>
+                
+        </p>
+            </div>
+        </div>
+        
+
+    </div>
+</div>
+
+</body>
+
+<script src="../static/js/bootstrap.bundle.js"></script>
