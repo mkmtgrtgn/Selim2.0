@@ -69,113 +69,22 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1>&Uuml;bung 2 : Dokumentenanalyse</h1>
+                    <h1>Retrieval</h1>
                     
-                    <span style="padding-bottom:5px;"><b><font size="4">Aufgabe:</font></b></span>
-                    <span>Eine Methode der Inhaltserschlie&szlig;ung 
-                        ist die Indexierung, die eine Analyse der Dokumente beinhaltet. 
-                        In der Tabelle sind die Phasen einer Indexierung aufgelistet. Bringen 
-                        Sie diese in eine sinnvolle Reihenfolge.</span>
+                    <p>Durch die Inhaltserschließung ist die Vorarbeit für das Retrieval geleistet.</p></br>
+                    <p>Die Komponente Retrieval tritt erst bei einer konkreten Suchanfrage eines Benutzers in Aktion. 
+                    Nach der Eingabe der Suchanfrage in das System wird diese analysiert und in eine bestimmte Form gebracht,
+                     die für den Retrievalprozess geeignet ist <b>(Anfragerepräsentation)</b>. Die Dokumentenrepräsentation und die 
+                     Anfragerepräsentation werden miteinander verglichen <b>(Match)</b>. Nach der Abgleichung werden diejenigen Dokumente 
+                     ausgegeben, die das System aufgrund der Ähnlichkeit zwischen der Repräsentation der Dokumente und der 
+                     Repräsentation der Suchanfrage gefunden hat.</p>
+                     <div class="imgPage6">   
+                     <img src="images/seite6.png"/>
+                     </div>
+                     <p>Es existieren verschiedene <a  style="color: black" href="ir2_seite9.html">IR-Paradigmen</a> und Retrieval-Modelle.</p>
                 </div>
             </div> 
-            <div class = "tables">
-                <table class="dragAdropTable">
-                    <tr>
-                        <td width="10%"><b>1.</b></td>
-                        <td class ="droptarget"></td>
-                    </tr>
-                    <tr>
-                        <td width="10%"><b>2.</b></td>
-                        <td class ="droptarget"></td>
-                    </tr>
-                    <tr>
-                        <td width="10%"><b>3.</b></td>
-                        <td class ="droptarget"></td>
-                    </tr>
-                    <tr>
-                        <td width="10%" class ="question"><b>4.</b></td>
-                        <td class ="droptarget"></td>
-                    </tr>
-                    <tr>
-                        <td width="10%"><b>5.</b></td>
-                        <td class ="droptarget"></td>
-                    </tr>
-                    <tr>
-                        <td width="10%"><b>6.</b></td>
-                        <td class ="droptarget"></td>
-                    </tr>
-                    <tr>
-                        <td width="10%"><b>7.</b></td>
-                        <td class ="droptarget"></td>
-                    </tr>
-                    <tr>
-                        <td width="10%"><b>8.</b></td>
-                        <td class ="droptarget"></td>
-                    </tr>
-                </table>
-                <div class="collapse multi-collapse" id="solution">
-              
-                            <table class="solutionTable">
-                                <tr >
-                                    <th colspan="2">Lösung</th>
-                                </tr>
-                                <tr>
-                                    <td width="10%"><b>1.</b></td>
-                                    <td>Dokument</td>
-                                </tr>
-                                <tr>
-                                    <td width="10%"><b>2.</b></td>
-                                    <td>Analyse der Struktur</td>
-                                </tr>
-                                <tr>
-                                    <td width="10%"><b>3.</b></td>
-                                    <td>Lexikalische Analyse</td>
-                                </tr>
-                                <tr>
-                                    <td width="10%"><b>4.</b></td>
-                                    <td>Eliminierung der Stoppwörter</td>
-                                </tr>
-                                <tr>
-                                    <td width="10%"><b>5.</b></td>
-                                    <td>Stemming</td>
-                                </tr>
-                                <tr>
-                                    <td width="10%"><b>6.</b></td>
-                                   <td>Kompositazerlegung</td>
-                                </tr>
-                                <tr>
-                                    <td width="10%"><b>7.</b></td>
-                                    <td>Vergabe der Deskriptoren</td>
-                                </tr>
-                                <tr>
-                                    <td width="10%"><b>8.</b></td>
-                                    <td>Invertierter Index</td>
-                                </tr>
-                                </table>
-                            
-                        </div>
-                    
-                    </div>
-                    <div class ="Antworten" id ="antworten">
-                        <p draggable="true" class="dragtarget" id="dragtarget">Stemming</p>
-                        <p draggable="true" class="dragtarget" id="dragtarget">Dokument</p>
-                        <p draggable="true" class="dragtarget" id="dragtarget">Lexikalische Analyse</p>
-                        <p draggable="true" class="dragtarget" id="dragtarget">Invertierter Index</p>
-                        <p draggable="true" class="dragtarget" id="dragtarget">Analyse der Struktur</p>
-                        <p draggable="true" class="dragtarget" id="dragtarget">Kompositazerlegung</p>
-                        <p draggable="true" class="dragtarget" id="dragtarget">Vergabe der Deskriptoren</p>
-                        <p draggable="true" class="dragtarget" id="dragtarget">Eliminierung der Stoppwörter</p>
-                    </div> 
-                    <br>
-                 
-                    <button id="checkAnswer" class="btn btn-primary" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#solution" aria-expanded="false"
-                    aria-controls="multiCollapseExampleC">Lösung anzeigen</button> 
-                  
-                    <div>
-                        <p id="demo"></p>
-                        <p id="result"></p>
-                    </div>
+          
                     <div class="progress">
                         <div class="progress-bar" role="progressbar" aria-valuenow="73"
                         aria-valuemin="0" aria-valuemax="100" style="width:73.5%">
@@ -190,13 +99,13 @@
     <div class="col-lg-8 col-lg-offset-3 text-center">
         <div class="page-pick">
             <div class="btn-group dropup">
-                <a class="btn text-left btn-lg" href="#" role="button">
+                <a class="btn text-left btn-lg" href="ir2_seite5.html" role="button">
                     <span class="d-none d-lg-block"><i class="bi bi-arrow-left-circle-fill"></i> vorherige Seite</i></span>
                     <span class="d-lg-none"><i class="bi bi-arrow-left-circle-fill"></i></span> 
                 </a>
                 <button type="button" class="btn btn-lg" data-bs-toggle="dropdown" aria-expanded="false">
-                    <span class="d-none d-md-block">5. &Uuml;bung 2: Dokumentenanalyse <i class="bi bi-chevron-compact-up"></i></span>
-                    <span class="d-md-none">Seite 5 <i class="bi bi-chevron-compact-up"></i></span>
+                    <span class="d-none d-md-block">6. Retrieval <i class="bi bi-chevron-compact-up"></i></span>
+                    <span class="d-md-none">Seite 6 <i class="bi bi-chevron-compact-up"></i></span>
                 </button>
                 <ul class="dropdown-menu">
                     <!--Link ändern-->
@@ -358,7 +267,7 @@
                         <span class="d-md-none">Seite 34</span> 
                     </a></li>
                 </ul>
-                <a class="btn text-left btn-lg" href="ir2_seite6.html" role="button">
+                <a class="btn text-left btn-lg" href="ir2_seite7.html" role="button">
                     <span class="d-none d-lg-block"> nächste Seite <i class="bi bi-arrow-right-circle-fill"></i></span>
                     <span class="d-lg-none"><i class="bi bi-arrow-right-circle-fill"></i></span>
                 </a>
@@ -367,66 +276,5 @@
     </div>
 </div>
 </div>
-<script type="text/javascript">var dragP;
-    /* Events fired on the drag target */
-    
-    document.addEventListener("dragstart", function (event) {
-        // The dataTransfer.setData() method sets the data type and the value of the dragged data
-        // event.dataTransfer.setData("Text", event.target.id);
-        dragP = event.target;
-
-        // Change the opacity of the draggable element
-        event.target.style.opacity = "0.4";
-    }); 
-    // Output some text when finished dragging the p element and reset the opacity
-    document.addEventListener("dragend", function (event) {
-        event.target.style.opacity = "1";
-        event.target.style.width ="100%";
-    });
-    
-    /* Events fired on the drop target */
-    
-    // When the draggable p element enters the droptarget, change the DIVS's border style
-    document.addEventListener("dragenter", function (event) {
-        if (event.target.className == "droptarget") {
-            event.target.style.border = "3px dotted black";
-        }
-    });
-    
-    // By default, data/elements cannot be dropped in other elements. To allow a drop, we must prevent the default handling of the element
-    document.addEventListener("dragover", function (event) {
-        event.preventDefault();
-    });
-    
-    // When the draggable p element leaves the droptarget, reset the DIVS's border style
-    document.addEventListener("dragleave", function (event) {
-        if (event.target.className == "droptarget") {
-            event.target.style.border = "";
-        }
-    });
-    
-    /* On drop - Prevent the browser default handling of the data (default is open as link on drop)
-       Reset the color of the output text and DIV's border-color
-       Get the dragged data with the dataTransfer.getData() method
-       The dragged data is the id of the dragged element ("drag1")
-       Append the dragged element into the drop element
-    */
-    
-    document.addEventListener("drop", function (event) {
-        event.preventDefault();
-        let targetDiv = event.target;
-        if (targetDiv.className == "droptarget") {
-            document.getElementById("demo").style.color = "red";
-            targetDiv.style.border = "";
-            if (targetDiv.childElementCount != 0){
-                let childP = targetDiv.getElementsByTagName("p")[0];
-                document.getElementById("answer").appendChild(childP);
-            }
-            targetDiv.appendChild(dragP);
-            dragP = null;
-        }
-        
-    });
-    </script>
 </body>
 </html>

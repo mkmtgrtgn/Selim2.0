@@ -299,15 +299,10 @@ div.desc {
 
 
 
-
-
-
-
-/*Drag and Drop Seiten */
+/*Seite 5*/
 .tables {
     display: flex;
-    justify-content: space;
-    
+    justify-content: space;  
 }
 .dragAdropTable {
     width: 30%;
@@ -322,11 +317,10 @@ div.desc {
     background-color: var(--containerfarbe);
 }
 .dragAdropTable td {
-    text-align: center;
+    
     padding: 5px 12px;
     border-bottom: 2px solid white;
-    border-right: 2px solid white; 
-    
+    border-right: 2px solid white;  
 }
 .solutionTable {
     width: 100%;
@@ -345,11 +339,9 @@ div.desc {
     padding: 5px 12px;
     border-bottom: 2px solid white;
     border-right: 2px solid white; 
-    
 }
 .solutionTable th {
     text-align: center; 
-    
 }
 .dragtarget {
     background-color: var(--containerfarbe);
@@ -361,5 +353,62 @@ div.desc {
 #checkAnswer {
     float: right;
 }
-
+/*Seite 6*/
+.imgPage6 {
+    text-align: center;
+}
+/*Seite 7*/
+.tables7 {
+    display: flex;
+    justify-content: space;  
+}
+.dragAdropTable7 {
+    width: 70%;
+   
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-collapse: collapse;
+    border: 2px solid white;
+    border-spacing: 0;
+    text-align: left;
+    justify-content: space-around;
+    background-color: var(--containerfarbe);
+}
+.dragAdropTable7 td {
+    
+    padding: 5px 12px;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;  
+}
+.solutionTable7 {
+    width: 100%;
+    margin-left:5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-collapse: collapse;
+    border: 2px solid white;
+    border-spacing: 0;
+    text-align: left;
+    justify-content: space-around;
+    background-color: var(--containerfarbe);
+}
+.solutionTable7 td {
+    text-align: left;
+    padding: 5px 12px;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white; 
+}
+.solutionTable7 th {
+    text-align: center; 
+}
+.dragtarget7 {
+    background-color: var(--containerfarbe);
+    text-align: left;
+    width: 50%;
+    float:left;
+    margin:2px;
+}
+#checkAnswer7 {
+    float: right;
+}
 
