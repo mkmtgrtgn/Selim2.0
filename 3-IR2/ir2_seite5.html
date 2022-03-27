@@ -76,49 +76,86 @@
                         ist die Indexierung, die eine Analyse der Dokumente beinhaltet. 
                         In der Tabelle sind die Phasen einer Indexierung aufgelistet. Bringen 
                         Sie diese in eine sinnvolle Reihenfolge.</span>
-
-                    <table class="dragAdropTable">
-                        <tr>
-                            <td width="10%"><b>1.</b></td>
-                            <td width="45%" class ="droptarget"></td>
-                            <td id ="lösung">Dokument</td>
-                        </tr>
-                        <tr>
-                            <td width="10%"><b>2.</b></td>
-                            <td width="45%" class ="droptarget"></td>
-                            <td id ="lösung">Analyse der Struktur</td>
-                        </tr>
-                        <tr>
-                            <td width="10%"><b>3.</b></td>
-                            <td width="45%" class ="droptarget"></td>
-                            <td id ="lösung">Lexikalische Analyse</td>
-                        </tr>
-                        <tr>
-                            <td width="10%" class ="question"><b>4.</b></td>
-                            <td width="45%" class ="droptarget"></td>
-                            <td id ="lösung">Eliminierung der Stoppwörter</td>
-                        </tr>
-                        <tr>
-                            <td width="10%"><b>5.</b></td>
-                            <td width="45%" class ="droptarget"></td>
-                            <td id ="lösung">Stemming</td>
-                        </tr>
-                        <tr>
-                            <td width="10%"><b>6.</b></td>
-                            <td width="45%" class ="droptarget"></td>
-                            <td id ="lösung">Kompositazerlegung</td>
-                        </tr>
-                        <tr>
-                            <td width="10%"><b>7.</b></td>
-                            <td width="45%" class ="droptarget"></td>
-                            <td id ="lösung">Vergabe der Deskriptoren</td>
-                        </tr>
-                        <tr>
-                            <td width="10%"><b>8.</b></td>
-                            <td width="45%" class ="droptarget"></td>
-                            <td id ="lösung">Invertierter Index</td>
-                        </tr>
-                    </table> 
+                </div>
+            </div> 
+            <div class = "tables">
+                <table class="dragAdropTable">
+                    <tr>
+                        <td width="10%"><b>1.</b></td>
+                        <td class ="droptarget"></td>
+                    </tr>
+                    <tr>
+                        <td width="10%"><b>2.</b></td>
+                        <td class ="droptarget"></td>
+                    </tr>
+                    <tr>
+                        <td width="10%"><b>3.</b></td>
+                        <td class ="droptarget"></td>
+                    </tr>
+                    <tr>
+                        <td width="10%" class ="question"><b>4.</b></td>
+                        <td class ="droptarget"></td>
+                    </tr>
+                    <tr>
+                        <td width="10%"><b>5.</b></td>
+                        <td class ="droptarget"></td>
+                    </tr>
+                    <tr>
+                        <td width="10%"><b>6.</b></td>
+                        <td class ="droptarget"></td>
+                    </tr>
+                    <tr>
+                        <td width="10%"><b>7.</b></td>
+                        <td class ="droptarget"></td>
+                    </tr>
+                    <tr>
+                        <td width="10%"><b>8.</b></td>
+                        <td class ="droptarget"></td>
+                    </tr>
+                </table>
+                <div class="collapse multi-collapse" id="solution">
+              
+                            <table class="solutionTable">
+                                <tr >
+                                    <th colspan="2">Lösung</th>
+                                </tr>
+                                <tr>
+                                    <td width="10%"><b>1.</b></td>
+                                    <td>Dokument</td>
+                                </tr>
+                                <tr>
+                                    <td width="10%"><b>2.</b></td>
+                                    <td>Analyse der Struktur</td>
+                                </tr>
+                                <tr>
+                                    <td width="10%"><b>3.</b></td>
+                                    <td>Lexikalische Analyse</td>
+                                </tr>
+                                <tr>
+                                    <td width="10%"><b>4.</b></td>
+                                    <td>Eliminierung der Stoppwörter</td>
+                                </tr>
+                                <tr>
+                                    <td width="10%"><b>5.</b></td>
+                                    <td>Stemming</td>
+                                </tr>
+                                <tr>
+                                    <td width="10%"><b>6.</b></td>
+                                   <td>Kompositazerlegung</td>
+                                </tr>
+                                <tr>
+                                    <td width="10%"><b>7.</b></td>
+                                    <td>Vergabe der Deskriptoren</td>
+                                </tr>
+                                <tr>
+                                    <td width="10%"><b>8.</b></td>
+                                    <td>Invertierter Index</td>
+                                </tr>
+                                </table>
+                            
+                        </div>
+                    
+                    </div>
                     <div class ="Antworten" id ="antworten">
                         <p draggable="true" class="dragtarget" id="dragtarget">Stemming</p>
                         <p draggable="true" class="dragtarget" id="dragtarget">Dokument</p>
@@ -130,9 +167,11 @@
                         <p draggable="true" class="dragtarget" id="dragtarget">Eliminierung der Stoppwörter</p>
                     </div> 
                     <br>
-                    <div>
-                    <button onclick="überprüfen" id="checkAnswer" class="btn btn-primary">Lösung anzeigen</button> 
-                    </div>
+                 
+                    <button id="checkAnswer" class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#solution" aria-expanded="false"
+                    aria-controls="multiCollapseExampleC">Lösung anzeigen</button> 
+                  
                     <div>
                         <p id="demo"></p>
                         <p id="result"></p>
@@ -143,8 +182,7 @@
                         <span class="sr-only">73,53% Complete</span>
                         </div>
                     </div>
-                </div>
-            </div> 
+             
         </div>
     </div>       
 <!--Seitenzahl-->
@@ -389,9 +427,6 @@
         }
         
     });
-  
-    
-   
     </script>
 </body>
 </html>

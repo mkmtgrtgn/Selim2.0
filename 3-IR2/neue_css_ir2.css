@@ -125,8 +125,9 @@ quizbutton {
 
 .progress {
     color: var(--hauptfarbe);
-    margin-bottom: 2%;
     margin-top: 3%;
+    top:60px;
+    position: relative;
 }
 
 #pageNavigation {
@@ -298,29 +299,49 @@ div.desc {
 
 
 
-
-
-
-
-/*Drag and Drop Seiten */
+/*Seite 5*/
+.tables {
+    display: flex;
+    justify-content: space;  
+}
 .dragAdropTable {
-    width: 50%;
-    margin-left:auto;
-    margin-right:auto;
+    width: 30%;
+    margin-left:30%;
     margin-top: 2%;
     margin-bottom: 2%;
-    border-collapse: separate;
+    border-collapse: collapse;
     border: 2px solid white;
     border-spacing: 0;
     text-align: left;
+    justify-content: space-around;
     background-color: var(--containerfarbe);
 }
 .dragAdropTable td {
+    
+    padding: 5px 12px;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;  
+}
+.solutionTable {
+    width: 100%;
+    margin-left:20%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-collapse: collapse;
+    border: 2px solid white;
+    border-spacing: 0;
+    text-align: left;
+    justify-content: space-around;
+    background-color: var(--containerfarbe);
+}
+.solutionTable td {
     text-align: center;
     padding: 5px 12px;
     border-bottom: 2px solid white;
     border-right: 2px solid white; 
-    
+}
+.solutionTable th {
+    text-align: center; 
 }
 .dragtarget {
     background-color: var(--containerfarbe);
@@ -331,4 +352,104 @@ div.desc {
 }
 #checkAnswer {
     float: right;
+}
+/*Seite 6*/
+.imgPage6 {
+    text-align: center;
+}
+/*Seite 7*/
+.tables7 {
+    display: flex;
+    justify-content: space;  
+}
+.dragAdropTable7 {
+    width: 70%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-collapse: collapse;
+    border: 2px solid white;
+    border-spacing: 0;
+    text-align: left;
+    justify-content: space-around;
+    background-color: var(--containerfarbe);
+}
+.dragAdropTable7 td {
+    
+    padding: 5px 12px;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;  
+}
+.solutionTable7 {
+    width: 100%;
+    margin-left:5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-collapse: collapse;
+    border: 2px solid white;
+    border-spacing: 0;
+    text-align: left;
+    justify-content: space-around;
+    background-color: var(--containerfarbe);
+}
+.solutionTable7 td {
+    text-align: left;
+    padding: 5px 12px;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white; 
+}
+.solutionTable7 th {
+    text-align: center; 
+}
+.dragtarget7 {
+    background-color: var(--containerfarbe);
+    text-align: left;
+    width: 50%;
+    float:left;
+    margin:2px;
+}
+#checkAnswer7 {
+    float: right;
+}
+/*Seite 8*/
+.table8 {
+    width: 40%;
+    margin-left:20px;
+    border-collapse: collapse;
+    border: 2px solid white;
+    border-spacing: 0;
+    text-align: left;
+    justify-content: space-around;
+    background-color: var(--containerfarbe);
+}
+.table8 td {
+    
+    padding: 5px 12px;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;  
+}
+
+/*Informations-Box für wichtige Informationen*/
+.infobox {
+    border-left: 1em;
+    border-style: solid;
+    border-color: #8EACAC;
+    padding: 0.5em;
+    color: #6f7172;
+}
+
+
+/*Bilder auf Inhaltsseiten*/
+.imageexample {
+    border-style: solid ;
+    border-color: #6f7172;
+    padding: 1.5em;
+    margin-top: 0.5em ;
+    margin-bottom: 0.5em;
+}
+
+/*Tabellen*/
+.tablematrix {
+    margin-top: 0.5em ;
+    margin-bottom: 0.5em;
+    border-collapse: separate;
 }
