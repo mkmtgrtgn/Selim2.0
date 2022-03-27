@@ -73,29 +73,28 @@
                         und
                         den Namen ihres Mannes angenommen."</strong>
                     <br>
-                <p>Formuliere dafür eine SQL-Anweisung, die die richtigen Änderung in der Tabelle <em>Personal</em> in
-                    deiner Datenbank vornimmt. </p>
-                <!--SELECT * FROM Personal und UPDATE Personal SET Name= 'Maria Müller' WHERE Name = 'Maria Schmidt'-->
+                <p>Formuliere dafür eine SQL-Anweisung, die die richtigen Änderung in der Tabelle <strong>
+                        <u>Personal</u>
+                    </strong> in deiner Datenbank vornimmt. </p>
                 </p>
                 <hr>
                 <!-- Optionen Buttons -->
                 <div class="container">
-                    <!-- TODO: Labels fett -->
                     <label class="form-label">Wähle einen SQL-Audruck aus:</label>
                     <div class="col">
-                        <button id="select" class="btn btn-light" onClick="addSQL()">SELECT</button>
-                        <button id="star" class="btn btn-light" onClick="addSQL()">*</button>
-                        <button id="from" class="btn btn-light" onClick="addSQL()">FROM</button>
-                        <button id="insertInto" class="btn btn-light" onClick="addSQL()">INSERT INTO</button>
-                        <button id="update" class="btn btn-light" onClick="addSQL()">UPDATE</button>
-                        <button id="set" class="btn btn-light" onClick="addSQL()">SET</button>
-                        <button id="delete" class="btn btn-light" onClick="addSQL()">DELETE FROM</button>
-                        <button id="where" class="btn btn-light" onClick="addSQL()">WHERE</button>
-                        <button id="equals" class="btn btn-light" onClick="addSQL()">=</button>
-                        <button id="equalsNot" class="btn btn-light" onClick="addSQL()">!=</button>
-                        <button id="smallerAs" class="btn btn-light" onClick="addSQL()">
+                        <button id="select" class="btn btn-light" onClick="addSQL(event)">SELECT</button>
+                        <button id="star" class="btn btn-light" onClick="addSQL(event)">*</button>
+                        <button id="from" class="btn btn-light" onClick="addSQL(event)">FROM</button>
+                        <button id="insertInto" class="btn btn-light" onClick="addSQL(event)">INSERT INTO</button>
+                        <button id="update" class="btn btn-light" onClick="addSQL(event)">UPDATE</button>
+                        <button id="set" class="btn btn-light" onClick="addSQL(event)">SET</button>
+                        <button id="delete" class="btn btn-light" onClick="addSQL(event)">DELETE FROM</button>
+                        <button id="where" class="btn btn-light" onClick="addSQL(event)">WHERE</button>
+                        <button id="equals" class="btn btn-light" onClick="addSQL(event)">=</button>
+                        <button id="equalsNot" class="btn btn-light" onClick="addSQL(event)">!=</button>
+                        <button id="smallerAs" class="btn btn-light" onClick="addSQL(event)">
                             < </button>
-                                <button id="biggerAs" class="btn btn-light" onClick="addSQL()">></button>
+                                <button id="biggerAs" class="btn btn-light" onClick="addSQL(event)">></button>
                     </div>
                 </div>
                 <br>
@@ -105,8 +104,8 @@
                         <div class="col">
                             <!-- Textfeld Eingabe -->
                             <p>Bitte hier SQL-Anweisung eingeben:</p>
-                            <textarea class="form-control" id="textAreaLoesung"
-                                rows="3">Deine SQL-Anweisung..</textarea>
+                            <textarea class="form-control" id="textAreaLoesung" placeholder="Deine SQL-Anweisung..."
+                                rows="3"></textarea>
                         </div>
 
                         <div class="col">
@@ -114,7 +113,7 @@
                             <div class="row">
                                 <div class="col">
                                     <!-- Select Menue für die Tabellenspalten -->
-                                    <select class="form-select" aria-label="Default select example">
+                                    <select id="selectedValue" class="form-select" aria-label="Default select example">
                                         <option selected>Spaltennamen..</option>
                                         <option value="1">PersNr</option>
                                         <option value="2">Name</option>
@@ -125,7 +124,7 @@
                                 </div>
                                 <div class="col">
                                     <button id="addSqlOptions" type="button" class="btn btn-primary"
-                                        onClick="addSQL()">Hinzufügen</button>
+                                        onClick="addColumnValue()">Hinzufügen</button>
                                 </div>
                             </div>
                         </div>
@@ -134,9 +133,156 @@
                     <!-- Validieren Button -->
                     <div class="col">
                         <p></p>
-                        <button id="validateSql" type="button" class="btn btn-primary"
-                            onClick="validateSQL()">Überprüfen</button>
+                        <button type="button" class="btn btn-primary" onClick="validateSQL()">Überprüfen</button>
+                        <p></p>
                     </div>
+                    <div class="col" id="correction">
+                        <!--SELECT * FROM Personal und UPDATE Personal SET Name= 'Maria Müller' WHERE Name = 'Maria Schmidt'-->
+                    </div>
+                    <!-- Ergebnistabelle Personal-->
+                    <div class="accordion hide" id="accordionSolution">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <strong>Ergebnistabelle Personal</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">PersNr</th>
+                                                <th scope="col">Name</th>
+                                                <th scope="col">FamStatus</th>
+                                                <th scope="col">Position</th>
+                                                <th scope="col">Gehalt</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr id="mariaZeile">
+                                                <th scope="row">1</th>
+                                                <td id="updateColumn">Maria Schmidt</td>
+                                                <td>verheiratet</td>
+                                                <td>Sekräterin</td>
+                                                <td>4900</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>Thomas Meyer</td>
+                                                <td>ledig</td>
+                                                <td>Praktikant</td>
+                                                <td>2000</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td>Hans Müller</td>
+                                                <td>ledig</td>
+                                                <td>Programmierer</td>
+                                                <td>5000</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">4</th>
+                                                <td>Jürgen Schmidt</td>
+                                                <td>verheiratet</td>
+                                                <td>Verkäufer</td>
+                                                <td>5000</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">5</th>
+                                                <td>Kathrin Schuster</td>
+                                                <td>geschieden</td>
+                                                <td>Personalleiterin</td>
+                                                <td>5400</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">6</th>
+                                                <td>Mario Forster</td>
+                                                <td>ledig</td>
+                                                <td>Verkäufer</td>
+                                                <td>4800</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ausgangstabelle Personal-->
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseZero" aria-expanded="true" aria-controls="collapseZero">
+                                    <strong>Ausgangstabelle Personal</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseZero" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">PersNr</th>
+                                                <th scope="col">Name</th>
+                                                <th scope="col">FamStatus</th>
+                                                <th scope="col">Position</th>
+                                                <th scope="col">Gehalt</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>Maria Schmidt</td>
+                                                <td>verheiratet</td>
+                                                <td>Sekräterin</td>
+                                                <td>4900</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>Thomas Meyer</td>
+                                                <td>ledig</td>
+                                                <td>Praktikant</td>
+                                                <td>2000</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td>Hans Müller</td>
+                                                <td>ledig</td>
+                                                <td>Programmierer</td>
+                                                <td>5000</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">4</th>
+                                                <td>Jürgen Schmidt</td>
+                                                <td>verheiratet</td>
+                                                <td>Verkäufer</td>
+                                                <td>5000</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">5</th>
+                                                <td>Kathrin Schuster</td>
+                                                <td>geschieden</td>
+                                                <td>Personalleiterin</td>
+                                                <td>5400</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">6</th>
+                                                <td>Mario Forster</td>
+                                                <td>ledig</td>
+                                                <td>Verkäufer</td>
+                                                <td>4800</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </span>
         </span>
@@ -149,6 +295,6 @@
 <!-- Bootstrap -->
 <script src="../../../static/js/bootstrap.bundle.js"></script>
 <!-- Functions -->
-<script type="javascript" src="js/sql-aufgabe5.js"></script>
+<script type="text/javascript" src="js/sql-aufgabe5.js"></script>
 
 <body>

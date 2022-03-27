@@ -77,13 +77,11 @@
                     einfügst:
                 </p>
 
-                <!-- TODO: Eventuell Tipp wenn gefragt geben: Tabelle besteht aus folgenden fünf Spalten: PersNr, Name, FamStatus, Position, Gehalt-->
                 <p><strong>7, Steffen Wolfram, verheiratet, Programmierer,
                         4800</strong></p>
                 <hr>
                 <!-- Optionen Buttons -->
                 <div class="container">
-                    <!-- TODO: Labels fett -->
                     <label class="form-label">Wähle einen SQL-Audruck aus:</label>
                     <div class="col">
                         <button id="select" class="btn btn-light" onClick="addSQL(event)">SELECT</button>
@@ -144,17 +142,17 @@
                         <!-- Loesung: INSERT INTO Personal VALUES (7, "Steffen Wolfram", "verheiratet", "Programmierer", 4800)-->
                     </div>
                     <br>
-                    <!-- Tabelle Personal-->
-                    <div class="accordion" id="accordionExample">
+                    <!-- Ergebnistabelle Personal-->
+                    <div class="accordion hide" id="accordionSolution">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOne">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    <strong>Ausgangstabelle Personal</strong>
+                                    <strong>Ergebnistabelle Personal</strong>
                                 </button>
                             </h2>
                             <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                                data-bs-parent="#accordionExample">
+                                data-bs-parent="#accordionSolution">
                                 <div class="accordion-body">
                                     <table class="table">
                                         <thead>
@@ -223,6 +221,78 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Ausgangstabelle Personal-->
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseZero" aria-expanded="true" aria-controls="collapseZero">
+                                    <strong>Ausgangstabelle Personal</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseZero" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">PersNr</th>
+                                                <th scope="col">Name</th>
+                                                <th scope="col">FamStatus</th>
+                                                <th scope="col">Position</th>
+                                                <th scope="col">Gehalt</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>Maria Schmidt</td>
+                                                <td>verheiratet</td>
+                                                <td>Sekräterin</td>
+                                                <td>4900</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>Thomas Meyer</td>
+                                                <td>ledig</td>
+                                                <td>Praktikant</td>
+                                                <td>2000</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td>Hans Müller</td>
+                                                <td>ledig</td>
+                                                <td>Programmierer</td>
+                                                <td>5000</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">4</th>
+                                                <td>Jürgen Schmidt</td>
+                                                <td>verheiratet</td>
+                                                <td>Verkäufer</td>
+                                                <td>5000</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">5</th>
+                                                <td>Kathrin Schuster</td>
+                                                <td>geschieden</td>
+                                                <td>Personalleiterin</td>
+                                                <td>5400</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">6</th>
+                                                <td>Mario Forster</td>
+                                                <td>ledig</td>
+                                                <td>Verkäufer</td>
+                                                <td>4800</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
 
                 </div>
 
