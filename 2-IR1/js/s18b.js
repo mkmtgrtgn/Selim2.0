@@ -2,7 +2,7 @@ function validate(event) {
     console.log(document.getElementById('antwort3').checked);
   
   
-     if (document.getElementById('antwort2').checked){
+     if (document.getElementById('antwort4').checked){
       var paragraph = "<p>";
       paragraph += "Die Antwort ist korrekt!";
       paragraph += "</p>";
