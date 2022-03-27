@@ -72,9 +72,8 @@
     </div>
 
     <div id="content">
-
-
-    <div class="container">
+        <div class="container">
+     
         <div class="row">
             <div class="col">
                 <h1>Aufgabe</h1>
@@ -82,44 +81,103 @@
                 <p>Welche Wortart eignet sich zunächst am besten als Deskriptor?</p>
             </div>
         </div>
-        <label type='text' class='btn btn-default btn-group btn-group-justified radioButton'>
-            <input   type='radio' name='aufgabe'/>
-            <span  > Adjektiv</span>
-        </label>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="antwort1">
+            <label class="form-check-label" for="flexRadioDefault1">
+                Adjektiv
+            </label>
+          </div>
         
-        <label type='text' class='btn btn-default btn-group btn-group-justified radioButton'>
-            <input type='radio' name='aufgabe' />
-            <span> Nomen</span>
-        </label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="antwort2">
+            <label class="form-check-label" for="flexRadioDefault1">
+                Nomen
+            </label>
+          </div>
         
-        <label type='text' class='btn btn-default btn-group btn-group-justified radioButton'>
-            <input class='solution' type='radio' name='aufgabe'	/>
-            <span class='solution'>Verben</span>
-        </label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="antwort3">
+            <label class="form-check-label" for="flexRadioDefault1">
+                Verben
+            </label>
+          </div>
         
-        <label type='text' class='btn btn-default btn-group btn-group-justified radioButton'>
-            <input  type='radio' name='aufgabe' />
-            <span > Partikel</span>
-        </label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="antwort4">
+            <label class="form-check-label" for="flexRadioDefault1">
+                Partikel
+            </label>
+          </div>
     
-        </div>
-
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <br />
-            <p id="alertBox"></p>
+        <div class="row">
+            <div class="col-md-12">
+                <button type="button" class="btn btn-primary pull-right" onClick="validate(event)">Abschicken</button>
+            </div>
+            <div id="rueckmeldung"></div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-12">
-            <button type="button" class="btn btn-primary pull-right" onClick="radioVal()">Abschicken</button>
-        </div>
-    </div>
+    
 
     </div>
 </div>
 
+ <!--Seitenzahl-->
+ <div class="row justify-content-center">
+    <div class="col-lg-8 col-lg-offset-3 text-center">
+        <div class="page-pick">
+            <div class="btn-group dropup">
+                <a class="btn text-left btn-lg" href="#" role="button">
+                    <span class="d-none d-lg-block"><i class="bi-arrow-left-circle-fill"></i> vorherige
+                        Seite</i></span>
+                    <span class="d-lg-none"><i class="bi bi-arrow-left-circle-fill"></i></span>
+                </a>
+                <button type="button" class="btn btn-lg" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="d-none d-md-block">Start Information Retrieval 1 <i
+                            class="bi bi-chevron-compact-up"></i></span>
+                    <span class="d-md-none">Seite 14 <i class="bi bi-chevron-compact-up"></i></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item " href="ir1.html">
+                            <span class="d-none d-md-block">Start Information Retrieval 1</span>
+                            <span class="d-md-none">Seite 1</span>
+                        </a></li>
+                    <li><a class="dropdown-item" href="ir1_s2.html">
+                            <span class="d-none d-md-block">2. Lernziele</span>
+                            <span class="d-md-none">Seite 2</span>
+                        </a></li>
+                    <li><a class="dropdown-item" href="ir1_s3.html">
+                            <span class="d-none d-md-block">3. Einordnung des Themas</span>
+                            <span class="d-md-none">Seite 3</span>
+                        </a></li>
+                    <li><a class="dropdown-item" href="ir1_s4.html">
+                            <span class="d-none d-md-block">4. Aufagbe: Die Phasen im IR </span>
+                            <span class="d-md-none">Seite 4</span>
+                        </a></li>
+                    <li><a class="dropdown-item" href="ir1_s5.html">
+                            <span class="d-none d-md-block">5. IR-Systeme</span>
+                            <span class="d-md-none">Seite 5</span>
+                        </a></li>
+                    <li><a class="dropdown-item" href="ir1_s7.html">
+                            <span class="d-none d-md-block">6. Aufgabe: Wichtige Begriffe</span>
+                            <span class="d-md-none">Seite 6</span>
+                        </a></li>
+                    <li><a class="dropdown-item" href="ir1_s8.html">
+                            <span class="d-none d-md-block">7. Indexierung</span>
+                            <span class="d-md-none">Seite 7</span>
+                        </a></li>
+                </ul>
+                <a class="btn text-left btn-lg" href="ir1_s2.html" role="button">
+                    <span class="d-none d-lg-block">nächste Seite <i
+                            class="bi bi-arrow-right-circle-fill"></i></span>
+                    <span class="d-lg-none"><i class="bi bi-arrow-right-circle-fill"></i></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 
+<!-- jQuery -->
+<script src="js/jquery-3.6.0.min.js"></script>
 <script src="../static/js/bootstrap.bundle.js"></script>
+<script src="js/s17.js"></script>
