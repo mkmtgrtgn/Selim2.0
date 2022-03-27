@@ -85,20 +85,23 @@
 
 
             <div class="row">
-                <div class="col">
-                    <p>In dieser Einheit lernst Du etwas über grundlegende Vorgehensweisen, Methoden und Techniken des
-                        Information Retrieval. Nach einem kurzen Überblick über die Methodik von Information Retrieval
-                        Systemen und den Informationsprozess folgen:
-                        <ul>
-                            <li><strong>Inhaltserschließung</strong> als eine Komponente des Information Retrieval</li>
-                            <li>den Prozess und Arten der <strong>Indexierung</strong> und ihre Hilfsmittel</li>
-                            <li>die Prozesse der <strong>Dokumentenanalyse</strong> und ihre Wirkungen auf das Retrieval
-                            </li>
-                            <li>Arten der <strong>Dokumentenrepräsentation</strong></li>
-                        </ul>
+            
+                    <p>Die n-gram-Methode misst Ähnlichkeiten zwischen Wörtern auf der Basis gemeinsamer Buchstabenkombinationen (n-grams).
+
+                        Die n-gram-Methode misst Ähnlichkeiten zwischen Wörtern auf der Basis gemeinsamer Buchstabenkombinationen (n-grams). Die sogennante n-gram-Methode wird als Stemming-Methode genutzt, obwohl sie zunächst keinen Stamm erzeugt, sondern die Terme nach ihrer Ähnlichkeit in Gruppen (sog. Cluster) einteilt. Zu jedem Cluster sucht sich das System den Stamm; dieser wird den Termen zugeordnet.
+                        
+                        Ein n-gram ist eine einfache Folge von Zeichen der Länge n. Je nach Länge der betrachteten Buchstabenkombinationen spricht man von unigram=1-gram, bigram=2-gram oder trigram = 3-gram. Bi- und Trigramme werden in der Regel überlappend angewendet.
+                        
+                        Eine bigram-Darstellung des Satzes: Das Wetter ist schön.
+                        
+                        (_,Das), (Das,Wetter), (Wetter,ist), (ist,schön), (schön,.), (.,_)
+                        
+                        Eine bigram-Darstellung des Wortes: Wetter.
+                        
+                        (_,We), (We,et), (et,te), (te,er), (er,_)   
                     </p>
-                </div>
-                <div class="col">
+            
+            
             </div>
 
 
