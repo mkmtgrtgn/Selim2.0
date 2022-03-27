@@ -427,3 +427,29 @@ div.desc {
     border-bottom: 2px solid white;
     border-right: 2px solid white;  
 }
+
+/*Informations-Box für wichtige Informationen*/
+.infobox {
+    border-left: 1em;
+    border-style: solid;
+    border-color: #8EACAC;
+    padding: 0.5em;
+    color: #6f7172;
+}
+
+
+/*Bilder auf Inhaltsseiten*/
+.imageexample {
+    border-style: solid ;
+    border-color: #6f7172;
+    padding: 1.5em;
+    margin-top: 0.5em ;
+    margin-bottom: 0.5em;
+}
+
+/*Tabellen*/
+.tablematrix {
+    margin-top: 0.5em ;
+    margin-bottom: 0.5em;
+    border-collapse: separate;
+}
