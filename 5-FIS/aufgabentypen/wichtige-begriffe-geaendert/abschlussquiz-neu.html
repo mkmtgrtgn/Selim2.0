@@ -13,6 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;600;700&display=swap" rel="stylesheet">
     <title>Selim 2.0</title>
 
+    <!-- Boostrap Icon Library -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
 </head>
 
 <body>
@@ -23,10 +26,20 @@
             <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon navbar-light"></span>
             </button>
-            <a class="navbar-brand" href="#">Selim</a>
+             <!-- Navbar Brand: Logo der Uni Hildesheim-->
+             <a class="navbar-brand" href="../../../home.html">
+                <span class="d-none d-sm-block">
+                    <img class="d-inline-block align-text-center" src="../../uni_logo.png" width="70" height="70" alt="Universität Hildesheim" style="padding-right: 20;">
+                </span>
+                <span class="d-sm-none">SELiM</span>
+            </a>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="av-item">
+                        <!-- Disabled Link: Modul Information -->
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">SELiM - FIS</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-linki active" aria-current="page" href="../../../home.html">Home</a>
                     </li>
@@ -62,7 +75,7 @@
                 <h1>Abschlussquiz</h1>
                 <h2>Wichtige Begriffe</h2>
                 <p>Zum Abschluss kannst du dein Wissen zu wichtigen Begriffen in Verbindung mit Fakteninformationssystemen, die du im Laufe dieses Moduls gelernt hast, 
-                    im Rahmen eines kleinen Quizzes testen:
+                    im Rahmen eines Quizzes testen:
                 </p>
             </div>
         </div>
@@ -166,6 +179,196 @@
                 </div>
             </div>
         </div>
+
+        <!-- Progress Bar -->
+        <div class="progress mt-5" style="height:25px">
+            <div class="progress-bar progress-bar-striped" style="width:95%">95%</div>
+        </div>
+
+        <!--Seitenzahl-->
+        <div class="row mt-5 justify-content-center">
+            <div class="col-lg-8 col-lg-offset-3 text-center">
+                <div class="page-pick">
+                    <div class="btn-group dropup">
+                        <a class="btn btn-light text-left btn-lg" href="#" role="button">
+                            <span class="d-none d-lg-block"><i class="bi bi-arrow-left-circle-fill"></i></span>
+                            <span class="d-lg-none"><i class="bi bi-arrow-left-circle-fill"></i></span> 
+                        </a>
+                        <button type="button" class="btn btn-light btn-lg" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="d-none d-md-block">39. Abschlussquiz<i class="bi bi-chevron-compact-up"></i></span>
+                            <span class="d-md-none">Seite 39<i class="bi bi-chevron-compact-up"></i></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" >
+                                <span class="d-none d-md-block">1. Einordnung des Themas</span>
+                                <span class="d-md-none">Seite 1</span> 
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" >
+                                <span class="d-none d-md-block">2. Begriffszusammenhänge</span>
+                                <span class="d-md-none">Seite 2</span> 
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" >
+                                <span class="d-none d-md-block">3. XYZ</span>
+                                <span class="d-md-none">Seite 3</span> 
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" >
+                                <span class="d-none d-md-block">4. XYZ</span>
+                                <span class="d-md-none">Seite 4</span> 
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" >
+                                <span class="d-none d-md-block">5. XYZ</span>
+                                <span class="d-md-none">Seite 5</span> 
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" >
+                                <span class="d-none d-md-block">6. XYZ</span>
+                                <span class="d-md-none">Seite 6</span> 
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" >
+                                <span class="d-none d-md-block">7. XYZ</span>
+                                <span class="d-md-none">Seite 7</span> 
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" >
+                                <span class="d-none d-md-block">8. XYZ</span>
+                                <span class="d-md-none">Seite 8</span> 
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" >
+                                <span class="d-none d-md-block">9. XYZ</span>
+                                <span class="d-md-none">Seite 9</span> 
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" >
+                                <span class="d-none d-md-block">10. XYZ</span>
+                                <span class="d-md-none">Seite 10</span> 
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" >
+                                <span class="d-none d-md-block">11. XYZ</span>
+                                <span class="d-md-none">Seite 11</span> 
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" >
+                                <span class="d-none d-md-block">12. XYZ</i></span>
+                                <span class="d-md-none">Seite 12</span> 
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" >
+                                <span class="d-none d-md-block">13. XYZ</span>
+                                <span class="d-md-none">Seite 13</span> 
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" >
+                                <span class="d-none d-md-block">14. XYZ</span>
+                                <span class="d-md-none">Seite 14</span> 
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" >
+                                <span class="d-none d-md-block">15. XYZ</span>
+                                <span class="d-md-none">Seite 15</span> 
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" >
+                                <span class="d-none d-md-block">16. XYZ</span>
+                                <span class="d-md-none">Seite 16</span> 
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" >
+                                <span class="d-none d-md-block">17. XYZ</span>
+                                <span class="d-md-none">Seite 17</span> 
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" >
+                                <span class="d-none d-md-block">18. XYZ</span>
+                                <span class="d-md-none">Seite 18</span> 
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" >
+                                <span class="d-none d-md-block">19. XYZ</span>
+                                <span class="d-md-none">Seite 19</span> 
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" >
+                                <span class="d-none d-md-block">20. XYZ</span>
+                                <span class="d-md-none">Seite 20</span> 
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" >
+                                <span class="d-none d-md-block">21. XYZ</span>
+                                <span class="d-md-none">Seite 21 </span> 
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" >
+                                <span class="d-none d-md-block">22. XYZ</span>
+                                <span class="d-md-none">Seite 22</span> 
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" >
+                                <span class="d-none d-md-block">23. XYZ</span>
+                                <span class="d-md-none">Seite 23</span> 
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" >
+                                <span class="d-none d-md-block">24. XYZ</span>
+                                <span class="d-md-none">Seite 24</span> 
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" >
+                                <span class="d-none d-md-block">25. XYZ</span>
+                                <span class="d-md-none">Seite 25</span> 
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" >
+                                <span class="d-none d-md-block">26. XYZ</span>
+                                <span class="d-md-none">Seite 26</span> 
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" >
+                                <span class="d-none d-md-block">27. XYZ</span>
+                                <span class="d-md-none">Seite 27</span> 
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" >
+                                <span class="d-none d-md-block">28. XYZ</span>
+                                <span class="d-md-none">Seite 28</span> 
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" >
+                                <span class="d-none d-md-block">29. XYZ</span>
+                                <span class="d-md-none">Seite 29</span> 
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" >
+                                <span class="d-none d-md-block">30. XYZ</span>
+                                <span class="d-md-none">Seite 30</span> 
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" >
+                                <span class="d-none d-md-block">31. XYZ</span>
+                                <span class="d-md-none">Seite 31</span> 
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" >
+                                <span class="d-none d-md-block">32. XYZ</span>
+                                <span class="d-md-none">Seite 32</span> 
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" >
+                                <span class="d-none d-md-block">33. XYZ</span>
+                                <span class="d-md-none">Seite 33</span> 
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" >
+                                <span class="d-none d-md-block">34. XYZ</span>
+                                <span class="d-md-none">Seite 34</span> 
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" >
+                                <span class="d-none d-md-block">35. XYZ</span>
+                                <span class="d-md-none">Seite 35</span> 
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" >
+                                <span class="d-none d-md-block">36. XYZ</span>
+                                <span class="d-md-none">Seite 36</span> 
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" >
+                                <span class="d-none d-md-block">37. XYZ</span>
+                                <span class="d-md-none">Seite 37</span> 
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" >
+                                <span class="d-none d-md-block">38. XYZ</span>
+                                <span class="d-md-none">Seite 38</span> 
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" >
+                                <span class="d-none d-md-block">39. XYZ</span>
+                                <span class="d-md-none">Seite 39</span> 
+                            </a></li>
+                            <li><a class="dropdown-item" href="#" >
+                                <span class="d-none d-md-block">40. XYZ</span>
+                                <span class="d-md-none">Seite 40</span> 
+                            </a></li>
+                        </ul>
+                        <a class="btn btn-light text-left btn-lg" href="#" role="button">
+                            <span class="d-none d-lg-block"><i class="bi bi-arrow-right-circle-fill"></i></span>
+                            <span class="d-lg-none"><i class="bi bi-arrow-right-circle-fill"></i></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 

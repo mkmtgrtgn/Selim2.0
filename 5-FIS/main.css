@@ -31,6 +31,14 @@ h1, h2, h3 {
 
 }
 
+/* Seitennavigation */
+.page-pick .dropdown-menu {
+    max-height: 150px;
+    overflow: auto;
+    background-color: #fbfbfb;
+    
+}
+
 /*
 Da man Bootstrap-Klassen nicht so leicht überschreiben kann, einfach kopieren und ändern
 - andernfalls einfach Bootstrap als Datei downloaden und selber modifizieren (nav-link->i).
