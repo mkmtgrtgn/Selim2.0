@@ -11,7 +11,7 @@
 
     <!-- Der Font muss noch importiert werden -->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;600;700&display=swap" rel="stylesheet">
-    <title>Selim 2.0</title>
+    <title>SELiM 2.0</title>
 </head>
 <body>
 <div class="navi">
@@ -20,11 +20,21 @@
             <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon navbar-light"></span>
             </button>
-            <a class="navbar-brand" href="home.html"><img src="bilder/uni_logo.svg" id="uni_logo" width="42px" height ="42px">SELiM </a>
+            <a class="navbar-brand">
+                <!--Desktop und Tablet/großer oder mittel-großer Viewport; Klick auf Bild soll dann auf die erste Seite/eine Einfürungsseite führen-->
+                <span class="d-none d-sm-block">
+                    <!--Uni-Logo links in der Ecke-->
+                    <img class="d-inline-block align-text-center" src="uni_logo.png" width="70" height="70" alt="Universität Hildesheim" style="padding-right: 20;">
+                </span>
+                <!--Handy/kleiner Viewport - Abkürzung der Bezeichnung unseres Viewports-->
+                <span class="d-sm-none">Home</span>
+            </a>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
+                    <li class="nav-item">
+                        <a class="nav-linki active" aria-current="page" href="../home.html">Home</a>
+                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-linki dropdown-toggle" href="#" id="navDrop1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Module
@@ -53,40 +63,46 @@
 <div id="content">
 
 
-
     <div class="container">
         <div class="row">
             <div class="col">
                 <h1>Willkommen bei SELiM!</h1>
-            </div>
-        </div>
-
-
-        <div class="row p-2">
-            <h5 class="m-2">
-                Diese Seite soll dabei helfen Interessierten die Grundbegriffe der Informationswissenschaft
-                näherzubringen und einen Überblick über die wichtigsten Themengebiete zu geben. Die verschiedenen
-                Module findet ihr über die Navigationsleiste.
-            </h5>
-            <h5 class="m-2">Es handelt sich hier um die Neuauflage bzw. die Aktualisierung des Selim Moduls, das ursprünglich
-                seit 2003 existiert und dementsprechend leicht in die Jahre gekommen war.</h5>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-6 text-center">
-                <p class="m-2 text-start">
-                    Wenn du dich durch die Seite durchgearbeitet hast und dein Wissen gerne weiter verfestigen
-                    oder nochmal überprüfen möchtest, kannst du das mit diesem Abschlussquiz tun.
+                <p> 
+                    SELiM ist eine interaktive Lernsoftware zu Inhalten aus der Informationswissenschaft.
                 </p>
+                </br>
                 <p>
-                    <a href="/7-PM-LTB-GMFCTN/abschlussquiz.html" class="btn btn-success">Abschlussquiz starten</a>
+                    Im Rahmen einer Projektarbeit wurden fünf Module sowie das Glossar und die Formelsammlung neu konzeptioniert. Wir hoffen, dass dadurch die Benutzbarkeit auf mobilen Geräten vereinfacht wurde.
+                    Natürlich kannst du das System auch auf deinem Desktopcomputer ausprobieren.
+                </p>
+                </br>
+                <p>
+                    Viel Spaß beim Lernen!
                 </p>
             </div>
         </div>
+
+
+        <div class="row">
+            <div class="col">
+                Verlinkung zu den jeweiligen Modulen?
+            </div>
+            <div class="col">
+                Verlinkung zu den jeweiligen Modulen?
+            </div>
+            <div class="col">
+                Verlinkung zu den jeweiligen Modulen?
+            </div>
+            <div class="col">
+                Verlinkung zu den jeweiligen Modulen?
+            </div>
+            <div class="col">
+                Verlinkung zu den jeweiligen Modulen?
+            </div>
+        </div>
+
+
     </div>
-
-
-</div>
-
 </div>
 
 </body>
