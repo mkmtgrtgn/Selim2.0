@@ -203,7 +203,7 @@ function validateSQL() {
     }
 
     if (correct) {
-        htmlToPublish.innerHTML = "<p class='sql-answer correct'>Richtige Loesung</p>";
+        htmlToPublish.innerHTML = "<p class='sql-answer correct'>Das war die richtige SQL-Anweisung. Gut gemacht!</p>";
         if (jQuery('#correctStatement').hasClass('hide')) {
             jQuery('#correctStatement').removeClass('hide');
         }
@@ -221,6 +221,6 @@ function validateSQL() {
         if (!jQuery('#accordionSolution').hasClass('hide')) {
             jQuery('#accordionSolution').addClass('hide');
         }
-        htmlToPublish.innerHTML = `<p class='sql-answer wrong'>Leider nicht das richtige Statement. Bitte überprüfe <strong>${hinweise}</strong> und probiere es nochmal.</p>`;
+        htmlToPublish.innerHTML = `<p class='sql-answer wrong'>Leider nicht die richtige SQL-Anweisung. Bitte überprüfe <strong>${hinweise}</strong> und probiere es nochmal.</p>`;
     }
 }

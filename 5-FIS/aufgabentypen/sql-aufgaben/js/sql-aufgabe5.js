@@ -244,7 +244,7 @@ function validateSQL() {
 
     if (correct) {
         document.getElementById("correction").innerHTML =
-            "<p class='sql-answer correct'>Richtige Loesung</p>";
+            "<p class='sql-answer correct'>Das war die richtige SQL-Anweisung. Gut gemacht!</p>";
         // Setze den aktualisierten Namen in die Tabelle
         let aktuellerName = statementArray[5].replaceAll(`"`, '').replaceAll(`'`, '');
         document.getElementById("updateColumn").innerHTML = aktuellerName;
@@ -263,7 +263,7 @@ function validateSQL() {
         document.getElementById("updateColumn").innerHTML = "Maria Schmidt";
         document.getElementById(
             "correction"
-        ).innerHTML = `<p class='sql-answer wrong'>Leider nicht das richtige Statement. Bitte überprüfe <strong>${hinweis}</strong> und probiere es nochmal.</p>`;
+        ).innerHTML = `<p class='sql-answer wrong'>Leider nicht die richtige SQL-Anweisung. Bitte überprüfe <strong>${hinweis}</strong> und probiere es nochmal.</p>`;
         if (jQuery("#mariaZeile").hasClass("right-background-color")) {
             jQuery("#mariaZeile").removeClass("right-background-color");
         }

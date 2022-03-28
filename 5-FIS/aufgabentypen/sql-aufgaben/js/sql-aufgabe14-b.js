@@ -289,7 +289,7 @@ function validateSQL() {
     }
 
     if (correct) {
-        htmlToPublish.innerHTML = "<p class='sql-answer correct'>Richtige Loesung</p>";
+        htmlToPublish.innerHTML = "<p class='sql-answer correct'>Das war die richtige SQL-Anweisung. Gut gemacht!</p>";
         // Schließe Standardtabelle um Loesung anzuzeigen
         // if (!jQuery('#accordionExample').hasClass('hide')) {
         //     jQuery('#accordionExample').addClass('hide');
@@ -299,7 +299,7 @@ function validateSQL() {
             jQuery('#accordionLoesung').removeClass('hide');
         }
     } else {
-        htmlToPublish.innerHTML = `<p class='sql-answer wrong'>Leider nicht das richtige Statement. Bitte überprüfe <strong>${hinweise}</strong> und probiere es nochmal.</p>`;
+        htmlToPublish.innerHTML = `<p class='sql-answer wrong'>Leider nicht die richtige SQL-Anweisung. Bitte überprüfe <strong>${hinweise}</strong> und probiere es nochmal.</p>`;
         // Entferne Hintergrund da falsch
         if (!jQuery('#accordionLoesung').hasClass('hide')) {
             jQuery('#accordionLoesung').addClass('hide');

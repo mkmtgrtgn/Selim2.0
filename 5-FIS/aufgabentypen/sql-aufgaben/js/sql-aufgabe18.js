@@ -266,7 +266,7 @@ function validateSQL() {
 
     if (correct) {
         document.getElementById("correction").innerHTML =
-            "<p class='sql-answer correct'>Richtige Loesung</p>";
+            "<p class='sql-answer correct'>Das war die richtige SQL-Anweisung. Gut gemacht!</p>";
 
         if (!jQuery("#collapseZero").hasClass("show")) {
             jQuery("#collapseZero").addClass("show");
@@ -277,7 +277,7 @@ function validateSQL() {
     } else {
         document.getElementById(
             "correction"
-        ).innerHTML = `<p class='sql-answer wrong'>Leider nicht das richtige Statement. Bitte überprüfe <strong>${hinweis}</strong> und probiere es nochmal.</p>`;
+        ).innerHTML = `<p class='sql-answer wrong'>Leider nicht die richtige SQL-Anweisung. Bitte überprüfe <strong>${hinweis}</strong> und probiere es nochmal.</p>`;
 
         if (jQuery("#collapseZero").hasClass("show")) {
             jQuery("#collapseZero").removeClass("show");

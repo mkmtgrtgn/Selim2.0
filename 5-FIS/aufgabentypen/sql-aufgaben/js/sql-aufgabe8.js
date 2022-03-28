@@ -191,7 +191,7 @@ function validateSQL() {
     }
 
     if (correct) {
-        htmlToPublish.innerHTML = "<p class='sql-answer correct'>Richtige Loesung</p>";
+        htmlToPublish.innerHTML = "<p class='sql-answer correct'>Das war die richtige SQL-Anweisung. Gut gemacht!</p>";
         // Setze hide Class um die Spalte zu "löschen"
         if (!jQuery('#kathrinSchusterZeile').hasClass('hide')) {
             jQuery('#kathrinSchusterZeile').addClass('hide');
@@ -204,7 +204,7 @@ function validateSQL() {
             jQuery('#accordionSolution').removeClass('hide');
         }
     } else {
-        htmlToPublish.innerHTML = `<p class='sql-answer wrong'>Leider nicht das richtige Statement. Bitte überprüfe <strong>${hinweise}</strong> und probiere es nochmal.</p>`;
+        htmlToPublish.innerHTML = `<p class='sql-answer wrong'>Leider nicht die richtige SQL-Anweisung. Bitte überprüfe <strong>${hinweise}</strong> und probiere es nochmal.</p>`;
         // Setze "löchen" zurueck durch Class remove
         if (jQuery('#kathrinSchusterZeile').hasClass('hide')) {
             jQuery('#kathrinSchusterZeile').removeClass('hide');

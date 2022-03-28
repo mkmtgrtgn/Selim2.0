@@ -257,7 +257,7 @@ function validateSQL() {
     }
 
     if (correct) {
-        htmlToPublish.innerHTML = "<p class='sql-answer correct'>Richtige Loesung</p>";
+        htmlToPublish.innerHTML = "<p class='sql-answer correct'>Das war die richtige SQL-Anweisung. Gut gemacht!</p>";
         // Setze Wert auf den neuen Wert
         document.getElementById('thomasGehalt').innerHTML = 2500;
         // Mache Hintergrund gruen
@@ -272,7 +272,7 @@ function validateSQL() {
             jQuery('#accordionSolution').removeClass('hide');
         }
     } else {
-        htmlToPublish.innerHTML = `<p class='sql-answer wrong'>Leider nicht das richtige Statement. Bitte überprüfe <strong>${hinweise}</strong> und probiere es nochmal.</p>`;
+        htmlToPublish.innerHTML = `<p class='sql-answer wrong'>Leider nicht die richtige SQL-Anweisung. Bitte überprüfe <strong>${hinweise}</strong> und probiere es nochmal.</p>`;
         // Setze Wert zurueck
         document.getElementById('thomasGehalt').innerHTML = 2000;
         // Entferne Hintergrund da falsch
