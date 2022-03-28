@@ -116,3 +116,15 @@ quizbutton {
     display: inline-block;
     float: right;
 }
+
+#button {
+    background-color: whitesmoke;
+    padding: 4%;
+    border: solid rgba(128, 128, 128, 0.42);
+    border-radius: 16px;
+    box-shadow: slategray 6px 6px 4px 6px;
+    margin: 1vh 2vw;
+    display: block;
+    overflow: auto;
+    min-height: 10vh;
+}
