@@ -15,251 +15,322 @@
     <title>Selim 2.0</title>
 </head>
 
-<!-- Navbar -->
-<div class="navi">
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon navbar-light"></span>
-            </button>
-            <!-- Navbar Brand: Logo der Uni Hildesheim-->
-            <a class="navbar-brand" href="../../../home.html">
-                <span class="d-none d-sm-block">
-                    <img class="d-inline-block align-text-center" src="../../uni_logo.png" width="70" height="70"
-                        alt="Universität Hildesheim" style="padding-right: 20;">
-                </span>
-                <span class="d-sm-none">SELiM</span>
-            </a>
+<body>
+    <!-- Navbar -->
+    <div class="navi">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon navbar-light"></span>
+                </button>
+                <!-- Navbar Brand: Logo der Uni Hildesheim-->
+                <a class="navbar-brand" href="../../../home.html">
+                    <span class="d-none d-sm-block">
+                        <img class="d-inline-block align-text-center" src="../../uni_logo.png" width="70" height="70"
+                            alt="Universität Hildesheim" style="padding-right: 20;">
+                    </span>
+                    <span class="d-sm-none">SELiM</span>
+                </a>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <!-- Disabled Link: Modul Information -->
-                    <li class="nav-item">
-                        <a class="nav-linkd disabled" href="#" tabindex="-1" aria-disabled="true">SELiM - FIS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-linki active" aria-current="page" href="../../../home.html">Home</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-linki dropdown-toggle" href="#" id="navDrop1" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Module
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navDrop1">
-                            <li><a class="dropdown-item bg" href="../../../1-GDI/gdi.html">GDI</a></li>
-                            <li><a class="dropdown-item bg" href="../../../2-IR1/ir1.html">IR1</a></li>
-                            <li><a class="dropdown-item bg" href="../../../3-IR2/ir2.html">IR2</a></li>
-                            <li><a class="dropdown-item bg" href="../../../4-IR3/ir3.html">IR3</a></li>
-                            <li><a class="dropdown-item bg" href="../../../5-FIS/inhaltsverzeichnis.html">FIS</a></li>
-                        </ul>
-                    </li>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <!-- Disabled Link: Modul Information -->
+                        <li class="nav-item">
+                            <a class="nav-linkd disabled" href="#" tabindex="-1" aria-disabled="true">SELiM - FIS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-linki active" aria-current="page" href="../../../home.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-linki dropdown-toggle" href="#" id="navDrop1" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Module
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navDrop1">
+                                <li><a class="dropdown-item bg" href="../../../1-GDI/gdi.html">GDI</a></li>
+                                <li><a class="dropdown-item bg" href="../../../2-IR1/ir1.html">IR1</a></li>
+                                <li><a class="dropdown-item bg" href="../../../3-IR2/ir2.html">IR2</a></li>
+                                <li><a class="dropdown-item bg" href="../../../4-IR3/ir3.html">IR3</a></li>
+                                <li><a class="dropdown-item bg" href="../../../5-FIS/inhaltsverzeichnis.html">FIS</a>
+                                </li>
+                            </ul>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-linki active" aria-current="page"
-                            href="../../../6-CSS-GLOSSAR-FRMLS/glossar.html">Glossar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-linki active" aria-current="page"
-                            href="../../../6-CSS-GLOSSAR-FRMLS/formelsammlung.html">Formelsammlung</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</div>
-
-<!-- Inhalt -->
-<div id="content">
-
-    <div class="container">
-        <span class="row">
-            <span class="col">
-                <h2>Aufgabe 18: SQL-Anweisung</h2>
-
-                <p>
-                <p>Formuliere eine SQL-Anweisung um eine Liste aller <strong>Namen</strong> deines <em>Personals</em>
-                    aus der Filiale <strong>City</strong>
-                    auszugeben, die einen <strong>Firmenwagen</strong> des Modells <strong>Ferrari</strong> fahren.
-                </p>
-                </p>
-
-                <hr>
-                <!-- Optionen Buttons -->
-                <div class="container">
-                    <!-- TODO: Labels fett -->
-                    <label class="form-label">Wähle einen SQL-Audruck aus:</label>
-                    <div class="col">
-                        <button id="select" class="btn btn-light" onClick="addSQL(event)">SELECT</button>
-                        <button id="star" class="btn btn-light" onClick="addSQL(event)">*</button>
-                        <button id="from" class="btn btn-light" onClick="addSQL(event)">FROM</button>
-                        <button id="insertInto" class="btn btn-light" onClick="addSQL(event)">INSERT INTO</button>
-                        <button id="update" class="btn btn-light" onClick="addSQL(event)">UPDATE</button>
-                        <button id="set" class="btn btn-light" onClick="addSQL(event)">SET</button>
-                        <button id="delete" class="btn btn-light" onClick="addSQL(event)">DELETE FROM</button>
-                        <button id="where" class="btn btn-light" onClick="addSQL(event)">WHERE</button>
-                        <button id="and" class="btn btn-light" onClick="addSQL(event)">AND</button>
-                        <button id="equals" class="btn btn-light" onClick="addSQL(event)">=</button>
-                        <button id="equalsNot" class="btn btn-light" onClick="addSQL(event)">!=</button>
-                        <button id="smallerAs" class="btn btn-light" onClick="addSQL(event)">
-                            < </button>
-                                <button id="biggerAs" class="btn btn-light" onClick="addSQL(event)">></button>
-                    </div>
+                        <li class="nav-item">
+                            <a class="nav-linki active" aria-current="page"
+                                href="../../../6-CSS-GLOSSAR-FRMLS/glossar.html">Glossar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-linki active" aria-current="page"
+                                href="../../../6-CSS-GLOSSAR-FRMLS/formelsammlung.html">Formelsammlung</a>
+                        </li>
+                    </ul>
                 </div>
-                <br>
-                <!-- Eingabefelder -->
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <!-- Textfeld Eingabe -->
-                            <p>Bitte hier SQL-Anweisung eingeben:</p>
-                            <textarea class="form-control" id="textAreaLoesung" placeholder="Deine SQL-Anweisung.."
-                                rows="3"></textarea>
-                        </div>
+            </div>
+        </nav>
+    </div>
 
+    <!-- Inhalt -->
+    <div id="content">
+
+        <div class="container">
+            <span class="row">
+                <span class="col">
+                    <h2>Aufgabe 18: SQL-Anweisung</h2>
+
+                    <p>
+                    <p>Formuliere eine SQL-Anweisung um eine Liste aller <strong>Namen</strong> deines
+                        <em>Personals</em>
+                        aus der Filiale <strong>City</strong>
+                        auszugeben, die einen <strong>Firmenwagen</strong> des Modells <strong>Ferrari</strong> fahren.
+                    </p>
+                    </p>
+
+                    <hr>
+                    <!-- Optionen Buttons -->
+                    <div class="container">
+                        <!-- TODO: Labels fett -->
+                        <label class="form-label">Wähle einen SQL-Audruck aus:</label>
                         <div class="col">
-                            <p>Wähle eine Tabellenspalte aus:</p>
-                            <div class="row">
-                                <div class="col">
-                                    <!-- Select Menue für die Tabellenspalten -->
-                                    <select id="selectedValue" class="form-select" aria-label="Default select example">
-                                        <option selected>Spaltennamen..</option>
-                                        <option value="1">PersNr</option>
-                                        <option value="2">Name</option>
-                                        <option value="3">FamStatus</option>
-                                        <option value="4">Position</option>
-                                        <option value="5">Gehalt</option>
-                                        <!-- Filial Nummer -->
-                                        <option value="6">FilialNr</option>
-                                        <!-- Firmenwagen Nummer -->
-                                        <option value="7">FWNr</option>
-                                        <!-- Modell Nummer -->
-                                        <option value="8">Modell</option>
-                                    </select>
-                                </div>
-                                <div class="col">
-                                    <button id="addSqlOptions" type="button" class="btn btn-primary"
-                                        onClick="addColumnValue()">Hinzufügen</button>
+                            <button id="select" class="btn btn-light" onClick="addSQL(event)">SELECT</button>
+                            <button id="star" class="btn btn-light" onClick="addSQL(event)">*</button>
+                            <button id="from" class="btn btn-light" onClick="addSQL(event)">FROM</button>
+                            <button id="insertInto" class="btn btn-light" onClick="addSQL(event)">INSERT INTO</button>
+                            <button id="update" class="btn btn-light" onClick="addSQL(event)">UPDATE</button>
+                            <button id="set" class="btn btn-light" onClick="addSQL(event)">SET</button>
+                            <button id="delete" class="btn btn-light" onClick="addSQL(event)">DELETE FROM</button>
+                            <button id="where" class="btn btn-light" onClick="addSQL(event)">WHERE</button>
+                            <button id="and" class="btn btn-light" onClick="addSQL(event)">AND</button>
+                            <button id="equals" class="btn btn-light" onClick="addSQL(event)">=</button>
+                            <button id="equalsNot" class="btn btn-light" onClick="addSQL(event)">!=</button>
+                            <button id="smallerAs" class="btn btn-light" onClick="addSQL(event)">
+                                < </button>
+                                    <button id="biggerAs" class="btn btn-light" onClick="addSQL(event)">></button>
+                        </div>
+                    </div>
+                    <br>
+                    <!-- Eingabefelder -->
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <!-- Textfeld Eingabe -->
+                                <p>Bitte hier SQL-Anweisung eingeben:</p>
+                                <textarea class="form-control" id="textAreaLoesung" placeholder="Deine SQL-Anweisung.."
+                                    rows="3"></textarea>
+                            </div>
+
+                            <div class="col">
+                                <p>Wähle eine Tabellenspalte aus:</p>
+                                <div class="row">
+                                    <div class="col">
+                                        <!-- Select Menue für die Tabellenspalten -->
+                                        <select id="selectedValue" class="form-select"
+                                            aria-label="Default select example">
+                                            <option selected>Spaltennamen..</option>
+                                            <option value="1">PersNr</option>
+                                            <option value="2">Name</option>
+                                            <option value="3">FamStatus</option>
+                                            <option value="4">Position</option>
+                                            <option value="5">Gehalt</option>
+                                            <!-- Filial Nummer -->
+                                            <option value="6">FilialNr</option>
+                                            <!-- Firmenwagen Nummer -->
+                                            <option value="7">FWNr</option>
+                                            <!-- Modell Nummer -->
+                                            <option value="8">Modell</option>
+                                        </select>
+                                    </div>
+                                    <div class="col">
+                                        <button id="addSqlOptions" type="button" class="btn btn-primary"
+                                            onClick="addColumnValue()">Hinzufügen</button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                    </div>
-                    <!-- Validieren Button -->
-                    <div class="col">
-                        <p></p>
-                        <button id="validateSql" type="button" class="btn btn-primary"
-                            onClick="validateSQL()">Überprüfen</button>
-                        <p></p>
-                    </div>
-                    <!-- Ergebnis der Überfrüfung -->
-                    <div class="col" id="correction"></div>
-                    <!-- Tabelle Personal-->
-                    <div class="accordion" id="accordionLoesung">
-                        <div id="accordion-ergebnis" class="accordion-item hide">
-                            <h2 class="accordion-header" id="headingZero">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseZero" aria-expanded="true" aria-controls="collapseZero">
-                                    <strong>Ergebnistabelle</strong>
-                                </button>
-                            </h2>
-                            <div id="collapseZero" class="accordion-collapse collapse" aria-labelledby="headingZero"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">Name</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr class="right-background-color">
-                                                <td>Kathrin Schuster</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
                         </div>
-                        <!-- Ausgangstabelle Personal-->
-                        <div class="accordion" id="accordionExample">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingOne">
+                        <!-- Validieren Button -->
+                        <div class="col">
+                            <p></p>
+                            <button id="validateSql" type="button" class="btn btn-primary"
+                                onClick="validateSQL()">Überprüfen</button>
+                            <p></p>
+                        </div>
+                        <!-- Ergebnis der Überfrüfung -->
+                        <div class="col" id="correction"></div>
+                        <!-- Tabelle Personal-->
+                        <div class="accordion" id="accordionLoesung">
+                            <div id="accordion-ergebnis" class="accordion-item hide">
+                                <h2 class="accordion-header" id="headingZero">
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        <strong>Ausgangstabelle Personal</strong>
+                                        data-bs-target="#collapseZero" aria-expanded="true"
+                                        aria-controls="collapseZero">
+                                        <strong>Ergebnistabelle</strong>
                                     </button>
                                 </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse show"
-                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div id="collapseZero" class="accordion-collapse collapse" aria-labelledby="headingZero"
+                                    data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
                                         <table class="table">
                                             <thead>
                                                 <tr>
-                                                    <th scope="col">PersNr</th>
                                                     <th scope="col">Name</th>
-                                                    <th scope="col">FamStatus</th>
-                                                    <th scope="col">Position</th>
-                                                    <th scope="col">Gehalt</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="right-background-color">
+                                                    <td>Kathrin Schuster</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Ausgangstabelle Personal-->
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            <strong>Ausgangstabelle Personal</strong>
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">PersNr</th>
+                                                        <th scope="col">Name</th>
+                                                        <th scope="col">FamStatus</th>
+                                                        <th scope="col">Position</th>
+                                                        <th scope="col">Gehalt</th>
+                                                        <th scope="col">FilialNr</th>
+                                                        <th scope="col">FWNr</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">1</th>
+                                                        <td>Maria Schmidt</td>
+                                                        <td>verheiratet</td>
+                                                        <td>Sekräterin</td>
+                                                        <td>4900</td>
+                                                        <td>1</td>
+                                                        <td>2</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">2</th>
+                                                        <td>Thomas Meyer</td>
+                                                        <td>ledig</td>
+                                                        <td>Praktikant</td>
+                                                        <td>2000</td>
+                                                        <td>2</td>
+                                                        <td>2</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">3</th>
+                                                        <td>Hans Müller</td>
+                                                        <td>ledig</td>
+                                                        <td>Programmierer</td>
+                                                        <td>5000</td>
+                                                        <td>1</td>
+                                                        <td>1</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">4</th>
+                                                        <td>Jürgen Schmidt</td>
+                                                        <td>verheiratet</td>
+                                                        <td>Verkäufer</td>
+                                                        <td>5000</td>
+                                                        <td>1</td>
+                                                        <td>1</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">5</th>
+                                                        <td>Kathrin Schuster</td>
+                                                        <td>geschieden</td>
+                                                        <td>Personalleiterin</td>
+                                                        <td>5400</td>
+                                                        <td>2</td>
+                                                        <td>1</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">6</th>
+                                                        <td>Mario Forster</td>
+                                                        <td>ledig</td>
+                                                        <td>Verkäufer</td>
+                                                        <td>4800</td>
+                                                        <td>2</td>
+                                                        <td>2</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Ende Ausgangstabelle -->
+                            <div id="accordion-filiale" class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                        <strong>Ausgangstabelle Filiale</strong>
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
                                                     <th scope="col">FilialNr</th>
-                                                    <th scope="col">FWNr</th>
+                                                    <th scope="col">Name</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
                                                     <th scope="row">1</th>
-                                                    <td>Maria Schmidt</td>
-                                                    <td>verheiratet</td>
-                                                    <td>Sekräterin</td>
-                                                    <td>4900</td>
-                                                    <td>1</td>
-                                                    <td>2</td>
+                                                    <td>Am Dammtor</td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">2</th>
-                                                    <td>Thomas Meyer</td>
-                                                    <td>ledig</td>
-                                                    <td>Praktikant</td>
-                                                    <td>2000</td>
-                                                    <td>2</td>
-                                                    <td>2</td>
+                                                    <td>City</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="accordion-firmenwagen" class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="true"
+                                        aria-controls="collapseThree">
+                                        <strong>Ausgangstabelle Firmenwagen</strong>
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">FWNr</th>
+                                                    <th scope="col">Modell</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">1</th>
+                                                    <td>Ferrari</td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">3</th>
-                                                    <td>Hans Müller</td>
-                                                    <td>ledig</td>
-                                                    <td>Programmierer</td>
-                                                    <td>5000</td>
-                                                    <td>1</td>
-                                                    <td>1</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">4</th>
-                                                    <td>Jürgen Schmidt</td>
-                                                    <td>verheiratet</td>
-                                                    <td>Verkäufer</td>
-                                                    <td>5000</td>
-                                                    <td>1</td>
-                                                    <td>1</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">5</th>
-                                                    <td>Kathrin Schuster</td>
-                                                    <td>geschieden</td>
-                                                    <td>Personalleiterin</td>
-                                                    <td>5400</td>
-                                                    <td>2</td>
-                                                    <td>1</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">6</th>
-                                                    <td>Mario Forster</td>
-                                                    <td>ledig</td>
-                                                    <td>Verkäufer</td>
-                                                    <td>4800</td>
-                                                    <td>2</td>
-                                                    <td>2</td>
+                                                    <th scope="row">2</th>
+                                                    <td>Smart</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -267,82 +338,20 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Ende Ausgangstabelle -->
-                        <div id="accordion-filiale" class="accordion-item">
-                            <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                                    <strong>Ausgangstabelle Filiale</strong>
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">FilialNr</th>
-                                                <th scope="col">Name</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th scope="row">1</th>
-                                                <td>Am Dammtor</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">2</th>
-                                                <td>City</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="accordion-firmenwagen" class="accordion-item">
-                            <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                                    <strong>Ausgangstabelle Firmenwagen</strong>
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">FWNr</th>
-                                                <th scope="col">Modell</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th scope="row">1</th>
-                                                <td>Ferrari</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">2</th>
-                                                <td>Smart</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
                     </div>
-                </div>
+                </span>
             </span>
-        </span>
 
+        </div>
     </div>
-</div>
 
-<!-- jQuery -->
-<script src="../../../static/jQuery/jquery-3.6.0.min.js"></script>
-<!-- Bootstrap -->
-<script src="../../../static/js/bootstrap.bundle.js"></script>
-<!-- Functions -->
-<script type="text/javascript" src="js/sql-aufgabe18.js"></script>
+    <!-- jQuery -->
+    <script src="../../../static/jQuery/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../../../static/js/bootstrap.bundle.js"></script>
+    <!-- Functions -->
+    <script type="text/javascript" src="js/sql-aufgabe18.js"></script>
 
-<body>
+</body>
+
+</html>

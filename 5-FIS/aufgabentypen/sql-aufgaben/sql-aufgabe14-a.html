@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="de">
 
-
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -79,18 +78,18 @@
         <div class="container">
             <span class="row">
                 <span class="col">
-                    <h2>Aufgabe 4: SQL-Anweisung</h2>
+                    <h2>Aufgabe 13: SQL-Anweisung</h2>
 
                     <p>
-                        <strong>"Dein Programmierer Hans Müller hat die Firma verlassen."</strong>
-                        <br>
-                    <p>Formuliere dafür die richtige SQL-Anweisung um die Daten in der Tabelle <em>Personal</em> aus der
-                        Datenbank zu löschen. </p>
+                    <p>Formuliere eine SQL-Anweisung um eine Liste aller <strong>Gehälter</strong> deines
+                        <strong><u>Personals</u></strong>
+                        auszugeben, die <strong>ledig</strong> sind und deren Gehälter größer als 2000 sind.
                     </p>
+                    </p>
+
                     <hr>
                     <!-- Optionen Buttons -->
                     <div class="container">
-                        <!-- TODO: Labels fett -->
                         <label class="form-label">Wähle einen SQL-Audruck aus:</label>
                         <div class="col">
                             <button id="select" class="btn btn-light" onClick="addSQL(event)">SELECT</button>
@@ -106,6 +105,7 @@
                             <button id="smallerAs" class="btn btn-light" onClick="addSQL(event)">
                                 < </button>
                                     <button id="biggerAs" class="btn btn-light" onClick="addSQL(event)">></button>
+                                    <button id="and" class="btn btn-light" onClick="addSQL(event)">AND</button>
                         </div>
                     </div>
                     <br>
@@ -115,8 +115,8 @@
                             <div class="col">
                                 <!-- Textfeld Eingabe -->
                                 <p>Bitte hier SQL-Anweisung eingeben:</p>
-                                <textarea class="form-control" id="textAreaLoesung" placeholder="Deine SQL-Anweisung.."
-                                    rows="3"></textarea>
+                                <textarea class="form-control" id="textAreaLoesung" rows="3"
+                                    placeholder="Deine SQL-Anweisung.."></textarea>
                             </div>
 
                             <div class="col">
@@ -147,12 +147,15 @@
                             <p></p>
                             <button id="validateSql" type="button" class="btn btn-primary"
                                 onClick="validateSQL()">Überprüfen</button>
-                            <p></p>
                         </div>
-                        <!-- Ergebnis der Überfrüfung -->
-                        <div class="col" id="correction"></div>
-                        <!-- Ergebnistabelle Personal-->
-                        <div class="accordion hide" id="accordionSolution">
+
+                        <div class="col" id="correction">
+                            <!-- Loesung: SELECT Gehalt FROM Personal WHERE FamStatus = 'ledig' AND Gehalt > 2000 -->
+                        </div>
+                        <br>
+
+                        <!--Ergebnistabelle Personal -->
+                        <div class="accordion hide" id="accordionLoesung">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingOne">
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
@@ -160,60 +163,20 @@
                                         <strong>Ergebnistabelle Personal</strong>
                                     </button>
                                 </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                                    data-bs-parent="#accordionExample">
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
                                         <table class="table">
                                             <thead>
                                                 <tr>
-                                                    <th scope="col">PersNr</th>
-                                                    <th scope="col">Name</th>
-                                                    <th scope="col">FamStatus</th>
-                                                    <th scope="col">Position</th>
                                                     <th scope="col">Gehalt</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
-                                                    <th scope="row">1</th>
-                                                    <td>Maria Schmidt</td>
-                                                    <td>verheiratet</td>
-                                                    <td>Sekräterin</td>
-                                                    <td>4900</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">2</th>
-                                                    <td>Thomas Meyer</td>
-                                                    <td>ledig</td>
-                                                    <td>Praktikant</td>
-                                                    <td>2000</td>
-                                                </tr>
-                                                <tr id="hansZeile">
-                                                    <th scope="row">3</th>
-                                                    <td>Hans Müller</td>
-                                                    <td>ledig</td>
-                                                    <td>Programmierer</td>
+                                                <tr class="right-background-color">
                                                     <td>5000</td>
                                                 </tr>
-                                                <tr>
-                                                    <th scope="row">4</th>
-                                                    <td>Jürgen Schmidt</td>
-                                                    <td>verheiratet</td>
-                                                    <td>Verkäufer</td>
-                                                    <td>5000</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">5</th>
-                                                    <td>Kathrin Schuster</td>
-                                                    <td>geschieden</td>
-                                                    <td>Personalleiterin</td>
-                                                    <td>5400</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">6</th>
-                                                    <td>Mario Forster</td>
-                                                    <td>ledig</td>
-                                                    <td>Verkäufer</td>
+                                                <tr class="right-background-color">
                                                     <td>4800</td>
                                                 </tr>
                                             </tbody>
@@ -222,19 +185,17 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- Ausgangstabelle Personal-->
                         <div class="accordion" id="accordionExample">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingOne">
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseZero" aria-expanded="true"
-                                        aria-controls="collapseZero">
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                         <strong>Ausgangstabelle Personal</strong>
                                     </button>
                                 </h2>
-                                <div id="collapseZero" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                                    data-bs-parent="#accordionExample">
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
                                         <table class="table">
                                             <thead>
@@ -308,7 +269,7 @@
     <!-- Bootstrap -->
     <script src="../../../static/js/bootstrap.bundle.js"></script>
     <!-- Functions -->
-    <script type="text/javascript" src="js/sql-aufgabe7.js"></script>
+    <script type="text/javascript" src="js/sql-aufgabe14-a.js"></script>
 
 </body>
 
