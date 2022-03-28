@@ -1,6 +1,8 @@
 function solution(event) {
+  var Anzahl = jQuery('#Anzahl').val();
 
-   if (jQuery('#textfield1').val(6)) {
+   if (Anzahl == 6) {
+    
     var paragraph = "<p>";
     paragraph += "Die Antwort ist korrekt!";
     paragraph += "</p>";

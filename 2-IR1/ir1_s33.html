@@ -5,6 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!-- Bootstrap CSS und JS Bundle -->
     <link href="../static/css/bootstrap.css" rel="stylesheet">
     <link href="ir1.css" rel="stylesheet">
@@ -75,48 +76,77 @@
 
     <div id="content">
 
-
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1>Stemming-Methoden</h1>
+                    <h1>Abstracting</h1>
+                    <p><strong>Ein Abstract ist ein Kurzreferat, das kurz und klar den Inhalt eines Dokuments wiedergibt.</strong></p>
+                    <p>Eine Möglichkeit, den Inhalt eines Dokuments zu erfassen, ist die Erstellung eines Abstracts. Ein Abstract ist die Reduktion des Inhalts eines Textes auf die wesentlichen inhaltskennzeichnenden Merkmale, also eine Inhaltsangabe. Die Suche während des IR-Prozesses erfolgt über den Abstract, was eine schnellere Suche zur Folge hat. Die Erstellung eines Abstracts erfolgt entweder manuell/intellektuell durch einen Experten oder den Autor oder automatisch durch ein computergestütztes Sytem.
+                    </p>
+                </br>
+                    <img src="ir1_s33_abstract.png" class="img-fluid" alt="Abstracting"></div>
                 </div>
             </div>
 
-
-            <div class="row">
-
-                <p>Die n-gram-Methode misst Ähnlichkeiten zwischen Wörtern auf der Basis gemeinsamer
-                    Buchstabenkombinationen (n-grams).
-                    <br>
-                    </br>
-                    Die n-gram-Methode misst Ähnlichkeiten zwischen Wörtern auf der Basis gemeinsamer
-                    Buchstabenkombinationen (n-grams). Die sogennante n-gram-Methode wird als Stemming-Methode genutzt,
-                    obwohl sie zunächst keinen Stamm erzeugt, sondern die Terme nach ihrer Ähnlichkeit in Gruppen (sog.
-                    Cluster) einteilt. Zu jedem Cluster sucht sich das System den Stamm, dieser wird den Termen
-                    zugeordnet.
-                    Ein n-gram ist eine einfache Folge von Zeichen der Länge n. Je nach Länge der betrachteten
-                    Buchstabenkombinationen spricht man von unigram=1-gram, bigram=2-gram oder trigram = 3-gram. Bi- und
-                    Trigramme werden in der Regel überlappend angewendet.
-                    <br>
-                    </br>
-                    Eine bigram-Darstellung des Satzes: Das Wetter ist schön.
-
-                    <i>(_,Das), (Das,Wetter), (Wetter,ist), (ist,schön), (schön,.), (.,_)</i>
-                    <br>
-                    </br>
-                    Eine bigram-Darstellung des Wortes: Wetter.
-
-                    <i>(_,We), (We,et), (et,te), (te,er), (er,_)</i>
-                </p>
-
-
-            </div>
 
 
         </div>
     </div>
 
+    <!--Seitenzahl-->
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-lg-offset-3 text-center">
+            <div class="page-pick">
+                <div class="btn-group dropup">
+                    <a class="btn text-left btn-lg" href="#" role="button">
+                        <span class="d-none d-lg-block"><i class="bi-arrow-left-circle-fill"></i> vorherige
+                            Seite</i></span>
+                        <span class="d-lg-none"><i class="bi bi-arrow-left-circle-fill"></i></span>
+                    </a>
+                    <button type="button" class="btn btn-lg" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="d-none d-md-block">Start Information Retrieval 1 <i
+                                class="bi bi-chevron-compact-up"></i></span>
+                        <span class="d-md-none">Seite 14 <i class="bi bi-chevron-compact-up"></i></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item " href="ir1.html">
+                                <span class="d-none d-md-block">Start Information Retrieval 1</span>
+                                <span class="d-md-none">Seite 1</span>
+                            </a></li>
+                        <li><a class="dropdown-item" href="ir1_s2.html">
+                                <span class="d-none d-md-block">2. Lernziele</span>
+                                <span class="d-md-none">Seite 2</span>
+                            </a></li>
+                        <li><a class="dropdown-item" href="ir1_s3.html">
+                                <span class="d-none d-md-block">3. Einordnung des Themas</span>
+                                <span class="d-md-none">Seite 3</span>
+                            </a></li>
+                        <li><a class="dropdown-item" href="ir1_s4.html">
+                                <span class="d-none d-md-block">4. Aufagbe: Die Phasen im IR </span>
+                                <span class="d-md-none">Seite 4</span>
+                            </a></li>
+                        <li><a class="dropdown-item" href="ir1_s5.html">
+                                <span class="d-none d-md-block">5. IR-Systeme</span>
+                                <span class="d-md-none">Seite 5</span>
+                            </a></li>
+                        <li><a class="dropdown-item" href="ir1_s7.html">
+                                <span class="d-none d-md-block">6. Aufgabe: Wichtige Begriffe</span>
+                                <span class="d-md-none">Seite 6</span>
+                            </a></li>
+                        <li><a class="dropdown-item" href="ir1_s8.html">
+                                <span class="d-none d-md-block">7. Indexierung</span>
+                                <span class="d-md-none">Seite 7</span>
+                            </a></li>
+                    </ul>
+                    <a class="btn text-left btn-lg" href="ir1_s2.html" role="button">
+                        <span class="d-none d-lg-block">nächste Seite <i
+                                class="bi bi-arrow-right-circle-fill"></i></span>
+                        <span class="d-lg-none"><i class="bi bi-arrow-right-circle-fill"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 <script src="../static/js/bootstrap.bundle.js"></script>
