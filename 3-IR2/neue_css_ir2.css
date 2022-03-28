@@ -115,7 +115,7 @@ p {
     background-color:rgba(255, 255, 255, 0.8);
 }
 
-quizbutton {
+.quizbutton {
     display:inline-block;
     float: right; /*inline-block is ignored due to the float. If 'float' has a value other than 'none', the box is floated and 'display' is treated as 'block'css(propertyIgnoredDueToDisplay)*/
 }
@@ -125,14 +125,15 @@ quizbutton {
 
 .progress {
     color: var(--hauptfarbe);
-    margin-top: 3%;
+    margin-top: 1%;
+    margin-bottom: 1%;
     top:60px;
     position: relative;
+    width: 100%;
 }
 
-#pageNavigation {
-    padding-top: 2%;
-    float: right;
+.page-pick {
+    margin-bottom: 2%;
 }
 
 th {
@@ -145,23 +146,6 @@ td{
     background-color: var(--containerfarbe);
 }
 
-button{
-    background-color: #e1e6e6;
-    font-size: 18px;
-    border: none; 
-    /*Methode um den Inhalt der Buttons vertikal und horizontal zu zentrieren*/
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 2px 2px 5px #6f7172;  
-}
-
-button:hover {
-    background-color: #fbfcfc;
-    transform: scale(1.2);
-}
 
 /*für seite 19*/
 .task8 {
@@ -175,7 +159,7 @@ button:hover {
 
 /* für seite 28*/
 #roccTask{
-    padding-bottom: 2%;
+  
     width: max-content;
     display: flex;
 }
@@ -293,11 +277,16 @@ div.desc {
     margin-top: 2.5%;
 }
 
+/* für Seite 34*/
+#feedbackBtn {
+    margin-right: 2%;
+    float: right;
+}
 
-
-
-
-
+/*Feedbackseite*/
+.formularSet {
+    padding: 1vw;
+}
 
 /*Seite 5*/
 .tables {
@@ -335,7 +324,7 @@ div.desc {
     background-color: var(--containerfarbe);
 }
 .solutionTable td {
-    text-align: center;
+    text-align: left;
     padding: 5px 12px;
     border-bottom: 2px solid white;
     border-right: 2px solid white; 
@@ -412,7 +401,7 @@ div.desc {
 }
 /*Seite 8*/
 .table8 {
-    width: 40%;
+    width: 50%;
     margin-left:20px;
     border-collapse: collapse;
     border: 2px solid white;
@@ -425,7 +414,129 @@ div.desc {
     
     padding: 5px 12px;
     border-bottom: 2px solid white;
+     
+}
+/*Seite 9*/
+.moreTextBtn {
+    color:#8EACAC;
+    margin-left:20px;
+}
+.moreText {
+    display: none;
+}
+.moreText--show {
+    display: inline;
+}
+.moreText2 {
+    display: none;
+}
+.moreText2--show {
+    display: inline;
+}
+.moreText3 {
+    display: none;
+}
+.moreText3--show {
+    display: inline;
+}
+.moreText4 {
+    display: none;
+}
+.moreText4--show {
+    display: inline;
+}
+.moreText5 {
+    display: none;
+}
+.moreText5--show {
+    display: inline;
+}
+/*Seite 10*/
+.text10 {
+    margin-left:60px;
+}
+/*Seite 17*/
+.text17 {
+    text-align: center;
+}
+.text172 {
+    text-align: center;
+    font-family: 'Quicksand' !important;
+    font-size: 25px;
+}
+/*Seite 26*/
+.tables26 {
+    display: flex;
+    justify-content: space;  
+}
+.dragAdropTable26 {
+    width: 30%;
+    margin-top: 2%;
+    margin-left: 20%;
+    margin-bottom: 2%;
+    border-collapse: collapse;
+    border: 2px solid white;
+    border-spacing: 0;
+    text-align: left;
+    justify-content: space-around;
+    background-color: var(--containerfarbe);
+}
+.dragAdropTable26 td {
+    
+    padding: 5px 12px;
+    border-bottom: 2px solid white;
     border-right: 2px solid white;  
+}
+.solutionTable26 {
+    width: 110%;
+    margin-left:5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-collapse: collapse;
+    border: 2px solid white;
+    border-spacing: 0;
+    text-align: left;
+    justify-content: space-around;
+    background-color: var(--containerfarbe);
+}
+.solutionTable26 td {
+    text-align: left;
+    padding: 5px 12px;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white; 
+}
+.solutionTable26 th {
+    text-align: center; 
+}
+.dragtarget26 {
+    background-color: var(--containerfarbe);
+    text-align: center;
+    width: 30%;
+    float:left;
+    margin:2px;
+}
+#checkAnswer26 {
+    float: right;
+}
+/*Seite27*/
+.table27 {
+    width: 45%;
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-bottom: 2%;
+    border-collapse: collapse;
+    border: 2px solid white;
+    border-spacing: 0;
+    text-align: left;
+    justify-content: space-around;
+    background-color: var(--containerfarbe);
+}
+.table27 td{
+    padding: 5px 12px;
+    border-bottom: 2px solid white;  
+}
+.imgPage27 {
+    text-align: center;
 }
 
 /*Informations-Box für wichtige Informationen*/
@@ -447,9 +558,47 @@ div.desc {
     margin-bottom: 0.5em;
 }
 
-/*Tabellen*/
+/*Bild als Tabelle umgesetzt*/
 .tablematrix {
     margin-top: 0.5em ;
     margin-bottom: 0.5em;
     border-collapse: separate;
 }
+
+/* für Seite 3 */
+.Infotext {
+    display: none;
+    font-family: 'Quicksand';
+    font-size: x-small;
+  }
+
+  .cls-2 {
+    font-size: 12px;
+    fill: black;
+    font-family: Arial;
+  }
+
+/* für die Startseite */
+  .accordion {
+    background-color: #B2D8D8;
+    color: #232B2B;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: #232B2B;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+  }
+  
+  .active, .accordion:hover {
+    background-color: #B2D8D8; 
+  }
+  
+  .panel {
+    padding: 0 18px;
+    display: none;
+    background-color: #D8EBEB;
+    overflow: hidden;
+  }
