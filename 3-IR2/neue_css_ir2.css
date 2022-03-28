@@ -115,7 +115,7 @@ p {
     background-color:rgba(255, 255, 255, 0.8);
 }
 
-quizbutton {
+.quizbutton {
     display:inline-block;
     float: right; /*inline-block is ignored due to the float. If 'float' has a value other than 'none', the box is floated and 'display' is treated as 'block'css(propertyIgnoredDueToDisplay)*/
 }
@@ -130,9 +130,8 @@ quizbutton {
     position: relative;
 }
 
-#pageNavigation {
-    padding-top: 2%;
-    float: right;
+.page-pick {
+    margin-bottom: 2%;
 }
 
 th {
@@ -145,23 +144,6 @@ td{
     background-color: var(--containerfarbe);
 }
 
-button{
-    background-color: #e1e6e6;
-    font-size: 18px;
-    border: none; 
-    /*Methode um den Inhalt der Buttons vertikal und horizontal zu zentrieren*/
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 2px 2px 5px #6f7172;  
-}
-
-button:hover {
-    background-color: #fbfcfc;
-    transform: scale(1.2);
-}
 
 /*für seite 19*/
 .task8 {
@@ -175,7 +157,7 @@ button:hover {
 
 /* für seite 28*/
 #roccTask{
-    padding-bottom: 2%;
+  
     width: max-content;
     display: flex;
 }
@@ -292,10 +274,6 @@ div.desc {
 #content133 {
     margin-top: 2.5%;
 }
-
-
-
-
 
 
 
