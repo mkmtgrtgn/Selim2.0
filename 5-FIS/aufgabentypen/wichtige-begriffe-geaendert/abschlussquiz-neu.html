@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="de">
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -20,363 +21,399 @@
 
 <body>
 
-<div class="navi">
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon navbar-light"></span>
-            </button>
-             <!-- Navbar Brand: Logo der Uni Hildesheim-->
-             <a class="navbar-brand" href="../../../home.html">
-                <span class="d-none d-sm-block">
-                    <img class="d-inline-block align-text-center" src="../../uni_logo.png" width="70" height="70" alt="Universität Hildesheim" style="padding-right: 20;">
-                </span>
-                <span class="d-sm-none">SELiM</span>
-            </a>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <!-- Disabled Link: Modul Information -->
-                    <li class="nav-item">
-                        <a class="nav-linkd disabled" href="#" tabindex="-1" aria-disabled="true">SELiM - FIS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-linki active" aria-current="page" href="../../../home.html">Home</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-linki dropdown-toggle" href="#" id="navDrop1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Module
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navDrop1">
-                            <li><a class="dropdown-item bg" href="../../../1-GDI/gdi.html">GDI</a></li>
-                            <li><a class="dropdown-item bg" href="../../../2-IR1/ir1.html">IR1</a></li>
-                            <li><a class="dropdown-item bg" href="../../../3-IR2/ir2.html">IR2</a></li>
-                            <li><a class="dropdown-item bg" href="../../../4-IR3/ir3.html">IR3</a></li>
-                            <li><a class="dropdown-item bg" href="../../../5-FIS/fis.html">FIS</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-linki active" aria-current="page" href="../../../6-CSS-GLOSSAR-FRMLS/glossar.html">Glossar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-linki active" aria-current="page" href="../../../6-CSS-GLOSSAR-FRMLS/formelsammlung.html">Formelsammlung</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</div>
-
-<div id="content">
-    <div class="container">
-        <div class="row">
-            <div class="col mb-2">
-                <h1>Abschlussquiz</h1>
-                <h2>Wichtige Begriffe</h2>
-                <p>Zum Abschluss kannst du dein Wissen zu wichtigen Begriffen in Verbindung mit Fakteninformationssystemen, die du im Laufe dieses Moduls gelernt hast, 
-                    im Rahmen eines Quizzes testen:
-                </p>
-            </div>
-        </div>
-
-        <!-- Abschlussquiz nach Template von Gruppe 7 -->
-        <div id="quiz">
-
-            <div class="frage">
-                Was bedeutet das Akronym ERM? || Entity-Relationship-Modell || Entity-Relevance-Modell ** Entity-Ranking-Modell ** Effective-Relationship-Modell ** Efficiency-Relationship-Modell
-            </div>
-
-            <div class="frage">
-                Was für eine Art von Datenmodell ist das ERM? || Konzeptionelles Datenmodell || Logisches Datenmodell ** Relationales Datenmodell
-            </div>
-
-            <div class="frage">
-                Aus welchen Grundelementen setzt sich ein ER-Modell zusammen? || Entität ** Attribut ** Relation || Klasse ** Aktivität ** Vererbung ** Sequenz
-            </div>
-
-            <div class="frage">
-                Was für ein Begriff passt am besten zu folgender Beschreibung? "Als ... wird in der Datenmodellierung ein eindeutig zu bestimmendes Objekt bezeichnet, über das Informationen gespeichert oder verarbeitet werden sollen." || Entität || Tupel ** Attribut ** Primärschlüssel ** Relation
-            </div>
-
-            <div class="frage">
-                Welche Formen von Kardinalitätsverhältnissen werden grundsätzlich unterschieden? || 1 : 1 ** 1 : n ** m : n || 1 : 2 ** x : y ** a : b 
-            </div>
-
-            <div class="frage">
-                Wofür steht das Akronym SQL? || Structured Query Language || Selection Query Language ** Source Query Language ** Sign Query Language ** Storage Query Language
-            </div>
-
-            <div class="frage">
-                Welche Aufgabe(n) kann bzw. können <strong>nicht</strong> mit SQL ausgeführt werden? || Abbildung von Realitätsausschnitten als konzeptionelles Datenschema || Neuaufbau von Datenbanken ** Modifizierung der Datenstruktur bestehender Tabellen
-                 ** Vergabe von Zugriffsrechten ** Änderung und Abfrage von Datenbankinhalten 
-            </div>
-
-            <div class="frage">
-                Welche der Anweisungen gehören zu den wichtigsten in der DML? || DELETE ** INSERT ** SELECT ** UPDATE || ALTER ** CREATE ** DROP
-            </div>
-
-            <div class="frage">
-                Welches Ziel verfolgt die Selektion? || Teilmengenbildung, d.h. Auswahl bestimmter Tupel in einer Relation, die eine vorgegebene Bedingung erfüllen. || Auswahl bestimmter Attribute einer Relation und Unterdrückung der Information aus den nicht gewünschten Spalten.
-                 ** Verknüpfung mehrerer Relationen zur Zusammenstellung von Daten, die in verschiedenen Relationen gespeichert sind. ** Tabellarische Darstellung eines Relationenschemas mit Relationen.
-            </div>
-
-            <div class="frage">
-                Welcher der Begriffe passt am besten zu folgender Definition? "Der ausgewählte Schlüsselkandidat, der in Folge für die Abbildung der Relationen verwendet wird." || Primärschlüssel || Schlüssel ** Fremdschlüssel ** Sekundärschlüssel
-            </div>
-
-            <div class="frage">
-                Was ist ein Tupel? || Eine Zeile bzw. ein Datensatz in einer Relation. || Eine Spalte in einer Relation. ** Tabellarische Darstellung eines Relationenschemas mit Relationen. ** Eine Beziehung, die zwei oder mehrere Entitäten wechselseitig miteinander verbindet.
-            </div>
-
-            <div class="frage">
-                Welchem Zweck dient die Projektion? || Auswahl bestimmter Attribute einer Relation und Unterdrückung der Information aus den nicht gewünschten Spalten. || Teilmengenbildung, d.h. Auswahl bestimmter Tupel in einer Relation, die eine vorgegebene Bedingung erfüllen.
-                 ** Verknüpfung mehrerer Relationen zur Zusammenstellung von Daten, die in verschiedenen Relationen gespeichert sind. ** Tabellarische Darstellung eines Relationenschemas mit Relationen.
-            </div>
-
-        </div>
-
-        <div class="row">
-            <div class="col justify-content-center text-center">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                    Abschlussquiz
+    <div class="navi">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon navbar-light"></span>
                 </button>
+                <!-- Navbar Brand: Logo der Uni Hildesheim-->
+                <a class="navbar-brand" href="../../../home.html">
+                    <span class="d-none d-sm-block">
+                        <img class="d-inline-block align-text-center" src="../../uni_logo.png" width="70" height="70"
+                            alt="Universität Hildesheim" style="padding-right: 20;">
+                    </span>
+                    <span class="d-sm-none">SELiM</span>
+                </a>
 
-                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content" id="modalCont">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <!-- Disabled Link: Modul Information -->
+                        <li class="nav-item">
+                            <a class="nav-linkd disabled" href="#" tabindex="-1" aria-disabled="true">SELiM - FIS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-linki active" aria-current="page" href="../../../home.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-linki dropdown-toggle" href="#" id="navDrop1" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Module
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navDrop1">
+                                <li><a class="dropdown-item bg" href="../../../1-GDI/gdi.html">GDI</a></li>
+                                <li><a class="dropdown-item bg" href="../../../2-IR1/ir1.html">IR1</a></li>
+                                <li><a class="dropdown-item bg" href="../../../3-IR2/ir2.html">IR2</a></li>
+                                <li><a class="dropdown-item bg" href="../../../4-IR3/ir3.html">IR3</a></li>
+                                <li><a class="dropdown-item bg" href="../../../5-FIS/inhaltsverzeichnis.html">FIS</a>
+                                </li>
+                            </ul>
+                        </li>
 
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="staticBackdropLabel">Fragen</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
+                        <li class="nav-item">
+                            <a class="nav-linki active" aria-current="page"
+                                href="../../../6-CSS-GLOSSAR-FRMLS/glossar.html">Glossar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-linki active" aria-current="page"
+                                href="../../../6-CSS-GLOSSAR-FRMLS/formelsammlung.html">Formelsammlung</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
 
-                            <div class="modal-body" >
+    <div id="content">
+        <div class="container">
+            <div class="row">
+                <div class="col mb-2">
+                    <h1>Abschlussquiz</h1>
+                    <h2>Wichtige Begriffe</h2>
+                    <p>Zum Abschluss kannst du dein Wissen zu wichtigen Begriffen in Verbindung mit
+                        Fakteninformationssystemen, die du im Laufe dieses Moduls gelernt hast,
+                        im Rahmen eines Quizzes testen:
+                    </p>
+                </div>
+            </div>
 
-                                <div class="container" id="fragendiv">
+            <!-- Abschlussquiz nach Template von Gruppe 7 -->
+            <div id="quiz">
 
-                                    <h5 id="qfrage" class = "quizfrage">Hierzu gibt es keine Fragen.</h5>
+                <div class="frage">
+                    Was bedeutet das Akronym ERM? || Entity-Relationship-Modell || Entity-Relevance-Modell **
+                    Entity-Ranking-Modell ** Effective-Relationship-Modell ** Efficiency-Relationship-Modell
+                </div>
+
+                <div class="frage">
+                    Was für eine Art von Datenmodell ist das ERM? || Konzeptionelles Datenmodell || Logisches
+                    Datenmodell ** Relationales Datenmodell
+                </div>
+
+                <div class="frage">
+                    Aus welchen Grundelementen setzt sich ein ER-Modell zusammen? || Entität ** Attribut ** Relation ||
+                    Klasse ** Aktivität ** Vererbung ** Sequenz
+                </div>
+
+                <div class="frage">
+                    Was für ein Begriff passt am besten zu folgender Beschreibung? "Als ... wird in der
+                    Datenmodellierung ein eindeutig zu bestimmendes Objekt bezeichnet, über das Informationen
+                    gespeichert oder verarbeitet werden sollen." || Entität || Tupel ** Attribut ** Primärschlüssel **
+                    Relation
+                </div>
+
+                <div class="frage">
+                    Welche Formen von Kardinalitätsverhältnissen werden grundsätzlich unterschieden? || 1 : 1 ** 1 : n
+                    ** m : n || 1 : 2 ** x : y ** a : b
+                </div>
+
+                <div class="frage">
+                    Wofür steht das Akronym SQL? || Structured Query Language || Selection Query Language ** Source
+                    Query Language ** Sign Query Language ** Storage Query Language
+                </div>
+
+                <div class="frage">
+                    Welche Aufgabe(n) kann bzw. können <strong>nicht</strong> mit SQL ausgeführt werden? || Abbildung
+                    von Realitätsausschnitten als konzeptionelles Datenschema || Neuaufbau von Datenbanken **
+                    Modifizierung der Datenstruktur bestehender Tabellen
+                    ** Vergabe von Zugriffsrechten ** Änderung und Abfrage von Datenbankinhalten
+                </div>
+
+                <div class="frage">
+                    Welche der Anweisungen gehören zu den wichtigsten in der DML? || DELETE ** INSERT ** SELECT **
+                    UPDATE || ALTER ** CREATE ** DROP
+                </div>
+
+                <div class="frage">
+                    Welches Ziel verfolgt die Selektion? || Teilmengenbildung, d.h. Auswahl bestimmter Tupel in einer
+                    Relation, die eine vorgegebene Bedingung erfüllen. || Auswahl bestimmter Attribute einer Relation
+                    und Unterdrückung der Information aus den nicht gewünschten Spalten.
+                    ** Verknüpfung mehrerer Relationen zur Zusammenstellung von Daten, die in verschiedenen Relationen
+                    gespeichert sind. ** Tabellarische Darstellung eines Relationenschemas mit Relationen.
+                </div>
+
+                <div class="frage">
+                    Welcher der Begriffe passt am besten zu folgender Definition? "Der ausgewählte Schlüsselkandidat,
+                    der in Folge für die Abbildung der Relationen verwendet wird." || Primärschlüssel || Schlüssel **
+                    Fremdschlüssel ** Sekundärschlüssel
+                </div>
+
+                <div class="frage">
+                    Was ist ein Tupel? || Eine Zeile bzw. ein Datensatz in einer Relation. || Eine Spalte in einer
+                    Relation. ** Tabellarische Darstellung eines Relationenschemas mit Relationen. ** Eine Beziehung,
+                    die zwei oder mehrere Entitäten wechselseitig miteinander verbindet.
+                </div>
+
+                <div class="frage">
+                    Welchem Zweck dient die Projektion? || Auswahl bestimmter Attribute einer Relation und Unterdrückung
+                    der Information aus den nicht gewünschten Spalten. || Teilmengenbildung, d.h. Auswahl bestimmter
+                    Tupel in einer Relation, die eine vorgegebene Bedingung erfüllen.
+                    ** Verknüpfung mehrerer Relationen zur Zusammenstellung von Daten, die in verschiedenen Relationen
+                    gespeichert sind. ** Tabellarische Darstellung eines Relationenschemas mit Relationen.
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col justify-content-center text-center">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">
+                        Abschlussquiz
+                    </button>
+
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content" id="modalCont">
+
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">Fragen</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
                                 </div>
-                                <div class="modal-footer row">
-                                    <button id = "quizmaster" onclick="antwortChecken()"
-                                            type="button" class="btn btn-outline-success">Antwort überprüfen</button>
-                                </div>
-                                <div class="row justify-content-md-center">
-                                    <div id = "erfolgsnachricht" class="col-md-auto"></div>
-                                </div>
-                                <div class="row">
-                                    <div class="col md-12">
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" id="fortschritt" style="width: 1%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+
+                                <div class="modal-body">
+
+                                    <div class="container" id="fragendiv">
+
+                                        <h5 id="qfrage" class="quizfrage">Hierzu gibt es keine Fragen.</h5>
+                                    </div>
+                                    <div class="modal-footer row">
+                                        <button id="quizmaster" onclick="antwortChecken()" type="button"
+                                            class="btn btn-outline-success">Antwort überprüfen</button>
+                                    </div>
+                                    <div class="row justify-content-md-center">
+                                        <div id="erfolgsnachricht" class="col-md-auto"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col md-12">
+                                            <div class="progress">
+                                                <div class="progress-bar progress-bar-striped bg-success"
+                                                    role="progressbar" id="fortschritt" style="width: 1%"
+                                                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
                                         </div>
                                     </div>
+
                                 </div>
 
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Progress Bar -->
-        <div class="progress mt-5" style="height:25px">
-            <div class="progress-bar progress-bar-striped" style="width:98%">98%</div>
-        </div>
+            <!-- Progress Bar -->
+            <div class="progress mt-5" style="height:25px">
+                <div class="progress-bar progress-bar-striped" style="width:98%">98%</div>
+            </div>
 
-        <!--Seitenzahl-->
-        <div class="row mt-5 justify-content-center">
-            <div class="col-lg-8 col-lg-offset-3 text-center">
-                <div class="page-pick">
-                    <div class="btn-group dropup">
-                        <a class="btn btn-light text-left btn-lg" href="#" role="button">
-                            <span class="d-none d-lg-block"><i class="bi bi-arrow-left-circle-fill"></i></span>
-                            <span class="d-lg-none"><i class="bi bi-arrow-left-circle-fill"></i></span> 
-                        </a>
-                        <button type="button" class="btn btn-light btn-lg" data-bs-toggle="dropdown" aria-expanded="false">
-                            <span class="d-none d-md-block">39. Abschlussquiz <i class="bi bi-chevron-compact-up"></i></span>
-                            <span class="d-md-none">Seite 39 <i class="bi bi-chevron-compact-up"></i></span>
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#" >
-                                <span class="d-none d-md-block">1. Einordnung des Themas</span>
-                                <span class="d-md-none">Seite 1</span> 
-                            </a></li>
-                            <li><a class="dropdown-item" href="#" >
-                                <span class="d-none d-md-block">2. Begriffszusammenhänge</span>
-                                <span class="d-md-none">Seite 2</span> 
-                            </a></li>
-                            <li><a class="dropdown-item" href="#" >
-                                <span class="d-none d-md-block">3. XYZ</span>
-                                <span class="d-md-none">Seite 3</span> 
-                            </a></li>
-                            <li><a class="dropdown-item" href="#" >
-                                <span class="d-none d-md-block">4. XYZ</span>
-                                <span class="d-md-none">Seite 4</span> 
-                            </a></li>
-                            <li><a class="dropdown-item" href="#" >
-                                <span class="d-none d-md-block">5. XYZ</span>
-                                <span class="d-md-none">Seite 5</span> 
-                            </a></li>
-                            <li><a class="dropdown-item" href="#" >
-                                <span class="d-none d-md-block">6. XYZ</span>
-                                <span class="d-md-none">Seite 6</span> 
-                            </a></li>
-                            <li><a class="dropdown-item" href="#" >
-                                <span class="d-none d-md-block">7. XYZ</span>
-                                <span class="d-md-none">Seite 7</span> 
-                            </a></li>
-                            <li><a class="dropdown-item" href="#" >
-                                <span class="d-none d-md-block">8. XYZ</span>
-                                <span class="d-md-none">Seite 8</span> 
-                            </a></li>
-                            <li><a class="dropdown-item" href="#" >
-                                <span class="d-none d-md-block">9. XYZ</span>
-                                <span class="d-md-none">Seite 9</span> 
-                            </a></li>
-                            <li><a class="dropdown-item" href="#" >
-                                <span class="d-none d-md-block">10. XYZ</span>
-                                <span class="d-md-none">Seite 10</span> 
-                            </a></li>
-                            <li><a class="dropdown-item" href="#" >
-                                <span class="d-none d-md-block">11. XYZ</span>
-                                <span class="d-md-none">Seite 11</span> 
-                            </a></li>
-                            <li><a class="dropdown-item" href="#" >
-                                <span class="d-none d-md-block">12. XYZ</i></span>
-                                <span class="d-md-none">Seite 12</span> 
-                            </a></li>
-                            <li><a class="dropdown-item" href="#" >
-                                <span class="d-none d-md-block">13. XYZ</span>
-                                <span class="d-md-none">Seite 13</span> 
-                            </a></li>
-                            <li><a class="dropdown-item" href="#" >
-                                <span class="d-none d-md-block">14. XYZ</span>
-                                <span class="d-md-none">Seite 14</span> 
-                            </a></li>
-                            <li><a class="dropdown-item" href="#" >
-                                <span class="d-none d-md-block">15. XYZ</span>
-                                <span class="d-md-none">Seite 15</span> 
-                            </a></li>
-                            <li><a class="dropdown-item" href="#" >
-                                <span class="d-none d-md-block">16. XYZ</span>
-                                <span class="d-md-none">Seite 16</span> 
-                            </a></li>
-                            <li><a class="dropdown-item" href="#" >
-                                <span class="d-none d-md-block">17. XYZ</span>
-                                <span class="d-md-none">Seite 17</span> 
-                            </a></li>
-                            <li><a class="dropdown-item" href="#" >
-                                <span class="d-none d-md-block">18. XYZ</span>
-                                <span class="d-md-none">Seite 18</span> 
-                            </a></li>
-                            <li><a class="dropdown-item" href="#" >
-                                <span class="d-none d-md-block">19. XYZ</span>
-                                <span class="d-md-none">Seite 19</span> 
-                            </a></li>
-                            <li><a class="dropdown-item" href="#" >
-                                <span class="d-none d-md-block">20. XYZ</span>
-                                <span class="d-md-none">Seite 20</span> 
-                            </a></li>
-                            <li><a class="dropdown-item" href="#" >
-                                <span class="d-none d-md-block">21. XYZ</span>
-                                <span class="d-md-none">Seite 21 </span> 
-                            </a></li>
-                            <li><a class="dropdown-item" href="#" >
-                                <span class="d-none d-md-block">22. XYZ</span>
-                                <span class="d-md-none">Seite 22</span> 
-                            </a></li>
-                            <li><a class="dropdown-item" href="#" >
-                                <span class="d-none d-md-block">23. XYZ</span>
-                                <span class="d-md-none">Seite 23</span> 
-                            </a></li>
-                            <li><a class="dropdown-item" href="#" >
-                                <span class="d-none d-md-block">24. XYZ</span>
-                                <span class="d-md-none">Seite 24</span> 
-                            </a></li>
-                            <li><a class="dropdown-item" href="#" >
-                                <span class="d-none d-md-block">25. XYZ</span>
-                                <span class="d-md-none">Seite 25</span> 
-                            </a></li>
-                            <li><a class="dropdown-item" href="#" >
-                                <span class="d-none d-md-block">26. XYZ</span>
-                                <span class="d-md-none">Seite 26</span> 
-                            </a></li>
-                            <li><a class="dropdown-item" href="#" >
-                                <span class="d-none d-md-block">27. XYZ</span>
-                                <span class="d-md-none">Seite 27</span> 
-                            </a></li>
-                            <li><a class="dropdown-item" href="#" >
-                                <span class="d-none d-md-block">28. XYZ</span>
-                                <span class="d-md-none">Seite 28</span> 
-                            </a></li>
-                            <li><a class="dropdown-item" href="#" >
-                                <span class="d-none d-md-block">29. XYZ</span>
-                                <span class="d-md-none">Seite 29</span> 
-                            </a></li>
-                            <li><a class="dropdown-item" href="#" >
-                                <span class="d-none d-md-block">30. XYZ</span>
-                                <span class="d-md-none">Seite 30</span> 
-                            </a></li>
-                            <li><a class="dropdown-item" href="#" >
-                                <span class="d-none d-md-block">31. XYZ</span>
-                                <span class="d-md-none">Seite 31</span> 
-                            </a></li>
-                            <li><a class="dropdown-item" href="#" >
-                                <span class="d-none d-md-block">32. XYZ</span>
-                                <span class="d-md-none">Seite 32</span> 
-                            </a></li>
-                            <li><a class="dropdown-item" href="#" >
-                                <span class="d-none d-md-block">33. XYZ</span>
-                                <span class="d-md-none">Seite 33</span> 
-                            </a></li>
-                            <li><a class="dropdown-item" href="#" >
-                                <span class="d-none d-md-block">34. XYZ</span>
-                                <span class="d-md-none">Seite 34</span> 
-                            </a></li>
-                            <li><a class="dropdown-item" href="#" >
-                                <span class="d-none d-md-block">35. XYZ</span>
-                                <span class="d-md-none">Seite 35</span> 
-                            </a></li>
-                            <li><a class="dropdown-item" href="#" >
-                                <span class="d-none d-md-block">36. XYZ</span>
-                                <span class="d-md-none">Seite 36</span> 
-                            </a></li>
-                            <li><a class="dropdown-item" href="#" >
-                                <span class="d-none d-md-block">37. XYZ</span>
-                                <span class="d-md-none">Seite 37</span> 
-                            </a></li>
-                            <li><a class="dropdown-item" href="#" >
-                                <span class="d-none d-md-block">38. XYZ</span>
-                                <span class="d-md-none">Seite 38</span> 
-                            </a></li>
-                            <li><a class="dropdown-item" href="#" >
-                                <span class="d-none d-md-block">39. XYZ</span>
-                                <span class="d-md-none">Seite 39</span> 
-                            </a></li>
-                            <li><a class="dropdown-item" href="#" >
-                                <span class="d-none d-md-block">40. XYZ</span>
-                                <span class="d-md-none">Seite 40</span> 
-                            </a></li>
-                        </ul>
-                        <a class="btn btn-light text-left btn-lg" href="#" role="button">
-                            <span class="d-none d-lg-block"><i class="bi bi-arrow-right-circle-fill"></i></span>
-                            <span class="d-lg-none"><i class="bi bi-arrow-right-circle-fill"></i></span>
-                        </a>
+            <!--Seitenzahl-->
+            <div class="row mt-5 justify-content-center">
+                <div class="col-lg-8 col-lg-offset-3 text-center">
+                    <div class="page-pick">
+                        <div class="btn-group dropup">
+                            <a class="btn btn-light text-left btn-lg" href="#" role="button">
+                                <span class="d-none d-lg-block"><i class="bi bi-arrow-left-circle-fill"></i></span>
+                                <span class="d-lg-none"><i class="bi bi-arrow-left-circle-fill"></i></span>
+                            </a>
+                            <button type="button" class="btn btn-light btn-lg" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <span class="d-none d-md-block">39. Abschlussquiz <i
+                                        class="bi bi-chevron-compact-up"></i></span>
+                                <span class="d-md-none">Seite 39 <i class="bi bi-chevron-compact-up"></i></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">
+                                        <span class="d-none d-md-block">1. Einordnung des Themas</span>
+                                        <span class="d-md-none">Seite 1</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        <span class="d-none d-md-block">2. Begriffszusammenhänge</span>
+                                        <span class="d-md-none">Seite 2</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        <span class="d-none d-md-block">3. XYZ</span>
+                                        <span class="d-md-none">Seite 3</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        <span class="d-none d-md-block">4. XYZ</span>
+                                        <span class="d-md-none">Seite 4</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        <span class="d-none d-md-block">5. XYZ</span>
+                                        <span class="d-md-none">Seite 5</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        <span class="d-none d-md-block">6. XYZ</span>
+                                        <span class="d-md-none">Seite 6</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        <span class="d-none d-md-block">7. XYZ</span>
+                                        <span class="d-md-none">Seite 7</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        <span class="d-none d-md-block">8. XYZ</span>
+                                        <span class="d-md-none">Seite 8</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        <span class="d-none d-md-block">9. XYZ</span>
+                                        <span class="d-md-none">Seite 9</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        <span class="d-none d-md-block">10. XYZ</span>
+                                        <span class="d-md-none">Seite 10</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        <span class="d-none d-md-block">11. XYZ</span>
+                                        <span class="d-md-none">Seite 11</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        <span class="d-none d-md-block">12. XYZ</i></span>
+                                        <span class="d-md-none">Seite 12</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        <span class="d-none d-md-block">13. XYZ</span>
+                                        <span class="d-md-none">Seite 13</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        <span class="d-none d-md-block">14. XYZ</span>
+                                        <span class="d-md-none">Seite 14</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        <span class="d-none d-md-block">15. XYZ</span>
+                                        <span class="d-md-none">Seite 15</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        <span class="d-none d-md-block">16. XYZ</span>
+                                        <span class="d-md-none">Seite 16</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        <span class="d-none d-md-block">17. XYZ</span>
+                                        <span class="d-md-none">Seite 17</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        <span class="d-none d-md-block">18. XYZ</span>
+                                        <span class="d-md-none">Seite 18</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        <span class="d-none d-md-block">19. XYZ</span>
+                                        <span class="d-md-none">Seite 19</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        <span class="d-none d-md-block">20. XYZ</span>
+                                        <span class="d-md-none">Seite 20</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        <span class="d-none d-md-block">21. XYZ</span>
+                                        <span class="d-md-none">Seite 21 </span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        <span class="d-none d-md-block">22. XYZ</span>
+                                        <span class="d-md-none">Seite 22</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        <span class="d-none d-md-block">23. XYZ</span>
+                                        <span class="d-md-none">Seite 23</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        <span class="d-none d-md-block">24. XYZ</span>
+                                        <span class="d-md-none">Seite 24</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        <span class="d-none d-md-block">25. XYZ</span>
+                                        <span class="d-md-none">Seite 25</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        <span class="d-none d-md-block">26. XYZ</span>
+                                        <span class="d-md-none">Seite 26</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        <span class="d-none d-md-block">27. XYZ</span>
+                                        <span class="d-md-none">Seite 27</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        <span class="d-none d-md-block">28. XYZ</span>
+                                        <span class="d-md-none">Seite 28</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        <span class="d-none d-md-block">29. XYZ</span>
+                                        <span class="d-md-none">Seite 29</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        <span class="d-none d-md-block">30. XYZ</span>
+                                        <span class="d-md-none">Seite 30</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        <span class="d-none d-md-block">31. XYZ</span>
+                                        <span class="d-md-none">Seite 31</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        <span class="d-none d-md-block">32. XYZ</span>
+                                        <span class="d-md-none">Seite 32</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        <span class="d-none d-md-block">33. XYZ</span>
+                                        <span class="d-md-none">Seite 33</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        <span class="d-none d-md-block">34. XYZ</span>
+                                        <span class="d-md-none">Seite 34</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        <span class="d-none d-md-block">35. XYZ</span>
+                                        <span class="d-md-none">Seite 35</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        <span class="d-none d-md-block">36. XYZ</span>
+                                        <span class="d-md-none">Seite 36</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        <span class="d-none d-md-block">37. XYZ</span>
+                                        <span class="d-md-none">Seite 37</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        <span class="d-none d-md-block">38. XYZ</span>
+                                        <span class="d-md-none">Seite 38</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        <span class="d-none d-md-block">39. XYZ</span>
+                                        <span class="d-md-none">Seite 39</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        <span class="d-none d-md-block">40. XYZ</span>
+                                        <span class="d-md-none">Seite 40</span>
+                                    </a></li>
+                            </ul>
+                            <a class="btn btn-light text-left btn-lg" href="#" role="button">
+                                <span class="d-none d-lg-block"><i class="bi bi-arrow-right-circle-fill"></i></span>
+                                <span class="d-lg-none"><i class="bi bi-arrow-right-circle-fill"></i></span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div>
-
     </div>
-</div>
 
-<!-- Bootstrap JS Bundle -->
-<script src="../../../static/js/bootstrap.bundle.js"></script>
+    <!-- Bootstrap JS Bundle -->
+    <script src="../../../static/js/bootstrap.bundle.js"></script>
 
-<!-- JS Validierung Quiz nach Template von Gruppe 7 -->
-<script type="text/javascript" src="abschlussquiz.js"></script>
+    <!-- JS Validierung Quiz nach Template von Gruppe 7 -->
+    <script type="text/javascript" src="abschlussquiz.js"></script>
 
 </body>
 

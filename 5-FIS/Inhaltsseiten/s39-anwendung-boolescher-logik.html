@@ -27,7 +27,8 @@
             <!-- Navbar Brand: Logo der Uni Hildesheim-->
             <a class="navbar-brand" href="../../home.html">
                 <span class="d-none d-sm-block">
-                    <img class="d-inline-block align-text-center" src="../uni_logo.png" width="70" height="70" alt="Universität Hildesheim" style="padding-right: 20;">
+                    <img class="d-inline-block align-text-center" src="../uni_logo.png" width="70" height="70"
+                        alt="Universität Hildesheim" style="padding-right: 20;">
                 </span>
                 <span class="d-sm-none">SELiM</span>
             </a>
@@ -51,7 +52,7 @@
                             <li><a class="dropdown-item bg" href="../../2-IR1/ir1.html">IR1</a></li>
                             <li><a class="dropdown-item bg" href="../../3-IR2/ir2.html">IR2</a></li>
                             <li><a class="dropdown-item bg" href="../../4-IR3/ir3.html">IR3</a></li>
-                            <li><a class="dropdown-item bg" href="../../5-FIS/fis.html">FIS</a></li>
+                            <li><a class="dropdown-item bg" href="../../5-FIS/inhaltsverzeichnis.html">FIS</a></li>
                         </ul>
                     </li>
 
@@ -75,32 +76,42 @@
     <h2>Anwendung Boolescher Logik</h2>
     <div class="row">
         <div class="col-md-12">
-            <p>Bedingungen können in der <code>WHERE</code>-Klausel nach den Gesetzen des Aussagenkalküls miteinander verknüpft werden. Folgende logische Operatoren sind 
-            unter SQL verfügbar:<p><code>NOT</code> - Verneinung einer Bedingung; Ausschluss aller Tupel, die die Bedingung erfüllen.</p><p><code>AND</code> - Beide
-            Bedingungen müssen vom Tupel erfüllt sein, damit es selektiert wird.</p><p><code>OR</code> - Mindestens eine Bedingung muss vom Tupel erfüllt sein, damit es
-            selektiert wird.</p><p>Wie in der Arithmetik (Punkt- vor Strichrechnung) gibt es auch hier Prioritätsregeln:
+            <p>Bedingungen können in der <code>WHERE</code>-Klausel nach den Gesetzen des Aussagenkalküls miteinander
+                verknüpft werden. Folgende logische Operatoren sind
+                unter SQL verfügbar:
+            <p><code>NOT</code> - Verneinung einer Bedingung; Ausschluss aller Tupel, die die Bedingung erfüllen.</p>
+            <p><code>AND</code> - Beide
+                Bedingungen müssen vom Tupel erfüllt sein, damit es selektiert wird.</p>
+            <p><code>OR</code> - Mindestens eine Bedingung muss vom Tupel erfüllt sein, damit es
+                selektiert wird.</p>
+            <p>Wie in der Arithmetik (Punkt- vor Strichrechnung) gibt es auch hier Prioritätsregeln:
             <ul>
                 <li><code>NOT</code> geht vor...</li>
                 <li><code>AND</code> geht vor...</li>
                 <li><code>OR</code>.</li>
                 <li>Klammern gehen in jedem Fall vor.</li>
-            </ul></p></p>
+            </ul>
+            </p>
+            </p>
         </div>
     </div>
     <div class="container">
-        
+
         <div class="col-md-12">
             <img class='img-responsive center-block' src="s40-anwendung-boolescher-logik.jpg">
-            <p>Will man beispielsweise eine Namensliste von allen Studierenden ermitteln, deren Matrikelnummer nicht höher als 183000 ist und von allen, die 'IIM' studieren, dann gibt man folgende <code>SELECT</code>-Anweisung ein:</p><p><code>SELECT Name, 
+            <p>Will man beispielsweise eine Namensliste von allen Studierenden ermitteln, deren Matrikelnummer nicht
+                höher als 183000 ist und von allen, die 'IIM' studieren, dann gibt man folgende
+                <code>SELECT</code>-Anweisung ein:</p>
+            <p><code>SELECT Name, 
             Vorname FROM Studierende WHERE NOT (MatrNr > 183000) OR (Studiengang = 'IIM');</code></p>
             <p>Man erhält folgendes Ergebnis: Hauke Freer, Juliane Thiele und Samuel Sanchez</p>
         </div>
 
     </div>
-    
+
 </div>
 
-    <!--Bootstrap-->
+<!--Bootstrap-->
 <script src="../../static/js/bootstrap.bundle.js"></script>
 
 <body>

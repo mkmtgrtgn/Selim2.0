@@ -76,16 +76,15 @@
     <div class="container">
         <span class="row">
             <span class="col">
-                <h2>Aufgabe 10: SQL-Anweisung</h2>
+                <h2>Aufgabe 13: SQL-Anweisung</h2>
 
                 <p>
-                <p>Formuliere eine SQL-Anweisung um eine Liste aller <strong>Namen</strong> deines
+                <p>Formuliere eine SQL-Anweisung um eine Liste aller <strong>Gehälter</strong> deines
                     <strong><u>Personals</u></strong>
-                    auszugeben,
-                    die bei dir als <strong>Verkäufer</strong>
-                    eingestellt sind.
+                    auszugeben, die <strong>ledig</strong> sind und deren Gehälter größer als 2000 sind.
                 </p>
                 </p>
+
                 <hr>
                 <!-- Optionen Buttons -->
                 <div class="container">
@@ -104,6 +103,7 @@
                         <button id="smallerAs" class="btn btn-light" onClick="addSQL(event)">
                             < </button>
                                 <button id="biggerAs" class="btn btn-light" onClick="addSQL(event)">></button>
+                                <button id="and" class="btn btn-light" onClick="addSQL(event)">AND</button>
                     </div>
                 </div>
                 <br>
@@ -113,8 +113,8 @@
                         <div class="col">
                             <!-- Textfeld Eingabe -->
                             <p>Bitte hier SQL-Anweisung eingeben:</p>
-                            <textarea class="form-control" id="textAreaLoesung" placeholder="Deine SQL-Anweisung.."
-                                rows="3"></textarea>
+                            <textarea class="form-control" id="textAreaLoesung" rows="3"
+                                placeholder="Deine SQL-Anweisung.."></textarea>
                         </div>
 
                         <div class="col">
@@ -144,12 +144,15 @@
                         <p></p>
                         <button id="validateSql" type="button" class="btn btn-primary"
                             onClick="validateSQL()">Überprüfen</button>
-                        <p></p>
                     </div>
-                    <!-- Ergebnis der Überfrüfung -->
-                    <div class="col" id="correction"></div>
-                    <!-- Ergebnistabelle Personal-->
-                    <div class="accordion hide" id="accordionSolution">
+
+                    <div class="col" id="correction">
+                        <!-- Loesung: SELECT Gehalt FROM Personal WHERE FamStatus = 'ledig' AND Gehalt > 2000 -->
+                    </div>
+                    <br>
+
+                    <!--Ergebnistabelle Personal -->
+                    <div class="accordion hide" id="accordionLoesung">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOne">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
@@ -157,40 +160,38 @@
                                     <strong>Ergebnistabelle Personal</strong>
                                 </button>
                             </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    <table id="selectTable" class="table hide">
+                                    <table class="table">
                                         <thead>
                                             <tr>
-                                                <th scope="col">Name</th>
+                                                <th scope="col">Gehalt</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr class="right-background-color">
-                                                <td>Jürgen Schmidt</td>
+                                                <td>5000</td>
                                             </tr>
                                             <tr class="right-background-color">
-                                                <td>Mario Forster</td>
+                                                <td>4800</td>
                                             </tr>
                                         </tbody>
                                     </table>
-
                                 </div>
                             </div>
                         </div>
                     </div>
-
                     <!-- Ausgangstabelle Personal-->
                     <div class="accordion" id="accordionExample">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOne">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseZero" aria-expanded="true" aria-controls="collapseZero">
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                     <strong>Ausgangstabelle Personal</strong>
                                 </button>
                             </h2>
-                            <div id="collapseZero" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     <table class="table">
@@ -265,6 +266,6 @@
 <!-- Bootstrap -->
 <script src="../../../static/js/bootstrap.bundle.js"></script>
 <!-- Functions -->
-<script type="text/javascript" src="js/sql-aufgabe11.js"></script>
+<script type="text/javascript" src="js/sql-aufgabe14-urspruenglich.js"></script>
 
 <body>
