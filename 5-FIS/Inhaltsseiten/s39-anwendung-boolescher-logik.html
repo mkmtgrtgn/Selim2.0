@@ -87,6 +87,17 @@
             </ul></p></p>
         </div>
     </div>
+    <div class="container">
+        
+        <div class="col-md-12">
+            <img class='img-responsive center-block' src="s40-anwendung-boolescher-logik.jpg">
+            <p>Will man beispielsweise eine Namensliste von allen Studierenden ermitteln, deren Matrikelnummer nicht höher als 183000 ist und von allen, die 'IIM' studieren, dann gibt man folgende <code>SELECT</code>-Anweisung ein:</p><p><code>SELECT Name, 
+            Vorname FROM Studierende WHERE NOT (MatrNr > 183000) OR (Studiengang = 'IIM');</code></p>
+            <p>Man erhält folgendes Ergebnis: Hauke Freer, Juliane Thiele und Samuel Sanchez</p>
+        </div>
+
+    </div>
+    
 </div>
 
     <!--Bootstrap-->
