@@ -210,15 +210,7 @@ class Fragenkatalog {
             let title = document.getElementById("staticBackdropLabel");
             title.innerHTML = "Super, du hast alles richtig beantwortet!";
             let quizbtn = document.getElementById("quizmaster");
-            let weiter = document.createElement("h6");
-            weiter.className = "btn btn-outline-primary m-1";
             quizbtn.style.display = "none";
-            weiter.addEventListener("click", function () {
-                body.className = "modal-content";
-                weiter.style.display = "none";
-                quizbtn.style.display = "block";
-                naechsteFrage();
-            });
             let par = title.parentElement;
             par.appendChild(weiter);
         }
