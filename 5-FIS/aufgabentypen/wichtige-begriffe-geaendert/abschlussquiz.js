@@ -208,7 +208,7 @@ class Fragenkatalog {
         if (n === 0) {
             let body = document.getElementById("modalCont");
             let title = document.getElementById("staticBackdropLabel");
-            title.innerHTML = "Super, du hast alles richtig beantwortet!";
+            title.innerHTML = "<strong>Super, du hast alles richtig beantwortet!</strong>";
             let quizbtn = document.getElementById("quizmaster");
             quizbtn.style.display = "none";
         }
