@@ -107,3 +107,20 @@ quizbutton {
     display:inline-block;
     float:right;
 }
+
+.cirlce{
+    width:450px;
+    height:450px;
+    background:#F2F2F2;
+    margin: auto;
+    line-height: 15px;
+    border-radius: 50%;
+}
+
+.circle_content{
+    position:absolute;
+    width: inherit;
+    height: auto;
+    text-align: center;
+    padding: 30px;
+}
