@@ -125,7 +125,8 @@ p {
 
 .progress {
     color: var(--hauptfarbe);
-    margin-top: 3%;
+    margin-top: 1%;
+    margin-bottom: 1%;
     top:60px;
     position: relative;
 }
