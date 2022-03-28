@@ -211,8 +211,6 @@ class Fragenkatalog {
             title.innerHTML = "Super, du hast alles richtig beantwortet!";
             let quizbtn = document.getElementById("quizmaster");
             quizbtn.style.display = "none";
-            let par = title.parentElement;
-            par.appendChild(weiter);
         }
 
         return true;
