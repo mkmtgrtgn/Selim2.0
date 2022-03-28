@@ -110,16 +110,29 @@
                     </table>
 
                     <td>
-                        <div class="center">
-                            <p>Anzahl gemeinsamer n-grams:
-                                <input type="text" id="textfield1">
-                            </p>
+                        <div class="row">
+                            <div class="col">
+                                <p>Anzahl gemeinsamer n-grams:</p>
+                            </div>
+                            <div class="col">
+                                <select id="Anzahl" class="form-select" aria-label="Default select example">
+                                    <option selected value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="6">7</option>
+                                    <option value="6">8</option>
+                                    <option value="6">9</option>
+                                </select>
+                            </div>
                         </div>
                     </td>
-                    <button type="button" class="btn btn-primary float-end" onchange="solution(event)" id="antwort1">
+                    <button type="button" class="btn btn-primary float-end" onClick="solution(event)" id="antwort1">
                         Überprüfen
                     </button>
-                    <br/>
+                    <br />
                     <div id="rueckmeldung1"></div>
 
 
@@ -137,4 +150,4 @@
 <script src="../static/js/bootstrap.bundle.js"></script>
 
 <!-- Functions -->
-<script type="text/javascript" src="js/s27.js"></script>
+<script type="text/javascript" src="js/s26.js"></script>
