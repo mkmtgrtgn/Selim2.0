@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="de">
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -17,159 +18,167 @@
 
 <body>
 
-<div class="navi">
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon navbar-light"></span>
-            </button>
-            <!-- Navbar Brand: Logo der Uni Hildesheim-->
-            <a class="navbar-brand" href="../../../home.html">
-                <span class="d-none d-sm-block">
-                    <img class="d-inline-block align-text-center" src="../../uni_logo.png" width="70" height="70" alt="Universität Hildesheim" style="padding-right: 20;">
-                </span>
-                <span class="d-sm-none">SELiM</span>
-            </a>
+    <div class="navi">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon navbar-light"></span>
+                </button>
+                <!-- Navbar Brand: Logo der Uni Hildesheim-->
+                <a class="navbar-brand" href="../../../home.html">
+                    <span class="d-none d-sm-block">
+                        <img class="d-inline-block align-text-center" src="../../uni_logo.png" width="70" height="70"
+                            alt="Universität Hildesheim" style="padding-right: 20;">
+                    </span>
+                    <span class="d-sm-none">SELiM</span>
+                </a>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <!-- Disabled Link: Modul Information -->
-                    <li class="nav-item">
-                        <a class="nav-linkd disabled" href="#" tabindex="-1" aria-disabled="true">SELiM - FIS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-linki active" aria-current="page" href="../../../home.html">Home</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-linki dropdown-toggle" href="#" id="navDrop1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Module
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navDrop1">
-                            <li><a class="dropdown-item bg" href="../../../1-GDI/gdi.html">GDI</a></li>
-                            <li><a class="dropdown-item bg" href="../../../2-IR1/ir1.html">IR1</a></li>
-                            <li><a class="dropdown-item bg" href="../../../3-IR2/ir2.html">IR2</a></li>
-                            <li><a class="dropdown-item bg" href="../../../4-IR3/ir3.html">IR3</a></li>
-                            <li><a class="dropdown-item bg" href="../../../5-FIS/fis.html">FIS</a></li>
-                        </ul>
-                    </li>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <!-- Disabled Link: Modul Information -->
+                        <li class="nav-item">
+                            <a class="nav-linkd disabled" href="#" tabindex="-1" aria-disabled="true">SELiM - FIS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-linki active" aria-current="page" href="../../../home.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-linki dropdown-toggle" href="#" id="navDrop1" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Module
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navDrop1">
+                                <li><a class="dropdown-item bg" href="../../../1-GDI/gdi.html">GDI</a></li>
+                                <li><a class="dropdown-item bg" href="../../../2-IR1/ir1.html">IR1</a></li>
+                                <li><a class="dropdown-item bg" href="../../../3-IR2/ir2.html">IR2</a></li>
+                                <li><a class="dropdown-item bg" href="../../../4-IR3/ir3.html">IR3</a></li>
+                                <li><a class="dropdown-item bg" href="../../../5-FIS/fis.html">FIS</a></li>
+                            </ul>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-linki active" aria-current="page" href="../../../6-CSS-GLOSSAR-FRMLS/glossar.html">Glossar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-linki active" aria-current="page" href="../../../6-CSS-GLOSSAR-FRMLS/formelsammlung.html">Formelsammlung</a>
-                    </li>
-                </ul>
+                        <li class="nav-item">
+                            <a class="nav-linki active" aria-current="page"
+                                href="../../../6-CSS-GLOSSAR-FRMLS/glossar.html">Glossar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-linki active" aria-current="page"
+                                href="../../../6-CSS-GLOSSAR-FRMLS/formelsammlung.html">Formelsammlung</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-</div>
-
-<div id="content">
-
-
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h1>Aufgabe 17</h1>
-                <h2>Anfragen über mehrere Relationen: SQL SELECT-Anweisung</h2>
-                <p>Du möchtest die Namen der Mitarbeiter einer Handelskette wissen, die in der Filiale 'Am Dammtor' arbeiten. <br /> Wie lautet die <code class="list-code">SELECT</code>-Anweisung?</p>
-            </div>
-        </div>
-
-        <div class="row mt-2">
-            <div class="col">
-                <form class="form-inline ms-4">
-                    <code class="list-code">SELECT</code>
-                    <select class="form-control-sm selects">
-                        <option value="default" selected> </option>
-                        <option value="4">Name</option>
-                        <option value="2">Filiale.PersNr</option>
-                        <option value="0">Filiale.Name</option>
-                        <option value="3">Personal.FilialNr</option>
-                        <option value="1">Personal.Name</option>
-                    </select>
-                    <code class="list-code">FROM</code>
-                    <select class="form-control-sm selects">
-                        <option value="default" selected> </option>
-                        <option value="2">Filiale</option>
-                        <option value="1">Filiale, Personal</option>
-                        <option value="3">Personal</option>
-                    </select>
-                    <code class="list-code">WHERE</code>
-                    <select class="form-control-sm selects">
-                        <option value="default" selected> </option>
-                        <option value="2">FilialNr</option>
-                        <option value="1">Filiale.Name</option>
-                        <option value="3">Personal.Name</option>
-                        <option value="4">Filiale</option>
-                        <option value="5">Name</option>
-                    </select>
-                    <select class="form-control-sm selects">
-                        <option value="default" selected> </option>
-                        <option value="3">\></option>
-                        <option value="2">\>=</option>
-                        <option value="1">=</option>
-                        <option value="4">\&lt=</option>
-                        <option value="5">\&lt\></option>
-                    </select>
-                    <select class="form-control-sm selects">
-                        <option value="default" selected> </option>
-                        <option value="3">Name</option>
-                        <option value="2">Filiale.FilialNr</option>
-                        <option value="1">'Am Dammtor'</option>
-                        <option value="4">'City'</option>
-                    </select>
-                    <code class="list-code">AND</code>
-                    <select class="form-control-sm selects">
-                        <option value="default" selected> </option>
-                        <option value="1">Filiale.FilialNr</option>
-                        <option value="2">FilialNr</option>
-                        <option value="3">Name</option>
-                        <option value="4">Filiale.Name</option>
-                    </select>
-                    <select class="form-control-sm selects">
-                        <option value="default" selected> </option>
-                        <option value="3">\></option>
-                        <option value="2">\>=</option>
-                        <option value="1">=</option>
-                        <option value="4">\&lt=</option>
-                        <option value="5">\&lt\></option>
-                    </select>
-                    <select class="form-control-sm selects">
-                        <option value="default" selected> </option>
-                        <option value="3">Filiale.Name</option>
-                        <option value="2">'Am Dammtor'</option>
-                        <option value="4">FilialNr</option>
-                        <option value="1">Personal.FilialNr</option>
-                    </select>
-                </form>
-            </div>
-        </div>
-
-        <div class="row mt-5 pt-4">
-            <div class="col">
-                <p><button type="button" class="btn btn-primary float-end" onClick="checkSelects()">Überprüfen</button></p>
-                <p><button type="button" class="btn btn-primary float-end" onClick="resetSelects()">Zurücksetzen</button></p>
-            </div>  
-        </div>
-
-        <!-- Progress Bar -->
-        <div class="progress mt-5" style="height:25px">
-            <div class="progress-bar progress-bar-striped" style="width:96%">96%</div>
-        </div>
-
+        </nav>
     </div>
-</div>
 
-<!-- Bootstrap JS Bundle -->
-<script src="../../../static/js/bootstrap.bundle.js"></script>
+    <div id="content">
 
-<!-- jQuery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-<!-- Listenauswahl Aufgaben JS Funktionen -->
-<script type="text/javascript" src="listenauswahl-aufgaben.js"></script>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>Aufgabe 17: Anfragen über mehrere Relationen: SQL SELECT-Anweisung</h2>
+                    <p>Du möchtest die Namen der Mitarbeiter einer Handelskette wissen, die in der Filiale 'Am Dammtor'
+                        arbeiten. <br /> Wie lautet die <code class="list-code">SELECT</code>-Anweisung?</p>
+                </div>
+            </div>
+
+            <div class="row mt-2">
+                <div class="col">
+                    <form class="form-inline ms-4">
+                        <code class="list-code">SELECT</code>
+                        <select class="form-control-sm selects">
+                            <option value="default" selected> </option>
+                            <option value="4">Name</option>
+                            <option value="2">Filiale.PersNr</option>
+                            <option value="0">Filiale.Name</option>
+                            <option value="3">Personal.FilialNr</option>
+                            <option value="1">Personal.Name</option>
+                        </select>
+                        <code class="list-code">FROM</code>
+                        <select class="form-control-sm selects">
+                            <option value="default" selected> </option>
+                            <option value="2">Filiale</option>
+                            <option value="1">Filiale, Personal</option>
+                            <option value="3">Personal</option>
+                        </select>
+                        <code class="list-code">WHERE</code>
+                        <select class="form-control-sm selects">
+                            <option value="default" selected> </option>
+                            <option value="2">FilialNr</option>
+                            <option value="1">Filiale.Name</option>
+                            <option value="3">Personal.Name</option>
+                            <option value="4">Filiale</option>
+                            <option value="5">Name</option>
+                        </select>
+                        <select class="form-control-sm selects">
+                            <option value="default" selected> </option>
+                            <option value="3">\></option>
+                            <option value="2">\>=</option>
+                            <option value="1">=</option>
+                            <option value="4">\&lt=</option>
+                            <option value="5">\&lt\></option>
+                        </select>
+                        <select class="form-control-sm selects">
+                            <option value="default" selected> </option>
+                            <option value="3">Name</option>
+                            <option value="2">Filiale.FilialNr</option>
+                            <option value="1">'Am Dammtor'</option>
+                            <option value="4">'City'</option>
+                        </select>
+                        <code class="list-code">AND</code>
+                        <select class="form-control-sm selects">
+                            <option value="default" selected> </option>
+                            <option value="1">Filiale.FilialNr</option>
+                            <option value="2">FilialNr</option>
+                            <option value="3">Name</option>
+                            <option value="4">Filiale.Name</option>
+                        </select>
+                        <select class="form-control-sm selects">
+                            <option value="default" selected> </option>
+                            <option value="3">\></option>
+                            <option value="2">\>=</option>
+                            <option value="1">=</option>
+                            <option value="4">\&lt=</option>
+                            <option value="5">\&lt\></option>
+                        </select>
+                        <select class="form-control-sm selects">
+                            <option value="default" selected> </option>
+                            <option value="3">Filiale.Name</option>
+                            <option value="2">'Am Dammtor'</option>
+                            <option value="4">FilialNr</option>
+                            <option value="1">Personal.FilialNr</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row mt-5 pt-4">
+                <div class="col">
+                    <p><button type="button" class="btn btn-primary float-end"
+                            onClick="checkSelects()">Überprüfen</button></p>
+                    <p><button type="button" class="btn btn-primary float-end"
+                            onClick="resetSelects()">Zurücksetzen</button></p>
+                </div>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress mt-5" style="height:25px">
+                <div class="progress-bar progress-bar-striped" style="width:96%">96%</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="../../../static/js/bootstrap.bundle.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Listenauswahl Aufgaben JS Funktionen -->
+    <script type="text/javascript" src="listenauswahl-aufgaben.js"></script>
 
 </body>
 
