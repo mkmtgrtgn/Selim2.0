@@ -81,6 +81,18 @@ Hier wollte er die Farbe sonst nicht ändern
     max-width: 50vw;
 }
 
+#grundlagen-datenmodellierung-abbildung {
+    height: auto;
+    width: auto\9;
+    max-width: 50vw;
+}
+
+#kardinalitaeten-bilder {
+    height: auto;
+    width: auto\9;
+    max-width: 50vw;
+}
+
 #content {
     background-color: var(--hintergrund);
     padding:16px;
