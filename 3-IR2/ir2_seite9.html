@@ -79,11 +79,11 @@
                     Modell: Boole'sches Retrieval</p></br>
                     
                     <p><b>Partial Match - Paradigma:</b><br>
-                        <span class="moreText">Die Anfrage ist meist in einer natürlichen Sprache.</span> Man geht davon aus, dass nicht nur relevante Treffer sondern auch teilweise 
+                        <span class="moreText3">Die Anfrage ist meist in einer natürlichen Sprache.</span> Man geht davon aus, dass nicht nur relevante Treffer sondern auch teilweise 
                         relevante Treffer bestehen, die ebenso mit in die Treffermenge aufgenommen werden. 
                         Die Treffer werden absteigend ihrer Relvanz dem Nutzer als sogennantes Ranking präsentiert.
-                        <span class="moreText2">Das Resultat kann dabei eine Qualitätseinschätzung beinhalten.</span></br>
-                        Verfahren: Vektor-Raum-Modell<span class="moreText3">, Probabilistische Modelle und Fuzzy Modelle</span></br>
+                        <span class="moreText4">Das Resultat kann dabei eine Qualitätseinschätzung beinhalten.</span></br>
+                        Verfahren: Vektor-Raum-Modell<span class="moreText5">, Probabilistische Modelle und Fuzzy Modelle</span></br>
                         </p>
                         <span class="moreTextBtn">Mehr anzeigen..</span>
                 </div>
@@ -295,6 +295,10 @@
         currentText2.classList.toggle('moreText2--show');
         const currentText3 = event.target.parentNode.querySelector('.moreText3');
         currentText3.classList.toggle('moreText3--show');
+        const currentText4 = event.target.parentNode.querySelector('.moreText4');
+        currentText3.classList.toggle('moreText4--show');
+        const currentText5 = event.target.parentNode.querySelector('.moreText5');
+        currentText3.classList.toggle('moreText5--show');
         current.textContent = current.textContent.includes('Mehr anzeigen..') ? "Weniger anzeigen.." : "Mehr anzeigen..";
     })
     

@@ -1,22 +1,24 @@
 <!doctype html>
 <html lang="de">
 <head>
-    <!-- Required meta tags -->
+    <!-- Metadaten -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS und JS Bundle -->
     <link href="../static/css/bootstrap.css" rel="stylesheet">
     <link href="css.css" rel="stylesheet">
+    <!--Link zur MathJax Java Bibliothek, damit die MathML Formeln im Web richtig dargestellt werden.-->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-    <!-- Der Font muss noch importiert werden -->
+    <!-- Font Quicksand aus Google Lizezfrei -->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Formelsammlung</title>
 </head>
 <body>
+    <!--Unsere NavBar, Klasse zu navi, navbar und navbar-expand-lg-->
 <div class="navi">
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
@@ -33,7 +35,7 @@
                 <!--Handy/kleiner Viewport - Abkürzung der Bezeichnung unseres Viewports-->
                 <span class="d-sm-none">Formel</span>
             </a>
-
+            <!--Elemente der NavBar-->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
@@ -43,6 +45,7 @@
                         <a class="nav-linki dropdown-toggle" href="#" id="navDrop1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Module
                         </a>
+                        <!--Drop-Down Menü in unserer Navbar. Bootstrap Klasse-->
                         <ul class="dropdown-menu" aria-labelledby="navDrop1">
                             <li><a class="dropdown-item bg" href="../1-GDI/gdi.html">Grundbegriffe IW</a></li>
                             <li><a class="dropdown-item bg" href="../2-IR1/ir1.html">Information Retrieval 1</a></li>
@@ -70,11 +73,12 @@
 
         <div class="col">
             <h1>Formelsammlung</h1>
-            <!--Fixierter Button-->
+            <!--Fixierter Button, damit der Nutzer nicht ganz nach oben Scrollen muss-->
             <button id="btnScrollToTop" title="Klicke um nach oben zu scrollen">
                 <i class="material-icons">arrow_upward</i>
             </button>
             <p>Hier findest du alle Formeln für jedes Modul alphabetisch geordnet. Klick dich gerne durch.</p></br>
+            <!--Hier sind unsere Buttons von A-Z auf gelistet.-->
             <div class="row hidden-sm hidden-xs text-center">
                 <div class="col-md-12 col-lg-12">
                     <a class="btn btn-primary buchstaben" href="#A" title="Bisher keine Formeln zu A">A</a>
@@ -1352,7 +1356,7 @@
         </br>
         </br>
         <footer>
-            <!--Liste der Unternavigation A-Z.-->
+            <!--Liste der Unternavigation A-Z, für bessere Usability.-->
             <ul>
                 <li><a href="#A" title="Bisher keine Formel zu A">A</a></li>
                 <li><a href="#B" title="Bisher keine Formel zu B">B</a></li>
@@ -1384,8 +1388,9 @@
         </footer>
     </div>
 </div>
+<!--Hier Verbindung zu unserer JS Datei-->
 <script type="text/javascript" src="fmsglo.js"></script>
 </body>
-
+<!--Hier Verbindung zum static Ordner zu Bootstrap Elementen, da keine CDN-->
 <script src="../static/js/bootstrap.bundle.js"></script>
 
