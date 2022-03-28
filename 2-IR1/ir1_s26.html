@@ -109,31 +109,34 @@
                         </tr>
                     </table>
 
-                    <td>
-                        <div class="row">
-                            <div class="col">
-                                <p>Anzahl gemeinsamer n-grams:</p>
-                            </div>
-                            <div class="col">
-                                <select id="Anzahl" class="form-select" aria-label="Default select example">
-                                    <option selected value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="6">7</option>
-                                    <option value="6">8</option>
-                                    <option value="6">9</option>
-                                </select>
-                            </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            <p class="float-start">Anzahl gemeinsamer n-grams:</p>
                         </div>
-                    </td>
-                    <button type="button" class="btn btn-primary float-end" onClick="solution(event)" id="antwort1">
-                        Überprüfen
-                    </button>
-                    <br />
-                    <div id="rueckmeldung1"></div>
+                        <div class="col-sm-2">
+                            <select id="Anzahl" class="form-select" aria-label="Default select example">
+                                <option selected value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="6">7</option>
+                                <option value="6">8</option>
+                                <option value="6">9</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-2">
+                            <button type="button" class="btn btn-primary" onClick="solution(event)"
+                                id="antwort1">
+                                Überprüfen
+                            </button>
+                        </div>
+                        
+                        <div class="col-sm" id="rueckmeldung1"></div>
+                    
+                    </div>
+                    
 
 
 
