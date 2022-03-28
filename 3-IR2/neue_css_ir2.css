@@ -314,7 +314,7 @@ div.desc {
     background-color: var(--containerfarbe);
 }
 .solutionTable td {
-    text-align: center;
+    text-align: left;
     padding: 5px 12px;
     border-bottom: 2px solid white;
     border-right: 2px solid white; 
@@ -391,7 +391,7 @@ div.desc {
 }
 /*Seite 8*/
 .table8 {
-    width: 40%;
+    width: 50%;
     margin-left:20px;
     border-collapse: collapse;
     border: 2px solid white;
@@ -404,7 +404,7 @@ div.desc {
     
     padding: 5px 12px;
     border-bottom: 2px solid white;
-    border-right: 2px solid white;  
+     
 }
 /*Seite 9*/
 .moreTextBtn {
@@ -427,6 +427,18 @@ div.desc {
     display: none;
 }
 .moreText3--show {
+    display: inline;
+}
+.moreText4 {
+    display: none;
+}
+.moreText4--show {
+    display: inline;
+}
+.moreText5 {
+    display: none;
+}
+.moreText5--show {
     display: inline;
 }
 /*Seite 10*/
