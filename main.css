@@ -6,19 +6,30 @@ body{
 }
 
 #body::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 h1, h2, h3 {
 }
 
 .navbar-brand {
-    margin-left: 1vw;
-    font-weight: 600;
+    margin-right:2rem;
     color:var(--schriftfarbe);
-    font-size:42px;
+    font-size:larger;
 }
 
+@media only screen and (max-width: 992px) {
+    #uni_logo {
+        margin-right:8px;
+        color:var(--schriftfarbe);
+        font-size:large;
+
+    }
+    .navbar-brand {
+        margin:auto;
+        font-size: large;
+    }
+}
 .navi{
     background-image: linear-gradient(180deg, var(--hauptfarbe), 60%, var(--hintergrund));
     font-size:24px;
@@ -28,7 +39,6 @@ h1, h2, h3 {
 .nav-linki:hover {
     color:white;
     font-weight: 600;
-
 }
 
 /*
