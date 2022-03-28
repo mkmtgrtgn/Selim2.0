@@ -24,11 +24,10 @@
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon navbar-light"></span>
                 </button>
-                <!-- Navbar Brand: Logo der Uni Hildesheim-->
+                 <!-- Navbar Brand: Logo der Uni Hildesheim-->
                 <a class="navbar-brand" href="../../../home.html">
                     <span class="d-none d-sm-block">
-                        <img class="d-inline-block align-text-center" src="../../uni_logo.png" width="70" height="70"
-                            alt="Universität Hildesheim" style="padding-right: 20;">
+                        <img class="d-inline-block align-text-center" src="../../uni_logo.png" width="70" height="70" alt="Universität Hildesheim" style="padding-right: 20;">
                     </span>
                     <span class="d-sm-none">SELiM</span>
                 </a>
@@ -70,63 +69,31 @@
         </nav>
     </div>
 
+    
     <div id="content">
 
 
         <div class="container">
-            <div class="col">
-                <h3>Aufgabe 1: Entity-Relationship-Modell</h3>
-                <div class="row">
-                    <div class="col-md-12">
-                        <p></p>
-                        <h5>Aufgabenbeschreibung</h5>
-                        <p>In den Aufgaben 1 bis 3 sollst du die bisher vermittelten Lehrinhalte anwenden und nun einmal
-                            selbständig modellieren!<br />Die Vorgehensweise sieht dabei folgendermaßen aus: Du wirst...
-                        </p>
-                        <p>
-                        <ul>
-                            <li>in Aufgabe 1 aus einem Beschreibungstext die <u>benötigten Objekttypen</u> heraussuchen,</li>
-                            <li>in Aufgabe 2 die <u>Kardinalitäten</u> zwischen den Objekttypen bestimmen und</li>
-                            <li>in Aufgabe 3 die <u>Primärschlüssel</u> der Objekttypen festlegen.</li>
-                        </ul>
-                        </p>
-                        <br>
-                        <h5>Aufgabenstellung</h5>
-                        <em>Eine Bibliothek soll um eine Mediothek erweitert werden und benötigt ein
-                            <u>Informationssystem</u> für den Verleih von <u>Videofilmen</u>. Mit diesem sollen Informationen über
-                            <u>Verleih und Vormerkungen</u> der
-                            Videofilme verwaltet werden. Des Weiteren besteht die Möglichkeit, <u>Strafen für verspätete
-                            Rückgaben</u> zu verlangen.</em>
-                        <br><br> <em>Klick bitte auf die Worte im untenstehenden Text, die deiner
-                            Meinung nach als
-                            <u>Objekttypen
-                                (Entity-Typen, Relationship-Typen)</u> realisiert werden müssen.</em>
-                    </div>
-                </div>
-            </div>
             <div class="paragraph">
+                <h2>Aufgabe 9.1 DML</h2>
+                <p>Wo liegt der Fehler in der folgenden Anweisung? Wähle die richtige Antwort aus (Single Choice).<br />
+                    
+                </p>
+
+                 <code class="normal-code">UPDATE Personal ('Kathrin Schuster', 'geschieden');</code>
                 <div class="row aufgabe1">
                     <div class="col-md-12">
-                        <p id="cursor-change">Die <strong id='bib'>Bibliothek</strong> benötigt ein <strong
-                                id='is'>Informationssystem</strong> mit welchem
-                            <strong id='info'>Informationen</strong> über das <strong id='verleihen'>Verleihen</strong>
-                            und <strong class='vormerken'>Vormerken</strong> der
-                            <strong class='video'>Videofilme</strong> verwaltet werden sollen.<br /><br />Die <strong
-                                class='ausleiher'>Ausleiher</strong>
-                            können gleichzeitig mehrere <strong class='video'>Videofilme</strong> ausleihen
-                            und die <strong class='video'>Videofilme</strong> können auch mehrmals <strong
-                                class='vormerken'>vorgemerkt</strong>
-                            werden.<br /><br />Die <strong class='ausleiher'>Ausleiher</strong> müssen <strong
-                                id='strafen'>Strafen</strong> für verspätete
-                            <strong id='rueckgaben'>Rückgaben</strong> <strong id='zahlen'>zahlen</strong>.
-                        </p>
+                        <p id="cursor-change"><strong id='bib'>a) Die Anweisung UPDATE ist falsch, denn um Werte in der Tabelle Personal zu aktualisieren, braucht man INSERT TO.</strong> </p>
+                        <p id="cursor-change"><strong id='info'>b) Die Anweisung ist falsch, da Kathrin Schuster bereits geschieden ist. Durch die Anweisung UPDATE würde sich der Familienstatus also nicht ändern.</strong> </p>
+                        <p id="cursor-change"><strong id='verleihen'>c) Diese Anweisung vermischt die Funktion UPDATE mit der Funktion INSERT. Um Werte in der Tabelle Personal zu aktualisieren, ist die folgende Syntax zu verwenden: UPDATE Personal SET FamStatus = 'geschieden' WHERE Name = 'Kathrin Schuster';.</strong> </p>       
+                        
+                        
                     </div>
-
+                    
                     <div class="row mb-5">
                         <div class="col">
-                            <p><button type="button" class="btn btn-primary float-end"
-                                    onClick="markWords()">Überprüfen</button></p>
-                        </div>
+                            <p><button type="button" class="btn btn-primary float-end" onClick="markWords()">Überprüfen</button></p>
+                        </div>  
                     </div>
                 </div>
             </div>
