@@ -112,10 +112,15 @@
                     <td>
                         <div class="center">
                             <p>Anzahl gemeinsamer n-grams:
-                                <input type="text" name="textfield3">
+                                <input type="text" id="textfield1">
                             </p>
                         </div>
                     </td>
+                    <button type="button" class="btn btn-primary float-end" onchange="solution(event)" id="antwort1">
+                        Überprüfen
+                    </button>
+                    <br/>
+                    <div id="rueckmeldung1"></div>
 
 
 
@@ -126,4 +131,10 @@
 
 </body>
 
+<!-- jQuery -->
+<script src="js/jquery-3.6.0.min.js"></script>
+
 <script src="../static/js/bootstrap.bundle.js"></script>
+
+<!-- Functions -->
+<script type="text/javascript" src="js/s27.js"></script>
