@@ -129,6 +129,7 @@ p {
     margin-bottom: 1%;
     top:60px;
     position: relative;
+    width: 100%;
 }
 
 .page-pick {
