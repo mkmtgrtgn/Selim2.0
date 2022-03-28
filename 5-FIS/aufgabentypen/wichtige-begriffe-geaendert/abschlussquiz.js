@@ -1,5 +1,4 @@
 /*
-<@author liebl
 Dieses Script liest Multiple Choice Fragen aus einem <div id="quiz"... nur wenn die Fragen und Antworten im Format
 <div class="frage"> frage || antwort ** aw2 ** aw3 || falscheantwort ** fa ** fa2... </div>
 im HTML Dokument formuliert werden. Alle Fragen (Quizze) kann man per Knopfdruck via Modal (siehe quiz.html)
@@ -51,7 +50,7 @@ class Quizantwort extends Quizelement {
             if (this.node.className === "quizantwort selected") {
                 console.log(self.selected);
 
-                this.node.className ="quizantwort wahreAntwort richtigBeantwortet";
+                this.node.className = "quizantwort wahreAntwort richtigBeantwortet";
                 return true;
             }
             else {
@@ -60,7 +59,7 @@ class Quizantwort extends Quizelement {
             }
         }
         else {
-            if (this.node.className === "quizantwort selected"){
+            if (this.node.className === "quizantwort selected") {
                 this.node.className = "quizantwort falscheAntwort falschBeantwortet";
                 return false;
             }
@@ -72,7 +71,7 @@ class Quizantwort extends Quizelement {
     }
     //setzt markierungsstatus zurueck
     reset() {
-        this.node.className ="quizantwort";
+        this.node.className = "quizantwort";
         this.node.addEventListener("click", this.select);
     }
     //haengt diese Frage hinter die Frage an
@@ -92,9 +91,9 @@ class Quiz {
     //weist jede Frage an sich aufzudecken und checkt ob alles richtig ist
     aufloesen() {
         let allesRichtig = true;
-        for (let i =0; i<this.quizel.length; i++) {
+        for (let i = 0; i < this.quizel.length; i++) {
             let perf = this.quizel[i].reveal();
-            if(!perf) {
+            if (!perf) {
                 allesRichtig = false;
             }
         }
@@ -110,13 +109,13 @@ class Quiz {
 
         let gemischt = shuffleArray(this.quizel);
 
-        for(let i=0; i<gemischt.length; i++) {
+        for (let i = 0; i < gemischt.length; i++) {
             this.quizel[gemischt[i]].aktivieren(par);
         }
     }
     //resettet die Nodes zum erneuten Abfragen
     res() {
-        for (let i =0; i<this.quizel.length; i++) {
+        for (let i = 0; i < this.quizel.length; i++) {
             this.quizel[i].reset();
         }
     }
@@ -134,10 +133,10 @@ class Fragenkatalog {
     init() {
         this.quizze[this.cur].show();
         let f = [];
-        for (let i=0; i<this.quizze.length; i++){
+        for (let i = 0; i < this.quizze.length; i++) {
             f.push(i);
         }
-        this.falsch =f;
+        this.falsch = f;
     }
     //Quizloesung anzeigen
     aufloesung() {
@@ -149,22 +148,22 @@ class Fragenkatalog {
         let n = this.falsch.length;
 
         //Die Frage wurde richtig beantwortet wenn performance noch wahr ist
-        if(performance) {
+        if (performance) {
 
             //bisschen motivierende Sprueche schaden ja nicht
             let erfolgsnachricht = document.getElementById("erfolgsnachricht");
-            let spr = [":)", "Super!", "Alles richtig!", "Eins A", "Weiter so!"];
+            let spr = [":)", "Super!", "Eins A", "Weiter so!"];
 
-            let rnd = Math.floor(Math.random()*spr.length);
+            let rnd = Math.floor(Math.random() * spr.length);
             erfolgsnachricht.innerHTML = spr[rnd];
-            if((this.reps >this.quizze.length+5)%2===3) {
-                erfolgsnachricht.innerHTML = "na langweilig? :p";
-            }
+            // if ((this.reps > this.quizze.length + 5) % 2 === 3) {
+            //     erfolgsnachricht.innerHTML = "na langweilig? :p";
+            // }
             const nr = setTimeout(meldungWeg, 800);
 
             //Fortschrittsbalken updaten
-            if( n>0 ) {
-                this.updateProg(n-1)
+            if (n > 0) {
+                this.updateProg(n - 1)
 
                 for (let i = 0; i < n; i++) {
                     //bisher noch nicht beantwortete Frage aus falsch entfernen zu richtig dazu
@@ -181,19 +180,18 @@ class Fragenkatalog {
     //zufaelliges Quiz aus den noch nicht geloesten auswaehlen
     naechste() {
         this.quizze[this.cur].res();
-        //solange wir noch Quizze haben die noch nicht richtig beantwortet werden, erstmal diese abarbeiten
-        if(this.falsch.length > 0) {
-            let rndindx = Math.floor(Math.random()*this.falsch.length);
+
+        // //solange wir noch Quizze haben die noch nicht richtig beantwortet werden, erstmal diese abarbeiten
+        if (this.falsch.length > 0) {
+            let rndindx = Math.floor(Math.random() * this.falsch.length);
 
             this.quizze[this.falsch[rndindx]].show();
             this.cur = this.falsch[rndindx];
-            console.log("rndndx ist: " + rndindx);
-            console.log("cur ist: " + this.cur);
 
         }
         //sonst ein zufaelliges Frage-Antwort Tupel
         else {
-            let rndindx = Math.round(Math.random()*this.quizze.length);
+            let rndindx = Math.round(Math.random() * this.quizze.length);
             this.quizze[rndindx].show();
             this.cur = rndindx;
         }
@@ -201,32 +199,29 @@ class Fragenkatalog {
     }
     // Zeigt den Fortschritt des Spielers an und signalisiert 100% richtig
     updateProg(n) {
-            let bar = document.getElementById("fortschritt");
-            let prog = Math.floor(100 * ((this.quizze.length-n) / this.quizze.length));
-            let style = "width:" + String(prog) + "%";
-            console.log(style);
-            bar.style.width = String(prog) + "%";
+        let bar = document.getElementById("fortschritt");
+        let prog = Math.floor(100 * ((this.quizze.length - n) / this.quizze.length));
+        let style = "width:" + String(prog) + "%";
+        bar.style.width = String(prog) + "%";
 
-            bar.setAttribute("aria-valuenow", String(prog));
-            if (n === 0) {
-                let body = document.getElementById("modalCont");
-                body.className = "modal-content allesrichtig";
-                let title = document.getElementById("staticBackdropLabel");
-                title.innerHTML = "Super, du hast alles richtig beantwortet!";
-                let quizbtn = document.getElementById("quizmaster");
-                let weiter = document.createElement("h6");
-                weiter.innerHTML = "Weitermachen?";
-                weiter.className = "btn btn-outline-primary m-1";
-                quizbtn.style.display = "none";
-                weiter.addEventListener("click", function() {
-                    body.className = "modal-content";
-                    weiter.style.display = "none";
-                    quizbtn.style.display = "block";
-                    naechsteFrage();
-                });
-                let par = title.parentElement;
-                par.appendChild(weiter);
-            }
+        bar.setAttribute("aria-valuenow", String(prog));
+        if (n === 0) {
+            let body = document.getElementById("modalCont");
+            let title = document.getElementById("staticBackdropLabel");
+            title.innerHTML = "Super, du hast alles richtig beantwortet!";
+            let quizbtn = document.getElementById("quizmaster");
+            let weiter = document.createElement("h6");
+            weiter.className = "btn btn-outline-primary m-1";
+            quizbtn.style.display = "none";
+            weiter.addEventListener("click", function () {
+                body.className = "modal-content";
+                weiter.style.display = "none";
+                quizbtn.style.display = "block";
+                naechsteFrage();
+            });
+            let par = title.parentElement;
+            par.appendChild(weiter);
+        }
 
         return true;
     }
@@ -236,9 +231,9 @@ class Fragenkatalog {
 function erstelleFragenkatalog() {
     let quizzes = document.getElementsByClassName("frage");
 
-    if(quizzes) {
+    if (quizzes) {
         let frageAntworten = [];
-        for(let i = 0; i< quizzes.length; i++) {
+        for (let i = 0; i < quizzes.length; i++) {
             let quizstring = quizzes.item(i).innerHTML;
             frageAntworten.push(machQuiz(quizstring));
         }
@@ -253,24 +248,24 @@ function erstelleFragenkatalog() {
 
 //Man liest die Fragen aus dem Quelltext ein und überführt sie in komplette Quizzes
 function machQuiz(string) {
-    if(string) {
+    if (string) {
         console.log(string);
         let alles = string.split("||");
-        if(alles.length > 2) {
+        if (alles.length > 2) {
             let frage = new Quizfrage(alles[0]);
 
             //antworten
             let tmp = alles[1]
             let antwrtn = tmp.split("**");
             let ants = [];
-            for(let i = 0; i<antwrtn.length; i++) {
-                let temp =new Quizantwort(antwrtn[i], true);
+            for (let i = 0; i < antwrtn.length; i++) {
+                let temp = new Quizantwort(antwrtn[i], true);
                 ants.push(temp);
             }
             tmp = alles[2]
             antwrtn = tmp.split("**");
-            for(let i = 0; i<antwrtn.length; i++) {
-                let temp =new Quizantwort(antwrtn[i], false);
+            for (let i = 0; i < antwrtn.length; i++) {
+                let temp = new Quizantwort(antwrtn[i], false);
                 ants.push(temp);
             }
             let quiz = new Quiz(frage, ants);
@@ -279,10 +274,6 @@ function machQuiz(string) {
         }
     }
 }
-
-
-
-
 
 //Methode checkt und ändert den Button auf nächste Frage
 function antwortChecken() {
@@ -306,28 +297,26 @@ function naechsteFrage() {
 //Deklaration des Fragenkatalogs
 let kat;
 
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", function (event) {
     kat = erstelleFragenkatalog();
     kat.init();
     //var wenndasgeht = kat.quizze;
 
 });
 
-
-
 //gibt ein gemischtes Array von 1-Länge Input Array aus zur Abfrage
 function shuffleArray(arr) {
     let shuffledIndexes = [];
-    for(let i=0; i<arr.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
         shuffledIndexes[i] = i;
     }
-    for(let i=0; i<10; i++) {
+    for (let i = 0; i < 10; i++) {
         shuffledIndexes.sort((a, b) => 0.5 - Math.random());
     }
     return shuffledIndexes;
 }
 
 function meldungWeg() {
-            let erfolgsnachricht = document.getElementById("erfolgsnachricht");
-            erfolgsnachricht.innerHTML ="";
+    let erfolgsnachricht = document.getElementById("erfolgsnachricht");
+    erfolgsnachricht.innerHTML = "";
 }
