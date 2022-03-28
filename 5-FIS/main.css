@@ -9,9 +9,6 @@ body{
   display: none;
 }
 
-h1, h2, h3 {
-}
-
 .navbar-brand {
     margin-left: 1vw;
     font-weight: 600;
@@ -67,12 +64,19 @@ Hier wollte er die Farbe sonst nicht ändern
 
 }
 
+/* .list-group{
+    max-height: 380px;
+    margin-bottom: 10px;
+    overflow-y:scroll;
+    -webkit-overflow-scrolling: touch;
+} */
+
 #content {
     background-color: var(--hintergrund);
-    padding:4%;
+    padding:16px;
     border:solid rgba(128, 128, 128, 0.42);
     border-radius: 16px;
-    box-shadow: slategray 6px 8px 4px 6px;
+    box-shadow: 5px 3px 6px 1px rgba(112,128,144,0.82);
     margin:4vh 5vw;
     display:block;
     overflow:auto;
@@ -80,7 +84,6 @@ Hier wollte er die Farbe sonst nicht ändern
 }
 
 .bg:hover {
-    corner-radius:4px;
     background-image: linear-gradient(180deg, var(--hauptfarbe), var(--hintergrund));
 
 }
