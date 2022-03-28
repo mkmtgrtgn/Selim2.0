@@ -75,21 +75,23 @@
 
         <div class="container">
             <div class="paragraph">
-                <h2>Aufgabe 9.1 DML</h2>
-                <p>Wo liegt der Fehler in der folgenden Anweisung? Wähle die richtige Antwort aus (Single Choice).<br />
-                    
+                <h2>Aufgabe 3</h2>
+                <p>Welche <u>Primärschlüssel</u> eignen sich für die <u>Entitytypen</u>? Wähle die richtigen Antworten aus (Multiple Choice).<br />
+                    <div class="col-md-4">
+                        <img class="img-responsive embed-responsive-item" src="aufgabe3-ERM.svg" alt="Begriffsstruktur"/>
+                    </div>  
                 </p>
 
-                 <code class="normal-code">UPDATE Personal ('Kathrin Schuster', 'geschieden');</code>
+                 <code class="normal-code"></code>
                 <div class="row aufgabe1">
                     <div class="col-md-12">
-                        <p id="cursor-change"><strong id='bib'>a) Die Anweisung UPDATE ist falsch, denn um Werte in der Tabelle Personal zu aktualisieren, braucht man INSERT TO.</strong> </p>
-                        <p id="cursor-change"><strong id='info'>b) Die Anweisung ist falsch, da Kathrin Schuster bereits geschieden ist. Durch die Anweisung UPDATE würde sich der Familienstatus also nicht ändern.</strong> </p>
-                        <p id="cursor-change"><strong id='verleihen'>c) Diese Anweisung vermischt die Funktion UPDATE mit der Funktion INSERT. Um Werte in der Tabelle Personal zu aktualisieren, ist die folgende Syntax zu verwenden: UPDATE Personal SET FamStatus = 'geschieden' WHERE Name = 'Kathrin Schuster';.</strong> </p>       
-                        
-                        
-                    </div>
-                    
+                        <p id="cursor-change"><strong id='bib'>a) Entität 'Strafen': Das Attribut 'Gebühr' eignet sich als Primärschlüssel, da es die Entität eindeutig bestimmt.</strong> </p>
+                        <p id="cursor-change"><strong id='info'>b) Entität 'Ausleiher': Das Attribut 'Name' identifiziert als einziges einen Ausleiher eindeutig.</strong> </p>
+                        <p id="cursor-change"><strong id='verleihen'>c) Entität 'Videofilm': Zweiteiliger Primärschlüssel 'Titel' und 'Regisseur'. Der 'Titel' identifiziert einen Videofilm nicht eindeutig, da es durchaus Filme mit gleichem Titel gibt.
+                            Oder: Zusätzliches Attribut als Primärschlüssel einfügen, sodass kein zweiteiliger Schlüssel verwendet werden muss. Zum Beispiel Attribut 'FilmNr'.</strong> </p>
+                        <p id="cursor-change"><strong id='zahlen'> d) Entität 'Ausleiher': Das Attribut 'Mitgliedsnummer' identifiziert als einziges einen Ausleiher eindeutig.</strong> </p>
+                        <p id="cursor-change"><strong id='strafen'> e) Entität 'Strafen': Das Attribut 'RegNr' eignet sich als Primärschlüssel, da es die Entität eindeutig bestimmt.</strong> </p>
+                </div>
                     <div class="row mb-5">
                         <div class="col">
                             <p><button type="button" class="btn btn-primary float-end" onClick="markWords()">Überprüfen</button></p>
