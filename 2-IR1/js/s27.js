@@ -1,7 +1,7 @@
 function validate(event) {
 
     var paragraph = "<p>";
-    paragraph += "Vergleiche deine Antwort!<br/>Deskriptoren der automatischen Indexierung: Abenteuer; Ausgabe; Band; bedecken; deutsch; englisch; Erscheinung; erwarten; Fans; feststehen; Fortsetzung; Frau; halten; Harry; Rowling; scheinen; Termin; Verlag; vorliegen; warten; Welt; ziehen; 2003.<br/>Achtung!<br/>Information Retrievalsysteme und vor allem die Werkzeuge der Dokumentenanalyse sind sprachenabhängig! Für den vorliegenden Text kann das bedeuten, daß das System mit dem Begriff 'Run' und dessen Verarbeitung Probleme haben könnte.";
+    paragraph += "Vergleiche deine Antwort!<br/>Deskriptoren der automatischen Indexierung: Abenteuer; Ausgabe; Band; bedecken; deutsch; englisch; Erscheinung; erwarten; Fans; feststehen; Fortsetzung; Frau; halten; Harry; Rowling; scheinen; Termin; Verlag; vorliegen; warten; Welt; ziehen; 2003.<br/>Achtung!<br/>Information Retrievalsysteme und vor allem die Werkzeuge der Dokumentenanalyse sind sprachenabhängig! Für den vorliegenden Text kann das bedeuten, dass das System mit dem Begriff 'Run' und dessen Verarbeitung Probleme haben könnte.";
     paragraph += "</p>";
     document.getElementById('rueckmeldung').innerHTML = paragraph;
     
