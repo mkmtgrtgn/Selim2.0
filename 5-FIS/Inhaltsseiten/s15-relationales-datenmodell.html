@@ -81,17 +81,23 @@
                        übergeleitet werden, welches Grundlage <strong>relationaler Datenbanken</strong> ist.<br/>
                     <img class='img-responsive embed-responsive-item' src='s15-relationales-datenmodell-abb.svg' alt='Relationales Datenmodell' style="height: auto; width: 100%">
                     <p>Im Relationenmodell werden Entitäten, ihre Eigenschaften und ihre Beziehungen untereinander durch das Konzept der 
-                       Relation dargestellt.</p>
-                    <p>Dabei beschreibt jede Relation (=Tabelle) genau eine Entität des Datenbestandes.</p>
-                    <p>Relationen bestehen aus Tupeln (Zeilen oder Datensätze ) und Attributen (Spalten).</p>
+                       Relation dargestellt.</p> <p>Dabei beschreibt jede Relation (=Tabelle) genau eine Entität des Datenbestandes. Relationen bestehen aus Tupeln (Zeilen oder Datensätze ) und Attributen (Spalten).</p></p>    
+                    <p>Bei der Transformation des ERM in das Relationale Datenmodell sind folgende Regeln zu beachten:
+                    <ol>
+                    <li>Für jede Entitätsmenge wird eine Tabelle erstellt.</li>
+                    <li>Sind zwei Entitätsmengen A und B durch eine 1:1- oder 1:n- Beziehung verbunden, dann wird der Schlüssel von B als 
+                    <strong>Fremdschlüssel</strong> in A als zusätzliches Attribut eingetragen.</li>
+                    <li>Sind zwei Entitätsmengen A und B durch eine m:n-Beziehung verbunden, dann wird für diese Beziehung eine eigene 
+                    Tabelle angelegt. Als Attribute werden die Schlüssel verwendet.</li>
+                    </ol>
                     </p>
-	                </div>
                     </div>
-
+                    </div>
             </div>
-       </div>
+        </div>
     </div>
 </div>
+      
 
 <body>
 
