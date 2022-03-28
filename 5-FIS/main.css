@@ -64,12 +64,11 @@ Hier wollte er die Farbe sonst nicht ändern
 
 }
 
-/* .list-group{
-    max-height: 380px;
-    margin-bottom: 10px;
-    overflow-y:scroll;
-    -webkit-overflow-scrolling: touch;
-} */
+#erm-abbildung-uni {
+    height: auto;
+    width: auto\9;
+    max-width: 50vw;
+}
 
 #content {
     background-color: var(--hintergrund);
