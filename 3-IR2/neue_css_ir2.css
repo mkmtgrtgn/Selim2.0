@@ -276,7 +276,16 @@ div.desc {
     margin-top: 2.5%;
 }
 
+/* für Seite 34*/
+#feedbackBtn {
+    margin-right: 2%;
+    float: right;
+}
 
+/*Feedbackseite*/
+.formularSet {
+    padding: 1vw;
+}
 
 /*Seite 5*/
 .tables {
