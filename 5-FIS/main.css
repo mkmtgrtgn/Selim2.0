@@ -75,7 +75,37 @@ Hier wollte er die Farbe sonst nicht ändern
 
 }
 
-#erm-abbildung-uni {
+#anwendung-boolescher-logik-bild {
+    height: auto;
+    width: auto\9;
+    max-width: 50vw;
+}
+
+#begriffsstruktur-abbildung {
+    height: auto;
+    width: auto\9;
+    max-width: 50vw;
+}
+
+#datenmanipulation-tabelle {
+    height: auto;
+    width: auto\9;
+    max-width: 50vw;
+}
+
+#die-select-anweisung-abbildung {
+    height: auto;
+    width: auto\9;
+    max-width: 50vw;
+}
+
+#einsatzbereiche-abbildung {
+    height: auto;
+    width: auto\9;
+    max-width: 50vw;
+}
+
+#erm-begriffszusammenhaenge-abbildung {
     height: auto;
     width: auto\9;
     max-width: 50vw;
@@ -88,6 +118,18 @@ Hier wollte er die Farbe sonst nicht ändern
 }
 
 #kardinalitaeten-bilder {
+    height: auto;
+    width: auto\9;
+    max-width: 50vw;
+}
+
+#relationales-datenmodell-abbildung {
+    height: auto;
+    width: auto\9;
+    max-width: 50vw;
+}
+
+#sql-grundlagen-abbildung {
     height: auto;
     width: auto\9;
     max-width: 50vw;
