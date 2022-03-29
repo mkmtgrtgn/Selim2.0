@@ -277,13 +277,7 @@ p {
 
 /* Code Formatierung beim Aufgabentyp Listenauswahl */
 .list-code {
-    color: #586C6C;
     line-height: 300%;
-}
-
-/* Code Farbe innerhalb von Text */
-.normal-code {
-    color: #586C6C;
 }
 
 /* Code Farbe auf Buttons beim Aufgabentyp Single Choice */
