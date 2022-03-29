@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IR2 Seite 18</title>
+    <link rel="stylesheet" href="neue_css_ir2.css">
+    <link href="../static/css/quiz.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Header, Navbar und Pageination von DARIA MASLOV-->
+</head>
+<body>
+    <div class="container-fluid">
+
+        <!--Navigationsleiste-->
+        <nav class="navbar navbar-light navbar-expand-lg navbar-fixed-top">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Navbar Brand: Logo der Uni Hildesheim, sowie unser Modulname-->
+                <a class="navbar-brand">
+                    <!--Desktop und Tablet/großer oder mittel-großer Viewport; Klick auf Bild soll dann auf die erste Seite/eine Einfürungsseite führen-->
+                    <span class="d-none d-sm-block">
+                        <!--Uni-Logo sowie lange Bezweichnung unseres Moduls-->
+                        <img class="d-inline-block align-text-center" src="../uni_logo.png" width="70" height="70" alt="Universität Hildesheim" style="padding-right: 20;">
+                        SELiM - IR Retrievalstrategien
+
+                    </span>
+                    <!--Handy/kleiner Viewport - Abkürzung der Bezeichnung unseres Viewports-->
+                    <span class="d-sm-none">IR2</span>
+                </a>
+
+                <!--Menü für verschiedene Module-->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.uni-hildesheim.de/selim/miniTemplateSystem/index.php">Startseite</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Alle SELiM Module</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="https://www.uni-hildesheim.de/selim/Modul_GDI/GDI_Einstieg.php" >Grundbegriffe IW</a></li>
+                                <li><a class="dropdown-item" href="https://www.uni-hildesheim.de/selim/Modul_IR/IR_1_bekog_SELIM/inhalt.php">Information Retrieval 1</a></li>
+                                <li><a class="dropdown-item" href="https://www.uni-hildesheim.de/selim/Modul_IR/IR_3_bekog_SELIM/r_inhalt.php">Information Retrieval 3</a></li>
+                                <li><a class="dropdown-item" href="https://www.uni-hildesheim.de/selim/miniTemplateSystem/module/evaIR/inhalt_eva.php">Evaluierung von IR Systemen</a></li>
+                                <li><a class="dropdown-item" href="https://www.uni-hildesheim.de/selim/miniTemplateSystem/module/fis/inhalt_fis.php">Fakteninformationssysteme</a></li>
+                                <li><a class="dropdown-item" href="https://www.uni-hildesheim.de/selim/miniTemplateSystem/module/mue/inhalt_mue.php">Maschinelle Übersetzung</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../6-CSS-GLOSSAR-FRMLS/glossar.html">Glossar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../6-CSS-GLOSSAR-FRMLS/formelsammlung.html">Formelsammlung</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+
+
+        <!--Seiteninhalt /// Hier könnt ihr euren Inhalt eintragen-->
+        <div id="content">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+
+
+                        <h1>Übung 7 : Inverse Dokumenthäufigkeit</h1>
+
+                        <p>Mit einem Klick auf den Button startet ein Quiz mit wahr/falsch-Aufgaben zum Thema Inverse Dokumenthäufigkeit </p>
+                    </div>
+                </div>
+                <div id="quiz">
+
+                    <div class="frage">
+                        Bestimmen Sie die richtige Aussage in Bezug auf die IDF-Formel! || Die Formel macht deutlich, daß ein Begriff, der in nur einem Dokument vorkommt, mehr Gewicht bekommt, als einer, der in zweien oder gar allen vorkommt. ||  Die Formel macht deutlich, daß ein Begriff, der in vielen Dokumenten vorkommt, mehr Gewicht bekommt, als einer, der in nur in wenigen oder gar einem vorkommt.
+                    </div>
+
+
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            Wissen abfragen
+                        </button>
+
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content" id="modalCont">
+
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Fragen</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+
+                                    <div class="modal-body" >
+
+                                        <div class="container" id="fragendiv">
+
+                                            <h5 id="qfrage" class = "quizfrage">Hierzu gibt es keine Fragen.</h5>
+                                        </div>
+                                        <div class="modal-footer row ">
+                                            <button id = "quizmaster" onclick="antwortChecken()"
+                                                    type="button" class="btn btn-outline-success">Antwort überprüfen</button>
+                                        </div>
+                                        <div class="row justify-content-md-center">
+                                            <div id = "erfolgsnachricht" class="col-md-auto"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col md-12">
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" id="fortschritt" style="width: 1%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Fortschrittsanzeige-->
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="61"
+                    aria-valuemin="0" aria-valuemax="100" style="width:61.2%">
+                    <span class="sr-only">61,21%</span>
+                     </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--Seitenzahl-->
+    <div class="row justify-content-center">
+         <div class="col-lg-8 col-lg-offset-3 text-center">
+            <div class="page-pick">
+                 <div class="btn-group dropup">
+
+                <!--vorherige Seite-->
+                <a class="btn text-left btn-lg" href="ir2_seite17.html" role="button">
+                    <span class="d-none d-lg-block"><i class="bi bi-arrow-left-circle-fill">vorherige Seite</i></span>
+                    <span class="d-lg-none"><i class="bi bi-arrow-left-circle-fill"></i></span>
+                </a>
+                <button type="button" class="btn btn-lg" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="d-none d-md-block">18. &Uuml;bung 7: Inverse Dokumenthäufigkeit<i class="bi bi-chevron-compact-up"></i></span>
+                    <span class="d-md-none">Seite 18 <i class="bi bi-chevron-compact-up"></i></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <!--Link ändern-->
+                    <li><a class="dropdown-item " href="ir2_seite1.html" >
+                        <span class="d-none d-md-block">1. Lernziele</span>
+                        <span class="d-md-none">Seite 1</span> 
+                    </a></li>
+                    <!--Link ändern-->
+                    <li><a class="dropdown-item" href="ir2_seite2.html" >
+                        <span class="d-none d-md-block">2. Wiederholung: Was ist Information Retrieval</span>
+                        <span class="d-md-none">Seite 2</span> 
+                    </a></li>
+                    <!--Link ändern-->
+                    <li><a class="dropdown-item" href="ir2_seite3.html" >
+                        <span class="d-none d-md-block">3. Wiederholung: Information Retrieval Systeme</span>
+                        <span class="d-md-none">Seite 3</span> 
+                    </a></li>
+                    <li><a class="dropdown-item" href="ir2_seite4.html" >
+                        <span class="d-none d-md-block">4. &Uuml;bung 1: Inhaltserschließung</span>
+                        <span class="d-md-none">Seite 4</span> 
+                    </a></li>
+                    <li><a class="dropdown-item" href="ir2_seite5.html" >
+                        <span class="d-none d-md-block">5. &Uuml;bung 2: Dokumentenanalyse</span>
+                        <span class="d-md-none">Seite 5</span> 
+                    </a></li>
+                    <li><a class="dropdown-item" href="ir2_seite6.html" >
+                        <span class="d-none d-md-block">6. Retrieval</span>
+                        <span class="d-md-none">Seite 6</span> 
+                    </a></li>
+                    <li><a class="dropdown-item" href="ir2_seite7.html" >
+                        <span class="d-none d-md-block">7. &Uuml;bung 3: Wichtige Begriffe </span>
+                        <span class="d-md-none">Seite 7</span> 
+                    </a></li>
+                    <li><a class="dropdown-item" href="ir2_seite8.html" >
+                        <span class="d-none d-md-block">8. Retrieval als &Auml;hnlichkeitsmessung</span>
+                        <span class="d-md-none">Seite 8</span> 
+                    </a></li>
+                    <li><a class="dropdown-item" href="ir2_seite9.html" >
+                        <span class="d-none d-md-block">9. IR-Paradigma</span>
+                        <span class="d-md-none">Seite 9</span> 
+                    </a></li>
+                    <li><a class="dropdown-item" href="ir2_seite10.html" >
+                        <span class="d-none d-md-block">10. Boole'sches Retrieval Modell</span>
+                        <span class="d-md-none">Seite 10</span> 
+                    </a></li>
+                    <li><a class="dropdown-item" href="ir2_seite11.html" >
+                        <span class="d-none d-md-block">11. &Uuml;bung 4: Boole'sches Modell</span>
+                        <span class="d-md-none">Seite 11</span> 
+                    </a></li>
+                    <li><a class="dropdown-item" href="ir2_seite12.html" >
+                        <span class="d-none d-md-block">12. &Uuml;bung 5: Boole'sches Retrieval</span>
+                        <span class="d-md-none">Seite 12</span> 
+                    </a></li>
+                    <!--Link ändern-->
+                    <li><a class="dropdown-item" href="ir2_seite13.html" >
+                        <span class="d-none d-md-block">13. &Uuml;bung 6: Boole'sches Retrieval</span>
+                        <span class="d-md-none">Seite 13</span> 
+                    </a></li>
+                    <!--Link ändern-->
+                    <li><a class="dropdown-item" href="ir2_seite14.html" >
+                        <span class="d-none d-md-block">14. Ranking</span>
+                        <span class="d-md-none">Seite 14</span> 
+                    </a></li>
+                    
+                    <li><a class="dropdown-item" href="ir2_seite15.html" >
+                        <span class="d-none d-md-block">15. Beispiel: Ranking</span>
+                        <span class="d-md-none">Seite 15</span> 
+                    </a></li>
+                    <li><a class="dropdown-item" href="ir2_seite16.html" >
+                        <span class="d-none d-md-block">16. Gewichtete Indexierung</span>
+                        <span class="d-md-none">Seite 16</span> 
+                    </a></li>
+                    <li><a class="dropdown-item" href="ir2_seite17.html" >
+                        <span class="d-none d-md-block">17. Inverse Dokumenth&auml;ufigkeit</span>
+                        <span class="d-md-none">Seite 17</span> 
+                    </a></li>
+                    <li><a class="dropdown-item" href="ir2_seite18.html" >
+                        <span class="d-none d-md-block">18. &Uuml;bung 7: Inverse Dokumenth&auml;ufigkeit</span>
+                        <span class="d-md-none">Seite 18</span> 
+                    </a></li>
+                    <!--Link ändern-->
+                    <li><a class="dropdown-item" href="ir2_seite19.html" >
+                        <span class="d-none d-md-block">19.  &Uuml;bung 8: Inverse Dokumenth&auml;ufigkeit</span>
+                        <span class="d-md-none">Seite 19</span> 
+                    </a></li>
+                    <!--Link ändern-->
+                    <li><a class="dropdown-item" href="ir2_seite20.html" >
+                        <span class="d-none d-md-block">20. &Auml;hnlichkeitsberechnung</span>
+                        <span class="d-md-none">Seite 20</span> 
+                    </a></li>
+                    <!--Link ändern-->
+                    <li><a class="dropdown-item" href="ir2_seite21.html" >
+                        <span class="d-none d-md-block">21. Vektor Raum Modell</span>
+                        <span class="d-md-none">Seite 21 </span> 
+                    </a></li>
+                    <!--Link ändern-->
+                    <li><a class="dropdown-item" href="ir2_seite22.html" >
+                        <span class="d-none d-md-block">22. Dokument Term Matrix</span>
+                        <span class="d-md-none">Seite 22</span> 
+                    </a></li>
+                    <!--Link ändern-->
+                    <li><a class="dropdown-item" href="ir2_seite23.html" >
+                        <span class="d-none d-md-block">23. &Uuml;bung 9: Vektor Raum Modell</span>
+                        <span class="d-md-none">Seite 23</span> 
+                    </a></li>
+                    <!--Link ändern-->
+                    <li><a class="dropdown-item" href="ir2_seite24.html" >
+                        <span class="d-none d-md-block">24. &Uuml;bung 10: Retrievalmodelle</span>
+                        <span class="d-md-none">Seite 24</span> 
+                    </a></li>
+                    <!--Link ändern-->
+                    <li><a class="dropdown-item" href="ir2_seite25.html" >
+                        <span class="d-none d-md-block">25. Relevance Feedback - Methoden</span>
+                        <span class="d-md-none">Seite 25</span> 
+                    </a></li>
+                    <!--Link ändern-->
+                    <li><a class="dropdown-item" href="ir2_seite26.html" >
+                        <span class="d-none d-md-block">26. &Uuml;bung 11: Relevance Feedback</span>
+                        <span class="d-md-none">Seite 26</span> 
+                    </a></li>
+                    <!--Link ändern-->
+                    <li><a class="dropdown-item" href="ir2_seite27.html" >
+                        <span class="d-none d-md-block">27. Relevance Feedback - Methoden</span>
+                        <span class="d-md-none">Seite 27</span> 
+                    </a></li>
+                    <!--Link ändern-->
+                    <li><a class="dropdown-item" href="ir2_seite28.html" >
+                        <span class="d-none d-md-block">28. &Uuml;bung 12: Relevance Feedback nach der Rocchio Formel</span>
+                        <span class="d-md-none">Seite 28</span> 
+                    </a></li>
+                    <!--Link ändern-->
+                    <li><a class="dropdown-item" href="ir2_seite29.html" >
+                        <span class="d-none d-md-block">29. &Uuml;bung 13: Indexierung und Retrieval</span>
+                        <span class="d-md-none">Seite 29</span> 
+                    </a></li>
+                    <!--Link ändern-->
+                    <li><a class="dropdown-item" href="ir2_seite30.html" >
+                        <span class="d-none d-md-block">30. &Uuml;bung 13: Indexierung und Retrieval</span>
+                        <span class="d-md-none">Seite 30</span> 
+                    </a></li>
+                    <!--Link ändern-->
+                    <li><a class="dropdown-item" href="ir2_seite31.html" >
+                        <span class="d-none d-md-block">31. &Uuml;bung 13: Indexierung und Retrieval</span>
+                        <span class="d-md-none">Seite 31</span> 
+                    </a></li>
+                    <!--Link ändern-->
+                    <li><a class="dropdown-item" href="ir2_seite32.html" >
+                        <span class="d-none d-md-block">32. &Uuml;bung 13: Gewichtete Indexierung und Retrieval</span>
+                        <span class="d-md-none">Seite 32</span> 
+                    </a></li>
+                    <!--Link ändern-->
+                    <li><a class="dropdown-item" href="ir2_seite33.html" >
+                        <span class="d-none d-md-block">33. Exkurs: Suchmaschinen</span>
+                        <span class="d-md-none">Seite 33</span> 
+                    </a></li>
+                    <!--Link ändern-->
+                    <li><a class="dropdown-item" href="ir2_seite34.html" >
+                        <span class="d-none d-md-block">34. Zusammenfassung</span>
+                        <span class="d-md-none">Seite 34</span> 
+                    </a></li>
+                </ul>
+
+
+                <!--nächste Seite-->
+                <a class="btn text-left btn-lg" href="ir2_seite19.html" role="button">
+                    <span class="d-none d-lg-block"> nächste Seite <i class="bi bi-arrow-right-circle-fill"></i></span>
+                    <span class="d-lg-none"><i class="bi bi-arrow-right-circle-fill"></i></span>
+                </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="../static/js/quiz.js"></script>
+</html>

@@ -155,16 +155,23 @@ class Fragenkatalog {
         //Die Frage wurde richtig beantwortet wenn performance noch wahr ist
         if(performance) {
 
+            let modl = document.getElementById("modalCont");
+            modl.style = "background-color: rgba(144, 238, 144, 0.7);"
             //bisschen motivierende Sprueche schaden ja nicht
             let erfolgsnachricht = document.getElementById("erfolgsnachricht");
             let spr = [":)", "Super!", "Alles richtig!", "Eins A", "Weiter so!"];
 
+
+
             let rnd = Math.floor(Math.random()*spr.length);
             erfolgsnachricht.innerHTML = spr[rnd];
-            if((this.reps >this.quizze.length+5)%2===3) {
+
+
+
+            if((this.reps >this.quizze.length+5)%2===4) {
                 erfolgsnachricht.innerHTML = "na langweilig? :p";
             }
-            const nr = setTimeout(meldungWeg, 800);
+            const nr = setTimeout(meldungWeg, 1000);
 
             //Fortschrittsbalken updaten
             if( n>0 ) {
@@ -205,32 +212,39 @@ class Fragenkatalog {
     }
     // Zeigt den Fortschritt des Spielers an und signalisiert 100% richtig
     updateProg(n) {
-            let bar = document.getElementById("fortschritt");
-            let prog = Math.floor(100 * ((this.quizze.length-n) / this.quizze.length));
-            let style = "width:" + String(prog) + "%";
-            console.log(style);
-            bar.style.width = String(prog) + "%";
+        let bar = document.getElementById("fortschritt");
+        let prog = Math.floor(100 * ((this.quizze.length-n) / this.quizze.length));
+        let style = "width:" + String(prog) + "%";
+        console.log(style);
+        bar.style.width = String(prog) + "%";
 
-            bar.setAttribute("aria-valuenow", String(prog));
-            if (n === 0) {
-                let body = document.getElementById("modalCont");
-                body.className = "modal-content allesrichtig";
-                let title = document.getElementById("staticBackdropLabel");
-                title.innerHTML = "Super, du hast alles richtig beantwortet!";
-                let quizbtn = document.getElementById("quizmaster");
-                let weiter = document.createElement("h6");
-                weiter.innerHTML = "Weitermachen?";
-                weiter.className = "btn btn-outline-primary m-1";
-                quizbtn.style.display = "none";
-                weiter.addEventListener("click", function() {
-                    body.className = "modal-content";
-                    weiter.style.display = "none";
-                    quizbtn.style.display = "block";
-                    naechsteFrage();
-                });
-                let par = title.parentElement;
-                par.appendChild(weiter);
-            }
+        bar.setAttribute("aria-valuenow", String(prog));
+
+
+        if (n === 0) {
+            let body = document.getElementById("modalCont");
+            let title = document.getElementById("staticBackdropLabel");
+            title.innerHTML = "Super, du hast alles richtig beantwortet!";
+
+            /* Bei Bedarf das Modal noch anders stylen und Nutzer fragen ob er weitermachen will
+            body.className = "modal-content allesrichtig";
+
+            let quizbtn = document.getElementById("quizmaster");
+            let weiter = document.createElement("h6");
+            weiter.innerHTML = "Weitermachen?";
+            weiter.className = "btn btn-outline-primary m-1";
+            quizbtn.style.display = "none";
+            weiter.addEventListener("click", function() {
+                body.className = "modal-content";
+                weiter.style.display = "none";
+                quizbtn.style.display = "block";
+                naechsteFrage();
+            });
+            let par = title.parentElement;
+            par.appendChild(weiter);
+
+             */
+        }
 
         return true;
     }
@@ -332,6 +346,8 @@ function shuffleArray(arr) {
 }
 
 function meldungWeg() {
-            let erfolgsnachricht = document.getElementById("erfolgsnachricht");
-            erfolgsnachricht.innerHTML ="";
+    let modl = document.getElementById("modalCont");
+    modl.style = "";
+    let erfolgsnachricht = document.getElementById("erfolgsnachricht");
+    erfolgsnachricht.innerHTML ="";
 }

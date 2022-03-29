@@ -1,105 +1,113 @@
 <!doctype html>
 <html lang="de">
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS und JS Bundle -->
-    <link href="../static/css/bootstrap.css" rel="stylesheet">
-    <link href="main.css" rel="stylesheet">
+      <!-- Bootstrap CSS und JS Bundle -->
+      <link href="../static/css/bootstrap.css" rel="stylesheet">
+      <link href="main.css" rel="stylesheet">
 
-    <!-- Der Font muss noch importiert werden -->
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;600;700&display=swap" rel="stylesheet">
-    <title>Selim 2.0</title>
-</head>
-<body>
+      <!-- Der Font muss noch importiert werden -->
+      <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;600;700&display=swap" rel="stylesheet">
+      <title>Selim 2.0</title>
+  </head>
+  <body>
 
-<div class="navi">
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon navbar-light"></span>
-            </button>
-            <a class="navbar-brand" href="#">Selim</a>
+    <div class="navi">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon navbar-light"></span>
+                </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-linki active" aria-current="page" href="../home.html">Home</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-linki dropdown-toggle" href="#" id="navDrop1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Module
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navDrop1">
-                            <li><a class="dropdown-item bg" href="../1-GDI/gdi.html">GDI</a></li>
-                            <li><a class="dropdown-item bg" href="../2-IR1/ir1.html">IR1</a></li>
-                            <li><a class="dropdown-item bg" href="../3-IR2/ir2.html">IR2</a></li>
-                            <li><a class="dropdown-item bg" href="../4-IR3/ir3.html">IR3</a></li>
-                            <li><a class="dropdown-item bg" href="../5-FIS/fis.html">FIS</a></li>
-                        </ul>
-                    </li>
+                <a class="navbar-brand">
+                    <span class="d-none d-sm-block">
+                        <img class="d-inline-block align-text-center" src="../uni_logo.png" width="70" height="70" alt="Universität Hildesheim" style="padding-right: 20;">
+                        SELiM - Grundbegriffe der IW
+                    </span>
+                    <span class="d-sm-none">GDI</span>
+                </a>
 
-                    <li class="nav-item">
-                        <a class="nav-linki active" aria-current="page" href="../6-CSS-GLOSSAR-FRMLS/glossar.html">Glossar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-linki active" aria-current="page" href="../6-CSS-GLOSSAR-FRMLS/formelsammlung.html">Formelsammlung</a>
-                    </li>
-                </ul>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-linki active" aria-current="page" href="../home.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-linki dropdown-toggle" href="#" id="navDrop1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Module
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navDrop1">
+                                <li><a class="dropdown-item bg" href="../1-GDI/gdi.html">GDI</a></li>
+                                <li><a class="dropdown-item bg" href="../2-IR1/ir1.html">IR1</a></li>
+                                <li><a class="dropdown-item bg" href="../3-IR2/ir2.html">IR2</a></li>
+                                <li><a class="dropdown-item bg" href="../4-IR3/ir3.html">IR3</a></li>
+                                <li><a class="dropdown-item bg" href="../5-FIS/fis.html">FIS</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-linki active" aria-current="page" href="../6-CSS-GLOSSAR-FRMLS/glossar.html">Glossar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-linki active" aria-current="page" href="../6-CSS-GLOSSAR-FRMLS/formelsammlung.html">Formelsammlung</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-</div>
+        </nav>
+    </div>
 
 
 
-<div id="content">
+    <div id="content">
 
-  <div class="container">
+      <div class="container">
 
-    <div id="content_lp">
-      <div class="row" >
-          <div class="col">
-            <h3>Lernpfad</h3>
-            <p>
-              <div class="btn-group">
-                <a href="gdi.html" class="btn btn-primary">Inhaltsverzeichnis</a>
-                <a href="gdi-evaluierung.html" class="btn btn-primary">Zurück</a>
-                <a href="gdi-Multimedia.html" class="btn btn-primary">Vorwärts</a>
+        <div id="content_lp">
+          <div class="row" >
+              <div class="col">
+                <h3>Lernpfad</h3>
+                <p>
+                  <div class="btn-group">
+                    <a href="gdi.html" class="btn btn-primary">Inhaltsverzeichnis</a>
+                    <a href="gdi-evaluierung.html" class="btn btn-primary">Zurück</a>
+                    <a href="gdi-Multimedia.html" class="btn btn-primary">Vorwärts</a>
+                  </div>
+                </p>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped bg-success" role="progressbar"
+                  aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                    <!--<strong>40% abgeschlossen</strong>!-->
+                  </div>
+                </div>
               </div>
-            </p>
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped bg-success" role="progressbar"
-              aria-valuenow="76" aria-valuemin="0" aria-valuemax="100" style="width:76%">
-                <!--<strong>40% abgeschlossen</strong>!-->
-              </div>
-            </div>
           </div>
+        </div>
+        <br>
+
+        <h1 class="text-center">
+          <span class="badge rounded-pill bg-warning">THEMA</span>
+          Mensch-Maschine-Interaktion
+        </h1>
+
+        <p>Ein <strong>Informationssystem</strong> kann nur so gut sein wie seine Schnittstelle zum Benutzer.
+        Aufgabe des Forschungsbereiches der <strong>Mensch-Maschine-Interaktion (MMI)</strong> ist daher die aufgaben- und benutzergerechte Gestaltung dieser Schnittstelle,
+        um eine möglichst unkomplizierte, intuitive Interaktion zwischen Mensch und System zu ermöglichen.</p>
+
+        <p>Vor allem auf Basis der <strong>Kriterien der Software-Ergonomie</strong>  wird die Benutzeroberfläche und der gesamte Informationsprozess gestaltet und optimiert.
+        Auch wenn diese Kriterien das Fundament für eine benutzerfreundliche Gestaltung bilden,
+        so entscheiden letztendlich die <strong>Bedürfnisse der Zielgruppe</strong>  über die Gestaltung.
+        Nutzertests sind daher eines der wichtigsten Kriterien bei der Evaluierung der MMI innerhalb eines Informationsystems.</p>
+        <p>Die Software-Ergonomie stellt Kriterien für die benutzerfreundliche Gestaltung von computerbasierten Arbeits- und Lernsystemen auf,
+        um Arbeitsabläufe so effektiv wie möglich zu gestalten.</p>
+
+        <p>Mehr über die Zusammenhänge und Verfahren des Lehrgebiets erfahren Sie im Lernmodul <strong>Software-Ergonomie</strong>.</p>
       </div>
     </div>
-    <br>
 
-    <h1 class="text-center">
-      <span class="badge rounded-pill bg-warning">THEMA</span>
-      Mensch-Maschine-Interaktion
-    </h1>
-
-    <p>Ein <strong>Informationssystem</strong> kann nur so gut sein wie seine Schnittstelle zum Benutzer.
-    Aufgabe des Forschungsbereiches der <strong>Mensch-Maschine-Interaktion (MMI)</strong> ist daher die aufgaben- und benutzergerechte Gestaltung dieser Schnittstelle,
-    um eine möglichst unkomplizierte, intuitive Interaktion zwischen Mensch und System zu ermöglichen.</p>
-
-    <p>Vor allem auf Basis der <strong>Kriterien der Software-Ergonomie</strong>  wird die Benutzeroberfläche und der gesamte Informationsprozess gestaltet und optimiert.
-    Auch wenn diese Kriterien das Fundament für eine benutzerfreundliche Gestaltung bilden,
-    so entscheiden letztendlich die <strong>Bedürfnisse der Zielgruppe</strong>  über die Gestaltung.
-    Nutzertests sind daher eines der wichtigsten Kriterien bei der Evaluierung der MMI innerhalb eines Informationsystems.</p>
-    <p>Die Software-Ergonomie stellt Kriterien für die benutzerfreundliche Gestaltung von computerbasierten Arbeits- und Lernsystemen auf,
-    um Arbeitsabläufe so effektiv wie möglich zu gestalten.</p>
-
-    <p>Mehr über die Zusammenhänge und Verfahren des Lehrgebiets erfahren Sie im Lernmodul <strong>Software-Ergonomie</strong>.</p>
-  </div>
-
-</body>
-
-<script src="../static/js/bootstrap.bundle.js"></script>
+  </body>
+  <script src="../static/js/bootstrap.bundle.js"></script>
+</html>

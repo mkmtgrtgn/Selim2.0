@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IR2 Feedback Formular</title>
+    <!--Seite von Ramona Böcker-->
+    <link rel="stylesheet" href="neue_css_ir2.css">
+    <!-- Der Font muss noch importiert werden --> 
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<meta http-equiv="expires" content="0">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        
+        <!--Navigationsleiste-->
+        <nav class="navbar navbar-light navbar-expand-lg navbar-fixed-top">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Navbar Brand: Logo der Uni Hildesheim, sowie unser Modulname-->
+                <a class="navbar-brand">
+                    <!--Desktop und Tablet/großer oder mittel-großer Viewport; Klick auf Bild soll dann auf die erste Seite/eine Einfürungsseite führen-->
+                    <span class="d-none d-sm-block">
+                        <!--Uni-Logo sowie lange Bezweichnung unseres Moduls-->
+                        <img class="d-inline-block align-text-center" src="../uni_logo.png" width="70" height="70" alt="Universität Hildesheim" style="padding-right: 20;">
+                        SELiM - IR Retrievalstrategien
+                        
+                    </span>
+                    <!--Handy/kleiner Viewport - Abkürzung der Bezeichnung unseres Viewports-->
+                    <span class="d-sm-none">IR2</span> 
+                </a>
+                
+                <!--Menü für verschiedene Module-->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.uni-hildesheim.de/selim/miniTemplateSystem/index.php">Startseite</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Alle SELiM Module</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="../1-GDI/home.html" >Grundbegriffe IW</a></li>
+                                <li><a class="dropdown-item" href="../2-IR1/ir1.html">Information Retrieval 1</a></li>
+                                <li><a class="dropdown-item" href="../3-IR2/ir2.html">Information Retrieval 3</a></li>
+                                <li><a class="dropdown-item" href="../4-IR3/0_Allgemein.html">Evaluierung von IR Systemen</a></li>
+                                <li><a class="dropdown-item" href="../5-FIS/fis.html">Fakteninformationssysteme</a></li>
+                                <li><a class="dropdown-item" href="https://www.uni-hildesheim.de/selim/miniTemplateSystem/module/mue/inhalt_mue.php">Maschinelle Übersetzung</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../6-CSS-GLOSSAR-FRMLS/glossar.html">Glossar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../6-CSS-GLOSSAR-FRMLS/formelsammlung.html">Formelsammlung</a>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+        </nav>
+  
+        <!--Seiteninhalt /// Altes Formular übertragen in neues Design (noch keine Funktion)-->
+        <div id="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <form name="formular" method="POST" action="feedbackformular_abgeschickt.php?modul=IR_2_bekog_SELIM">
+                            <h2>Bitte teile uns hier dein Feedback über Selim mit.</h2>
+                        
+                            <fieldset class="formularSet">
+                              <legend>Worum handelt es sich bei deinem Feedback?</legend>
+                              <input id="r1" class="right" type="radio" name="was" value="Lob">
+                              <label for="r1">Lob</label><br>      
+                              <input id="r2" class="right" type="radio" name="was" value="Kritik">
+                              <label for="r2">Kritik</label><br>      
+                              <input id="r3" class="right" type="radio" name="was" value="weder noch">
+                              <label for="r3">weder noch</label>
+                            </fieldset>
+                        
+                            <fieldset class="formularSet">
+                              <legend>Worauf bezieht sich dein Feedback?</legend>    
+                              <input id="r5" class="right" type="radio" name="wo" value="Modul">
+                              <label for="r5">auf dieses Modul</label><br>
+                              <input id="r6" class="right" type="radio" name="wo" value="Programm">
+                              <label for="r6">auf das gesamte Programm</label><br>
+                              <input id="r7" class="right" type="radio" name="wo" value="sonst">
+                              <label for="r7">sonstiges</label><br>
+                            </fieldset>
+                            
+                            <fieldset class="formularSet">
+                              <legend>Möchtest Du eine Rückmeldung?</legend> 
+                              <label class="left" for="tf">Email: </label>   
+                              <input id="tf" type="text" name="email"><br>
+                            </fieldset>
+                            
+                            <fieldset class="formularSet">
+                              <legend>Und worum geht es?</legend>  
+                              <div>Bitte beschreibe hier genau, auf welche Stelle in dem Programm sich dein Feedback bezieht. Bei Fehlern auch, wann sie auftreten.</div>     
+                              <textarea style="width:460px;" class="left" name="beschreibung" rows="5" cols="50" wrap="virtual"></textarea><br>
+                            </fieldset>
+                            
+                            <p>
+                                <button type="button" class="btn btn-primary" onclick="confirm('Feedback absenden?')">senden</button>
+                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vielen Dank!</p>                            
+                        </form>
+                </div>
+            </div> 
+        </div>
+      </div> 
+    
+     <!--Seitenzahl-->
+        <div class="row justify-content-center">
+        <div class="col-lg-8 col-lg-offset-3 text-center">
+            <div class="page-pick">
+                <div class="btn-group dropup">
+
+                    <!--vorherige Seite-->
+                    <a class="btn text-left btn-lg" href="ir2_seite34.html" role="button">
+                        <span class="d-none d-lg-block"><i class="bi bi-arrow-left-circle-fill">vorherige Seite</i></span>
+                        <span class="d-lg-none"><i class="bi bi-arrow-left-circle-fill"></i></span> 
+                    </a>
+                    <button type="button" class="btn btn-lg" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="d-none d-md-block">Feedback Formular <i class="bi bi-chevron-compact-up"></i></span>
+                        <span class="d-md-none">Seite 14 <i class="bi bi-chevron-compact-up"></i></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <!--Link, Titel ändern-->
+                        <li><a class="dropdown-item " href="#" >
+                            <span class="d-none d-md-block">1. Einordnung des Themas</span>
+                            <span class="d-md-none">Seite 1</span> 
+                        </a></li>
+                        <!--Link, Titel ändern-->
+                        <li><a class="dropdown-item" href="#" >
+                            <span class="d-none d-md-block">2. Wichtige Begriffe</span>
+                            <span class="d-md-none">Seite 2</span> 
+                        </a></li>
+                        <!--Link, Titel ändern-->
+                        <li><a class="dropdown-item" href="allgemeine Kriterien.html" >
+                            <span class="d-none d-md-block">3. Begriffszusammenhänge</span>
+                            <span class="d-md-none">Seite 3</span> 
+                        </a></li>
+                        <!--Link, Titel ändern-->
+                        <li><a class="dropdown-item" href="allgemeine Kriterien.html" >
+                            <span class="d-none d-md-block">4. Allgemeine Bewertungskriterien</span>
+                            <span class="d-md-none">Seite 4</span> 
+                        </a></li>
+                        <!--Titel ändern-->
+                        <li><a class="dropdown-item" href="ir2_seite5.html" >
+                            <span class="d-none d-md-block">5. Der Relevanzbegriff</span>
+                            <span class="d-md-none">Seite 5</span> 
+                        </a></li>
+                        <!--Link, Titel ändern-->
+                        <li><a class="dropdown-item" href="#" >
+                            <span class="d-none d-md-block">6. Bewertungskriterien: Übungsaufgabe</span>
+                            <span class="d-md-none">Seite 6</span> 
+                        </a></li>
+                        <!--Link, Titel ändern-->
+                        <li><a class="dropdown-item" href="#" >
+                            <span class="d-none d-md-block">7. Die Elementarparameter</span>
+                            <span class="d-md-none">Seite 7</span> 
+                        </a></li>
+                        <!--Link, Titel ändern-->
+                        <li><a class="dropdown-item" href="#" >
+                            <span class="d-none d-md-block">8. Das Standardmaß "Recall"</span>
+                            <span class="d-md-none">Seite 8</span> 
+                        </a></li>
+                        <!--Link, Titel ändern-->
+                        <li><a class="dropdown-item" href="precision.html" >
+                            <span class="d-none d-md-block">9. Das Standardmaß "Precision"</span>
+                            <span class="d-md-none">Seite 9</span> 
+                        </a></li>
+                        <!--Titel ändern-->
+                        <li><a class="dropdown-item" href="ir2_seite10.html" >
+                            <span class="d-none d-md-block">10. Elementarparameter: Übungsaufgabe</span>
+                            <span class="d-md-none">Seite 10</span> 
+                        </a></li>
+                        <!--Link, Titel ändern-->
+                        <li><a class="dropdown-item" href="recalltest.html" >
+                            <span class="d-none d-md-block">11. Recall: Übungsaufgabe</span>
+                            <span class="d-md-none">Seite 11</span> 
+                        </a></li>
+                        <!--Link, Titel ändern-->
+                        <li><a class="dropdown-item" href="elementarparameter p.html" >
+                            <span class="d-none d-md-block">12. Precision: Übungsaufgabe</span>
+                            <span class="d-md-none">Seite 12</span> 
+                        </a></li>
+                        <!--Link, Titel ändern-->
+                        <li><a class="dropdown-item" href="allgemeine Kriterien.html" >
+                            <span class="d-none d-md-block">13. R + P: Übungsaufgabe 1</span>
+                            <span class="d-md-none">Seite 13</span> 
+                        </a></li>
+                        <!--Link, Titel ändern-->
+                        <li><a class="dropdown-item" href="allgemeine Kriterien.html" >
+                            <span class="d-none d-md-block">14. R + P: Übungsaufgabe 2</span>
+                            <span class="d-md-none">Seite 14</span> 
+                        </a></li>
+                        <!--Link, Titel ändern-->
+                        <li><a class="dropdown-item" href="#" >
+                            <span class="d-none d-md-block">15. Sonderfälle bei der Berechnung</span>
+                            <span class="d-md-none">Seite 15</span> 
+                        </a></li>
+                        <!--Link, Titel ändern-->
+                        <li><a class="dropdown-item" href="koordinationStandardmasse.html" >
+                            <span class="d-none d-md-block">16. Koordination der Standardmaße</span>
+                            <span class="d-md-none">Seite 16</span> 
+                        </a></li>
+                        <!--Titel ändern-->
+                        <li><a class="dropdown-item" href="ir2_seite17.html" >
+                            <span class="d-none d-md-block">17. Kombination der Maßzahlen: e-Maß</span>
+                            <span class="d-md-none">Seite 17</span> 
+                        </a></li>
+                        <!--Link, Titel ändern-->
+                        <li><a class="dropdown-item" href="emassAufgabe.html" >
+                            <span class="d-none d-md-block">18. e-Maß: Übungsaufgabe 1</span>
+                            <span class="d-md-none">Seite 18</span> 
+                        </a></li>
+                        <li><a class="dropdown-item" href="ir2_seite19.html" >
+                            <span class="d-none d-md-block">Übung 8: Inverse Dokumenthäufigkeit</span>
+                            <span class="d-md-none">Seite 19</span> 
+                        </a></li>
+                        <!--Link, Titel ändern-->
+                        <li><a class="dropdown-item" href="emassAufgabe.html" >
+                            <span class="d-none d-md-block">20. Benutzerstandpunkt</span>
+                            <span class="d-md-none">Seite 20</span> 
+                        </a></li>
+                        <!--Link, Titel ändern-->
+                        <li><a class="dropdown-item" href="emassAufgabe.html" >
+                            <span class="d-none d-md-block">21. Benutzerstandpunkt: Übung 1</span>
+                            <span class="d-md-none">Seite 21 </span> 
+                        </a></li>
+                        <!--Link, Titel ändern-->
+                        <li><a class="dropdown-item" href="emassAufgabe.html" >
+                            <span class="d-none d-md-block">22. Benutzerstandpunkt: Übung 2</span>
+                            <span class="d-md-none">Seite 22</span> 
+                        </a></li>
+                        <!--Link, Titel ändern-->
+                        <li><a class="dropdown-item" href="emassAufgabe.html" >
+                            <span class="d-none d-md-block">23. Benutzerstandpunkt: Übung 3</span>
+                            <span class="d-md-none">Seite 23</span> 
+                        </a></li>
+                        <!--Link, Titel ändern-->
+                        <li><a class="dropdown-item" href="emassAufgabe.html" >
+                            <span class="d-none d-md-block">24. Fazit und Feedback</span>
+                            <span class="d-md-none">Seite 24</span> 
+                        </a></li>
+                        <li><a class="dropdown-item" href="ir2_seite25.html" >
+                            <span class="d-none d-md-block">25. Relevance Feedback - Methoden</span>
+                            <span class="d-md-none">Seite 25</span> 
+                        </a></li>
+                        <!--Titel ändern-->
+                        <li><a class="dropdown-item" href="ir2_seite26.html" >
+                            <span class="d-none d-md-block">26. Fazit und Feedback</span>
+                            <span class="d-md-none">Seite 26</span> 
+                        </a></li>
+                        <!--Titel ändern-->
+                        <li><a class="dropdown-item" href="ir2_seite27.html" >
+                            <span class="d-none d-md-block">27. Fazit und Feedback</span>
+                            <span class="d-md-none">Seite 27</span> 
+                        </a></li>
+                        <li><a class="dropdown-item" href="ir2_seite28.html" >
+                            <span class="d-none d-md-block">Übung 12: Rocchio Formel</span>
+                            <span class="d-md-none">Seite 28</span> 
+                        </a></li>
+                        <li><a class="dropdown-item" href="ir2_seite29.html" >
+                            <span class="d-none d-md-block">Übung 13: Indexierung und Retrieval</span>
+                            <span class="d-md-none">Seite 29</span> 
+                        </a></li>
+                        <li><a class="dropdown-item" href="ir2_seite30.html" >
+                            <span class="d-none d-md-block">Übung 13.1: Indexierung und Retrieval</span>
+                            <span class="d-md-none">Seite 30</span> 
+                        </a></li>
+                        <li><a class="dropdown-item" href="ir2_seite31.html" >
+                            <span class="d-none d-md-block">Übung 13.2: Indexierung und Retrieval</span>
+                            <span class="d-md-none">Seite 31</span> 
+                        </a></li>
+                        <li><a class="dropdown-item" href="ir2_seite32.html" >
+                            <span class="d-none d-md-block">Übung 13.3: Indexierung und Retrieval</span>
+                            <span class="d-md-none">Seite 32</span> 
+                        </a></li>
+                        <li><a class="dropdown-item" href="ir2_seite33.html" >
+                            <span class="d-none d-md-block">33. Exkurs: Suchmaschinen</span>
+                            <span class="d-md-none">Seite 33</span> 
+                        </a></li>
+                        <li><a class="dropdown-item" href="ir2_seite34.html" >
+                            <span class="d-none d-md-block">34. Modulzusammenfassung</span>
+                            <span class="d-md-none">Seite 34</span> 
+                        </a></li>
+                        
+                    </ul>
+
+                    
+                    <!--nächste Seite-->
+                    <a class="btn text-left btn-lg" href="../4-IR3/0_Allgemein.html" role="button">
+                        <span class="d-none d-lg-block"> nächstes Modul <i class="bi bi-arrow-right-circle-fill"></i></span>
+                        <span class="d-lg-none"><i class="bi bi-arrow-right-circle-fill"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+
+</html>

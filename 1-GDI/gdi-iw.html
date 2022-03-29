@@ -1,156 +1,164 @@
 <!doctype html>
 <html lang="de">
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS und JS Bundle -->
-    <link href="../static/css/bootstrap.css" rel="stylesheet">
-    <link href="main.css" rel="stylesheet">
+      <!-- Bootstrap CSS und JS Bundle -->
+      <link href="../static/css/bootstrap.css" rel="stylesheet">
+      <link href="main.css" rel="stylesheet">
 
-    <!-- Der Font muss noch importiert werden -->
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;600;700&display=swap" rel="stylesheet">
-    <title>Selim 2.0</title>
-</head>
-<body>
+      <!-- Der Font muss noch importiert werden -->
+      <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;600;700&display=swap" rel="stylesheet">
+      <title>Selim 2.0</title>
+  </head>
+  <body>
 
-<div class="navi">
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon navbar-light"></span>
-            </button>
-            <a class="navbar-brand" href="#">Selim</a>
+    <div class="navi">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon navbar-light"></span>
+                </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-linki active" aria-current="page" href="../home.html">Home</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-linki dropdown-toggle" href="#" id="navDrop1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Module
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navDrop1">
-                            <li><a class="dropdown-item bg" href="../1-GDI/gdi.html">GDI</a></li>
-                            <li><a class="dropdown-item bg" href="../2-IR1/ir1.html">IR1</a></li>
-                            <li><a class="dropdown-item bg" href="../3-IR2/ir2.html">IR2</a></li>
-                            <li><a class="dropdown-item bg" href="../4-IR3/ir3.html">IR3</a></li>
-                            <li><a class="dropdown-item bg" href="../5-FIS/fis.html">FIS</a></li>
-                        </ul>
-                    </li>
+                <a class="navbar-brand">
+                    <span class="d-none d-sm-block">
+                        <img class="d-inline-block align-text-center" src="../uni_logo.png" width="70" height="70" alt="Universität Hildesheim" style="padding-right: 20;">
+                        SELiM - Grundbegriffe der IW
+                    </span>
+                    <span class="d-sm-none">GDI</span>
+                </a>
 
-                    <li class="nav-item">
-                        <a class="nav-linki active" aria-current="page" href="../6-CSS-GLOSSAR-FRMLS/glossar.html">Glossar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-linki active" aria-current="page" href="../6-CSS-GLOSSAR-FRMLS/formelsammlung.html">Formelsammlung</a>
-                    </li>
-                </ul>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-linki active" aria-current="page" href="../home.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-linki dropdown-toggle" href="#" id="navDrop1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Module
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navDrop1">
+                                <li><a class="dropdown-item bg" href="../1-GDI/gdi.html">GDI</a></li>
+                                <li><a class="dropdown-item bg" href="../2-IR1/ir1.html">IR1</a></li>
+                                <li><a class="dropdown-item bg" href="../3-IR2/ir2.html">IR2</a></li>
+                                <li><a class="dropdown-item bg" href="../4-IR3/ir3.html">IR3</a></li>
+                                <li><a class="dropdown-item bg" href="../5-FIS/fis.html">FIS</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-linki active" aria-current="page" href="../6-CSS-GLOSSAR-FRMLS/glossar.html">Glossar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-linki active" aria-current="page" href="../6-CSS-GLOSSAR-FRMLS/formelsammlung.html">Formelsammlung</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-</div>
+        </nav>
+    </div>
 
-<div id="content">
+    <div id="content">
 
-  <div class="container">
+      <div class="container">
 
-    <div id="content_lp">
-      <div class="row" >
-          <div class="col">
-            <h3>Lernpfad</h3>
-            <p>
-              <div class="btn-group">
-                <a href="gdi.html" class="btn btn-primary">Inhaltsverzeichnis</a>
-                <a href="gdi.html" class="btn btn-primary">Zurück</a>
-                <a href="gdi-ib.html" class="btn btn-primary">Vorwärts</a>
+        <div id="content_lp">
+          <div class="row" >
+              <div class="col">
+                <h3>Lernpfad</h3>
+                <p>
+                  <div class="btn-group">
+                    <a href="gdi.html" class="btn btn-primary">Inhaltsverzeichnis</a>
+                    <a href="gdi.html" class="btn btn-primary">Zurück</a>
+                    <a href="gdi-ib.html" class="btn btn-primary">Vorwärts</a>
+                  </div>
+                </p>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped bg-success" role="progressbar"
+                  aria-valuenow="5" aria-valuemin="0" aria-valuemax="100" style="width:5%">
+                    <!--<strong>40% abgeschlossen</strong>!-->
+                  </div>
+                </div>
               </div>
-            </p>
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped bg-success" role="progressbar"
-              aria-valuenow="5" aria-valuemin="0" aria-valuemax="100" style="width:5%">
-                <!--<strong>40% abgeschlossen</strong>!-->
+          </div>
+        </div>
+        <br>
+
+        <h1 class="text-center">
+          <span class="badge rounded-pill bg-warning">THEMA</span>
+          Informationswissenschaft
+        </h1>
+        <p>Die Informationswissenschaft beschäftigt sich mit der <strong>Ordnung, Speicherung, Darstellung, Verbreitung und Präsentation von Informationen</strong>.
+        Um Wissen als Information für den Menschen nutzbar zu machen, muss es an seinen Informationsbedarf angepasst aufbereitet,
+        kommuniziert und verfügbar gemacht werden. Meist werden dafür verschiedene Medien innerhalb von Informationssystemen genutzt.
+        Aus diesen Informationen kann wiederum neues Wissen entstehen.
+        Es steht nicht die Technik, sondern der <strong>Mensch mit seinen Bedürfnissen</strong> im Mittelpunkt der Betrachtung der Informationswissenschaft.</p>
+
+        <p>Die Informationswissenschaft ist ein <strong>multidisziplinäres</strong> Fach.
+        Viele Themen, die in anderen wissenschaftlichen Disziplinen eine Rolle spielen, sind auch für die Informationswissenschaft wichtig.
+        Sie macht sich die Erkenntnisse dieser Disziplinen zunutze, um den Informationsprozess an die Bedürfnisse des Informationssuchenden anzupassen.</p>
+
+        <p><strong>Disziplinen</strong>, deren Gegenstandsbereich sich mit der Informationswissenschaft überschneidet:</p>
+
+        <div id="accordion">
+          <div class="card">
+            <div class="card-header">
+              <a class="btn" data-bs-toggle="collapse" href="#collapseOne">
+                <b>Kommunikation</b>
+              </a>
+            </div>
+            <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
+              <div class="card-body">
+                - Welche Grenzen hat der Mensch in Kommunikations-situationen?<br>
+                - Welche Probleme bestehen besonders in der computer-gestützten Kommunikation?
               </div>
             </div>
           </div>
+          <div class="card">
+            <div class="card-header">
+              <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTwo">
+                <b>Psychologie</b>
+            </a>
+            </div>
+            <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+              <div class="card-body">
+                - Wie erkennt der Mensch die Bedeutung von Informationen?<br>
+                - Welchen Einfluss haben seine Kultur und sein Wertesystem die Bedeutung, die eine Information hat?
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseThree">
+                <b>Linguistik</b>
+              </a>
+            </div>
+            <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
+              <div class="card-body">
+                - Wie entsteht Bedeutung in natürlicher Sprache?<br>
+                - Wie lässt sich sprachliche Information durch den Computer erschließen?
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseFour">
+                <b>Informatik</b>
+              </a>
+            </div>
+            <div id="collapseFour" class="collapse" data-bs-parent="#accordion">
+              <div class="card-body">
+                - Mit welchen Software- und Hardware- Techniken lässt sich der Informationsprozess umsetzten und unterstützen?<br>
+                - Welche technische Umsetzung bringt den größten informationellen Mehrwert?
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <br>
 
-    <h1 class="text-center">
-      <span class="badge rounded-pill bg-warning">THEMA</span>
-      Informationswissenschaft
-    </h1>
-    <p>Die Informationswissenschaft beschäftigt sich mit der <strong>Ordnung, Speicherung, Darstellung, Verbreitung und Präsentation von Informationen</strong>.
-    Um Wissen als Information für den Menschen nutzbar zu machen, muss es an seinen Informationsbedarf angepasst aufbereitet,
-    kommuniziert und verfügbar gemacht werden. Meist werden dafür verschiedene Medien innerhalb von Informationssystemen genutzt.
-    Aus diesen Informationen kann wiederum neues Wissen entstehen.
-    Es steht nicht die Technik, sondern der <strong>Mensch mit seinen Bedürfnissen</strong> im Mittelpunkt der Betrachtung der Informationswissenschaft.</p>
-
-    <p>Die Informationswissenschaft ist ein <strong>multidisziplinäres</strong> Fach.
-    Viele Themen, die in anderen wissenschaftlichen Disziplinen eine Rolle spielen, sind auch für die Informationswissenschaft wichtig.
-    Sie macht sich die Erkenntnisse dieser Disziplinen zunutze, um den Informationsprozess an die Bedürfnisse des Informationssuchenden anzupassen.</p>
-
-    <p><strong>Disziplinen</strong>, deren Gegenstandsbereich sich mit der Informationswissenschaft überschneidet:</p>
-
-    <div id="accordion">
-      <div class="card">
-        <div class="card-header">
-          <a class="btn" data-bs-toggle="collapse" href="#collapseOne">
-            <b>Kommunikation</b>
-          </a>
-        </div>
-        <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
-          <div class="card-body">
-            - Welche Grenzen hat der Mensch in Kommunikations-situationen?<br>
-            - Welche Probleme bestehen besonders in der computer-gestützten Kommunikation?
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header">
-          <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTwo">
-            <b>Psychologie</b>
-        </a>
-        </div>
-        <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
-          <div class="card-body">
-            - Wie erkennt der Mensch die Bedeutung von Informationen?<br>
-            - Welchen Einfluss haben seine Kultur und sein Wertesystem die Bedeutung, die eine Information hat?
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header">
-          <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseThree">
-            <b>Linguistik</b>
-          </a>
-        </div>
-        <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
-          <div class="card-body">
-            - Wie entsteht Bedeutung in natürlicher Sprache?<br>
-            - Wie lässt sich sprachliche Information durch den Computer erschließen?
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header">
-          <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseFour">
-            <b>Informatik</b>
-          </a>
-        </div>
-        <div id="collapseFour" class="collapse" data-bs-parent="#accordion">
-          <div class="card-body">
-            - Mit welchen Software- und Hardware- Techniken lässt sich der Informationsprozess umsetzten und unterstützen?<br>
-            - Welche technische Umsetzung bringt den größten informationellen Mehrwert?
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</body>
-
-<script src="../static/js/bootstrap.bundle.js"></script>
+  </body>
+  <script src="../static/js/bootstrap.bundle.js"></script>
+</html>

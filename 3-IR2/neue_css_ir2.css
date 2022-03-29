@@ -1,5 +1,5 @@
 body {
-    font-family: Quicksand;
+    font-family: 'Quicksand' !important;
     --schriftfarbe: #232B2B;
     --containerfarbe: #D8EBEB;
     --verlinkungsfarbe: #DEC6AC;
@@ -37,16 +37,14 @@ h1, h2, h3 {
 .page-pick .dropdown-menu {
     max-height: 300px;
     overflow: auto;
-  }
-
+}
 
 .navbar-nav > li > a:hover{
     color: var(--verlinkungaktiv);
 }
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;..");
-  }
-
+}
 
 .page-pick {
     background-color: var(--containerfarbe);
@@ -55,18 +53,85 @@ h1, h2, h3 {
     background-color: var(--containerfarbe);
 }
 
+/*
+Da man Bootstrap-Klassen nicht so leicht überschreiben kann, einfach kopieren und ändern
+- andernfalls einfach Bootstrap als Datei downloaden und selber modifizieren (nav-link->i).
+Hier wollte er die Farbe sonst nicht ändern
+folgender Teil ist aus der alten CSS
+*/
 
-/*für IR2*/
-
-.progress {
-    color: var(--hauptfarbe);
-    margin-bottom: 2%;
-    margin-top: 5%;
+.nav-linki {
+    color:var(--schriftfarbe);
+    display: block;
+    padding: 0.5rem 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
 }
 
-#pageNavigation {
-    padding-top: 2%;
-    float: right;
+#content {
+    background-color: var(--hintergrund);
+    padding:4%;
+    border:solid rgba(128, 128, 128, 0.42);
+    border-radius: 16px;
+    box-shadow: slategray 6px 8px 4px 6px;
+    margin:4vh 5vw;
+    display:block;
+    overflow:auto;
+    min-height:42vh;
+}
+
+.bg:hover {
+    corner-radius: 4px; /*Unknown property: 'corner-radius'css(unknownProperties)*/
+    background-image: linear-gradient(180deg, var(--hauptfarbe), var(--hintergrund));
+    
+}
+
+.kleine_ueber {
+    font-weight: 600;
+}
+
+p {
+    margin:1vw;
+    text-align: justify;
+}
+
+.fragenblock {
+    border: dotted var(--hauptfarbe)  4px;
+    padding:1vw;
+}
+
+.antworten {
+    padding:4px;
+    display:flex;
+    flex-direction: column;
+}
+.antwort {
+    margin: 1vw;
+    border-radius: 6px;
+    background-color:rgba(255, 255, 255, 0.8);
+}
+
+.quizbutton {
+    display:inline-block;
+    float: right; /*inline-block is ignored due to the float. If 'float' has a value other than 'none', the box is floated and 'display' is treated as 'block'css(propertyIgnoredDueToDisplay)*/
+}
+
+
+/************** für IR2 ***********************/
+
+.progress {
+    color: var(--verlinkungaktiv); /*wird von Bootstrap überschrieben*/ 
+    margin-top: 1%;
+    margin-bottom: 1%;
+    top:60px;
+    position: relative;
+    width: 100%;
+}
+
+.page-pick {
+    margin-bottom: 2%;
 }
 
 th {
@@ -79,27 +144,6 @@ td{
     background-color: var(--containerfarbe);
 }
 
-button{
-    background-color: #e1e6e6;
-    font-size: 18px;
-    border: none; 
-    /*Methode um den Inhalt der Buttons vertikal und horizontal zu zentrieren*/
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 2px 2px 5px #6f7172;  
-}
-
-button:hover {
-    background-color: #fbfcfc;
-    transform: scale(1.2);
-}
-/*für seite 19*/
-.task8 {
-    padding-bottom: 0.5%;
-}
 
 /*für seite 25*/
 #relFeedbackMet{
@@ -108,7 +152,6 @@ button:hover {
 
 /* für seite 28*/
 #roccTask{
-    padding-bottom: 2%;
     width: max-content;
     display: flex;
 }
@@ -119,7 +162,7 @@ button:hover {
 
 #solution12 {
     width: 20%;
-    margin-top:50px;
+    margin-top:25px;
 }
 .solutionCol {
     height: 32px;
@@ -128,13 +171,12 @@ button:hover {
 #roccBtnSolution {
     float:right;
     display: flex;
-
+    
 }
 .roccResultInput {
     width: 100%;
     text-align: center;
 }
-
 
 @media screen and (max-width: 600px) {
     #roccVar {
@@ -150,20 +192,32 @@ button:hover {
     .roccResultInput {
         width: 70px;
     }
-
 }
 
 
 /* für seite 30 ff.*/
-
-#task13{
-    padding-bottom: 2%;
+.col {
+    margin: 1%;
 }
 
-.col {
-    margin-top: 1%;
-    margin-right: 4%;
-    margin-bottom: 1%;
+div.gallery {
+    border: 1px solid #ccc;
+    width: 90px;
+}
+
+div.gallery img {
+    width: 30%;
+    margin-left: 28px;
+    margin-top: 2px;
+}
+
+div.desc {
+    padding: 2px;
+    text-align: center;
+}
+
+#task13{
+    padding-bottom: 1%;
 }
 
 .dtmTable {
@@ -172,8 +226,10 @@ button:hover {
 
 .dtmRowSol{
     height: 28px;
+    text-align: center;
 }
 
+/*improving layout for smaller screens*/
 @media screen and (max-width: 690px) {
     #dtm13 {
         margin-top: 0;
@@ -183,8 +239,9 @@ button:hover {
     .dtmTable {
         width: 80px;
     }
-    
 }
+
+/*improving layout for very small screens*/
 @media screen and (max-width: 400px) {
     .dtmTable {
         width: 50px;
@@ -197,65 +254,365 @@ button:hover {
     }
 }
 
-#content133 {
-    margin-top: 2.5%;
-}
-
-.headerTH {
- text-align: center;
-}
-
+/* für Seite 32, 19*/
 #exampleBox{
     border: solid;
     border-color: var(--verlinkungaktiv);
     padding: 0;
+    padding-top: 1%;
     margin-bottom: 2%;
 }
 
+.headerDice {
+    text-align: center;
+}
 
+#content133 {
+    margin-top: 2.5%;
+}
 
+/* für Seite 34*/
+#feedbackBtn {
+    margin-right: 2%;
+    float: right;
+}
 
+/*Feedbackseite*/
+.formularSet {
+    padding: 1vw;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*Drag and Drop Seiten */
+/*Seite 5*/
+.tables {
+    display: flex;
+    justify-content: space;  
+}
 .dragAdropTable {
-    width: 50%;
-    margin-left:auto;
-    margin-right:auto;
+    width: 30%;
+    margin-left:30%;
     margin-top: 2%;
     margin-bottom: 2%;
-    border-collapse: separate;
+    border-collapse: collapse;
     border: 2px solid white;
     border-spacing: 0;
     text-align: left;
+    justify-content: space-around;
     background-color: var(--containerfarbe);
 }
+
 .dragAdropTable td {
-    text-align: center;
+    padding: 5px 12px;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;  
+}
+
+.solutionTable {
+    width: 100%;
+    margin-left:20%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-collapse: collapse;
+    border: 2px solid white;
+    border-spacing: 0;
+    text-align: left;
+    justify-content: space-around;
+    background-color: var(--containerfarbe);
+}
+
+.solutionTable td {
+    text-align: left;
     padding: 5px 12px;
     border-bottom: 2px solid white;
     border-right: 2px solid white; 
- 
-  }
+}
+
+.solutionTable th {
+    text-align: center; 
+}
+
 .dragtarget {
     background-color: var(--containerfarbe);
     text-align: center;
     width: 20%;
     float:left;
     margin:2px;
-  }
+}
+
 #checkAnswer {
     float: right;
 }
+
+/*Seite 6*/
+.imgPage6 {
+    text-align: center;
+}
+
+/*Seite 7*/
+.tables7 {
+    display: flex;
+    justify-content: space;  
+}
+
+.dragAdropTable7 {
+    width: 70%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-collapse: collapse;
+    border: 2px solid white;
+    border-spacing: 0;
+    text-align: left;
+    justify-content: space-around;
+    background-color: var(--containerfarbe);
+}
+
+.dragAdropTable7 td {
+    
+    padding: 5px 12px;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;  
+}
+
+.solutionTable7 {
+    width: 100%;
+    margin-left:5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-collapse: collapse;
+    border: 2px solid white;
+    border-spacing: 0;
+    text-align: left;
+    justify-content: space-around;
+    background-color: var(--containerfarbe);
+}
+
+.solutionTable7 td {
+    text-align: left;
+    padding: 5px 12px;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white; 
+}
+
+.solutionTable7 th {
+    text-align: center; 
+}
+
+.dragtarget7 {
+    background-color: var(--containerfarbe);
+    text-align: left;
+    width: 50%;
+    float:left;
+    margin:2px;
+}
+
+#checkAnswer7 {
+    float: right;
+}
+
+/*Seite 8*/
+.table8 {
+    width: 50%;
+    margin-left:20px;
+    border-collapse: collapse;
+    border: 2px solid white;
+    border-spacing: 0;
+    text-align: left;
+    justify-content: space-around;
+    background-color: var(--containerfarbe);
+}
+
+.table8 td {
+    padding: 5px 12px;
+    border-bottom: 2px solid white;
+}
+
+/*Seite 9*/
+.moreTextBtn {
+    color:#8EACAC;
+    margin-left:20px;
+}
+
+.moreText {
+    display: none;
+}
+.moreText--show {
+    display: inline;
+}
+.moreText2 {
+    display: none;
+}
+.moreText2--show {
+    display: inline;
+}
+.moreText3 {
+    display: none;
+}
+.moreText3--show {
+    display: inline;
+}
+.moreText4 {
+    display: none;
+}
+.moreText4--show {
+    display: inline;
+}
+.moreText5 {
+    display: none;
+}
+.moreText5--show {
+    display: inline;
+}
+
+/*Seite 10*/
+.text10 {
+    margin-left:60px;
+}
+
+/*Seite 17*/
+.text17 {
+    text-align: center;
+}
+.text172 {
+    text-align: center;
+    font-family: 'Quicksand' !important;
+    font-size: 25px;
+}
+
+/*Seite 26*/
+.tables26 {
+    display: flex;
+    justify-content: space;  
+}
+.dragAdropTable26 {
+    width: 30%;
+    margin-top: 2%;
+    margin-left: 20%;
+    margin-bottom: 2%;
+    border-collapse: collapse;
+    border: 2px solid white;
+    border-spacing: 0;
+    text-align: left;
+    justify-content: space-around;
+    background-color: var(--containerfarbe);
+}
+.dragAdropTable26 td {
+    
+    padding: 5px 12px;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;  
+}
+.solutionTable26 {
+    width: 110%;
+    margin-left:5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-collapse: collapse;
+    border: 2px solid white;
+    border-spacing: 0;
+    text-align: left;
+    justify-content: space-around;
+    background-color: var(--containerfarbe);
+}
+.solutionTable26 td {
+    text-align: left;
+    padding: 5px 12px;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white; 
+}
+.solutionTable26 th {
+    text-align: center; 
+}
+.dragtarget26 {
+    background-color: var(--containerfarbe);
+    text-align: center;
+    width: 30%;
+    float:left;
+    margin:2px;
+}
+#checkAnswer26 {
+    float: right;
+}
+
+/*Seite27*/
+.table27 {
+    width: 45%;
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-bottom: 2%;
+    border-collapse: collapse;
+    border: 2px solid white;
+    border-spacing: 0;
+    text-align: left;
+    justify-content: space-around;
+    background-color: var(--containerfarbe);
+}
+.table27 td{
+    padding: 5px 12px;
+    border-bottom: 2px solid white;  
+}
+.imgPage27 {
+    text-align: center;
+}
+
+/*Informations-Box für wichtige Informationen*/
+.infobox {
+    border-left: 1em;
+    border-style: solid;
+    border-color: #8EACAC;
+    padding: 0.5em;
+    color: #6f7172;
+}
+
+
+/*Bilder auf Inhaltsseiten*/
+.imageexample {
+    border-style: solid ;
+    border-color: #6f7172;
+    padding: 1.5em;
+    margin-top: 0.5em ;
+    margin-bottom: 0.5em;
+}
+
+/*Bild als Tabelle umgesetzt*/
+.tablematrix {
+    margin-top: 0.5em ;
+    margin-bottom: 0.5em;
+    border-collapse: separate;
+}
+
+/* für Seite 3 */
+.Infotext {
+    display: none;
+    font-family: 'Quicksand';
+    font-size: x-small;
+  }
+
+  .cls-2 {
+    font-size: 12px;
+    fill: black;
+    font-family: Arial;
+  }
+
+/* für die Startseite */
+  .accordion {
+    background-color: #B2D8D8;
+    color: #232B2B;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: #232B2B;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+  }
+  
+  .active, .accordion:hover {
+    background-color: #B2D8D8; 
+  }
+  
+  .panel {
+    padding: 0 18px;
+    display: none;
+    background-color: #D8EBEB;
+    overflow: hidden;
+  }
