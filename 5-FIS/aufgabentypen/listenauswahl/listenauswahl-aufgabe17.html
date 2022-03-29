@@ -80,8 +80,96 @@
             <div class="row">
                 <div class="col">
                     <h2>Aufgabe 17: Anfragen über mehrere Relationen: SQL SELECT-Anweisung</h2>
-                    <p>Du möchtest die Namen der Mitarbeiter einer Handelskette wissen, die in der Filiale 'Am Dammtor'
-                        arbeiten. <br /> Wie lautet die <code>SELECT</code>-Anweisung?</p>
+                    <p>Du möchtest die Namen der Mitarbeiter wissen, die in der Filiale 'Am Dammtor'
+                        arbeiten. <br /> Wie lautet die <code>SELECT</code>-Anweisung? Die beiden dazugehörigen Tabellen 
+                        befinden sich <a href="#tabelle-datensatz" data-bs-toggle="collapse">hier</a>.
+                    <div id="tabelle-datensatz" class="collapse">
+                        <table class="table table-bordered table-responsive table-hover caption-top">
+                            <caption>Ausgangstabelle Personal</caption>
+                            <thead>
+                                <tr>
+                                    <th>PersNr</th>
+                                    <th>Name</th>
+                                    <th>FamStatus</th>
+                                    <th>Position</th>
+                                    <th>Gehalt</th>
+                                    <th>FilialNr</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Maria Schmidt</td>
+                                    <td>verheiratet</td>
+                                    <td>Sekretärin</td>
+                                    <td>4900</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Thomas Meyer</td>
+                                    <td>ledig</td>
+                                    <td>Praktikant</td>
+                                    <td>2000</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Hans Müller</td>
+                                    <td>ledig</td>
+                                    <td>Programmierer</td>
+                                    <td>5000</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Jürgen Schmidt</td>
+                                    <td>verheiratet</td>
+                                    <td>Verkäufer</td>
+                                    <td>5000</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Kathrin Schuster</td>
+                                    <td>geschieden</td>
+                                    <td>Personalleiterin</td>
+                                    <td>5400</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Mario Förster</td>
+                                    <td>ledig</td>
+                                    <td>Verkäufer</td>
+                                    <td>4800</td>
+                                    <td>2</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+
+                        <table class="table table-bordered table-responsive table-hover caption-top">
+                            <caption>Ausgangstabelle Filiale</caption>
+                            <thead>
+                                <tr>
+                                    <th>FilialNr</th>
+                                    <th>Name</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Am Dammtor</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>City</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    </p>
                 </div>
             </div>
 
