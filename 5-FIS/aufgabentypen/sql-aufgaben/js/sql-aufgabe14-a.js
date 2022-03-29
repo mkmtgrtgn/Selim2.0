@@ -119,7 +119,7 @@ function getStatementAsArray(input) {
     statement = statement.replace(';', '');
 
     let arrayWerte = statement.split(' ');
-    console.log(arrayWerte);
+
     // Pruefe wo ein =, + und < ist und ob leerzeichen eingehalten wurden
     let temp = arrayWerte.map(val => {
         // = und enthaelt ein zeichen
@@ -185,7 +185,7 @@ function getStatementAsArray(input) {
         if (val.includes(')') && val.length > 1) {
             // Splite Werte um das )
             let val1 = val.split(')');
-            console.log(val, val1);
+
             // Preufe ob der letzte index leer ist
             if (val1[val1.length - 1] == '') {
                 val1.pop();
@@ -228,8 +228,6 @@ function getStatementAsArray(input) {
 
     // Filtere leere Elemente heraus
     let temp3 = temp2.filter((e) => e);
-
-    console.log(temp3);
 
     // Ueberpruefe, ob Anzahl der Elemente dem richtigen Statement entspricht (10)
     if (temp3.length == 11) {
