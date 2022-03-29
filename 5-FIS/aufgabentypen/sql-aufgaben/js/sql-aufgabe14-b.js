@@ -69,24 +69,54 @@ function addColumnValue() {
 }
 
 /** Prüft ob die grundlegenden Bedingungen fuer das SQL-Statement gegeben sind */
-function hasBasicStatementRequirements(statement) {
-    let input = statement.toLowerCase();
-    let correct = false;
+function hasBasicStatementRequirements(input, basicRequirements, uniqueRequirements = []) {
+    let correct = true;
+    let statement = input.toLowerCase().trim();
+    let hinweis = null;
 
-    if (input && input.startsWith('select')) {
-        if (input.includes('from') && input.includes('where') && input.includes('and')) {
-            correct = true;
+    if (basicRequirements.length > 0) {
+        // Prüfe, ob Requirement vorhanden ist
+        basicRequirements.forEach((requirement) => {
+            if (!statement.includes(requirement)) {
+                correct = false;
+                hinweis = `Es fehlt '${requirement.toUpperCase()}'.`;
+            }
+        });
+    }
+
+    if (uniqueRequirements.length > 0) {
+        uniqueRequirements.forEach(requirement => {
+            // Das Requirement sollte jeweils genau EINMAL vorkommen
+            if (statement.split(requirement).length != 2) {
+                correct = false;
+                hinweis = `Das Zeichen '${requirement.toUpperCase()}' darf nur einmal vorkommen.`;
+            }
+        });
+    }
+
+    if (statement.includes(';')) {
+        if (statement.split(';').length != 2) {
+            correct = false;
+            hinweis = `Das ';' darf nur einmal vorkommen.`
+        }
+        if (statement.charAt(statement.length - 1) != ';') {
+            correct = false;
+            hinweis = `Das ';' ist an der falschen Stelle.`
         }
     }
 
-    return correct;
+    return [correct, hinweis];
 }
 
 /** Teilt das SQL-Statement in ein Array ein zur besseren Überprüfung */
 function getStatementAsArray(input) {
     // Variablen angelegt
-    let statement = input;
+    // Nimmt die Leerzeichen am Anfang und Ende weg
+    let statement = input.trim();
     let statementAsArray;
+
+    // Falls ; an letzter Stelle
+    statement = statement.replace(';', '');
 
     let arrayWerte = statement.split(' ');
 
@@ -136,12 +166,33 @@ function getStatementAsArray(input) {
     // Bringe Array auf eine Dimension
     temp = temp.flat();
 
-    statementAsArray = temp.filter((val) => val);
-    // Wenn nicht die richtige Anzahl von Objekten uebergebe null um nicht das Statement zu ueberpruefen
-    if (statementAsArray.length != 12) {
-        statementAsArray = null;
-    }
+    // Fuege getrennte SQL-Strings wieder zusammen
+    let temp2 = temp.map((val, index) => {
+        // Ueberpruefe ob Wert mit '(single-quote) anfaengt, der naechste index existiert, und der naechste Wert mit ' endet
+        if (val.startsWith(`'`) && temp[index + 1] && temp[index + 1].endsWith(`'`)) {
+            val2 = `${val} ${temp[index + 1]}`;
+            // entferne naechstes Element
+            temp[index + 1] = "";
+            return val2;
+            // Ueberpruefe ob Wert mit "(double-quote) anfaengt, der naechste index existiert, und der naechste Wert mit " endet
+        } else if (val.startsWith(`"`) && temp[index + 1] && temp[index + 1].endsWith(`"`)) {
+            val2 = `${val} ${temp[index + 1]}`;
+            // entferne naechstes Element
+            temp[index + 1] = "";
+            return val2;
+        }
+        // Gebe den Originalwert zurueck, falls kein SQL-String
+        return val;
+    });
 
+    // Filtere leere Elemente heraus
+    let temp3 = temp2.filter((e) => e);
+
+    // Ueberpruefe, ob Anzahl der Elemente dem richtigen Statement entspricht (10)
+    if (temp3.length == 12) {
+        statementAsArray = temp3;
+    }
+    console.log(temp3);
     return statementAsArray;
 }
 
@@ -151,141 +202,150 @@ function validateSQL() {
      * oder SELECT Gehalt FROM Personal WHERE Gehalt > 2000 AND FamStatus = 'ledig'
      */
     let correct = true;
-    let hinweise = '';
+    let hinweis = '';
     let htmlToPublish = document.getElementById('correction');
     let statementArray;
 
-    // Textfeld Wert
-    let statement = jQuery('#textAreaLoesung').val();
-    // Hat das Statement die mindestens enthaltenen Ausdruecke um weiter zu validieren
-    if (!hasBasicStatementRequirements(statement)) {
-        correct = false;
-    }
-    // Falls ja erstelle ein Array aus dem Statement
-    if (correct) {
-        statementArray = getStatementAsArray(statement);
-    }
-    console.log(statementArray);
-    // Wenn das Statment Array einen Wert hat, validiere diesen
-    if (statementArray != null) {
-        // select
-        let select = statementArray[0];
-        if (select.toLowerCase() !== 'select') {
-            hinweise += " " + select + ',';
-            correct = false;
-        }
-        // Gehalt
-        let gehalt = statementArray[1];
-        if (gehalt != 'Gehalt') {
-            hinweise += " " + gehalt;
-            correct = false;
-        }
-        // from
-        let from = statementArray[2];
-        if (from.toLowerCase() != 'from') {
-            hinweise += " " + from;
-            correct = false;
-        }
-        // Personal
-        let personal = statementArray[3];
-        if (personal !== 'Personal') {
-            hinweise += " " + personal + ',';
-            correct = false;
-        }
-        // where
-        let where = statementArray[4];
-        if (where.toLowerCase() !== 'where') {
-            hinweise += " " + where;
-            correct = false;
-        }
-        // Zwei Möglichkeiten
-        if (statementArray[5] === 'FamStatus') {
-            // Familienstatus
-            let famStatus = statementArray[5];
-            if (famStatus !== 'FamStatus') {
-                hinweise += " " + famStatus + ',';
-                correct = false;
-            }
-            // =
-            let gleich = statementArray[6];
-            if (gleich != '=') {
-                hinweise += " " + gleich;
-                correct = false;
-            }
-            let ledig = statementArray[7];
-            if (ledig !== 'ledig' && ledig !== `'ledig'` && ledig !== `"ledig"`) {
-                hinweise += " " + ledig;
-                correct = false;
-            }
-            // and
-            let and = statementArray[8];
-            if (and.toLowerCase() !== 'and') {
-                hinweise += " " + and;
-                correct = false;
-            }
-            // Gehalt
-            let gehalt2 = statementArray[9];
-            if (gehalt2 != 'Gehalt') {
-                hinweise += " " + gehalt2;
-                correct = false;
-            }
-            // >
-            if (statementArray[10] != '>') {
-                hinweise += " " + statementArray[10];
-                correct = false;
-            }
-            // 2000
-            if (statementArray[11] !== '2000') {
-                hinweise += " " + statementArray[11];
-                correct = false;
-            }
-            // Andere Möglichkeit
-        } else {
-            // Gehalt
-            let gehalt2 = statementArray[5];
-            if (gehalt2 != 'Gehalt') {
-                hinweise += " " + gehalt2;
-                correct = false;
-            }
-            // >
-            if (statementArray[6] != '>') {
-                hinweise += " " + statementArray[6];
-                correct = false;
-            }
-            // 2000
-            if (statementArray[7] !== '2000') {
-                hinweise += " " + statementArray[7];
-                correct = false;
-            }
-            // and
-            let and = statementArray[8];
-            if (and.toLowerCase() !== 'and') {
-                hinweise += " " + and;
-                correct = false;
-            }
-            // Familienstatus
-            let famStatus = statementArray[9];
-            if (famStatus !== 'FamStatus') {
-                hinweise += " " + famStatus + ',';
-                correct = false;
-            }
-            // =
-            let gleich = statementArray[10];
-            if (gleich != '=') {
-                hinweise += " " + gleich;
-                correct = false;
-            }
-            let ledig = statementArray[11];
-            if (ledig !== 'ledig' && ledig !== `'ledig'` && ledig !== `"ledig"`) {
-                hinweise += " " + ledig;
-                correct = false;
-            }
-        }
+    // Definiere die Requirements
+    let basicRequirements = ["select", "from", "where", "and"];
 
-        hinweise = hinweise.replace(' ', '');
-    } else {
-        hinweise += "das Statement"
+    // Textfeld Wert
+    let input = jQuery('#textAreaLoesung').val();
+
+    // Bestimme Grundbedingungen (Array: [erfüllt, hinweis])
+    const grundbedingungen = hasBasicStatementRequirements(input, basicRequirements);
+    // Wenn Basisanforderungen nicht erfuellt, "wirf Fehler"
+    if (!grundbedingungen[0]) {
         correct = false;
+        hinweis = grundbedingungen[1];
+    } else {
+        statementArray = getStatementAsArray(input);
+
+        // Wenn das Statment Array einen Wert hat, validiere diesen
+        if (statementArray != null) {
+            // select
+            let select = statementArray[0];
+            if (select.toLowerCase() !== 'select') {
+                hinweis += ` ${select},`;
+                correct = false;
+            }
+            // Gehalt
+            let gehalt = statementArray[1];
+            if (gehalt != 'Gehalt') {
+                hinweis += ` ${gehalt},`;
+                correct = false;
+            }
+            // from
+            let from = statementArray[2];
+            if (from.toLowerCase() != 'from') {
+                hinweis += ` ${from},`;
+                correct = false;
+            }
+            // Personal
+            let personal = statementArray[3];
+            if (personal !== 'Personal') {
+                hinweis += ` ${personal},`;
+                correct = false;
+            }
+            // where
+            let where = statementArray[4];
+            if (where.toLowerCase() !== 'where') {
+                hinweis += ` ${where},`;
+                correct = false;
+            }
+            // Zwei Möglichkeiten
+            if (statementArray[5] === 'FamStatus') {
+                // 'FamStatus'
+                let fam = statementArray[5];
+                if (fam != "FamStatus") {
+                    correct = false;
+                    hinweis += ` ${fam},`;
+                }
+                // =
+                let gleich = statementArray[6];
+                if (gleich != '=') {
+                    hinweis += ` ${gleich},`;
+                    correct = false;
+                }
+                let ledig = statementArray[7];
+                if (ledig !== 'ledig' && ledig !== `'ledig'` && ledig !== `"ledig"`) {
+                    hinweis += ` ${ledig},`;
+                    correct = false;
+                }
+                // and
+                let and = statementArray[8];
+                if (and.toLowerCase() !== 'and') {
+                    hinweis += ` ${and},`;
+                    correct = false;
+                }
+                // Gehalt
+                let gehalt2 = statementArray[9];
+                if (gehalt2 != 'Gehalt') {
+                    hinweis += ` ${gehalt2},`;
+                    correct = false;
+                }
+                // >
+                if (statementArray[10] != '>') {
+                    hinweis += ` ${statementArray[10]},`;
+                    correct = false;
+                }
+                // 2000
+                if (statementArray[11] !== '2000') {
+                    hinweis += ` ${statementArray[11]},`;
+                    correct = false;
+                }
+                // Andere Möglichkeit
+            } else {
+                // Gehalt
+                let gehalt2 = statementArray[5];
+                if (gehalt2 != 'Gehalt') {
+                    hinweis += ` ${gehalt2},`;
+                    correct = false;
+                }
+                // >
+                if (statementArray[6] != '>') {
+                    hinweis += ` ${statementArray[6]},`;
+                    correct = false;
+                }
+                // 2000
+                if (statementArray[7] !== '2000') {
+                    hinweis += ` ${statementArray[7]},`;
+                    correct = false;
+                }
+                // and
+                let and = statementArray[8];
+                if (and.toLowerCase() !== 'and') {
+                    hinweis += ` ${and},`;
+                    correct = false;
+                }
+                // Familienstatus
+                let famStatus = statementArray[9];
+                if (famStatus !== 'FamStatus') {
+                    hinweis += ` ${famStatus},`;
+                    correct = false;
+                }
+                // =
+                let gleich = statementArray[10];
+                if (gleich != '=') {
+                    hinweis += ` ${gleich},`;
+                    correct = false;
+                }
+                let ledig = statementArray[11];
+                if (ledig !== 'ledig' && ledig !== `'ledig'` && ledig !== `"ledig"`) {
+                    hinweis += ` ${ledig},`;
+                    correct = false;
+                }
+            }
+
+            // Entferne das erste Leerzeichen und das letzte Komma vom Hinweis
+            hinweis.trimStart();
+            if (hinweis.charAt(hinweis.length - 1) == ",") {
+                hinweis = hinweis.slice(0, hinweis.length - 1);
+            }
+        } else {
+            hinweis = `Du hast leider nicht die richtige Anzahl an notwendigen Argumenten.`
+            correct = false;
+        }
     }
 
     if (correct) {
@@ -299,7 +359,7 @@ function validateSQL() {
             jQuery('#accordionLoesung').removeClass('hide');
         }
     } else {
-        htmlToPublish.innerHTML = `<p class='sql-answer wrong'>Leider nicht die richtige SQL-Anweisung. Bitte überprüfe <strong>${hinweise}</strong> und probiere es nochmal.</p>`;
+        htmlToPublish.innerHTML = `<p class='sql-answer wrong'>Leider nicht die richtige SQL-Anweisung. \nGrund: <strong>${hinweis}</strong></p>`;
         // Entferne Hintergrund da falsch
         if (!jQuery('#accordionLoesung').hasClass('hide')) {
             jQuery('#accordionLoesung').addClass('hide');

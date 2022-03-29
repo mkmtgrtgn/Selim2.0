@@ -66,24 +66,54 @@ function addColumnValue() {
 }
 
 /** Prüft ob die grundlegenden Bedingungen fuer das SQL-Statement gegeben sind */
-function hasBasicStatementRequirements(statement) {
-    let input = statement.toLowerCase();
-    let correct = false;
+function hasBasicStatementRequirements(input, basicRequirements, uniqueRequirements = []) {
+    let correct = true;
+    let statement = input.toLowerCase().trim();
+    let hinweis = null;
 
-    if (input && input.startsWith('delete')) {
-        if (input.includes('from') && input.includes('personal') && input.includes('where') && input.includes('gehalt')) {
-            correct = true;
+    if (basicRequirements.length > 0) {
+        // Prüfe, ob Requirement vorhanden ist
+        basicRequirements.forEach((requirement) => {
+            if (!statement.includes(requirement)) {
+                correct = false;
+                hinweis = `Es fehlt '${requirement.toUpperCase()}'.`;
+            }
+        });
+    }
+
+    if (uniqueRequirements.length > 0) {
+        uniqueRequirements.forEach(requirement => {
+            // Das Requirement sollte jeweils genau EINMAL vorkommen
+            if (statement.split(requirement).length != 2) {
+                correct = false;
+                hinweis = `Das Zeichen '${requirement.toUpperCase()}' darf nur einmal vorkommen.`;
+            }
+        });
+    }
+
+    if (statement.includes(';')) {
+        if (statement.split(';').length != 2) {
+            correct = false;
+            hinweis = `Das ';' darf nur einmal vorkommen.`
+        }
+        if (statement.charAt(statement.length - 1) != ';') {
+            correct = false;
+            hinweis = `Das ';' ist an der falschen Stelle.`
         }
     }
 
-    return correct;
+    return [correct, hinweis];
 }
 
 /** Teilt das SQL-Statement in ein Array ein zur besseren Überprüfung */
 function getStatementAsArray(input) {
     // Variablen angelegt
-    let statement = input;
+    // Nimmt die Leerzeichen am Anfang und Ende weg
+    let statement = input.trim();
     let statementAsArray;
+
+    // Falls ; an letzter Stelle
+    statement = statement.replace(';', '');
 
     let arrayWerte = statement.split(' ');
 
@@ -127,67 +157,77 @@ function getStatementAsArray(input) {
 function validateSQL() {
     /** Richtige Loesung: DELETE FROM Personal WHERE Gehalt > 5000 */
     let correct = true;
-    let hinweise = '';
+    let hinweis = '';
     let htmlToPublish = document.getElementById('correction');
     let statementArray;
 
-    // Textfeld Wert
-    let statement = jQuery('#textAreaLoesung').val();
-    // Hat das Statement die mindestens enthaltenen Ausdruecke um weiter zu validieren
-    if (!hasBasicStatementRequirements(statement)) {
-        correct = false;
-    }
-    // Falls ja erstelle ein Array aus dem Statement
-    if (correct) {
-        statementArray = getStatementAsArray(statement);
-    }
-    // Wenn das Statment Array einen Wert hat, validiere diesen
-    if (statementArray != null) {
-        // delete
-        let deleteStatement = statementArray[0];
-        if (deleteStatement.toLowerCase() !== 'delete') {
-            hinweise += " " + deleteStatement + ',';
-            correct = false;
-        }
-        // from
-        let from = statementArray[1];
-        if (from.toLowerCase() !== 'from') {
-            hinweise += " " + from;
-            correct = false;
-        }
-        // Personal
-        let personal = statementArray[2];
-        if (personal !== 'Personal') {
-            hinweise += " " + personal + ',';
-            correct = false;
-        }
-        // where
-        let where = statementArray[3];
-        if (where.toLowerCase() !== 'where') {
-            hinweise += " " + where;
-            correct = false;
-        }
-        // Gehalt
-        let gehalt = statementArray[4];
-        if (gehalt != 'Gehalt') {
-            hinweise += " " + gehalt;
-            correct = false;
-        }
-        // >
-        if (statementArray[5] != '>') {
-            hinweise += " " + statementArray[5];
-            correct = false;
-        }
-        // 5000
-        if (statementArray[6] !== '5000') {
-            hinweise += " " + statementArray[6];
-            correct = false;
-        }
+    // Definiere die Requirements
+    let basicRequirements = ["delete", "from", "where"];
 
-        hinweise = hinweise.replace(' ', '');
-    } else {
-        hinweise += "das Statement"
+    // Textfeld Wert
+    let input = jQuery('#textAreaLoesung').val();
+
+    // Bestimme Grundbedingungen (Array: [erfüllt, hinweis])
+    const grundbedingungen = hasBasicStatementRequirements(input, basicRequirements);
+    // Wenn Basisanforderungen nicht erfuellt, "wirf Fehler"
+    if (!grundbedingungen[0]) {
         correct = false;
+        hinweis = grundbedingungen[1];
+    } else {
+        statementArray = getStatementAsArray(input);
+        // Wenn das Statment Array einen Wert hat, validiere diesen
+        if (statementArray != null) {
+            // delete
+            let del = statementArray[0];
+            if (del.toLowerCase() !== 'delete') {
+                hinweis += ` ${del},`;
+                correct = false;
+            }
+            // FROM
+            let from = statementArray[1];
+            if (from.toLowerCase() != "from") {
+                correct = false;
+                hinweis += ` ${from},`;
+            }
+            // Personal
+            let personal = statementArray[2];
+            if (personal != "Personal") {
+                correct = false;
+                hinweis += ` ${personal},`;
+            }
+            // WHERE
+            let where = statementArray[3];
+            if (where.toLowerCase() != "where") {
+                correct = false;
+                hinweis += ` ${where},`;
+            }
+            // 'Gehalt'
+            let gehalt = statementArray[4];
+            if (gehalt != "Gehalt") {
+                correct = false;
+                hinweis += ` ${gehalt},`;
+            }
+            // '>'
+            let kleiner = statementArray[5];
+            if (kleiner != ">") {
+                correct = false;
+                hinweis += ` ${kleiner},`;
+            }
+            // 5000
+            if (statementArray[6] !== '5000') {
+                hinweis += ` ${statementArray[6]},`;
+                correct = false;
+            }
+
+            // Entferne das erste Leerzeichen und das letzte Komma vom Hinweis
+            hinweis.trimStart();
+            if (hinweis.charAt(hinweis.length - 1) == ",") {
+                hinweis = hinweis.slice(0, hinweis.length - 1);
+            }
+        } else {
+            hinweis = `Du hast leider nicht die richtige Anzahl an notwendigen Argumenten.`
+            correct = false;
+        }
     }
 
     if (correct) {
@@ -204,7 +244,7 @@ function validateSQL() {
             jQuery('#accordionSolution').removeClass('hide');
         }
     } else {
-        htmlToPublish.innerHTML = `<p class='sql-answer wrong'>Leider nicht die richtige SQL-Anweisung. Bitte überprüfe <strong>${hinweise}</strong> und probiere es nochmal.</p>`;
+        htmlToPublish.innerHTML = `<p class='sql-answer wrong'>Leider nicht die richtige SQL-Anweisung. \nGrund: <strong>${hinweis}</strong></p>`;
         // Setze "löchen" zurueck durch Class remove
         if (jQuery('#kathrinSchusterZeile').hasClass('hide')) {
             jQuery('#kathrinSchusterZeile').removeClass('hide');

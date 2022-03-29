@@ -89,7 +89,7 @@ function hasBasicStatementRequirements(input, basicRequirements, uniqueRequireme
             // Das Requirement sollte jeweils genau EINMAL vorkommen
             if (statement.split(requirement).length != 2) {
                 correct = false;
-                hinweis = `Das Zeichen '${requirement.toUpperCase()}' darf nur einmal vorkommen.`;
+                hinweis = `Das Zeichen '${requirement.toUpperCase()}' soll einmal vorkommen.`;
             }
         });
     }
