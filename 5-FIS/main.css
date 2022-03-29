@@ -31,12 +31,15 @@ body{
 /*Überschriften */
 h1{
     font-size: 32px;
+    padding: 12px;
 }
 h2{
     font-size: 24px;
+    padding: 12px;
 }
 h3{
-    font-size: 18.72px
+    font-size: 18.72px;
+    padding: 12px;
 }
 
 /* Seitennavigation */
@@ -208,10 +211,6 @@ p {
     background-color: #53c553;
 }
 
-/* quizbutton {
-    display:inline-block;
-    float:right;
-} */
 
 /* Formatierung des Abschlussquizzes nach dem Template von Gruppe 7*/
 
@@ -257,11 +256,6 @@ p {
 
 .falschBeantwortet {
     border: dashed 2px red;
-}
-
-.allesrichtig {
-    border: dashed 4px green;
-    background-color: rgba(144, 238, 144, 0.5);
 }
 
 .richtigIgnoriert {
@@ -379,27 +373,4 @@ hr {
 
 .mbs {
 	margin-bottom: 10px;
-}
-
-/* Hervorhebung durch blau 
-.highlight {
-    color: #0186BC;
-}
-
-video {
-    border: 1px solid #333;
-}
-
-
-@media (min-width: 1200px) {
-video {
-  min-width: 500px;
-}
-}
-
-.aufgabe1 {
-    margin: 0px 10px 10px 10px;
-    padding: 10px 10px 10px 10px;
-    background-color: rgb(190,220,220);
-    border: 1px solid black;
 }
