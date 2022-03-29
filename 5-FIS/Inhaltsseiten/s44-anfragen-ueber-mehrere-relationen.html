@@ -20,6 +20,7 @@
 </head>
 
 <body>
+    
     <!--Navbar-->
     <div class="navi">
         <nav class="navbar navbar-expand-lg">
@@ -77,35 +78,37 @@
 
     <!--Inhalt-->
     <div id="content">
-        <h2>Anfragen über mehrere Relationen</h2>
-        <div class="row">
-            <div class="col-md-12">
-                <p>Bisher erstreckten sich alle Anfragen nur über <strong>eine</strong> Tabelle. Wenn sich die gesuchten
-                    Informationen
-                    über <strong>mehrere</strong> Tabellen verteilen, werden sie mit Hilfe der
-                    <strong>Primärschlüssel</strong> miteinander verknüpft.
+        <div class="container">
+            <h2>Anfragen über mehrere Relationen</h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>Bisher erstreckten sich alle Anfragen nur über <strong>eine</strong> Tabelle. Wenn sich die gesuchten
+                        Informationen
+                        über <strong>mehrere</strong> Tabellen verteilen, werden sie mit Hilfe der
+                        <strong>Primärschlüssel</strong> miteinander verknüpft.
+                        <br />
+                    <p>Der Befehl</p>
+                    <p><strong><code>SELECT Veranstaltungsname FROM Veranstaltungen, Studierende WHERE Veranstaltungen.Studiengang = Studierende.Studiengang AND Heimatort = "Thorn";</code></strong>
+                    </p>
+                    <p>liefert folgendes Ergebnis:</p>
+                    <p style="text-indent: 1em;"><em>Informationswissenschaft</em></p>
+                    </p>
                     <br />
-                <p>Der Befehl</p>
-                <p><strong><code>SELECT Veranstaltungsname FROM Veranstaltungen, Studierende WHERE Veranstaltungen.Studiengang = Studierende.Studiengang AND Heimatort = "Thorn";</code></strong>
-                </p>
-                <p>liefert folgendes Ergebnis:</p>
-                <p style="text-indent: 1em;"><em>Informationswissenschaft</em></p>
-                </p>
-                <br />
-                <!-- Tabelle 1-->
-                <div class="text-center">
-                    <h3>Tabelle: Veranstaltungen</h3>
-                    <img id="veranstaltungen-tabelle" class='rounded img-responsive embed-responsive-item'
-                        src='veranstaltungen-tabelle.svg' alt='Einsatzbereiche von SQL'>
+                    <!-- Tabelle 1-->
+                    <div class="text-center">
+                        <h3>Tabelle: Veranstaltungen</h3>
+                        <img id="veranstaltungen-tabelle" class='rounded img-responsive embed-responsive-item'
+                            src='veranstaltungen-tabelle.svg' alt='Einsatzbereiche von SQL'>
+                    </div>
+                    <br /><br />
+                    <!-- Tabelle 2-->
+                    <div class="text-center">
+                        <h3>Tabelle: Studierende</h3>
+                        <img id="datenmanipulation-tabelle" class='rounded img-responsive embed-responsive-item'
+                            src='s20-datenmanipulation-tabelle.svg' alt='Einsatzbereiche von SQL'>
+                    </div>
+                    </p>
                 </div>
-                <br /><br />
-                <!-- Tabelle 2-->
-                <div class="text-center">
-                    <h3>Tabelle: Studierende</h3>
-                    <img id="datenmanipulation-tabelle" class='rounded img-responsive embed-responsive-item'
-                        src='s20-datenmanipulation-tabelle.svg' alt='Einsatzbereiche von SQL'>
-                </div>
-                </p>
             </div>
 
             <!--Seitennavigation-->
