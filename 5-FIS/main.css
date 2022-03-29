@@ -135,6 +135,20 @@ Hier wollte er die Farbe sonst nicht ändern
     max-width: 50vw;
 }
 
+#listenauswahl-erm-abbildung {
+    height:auto;
+    width: auto\9;
+    max-width: 70vw;
+}
+
+@media (min-width: 1300px) {
+    #listenauswahl-erm-abbildung {
+        height: auto;
+        width: auto\9;
+        max-width: 55vw;
+    }
+}
+
 #content {
     background-color: var(--hintergrund);
     padding:16px;
