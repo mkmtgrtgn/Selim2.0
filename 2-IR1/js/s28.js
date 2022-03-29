@@ -1,7 +1,7 @@
 function validate(event) {
 
     var paragraph = "<p>";
-    paragraph += "Vergleiche deine Antwort!<br/>Stemming generiert den Wortstamm eines Begriffs. Begriffe, die indexiert werden, werden mit ihren morphologischen Varianten indexiert. Dies kann aber auch während der Suchanfrage geschehen, indem die Suchterme durch um ihre morphologischen Varianten erweitert werden. Stemming-Methoden erhöhen somit den Recall, es werden mehr relevante Dokumente gefunden.";
+    paragraph += "Vergleiche deine Antwort!<br/>Das Stemming generiert den Wortstamm eines Begriffs. Begriffe, die indexiert werden, werden mit ihren morphologischen Varianten indexiert. Dies kann aber auch während der Suchanfrage geschehen, indem die Suchterme durch um ihre morphologischen Varianten erweitert werden. Stemming-Methoden erhöhen somit den Recall, es werden mehr relevante Dokumente gefunden.";
     paragraph += "</p>";
     document.getElementById('rueckmeldung').innerHTML = paragraph;
     
