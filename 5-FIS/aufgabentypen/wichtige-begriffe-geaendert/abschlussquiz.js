@@ -48,7 +48,6 @@ class Quizantwort extends Quizelement {
         if (this.truth) {
 
             if (this.node.className === "quizantwort selected") {
-                console.log(self.selected);
 
                 this.node.className = "quizantwort wahreAntwort richtigBeantwortet";
                 return true;
@@ -239,7 +238,6 @@ function erstelleFragenkatalog() {
 //Man liest die Fragen aus dem Quelltext ein und überführt sie in komplette Quizzes
 function machQuiz(string) {
     if (string) {
-        console.log(string);
         let alles = string.split("||");
         if (alles.length > 2) {
             let frage = new Quizfrage(alles[0]);
