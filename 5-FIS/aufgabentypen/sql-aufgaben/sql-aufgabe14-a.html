@@ -81,9 +81,9 @@
                     <h2>Aufgabe 13: SQL-Anweisung</h2>
 
                     <p>
-                    <p>Formuliere eine SQL-Anweisung um eine Liste aller <strong>Gehälter</strong> deines
-                        <strong><u>Personals</u></strong>
-                        auszugeben, die <strong>ledig</strong> sind und deren Gehälter größer als 2000 sind.
+                    <p>Formuliere eine SQL-Anweisung um dir das durchschnittliche <strong>Gehalt</strong> des
+                        <strong>ledigen</strong>
+                        <strong><u>Personals</u></strong> auszugeben.
                     </p>
                     </p>
 
@@ -150,7 +150,7 @@
                         </div>
 
                         <div class="col" id="correction">
-                            <!-- Loesung: SELECT Gehalt FROM Personal WHERE FamStatus = 'ledig' AND Gehalt > 2000 -->
+                            <!-- Loesung: SELECT AVG (Gehalt) FROM Personal WHERE FamStatus = 'ledig' -->
                         </div>
                         <br>
 
@@ -167,17 +167,9 @@
                                     aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
                                         <table class="table">
-                                            <thead>
-                                                <tr>
-                                                    <th scope="col">Gehalt</th>
-                                                </tr>
-                                            </thead>
                                             <tbody>
                                                 <tr class="right-background-color">
-                                                    <td>5000</td>
-                                                </tr>
-                                                <tr class="right-background-color">
-                                                    <td>4800</td>
+                                                    <td>4175</td>
                                                 </tr>
                                             </tbody>
                                         </table>
