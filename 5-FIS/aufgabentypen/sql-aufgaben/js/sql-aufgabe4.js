@@ -1,70 +1,70 @@
 /** Fuegt aus den SQL Buttons das Textfeld entsprechende Werte hinzu */
 function addSQL(event) {
     // Textfeld Wert
-    var valueTextField = jQuery('#textAreaLoesung').val();
+    var valueTextField = jQuery("#textAreaLoesung").val();
 
-    if (event.target.id === 'select') {
+    if (event.target.id === "select") {
         // SELECT Option
-        jQuery('#textAreaLoesung').val(valueTextField + 'SELECT ');
-    } else if (event.target.id === 'star') {
+        jQuery("#textAreaLoesung").val(valueTextField + "SELECT ");
+    } else if (event.target.id === "star") {
         // * Option
-        jQuery('#textAreaLoesung').val(valueTextField + '* ');
-    } else if (event.target.id === 'from') {
+        jQuery("#textAreaLoesung").val(valueTextField + "* ");
+    } else if (event.target.id === "from") {
         // FROM Option
-        jQuery('#textAreaLoesung').val(valueTextField + 'FROM ');
-    } else if (event.target.id === 'where') {
+        jQuery("#textAreaLoesung").val(valueTextField + "FROM ");
+    } else if (event.target.id === "where") {
         // WHERE Option
-        jQuery('#textAreaLoesung').val(valueTextField + 'WHERE ');
-    } else if (event.target.id === 'insertInto') {
+        jQuery("#textAreaLoesung").val(valueTextField + "WHERE ");
+    } else if (event.target.id === "insertInto") {
         // INSERT INTO Option
-        jQuery('#textAreaLoesung').val(valueTextField + 'INSERT INTO ');
-    } else if (event.target.id === 'update') {
+        jQuery("#textAreaLoesung").val(valueTextField + "INSERT INTO ");
+    } else if (event.target.id === "update") {
         // UPDATE OpTION
-        jQuery('#textAreaLoesung').val(valueTextField + 'UPDATE ');
-    } else if (event.target.id === 'set') {
+        jQuery("#textAreaLoesung").val(valueTextField + "UPDATE ");
+    } else if (event.target.id === "set") {
         // SET Option
-        jQuery('#textAreaLoesung').val(valueTextField + 'SET ');
-    } else if (event.target.id === 'delete') {
+        jQuery("#textAreaLoesung").val(valueTextField + "SET ");
+    } else if (event.target.id === "delete") {
         // DELETE FROM Option
-        jQuery('#textAreaLoesung').val(valueTextField + 'DELETE FROM ');
-    } else if (event.target.id === 'equals') {
+        jQuery("#textAreaLoesung").val(valueTextField + "DELETE FROM ");
+    } else if (event.target.id === "equals") {
         // = Option
-        jQuery('#textAreaLoesung').val(valueTextField + '= ');
-    } else if (event.target.id === 'equalsNot') {
+        jQuery("#textAreaLoesung").val(valueTextField + "= ");
+    } else if (event.target.id === "equalsNot") {
         // Ungleich Option
-        jQuery('#textAreaLoesung').val(valueTextField + '!= ');
-    } else if (event.target.id === 'smallerAs') {
+        jQuery("#textAreaLoesung").val(valueTextField + "!= ");
+    } else if (event.target.id === "smallerAs") {
         // Kleiner Option
-        jQuery('#textAreaLoesung').val(valueTextField + '< ');
-    } else if (event.target.id === 'biggerAs') {
+        jQuery("#textAreaLoesung").val(valueTextField + "< ");
+    } else if (event.target.id === "biggerAs") {
         // Groesser Option
-        jQuery('#textAreaLoesung').val(valueTextField + '> ');
-    } else if (event.target.id === 'values') {
+        jQuery("#textAreaLoesung").val(valueTextField + "> ");
+    } else if (event.target.id === "values") {
         // VALUES Option
-        jQuery('#textAreaLoesung').val(valueTextField + 'VALUES ');
+        jQuery("#textAreaLoesung").val(valueTextField + "VALUES ");
     }
 }
 
 /** Fuegt dem Textfeld die Werte des Select (Tabellenspaltennamen) hinzu */
 function addColumnValue() {
     // Textfeld Wert
-    var valueTextField = jQuery('#textAreaLoesung').val();
+    var valueTextField = jQuery("#textAreaLoesung").val();
 
-    if (jQuery('#selectedValue option:selected').text().toLowerCase() == 'persnr') {
+    if (jQuery("#selectedValue option:selected").text().toLowerCase() == "persnr") {
         // Personalnummer Spalte aus der Tabelle Personal
-        jQuery('#textAreaLoesung').val(valueTextField + 'PersNr ');
-    } else if (jQuery('#selectedValue option:selected').text().toLowerCase() == 'name') {
+        jQuery("#textAreaLoesung").val(valueTextField + "PersNr ");
+    } else if (jQuery("#selectedValue option:selected").text().toLowerCase() == "name") {
         // Namen Spalte aus der Tabelle Personal
-        jQuery('#textAreaLoesung').val(valueTextField + 'Name ');
-    } else if (jQuery('#selectedValue option:selected').text().toLowerCase() == 'famstatus') {
+        jQuery("#textAreaLoesung").val(valueTextField + "Name ");
+    } else if (jQuery("#selectedValue option:selected").text().toLowerCase() == "famstatus") {
         // Familienstatus Spalte aus der Tabelle Personal
-        jQuery('#textAreaLoesung').val(valueTextField + 'FamStatus ');
-    } else if (jQuery('#selectedValue option:selected').text().toLowerCase() == 'position') {
+        jQuery("#textAreaLoesung").val(valueTextField + "FamStatus ");
+    } else if (jQuery("#selectedValue option:selected").text().toLowerCase() == "position") {
         // Position Spalte aus der Tabelle Personal
-        jQuery('#textAreaLoesung').val(valueTextField + 'Position ');
-    } else if (jQuery('#selectedValue option:selected').text().toLowerCase() == 'gehalt') {
+        jQuery("#textAreaLoesung").val(valueTextField + "Position ");
+    } else if (jQuery("#selectedValue option:selected").text().toLowerCase() == "gehalt") {
         // Gehalt Spalte aus der Tabelle Personal
-        jQuery('#textAreaLoesung').val(valueTextField + 'Gehalt ');
+        jQuery("#textAreaLoesung").val(valueTextField + "Gehalt ");
     }
 }
 
@@ -85,7 +85,7 @@ function hasBasicStatementRequirements(input, basicRequirements, uniqueRequireme
     }
 
     if (uniqueRequirements.length > 0) {
-        uniqueRequirements.forEach(requirement => {
+        uniqueRequirements.forEach((requirement) => {
             // Das Requirement sollte jeweils genau EINMAL vorkommen
             if (statement.split(requirement).length != 2) {
                 correct = false;
@@ -94,20 +94,19 @@ function hasBasicStatementRequirements(input, basicRequirements, uniqueRequireme
         });
     }
 
-    if (statement.includes(';')) {
-        if (statement.split(';').length != 2) {
+    if (statement.includes(";")) {
+        if (statement.split(";").length != 2) {
             correct = false;
-            hinweis = `Das ';' darf nur einmal vorkommen.`
+            hinweis = `Das ';' darf nur einmal vorkommen.`;
         }
-        if (statement.charAt(statement.length - 1) != ';') {
+        if (statement.charAt(statement.length - 1) != ";") {
             correct = false;
-            hinweis = `Das ';' ist an der falschen Stelle.`
+            hinweis = `Das ';' ist an der falschen Stelle.`;
         }
     }
 
     return [correct, hinweis];
 }
-
 
 /** Teilt das SQL-Statement in ein Array ein zur besseren Überprüfung */
 function getStatementAsArray(input) {
@@ -117,12 +116,12 @@ function getStatementAsArray(input) {
     let statementAsArray;
 
     // Falls ; an letzter Stelle
-    statement = statement.replace(';', '');
+    statement = statement.replace(";", "");
 
-    let arrayWerte = statement.split(' ');
+    let arrayWerte = statement.split(" ");
 
     // Pruefe wo ein =, + und < ist und ob leerzeichen eingehalten wurden
-    let temp = arrayWerte.map(val => {
+    let temp = arrayWerte.map((val) => {
         // Dasselbe fuer (
         // Wenn Wert '(' enthaelt und laenger ist als 1 Zeichen
         if (val.includes("(") && val.length > 1) {
@@ -181,22 +180,22 @@ function getStatementAsArray(input) {
             }
         }
         // Dasselbe fuer )
-        if (val.includes(')') && val.length > 1) {
+        if (val.includes(")") && val.length > 1) {
             // Splite Werte um das )
-            let val1 = val.split(')');
+            let val1 = val.split(")");
 
             // Preufe ob der letzte index leer ist
-            if (val1[val1.length - 1] == '') {
+            if (val1[val1.length - 1] == "") {
                 val1.pop();
             }
             // Fuege ) aus verlorenem Split wieder hinzu
             if (val1.length == 1) {
-                val1.push(')');
+                val1.push(")");
                 return val1;
                 // falls auch auf der anderen Seite des ) kein leerzeichen ist
             } else if (val1.length == 2) {
                 // erstelle neues array mit )
-                val1 = [val1[0], ')', val1[1]];
+                val1 = [val1[0], ")", val1[1]];
                 return val1;
             }
         }
@@ -228,164 +227,343 @@ function getStatementAsArray(input) {
     // Filtere leere Elemente heraus
     let temp3 = temp2.filter((e) => e);
 
-    // Ueberpruefe, ob Anzahl der Elemente dem richtigen Statement entspricht (10)
-    if (temp3.length == 15) {
+    // Ueberpruefe, ob Anzahl der Elemente dem richtigen Statement entspricht (sowohl 15 als auch 26)
+    if (temp3.length == 15 || temp3.length == 26) {
         statementAsArray = temp3;
     }
 
     return statementAsArray;
 }
 
+function possibilityOne(statementArray, correct, hinweis) {
+    // Richtige Lösung: `INSERT INTO Personal VALUES (7, 'Steffen Wolfram', 'verheiratet', 'Programmierer', 4800)`;
+
+    let insert = statementArray[0];
+    if (insert.toLowerCase() !== "insert") {
+        hinweis += ` ${insert},`;
+        correct = false;
+    }
+
+    let into = statementArray[1];
+    if (into.toLowerCase() !== "into") {
+        hinweis += ` ${into},`;
+        correct = false;
+    }
+
+    let personal = statementArray[2];
+    if (personal !== "Personal") {
+        hinweis += ` ${personal},`;
+        correct = false;
+    }
+
+    let values = statementArray[3];
+    if (values.toLowerCase() !== "values") {
+        hinweis += ` ${values},`;
+        correct = false;
+    }
+
+    // '('
+    let klammerAuf = statementArray[4];
+    if (klammerAuf != "(") {
+        correct = false;
+        hinweis += ` ${klammerAuf} (nach ${values}),`;
+    }
+
+    let sieben = statementArray[5];
+    if (sieben !== "7") {
+        hinweis += ` ${sieben},`;
+        correct = false;
+    }
+
+    // ','
+    let komma = statementArray[6];
+    if (komma != ",") {
+        correct = false;
+        hinweis += ` ${komma} (nach ${sieben}),`;
+    }
+
+    let steffen = statementArray[7];
+    if (steffen != `"Steffen Wolfram"` && steffen != `'Steffen Wolfram'`) {
+        hinweis += ` ${steffen},`;
+        correct = false;
+    }
+
+    komma = statementArray[8];
+    if (komma != ",") {
+        correct = false;
+        hinweis += ` ${komma} (nach ${steffen}),`;
+    }
+
+    let verheiratet = statementArray[9];
+    if (verheiratet !== `"verheiratet"` && verheiratet !== `'verheiratet'`) {
+        hinweis += ` ${verheiratet},`;
+        correct = false;
+    }
+
+    komma = statementArray[10];
+    if (komma != ",") {
+        correct = false;
+        hinweis += ` ${komma} (nach ${verheiratet}),`;
+    }
+
+    let programmierer = statementArray[11];
+    if (programmierer !== `"Programmierer"` && programmierer !== `'Programmierer'`) {
+        hinweis += ` ${programmierer},`;
+        correct = false;
+    }
+
+    komma = statementArray[12];
+    if (komma != ",") {
+        correct = false;
+        hinweis += ` ${komma} (nach ${programmierer}),`;
+    }
+
+    let vierAchthundert = statementArray[13];
+    if (vierAchthundert !== "4800") {
+        hinweis += ` ${vierAchthundert},`;
+        correct = false;
+    }
+
+    // ')'
+    let klammerZu = statementArray[14];
+    if (klammerZu != ")") {
+        correct = false;
+        hinweis += ` ${klammerZu} (nach ${vierAchthundert}),`;
+    }
+
+    return [correct, hinweis];
+}
+
+function possibilityTwo(statementArray, correct, hinweis) {
+    // Richtige Lösung: `INSERT INTO Personal (PersNr, Name, FamStatus, Position, Gehalt) VALUES (7, 'Steffen Wolfram', 'verheiratet', 'Programmierer', 4800)`;
+
+    let insert = statementArray[0];
+    if (insert.toLowerCase() !== "insert") {
+        hinweis += ` ${insert},`;
+        correct = false;
+    }
+
+    let into = statementArray[1];
+    if (into.toLowerCase() !== "into") {
+        hinweis += ` ${into},`;
+        correct = false;
+    }
+
+    let personal = statementArray[2];
+    if (personal !== "Personal") {
+        hinweis += ` ${personal},`;
+        correct = false;
+    }
+
+    let klammerAuf = statementArray[3];
+    if (klammerAuf !== "(") {
+        hinweis += ` ${klammerAuf} (nach ${personal}),`;
+        correct = false;
+    }
+
+    let persNr = statementArray[4];
+    if (persNr !== "PersNr") {
+        hinweis += ` ${persNr},`;
+        correct = false;
+    }
+
+    let komma = statementArray[5];
+    if (komma !== ",") {
+        hinweis += ` ${komma} (nach ${persNr}),`;
+        correct = false;
+    }
+
+    let name = statementArray[6];
+    if (name !== "Name") {
+        hinweis += ` ${name},`;
+        correct = false;
+    }
+
+    komma = statementArray[7];
+    if (komma !== ",") {
+        hinweis += ` ${komma} (nach ${name}),`;
+        correct = false;
+    }
+
+    let famStatus = statementArray[8];
+    if (famStatus !== "FamStatus") {
+        hinweis += ` ${famStatus},`;
+        correct = false;
+    }
+
+    komma = statementArray[9];
+    if (komma !== ",") {
+        hinweis += ` ${komma} (nach ${famStatus}),`;
+        correct = false;
+    }
+
+    let position = statementArray[10];
+    if (position !== "Position") {
+        hinweis += ` ${position},`;
+        correct = false;
+    }
+
+    komma = statementArray[11];
+    if (komma !== ",") {
+        hinweis += ` ${komma} (nach ${position}),`;
+        correct = false;
+    }
+
+    let gehalt = statementArray[12];
+    if (gehalt !== "Gehalt") {
+        hinweis += ` ${gehalt},`;
+        correct = false;
+    }
+
+    let klammerZu = statementArray[13];
+    if (klammerZu !== ")") {
+        hinweis += ` ${klammerZu} (nach ${gehalt}),`;
+        correct = false;
+    }
+
+    let values = statementArray[14];
+    if (values.toLowerCase() !== "values") {
+        hinweis += ` ${values},`;
+        correct = false;
+    }
+
+    // '('
+    klammerAuf = statementArray[15];
+    if (klammerAuf != "(") {
+        correct = false;
+        hinweis += ` ${klammerAuf2} (nach ${values}),`;
+    }
+
+    let sieben = statementArray[16];
+    if (sieben !== "7") {
+        hinweis += ` ${sieben},`;
+        correct = false;
+    }
+
+    komma = statementArray[17];
+    if (komma !== ",") {
+        hinweis += ` ${komma} (nach ${sieben}),`;
+        correct = false;
+    }
+
+    let steffen = statementArray[18];
+    if (steffen != `"Steffen Wolfram"` && steffen != `'Steffen Wolfram'`) {
+        hinweis += ` ${steffen},`;
+        correct = false;
+    }
+
+    komma = statementArray[19];
+    if (komma !== ",") {
+        hinweis += ` ${komma} (nach ${steffen}),`;
+        correct = false;
+    }
+
+    let verheiratet = statementArray[20];
+    if (verheiratet !== `"verheiratet"` && verheiratet !== `'verheiratet'`) {
+        hinweis += ` ${verheiratet},`;
+        correct = false;
+    }
+
+    komma = statementArray[21];
+    if (komma !== ",") {
+        hinweis += ` ${komma} (nach ${verheiratet}),`;
+        correct = false;
+    }
+
+    let programmierer = statementArray[22];
+    if (programmierer !== `"Programmierer"` && programmierer !== `'Programmierer'`) {
+        hinweis += ` ${programmierer},`;
+        correct = false;
+    }
+
+    komma = statementArray[23];
+    if (komma !== ",") {
+        hinweis += ` ${komma} (nach ${programmierer}),`;
+        correct = false;
+    }
+
+    let vierAchthundert = statementArray[24];
+    if (vierAchthundert !== "4800") {
+        hinweis += ` ${vierAchthundert},`;
+        correct = false;
+    }
+
+    // ')'
+    klammerZu = statementArray[25];
+    if (klammerZu != ")") {
+        correct = false;
+        hinweis += ` ${klammerZu} (nach ${vierAchthundert}),`;
+    }
+
+    return [correct, hinweis];
+}
+
 /** Validiert die Nutzereingaben */
 function validateSQL() {
     /** Richtige Loesung "INSERT INTO Personal VALUES (7, 'Steffen Wolfram', 'verheiratet', 'Programmierer', 4800)"; */
+    /** Richtige Loesung2 "INSERT INTO Personal (PersNr, Name, FamStatus, Position, Gehalt) VALUES (7, 'Steffen Wolfram', 'verheiratet', 'Programmierer', 4800)"; */
     let correct = true;
-    let hinweise = '';
-    let htmlToPublish = document.getElementById('correction');
+    let hinweis = "";
+    let htmlToPublish = document.getElementById("correction");
     let statementArray;
 
     // Textfeld Wert
     let basicRequirements = ["insert", "into", "values"];
-    let uniqueRequirements = ["(", ")"];
     // Textfeld Wert
     let input = jQuery("#textAreaLoesung").val();
 
-    // Textfeld Wert
-    //let statement = jQuery('#textAreaLoesung').val();
+    // Bestimme Grundbedingungen (Array: [erfüllt, hinweis])
+    const grundbedingungen = hasBasicStatementRequirements(input, basicRequirements);
 
-    if (!hasBasicStatementRequirements(input, basicRequirements, uniqueRequirements)) {
+    if (!grundbedingungen[0]) {
         correct = false;
-    }
-    if (correct) {
-        statementArray = getStatementAsArray(input);
-    }
-
-    if (statementArray != null) {
-        let insert = statementArray[0];
-        if (insert.toLowerCase() !== 'insert') {
-            hinweise += ` ${insert},`;
-            correct = false;
-        }
-
-        let into = statementArray[1];
-        if (into.toLowerCase() !== 'into') {
-            hinweise += ` ${into},`;
-            correct = false;
-        }
-
-        let personal = statementArray[2];
-        if (personal !== 'Personal') {
-            hinweise += ` ${personal},`;
-            correct = false;
-        }
-
-        let values = statementArray[3];
-        if (values.toLowerCase() !== 'values') {
-            hinweise += ` ${values},`;
-            correct = false;
-        }
-
-        // '('
-        let klammerAuf = statementArray[4];
-        if (klammerAuf != "(") {
-            correct = false;
-            hinweise += ` ${klammerAuf},`;
-        }
-
-        let sieben = statementArray[5];
-        if (sieben !== '7') {
-            hinweise += ` ${sieben},`;
-            correct = false;
-        }
-
-        // ','
-        let komma = statementArray[6];
-        if (komma != ",") {
-            correct = false;
-            hinweise += ` ${komma},`;
-        }
-
-        let steffen = statementArray[7];
-        if (steffen != `"Steffen Wolfram"` && steffen != `'Steffen Wolfram'`) {
-            hinweise += ` ${steffen},`;
-            correct = false;
-        }
-
-        komma = statementArray[8];
-        if (komma != ",") {
-            correct = false;
-            hinweise += ` ${komma},`;
-        }
-
-        let verheiratet = statementArray[9];
-        if (verheiratet !== `"verheiratet"` && verheiratet !== `'verheiratet'`) {
-            hinweise += ` ${verheiratet},`;
-            correct = false;
-        }
-
-        komma = statementArray[10];
-        if (komma != ",") {
-            correct = false;
-            hinweise += ` ${komma},`;
-        }
-
-        let programmierer = statementArray[11];
-        if (programmierer !== `"Programmierer"` && programmierer !== `'Programmierer'`) {
-            hinweise += ` ${programmierer},`;
-            correct = false;
-        }
-
-        komma = statementArray[12];
-        if (komma != ",") {
-            correct = false;
-            hinweise += ` ${komma},`;
-        }
-
-        let vierAchthundert = statementArray[13];
-        if (vierAchthundert !== '4800') {
-            hinweise += ` ${vierAchthundert},`;
-            correct = false;
-        }
-
-        // ')'
-        let klammerZu = statementArray[14];
-        if (klammerZu != ")") {
-            correct = false;
-            hinweise += ` ${klammerZu},`;
-        }
-
-        hinweise = hinweise.replace(' ', '');
-
-
-        // Entferne das erste Leerzeichen und das letzte Komma vom Hinweis
-        hinweise.trimStart();
-        if (hinweise.charAt(hinweise.length - 1) == ",") {
-            hinweise = hinweise.slice(0, hinweise.length - 1);
-        }
+        hinweis = grundbedingungen[1];
     } else {
-        hinweise = `Du hast leider nicht die richtige Anzahl an notwendigen Argumenten.`
-        correct = false;
+        statementArray = getStatementAsArray(input);
+
+        if (statementArray != null) {
+            if (statementArray.length == 15) {
+                const solutionOne = possibilityOne(statementArray, correct, hinweis);
+                correct = solutionOne[0];
+                hinweis = solutionOne[1];
+            } else {
+                const solutionTwo = possibilityTwo(statementArray, correct, hinweis);
+                correct = solutionTwo[0];
+                hinweis = solutionTwo[1];
+            }
+            hinweis = hinweis.replace(" ", "");
+
+            // Entferne das erste Leerzeichen und das letzte Komma vom Hinweis
+            hinweis.trimStart();
+            if (hinweis.charAt(hinweis.length - 1) == ",") {
+                hinweis = hinweis.slice(0, hinweis.length - 1);
+            }
+        } else {
+            hinweis = `Du hast leider nicht die richtige Anzahl an notwendigen Argumenten.`;
+            correct = false;
+        }
     }
 
     if (correct) {
-        htmlToPublish.innerHTML = "<p class='sql-answer correct'>Das war die richtige SQL-Anweisung. Gut gemacht!</p>";
-        if (jQuery('#correctStatement').hasClass('hide')) {
-            jQuery('#correctStatement').removeClass('hide');
+        htmlToPublish.innerHTML =
+            "<p class='sql-answer correct'>Das war die richtige SQL-Anweisung. Gut gemacht!</p>";
+        if (jQuery("#correctStatement").hasClass("hide")) {
+            jQuery("#correctStatement").removeClass("hide");
         }
         // Oeffne accordian
-        if (!jQuery('#collapseOne').hasClass('show')) {
-            jQuery('#collapseOne').addClass('show');
+        if (!jQuery("#collapseOne").hasClass("show")) {
+            jQuery("#collapseOne").addClass("show");
         }
-        if (jQuery('#accordionSolution').hasClass('hide')) {
-            jQuery('#accordionSolution').removeClass('hide');
+        if (jQuery("#accordionSolution").hasClass("hide")) {
+            jQuery("#accordionSolution").removeClass("hide");
         }
     } else {
-        if (!jQuery('#correctStatement').hasClass('hide')) {
-            jQuery('#correctStatement').addClass('hide');
+        if (!jQuery("#correctStatement").hasClass("hide")) {
+            jQuery("#correctStatement").addClass("hide");
         }
-        if (!jQuery('#accordionSolution').hasClass('hide')) {
-            jQuery('#accordionSolution').addClass('hide');
+        if (!jQuery("#accordionSolution").hasClass("hide")) {
+            jQuery("#accordionSolution").addClass("hide");
         }
-        htmlToPublish.innerHTML = `<p class='sql-answer wrong'>Leider nicht die richtige SQL-Anweisung. \nGrund: <strong>${hinweise}</strong></p>`;
+        htmlToPublish.innerHTML = `<p class='sql-answer wrong'>Leider nicht die richtige SQL-Anweisung. \nGrund: <strong>${hinweis}</strong></p>`;
     }
 }
