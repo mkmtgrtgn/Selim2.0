@@ -147,7 +147,7 @@ Hier wollte er die Farbe sonst nicht ändern
 #veranstaltungen-tabelle {
     height:auto;
     width: auto\9;
-    max-width: 70vw;
+    max-width: 60vw;
 }
 
 @media (min-width: 1300px) {
