@@ -46,7 +46,7 @@ h3{
 .page-pick .dropdown-menu {
     max-height: 200px;
     overflow: auto;
-    background-color: #fbfbfb;
+    background-color: #f8f9fa;
     
 }
 
@@ -68,7 +68,7 @@ Hier wollte er die Farbe sonst nicht ändern
 
 /* Disabled Link Navbar */
 .nav-linkd {
-    color: #475656;
+    color: grey;
     display: block;
     padding: .5rem 1rem;
     padding-right: 1rem;
