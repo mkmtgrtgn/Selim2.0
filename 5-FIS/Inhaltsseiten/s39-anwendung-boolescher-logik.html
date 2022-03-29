@@ -73,23 +73,21 @@
 
 <!--Inhalt-->
 <div id="content">
-
     <h2>Boolesche Ausdrücke und ihre Anwendung</h2>
     <div class="row">
         <div class="col-md-12">
-            <p>Bedingungen können in der <code>WHERE</code>-Klausel nach den Gesetzen des Aussagenkalküls miteinander
+            <p>Bedingungen können in der <strong><code>WHERE</code></strong> - Klausel nach den Gesetzen des Aussagenkalküls miteinander
                 verknüpft werden. Folgende logische Operatoren sind
                 unter SQL verfügbar:
-            <p><code>NOT</code> - Verneinung einer Bedingung; Ausschluss aller Tupel, die die Bedingung erfüllen.</p>
-            <p><code>AND</code> - Beide
+            <p><strong><code>NOT</code></strong> - Verneinung einer Bedingung; Ausschluss aller Tupel, die die Bedingung erfüllen.</p>
+            <p><strong><code>AND</code></strong> - Beide
                 Bedingungen müssen vom Tupel erfüllt sein, damit es selektiert wird.</p>
-            <p><code>OR</code> - Mindestens eine Bedingung muss vom Tupel erfüllt sein, damit es
-                selektiert wird.</p>
+            <p><strong><code>OR</code></strong> - Mindestens eine Bedingung muss vom Tupel erfüllt sein, damit es selektiert wird.</p>
             <p>Wie in der Arithmetik (Punkt- vor Strichrechnung) gibt es auch hier Prioritätsregeln:
             <ul>
-                <li><code>NOT</code> geht vor...</li>
-                <li><code>AND</code> geht vor...</li>
-                <li><code>OR</code>.</li>
+                <li><strong><code>NOT</code></strong> geht vor...</li>
+                <li><strong><code>AND</code></strong> geht vor...</li>
+                <li><strong><code>OR</code></strong>.</li>
                 <li>Klammern gehen in jedem Fall vor.</li>
             </ul>
             </p>
@@ -102,9 +100,9 @@
             <img id="anwendung-boolescher-logik-bild" class='img-responsive center-block' src="s20-datenmanipulation-tabelle.svg">
             <p>Will man beispielsweise eine Namensliste von allen Studierenden ermitteln, deren Matrikelnummer nicht
                 höher als 183000 ist und von allen, die 'IIM' studieren, dann gibt man folgende
-                <code>SELECT</code>-Anweisung ein:</p>
-            <p><code>SELECT Name, 
-            Vorname FROM Studierende WHERE NOT (MatrNr > 183000) OR (Studiengang = 'IIM');</code></p>
+                <strong><code>SELECT</code></strong>-Anweisung ein:</p>
+            <p><strong><code>SELECT Name, 
+            Vorname FROM Studierende WHERE NOT (MatrNr > 183000) OR (Studiengang = 'IIM');</code></strong></p>
             <p>Man erhält folgendes Ergebnis: Hauke Freer, Juliane Thiele und Samuel Sanchez</p>
         </div>
 
