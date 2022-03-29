@@ -93,7 +93,7 @@ function hasBasicStatementRequirements(input, basicRequirements, uniqueRequireme
             }
         });
     }
-
+    // Semikolon darf nur wenn es vorkommt einmal und am Ende sein
     if (statement.includes(';')) {
         if (statement.split(';').length != 2) {
             correct = false;
@@ -192,15 +192,14 @@ function getStatementAsArray(input) {
     if (temp3.length == 12) {
         statementAsArray = temp3;
     }
-    console.log(temp3);
+
     return statementAsArray;
 }
 
 /** Validiert die Nutzereingaben */
 function validateSQL() {
     /** Richtige Loesung: SELECT Gehalt FROM Personal WHERE FamStatus = 'ledig' AND Gehalt > 2000
-     * oder SELECT Gehalt FROM Personal WHERE Gehalt > 2000 AND FamStatus = 'ledig'
-     */
+     * oder SELECT Gehalt FROM Personal WHERE Gehalt > 2000 AND FamStatus = 'ledig' */
     let correct = true;
     let hinweis = '';
     let htmlToPublish = document.getElementById('correction');
@@ -350,7 +349,7 @@ function validateSQL() {
 
     if (correct) {
         htmlToPublish.innerHTML = "<p class='sql-answer correct'>Das war die richtige SQL-Anweisung. Gut gemacht!</p>";
-        // Schließe Standardtabelle um Loesung anzuzeigen
+        // Schließe Standardtabelle um Loesung anzuzeigen (hier nicht notwendig da Ergebnistabelle)
         // if (!jQuery('#accordionExample').hasClass('hide')) {
         //     jQuery('#accordionExample').addClass('hide');
         // }

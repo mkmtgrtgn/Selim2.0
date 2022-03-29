@@ -90,7 +90,7 @@ function hasBasicStatementRequirements(input, basicRequirements, uniqueRequireme
             }
         });
     }
-
+    // Semikolon muss wenn vorhanden nur einmal am Ende stehen
     if (statement.includes(';')) {
         if (statement.split(';').length != 2) {
             correct = false;
@@ -275,30 +275,35 @@ function validateSQL() {
             hinweis = `Du hast leider nicht die richtige Anzahl an notwendigen Argumenten.`
         }
     }
-
+    // Je nachdem ob richtiges Statement oder nicht blende Meldung aus und zeige Aenderungen an
     if (correct) {
+        // Positive Rueckmeldung
         htmlToPublish.innerHTML =
             "<p class='sql-answer correct'>Das war die richtige SQL-Anweisung. Gut gemacht!</p>";
         // Setze den aktualisierten Namen in die Tabelle
         let aktuellerName = statementArray[5].replaceAll(`"`, '').replaceAll(`'`, '');
         document.getElementById("updateColumn").innerHTML = aktuellerName;
-
+        // Oeffne accordian Ereignistabelle
         if (!jQuery("#collapseOne").hasClass("show")) {
             jQuery("#collapseOne").addClass("show");
         }
+        // Faerbe Hintergrund gruen von richtiger Zeile
         if (!jQuery("#mariaZeile").hasClass("right-background-color")) {
             jQuery("#mariaZeile").addClass("right-background-color");
         }
+        // Zeige richtige Ereignistabelle
         if (jQuery('#accordionSolution').hasClass('hide')) {
             jQuery('#accordionSolution').removeClass('hide');
         }
     } else {
         // Setze den ursprünglichen Namen in die Tabelle
         document.getElementById("updateColumn").innerHTML = "Maria Schmidt";
+        // Negative Rueckmeldung
         htmlToPublish.innerHTML = `<p class='sql-answer wrong'>Leider nicht die richtige SQL-Anweisung. \nGrund: <strong>${hinweis}</strong></p>`;
         if (jQuery("#mariaZeile").hasClass("right-background-color")) {
             jQuery("#mariaZeile").removeClass("right-background-color");
         }
+        // Zeige richtige Loesung in Tabelle
         if (!jQuery('#accordionSolution').hasClass('hide')) {
             jQuery('#accordionSolution').addClass('hide');
         }

@@ -79,6 +79,7 @@ function hasBasicStatementRequirements(input, basicRequirements, uniqueRequireme
         basicRequirements.forEach((requirement) => {
             if (!statement.includes(requirement)) {
                 correct = false;
+                // Speichere in Rueckgabe bei fehlendem Basic Requirement
                 hinweis = `Es fehlt '${requirement.toUpperCase()}'.`;
             }
         });
@@ -89,11 +90,13 @@ function hasBasicStatementRequirements(input, basicRequirements, uniqueRequireme
             // Das Requirement sollte jeweils genau EINMAL vorkommen
             if (statement.split(requirement).length != 2) {
                 correct = false;
+                // Speichere in Rueckgabe bei fehledem Unique Requirement (hier Klammerns)
                 hinweis = `Das Zeichen '${requirement.toUpperCase()}' soll einmal vorkommen.`;
             }
         });
     }
 
+    // Semikolon wird nochmals überprüft, wenn vorhanden
     if (statement.includes(";")) {
         if (statement.split(";").length != 2) {
             correct = false;
@@ -115,12 +118,12 @@ function getStatementAsArray(input) {
     let statement = input.trim();
     let statementAsArray;
 
-    // Falls ; an letzter Stelle
+    // Falls ; an letzter Stelle entfernen zum besseren validieren
     statement = statement.replace(";", "");
 
     let arrayWerte = statement.split(" ");
 
-    // Pruefe wo ein =, + und < ist und ob leerzeichen eingehalten wurden
+    // Pruefe wo ein (, ), =, + und/ oder < ist und ob leerzeichen eingehalten wurden
     let temp = arrayWerte.map((val) => {
         // Dasselbe fuer (
         // Wenn Wert '(' enthaelt und laenger ist als 1 Zeichen
@@ -234,90 +237,88 @@ function getStatementAsArray(input) {
 
     return statementAsArray;
 }
-
+/** Moeglichkeit fuer Loesung 1 zur Validierung*/
 function possibilityOne(statementArray, correct, hinweis) {
-    // Richtige Lösung: `INSERT INTO Personal VALUES (7, 'Steffen Wolfram', 'verheiratet', 'Programmierer', 4800)`;
-
+    // Richtige Loesung: `INSERT INTO Personal VALUES (7, 'Steffen Wolfram', 'verheiratet', 'Programmierer', 4800)`;
+    // INSERT
     let insert = statementArray[0];
     if (insert.toLowerCase() !== "insert") {
         hinweis += ` ${insert},`;
         correct = false;
     }
-
+    // INTO
     let into = statementArray[1];
     if (into.toLowerCase() !== "into") {
         hinweis += ` ${into},`;
         correct = false;
     }
-
+    // Personal
     let personal = statementArray[2];
     if (personal !== "Personal") {
         hinweis += ` ${personal},`;
         correct = false;
     }
-
+    // VALUES 
     let values = statementArray[3];
     if (values.toLowerCase() !== "values") {
         hinweis += ` ${values},`;
         correct = false;
     }
-
     // '('
     let klammerAuf = statementArray[4];
     if (klammerAuf != "(") {
         correct = false;
         hinweis += ` ${klammerAuf} (nach ${values}),`;
     }
-
+    // PersNr 7
     let sieben = statementArray[5];
     if (sieben !== "7") {
         hinweis += ` ${sieben},`;
         correct = false;
     }
-
     // ','
     let komma = statementArray[6];
     if (komma != ",") {
         correct = false;
         hinweis += ` ${komma} (nach ${sieben}),`;
     }
-
+    // Name 'Steffen Wolfram'
     let steffen = statementArray[7];
     if (steffen != `"Steffen Wolfram"` && steffen != `'Steffen Wolfram'`) {
         hinweis += ` ${steffen},`;
         correct = false;
     }
-
+    // ','
     komma = statementArray[8];
     if (komma != ",") {
         correct = false;
         hinweis += ` ${komma} (nach ${steffen}),`;
     }
-
+    // FamStatus 'verheiratet'
     let verheiratet = statementArray[9];
     if (verheiratet !== `"verheiratet"` && verheiratet !== `'verheiratet'`) {
         hinweis += ` ${verheiratet},`;
         correct = false;
     }
-
+    // ','
     komma = statementArray[10];
     if (komma != ",") {
         correct = false;
         hinweis += ` ${komma} (nach ${verheiratet}),`;
     }
-
+    // Position 'Programmierer'
     let programmierer = statementArray[11];
     if (programmierer !== `"Programmierer"` && programmierer !== `'Programmierer'`) {
         hinweis += ` ${programmierer},`;
         correct = false;
     }
-
+    // ','
     komma = statementArray[12];
     if (komma != ",") {
         correct = false;
         hinweis += ` ${komma} (nach ${programmierer}),`;
     }
-
+    // Gehalt 4800
     let vierAchthundert = statementArray[13];
     if (vierAchthundert !== "4800") {
         hinweis += ` ${vierAchthundert},`;
@@ -334,93 +335,94 @@ function possibilityOne(statementArray, correct, hinweis) {
     return [correct, hinweis];
 }
 
+/** Moeglichkeit 2 mit (Spaltennamen) vor VALUES */
 function possibilityTwo(statementArray, correct, hinweis) {
     // Richtige Lösung: `INSERT INTO Personal (PersNr, Name, FamStatus, Position, Gehalt) VALUES (7, 'Steffen Wolfram', 'verheiratet', 'Programmierer', 4800)`;
-
+    // INSERT
     let insert = statementArray[0];
     if (insert.toLowerCase() !== "insert") {
         hinweis += ` ${insert},`;
         correct = false;
     }
-
+    // INTO
     let into = statementArray[1];
     if (into.toLowerCase() !== "into") {
         hinweis += ` ${into},`;
         correct = false;
     }
-
+    // Tabelle Personal
     let personal = statementArray[2];
     if (personal !== "Personal") {
         hinweis += ` ${personal},`;
         correct = false;
     }
-
+    // '('
     let klammerAuf = statementArray[3];
     if (klammerAuf !== "(") {
         hinweis += ` ${klammerAuf} (nach ${personal}),`;
         correct = false;
     }
-
+    // Tabellenspalten PersNr
     let persNr = statementArray[4];
     if (persNr !== "PersNr") {
         hinweis += ` ${persNr},`;
         correct = false;
     }
-
+    // ','
     let komma = statementArray[5];
     if (komma !== ",") {
         hinweis += ` ${komma} (nach ${persNr}),`;
         correct = false;
     }
-
+    // Tabellenspalte Name
     let name = statementArray[6];
     if (name !== "Name") {
         hinweis += ` ${name},`;
         correct = false;
     }
-
+    // ','
     komma = statementArray[7];
     if (komma !== ",") {
         hinweis += ` ${komma} (nach ${name}),`;
         correct = false;
     }
-
+    // Tabellenspalte FamStatus
     let famStatus = statementArray[8];
     if (famStatus !== "FamStatus") {
         hinweis += ` ${famStatus},`;
         correct = false;
     }
-
+    // ','
     komma = statementArray[9];
     if (komma !== ",") {
         hinweis += ` ${komma} (nach ${famStatus}),`;
         correct = false;
     }
-
+    // Tabellenspalte Position
     let position = statementArray[10];
     if (position !== "Position") {
         hinweis += ` ${position},`;
         correct = false;
     }
-
+    // ','
     komma = statementArray[11];
     if (komma !== ",") {
         hinweis += ` ${komma} (nach ${position}),`;
         correct = false;
     }
-
+    // Tabellenspalte Gehalt
     let gehalt = statementArray[12];
     if (gehalt !== "Gehalt") {
         hinweis += ` ${gehalt},`;
         correct = false;
     }
-
+    // ')'
     let klammerZu = statementArray[13];
     if (klammerZu !== ")") {
         hinweis += ` ${klammerZu} (nach ${gehalt}),`;
         correct = false;
     }
-
+    // VALUES
     let values = statementArray[14];
     if (values.toLowerCase() !== "values") {
         hinweis += ` ${values},`;
@@ -433,55 +435,55 @@ function possibilityTwo(statementArray, correct, hinweis) {
         correct = false;
         hinweis += ` ${klammerAuf2} (nach ${values}),`;
     }
-
+    // PersNr 7
     let sieben = statementArray[16];
     if (sieben !== "7") {
         hinweis += ` ${sieben},`;
         correct = false;
     }
-
+    // ','
     komma = statementArray[17];
     if (komma !== ",") {
         hinweis += ` ${komma} (nach ${sieben}),`;
         correct = false;
     }
-
+    // Name Steffen Wolfram
     let steffen = statementArray[18];
     if (steffen != `"Steffen Wolfram"` && steffen != `'Steffen Wolfram'`) {
         hinweis += ` ${steffen},`;
         correct = false;
     }
-
+    // ','
     komma = statementArray[19];
     if (komma !== ",") {
         hinweis += ` ${komma} (nach ${steffen}),`;
         correct = false;
     }
-
+    // FamStatus verheiratet
     let verheiratet = statementArray[20];
     if (verheiratet !== `"verheiratet"` && verheiratet !== `'verheiratet'`) {
         hinweis += ` ${verheiratet},`;
         correct = false;
     }
-
+    // ','
     komma = statementArray[21];
     if (komma !== ",") {
         hinweis += ` ${komma} (nach ${verheiratet}),`;
         correct = false;
     }
-
+    // Position 'Programmierer
     let programmierer = statementArray[22];
     if (programmierer !== `"Programmierer"` && programmierer !== `'Programmierer'`) {
         hinweis += ` ${programmierer},`;
         correct = false;
     }
-
+    // ','
     komma = statementArray[23];
     if (komma !== ",") {
         hinweis += ` ${komma} (nach ${programmierer}),`;
         correct = false;
     }
-
+    // Gehalt 4800
     let vierAchthundert = statementArray[24];
     if (vierAchthundert !== "4800") {
         hinweis += ` ${vierAchthundert},`;
@@ -515,12 +517,13 @@ function validateSQL() {
     // Bestimme Grundbedingungen (Array: [erfüllt, hinweis])
     const grundbedingungen = hasBasicStatementRequirements(input, basicRequirements);
 
+    // Wenn Grundbedingungen Fehler enthalten, ist der Ausdruck nicht mehr korrekt
     if (!grundbedingungen[0]) {
         correct = false;
         hinweis = grundbedingungen[1];
     } else {
         statementArray = getStatementAsArray(input);
-
+        // Wenn kein leeres Array von Anweisung pruefe beide Moeglichkeiten
         if (statementArray != null) {
             if (statementArray.length == 15) {
                 const solutionOne = possibilityOne(statementArray, correct, hinweis);
@@ -543,27 +546,33 @@ function validateSQL() {
             correct = false;
         }
     }
-
+    // Je nachdem ob richtiges Statement oder nicht blende Meldung aus und zeige Aenderungen an
     if (correct) {
+        // Positive Rueckmeldung
         htmlToPublish.innerHTML =
             "<p class='sql-answer correct'>Das war die richtige SQL-Anweisung. Gut gemacht!</p>";
+        // Fall fuer nur Ereignistabelle drin gelassen (nicht genutzt)
         if (jQuery("#correctStatement").hasClass("hide")) {
             jQuery("#correctStatement").removeClass("hide");
         }
-        // Oeffne accordian
+        // Oeffne accordian Ereignistabelle
         if (!jQuery("#collapseOne").hasClass("show")) {
             jQuery("#collapseOne").addClass("show");
         }
+        // Zeige richtige Loesung in Tabelle
         if (jQuery("#accordionSolution").hasClass("hide")) {
             jQuery("#accordionSolution").removeClass("hide");
         }
     } else {
+        // Fall fuer nur Ereignistabelle drin gelassen (nicht genutzt)
         if (!jQuery("#correctStatement").hasClass("hide")) {
             jQuery("#correctStatement").addClass("hide");
         }
+        // Zeige richtige Loesung in Tabelle
         if (!jQuery("#accordionSolution").hasClass("hide")) {
             jQuery("#accordionSolution").addClass("hide");
         }
+        // Negative Rueckmeldung
         htmlToPublish.innerHTML = `<p class='sql-answer wrong'>Leider nicht die richtige SQL-Anweisung. \nGrund: <strong>${hinweis}</strong></p>`;
     }
 }

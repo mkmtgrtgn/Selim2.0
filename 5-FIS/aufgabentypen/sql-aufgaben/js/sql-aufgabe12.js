@@ -90,7 +90,7 @@ function hasBasicStatementRequirements(input, basicRequirements, uniqueRequireme
             }
         });
     }
-
+    // Semikolon darf nur wenn es vorkommt einmal und am Ende sein
     if (statement.includes(';')) {
         if (statement.split(';').length != 2) {
             correct = false;
@@ -206,9 +206,7 @@ function compareArrays(array1, array2) {
 
 /** Validiert die Nutzereingaben */
 function validateSQL() {
-    /** Richtige Loesung
-     * SELECT Name, PersNr FROM Personal WHERE FamStatus = 'ledig'
-     * */
+    /** Richtige Loesung SELECT Name, PersNr FROM Personal WHERE FamStatus = 'ledig' */
     let htmlToPublish = document.getElementById('correction');
     // Definiere die Requirements
     let basicRequirements = ["select", "from", "where"];
@@ -310,6 +308,7 @@ function validateSQL() {
     }
 
     if (correct) {
+        // Richtige Loesung Rueckmeldung eingeblendet
         htmlToPublish.innerHTML =
             "<p class='sql-answer correct'>Das war die richtige SQL-Anweisung. Gut gemacht!</p>";
 
@@ -319,6 +318,7 @@ function validateSQL() {
         if (jQuery("#accordion-ergebnis").hasClass("hide")) {
             jQuery("#accordion-ergebnis").removeClass("hide");
         }
+        // Ergebnistabelle angezeigt
         if (jQuery('#accordionSolution').hasClass('hide')) {
             jQuery('#accordionSolution').removeClass('hide');
         }
@@ -331,6 +331,7 @@ function validateSQL() {
         if (!jQuery("#accordion-ergebnis").hasClass("hide")) {
             jQuery("#accordion-ergebnis").addClass("hide");
         }
+        // Ergebnistabelle verborgen
         if (!jQuery('#accordionSolution').hasClass('hide')) {
             jQuery('#accordionSolution').addClass('hide');
         }

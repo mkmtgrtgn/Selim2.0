@@ -93,7 +93,7 @@ function hasBasicStatementRequirements(input, basicRequirements, uniqueRequireme
             }
         });
     }
-
+    // Semikolon darf nur wenn es vorkommt einmal und am Ende sein
     if (statement.includes(';')) {
         if (statement.split(';').length != 2) {
             correct = false;
@@ -239,10 +239,7 @@ function getStatementAsArray(input) {
 
 /** Validiert die Nutzereingaben */
 function validateSQL() {
-    /** Richtige Loesung
-     * SELECT Name, PersNr FROM Personal WHERE FamStatus = 'ledig'
-     * SELECT AVG (Gehalt) FROM Personal WHERE FamStatus = 'ledig'
-     * */
+    /** Richtige Loesung: SELECT AVG (Gehalt) FROM Personal WHERE FamStatus = 'ledig' */
     let htmlToPublish = document.getElementById('correction');
 
     // Definiere die Requirements

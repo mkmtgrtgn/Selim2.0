@@ -149,7 +149,7 @@ function getStatementAsArray(input) {
     if (statementAsArray.length != 7) {
         statementAsArray = null;
     }
-    console.log(statementAsArray);
+
     return statementAsArray;
 }
 
@@ -231,6 +231,7 @@ function validateSQL() {
     }
 
     if (correct) {
+        // Positivie Rueckmeldung
         htmlToPublish.innerHTML = "<p class='sql-answer correct'>Das war die richtige SQL-Anweisung. Gut gemacht!</p>";
         // Setze hide Class um die Spalte zu "löschen"
         if (!jQuery('#kathrinSchusterZeile').hasClass('hide')) {
@@ -244,6 +245,7 @@ function validateSQL() {
             jQuery('#accordionSolution').removeClass('hide');
         }
     } else {
+        // Negative Rueckmeldung
         htmlToPublish.innerHTML = `<p class='sql-answer wrong'>Leider nicht die richtige SQL-Anweisung. \nGrund: <strong>${hinweis}</strong></p>`;
         // Setze "löchen" zurueck durch Class remove
         if (jQuery('#kathrinSchusterZeile').hasClass('hide')) {

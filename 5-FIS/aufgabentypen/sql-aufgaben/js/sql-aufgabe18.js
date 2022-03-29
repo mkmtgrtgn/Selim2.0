@@ -181,9 +181,7 @@ function compareArrays(array1, array2) {
 
 /** Validiert die Nutzereingaben */
 function validateSQL() {
-    /** Richtige Loesung
-     * SELECT Name FROM Personal WHERE FilialNr = 2 AND FWNr = 1
-     * */
+    /** Richtige Loesung SELECT Name FROM Personal WHERE FilialNr = 2 AND FWNr = 1 */
     let htmlToPublish = document.getElementById('correction');
     // Textfeld Wert
     let input = jQuery("#textAreaLoesung").val();
@@ -298,8 +296,9 @@ function validateSQL() {
     }
 
     if (correct) {
+        // Positive Rueckmeldung
         htmlToPublish.innerHTML = "<p class='sql-answer correct'>Das war die richtige SQL-Anweisung. Gut gemacht!</p>";
-
+        // Zeige Ergebnistabelle Personal
         if (!jQuery("#collapseZero").hasClass("show")) {
             jQuery("#collapseZero").addClass("show");
         }
@@ -307,8 +306,9 @@ function validateSQL() {
             jQuery("#accordion-ergebnis").removeClass("hide");
         }
     } else {
+        // Negative Rueckmeldung
         htmlToPublish.innerHTML = `<p class='sql-answer wrong'>Leider nicht die richtige SQL-Anweisung. \nGrund: <strong>${hinweis}</strong></p>`;
-
+        // Verberge  Ergebnistabelle Personal
         if (jQuery("#collapseZero").hasClass("show")) {
             jQuery("#collapseZero").removeClass("show");
         }

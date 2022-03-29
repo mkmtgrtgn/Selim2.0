@@ -177,9 +177,7 @@ function getStatementAsArray(input) {
 
 /** Validiert die Nutzereingaben */
 function validateSQL() {
-    /** Richtige Loesung
-     * SELECT Name FROM Personal WHERE Position = 'Verkäufer'
-     * */
+    /** Richtige Loesung SELECT Name FROM Personal WHERE Position = 'Verkäufer' */
     let htmlToPublish = document.getElementById('correction');
     // Definiere die Requirements
     let basicRequirements = ["select", "from", "where"];
@@ -265,24 +263,29 @@ function validateSQL() {
     }
 
     if (correct) {
+        // Positive Rueckmeldung
         htmlToPublish.innerHTML =
             "<p class='sql-answer correct'>Das war die richtige SQL-Anweisung. Gut gemacht!</p>";
-
+        // Oeffne richtige Loesung (fuer nur Ereignistabellen Ansicht)
         if (!jQuery("#collapseOne").hasClass("show")) {
             jQuery("#collapseOne").addClass("show");
         }
+        // Zeige Select Tabellen Loesung nach Statement
         if (jQuery("#selectTable").hasClass("hide")) {
             jQuery("#selectTable").removeClass("hide");
         }
+        // Zeige Ereignistabelle
         if (jQuery('#accordionSolution').hasClass('hide')) {
             jQuery('#accordionSolution').removeClass('hide');
         }
     } else {
+        // Negative Rueckmeldung
         htmlToPublish.innerHTML = `<p class='sql-answer wrong'>Leider nicht die richtige SQL-Anweisung. \nGrund: <strong>${hinweis}</strong></p>`;
-
+        // Verberge Select Tabelle
         if (!jQuery("#selectTable").hasClass("hide")) {
             jQuery("#selectTable").addClass("hide");
         }
+        // Zeige Ereignistabelle
         if (!jQuery('#accordionSolution').hasClass('hide')) {
             jQuery('#accordionSolution').addClass('hide');
         }

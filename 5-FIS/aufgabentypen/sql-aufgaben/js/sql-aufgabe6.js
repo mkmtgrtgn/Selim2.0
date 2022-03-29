@@ -90,7 +90,7 @@ function hasBasicStatementRequirements(input, basicRequirements, uniqueRequireme
             }
         });
     }
-
+    // Semikolon wird nochmals überprüft, wenn vorhanden
     if (statement.includes(';')) {
         if (statement.split(';').length != 2) {
             correct = false;
@@ -187,7 +187,7 @@ function getStatementAsArray(input) {
     if (statementAsArray.length != 12) {
         statementAsArray = null;
     }
-    // console.log(statementAsArray);
+
     return statementAsArray;
 }
 
@@ -298,6 +298,7 @@ function validateSQL() {
     }
 
     if (correct) {
+        // Positive Rueckmeldung
         htmlToPublish.innerHTML = "<p class='sql-answer correct'>Das war die richtige SQL-Anweisung. Gut gemacht!</p>";
         // Setze Wert auf den neuen Wert
         document.getElementById('thomasGehalt').innerHTML = 2500;
@@ -309,10 +310,12 @@ function validateSQL() {
         if (!jQuery('#collapseOne').hasClass('show')) {
             jQuery('#collapseOne').addClass('show');
         }
+        // Zeige Ereignistabelle
         if (jQuery('#accordionSolution').hasClass('hide')) {
             jQuery('#accordionSolution').removeClass('hide');
         }
     } else {
+        // Negative Rueckmeldung
         htmlToPublish.innerHTML = `<p class='sql-answer wrong'>Leider nicht die richtige SQL-Anweisung. \nGrund: <strong>${hinweis}</strong></p>`;
         // Setze Wert zurueck
         document.getElementById('thomasGehalt').innerHTML = 2000;
@@ -320,6 +323,7 @@ function validateSQL() {
         if (jQuery('#thomasZeile').hasClass('right-background-color')) {
             jQuery('#thomasZeile').removeClass('right-background-color');
         }
+        // Verberge Ereignistabelle
         if (!jQuery('#accordionSolution').hasClass('hide')) {
             jQuery('#accordionSolution').addClass('hide');
         }
