@@ -46,7 +46,6 @@ h1, h2, h3 {
     background-image: url("data:image/svg+xml;..");
 }
 
-
 .page-pick {
     background-color: var(--containerfarbe);
 }
@@ -101,7 +100,6 @@ p {
 .fragenblock {
     border: dotted var(--hauptfarbe)  4px;
     padding:1vw;
-    
 }
 
 .antworten {
@@ -121,10 +119,10 @@ p {
 }
 
 
-/*für IR2*/
+/************** für IR2 ***********************/
 
 .progress {
-    color: var(--hauptfarbe);
+    color: var(--verlinkungaktiv); /*wird von Bootstrap überschrieben*/ 
     margin-top: 1%;
     margin-bottom: 1%;
     top:60px;
@@ -147,11 +145,6 @@ td{
 }
 
 
-/*für seite 19*/
-.task8 {
-    padding-bottom: 0.5%;
-}
-
 /*für seite 25*/
 #relFeedbackMet{
     margin: 20px;
@@ -159,7 +152,6 @@ td{
 
 /* für seite 28*/
 #roccTask{
-  
     width: max-content;
     display: flex;
 }
@@ -237,6 +229,7 @@ div.desc {
     text-align: center;
 }
 
+/*improving layout for smaller screens*/
 @media screen and (max-width: 690px) {
     #dtm13 {
         margin-top: 0;
@@ -246,8 +239,9 @@ div.desc {
     .dtmTable {
         width: 80px;
     }
-    
 }
+
+/*improving layout for very small screens*/
 @media screen and (max-width: 400px) {
     .dtmTable {
         width: 50px;
@@ -260,7 +254,7 @@ div.desc {
     }
 }
 
-/* für Seite 32*/
+/* für Seite 32, 19*/
 #exampleBox{
     border: solid;
     border-color: var(--verlinkungaktiv);
@@ -305,12 +299,13 @@ div.desc {
     justify-content: space-around;
     background-color: var(--containerfarbe);
 }
+
 .dragAdropTable td {
-    
     padding: 5px 12px;
     border-bottom: 2px solid white;
     border-right: 2px solid white;  
 }
+
 .solutionTable {
     width: 100%;
     margin-left:20%;
@@ -323,15 +318,18 @@ div.desc {
     justify-content: space-around;
     background-color: var(--containerfarbe);
 }
+
 .solutionTable td {
     text-align: left;
     padding: 5px 12px;
     border-bottom: 2px solid white;
     border-right: 2px solid white; 
 }
+
 .solutionTable th {
     text-align: center; 
 }
+
 .dragtarget {
     background-color: var(--containerfarbe);
     text-align: center;
@@ -339,18 +337,22 @@ div.desc {
     float:left;
     margin:2px;
 }
+
 #checkAnswer {
     float: right;
 }
+
 /*Seite 6*/
 .imgPage6 {
     text-align: center;
 }
+
 /*Seite 7*/
 .tables7 {
     display: flex;
     justify-content: space;  
 }
+
 .dragAdropTable7 {
     width: 70%;
     margin-top: 2%;
@@ -362,12 +364,14 @@ div.desc {
     justify-content: space-around;
     background-color: var(--containerfarbe);
 }
+
 .dragAdropTable7 td {
     
     padding: 5px 12px;
     border-bottom: 2px solid white;
     border-right: 2px solid white;  
 }
+
 .solutionTable7 {
     width: 100%;
     margin-left:5%;
@@ -380,15 +384,18 @@ div.desc {
     justify-content: space-around;
     background-color: var(--containerfarbe);
 }
+
 .solutionTable7 td {
     text-align: left;
     padding: 5px 12px;
     border-bottom: 2px solid white;
     border-right: 2px solid white; 
 }
+
 .solutionTable7 th {
     text-align: center; 
 }
+
 .dragtarget7 {
     background-color: var(--containerfarbe);
     text-align: left;
@@ -396,9 +403,11 @@ div.desc {
     float:left;
     margin:2px;
 }
+
 #checkAnswer7 {
     float: right;
 }
+
 /*Seite 8*/
 .table8 {
     width: 50%;
@@ -410,17 +419,18 @@ div.desc {
     justify-content: space-around;
     background-color: var(--containerfarbe);
 }
+
 .table8 td {
-    
     padding: 5px 12px;
     border-bottom: 2px solid white;
-     
 }
+
 /*Seite 9*/
 .moreTextBtn {
     color:#8EACAC;
     margin-left:20px;
 }
+
 .moreText {
     display: none;
 }
@@ -451,10 +461,12 @@ div.desc {
 .moreText5--show {
     display: inline;
 }
+
 /*Seite 10*/
 .text10 {
     margin-left:60px;
 }
+
 /*Seite 17*/
 .text17 {
     text-align: center;
@@ -464,6 +476,7 @@ div.desc {
     font-family: 'Quicksand' !important;
     font-size: 25px;
 }
+
 /*Seite 26*/
 .tables26 {
     display: flex;
@@ -518,6 +531,7 @@ div.desc {
 #checkAnswer26 {
     float: right;
 }
+
 /*Seite27*/
 .table27 {
     width: 45%;
