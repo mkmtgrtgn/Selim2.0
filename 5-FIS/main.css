@@ -379,3 +379,6 @@ hr {
 .mbs {
 	margin-bottom: 10px;
 }
+div.center {
+    text-align: center;
+  }
