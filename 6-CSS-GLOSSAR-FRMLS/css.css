@@ -1,4 +1,3 @@
-/*setzten von Variabeln für den Body Bereich*/
 body{
     font-family: Quicksand;
     --schriftfarbe:#232B2B;
@@ -11,11 +10,8 @@ body{
 }
 
 h1, h2, h3 {
-    padding:1vw;
-    color: var(--schriftfarbe);
 }
 
-/* Navigation Menü */
 .navbar-brand {
     margin-left: 1vw;
     font-weight: 600;
@@ -35,6 +31,11 @@ h1, h2, h3 {
 
 }
 
+/*
+Da man Bootstrap-Klassen nicht so leicht überschreiben kann, einfach kopieren und ändern
+- andernfalls einfach Bootstrap als Datei downloaden und selber modifizieren (nav-link->i).
+Hier wollte er die Farbe sonst nicht ändern
+ */
 .nav-linki {
     color:var(--schriftfarbe);
     display: block;
@@ -94,54 +95,53 @@ p {
     float:right;
 }
 
-/*Das sind die Linien zwischen den einzelnen Wörtern/Formeln zur Abgrenzung*/
 .hr-line {
     width: 60%;
     margin: auto;
-}
+  }
 
-  /* Container der Wörter sowohl für Glossar aber auch Formelsammlung */
-.glossar-wort {
-    color: #232B2B;
-    cursor: pointer;
-    padding: 30px 20px;
-    width: 60%;
-    border: none;
-    outline: none;
-    transition: 0.4s;
-    margin: auto;
-}
+  /* Container der Wörter */
+  .glossar-wort {
+      color: #232B2B;
+      cursor: pointer;
+      padding: 30px 20px;
+      width: 60%;
+      border: none;
+      outline: none;
+      transition: 0.4s;
+      margin: auto;
+  }
   
-.glossar-definition {
+  .glossar-definition {
     margin: auto;
     /* Definition des Wortes wird mittig unter dem Wort angezeigt. Die Definition ist responsive */
     padding: auto;
 }
 
   /* Hovert der Benutzer über das Feld, wird es wie in der NavBar hell hervorgehoben */
-.glossar-wort:hover {
-    background-color: #F9F9F9;
-    /* runde Ecken, sodass es zum Grundgerüst passt */
-    border-radius: 6px;
-}
+  .glossar-wort:hover {
+      background-color: #F9F9F9;
+      /* runde Ecken, sodass es zum Grundgerüst passt */
+      border-radius: 6px;
+  }
 
-  /* Design der Definition der Formel und des Wortes im Glossar und in der Formelsammlung mit Klasse glossar-definition */
-.glossar-definition {
-    padding: 0 18px;
-    background-color: white;
-    display: none;
-    overflow: hidden;
-    /* runde Ecken der Definition */
-    border-radius: 6px;
-}
+  /* Design der Definition */
+  .glossar-definition {
+      padding: 0 18px;
+      background-color: white;
+      display: none;
+      overflow: hidden;
+      /* runde Ecken der Definition */
+      border-radius: 6px;
+  }
 
-.page-header {
+  .page-header {
     padding-bottom: 9px;
     margin: 40px 0 20px;
     border-bottom: 1px solid #7c9797;
 }
 
-/* Fürs das Quiz bzw. den Vokabeltest im Glossar */
+/* Fürs Quiz */
 
 .fragenblock {
     border: dotted var(--hauptfarbe)  4px;
@@ -163,12 +163,13 @@ p {
 .quizantwort {
     margin:12px;
     border-radius: 4px;
-    border: solid 1px rgba(128, 128, 128, 0.66);
+    border: solid 2px rgba(128, 128, 128, 0.66);
     padding:6px 6px 6px 16px ;
     font-size: medium;
-    background-color: #B2D8D8;
+    background-color: lightgray;
     font-weight: bold;
 }
+
 
 .wahreAntwort {
     background-color: rgba(60, 207, 60, 0.7);
@@ -191,9 +192,11 @@ p {
     background-color: rgba(144, 238, 144, 0.8);
 }
 
+
 .nichtBeantwortet {
     border: dashed 2px rgba(207, 8, 44, 0.8);
 }
+
 
 .falschBeantwortet {
     border: dashed 2px red;
@@ -221,7 +224,7 @@ p {
 
 /* Hier geht es um den Scroll Up Button */
 
-/* Position des Fixierten Buttons rechts in der Ecke */
+/* Position des Buttons rechts in der Ecke */
 #btnScrollToTop {
     position: fixed;
     right: 10px;
@@ -229,7 +232,7 @@ p {
     width: 50px;
     height: 50px;
     border-radius: 25%;
-    background: #0e6ffd;
+    background: #7c9797;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     color: #ffffff;
     border: none;
@@ -242,33 +245,9 @@ p {
     background: #b2d8d8;
 }
 
-/* Hier geht es um die responsiveness der A-Z Buttons im Glossar */
-
-/*Button Layout. Buttun-Abstand ändert sich, sobald maximale Breite erreicht wird.*/
+/*Button*/
 @media only screen and (max-width:800px){
-    .buchstaben {
-      margin: 3px;
+    .buchstaben_button_klasse {
+      margin: 20px;
     }
   }
-
-/* Orientierung für den Unteren Bereich des Glossars und der Formelsammlung. A-Z */  
-
-/*Fußzeile ul soll 20px
-Abstand auf allen Seiten haben und nicht
-im Listenstil*/
-footer ul{
-   float:left;
-   list-style:none;
-   padding:0px;
-   margin:20px;
-}
-
-footer ul li a {
-   text-decoration: none;
-}
-/*Richtet die Liste in der Fußzeile
-in einer Reihe.*/
-footer li{
-    margin-right:15px;
-    display:inline;
-}
