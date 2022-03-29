@@ -245,9 +245,10 @@ function validateSQL() {
      * */
     let htmlToPublish = document.getElementById('correction');
 
-    // Textfeld Wert
+    // Definiere die Requirements
     let basicRequirements = ["select", "avg", "where", "from"];
     let uniqueRequirements = ["(", ")"];
+    // Textfeld Wert
     let input = jQuery("#textAreaLoesung").val();
 
     // Laufvariablen

@@ -65,24 +65,55 @@ function addColumnValue() {
     }
 }
 
-/** Prüft ob die grundlegenden Bedingungen fuer das SQL-Statement gegeben sind (Update where set) */
-function hasBasicStatementRequirements(input) {
-    let correct = false;
-    let statement = input.toLowerCase();
+/** Prüft ob die grundlegenden Bedingungen fuer das SQL-Statement gegeben sind */
+function hasBasicStatementRequirements(input, basicRequirements, uniqueRequirements = []) {
+    let correct = true;
+    let statement = input.toLowerCase().trim();
+    let hinweis = null;
 
-    if (statement && statement.startsWith("update")) {
-        if (statement.includes("set") && statement.includes("where")) {
-            correct = true;
+    if (basicRequirements.length > 0) {
+        // Prüfe, ob Requirement vorhanden ist
+        basicRequirements.forEach((requirement) => {
+            if (!statement.includes(requirement)) {
+                correct = false;
+                hinweis = `Es fehlt '${requirement.toUpperCase()}'.`;
+            }
+        });
+    }
+
+    if (uniqueRequirements.length > 0) {
+        uniqueRequirements.forEach(requirement => {
+            // Das Requirement sollte jeweils genau EINMAL vorkommen
+            if (statement.split(requirement).length != 2) {
+                correct = false;
+                hinweis = `Das Zeichen '${requirement.toUpperCase()}' darf nur einmal vorkommen.`;
+            }
+        });
+    }
+
+    if (statement.includes(';')) {
+        if (statement.split(';').length != 2) {
+            correct = false;
+            hinweis = `Das ';' darf nur einmal vorkommen.`
+        }
+        if (statement.charAt(statement.length - 1) != ';') {
+            correct = false;
+            hinweis = `Das ';' ist an der falschen Stelle.`
         }
     }
-    return correct;
+
+    return [correct, hinweis];
 }
 
 /** Teilt das SQL-Statement in ein Array ein zur besseren Überprüfung */
 function getStatementAsArray(input) {
     // Variablen
-    let statement = input;
+    // Nimmt die Leerzeichen am Anfang und Ende weg
+    let statement = input.trim();
     let statementAsArray;
+
+    // Falls ; an letzter Stelle
+    statement = statement.replace(';', '');
 
     // Splitte zunaechst nach Leerzeichen
     let arrayWerte = statement.split(" ");
@@ -149,6 +180,10 @@ function validateSQL() {
     /** Richtige Loesung
      * UPDATE Personal SET Name = 'Maria Müller' WHERE Name = 'Maria Schmidt'
      * */
+    let htmlToPublish = document.getElementById('correction');
+    // Definiere die Requirements
+    let basicRequirements = ["update", "set", "where"];
+    let uniqueRequirements = [];
     // Textfeld Wert
     let input = jQuery("#textAreaLoesung").val();
 
@@ -157,93 +192,92 @@ function validateSQL() {
     let hinweis = "";
     let statementArray;
 
+    // Bestimme Grundbedingungen (Array: [erfüllt, hinweis])
+    const grundbedingungen = hasBasicStatementRequirements(input, basicRequirements);
     // Wenn Basisanforderungen nicht erfuellt, "wirf Fehler"
-    if (!hasBasicStatementRequirements(input)) {
+    if (!grundbedingungen[0]) {
         correct = false;
-        hinweis += "das Statement";
-    }
-
-    // Wenn Basisbedingungen erfuellt...
-    if (correct) {
-        statementArray = getStatementAsArray(input);
-    }
-
-    // Wenn Array-Statement valide ist ...
-    if (statementArray != null) {
-        //.. überprüfe die einzelnen Token und deren Reihenfolge
-        // UPDATE
-        let s1 = statementArray[0];
-        if (s1.toLowerCase() != "update") {
-            correct = false;
-            hinweis += ` ${s1},`;
-        }
-        // Personal
-        let s2 = statementArray[1];
-        if (s2 != "Personal") {
-            correct = false;
-            hinweis += ` ${s2},`;
-        }
-        // SET
-        let s3 = statementArray[2];
-        if (s3.toLowerCase() != "set") {
-            correct = false;
-            hinweis += ` ${s3},`;
-        }
-        // Name
-        let s4 = statementArray[3];
-        if (s4 != "Name") {
-            correct = false;
-            hinweis += ` ${s4},`;
-        }
-        // '='
-        let s5 = statementArray[4];
-        if (s5 != "=") {
-            correct = false;
-            hinweis += ` ${s5},`;
-        }
-        // Maria Müller oder Maria Mueller für beide quotes (single/double)
-        let s6 = statementArray[5];
-        if (![`'Maria Müller'`, `"Maria Müller"`, `"Maria Mueller"`, `'Maria Mueller'`].includes(s6)) {
-            correct = false;
-            hinweis += ` ${s6},`;
-        }
-        // WHERE
-        let s7 = statementArray[6];
-        if (s7.toLowerCase() != "where") {
-            correct = false;
-            hinweis += ` ${s7},`;
-        }
-        // Name
-        let s8 = statementArray[7];
-        if (s8 != "Name") {
-            correct = false;
-            hinweis += ` ${s8},`;
-        }
-        // '='
-        let s9 = statementArray[8];
-        if (s9 != "=") {
-            correct = false;
-            hinweis += ` ${s9},`;
-        }
-        // Maria Schmidt für beide quotes (single/double)
-        let s10 = statementArray[9];
-        if (![`'Maria Schmidt'`, `"Maria Schmidt"`].includes(s10)) {
-            correct = false;
-            hinweis += ` ${s10},`;
-        }
-
-        // Entferne das erste Leerzeichen und das letzte Komma vom Hinweis
-        hinweis.trimStart();
-        if (hinweis.charAt(hinweis.length - 1) == ",") {
-            hinweis = hinweis.slice(0, hinweis.length - 1);
-        }
+        hinweis = grundbedingungen[1];
     } else {
-        correct = false;
-        hinweis = "das Statement"
+        statementArray = getStatementAsArray(input);
+
+        // Wenn Array-Statement valide ist ...
+        if (statementArray != null) {
+            //.. überprüfe die einzelnen Token und deren Reihenfolge
+            // UPDATE
+            let s1 = statementArray[0];
+            if (s1.toLowerCase() != "update") {
+                correct = false;
+                hinweis += ` ${s1},`;
+            }
+            // Personal
+            let s2 = statementArray[1];
+            if (s2 != "Personal") {
+                correct = false;
+                hinweis += ` ${s2},`;
+            }
+            // SET
+            let s3 = statementArray[2];
+            if (s3.toLowerCase() != "set") {
+                correct = false;
+                hinweis += ` ${s3},`;
+            }
+            // Name
+            let s4 = statementArray[3];
+            if (s4 != "Name") {
+                correct = false;
+                hinweis += ` ${s4},`;
+            }
+            // '='
+            let s5 = statementArray[4];
+            if (s5 != "=") {
+                correct = false;
+                hinweis += ` ${s5},`;
+            }
+            // Maria Müller oder Maria Mueller für beide quotes (single/double)
+            let s6 = statementArray[5];
+            if (![`'Maria Müller'`, `"Maria Müller"`, `"Maria Mueller"`, `'Maria Mueller'`].includes(s6)) {
+                correct = false;
+                hinweis += ` ${s6},`;
+            }
+            // WHERE
+            let s7 = statementArray[6];
+            if (s7.toLowerCase() != "where") {
+                correct = false;
+                hinweis += ` ${s7},`;
+            }
+            // Name
+            let s8 = statementArray[7];
+            if (s8 != "Name") {
+                correct = false;
+                hinweis += ` ${s8},`;
+            }
+            // '='
+            let s9 = statementArray[8];
+            if (s9 != "=") {
+                correct = false;
+                hinweis += ` ${s9},`;
+            }
+            // Maria Schmidt für beide quotes (single/double)
+            let s10 = statementArray[9];
+            if (![`'Maria Schmidt'`, `"Maria Schmidt"`].includes(s10)) {
+                correct = false;
+                hinweis += ` ${s10},`;
+            }
+
+            // Entferne das erste Leerzeichen und das letzte Komma vom Hinweis
+            hinweis.trimStart();
+            if (hinweis.charAt(hinweis.length - 1) == ",") {
+                hinweis = hinweis.slice(0, hinweis.length - 1);
+            }
+        } else {
+            correct = false;
+            hinweis = `Du hast leider nicht die richtige Anzahl an notwendigen Argumenten.`
+        }
     }
 
     if (correct) {
-        document.getElementById("correction").innerHTML =
+        htmlToPublish.innerHTML =
             "<p class='sql-answer correct'>Das war die richtige SQL-Anweisung. Gut gemacht!</p>";
         // Setze den aktualisierten Namen in die Tabelle
         let aktuellerName = statementArray[5].replaceAll(`"`, '').replaceAll(`'`, '');
@@ -261,9 +295,7 @@ function validateSQL() {
     } else {
         // Setze den ursprünglichen Namen in die Tabelle
         document.getElementById("updateColumn").innerHTML = "Maria Schmidt";
-        document.getElementById(
-            "correction"
-        ).innerHTML = `<p class='sql-answer wrong'>Leider nicht die richtige SQL-Anweisung. Bitte überprüfe <strong>${hinweis}</strong> und probiere es nochmal.</p>`;
+        htmlToPublish.innerHTML = `<p class='sql-answer wrong'>Leider nicht die richtige SQL-Anweisung. \nGrund: <strong>${hinweis}</strong></p>`;
         if (jQuery("#mariaZeile").hasClass("right-background-color")) {
             jQuery("#mariaZeile").removeClass("right-background-color");
         }
