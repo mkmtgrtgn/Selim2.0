@@ -144,6 +144,12 @@ Hier wollte er die Farbe sonst nicht ändern
     max-width: 70vw;
 }
 
+#veranstaltungen-tabelle {
+    height:auto;
+    width: auto\9;
+    max-width: 70vw;
+}
+
 @media (min-width: 1300px) {
     #listenauswahl-erm-abbildung {
         height: auto;
