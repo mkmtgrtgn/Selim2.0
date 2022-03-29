@@ -21,76 +21,77 @@
 
 <body>
 
-<!--Navbar-->
-<div class="navi">
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon navbar-light"></span>
-            </button>
-            <!-- Navbar Brand: Logo der Uni Hildesheim-->
-            <a class="navbar-brand" href="../../home.html">
-                <span class="d-none d-sm-block">
-                    <img class="d-inline-block align-text-center" src="../uni_logo.png" width="70" height="70"
-                        alt="Universität Hildesheim" style="padding-right: 20;">
-                </span>
-                <span class="d-sm-none">SELiM</span>
-            </a>
+    <!--Navbar-->
+    <div class="navi">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon navbar-light"></span>
+                </button>
+                <!-- Navbar Brand: Logo der Uni Hildesheim-->
+                <a class="navbar-brand" href="../../home.html">
+                    <span class="d-none d-sm-block">
+                        <img class="d-inline-block align-text-center" src="../uni_logo.png" width="70" height="70"
+                            alt="Universität Hildesheim" style="padding-right: 20;">
+                    </span>
+                    <span class="d-sm-none">SELiM</span>
+                </a>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <!-- Disabled Link: Modul Information -->
-                    <li class="nav-item">
-                        <a class="nav-linkd disabled" href="#" tabindex="-1" aria-disabled="true">SELiM - FIS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-linki active" aria-current="page" href="../../home.html">Home</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-linki dropdown-toggle" href="#" id="navDrop1" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Module
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navDrop1">
-                            <li><a class="dropdown-item bg" href="../../1-GDI/gdi.html">GDI</a></li>
-                            <li><a class="dropdown-item bg" href="../../2-IR1/ir1.html">IR1</a></li>
-                            <li><a class="dropdown-item bg" href="../../3-IR2/ir2.html">IR2</a></li>
-                            <li><a class="dropdown-item bg" href="../../4-IR3/ir3.html">IR3</a></li>
-                            <li><a class="dropdown-item bg" href="../../5-FIS/inhaltsverzeichnis.html">FIS</a></li>
-                        </ul>
-                    </li>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <!-- Disabled Link: Modul Information -->
+                        <li class="nav-item">
+                            <a class="nav-linkd disabled" href="#" tabindex="-1" aria-disabled="true">SELiM - FIS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-linki active" aria-current="page" href="../../home.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-linki dropdown-toggle" href="#" id="navDrop1" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Module
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navDrop1">
+                                <li><a class="dropdown-item bg" href="../../1-GDI/gdi.html">GDI</a></li>
+                                <li><a class="dropdown-item bg" href="../../2-IR1/ir1.html">IR1</a></li>
+                                <li><a class="dropdown-item bg" href="../../3-IR2/ir2.html">IR2</a></li>
+                                <li><a class="dropdown-item bg" href="../../4-IR3/ir3.html">IR3</a></li>
+                                <li><a class="dropdown-item bg" href="../../5-FIS/inhaltsverzeichnis.html">FIS</a></li>
+                            </ul>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-linki active" aria-current="page"
-                            href="../../6-CSS-GLOSSAR-FRMLS/glossar.html">Glossar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-linki active" aria-current="page"
-                            href="../../6-CSS-GLOSSAR-FRMLS/formelsammlung.html">Formelsammlung</a>
-                    </li>
-                </ul>
+                        <li class="nav-item">
+                            <a class="nav-linki active" aria-current="page"
+                                href="../../6-CSS-GLOSSAR-FRMLS/glossar.html">Glossar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-linki active" aria-current="page"
+                                href="../../6-CSS-GLOSSAR-FRMLS/formelsammlung.html">Formelsammlung</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-</div>
+        </nav>
+    </div>
 
-<!--Inhalt-->
-<div id="content">
-    <div class="container">
-                <h2>Entity-Relationship-Modell</h2>
-                <div class="row">
-                    <div class="col-md-12">
-                        <p>Das Entity-Relationship-Modell (kurz: ER-Modell oder ERM) ist ein konzeptionelles Datenmodell
-                            zur Erstellung eines
-                            Datenbauplans für ein Informationssystem.</p>
-                        <p>Die ER-Modellierung lässt sich durch folgende drei Schritte charakterisieren:</p>
-                        <ol>
-                            <li>
-                                Auswahl von Objekten aus der realen Welt,<br />
-                                Beziehungen, die zwischen diesen bestehen, <br />
-                                und Attribute, die Objekte und Beziehungen näher kennzeichnen,
+    <!--Inhalt-->
+    <div id="content">
+        <div class="container">
+            <h2>Entity-Relationship-Modell</h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>Das Entity-Relationship-Modell (kurz: ER-Modell oder ERM) ist ein konzeptionelles Datenmodell
+                        zur Erstellung eines
+                        Datenbauplans für ein Informationssystem.</p>
+                    <p>Die ER-Modellierung lässt sich durch folgende drei Schritte charakterisieren:</p>
+                    <ul>
+                        <ol class="list-group list-group-numbered">
+                            <li>Auswahl von Objekten aus der realen Welt, <br>
+                                Beziehungen, die zwischen diesen bestehen, <br>
+                                und Attribute, die Objekte und Beziehungen näher
+                                kennzeichnen,
                             </li>
                             <li>
                                 Benennung der ausgewählten Objekte und Beziehungen,
@@ -99,36 +100,37 @@
                                 Klassifikation der Objekte und Beziehungen.
                             </li>
                         </ol>
-                        <p>Das Ergebnis der ER-Modellierung stellt einen Ausschnitt der Realität dar, der für eine
-                            Problemstellung wichtig
-                            ist.
-                        </p>
+                    </ul>
+                    <p>Das Ergebnis der ER-Modellierung stellt einen Ausschnitt der Realität dar, der für eine
+                        Problemstellung wichtig
+                        ist.
+                    </p>
 
-                        <p>Das Grundkonzept des ERM basiert auf:
-                        <ul>
-                            <li>Der <strong>Entität</strong> ('Entity') als zu modellierende Informationseinheit
-                                (Objekt), z.B. ein Buch oder die
-                                Adresse eines Studierenden. Gleichen sich mehrere Entitäten, so werden sie zu einer
-                                Entitätsmenge zusammengefasst. Für
-                                die Objekte einer Entitätsmenge wird ein Objekttyp gebildet, der Entity-Typ, der die
-                                Entitäten allgemein beschreibt</li>
-                            <li>Den <strong>Relationen</strong> ('Relationship') zur Modellierung von Beziehungen
-                                zwischen Entitäten, z.B. ein
-                                Dozent hält eine Vorlesung. Gleichen sich mehrere Relationen so werden sie zu einer
-                                Relationshipmenge zusammengefasst,
-                                die durch den Relationship-Typ beschrieben wird.</li>
-                            <li>Den <strong>Attributen</strong> als Eigenschaft einer Entität oder einer Relation, z.B.
-                                der Titel einer Vorlesung.
-                                In einem Entitätstyp existiert immer ein Primärschlüssel, ein Attribut (oder eine
-                                Kombination von Attributen), das die
-                                einzelnen Entitäten eindeutig identifiziert, z.B. die Matrikelnummer eines Studierenden.
-                            </li>
-                        </ul>
-                        </p>
-                    </div>
+                    <p>Das Grundkonzept des ERM basiert auf:
+                    <ul>
+                        <li>Der <strong>Entität</strong> ('Entity') als zu modellierende Informationseinheit
+                            (Objekt), z.B. ein Buch oder die
+                            Adresse eines Studierenden. Gleichen sich mehrere Entitäten, so werden sie zu einer
+                            Entitätsmenge zusammengefasst. Für
+                            die Objekte einer Entitätsmenge wird ein Objekttyp gebildet, der Entity-Typ, der die
+                            Entitäten allgemein beschreibt</li>
+                        <li>Den <strong>Relationen</strong> ('Relationship') zur Modellierung von Beziehungen
+                            zwischen Entitäten, z.B. ein
+                            Dozent hält eine Vorlesung. Gleichen sich mehrere Relationen so werden sie zu einer
+                            Relationshipmenge zusammengefasst,
+                            die durch den Relationship-Typ beschrieben wird.</li>
+                        <li>Den <strong>Attributen</strong> als Eigenschaft einer Entität oder einer Relation, z.B.
+                            der Titel einer Vorlesung.
+                            In einem Entitätstyp existiert immer ein Primärschlüssel, ein Attribut (oder eine
+                            Kombination von Attributen), das die
+                            einzelnen Entitäten eindeutig identifiziert, z.B. die Matrikelnummer eines Studierenden.
+                        </li>
+                    </ul>
+                    </p>
                 </div>
             </div>
         </div>
+<<<<<<< Updated upstream
 
         <!--Seitennavigation-->
         <div class="row mt-5 justify-content-center">
@@ -325,12 +327,14 @@
             </div>
         </div>
 
+=======
+>>>>>>> Stashed changes
     </div>
-</div>
-    
 
 
-<script src="../../static/js/bootstrap.bundle.js"></script>
+
+    <script src="../../static/js/bootstrap.bundle.js"></script>
 
 </body>
+
 </html>

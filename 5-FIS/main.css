@@ -99,13 +99,13 @@ Hier wollte er die Farbe sonst nicht ändern
 #die-select-anweisung-abbildung {
     height: auto;
     width: auto\9;
-    max-width: 50vw;
+    max-width: 25vw;
 }
 
 #einsatzbereiche-abbildung {
     height: auto;
     width: auto\9;
-    max-width: 50vw;
+    max-width: 35vw;
 }
 
 #erm-begriffszusammenhaenge-abbildung {
@@ -210,7 +210,6 @@ p {
 .right-background-color {
     background-color: #53c553;
 }
-
 
 /* Formatierung des Abschlussquizzes nach dem Template von Gruppe 7*/
 
