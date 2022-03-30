@@ -1,4 +1,5 @@
 /*
+Quiz Validierung nach Template von Gruppe 7
 Dieses Script liest Multiple Choice Fragen aus einem <div id="quiz"... nur wenn die Fragen und Antworten im Format
 <div class="frage"> frage || antwort ** aw2 ** aw3 || falscheantwort ** fa ** fa2... </div>
 im HTML Dokument formuliert werden. Alle Fragen (Quizze) kann man per Knopfdruck via Modal (siehe quiz.html)

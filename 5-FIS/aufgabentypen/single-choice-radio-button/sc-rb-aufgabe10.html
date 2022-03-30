@@ -76,17 +76,19 @@
         </nav>
     </div>
 
+    <!-- Inhalt -->
     <div id="content">
-
 
         <div class="container">
             <div class="row">
                 <div class="col">
+                    <!-- Aufgabenstellung -->
                     <h2>Aufgabe 9: SQL SELECT-Anweisung</h2>
                     <p>Welches Ergebnis liefert die folgende <code>SELECT</code>-Anweisung? Wähle
                         die richtige Antwort aus.<br />Die dazugehörige Tabelle befindet sich
                         <a href="#tabelle-datensatz" data-bs-toggle="collapse">hier</a>.
                     <div id="tabelle-datensatz" class="collapse">
+                        <!-- Tabelle zur Aufgabe -->
                         <table class="table table-bordered table-responsive table-hover caption-top">
                             <caption>Ausgangstabelle Personal</caption>
                             <thead>
@@ -146,14 +148,16 @@
                     </div>
                     </p>
                 </div>
-
-                <div class="row justify-content-center text-center">
-                    <div class="col-md-8 bg-light rounded">
-                        <p><code>SELECT Name FROM Personal WHERE FamStatus = 'ledig' AND Gehalt &lt= 4800;</code></p>
-                    </div>
-                </div>
             </div>
 
+            <!-- Code zur Aufgabenstellung -->
+            <div class="row justify-content-center text-center">
+                <div class="col-md-8 bg-light rounded">
+                    <p><code>SELECT Name FROM Personal WHERE FamStatus = 'ledig' AND Gehalt &lt= 4800;</code></p>
+                </div>
+            </div>
+            
+            <!-- Single Choice Radio Buttons -->
             <div class="row mt-3 justify-content-center text-center">
                 <div class="col">
                     <div class="btn-group">
@@ -172,12 +176,14 @@
                 </div>
             </div>
 
+            <!-- Feedback zur Aufgabe -->
             <div class="row mt-2">
                 <div class="col-md-3">
                     <p id="alertBox"></p>
                 </div>
             </div>
 
+            <!-- Button zur Validierung -->
             <div class="row">
                 <div class="col">
                     <p><button type="button" class="btn btn-primary float-end" onClick="radioVal()">Überprüfen</button>
@@ -185,7 +191,7 @@
                 </div>
             </div>
 
-            <!--Seitennavigation-->
+            <!-- Seitennavigation -->
             <div class="row mt-5 justify-content-center">
                 <div class="col-lg-8 col-lg-offset-3 text-center">
                     <div class="page-pick">
@@ -387,7 +393,7 @@
     <script src="../../../static/js/bootstrap.bundle.js"></script>
 
     <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../../../static/jQuery/jquery-3.6.0.min.js"></script>
 
     <!-- Single Choice Radio Button Aufgaben JS Funktion -->
     <script type="text/javascript" src="sc-rb-aufgaben.js"></script>
