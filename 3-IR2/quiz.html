@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="de">
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -15,146 +16,163 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;600;700&display=swap" rel="stylesheet">
     <title>Selim 2.0</title>
 </head>
+
 <body>
-<div class="navi">
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon navbar-light"></span>
-            </button>
-            <a class="navbar-brand" href="#">Selim</a>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-linki active" aria-current="page" href="../home.html">Home</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-linki dropdown-toggle" href="#" id="navDrop1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Module
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navDrop1">
-                            <li><a class="dropdown-item bg" href="../1-GDI/gdi.html">GDI</a></li>
-                            <li><a class="dropdown-item bg" href="../2-IR1/ir1.html">IR1</a></li>
-                            <li><a class="dropdown-item bg" href="../3-IR2/ir2.html">IR2</a></li>
-                            <li><a class="dropdown-item bg" href="../4-IR3/ir3.html">IR3</a></li>
-                            <li><a class="dropdown-item bg" href="../5-FIS/fis.html">FIS</a></li>
-
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item bg" href="#">und was ganz anderes</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-linki dropdown-toggle" href="#" id="navDrop2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Account?
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navDrop2">
-                            <li><a class="dropdown-item bg" href="#">Dieses Thema</a></li>
-                            <li><a class="dropdown-item bg" href="#">Jenes Thema</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item bg" href="#">und was ganz anderes</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="optionale Suche?" aria-label="optionale Suche!">
-                    <button class="btn btn-outline-success" type="submit">Such!</button>
-                </form>
-            </div>
-        </div>
-    </nav>
-</div>
-
-
-<div id="content">
-
-
-    <div class="container">
-
-
-
-
-
-        <!-- Alles hier drunter braucht ihr fuer das Quiz (in ein container element) -->
-
-
-        <div id="quiz">
-
-            <div class="frage">
-                Welche Zahlen sind kleiner als 3? || 1 ** 2  || 3 ** 4 ** 5 ** 6
-            </div>
-
-            <div class="frage">
-                Ist das eine Frage? ||   ja ** ja  || nein
-            </div>
-
-
-            <div class="frage">
-                Ist das eine Frage? ||   ja || nein
-            </div>
-
-            <div class="frage">
-                Ist das eine Frage? ||   ja || nein
-            </div>
-
-            <div class="frage">
-                die Frage in Text || rrrrichtig ** Zeile die den ganzen Bildschirm überspannt und ganz viel Text Platz oder Content Plat || falsch
-            </div>
-            <div class="frage">
-                Was ist Informatik? || rrrrichtig ** das mit den 1en und 0en ** computer sinnvoll einsetzen ** cool|| falsch ** einfach
-            </div>
-
-        </div>
-
-        <div class="row">
-            <div class="col">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                    Wissen abfragen
+    <div class="navi">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon navbar-light"></span>
                 </button>
+                <a class="navbar-brand" href="#">Selim</a>
 
-                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content" id="modalCont">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-linki active" aria-current="page" href="../home.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-linki dropdown-toggle" href="#" id="navDrop1" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Module
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navDrop1">
+                                <li><a class="dropdown-item bg" href="../1-GDI/gdi.html">GDI</a></li>
+                                <li><a class="dropdown-item bg" href="../2-IR1/ir1.html">IR1</a></li>
+                                <li><a class="dropdown-item bg" href="../3-IR2/ir2.html">IR2</a></li>
+                                <li><a class="dropdown-item bg" href="../4-IR3/ir3.html">IR3</a></li>
+                                <li><a class="dropdown-item bg" href="../5-FIS/inhaltsverzeichnis.html">FIS</a></li>
 
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="staticBackdropLabel">Fragen</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item bg" href="#">und was ganz anderes</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-linki dropdown-toggle" href="#" id="navDrop2" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Account?
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navDrop2">
+                                <li><a class="dropdown-item bg" href="#">Dieses Thema</a></li>
+                                <li><a class="dropdown-item bg" href="#">Jenes Thema</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item bg" href="#">und was ganz anderes</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="optionale Suche?"
+                            aria-label="optionale Suche!">
+                        <button class="btn btn-outline-success" type="submit">Such!</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
 
-                            <div class="modal-body" >
 
-                                <div class="container" id="fragendiv">
+    <div id="content">
 
-                                    <h5 id="qfrage" class = "quizfrage">Hierzu gibt es keine Fragen.</h5>
+
+        <div class="container">
+
+
+
+
+
+            <!-- Alles hier drunter braucht ihr fuer das Quiz (in ein container element) -->
+
+
+            <div id="quiz">
+
+                <div class="frage">
+                    Welche Zahlen sind kleiner als 3? || 1 ** 2 || 3 ** 4 ** 5 ** 6
+                </div>
+
+                <div class="frage">
+                    Ist das eine Frage? || ja ** ja || nein
+                </div>
+
+
+                <div class="frage">
+                    Ist das eine Frage? || ja || nein
+                </div>
+
+                <div class="frage">
+                    Ist das eine Frage? || ja || nein
+                </div>
+
+                <div class="frage">
+                    die Frage in Text || rrrrichtig ** Zeile die den ganzen Bildschirm überspannt und ganz viel Text
+                    Platz oder Content Plat || falsch
+                </div>
+                <div class="frage">
+                    Was ist Informatik? || rrrrichtig ** das mit den 1en und 0en ** computer sinnvoll einsetzen **
+                    cool|| falsch ** einfach
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">
+                        Wissen abfragen
+                    </button>
+
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content" id="modalCont">
+
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">Fragen</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
                                 </div>
-                                <div class="modal-footer row ">
-                                    <button id = "quizmaster" onclick="antwortChecken()"
-                                            type="button" class="btn btn-outline-success">Antwort überprüfen</button>
-                                </div>
-                                <div class="row justify-content-md-center">
-                                    <div id = "erfolgsnachricht" class="col-md-auto"></div>
-                                </div>
-                                <div class="row">
-                                    <div class="col md-12">
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" id="fortschritt" style="width: 1%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+
+                                <div class="modal-body">
+
+                                    <div class="container" id="fragendiv">
+
+                                        <h5 id="qfrage" class="quizfrage">Hierzu gibt es keine Fragen.</h5>
+                                    </div>
+                                    <div class="modal-footer row ">
+                                        <button id="quizmaster" onclick="antwortChecken()" type="button"
+                                            class="btn btn-outline-success">Antwort überprüfen</button>
+                                    </div>
+                                    <div class="row justify-content-md-center">
+                                        <div id="erfolgsnachricht" class="col-md-auto"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col md-12">
+                                            <div class="progress">
+                                                <div class="progress-bar progress-bar-striped bg-success"
+                                                    role="progressbar" id="fortschritt" style="width: 1%"
+                                                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
                                         </div>
                                     </div>
+
                                 </div>
 
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
+
+
+            <!-- Quiz bis hierhin! -->
+
         </div>
-
-
-    <!-- Quiz bis hierhin! -->
-
     </div>
-</div>
 
 </body>
 
