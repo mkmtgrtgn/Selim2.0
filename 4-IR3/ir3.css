@@ -4,14 +4,20 @@ body {
     --containerfarbe: #D8EBEB;
     --verlinkungsfarbe: #DEC6AC;
     --verlinkungaktiv: #8EACAC;
+    
 }
+.row {
+    padding-top: 1vw;
+}
+
 
 /**Loslegen Button**/
 .button-loslegen {
     color: var(--schriftfarbe);
     text-decoration: none;
-    font-size: xx-large;
-    padding: 1.5vw;
+    font-family: Quicksand;
+    font-size: x-large;
+    padding: 2px;
     background-color: var(--containerfarbe);
     border-radius: 10%;
     border: solid 2px var(--schriftfarbe);
@@ -20,11 +26,20 @@ body {
     color: var(--verlinkungsfarbe);
 }
 
+/**Quicksand**/
+h1, h2, h3, h4, p, li, button, span, .form-select {
+    font-family: Quicksand;
+}
+
+
+
 
 /**Navigationsleiste**/
-.navbar > h1, h2, h3 {
+.navbar > h1, h2, h3, h4 {
     padding:1vw; /*1% of view port width */
     color: var(--schriftfarbe);
+    
+
 }
 
 .navbar {
@@ -33,13 +48,6 @@ body {
     margin-left: -1vw;
     margin-right: -1vw;
 }
-.brand-IR3 {
-    text-decoration: none;
-    color: var(--schriftfarbe);
-    padding: 0.5vw;
-    font-size: 1.4rem;
-}
-
 
 
 .navbar-nav > li > a{
@@ -62,24 +70,21 @@ body {
 
 
 /**Seitennavigation**/
+.page-navigation-row {
+    position: absolute;
+    bottom: 0px;
+    background-color: #8EACAC;
+}
 .dropup-navigation {
     max-height: 300px;
     overflow: auto;
-    background-color: #8EACAC;
   }
 
 .page-navigation {
     background-color: var(--containerfarbe);
 }
-.page-navigation > ul {
-    color: var(--containerfarbe);
-}
 
 
-
-.row {
-    padding-top: 1vw;
-}
 
 .button {
     padding: 0.5vw;
@@ -91,4 +96,9 @@ body {
 .button:hover {
     color: var(--containerfarbe);
     background-color:  var(--schriftfarbe);
+}
+
+table{
+    background-color: var(--containerfarbe);
+    text-align: center;
 }
