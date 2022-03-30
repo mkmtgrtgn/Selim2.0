@@ -9,9 +9,6 @@ body{
   display: none;
 }
 
-h1, h2, h3 {
-}
-
 .navbar-brand {
     margin-left: 1vw;
     font-weight: 600;
@@ -31,6 +28,28 @@ h1, h2, h3 {
 
 }
 
+/*Überschriften */
+h1{
+    font-size: 32px;
+    padding: 12px;
+}
+h2{
+    font-size: 24px;
+    padding: 12px;
+}
+h3{
+    font-size: 18.72px;
+    padding: 12px;
+}
+
+/* Seitennavigation */
+.page-pick .dropdown-menu {
+    max-height: 200px;
+    overflow: auto;
+    background-color: #f8f9fa;
+    
+}
+
 /*
 Da man Bootstrap-Klassen nicht so leicht überschreiben kann, einfach kopieren und ändern
 - andernfalls einfach Bootstrap als Datei downloaden und selber modifizieren (nav-link->i).
@@ -47,12 +66,111 @@ Hier wollte er die Farbe sonst nicht ändern
 
 }
 
+/* Disabled Link Navbar */
+.nav-linkd {
+    color: grey;
+    display: block;
+    padding: .5rem 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    text-decoration: none;
+    pointer-events: none;
+
+}
+
+#anwendung-boolescher-logik-bild {
+    height: auto;
+    width: auto\9;
+    max-width: 50vw;
+}
+
+#begriffsstruktur-abbildung {
+    height: auto;
+    width: auto\9;
+    max-width: 50vw;
+}
+
+#datenmanipulation-tabelle {
+    height: auto;
+    width: auto\9;
+    max-width: 50vw;
+}
+
+#die-select-anweisung-abbildung {
+    height: auto;
+    width: auto\9;
+    max-width: 25vw;
+}
+
+#einsatzbereiche-abbildung {
+    height: auto;
+    width: auto\9;
+    max-width: 35vw;
+}
+
+#erm-begriffszusammenhaenge-abbildung {
+    height: auto;
+    width: auto\9;
+    max-width: 40vw;
+}
+
+#grundlagen-datenmodellierung-abbildung {
+    height: auto;
+    width: auto\9;
+    max-width: 50vw;
+}
+
+#kardinalitaeten-bilder {
+    height: auto;
+    width: auto\9;
+    max-width: 50vw;
+}
+
+#relationales-datenmodell-abbildung {
+    height: auto;
+    width: auto\9;
+    max-width: 50vw;
+}
+
+#sql-grundlagen-abbildung {
+    height: auto;
+    width: auto\9;
+    max-width: 50vw;
+}
+
+#veranstaltungen-tabelle {
+    height:auto;
+    width: auto\9;
+    max-width: 60vw;
+}
+
+#multiple-choice-erm-abbildung {
+    height:auto;
+    width: auto\9;
+    max-width: 70vw;
+
+}
+
+#listenauswahl-erm-abbildung {
+    height:auto;
+    width: auto\9;
+    max-width: 70vw;
+}
+
+@media (min-width: 1300px) {
+    #listenauswahl-erm-abbildung {
+        height: auto;
+        width: auto\9;
+        max-width: 55vw;
+    }
+}
+
 #content {
     background-color: var(--hintergrund);
-    padding:4%;
+    padding:16px;
     border:solid rgba(128, 128, 128, 0.42);
     border-radius: 16px;
-    box-shadow: slategray 6px 8px 4px 6px;
+    box-shadow: 5px 3px 6px 1px rgba(112,128,144,0.82);
     margin:4vh 5vw;
     display:block;
     overflow:auto;
@@ -60,7 +178,6 @@ Hier wollte er die Farbe sonst nicht ändern
 }
 
 .bg:hover {
-    corner-radius:4px;
     background-image: linear-gradient(180deg, var(--hauptfarbe), var(--hintergrund));
 
 }
@@ -90,7 +207,185 @@ p {
     background-color:rgba(255, 255, 255, 0.8);
 }
 
-quizbutton {
-    display:inline-block;
-    float:right;
+.sql-answer {
+    padding: 12px;
+    font-size: 18px;
 }
+
+.hide {
+    display: none;
+}
+
+#correctStatement {
+    background-color: #53c553;
+}
+
+.right-background-color {
+    background-color: #53c553;
+}
+
+/* Formatierung des Abschlussquizzes nach dem Template von Gruppe 7*/
+
+#quiz {
+    display:none;
+}
+
+.quizantwort {
+    margin:12px;
+    border-radius: 4px;
+    border: solid 2px rgba(128, 128, 128, 0.66);
+    padding:6px 6px 6px 16px ;
+    font-size: medium;
+    background-color: #b2d8d8;
+    font-weight: bold;
+}
+
+.wahreAntwort {
+    background-color: rgba(60, 207, 60, 0.7);
+    font-weight: 700;
+    font-size: large;
+    color:green;
+}
+
+.falscheAntwort {
+    background-color: rgba(186, 23, 51, 0.5);
+    text-decoration: line-through;
+    color:red;
+}
+
+.selected {
+    background-color: #8eacac;
+}
+
+.richtigBeantwortet {
+    border: solid 4px rgba(11, 174, 11, 0.7);
+    background-color: rgba(144, 238, 144, 0.8);
+}
+
+.nichtBeantwortet {
+    border: dashed 2px rgba(207, 8, 44, 0.8);
+}
+
+.falschBeantwortet {
+    border: dashed 2px red;
+}
+
+.richtigIgnoriert {
+    border: solid 4px rgba(196, 116, 116, 0.7);
+    background-color: rgba(186, 23, 51, 0.1);
+    text-decoration: line-through;
+}
+
+#erfolgsnachricht {
+    font-weight: bolder;
+    color: rgba(33, 102, 4, 0.8);
+    font-size:xx-large;
+}
+
+/* Hervorhebung richtiger und falscher Antworten beim Aufgabentyp Listenauswahl */
+.list-correct {
+    color: #fff;
+    border: 1px solid #198754;
+    background-color: #198754;
+}
+
+.list-wrong {
+    color: #fff;
+    border: 1px solid #dc3545;
+    background-color: #dc3545;
+}
+
+/* Code Formatierung beim Aufgabentyp Listenauswahl */
+.list-code {
+    line-height: 300%;
+}
+
+/* Code Farbe auf Buttons beim Aufgabentyp Single Choice */
+.sc-code {
+    color: #232B2B;
+}
+
+/* Klasse zur Hervorhebung richtiger Antworten */
+.correct {
+	color: #008000;
+	border: 1px solid 008000;
+	background-color: 008000;
+
+}
+
+/* Klasse zur Hervorhebung falscher Antworten */
+.wrong {
+	color: #FF0000;
+	border: 1px solid FF0000;
+	background-color: FF0000;
+}
+/* Venn Diagramm */
+.VenContainer {
+	background-color: #cccccc;
+}
+.vennDiagramm1 {
+	background-color: yellow;
+	border-radius: 50% 0 0 50%;
+}
+.vennDiagramm2 {
+	background-color: #008000;
+}
+.vennDiagramm3 {
+	background-color: blue;
+	border-radius: 0 50% 50% 0;
+}
+.glossar .panel {
+	margin-bottom: 0;
+}
+
+.buttonsLGAnsicht a {
+	margin-right: 5px;
+}
+/* Drag & Drop Tabelle */
+.fixed-td-width td {
+	width: 33%;
+	height: 70px;
+}
+
+@media(max-width: 768px) {
+	.fixed-td-width td {
+		width: 33%;
+		height: 100px;
+	}
+}
+
+.draggable {
+	cursor: move;
+}
+
+code {
+	color: #0186BC;
+}
+
+hr {
+	border-top: 1px solid #000;
+}
+
+.aufgabe2 {
+	margin-top: 50px;
+}
+
+#lueckentext>.selects {
+	display: inline;
+	width: auto;
+}
+
+.marked {
+	background-color: #0186BC;
+}
+
+#cursor-change > strong {
+	cursor: pointer;
+}
+
+.mbs {
+	margin-bottom: 10px;
+}
+div.center {
+    text-align: center;
+  }
