@@ -90,12 +90,15 @@
                     </div>
                     <!--Eingabe und Prüfung der Lösungen-->
                     <div>
+                        <!--Toggle Button um alle Lösungen gleichzeitig zu zeigen-->
+                       <button id="multiCollaps8" class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls=".multi-collapse">alle Lösungen</button>
+
                         <form class="form8">
                             <label for="termA">Term A = </label>
                             <input type="text" id="termA" class="task8abc" name="termA">
-                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#multiCollapseExampleA" aria-expanded="false"
-                                aria-controls="multiCollapseExampleA">Lösung für A</button>
+                            <!--Toggle Button für Lösung A-->
+                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExampleA" aria-expanded="false" aria-controls="multiCollapseExampleA">Lösung für A</button>
+                            <!--zu toggelnder Inhalt: Lösung A-->
                             <div class="collapse multi-collapse" id="multiCollapseExampleA">
                                 <div class="card card-body">
                                     idf=log(10000/50)=5.3
@@ -104,9 +107,9 @@
                             <br>
                             <label for="termB">Term B = </label>
                             <input type="text" id="termB" class="task8abc" name="termB">
-                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#multiCollapseExampleB" aria-expanded="false"
-                                aria-controls="multiCollapseExampleB">Lösung für B</button>
+                            <!--Toggle Button für Lösung B-->
+                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExampleB" aria-expanded="false" aria-controls="multiCollapseExampleB">Lösung für B</button>
+                            <!--zu toggelnder Inhalt: Lösung B-->
                             <div class="collapse multi-collapse" id="multiCollapseExampleB">
                                 <div class="card card-body">
                                     idf = log(10000/1300)=2.0
@@ -115,16 +118,15 @@
                             <br>
                             <label for="termC">Term C = </label>
                             <input type="text" id="termC" class="task8abc" name="termC">
-                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#multiCollapseExampleC" aria-expanded="false"
-                                aria-controls="multiCollapseExampleC">Lösung für C</button>
+                            <!--Toggle Button für Lösung C-->
+                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExampleC" aria-expanded="false" aria-controls="multiCollapseExampleC">Lösung für C</button>
+                            <!--zu toggelnder Inhalt: Lösung C-->
                             <div class="collapse multi-collapse" id="multiCollapseExampleC">
                                 <div class="card card-body">
                                     idf = log(10000/250) =3.7
                                 </div>
                             </div>
                             <br>
-                            <button id="multiCollaps8" class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExampleA multiCollapseExampleB multiCollapseExampleC">alle Lösungen</button>
                         </form>
                     </div>
                 </div>

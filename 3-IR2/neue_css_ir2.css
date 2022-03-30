@@ -168,11 +168,6 @@ td{
     height: 32px;
 }
 
-#multiCollaps8 {
-    float: right;
-    display: flex;
-    
-}
 .roccResultInput {
     width: 100%;
     text-align: center;
@@ -252,6 +247,13 @@ div.desc {
     #dtmTableHead:hover {
         overflow: visible;
     }
+}
+
+/*für Seite 19*/
+#multiCollaps8 {
+    float: right;
+    display: flex;
+    margin-right: 1%;
 }
 
 /* für Seite 32, 19*/
