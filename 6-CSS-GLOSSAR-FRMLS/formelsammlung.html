@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="de">
+
 <head>
     <!-- Metadaten -->
     <meta charset="utf-8">
@@ -17,109 +18,119 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Formelsammlung</title>
 </head>
+
 <body>
     <!--Unsere NavBar, Klasse zu navi, navbar und navbar-expand-lg-->
-<div class="navi">
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon navbar-light"></span>
-            </button>
-            <!-- Navbar Brand: Logo der Uni Hildesheim-->
-            <a class="navbar-brand">
-                <!--Desktop und Tablet/großer oder mittel-großer Viewport; Klick auf Bild soll dann auf die erste Seite/eine Einfürungsseite führen-->
-                <span class="d-none d-sm-block">
-                    <!--Uni-Logo links in der Ecke-->
-                    <img class="d-inline-block align-text-center" src="uni_logo.png" width="70" height="70" alt="Universität Hildesheim" style="padding-right: 20;">
-                </span>
-                <!--Handy/kleiner Viewport - Abkürzung der Bezeichnung unseres Viewports-->
-                <span class="d-sm-none">Formel</span>
-            </a>
-            <!--Elemente der NavBar-->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-linki active" aria-current="page" href="../home.html">Home</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-linki dropdown-toggle" href="#" id="navDrop1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Module
-                        </a>
-                        <!--Drop-Down Menü in unserer Navbar. Bootstrap Klasse-->
-                        <ul class="dropdown-menu" aria-labelledby="navDrop1">
-                            <li><a class="dropdown-item bg" href="../1-GDI/gdi.html">Grundbegriffe IW</a></li>
-                            <li><a class="dropdown-item bg" href="../2-IR1/ir1.html">Information Retrieval 1</a></li>
-                            <li><a class="dropdown-item bg" href="../3-IR2/ir2_startseite.html">Information Retrieval 2</a></li>
-                            <li><a class="dropdown-item bg" href="../4-IR3/0_Allgemein.html">Information Retrieval 3</a></li>
-                            <li><a class="dropdown-item bg" href="../5-FIS/inhaltsverzeichnis.html">Fakteninformationssysteme</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-linki active" aria-current="page" href="glossar.html">Glossar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-linki active" aria-current="page" href="formelsammlung.html">Formelsammlung</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</div>
-
-<div id="content">
-
-
-    <div class="container">
-
-        <div class="col">
-            <h1>Formelsammlung</h1>
-            <!--Fixierter Button, damit der Nutzer nicht ganz nach oben Scrollen muss-->
-            <button id="btnScrollToTop" title="Klicke um nach oben zu scrollen">
-                <i class="material-icons">arrow_upward</i>
-            </button>
-            <p>Hier findest du alle Formeln für jedes Modul alphabetisch geordnet. Klick dich gerne durch.</p></br>
-            <!--Hier sind unsere Buttons von A-Z auf gelistet.-->
-            <div class="row hidden-sm hidden-xs text-center">
-                <div class="col-md-12 col-lg-12">
-                    <a class="btn btn-primary buchstaben" href="#A" title="Bisher keine Formeln zu A">A</a>
-                    <a class="btn btn-primary buchstaben" href="#B" title="Bisher keine Formeln zu B">B</a>
-                    <a class="btn btn-primary buchstaben" href="#C" title="Zu Formeln mit C">C</a>
-                    <a class="btn btn-primary buchstaben" href="#D" title="Bisher keine Formeln zu D">D</a>
-                    <a class="btn btn-primary buchstaben" href="#E" title="Zu Formeln mit E">E</a>
-                    <a class="btn btn-primary buchstaben" href="#F" title="Zu Formeln mit F">F</a>
-                    <a class="btn btn-primary buchstaben" href="#G" title="Bisher keine Formel zu G">G</a>
-                    <a class="btn btn-primary buchstaben" href="#H" title="Zu Formeln mit H">H</a>
-                    <a class="btn btn-primary buchstaben" href="#I" title="Zu Formeln mit I">I</a>
-                    <a class="btn btn-primary buchstaben" href="#J" title="Bisher keine Formeln zu J">J</a>
-                    <a class="btn btn-primary buchstaben" href="#K" title="Zu Formeln mit K">K</a>
-                    <a class="btn btn-primary buchstaben" href="#L" title="Bisher keine Formeln zu L">L</a>
-                    <a class="btn btn-primary buchstaben" href="#M" title="Zu Formeln mit M">M</a>
-                    <a class="btn btn-primary buchstaben" href="#N" title="Zu Formeln mit N">N</a>
-                    <a class="btn btn-primary buchstaben" href="#O" title="Zu Formeln mit O">O</a>
-                    <a class="btn btn-primary buchstaben" href="#P" title="Zu Formeln mit P">P</a>
-                    <a class="btn btn-primary buchstaben" href="#Q" title="Bisher keine Formeln zu Q">Q</a>
-                    <a class="btn btn-primary buchstaben" href="#R" title="Zu Formeln mit R">R</a>
-                    <a class="btn btn-primary buchstaben" href="#S" title="Zu Formeln mit S">S</a>
-                    <a class="btn btn-primary buchstaben" href="#T" title="Zu Formeln mit T">T</a>
-                    <a class="btn btn-primary buchstaben" href="#U" title="Bisher keine Formeln zu U">U</a>
-                    <a class="btn btn-primary buchstaben" href="#V" title="Zu Formeln mit V">V</a>
-                    <a class="btn btn-primary buchstaben" href="#W" title="Zu Formeln mit W">W</a>
-                    <a class="btn btn-primary buchstaben" href="#X" title="Bisher keine Formeln zu X">X</a>
-                    <a class="btn btn-primary buchstaben" href="#Y" title="Bisher keine Formeln zu Y">Y</a>
-                    <a class="btn btn-primary buchstaben" href="#Z" title="Zu Formeln mit Z">Z</a>
+    <div class="navi">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon navbar-light"></span>
+                </button>
+                <!-- Navbar Brand: Logo der Uni Hildesheim-->
+                <a class="navbar-brand">
+                    <!--Desktop und Tablet/großer oder mittel-großer Viewport; Klick auf Bild soll dann auf die erste Seite/eine Einfürungsseite führen-->
+                    <span class="d-none d-sm-block">
+                        <!--Uni-Logo links in der Ecke-->
+                        <img class="d-inline-block align-text-center" src="uni_logo.png" width="70" height="70"
+                            alt="Universität Hildesheim" style="padding-right: 20;">
+                    </span>
+                    <!--Handy/kleiner Viewport - Abkürzung der Bezeichnung unseres Viewports-->
+                    <span class="d-sm-none">Formel</span>
+                </a>
+                <!--Elemente der NavBar-->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-linki active" aria-current="page" href="../home.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-linki dropdown-toggle" href="#" id="navDrop1" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Module
+                            </a>
+                            <!--Drop-Down Menü in unserer Navbar. Bootstrap Klasse-->
+                            <ul class="dropdown-menu" aria-labelledby="navDrop1">
+                                <li><a class="dropdown-item bg" href="../1-GDI/gdi.html">Grundbegriffe IW</a></li>
+                                <li><a class="dropdown-item bg" href="../2-IR1/ir1.html">Information Retrieval 1</a>
+                                </li>
+                                <li><a class="dropdown-item bg" href="../3-IR2/ir2_startseite.html">Information
+                                        Retrieval 2</a></li>
+                                <li><a class="dropdown-item bg" href="../4-IR3/ir3.html">Information Retrieval 3</a>
+                                </li>
+                                <li><a class="dropdown-item bg"
+                                        href="../5-FIS/inhaltsverzeichnis.html">Fakteninformationssysteme</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-linki active" aria-current="page" href="glossar.html">Glossar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-linki active" aria-current="page"
+                                href="formelsammlung.html">Formelsammlung</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <h2 id="A" class="page-header">   A</h2>
+        </nav>
+    </div>
+
+    <div id="content">
+
+
+        <div class="container">
+
+            <div class="col">
+                <h1>Formelsammlung</h1>
+                <!--Fixierter Button, damit der Nutzer nicht ganz nach oben Scrollen muss-->
+                <button id="btnScrollToTop" title="Klicke um nach oben zu scrollen">
+                    <i class="material-icons">arrow_upward</i>
+                </button>
+                <p>Hier findest du alle Formeln für jedes Modul alphabetisch geordnet. Klick dich gerne durch.</p></br>
+                <!--Hier sind unsere Buttons von A-Z auf gelistet.-->
+                <div class="row hidden-sm hidden-xs text-center">
+                    <div class="col-md-12 col-lg-12">
+                        <a class="btn btn-primary buchstaben" href="#A" title="Bisher keine Formeln zu A">A</a>
+                        <a class="btn btn-primary buchstaben" href="#B" title="Bisher keine Formeln zu B">B</a>
+                        <a class="btn btn-primary buchstaben" href="#C" title="Zu Formeln mit C">C</a>
+                        <a class="btn btn-primary buchstaben" href="#D" title="Bisher keine Formeln zu D">D</a>
+                        <a class="btn btn-primary buchstaben" href="#E" title="Zu Formeln mit E">E</a>
+                        <a class="btn btn-primary buchstaben" href="#F" title="Zu Formeln mit F">F</a>
+                        <a class="btn btn-primary buchstaben" href="#G" title="Bisher keine Formel zu G">G</a>
+                        <a class="btn btn-primary buchstaben" href="#H" title="Zu Formeln mit H">H</a>
+                        <a class="btn btn-primary buchstaben" href="#I" title="Zu Formeln mit I">I</a>
+                        <a class="btn btn-primary buchstaben" href="#J" title="Bisher keine Formeln zu J">J</a>
+                        <a class="btn btn-primary buchstaben" href="#K" title="Zu Formeln mit K">K</a>
+                        <a class="btn btn-primary buchstaben" href="#L" title="Bisher keine Formeln zu L">L</a>
+                        <a class="btn btn-primary buchstaben" href="#M" title="Zu Formeln mit M">M</a>
+                        <a class="btn btn-primary buchstaben" href="#N" title="Zu Formeln mit N">N</a>
+                        <a class="btn btn-primary buchstaben" href="#O" title="Zu Formeln mit O">O</a>
+                        <a class="btn btn-primary buchstaben" href="#P" title="Zu Formeln mit P">P</a>
+                        <a class="btn btn-primary buchstaben" href="#Q" title="Bisher keine Formeln zu Q">Q</a>
+                        <a class="btn btn-primary buchstaben" href="#R" title="Zu Formeln mit R">R</a>
+                        <a class="btn btn-primary buchstaben" href="#S" title="Zu Formeln mit S">S</a>
+                        <a class="btn btn-primary buchstaben" href="#T" title="Zu Formeln mit T">T</a>
+                        <a class="btn btn-primary buchstaben" href="#U" title="Bisher keine Formeln zu U">U</a>
+                        <a class="btn btn-primary buchstaben" href="#V" title="Zu Formeln mit V">V</a>
+                        <a class="btn btn-primary buchstaben" href="#W" title="Zu Formeln mit W">W</a>
+                        <a class="btn btn-primary buchstaben" href="#X" title="Bisher keine Formeln zu X">X</a>
+                        <a class="btn btn-primary buchstaben" href="#Y" title="Bisher keine Formeln zu Y">Y</a>
+                        <a class="btn btn-primary buchstaben" href="#Z" title="Zu Formeln mit Z">Z</a>
+                    </div>
+                </div>
+                <h2 id="A" class="page-header"> A</h2>
                 <div>
                     <p class="glossar-wort tooltip-test" title="Keine Formel zu A vorhanden">Bisher keine Einträge</p>
                 </div>
                 <hr class="hr-line">
-                <h2 id="B" class="page-header">   B</h2>
+                <h2 id="B" class="page-header"> B</h2>
                 <div>
                     <p class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Bisher keine Einträge</p>
                 </div>
                 <hr class="hr-line">
-                <h2 id="C" class="page-header">   C</h2>
+                <h2 id="C" class="page-header"> C</h2>
                 <div>
                     <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Cosinus-Maß</h2>
                     <div class="glossar-definition">
@@ -249,8 +260,9 @@
                                         </msqrt>
                                     </mfrac>
                                 </mstyle>
-                            </math> <br/>
-                            Das Cosinus-Maß dient der Ähnlichkeitsberechnung zwischen der Anfrage- und Dokumentenrepräsentation im Ranking-Prozess des Information Retrieval.
+                            </math> <br />
+                            Das Cosinus-Maß dient der Ähnlichkeitsberechnung zwischen der Anfrage- und
+                            Dokumentenrepräsentation im Ranking-Prozess des Information Retrieval.
                         </p>
                     </div>
                 </div>
@@ -286,55 +298,60 @@
                                     </mfrac>
                                 </mstyle>
                             </math>
-                            <br/>
-                            Po = Die beobachtete Übereinstimmung (observed agreement) <br/>
-                            Pc = Die Zufallsübereinstimmung (chance agreement) <br/>
-                            Der Cohens Kappa Koeffizient wird im Information Retrieval in der Dokumentenbewertung angewendet,
-                            wenn es mehrere Annotatoren gibt. Mit Hilfe des Cohens Kappa Koeffizienten kann man die (statistisch erwartbare) Zufallsübereinstimmung
-                            mit der beobachteten Übereinstimmung berechnen. Damit wird die Übereinstimmung der Annotatoren gemessen.
+                            <br />
+                            Po = Die beobachtete Übereinstimmung (observed agreement) <br />
+                            Pc = Die Zufallsübereinstimmung (chance agreement) <br />
+                            Der Cohens Kappa Koeffizient wird im Information Retrieval in der Dokumentenbewertung
+                            angewendet,
+                            wenn es mehrere Annotatoren gibt. Mit Hilfe des Cohens Kappa Koeffizienten kann man die
+                            (statistisch erwartbare) Zufallsübereinstimmung
+                            mit der beobachteten Übereinstimmung berechnen. Damit wird die Übereinstimmung der
+                            Annotatoren gemessen.
                         </p>
                     </div>
                 </div>
                 <hr class="hr-line">
-            <h2 id="D" class="page-header">   D</h2>
-            <div>
-                <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Dice'scher Koeffizient</h2>
-                <div class="glossar-definition">
-                    <p>Der Dice'sche Koeffizient dient der Ähnlichkeitsberechnung zwischen der Anfrage- und Dokumentenrepräsentation im Textretrieval.</p><br>
-                    <math>
-                        <mstyle displaystyle="true">
-                            <mi>s</mi>
-                            <mo>=</mo>
-                            <mfrac>
-                                <mrow>
-                                    <mn>2</mn>
-                                    <mo>|</mo>
-                                    <mi>X</mi>
-                                    <mo>&#x2229;</mo>
-                                    <mi>Y</mi>
-                                    <mo>|</mo>
-                                </mrow>
-                                <mrow>
-                                    <mo>|</mo>
-                                    <mi>X</mi>
-                                    <mo>|</mo>
-                                    <mo>+</mo>
-                                    <mo>|</mo>
-                                    <mi>Y</mi>
-                                    <mo>|</mo>
-                                </mrow>
-                            </mfrac>
-                        </mstyle>
-                    </math>
-                    <br>
+                <h2 id="D" class="page-header"> D</h2>
+                <div>
+                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Dice'scher Koeffizient</h2>
+                    <div class="glossar-definition">
+                        <p>Der Dice'sche Koeffizient dient der Ähnlichkeitsberechnung zwischen der Anfrage- und
+                            Dokumentenrepräsentation im Textretrieval.</p><br>
+                        <math>
+                            <mstyle displaystyle="true">
+                                <mi>s</mi>
+                                <mo>=</mo>
+                                <mfrac>
+                                    <mrow>
+                                        <mn>2</mn>
+                                        <mo>|</mo>
+                                        <mi>X</mi>
+                                        <mo>&#x2229;</mo>
+                                        <mi>Y</mi>
+                                        <mo>|</mo>
+                                    </mrow>
+                                    <mrow>
+                                        <mo>|</mo>
+                                        <mi>X</mi>
+                                        <mo>|</mo>
+                                        <mo>+</mo>
+                                        <mo>|</mo>
+                                        <mi>Y</mi>
+                                        <mo>|</mo>
+                                    </mrow>
+                                </mfrac>
+                            </mstyle>
+                        </math>
+                        <br>
+                    </div>
                 </div>
-            </div>
-            <hr class="hr-line">
-                <h2 id="E" class="page-header">   E</h2>
+                <hr class="hr-line">
+                <h2 id="E" class="page-header"> E</h2>
                 <div>
                     <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">E-Maß</h2>
                     <div class="glossar-definition">
-                        <p>Formeldefinition <a href="glossar.html#E" target="_blank" title="Alle Glossardefinitionen zu Buchstabe E">zum E-Maß:</a></p><br>
+                        <p>Formeldefinition <a href="glossar.html#E" target="_blank"
+                                title="Alle Glossardefinitionen zu Buchstabe E">zum E-Maß:</a></p><br>
                         <math>
                             <mstyle displaystyle="true">
                                 <mi>e</mi>
@@ -357,16 +374,17 @@
                                         <mi>p</mi>
                                         <mo>×</mo>
                                         <mi>r</mi>
-                                    </mrow><mrow>
-                                    <msup>
-                                        <mi>ß</mi>
-                                        <mn>2</mn>
-                                    </msup>
-                                    <mo>×</mo>
-                                    <mi>p</mi>
-                                    <mo>+</mo>
-                                    <mi>r</mi>
-                                </mrow>
+                                    </mrow>
+                                    <mrow>
+                                        <msup>
+                                            <mi>ß</mi>
+                                            <mn>2</mn>
+                                        </msup>
+                                        <mo>×</mo>
+                                        <mi>p</mi>
+                                        <mo>+</mo>
+                                        <mi>r</mi>
+                                    </mrow>
                                 </mfrac>
                             </mstyle>
                         </math><br>
@@ -374,7 +392,7 @@
                     </div>
                 </div>
                 <hr class="hr-line">
-                <h2 id="F" class="page-header">  F</h2>
+                <h2 id="F" class="page-header"> F</h2>
                 <div>
                     <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">F-Maß</h2>
                     <div class="glossar-definition">
@@ -399,18 +417,18 @@
                                     </mfenced>
                                 </mstyle>
                             </math>
-                            <br/>
+                            <br />
                             Das F-Maß berechnet die Gesamtperformance von Recall und Precision, d.h. das F-Maß ist ein
                             kombiniertes Maß. Ein hoher F-Maß wert zeigt, dass beide Parameter gut bewertet sind.
                         </p>
                     </div>
                 </div>
-                <h2 id="G" class="page-header">   G</h2>
+                <h2 id="G" class="page-header"> G</h2>
                 <div>
                     <p class="glossar-wort tooltip-test" title="Bisher kein Eintrag">Bisher keine Einträge</p>
                 </div>
                 <hr class="hr-line">
-                <h2 id="H" class="page-header">  H</h2>
+                <h2 id="H" class="page-header"> H</h2>
                 <div>
                     <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Harmonic Sum</h2>
                     <div class="glossar-definition">
@@ -469,7 +487,7 @@
                                     </mfrac>
                                 </mstyle>
                             </math>
-                            <br/>
+                            <br />
                             Die Formel für die Harmonic Sum verhält sich ähnlich zum log(n)). Sie wird als Approximation
                             an den Logarithmus verwendet. Das bedeutet Term Gewichte werden reduziert und harmonisiert,
                             sobald sie häufiger als ein mal vorkommen.
@@ -477,21 +495,22 @@
                     </div>
                 </div>
                 <hr class="hr-line">
-                <h2 id="I" class="page-header">  I</h2>
+                <h2 id="I" class="page-header"> I</h2>
                 <div>
-                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Inverse Document Frequency (idf)</h2>
+                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Inverse Document Frequency
+                        (idf)</h2>
                     <div class="glossar-definition">
                         <p>
                             <math>
                                 <mstyle displaystyle="true">
                                     <mi>i</mi>
                                     <mi>d</mi>
-                                        <msub>
-                                            <mi>f</mi>
-                                            <mi>i</mi>
-                                        </msub>
-                                        <mo>=</mo>
-                                        <mi>log</mi>
+                                    <msub>
+                                        <mi>f</mi>
+                                        <mi>i</mi>
+                                    </msub>
+                                    <mo>=</mo>
+                                    <mi>log</mi>
                                     <mfrac>
                                         <mrow>
                                             <mi>A</mi>
@@ -533,7 +552,7 @@
                                             <mi>n</mi>
                                             <mi>e</mi>
                                             <mi>n</mi>
-                                    </mrow>
+                                        </mrow>
                                         <mrow>
                                             <mi>A</mi>
                                             <mi>n</mi>
@@ -571,7 +590,7 @@
                                     </mfrac>
                                 </mstyle>
                             </math>
-                            <br/>
+                            <br />
                             IDF beschreibt den Ausgleich der Gewichtung von häufig und seltener vorkommenden Termen.
                         </p>
                     </div>
@@ -626,23 +645,24 @@
                                     </mfrac>
                                 </mstyle>
                             </math>
-                            <br/>
-                            t = term <br/>
+                            <br />
+                            t = term <br />
                             c = collection
                         </p>
                     </div>
                 </div>
                 <hr class="hr-line">
-            <h2 id="J" class="page-header"> J</h2>
-            <div>
-                <p class="glossar-wort tooltip-test" title="Keine Formel zu J vorhanden">Bisher keine Einträge</p>
-            </div>
-            <hr class="hr-line">
-                <h2 id="K" class="page-header">  K</h2>
+                <h2 id="J" class="page-header"> J</h2>
+                <div>
+                    <p class="glossar-wort tooltip-test" title="Keine Formel zu J vorhanden">Bisher keine Einträge</p>
+                </div>
+                <hr class="hr-line">
+                <h2 id="K" class="page-header"> K</h2>
                 <div>
                     <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Kendalls Tau</h2>
                     <div class="glossar-definition">
-                        <p>Kendalls Tau ist ein Maß für den Zusammenhang zwischen den Beobachtungen zweier mindestens ordinalskalierter Merkmale. Die Formel ist dafür wie folgt:
+                        <p>Kendalls Tau ist ein Maß für den Zusammenhang zwischen den Beobachtungen zweier mindestens
+                            ordinalskalierter Merkmale. Die Formel ist dafür wie folgt:
                             <math>
                                 <mstyle displaystyle="true">
                                     <mi>&#x3C4;</mi>
@@ -680,7 +700,8 @@
                 <div>
                     <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Kullback-Leibler-Divergenz</h2>
                     <div class="glossar-definition">
-                        <p>Die KL-Divergenz bezeichnet ein Maß für die Unterschiedlichkeit zweier Wahrscheinlichkeitsverteilungen P und Q. Der Ausdruck dafür ist:
+                        <p>Die KL-Divergenz bezeichnet ein Maß für die Unterschiedlichkeit zweier
+                            Wahrscheinlichkeitsverteilungen P und Q. Der Ausdruck dafür ist:
                             <math>
                                 <mstyle displaystyle="true">
                                     <munder>
@@ -721,11 +742,13 @@
                     <p class="glossar-wort tooltip-test" title="Keine Formel zu L vorhanden">Bisher keine Einträge</p>
                 </div>
                 <hr class="hr-line">
-                <h2 id="M" class="page-header">  M</h2>
+                <h2 id="M" class="page-header"> M</h2>
                 <div>
-                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">mean Average Precision (MAP)</h2>
+                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">mean Average Precision (MAP)
+                    </h2>
                     <div class="glossar-definition">
-                        <p>Die MAP-Formel beschreibt den Mittelwert der Präzisionen einzelner Anfrage aus einer Menge an Anfragen Q:
+                        <p>Die MAP-Formel beschreibt den Mittelwert der Präzisionen einzelner Anfrage aus einer Menge an
+                            Anfragen Q:
                             <math>
                                 <mstyle displaystyle="true">
                                     <mi>M</mi>
@@ -736,7 +759,7 @@
                                     <mo>)</mo>
                                     <mo>=</mo>
                                     <mfrac>
-                                    <mn>1</mn>
+                                        <mn>1</mn>
                                         <mrow>
                                             <mo>|</mo>
                                             <mi>Q</mi>
@@ -764,102 +787,105 @@
                     </div>
                 </div>
                 <hr class="hr-line">
-                <h2 id="N" class="page-header">  N</h2>
-                    <div>
-                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">N-Gramm</h2>
-                        <div class="glossar-definition">
-                            <p>Unter N-Gramm versteht man eine Sequenz von N aufeinanderfolgenden Fragmenten/ Einheiten in einem Text. So gibt es beispielsweise Bigramme, Trigramme etc. Diese Fragmente können Buchstaben oder Phoneme sein.</p>
-                            <p>Formeldefinition:</p>
-                            <math>
-                                <mstyle displaystyle="true">
-                                    <mi>Ä</mi>
-                                    <mfenced>
-                                        <mrow>
-                                            <mi>W</mi>
-                                            <mn>1</mn>
-                                            <mo>,</mo>
-                                            <mi>W</mi>
-                                            <mn>2</mn>
-                                        </mrow>
-                                    </mfenced>
-                                    <mo>=</mo>
-                                    <mfrac>
-                                        <mrow>
-                                            <mn>2</mn>
-                                            <mo>×</mo>
-                                            <mstyle displaystyle=\"true\">
-                                                <munderover>
-                                                    <mo>∑</mo>
-                                                    <mrow>
-                                                        <mi>k</mi>
-                                                        <mo>=</mo>
-                                                        <mn>1</mn>
-                                                    </mrow>
-                                                    <mi>t</mi>
-                                                </munderover>
-                                            </mstyle>
-                                            <mo>×</mo>
-                                            <mfenced>
+                <h2 id="N" class="page-header"> N</h2>
+                <div>
+                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">N-Gramm</h2>
+                    <div class="glossar-definition">
+                        <p>Unter N-Gramm versteht man eine Sequenz von N aufeinanderfolgenden Fragmenten/ Einheiten in
+                            einem Text. So gibt es beispielsweise Bigramme, Trigramme etc. Diese Fragmente können
+                            Buchstaben oder Phoneme sein.</p>
+                        <p>Formeldefinition:</p>
+                        <math>
+                            <mstyle displaystyle="true">
+                                <mi>Ä</mi>
+                                <mfenced>
+                                    <mrow>
+                                        <mi>W</mi>
+                                        <mn>1</mn>
+                                        <mo>,</mo>
+                                        <mi>W</mi>
+                                        <mn>2</mn>
+                                    </mrow>
+                                </mfenced>
+                                <mo>=</mo>
+                                <mfrac>
+                                    <mrow>
+                                        <mn>2</mn>
+                                        <mo>×</mo>
+                                        <mstyle displaystyle=\"true\">
+                                            <munderover>
+                                                <mo>∑</mo>
                                                 <mrow>
-                                                    <mi>T</mi>
-                                                    <mi>e</mi>
-                                                    <mi>r</mi>
-                                                    <mi>m</mi>
-                                                    <mo> </mo>
-                                                    <mi>i</mi>
                                                     <mi>k</mi>
-                                                    <mo>×</mo>
-                                                    <mi>T</mi>
-                                                    <mi>e</mi>
-                                                    <mi>r</mi>
-                                                    <mi>m</mi>
-                                                    <mo> </mo>
-                                                    <mi>j</mi>
-                                                    <mi>k</mi>
+                                                    <mo>=</mo>
+                                                    <mn>1</mn>
                                                 </mrow>
-                                            </mfenced>
-                                        </mrow>
-                                        <mrow>
-                                            <mstyle displaystyle=\"true\">
-                                                <munderover>
-                                                    <mo>∑</mo>
-                                                    <mrow>
-                                                        <mi>k</mi>
-                                                        <mo>=</mo>
-                                                        <mn>1</mn>
-                                                    </mrow>
-                                                    <mi>t</mi>
-                                                </munderover>
-                                            </mstyle>
-                                            <mo>×</mo>
-                                            <mi>T</mi>
-                                            <mi>e</mi>
-                                            <mi>r</mi>
-                                            <mi>m</mi>
-                                            <mo> </mo>
-                                            <mi>i</mi>
-                                            <mi>k</mi>
-                                            <mo>+</mo>
-                                            <mi>T</mi>
-                                            <mi>e</mi>
-                                            <mi>r</mi>
-                                            <mi>m</mi>
-                                            <mo> </mo>
-                                            <mi>j</mi>
-                                            <mi>k</mi>
-                                        </mrow>
-                                    </mfrac>
-                                </mstyle>
-                            </math><br>
+                                                <mi>t</mi>
+                                            </munderover>
+                                        </mstyle>
+                                        <mo>×</mo>
+                                        <mfenced>
+                                            <mrow>
+                                                <mi>T</mi>
+                                                <mi>e</mi>
+                                                <mi>r</mi>
+                                                <mi>m</mi>
+                                                <mo> </mo>
+                                                <mi>i</mi>
+                                                <mi>k</mi>
+                                                <mo>×</mo>
+                                                <mi>T</mi>
+                                                <mi>e</mi>
+                                                <mi>r</mi>
+                                                <mi>m</mi>
+                                                <mo> </mo>
+                                                <mi>j</mi>
+                                                <mi>k</mi>
+                                            </mrow>
+                                        </mfenced>
+                                    </mrow>
+                                    <mrow>
+                                        <mstyle displaystyle=\"true\">
+                                            <munderover>
+                                                <mo>∑</mo>
+                                                <mrow>
+                                                    <mi>k</mi>
+                                                    <mo>=</mo>
+                                                    <mn>1</mn>
+                                                </mrow>
+                                                <mi>t</mi>
+                                            </munderover>
+                                        </mstyle>
+                                        <mo>×</mo>
+                                        <mi>T</mi>
+                                        <mi>e</mi>
+                                        <mi>r</mi>
+                                        <mi>m</mi>
+                                        <mo> </mo>
+                                        <mi>i</mi>
+                                        <mi>k</mi>
+                                        <mo>+</mo>
+                                        <mi>T</mi>
+                                        <mi>e</mi>
+                                        <mi>r</mi>
+                                        <mi>m</mi>
+                                        <mo> </mo>
+                                        <mi>j</mi>
+                                        <mi>k</mi>
+                                    </mrow>
+                                </mfrac>
+                            </mstyle>
+                        </math><br>
 
-                        </div>
+                    </div>
                 </div>
                 <hr class="hr-line">
-                <h2 id="O" class="page-header">  O</h2>
+                <h2 id="O" class="page-header"> O</h2>
                 <div>
                     <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Okapi BM25</h2>
                     <div class="glossar-definition">
-                        <p>Okapi BM25 ist eine Ranking-Funktion, die von Suchmaschinen verwendet wird, um die Relevanz von Dokumenten für eine bestimmte
+                        <p>Okapi BM25 ist eine Ranking-Funktion, die von Suchmaschinen verwendet wird, um die Relevanz
+                            von Dokumenten für eine bestimmte
                             Suchanfrage einzuschätzen. Die Formel lautet lautet wie folgt:
                             <math>
                                 <mstyle displaystyle="true">
@@ -913,7 +939,7 @@
                                             <mo>)</mo>
                                         </mrow>
                                         <mrow>
-                                        <mi>f</mi>
+                                            <mi>f</mi>
                                             <mo>(</mo>
                                             <msub>
                                                 <mi>q</mi>
@@ -945,7 +971,8 @@
                                                     <mi>g</mi>
                                                     <mi>d</mi>
                                                     <mi>l</mi>
-                                                </mrow></mfrac>
+                                                </mrow>
+                                            </mfrac>
                                             <mo>)</mo>
                                         </mrow>
                                     </mfrac>
@@ -955,11 +982,12 @@
                     </div>
                 </div>
                 <hr class="hr-line">
-                <h2 id="P" class="page-header">  P</h2>
+                <h2 id="P" class="page-header"> P</h2>
                 <div>
                     <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Precision</h2>
                     <div class="glossar-definition">
-                        <p>Formeldefinition <a href="glossar.html#P" target="_blank" title="Alle Glossardefinitionen zu Buchstabe P">zu Precision:</a></p><br>
+                        <p>Formeldefinition <a href="glossar.html#P" target="_blank"
+                                title="Alle Glossardefinitionen zu Buchstabe P">zu Precision:</a></p><br>
                         <math>
                             <mstyle displaystyle="true">
                                 <mi>p</mi>
@@ -979,120 +1007,124 @@
                 <hr class="hr-line">
                 <h2 id="Q" class="page-header"> Q</h2>
                 <div>
-                 <p class="glossar-wort tooltip-test" title="Keine Formel zu Q vorhanden">Bisher keine Einträge</p>
+                    <p class="glossar-wort tooltip-test" title="Keine Formel zu Q vorhanden">Bisher keine Einträge</p>
                 </div>
                 <hr class="hr-line">
-                <h2 id="R" class="page-header">  R</h2>
+                <h2 id="R" class="page-header"> R</h2>
                 <div>
                     <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Recall</h2>
                     <div class="glossar-definition">
-                        <p>Formeldefinition <a href="glossar.html#R" target="_blank" title="Alle Glossardefinitionen zu Buchstabe R">zu Recall:</a></p><br>
+                        <p>Formeldefinition <a href="glossar.html#R" target="_blank"
+                                title="Alle Glossardefinitionen zu Buchstabe R">zu Recall:</a></p><br>
                         <math>
                             <mstyle displaystyle="true">
-                            <mi>r</mi>
-                            <mo>=</mo>
-                            <mfrac><mi>a</mi>
-                                <mrow>
+                                <mi>r</mi>
+                                <mo>=</mo>
+                                <mfrac>
                                     <mi>a</mi>
-                                    <mo>+</mo>
-                                    <mi>c</mi>
-                                </mrow>
-                            </mfrac>
+                                    <mrow>
+                                        <mi>a</mi>
+                                        <mo>+</mo>
+                                        <mi>c</mi>
+                                    </mrow>
+                                </mfrac>
                             </mstyle>
                         </math>
                         <br>
                     </div>
                 </div>
                 <hr class="hr-line">
-            <div>
-                <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Rocchio Algorithmus</h2>
-                <div class="glossar-definition">
-                    <p>Die übliche Relevance Feedback Methode ist die von Rocchio (Rocchio 1971),
-                        die in Verbindung mit dem <a href="formelsammlung.html#V"
-                                                     title="Alle Glossardefinitionen zu Buchstabe V">Vektor-Raum-Modell</a>
-                        genutzt wird.
-                        <br>
-                        <math>
-                            <mstyle displaystyle="true">
-                                <msub>
-                                    <mi>Q</mi>
-                                    <mn>1</mn>
-                                </msub>
-                                <mo>=</mo>
-                                <msub>
-                                    <mi>Q</mi>
-                                    <mn>0</mn>
-                                </msub>
-                                <mo>+</mo>
-                                <mi>&#x3B2;</mi>
-                                <munderover>
-                                    <mo>&#x2211;</mo>
-                                    <mrow>
-                                        <mi>i</mi>
-                                        <mo>=</mo>
-                                        <mn>1</mn>
-                                    </mrow>
+                <div>
+                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Rocchio Algorithmus</h2>
+                    <div class="glossar-definition">
+                        <p>Die übliche Relevance Feedback Methode ist die von Rocchio (Rocchio 1971),
+                            die in Verbindung mit dem <a href="formelsammlung.html#V"
+                                title="Alle Glossardefinitionen zu Buchstabe V">Vektor-Raum-Modell</a>
+                            genutzt wird.
+                            <br>
+                            <math>
+                                <mstyle displaystyle="true">
                                     <msub>
-                                        <mi>n</mi>
+                                        <mi>Q</mi>
                                         <mn>1</mn>
                                     </msub>
-                                </munderover>
-                                <mfrac>
+                                    <mo>=</mo>
                                     <msub>
-                                        <mi>R</mi>
-                                        <mi>i</mi>
+                                        <mi>Q</mi>
+                                        <mn>0</mn>
                                     </msub>
-                                    <msub>
-                                        <mi>n</mi>
-                                        <mi>i</mi>
-                                    </msub>
-                                </mfrac>
-                                <mo>-</mo>
-                                <mi>&#x3B3;</mi>
-                                <munderover>
-                                    <mo>&#x2211;</mo>
-                                    <mrow>
-                                        <mi>i</mi>
-                                        <mo>=</mo>
-                                        <mn>1</mn>
-                                    </mrow>
-                                    <msub>
-                                        <mi>n</mi>
-                                        <mn>2</mn>
-                                    </msub>
-                                </munderover>
-                                <mfrac>
-                                    <msub>
-                                        <mi>S</mi>
-                                        <mi>i</mi>
-                                    </msub>
-                                    <msub>
-                                        <mi>n</mi>
-                                        <mn>2</mn>
-                                    </msub>
-                                </mfrac>
-                            </mstyle>
-                        </math>
-                        <br/>
-                        wobei: Q1 = der Vektor der optimierten Suchanfrage <br/>
-                        Q0 = der Vektor der ursprünglichen Sugachanfrage <br/>
-                        Ri = der Vektor des relevanten Dokuments i<br/>
-                        Si = der Vektor des nicht relevanten Dokuments i<br/>
-                        n1 = Anzahl der als relevant bewerteten Dokumente<br/>
-                        n2 = Anzahl der als nicht relevant bewerteten Dokumente<br/>
-                        &beta; und &gamma; bestimmen die Gewichtung von relevanten und nicht relevanten Termen;
-                        die Werte sind nach eigenem Ermessen zu setzen. Studien zufolge werden sie am besten auf &beta;=
-                        0,75
-                        und &gamma;= 0,25 gesetzt.
-                    </p>
+                                    <mo>+</mo>
+                                    <mi>&#x3B2;</mi>
+                                    <munderover>
+                                        <mo>&#x2211;</mo>
+                                        <mrow>
+                                            <mi>i</mi>
+                                            <mo>=</mo>
+                                            <mn>1</mn>
+                                        </mrow>
+                                        <msub>
+                                            <mi>n</mi>
+                                            <mn>1</mn>
+                                        </msub>
+                                    </munderover>
+                                    <mfrac>
+                                        <msub>
+                                            <mi>R</mi>
+                                            <mi>i</mi>
+                                        </msub>
+                                        <msub>
+                                            <mi>n</mi>
+                                            <mi>i</mi>
+                                        </msub>
+                                    </mfrac>
+                                    <mo>-</mo>
+                                    <mi>&#x3B3;</mi>
+                                    <munderover>
+                                        <mo>&#x2211;</mo>
+                                        <mrow>
+                                            <mi>i</mi>
+                                            <mo>=</mo>
+                                            <mn>1</mn>
+                                        </mrow>
+                                        <msub>
+                                            <mi>n</mi>
+                                            <mn>2</mn>
+                                        </msub>
+                                    </munderover>
+                                    <mfrac>
+                                        <msub>
+                                            <mi>S</mi>
+                                            <mi>i</mi>
+                                        </msub>
+                                        <msub>
+                                            <mi>n</mi>
+                                            <mn>2</mn>
+                                        </msub>
+                                    </mfrac>
+                                </mstyle>
+                            </math>
+                            <br />
+                            wobei: Q1 = der Vektor der optimierten Suchanfrage <br />
+                            Q0 = der Vektor der ursprünglichen Sugachanfrage <br />
+                            Ri = der Vektor des relevanten Dokuments i<br />
+                            Si = der Vektor des nicht relevanten Dokuments i<br />
+                            n1 = Anzahl der als relevant bewerteten Dokumente<br />
+                            n2 = Anzahl der als nicht relevant bewerteten Dokumente<br />
+                            &beta; und &gamma; bestimmen die Gewichtung von relevanten und nicht relevanten Termen;
+                            die Werte sind nach eigenem Ermessen zu setzen. Studien zufolge werden sie am besten auf
+                            &beta;=
+                            0,75
+                            und &gamma;= 0,25 gesetzt.
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <hr class="hr-line">
-                <h2 id="S" class="page-header">  S</h2>
+                <hr class="hr-line">
+                <h2 id="S" class="page-header"> S</h2>
                 <div>
                     <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Stichprobenvarianz</h2>
                     <div class="glossar-definition">
-                        <p>Unter der Stichprobenvarianz versteht man die durchschnittliche quadratische Abweichung der Beobachtungswerte von ihrem Mittelwert.</p><br>
+                        <p>Unter der Stichprobenvarianz versteht man die durchschnittliche quadratische Abweichung der
+                            Beobachtungswerte von ihrem Mittelwert.</p><br>
                         <math>
                             <mstyle displaystyle="true">
                                 <msup>
@@ -1102,7 +1134,8 @@
                                 <mo>=</mo>
                                 <mo>&#xA0;</mo>
                                 <mfrac>
-                                    <mrow><mo>&#x2211;</mo>
+                                    <mrow>
+                                        <mo>&#x2211;</mo>
                                         <msup>
                                             <mfenced>
                                                 <mrow>
@@ -1131,84 +1164,86 @@
                     </div>
                 </div>
                 <hr class="hr-line">
-                <h2 id="T" class="page-header">  T</h2>
-            <div>
-                <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">TF</h2>
-                <div class="glossar-definition">
-                    <p>Die Term Frequency beschreibt wie oft ein Term t in Dokument d vorkommt. Die Term Frequency ist
-                        die Grundlage für weitere Berechnungen im Information Retrieval, wie etwa des <a
-                                href="formelsammlung.html#T"
-                                title="Alle Glossardefinitionen zu Buchstabe T">TF-IDF</a>.
+                <h2 id="T" class="page-header"> T</h2>
+                <div>
+                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">TF</h2>
+                    <div class="glossar-definition">
+                        <p>Die Term Frequency beschreibt wie oft ein Term t in Dokument d vorkommt. Die Term Frequency
+                            ist
+                            die Grundlage für weitere Berechnungen im Information Retrieval, wie etwa des <a
+                                href="formelsammlung.html#T" title="Alle Glossardefinitionen zu Buchstabe T">TF-IDF</a>.
+                            <br>
+                            <math>
+                                <mstyle displaystyle="true">
+                                    <mi>t</mi>
+                                    <mi>f</mi>
+                                    <mfenced>
+                                        <mrow>
+                                            <mi>t</mi>
+                                            <mo>,</mo>
+                                            <mi>d</mi>
+                                        </mrow>
+                                    </mfenced>
+                                    <mo>=</mo>
+                                    <mfrac>
+                                        <mrow>
+                                            <mi>A</mi>
+                                            <mi>n</mi>
+                                            <mi>z</mi>
+                                            <mi>a</mi>
+                                            <mi>h</mi>
+                                            <mi>l</mi>
+                                            <mo>&#xA0;</mo>
+                                            <mi>v</mi>
+                                            <mi>o</mi>
+                                            <mi>n</mi>
+                                            <mo>&#xA0;</mo>
+                                            <mi>t</mi>
+                                            <mo>&#xA0;</mo>
+                                            <mi>i</mi>
+                                            <mi>n</mi>
+                                            <mo>&#xA0;</mo>
+                                            <mi>d</mi>
+                                        </mrow>
+                                        <mrow>
+                                            <mi>A</mi>
+                                            <mi>n</mi>
+                                            <mi>z</mi>
+                                            <mi>a</mi>
+                                            <mi>h</mi>
+                                            <mi>l</mi>
+                                            <mo>&#xA0;</mo>
+                                            <mi>d</mi>
+                                            <mi>e</mi>
+                                            <mi>r</mi>
+                                            <mo>&#xA0;</mo>
+                                            <mi>W</mi>
+                                            <mi>&#xF6;</mi>
+                                            <mi>r</mi>
+                                            <mi>t</mi>
+                                            <mi>e</mi>
+                                            <mi>r</mi>
+                                            <mo>&#xA0;</mo>
+                                            <mi>i</mi>
+                                            <mi>n</mi>
+                                            <mo>&#xA0;</mo>
+                                            <mi>d</mi>
+                                        </mrow>
+                                    </mfrac>
+                                </mstyle>
+                            </math>
+                        </p>
                         <br>
-                        <math>
-                            <mstyle displaystyle="true">
-                                <mi>t</mi>
-                                <mi>f</mi>
-                                <mfenced>
-                                    <mrow>
-                                        <mi>t</mi>
-                                        <mo>,</mo>
-                                        <mi>d</mi>
-                                    </mrow>
-                                </mfenced>
-                                <mo>=</mo>
-                                <mfrac>
-                                    <mrow>
-                                        <mi>A</mi>
-                                        <mi>n</mi>
-                                        <mi>z</mi>
-                                        <mi>a</mi>
-                                        <mi>h</mi>
-                                        <mi>l</mi>
-                                        <mo>&#xA0;</mo>
-                                        <mi>v</mi>
-                                        <mi>o</mi>
-                                        <mi>n</mi>
-                                        <mo>&#xA0;</mo>
-                                        <mi>t</mi>
-                                        <mo>&#xA0;</mo>
-                                        <mi>i</mi>
-                                        <mi>n</mi>
-                                        <mo>&#xA0;</mo>
-                                        <mi>d</mi>
-                                    </mrow>
-                                    <mrow>
-                                        <mi>A</mi>
-                                        <mi>n</mi>
-                                        <mi>z</mi>
-                                        <mi>a</mi>
-                                        <mi>h</mi>
-                                        <mi>l</mi>
-                                        <mo>&#xA0;</mo>
-                                        <mi>d</mi>
-                                        <mi>e</mi>
-                                        <mi>r</mi>
-                                        <mo>&#xA0;</mo>
-                                        <mi>W</mi>
-                                        <mi>&#xF6;</mi>
-                                        <mi>r</mi>
-                                        <mi>t</mi>
-                                        <mi>e</mi>
-                                        <mi>r</mi>
-                                        <mo>&#xA0;</mo>
-                                        <mi>i</mi>
-                                        <mi>n</mi>
-                                        <mo>&#xA0;</mo>
-                                        <mi>d</mi>
-                                    </mrow>
-                                </mfrac>
-                            </mstyle>
-                        </math>
-                    </p>
-                    <br>
+                    </div>
                 </div>
-            </div>
-            <hr class="hr-line">
+                <hr class="hr-line">
                 <div>
                     <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">TF-IDF</h2>
                     <div class="glossar-definition">
-                        <p>Term frequency-inverse document frequency (tf-idf) gewichtet das Wort, das sehr selten vorkommt, d.h. es erfasst die Einzigartigkeit.</p><br>
-                        <p>Es ist das Vorkommen eines Wortes in einem einzigen Dokument, aber im gesamten Korpus.</p><br>
+                        <p>Term frequency-inverse document frequency (tf-idf) gewichtet das Wort, das sehr selten
+                            vorkommt, d.h. es erfasst die Einzigartigkeit.</p><br>
+                        <p>Es ist das Vorkommen eines Wortes in einem einzigen Dokument, aber im gesamten Korpus.</p>
+                        <br>
                         <math>
                             <mstyle displaystyle="true">
                                 <msub>
@@ -1255,33 +1290,49 @@
                     </div>
                 </div>
                 <hr class="hr-line">
-                 <h2 id="U" class="page-header"> U</h2>
+                <h2 id="U" class="page-header"> U</h2>
                 <div>
                     <p class="glossar-wort tooltip-test" title="Keine Formel zu U vorhanden">Bisher keine Einträge</p>
                 </div>
                 <hr class="hr-line">
-                <h2 id="V" class="page-header">  V</h2>
+                <h2 id="V" class="page-header"> V</h2>
                 <div>
                     <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Vektorraum-Modell</h2>
                     <div class="glossar-definition">
-                        <p>Das Vektorraum-Retrieval (engl.: Vector Space Model (VSM)) ist ein Verfahren zur Informationsbeschaffung bei dem die Informationen als Punkte in einem hochdimensionalen, metrischen Vektorraum repräsentiert werden. Zur Auswertung wird die mathematische Distanz zwischen dem Suchvektor und dem Dokument-/Informationsvektor verwendet
-                            Sei T={t<sub>1</sub>,...,t<sub>n</sub>} eine endliche Menge von Termen und D={d<sub>1</sub>,...,d<sub>m</sub>} eine Menge von Dokumenten. Für jedes Dokument d<sub>i</sub> in D sei zu jedem Term t<sub>k</sub> in T ein reelles Gewicht w<sub>i,k</sub> gegeben. Die Gewichte des Dokuments d<sub>i</sub> lassen sich zu einem Vektor w<sub>i</sub>=(w<sub>i,1</sub>,...,w<sub>i,n</sub>) im R<sup>n</sup> zusammenfassen. Dieser Vektor beschreibt das Dokument im Vektorraummodell: Er ist seine Repräsentation und wird Dokumentvektor genannt.
-                            Auch Anfragen (Queries ) werden durch Vektoren q in R<sup>n</sup> repräsentiert. Wie bei der Repräsentation der Dokumente wird die Anfrage durch eine Menge gewichteter Terme dargestellt. Der Vektor der Gewichte wird Anfragevektor oder Query-Vektor genannt.
-                            Schließlich sei eine Ähnlichkeitsfunktion s:R<sup>n</sup>&times; R<sup>n</sup> ->R definiert, mit der jedem Paar aus zwei Vektoren x,y aus R<sup>n</sup> ein reeller Ähnlichkeitswert s(x,y) zugewiesen wird.
+                        <p>Das Vektorraum-Retrieval (engl.: Vector Space Model (VSM)) ist ein Verfahren zur
+                            Informationsbeschaffung bei dem die Informationen als Punkte in einem hochdimensionalen,
+                            metrischen Vektorraum repräsentiert werden. Zur Auswertung wird die mathematische Distanz
+                            zwischen dem Suchvektor und dem Dokument-/Informationsvektor verwendet
+                            Sei T={t<sub>1</sub>,...,t<sub>n</sub>} eine endliche Menge von Termen und
+                            D={d<sub>1</sub>,...,d<sub>m</sub>} eine Menge von Dokumenten. Für jedes Dokument
+                            d<sub>i</sub> in D sei zu jedem Term t<sub>k</sub> in T ein reelles Gewicht w<sub>i,k</sub>
+                            gegeben. Die Gewichte des Dokuments d<sub>i</sub> lassen sich zu einem Vektor
+                            w<sub>i</sub>=(w<sub>i,1</sub>,...,w<sub>i,n</sub>) im R<sup>n</sup> zusammenfassen. Dieser
+                            Vektor beschreibt das Dokument im Vektorraummodell: Er ist seine Repräsentation und wird
+                            Dokumentvektor genannt.
+                            Auch Anfragen (Queries ) werden durch Vektoren q in R<sup>n</sup> repräsentiert. Wie bei der
+                            Repräsentation der Dokumente wird die Anfrage durch eine Menge gewichteter Terme
+                            dargestellt. Der Vektor der Gewichte wird Anfragevektor oder Query-Vektor genannt.
+                            Schließlich sei eine Ähnlichkeitsfunktion s:R<sup>n</sup>&times; R<sup>n</sup> ->R
+                            definiert, mit der jedem Paar aus zwei Vektoren x,y aus R<sup>n</sup> ein reeller
+                            Ähnlichkeitswert s(x,y) zugewiesen wird.
 
                         </p>
                     </div>
                 </div>
                 <hr class="hr-line">
-                <h2 id="W" class="page-header">  W</h2>
+                <h2 id="W" class="page-header"> W</h2>
                 <div>
                     <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Wahrscheinlichkeit</h2>
                     <div class="glossar-definition">
-                        <p>Die Wahrscheinlichkeit (auf Englisch probability) ist also ein Maß, das bestimmt wie sehr erwartet wird, dass genau dieses Ereignis eintritt.</p><br>
+                        <p>Die Wahrscheinlichkeit (auf Englisch probability) ist also ein Maß, das bestimmt wie sehr
+                            erwartet wird, dass genau dieses Ereignis eintritt.</p><br>
                         <math>
                             <mstyle displaystyle="true">
                                 <mi>P</mi>
-                                <mfenced><mi>E</mi></mfenced>
+                                <mfenced>
+                                    <mi>E</mi>
+                                </mfenced>
                                 <mo>&#xA0;</mo>
                                 <mo>=</mo>
                                 <mo>&#xA0;</mo>
@@ -1294,22 +1345,23 @@
                     </div>
                 </div>
 
-            <hr class="hr-line">
-            <h2 id="X" class="page-header"> X</h2>
-            <div>
-                <p class="glossar-wort tooltip-test" title="Keine Formel zu X vorhanden">Bisher keine Einträge</p>
-            </div>
-            <hr class="hr-line">
-            <h2 id="Y" class="page-header"> Y</h2>
-            <div>
-                <p class="glossar-wort tooltip-test" title="Keine Formel zu Y vorhanden">Bisher keine Einträge</p>
-            </div>
-            <hr class="hr-line">
-                <h2 id="Z" class="page-header">  Z</h2>
+                <hr class="hr-line">
+                <h2 id="X" class="page-header"> X</h2>
+                <div>
+                    <p class="glossar-wort tooltip-test" title="Keine Formel zu X vorhanden">Bisher keine Einträge</p>
+                </div>
+                <hr class="hr-line">
+                <h2 id="Y" class="page-header"> Y</h2>
+                <div>
+                    <p class="glossar-wort tooltip-test" title="Keine Formel zu Y vorhanden">Bisher keine Einträge</p>
+                </div>
+                <hr class="hr-line">
+                <h2 id="Z" class="page-header"> Z</h2>
                 <div>
                     <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Zipf's Law</h2>
                     <div class="glossar-definition">
-                        <p>Das Zipfsche Gesetz ist ein Modell, mit dessen Hilfe man bei bestimmten Größen, die in eine Rangfolge gebracht werden, deren Wert aus ihrem Rang abschätzen kann.</p><br>
+                        <p>Das Zipfsche Gesetz ist ein Modell, mit dessen Hilfe man bei bestimmten Größen, die in eine
+                            Rangfolge gebracht werden, deren Wert aus ihrem Rang abschätzen kann.</p><br>
                         <math>
                             <mstyle displaystyle="true">
                                 <mi>F</mi>
@@ -1332,19 +1384,19 @@
                                     </mrow>
                                 </mfrac>
                                 <mo>&#xA0;</mo>
-                                <mspace linebreak=\"newline\"/>
-                                    <mspace linebreak=\"newline\"/>
-                                        <mi>a</mi>
-                                        <mo>&#xA0;</mo>
-                                        <mo>&#x2248;</mo>
-                                        <mn>1</mn>
-                                        <mo>,</mo>
-                                        <mo>&#xA0;</mo>
-                                        <mi>C</mi>
-                                        <mo>&#x2248;</mo>
-                                        <mn>0</mn>
-                                        <mo>,</mo>
-                                        <mn>1</mn>
+                                <mspace linebreak=\"newline\" />
+                                <mspace linebreak=\"newline\" />
+                                <mi>a</mi>
+                                <mo>&#xA0;</mo>
+                                <mo>&#x2248;</mo>
+                                <mn>1</mn>
+                                <mo>,</mo>
+                                <mo>&#xA0;</mo>
+                                <mi>C</mi>
+                                <mo>&#x2248;</mo>
+                                <mn>0</mn>
+                                <mo>,</mo>
+                                <mn>1</mn>
                             </mstyle>
                         </math>
                     </div>
@@ -1361,15 +1413,15 @@
                 <li><a href="#A" title="Bisher keine Formel zu A">A</a></li>
                 <li><a href="#B" title="Bisher keine Formel zu B">B</a></li>
                 <li><a href="#C" title="Zu Formeln mit C">C</a></li>
-                <li><a href="#D" title="Zu Formeln mit D">D</a></li>  
-                <li><a href="#E" title="Zu Formeln mit E">E</a></li>  
-                <li><a href="#F" title="Zu Formeln mit F">F</a></li>  
-                <li><a href="#G" title="Bisher keine Formel zu G">G</a></li>  
-                <li><a href="#H" title="Zu Formeln mit H">H</a></li>  
-                <li><a href="#I" title="Zu Formeln mit I">I</a></li>  
-                <li><a href="#J" title="Bisher keine Formel zu J">J</a></li>  
-                <li><a href="#K" title="Zu Formeln mit K">K</a></li>  
-                <li><a href="#L" title="Bisher keine Formel zu L">L</a></li>  
+                <li><a href="#D" title="Zu Formeln mit D">D</a></li>
+                <li><a href="#E" title="Zu Formeln mit E">E</a></li>
+                <li><a href="#F" title="Zu Formeln mit F">F</a></li>
+                <li><a href="#G" title="Bisher keine Formel zu G">G</a></li>
+                <li><a href="#H" title="Zu Formeln mit H">H</a></li>
+                <li><a href="#I" title="Zu Formeln mit I">I</a></li>
+                <li><a href="#J" title="Bisher keine Formel zu J">J</a></li>
+                <li><a href="#K" title="Zu Formeln mit K">K</a></li>
+                <li><a href="#L" title="Bisher keine Formel zu L">L</a></li>
                 <li><a href="#M" title="Zu Formeln mit M">M</a></li>
                 <li><a href="#N" title="Zu Formeln mit N">N</a></li>
                 <li><a href="#O" title="Zu Formeln mit O">O</a></li>
@@ -1387,10 +1439,11 @@
             </ul>
         </footer>
     </div>
-</div>
-<!--Hier Verbindung zu unserer JS Datei-->
-<script type="text/javascript" src="fmsglo.js"></script>
+    </div>
+    <!--Hier Verbindung zu unserer JS Datei-->
+    <script type="text/javascript" src="fmsglo.js"></script>
 </body>
 <!--Hier Verbindung zum static Ordner zu Bootstrap Elementen, da keine CDN-->
 <script src="../static/js/bootstrap.bundle.js"></script>
+
 </html>
