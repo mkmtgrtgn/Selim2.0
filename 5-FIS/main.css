@@ -78,6 +78,71 @@ Hier wollte er die Farbe sonst nicht ändern
 
 }
 
+#content {
+    background-color: var(--hintergrund);
+    padding:16px;
+    border:solid rgba(128, 128, 128, 0.42);
+    border-radius: 16px;
+    box-shadow: 5px 3px 6px 1px rgba(112,128,144,0.82);
+    margin:4vh 5vw;
+    display:block;
+    overflow:auto;
+    min-height:42vh;
+}
+
+.bg:hover {
+    background-image: linear-gradient(180deg, var(--hauptfarbe), var(--hintergrund));
+
+}
+
+.kleine_ueber {
+    font-weight: 600;
+}
+
+p {
+    margin:1vw;
+}
+
+.fragenblock {
+    border: dotted var(--hauptfarbe)  4px;
+    padding:1vw;
+
+}
+
+.antworten {
+    padding:4px;
+    display:flex;
+    flex-direction: column;
+}
+
+.antwort {
+    margin: 1vw;
+    border-radius: 6px;
+    background-color:rgba(255, 255, 255, 0.8);
+}
+
+.sql-answer {
+    padding: 12px;
+    font-size: 18px;
+}
+
+.hide {
+    display: none;
+}
+
+#correctStatement {
+    background-color: #53c553;
+}
+
+.right-background-color {
+    background-color: #53c553;
+}
+
+div.center {
+    text-align: center;
+  }
+
+/* Formatierung der Abbildungen */
 #anwendung-boolescher-logik-bild {
     height: auto;
     width: auto\9;
@@ -165,67 +230,7 @@ Hier wollte er die Farbe sonst nicht ändern
     }
 }
 
-#content {
-    background-color: var(--hintergrund);
-    padding:16px;
-    border:solid rgba(128, 128, 128, 0.42);
-    border-radius: 16px;
-    box-shadow: 5px 3px 6px 1px rgba(112,128,144,0.82);
-    margin:4vh 5vw;
-    display:block;
-    overflow:auto;
-    min-height:42vh;
-}
-
-.bg:hover {
-    background-image: linear-gradient(180deg, var(--hauptfarbe), var(--hintergrund));
-
-}
-
-.kleine_ueber {
-    font-weight: 600;
-}
-
-p {
-    margin:1vw;
-}
-
-.fragenblock {
-    border: dotted var(--hauptfarbe)  4px;
-    padding:1vw;
-
-}
-
-.antworten {
-    padding:4px;
-    display:flex;
-    flex-direction: column;
-}
-.antwort {
-    margin: 1vw;
-    border-radius: 6px;
-    background-color:rgba(255, 255, 255, 0.8);
-}
-
-.sql-answer {
-    padding: 12px;
-    font-size: 18px;
-}
-
-.hide {
-    display: none;
-}
-
-#correctStatement {
-    background-color: #53c553;
-}
-
-.right-background-color {
-    background-color: #53c553;
-}
-
 /* Formatierung des Abschlussquizzes nach dem Template von Gruppe 7*/
-
 #quiz {
     display:none;
 }
@@ -282,6 +287,21 @@ p {
     font-size:xx-large;
 }
 
+/* Code Schriftfarbe */
+code {
+	color: #0186BC;
+}
+
+/* Code Formatierung beim Aufgabentyp Listenauswahl */
+.list-code {
+    line-height: 300%;
+}
+
+/* Code Farbe auf Buttons beim Aufgabentyp Single Choice */
+.sc-code {
+    color: #232B2B;
+}
+
 /* Hervorhebung richtiger und falscher Antworten beim Aufgabentyp Listenauswahl */
 .list-correct {
     color: #fff;
@@ -295,17 +315,7 @@ p {
     background-color: #dc3545;
 }
 
-/* Code Formatierung beim Aufgabentyp Listenauswahl */
-.list-code {
-    line-height: 300%;
-}
-
-/* Code Farbe auf Buttons beim Aufgabentyp Single Choice */
-.sc-code {
-    color: #232B2B;
-}
-
-/* Klasse zur Hervorhebung richtiger Antworten */
+/* Klasse zur Hervorhebung richtiger Antworten bei Text mit Klick */
 .correct {
 	color: #008000;
 	border: 1px solid 008000;
@@ -313,68 +323,14 @@ p {
 
 }
 
-/* Klasse zur Hervorhebung falscher Antworten */
+/* Klasse zur Hervorhebung falscher Antworten bei Text mit Klick */
 .wrong {
 	color: #FF0000;
 	border: 1px solid FF0000;
 	background-color: FF0000;
 }
-/* Venn Diagramm */
-.VenContainer {
-	background-color: #cccccc;
-}
-.vennDiagramm1 {
-	background-color: yellow;
-	border-radius: 50% 0 0 50%;
-}
-.vennDiagramm2 {
-	background-color: #008000;
-}
-.vennDiagramm3 {
-	background-color: blue;
-	border-radius: 0 50% 50% 0;
-}
-.glossar .panel {
-	margin-bottom: 0;
-}
 
-.buttonsLGAnsicht a {
-	margin-right: 5px;
-}
-/* Drag & Drop Tabelle */
-.fixed-td-width td {
-	width: 33%;
-	height: 70px;
-}
-
-@media(max-width: 768px) {
-	.fixed-td-width td {
-		width: 33%;
-		height: 100px;
-	}
-}
-
-.draggable {
-	cursor: move;
-}
-
-code {
-	color: #0186BC;
-}
-
-hr {
-	border-top: 1px solid #000;
-}
-
-.aufgabe2 {
-	margin-top: 50px;
-}
-
-#lueckentext>.selects {
-	display: inline;
-	width: auto;
-}
-
+/* Formatierung Text mit Klick Aufgaben */
 .marked {
 	background-color: #0186BC;
 }
@@ -383,9 +339,5 @@ hr {
 	cursor: pointer;
 }
 
-.mbs {
-	margin-bottom: 10px;
-}
-div.center {
-    text-align: center;
-  }
+
+
