@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS und JS Bundle -->
+    <link href="../../../static/css/bootstrap.css" rel="stylesheet">
+    <link href="../../main.css" rel="stylesheet">
+
+    <!-- Der Font muss noch importiert werden -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;600;700&display=swap" rel="stylesheet">
+    <title>Selim 2.0</title>
+
+    <!-- Boostrap Icon Library -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">   
+
+</head>
+
+<body>
+
+    <div class="navi">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon navbar-light"></span>
+                </button>
+                <!-- Navbar Brand: Logo der Uni Hildesheim-->
+                <a class="navbar-brand" href="../../../home.html">
+                    <span class="d-none d-sm-block">
+                        <img class="d-inline-block align-text-center" src="../../uni_logo.png" width="70" height="70"
+                            alt="Universität Hildesheim" style="padding-right: 20;">
+                    </span>
+                    <span class="d-sm-none">SELiM</span>
+                </a>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <!-- Disabled Link: Modul Information -->
+                        <li class="nav-item">
+                            <a class="nav-linkd disabled" href="#" tabindex="-1" aria-disabled="true">SELiM - FIS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-linki active" aria-current="page" href="../../../home.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-linki dropdown-toggle" href="#" id="navDrop1" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Module
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navDrop1">
+                                <li><a class="dropdown-item bg" href="../../../1-GDI/gdi.html">GDI</a></li>
+                                <li><a class="dropdown-item bg" href="../../../2-IR1/ir1.html">IR1</a></li>
+                                <li><a class="dropdown-item bg" href="../../../3-IR2/ir2.html">IR2</a></li>
+                                <li><a class="dropdown-item bg" href="../../../4-IR3/ir3.html">IR3</a></li>
+                                <li><a class="dropdown-item bg" href="../../../5-FIS/inhaltsverzeichnis.html">FIS</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-linki active" aria-current="page"
+                                href="../../../6-CSS-GLOSSAR-FRMLS/glossar.html">Glossar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-linki active" aria-current="page"
+                                href="../../../6-CSS-GLOSSAR-FRMLS/formelsammlung.html">Formelsammlung</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div id="content">
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>Aufgabe 2: ERM Kardinalitäten</h2>
+                    <p><em>Eine Bibliothek soll um eine Mediothek erweitert werden und benötigt ein
+                            <u>Informationssystem</u> für den Verleih von <u>Videofilmen</u>. Mit
+                            diesem sollen Informationen über <u>Verleih und Vormerkungen</u> der
+                            Videofilme verwaltet werden. Des Weiteren besteht die Möglichkeit, 
+                            <u>Strafen für verspätete Rückgaben</u> zu verlangen.</em></p>
+                    <p><em>Bestimme die <u>Kardinalitäten</u> zwischen den Objekttypen, indem du diese
+                        auswählst:</em></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <picture>
+                        <img id="listenauswahl-erm-abbildung" src="listenauswahl-aufgabe2-ERM.svg" class="img-fluid mx-auto d-block"
+                            alt="Entity-Relationship-Modell Videofilmverleih" />
+                    </picture>
+                </div>
+            </div>
+
+            <div class="row mt-2 mb-5 justify-content-center text-center">
+                <div class="col-md-2">
+                    <p>Feld 1</p>
+                    <select class="form-control-sm selects">
+                        <option value="default" selected> </option>
+                        <option value="0">1</option>
+                        <option value="1">n</option>
+                        <option value="2">m</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <p>Feld 2</p>
+                    <select class="form-control-sm selects">
+                        <option value="default" selected> </option>
+                        <option value="1">1</option>
+                        <option value="0">n</option>
+                        <option value="2">m</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <p>Feld 3</p>
+                    <select class="form-control-sm selects">
+                        <option value="default" selected> </option>
+                        <option value="0">1</option>
+                        <option value="1">n</option>
+                        <option value="2">m</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <p>Feld 4</p>
+                    <select class="form-control-sm selects">
+                        <option value="default" selected> </option>
+                        <option value="1">1</option>
+                        <option value="0">n</option>
+                        <option value="2">m</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <p>Feld 5</p>
+                    <select class="form-control-sm selects">
+                        <option value="default" selected> </option>
+                        <option value="1">1</option>
+                        <option value="0">n</option>
+                        <option value="2">m</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <p>Feld 6</p>
+                    <select class="form-control-sm selects">
+                        <option value="default" selected> </option>
+                        <option value="0">1</option>
+                        <option value="1">n</option>
+                        <option value="2">m</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row mt-5 pt-3">
+                <div class="col">
+                    <p><button type="button" class="btn btn-primary float-end"
+                            onClick="checkSelects()">Überprüfen</button></p>
+                    <p><button type="button" class="btn btn-primary float-end"
+                            onClick="resetSelects()">Zurücksetzen</button></p>
+                </div>
+            </div>
+
+            <!--Seitennavigation-->
+            <div class="row mt-5 justify-content-center">
+                <div class="col-lg-8 col-lg-offset-3 text-center">
+                    <div class="page-pick">
+                        <div class="btn-group dropup">
+                            <a class="btn btn-light text-left btn-lg" href="../text-mit-klick/text-mit-klick.html" role="button">
+                                <span class="d-none d-lg-block"><i class="bi bi-arrow-left-circle-fill"></i></span>
+                                <span class="d-lg-none"><i class="bi bi-arrow-left-circle-fill"></i></span>
+                            </a>
+                            <button type="button" class="btn btn-light btn-lg" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <span class="d-none d-md-block">9. Aufgabe 2: ERM Kardinaliäten <i
+                                        class="bi bi-chevron-compact-up"></i></span>
+                                <span class="d-md-none">Seite 9 <i class="bi bi-chevron-compact-up"></i></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="../../Inhaltsseiten/s2-einordnung-des-themas.html">
+                                        <span class="d-none d-md-block">1. FIS: Einordnung des Themas</span>
+                                        <span class="d-md-none">Seite 1</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="../../Inhaltsseiten/s4-begriffszusammenhaenge.html">
+                                        <span class="d-none d-md-block">2. Begriffszusammenhänge: FIS</span>
+                                        <span class="d-md-none">Seite 2</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="../../Inhaltsseiten/s5-miniwelt-universitaet.html">
+                                        <span class="d-none d-md-block">3. Lernsystem Fallbeispiel: Universität</span>
+                                        <span class="d-md-none">Seite 3</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="../../Inhaltsseiten/s6-grundlagen-der-datenmodellierung.html">
+                                        <span class="d-none d-md-block">4. Begriffszusammenhänge: DM</span>
+                                        <span class="d-md-none">Seite 4</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="../../Inhaltsseiten/s7-entity-relationship-modell.html">
+                                        <span class="d-none d-md-block">5. Entity-Relationship-Modell</span>
+                                        <span class="d-md-none">Seite 5</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="../../Inhaltsseiten/s9-erm-begriffszusammenhaenge.html">
+                                        <span class="d-none d-md-block">6. Beispielabbildung: ERM</span>
+                                        <span class="d-md-none">Seite 6</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="../../Inhaltsseiten/s10-kardinalitaeten.html">
+                                        <span class="d-none d-md-block">7. Kardinalitäten</span>
+                                        <span class="d-md-none">Seite 7</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="../text-mit-klick/text-mit-klick.html">
+                                        <span class="d-none d-md-block">8. Aufgabe 1: ERM Objekttypen</span>
+                                        <span class="d-md-none">Seite 8</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="../listenauswahl/listenauswahl-aufgabe2.html">
+                                        <span class="d-none d-md-block">9. Aufgabe 2: ERM Kardinalitäten</span>
+                                        <span class="d-md-none">Seite 9</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="../freitext-geaendert/aufgabe3.html">
+                                        <span class="d-none d-md-block">10. Aufgabe 3: ERM Primärschlüssel</span>
+                                        <span class="d-md-none">Seite 10</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="../../Inhaltsseiten/s15-relationales-datenmodell.html">
+                                        <span class="d-none d-md-block">11. Relationales Datenmodell</span>
+                                        <span class="d-md-none">Seite 11</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="../../Inhaltsseiten/s17-sql-grundlagen.html">
+                                        <span class="d-none d-md-block">12. Grundlagen von SQL</i></span>
+                                        <span class="d-md-none">Seite 12</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="../../Inhaltsseiten/s19-einsatzbereiche.html">
+                                        <span class="d-none d-md-block">13. SQL: Universitätsbeispiel</span>
+                                        <span class="d-md-none">Seite 13</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="../../Inhaltsseiten/s20-beispieltabelle.html">
+                                        <span class="d-none d-md-block">14. Datenmanipulation</span>
+                                        <span class="d-md-none">Seite 14</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="../../Inhaltsseiten/s22-insert.html">
+                                        <span class="d-none d-md-block">15. SQL Anweisung: INSERT</span>
+                                        <span class="d-md-none">Seite 15</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="../../Inhaltsseiten/s23-update.html">
+                                        <span class="d-none d-md-block">16. SQL-Anweisung: UPDATE</span>
+                                        <span class="d-md-none">Seite 16</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="../../Inhaltsseiten/s24-delete.html">
+                                        <span class="d-none d-md-block">17. SQL-Anweisung: DELETE</span>
+                                        <span class="d-md-none">Seite 17</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="../sql-aufgaben/sql-aufgabe4.html">
+                                        <span class="d-none d-md-block">18. Aufgabe 1: SQL-Anweisung</span>
+                                        <span class="d-md-none">Seite 18</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="../sql-aufgaben/sql-aufgabe5.html">
+                                        <span class="d-none d-md-block">19. Aufgabe 2: SQL-Anweisung</span>
+                                        <span class="d-md-none">Seite 19</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="../sql-aufgaben/sql-aufgabe6.html">
+                                        <span class="d-none d-md-block">20. Aufgabe 3: SQL-Anweisung</span>
+                                        <span class="d-md-none">Seite 20</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="../sql-aufgaben/sql-aufgabe7.html">
+                                        <span class="d-none d-md-block">21. Aufgabe 4: SQL-Anweisung</span>
+                                        <span class="d-md-none">Seite 21</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="../sql-aufgaben/sql-aufgabe8.html">
+                                        <span class="d-none d-md-block">22. Aufgabe 5: SQL-Anweisung</span>
+                                        <span class="d-md-none">Seite 22</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="../freitext-geaendert/aufgabe9.1-dml.html">
+                                        <span class="d-none d-md-block">23. Aufgabe 6: Datenmanipulation</span>
+                                        <span class="d-md-none">Seite 23</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="../freitext-geaendert/aufgabe9.2-dml.html">
+                                        <span class="d-none d-md-block">24. Aufgabe 7: Datenmanipulation</span>
+                                        <span class="d-md-none">Seite 24</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="../freitext-geaendert/aufgabe9.3-dml.html">
+                                        <span class="d-none d-md-block">25. Aufgabe 8: Datenmanipulation</span>
+                                        <span class="d-md-none">Seite 25</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="../../Inhaltsseiten/s32-select.html">
+                                        <span class="d-none d-md-block">26. SELECT-Anweisungen</span>
+                                        <span class="d-md-none">Seite 26</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="../../Inhaltsseiten/s31-select.html">
+                                        <span class="d-none d-md-block">27. Erweiterte SELECT-Anweisungen</span>
+                                        <span class="d-md-none">Seite 27</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="../../Inhaltsseiten/s34-die-where-klausel.html">
+                                        <span class="d-none d-md-block">28. WHERE-Klausel</span>
+                                        <span class="d-md-none">Seite 28</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="../single-choice-radio-button/sc-rb-aufgabe10.html">
+                                        <span class="d-none d-md-block">29. Aufgabe 9: SQL SELECT-Anweisung</span>
+                                        <span class="d-md-none">Seite 29</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="../sql-aufgaben/sql-aufgabe11.html">
+                                        <span class="d-none d-md-block">30. Aufgabe 10: SQL-Anweisung</span>
+                                        <span class="d-md-none">Seite 30</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="../sql-aufgaben/sql-aufgabe12.html">
+                                        <span class="d-none d-md-block">31. Aufgabe 11: SQL-Anweisung</span>
+                                        <span class="d-md-none">Seite 31</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="../../Inhaltsseiten/s39-anwendung-boolescher-logik.html">
+                                        <span class="d-none d-md-block">32. Boolesche Ausdrücke</span>
+                                        <span class="d-md-none">Seite 32</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="../../Inhaltsseiten/s42-funktionen-in-sql.html">
+                                        <span class="d-none d-md-block">33. Funktionen in SQL</span>
+                                        <span class="d-md-none">Seite 33</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="../../Inhaltsseiten/s44-anfragen-ueber-mehrere-relationen.html">
+                                        <span class="d-none d-md-block">34. Anfragen über mehrere Relationen</span>
+                                        <span class="d-md-none">Seite 34</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="../single-choice-radio-button/sc-rb-aufgabe13.html">
+                                        <span class="d-none d-md-block">35. Aufgabe 12: SQL SELECT-Anweisung</span>
+                                        <span class="d-md-none">Seite 35</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="../sql-aufgaben/sql-aufgabe14-a.html">
+                                        <span class="d-none d-md-block">36. Aufgabe 13: SQL-Anweisung</span>
+                                        <span class="d-md-none">Seite 36</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="../sql-aufgaben/sql-aufgabe14-b.html">
+                                        <span class="d-none d-md-block">37. Aufgabe 14: SQL-Anweisung</span>
+                                        <span class="d-md-none">Seite 37</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="../single-choice-radio-button/sc-rb-aufgabe15.html">
+                                        <span class="d-none d-md-block">38. Aufgabe 15: SQL SELECT-Anweisung</span>
+                                        <span class="d-md-none">Seite 38</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="../single-choice-radio-button/sc-rb-aufgabe16.html">
+                                        <span class="d-none d-md-block">39. Aufgabe 16: SQL SELECT-Anweisung</span>
+                                        <span class="d-md-none">Seite 39</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="../listenauswahl/listenauswahl-aufgabe17.html">
+                                        <span class="d-none d-md-block">40. Aufgabe 17: SQL SELECT-Anweisung</span>
+                                        <span class="d-md-none">Seite 40</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="../sql-aufgaben/sql-aufgabe18.html">
+                                    <span class="d-none d-md-block">41. Aufgabe 18: SQL-Anweisung</span>
+                                    <span class="d-md-none">Seite 41</span>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="../wichtige-begriffe-geaendert/abschlussquiz-neu.html">
+                                    <span class="d-none d-md-block">42. Abschlussquiz</span>
+                                    <span class="d-md-none">Seite 42</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <a class="btn btn-light text-left btn-lg" href="../freitext-geaendert/aufgabe3.html" role="button">
+                                <span class="d-none d-lg-block"><i class="bi bi-arrow-right-circle-fill"></i></span>
+                                <span class="d-lg-none"><i class="bi bi-arrow-right-circle-fill"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="../../../static/js/bootstrap.bundle.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Listenauswahl Aufgaben JS Funktionen -->
+    <script type="text/javascript" src="listenauswahl-aufgaben.js"></script>
+
+</body>
+
+</html>
