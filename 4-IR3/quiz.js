@@ -1,21 +1,14 @@
-/*Hier ist die JavaScript Funktion zu unserer Formelsammlung und zu dem Glossar*/
-var faq = document.getElementsByClassName("glossar-wort");
-var i;
-for (i = 0; i < faq.length; i++) {
-    faq[i].addEventListener("click", function () {
-        /* Toggle wenn man auf das Wort/die Formel klickt */
-        this.classList.toggle("active");
-        /* Toggle zwischen verstecken und zeigen des Inhaltes, also der Definition des Wortes oder der Formel */
-        var body = this.nextElementSibling;
-        if (body.style.display === "block") {
-            body.style.display = "none";
-        } else {
-            body.style.display = "block";
-        }
-    });
-}
+/*
 
-/*Quiz von Tobi aus Gruppe 7, einige Elemente wurden von unserer Gruppe angepasst.*/
+<@author liebl
+
+
+Dieses Script liest Multiple Choice Fragen aus einem <div id="quiz"... nur wenn die Fragen und Antworten im Format
+<div class="frage"> frage || antwort ** aw2 ** aw3 || falscheantwort ** fa ** fa2... </div>
+im HTML Dokument formuliert werden. Alle Fragen (Quizze) kann man per Knopfdruck via Modal (siehe quiz.html)
+durchklicken.
+
+ */
 
 //Elternklasse einer Abfrage
 class Quizelement {
@@ -24,6 +17,7 @@ class Quizelement {
         this.node.innerHTML = htmlNode;
     }
 }
+
 //Zum einen die Frage
 class Quizfrage extends Quizelement {
     constructor(node) {
@@ -161,12 +155,9 @@ class Fragenkatalog {
         //Die Frage wurde richtig beantwortet wenn performance noch wahr ist
         if(performance) {
 
-            //bisschen motivierende Sprueche schaden ja nicht
-            let erfolgsnachricht = document.getElementById("erfolgsnachricht");
-            let spr = ["Sehr gut!", "Super!", "Alles richtig!", "Perfekt!", "Weiter so!"];
-            let rnd = Math.floor(Math.random()*spr.length);
-            erfolgsnachricht.innerHTML = spr[rnd];
-            const nr = setTimeout(meldungWeg, 1200);
+            //IR3: Sprüche wurden entfernt
+            
+            const nr = setTimeout(meldungWeg, 800);
 
             //Fortschrittsbalken updaten
             if( n>0 ) {
@@ -205,7 +196,7 @@ class Fragenkatalog {
         }
 
     }
-    // Zeigt den Fortschritt des Spielers an und signalisiert 100%
+    // Zeigt den Fortschritt des Spielers an und signalisiert 100% richtig
     updateProg(n) {
             let bar = document.getElementById("fortschritt");
             let prog = Math.floor(100 * ((this.quizze.length-n) / this.quizze.length));
@@ -219,10 +210,12 @@ class Fragenkatalog {
                 body.className = "modal-content allesrichtig";
                 let title = document.getElementById("staticBackdropLabel");
                 title.innerHTML = "Super, du hast alles richtig beantwortet!";
+                /** IR3 Schließbutton einfügen**/
+                document.querySelector("#quiz-close-button").innerHTML = '"<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>'
                 let quizbtn = document.getElementById("quizmaster");
                 let weiter = document.createElement("h6");
-                weiter.innerHTML = "Wiederholen?";
-                weiter.className = "btn btn-outline-primary m-1";
+                
+             
                 quizbtn.style.display = "none";
                 weiter.addEventListener("click", function() {
                     body.className = "modal-content";
@@ -337,18 +330,3 @@ function meldungWeg() {
             let erfolgsnachricht = document.getElementById("erfolgsnachricht");
             erfolgsnachricht.innerHTML ="";
 }
-
-//Fixed Button Elemente
-
-const btnScrollToTop = document.querySelector("#btnScrollToTop");
-
-btnScrollToTop.addEventListener("click", function () {
-    //window.scrollTo(0, 0);
-    // ich habe mich für diese Variante entschieden. Hat eine bessere Animation
-    window.scrollTo({
-        //komplett nach oben aber sanfter
-        top:0,
-        left: 0,
-        behavior: "smooth"
-    });
-});

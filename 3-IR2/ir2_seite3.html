@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IR2 Seite 3</title>
+
+    <link rel="stylesheet" href="neue_css_ir2.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="seite 3.js"></script>
+    <!-- Header, Navbar und Pageination von DARIA MASLOV-->
+</head>
+<body>
+    <div class="container-fluid">
+
+        <!--Navigationsleiste-->
+        <nav class="navbar navbar-light navbar-expand-lg navbar-fixed-top">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Navbar Brand: Logo der Uni Hildesheim, sowie unser Modulname-->
+                <a class="navbar-brand">
+                    <!--Desktop und Tablet/großer oder mittel-großer Viewport; Klick auf Bild soll dann auf die erste Seite/eine Einfürungsseite führen-->
+                    <span class="d-none d-sm-block">
+                        <!--Uni-Logo sowie lange Bezweichnung unseres Moduls-->
+                        <img class="d-inline-block align-text-center" src="../uni_logo.png" width="70" height="70" alt="Universität Hildesheim" style="padding-right: 20;">
+                        SELiM - IR Retrievalstrategien
+
+                    </span>
+                    <!--Handy/kleiner Viewport - Abkürzung der Bezeichnung unseres Viewports-->
+                    <span class="d-sm-none">IR2</span>
+                </a>
+
+                <!--Menü für verschiedene Module-->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.uni-hildesheim.de/selim/miniTemplateSystem/index.php">Startseite</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Alle SELiM Module</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="https://www.uni-hildesheim.de/selim/Modul_GDI/GDI_Einstieg.php" >Grundbegriffe IW</a></li>
+                                <li><a class="dropdown-item" href="https://www.uni-hildesheim.de/selim/Modul_IR/IR_1_bekog_SELIM/inhalt.php">Information Retrieval 1</a></li>
+                                <li><a class="dropdown-item" href="https://www.uni-hildesheim.de/selim/Modul_IR/IR_3_bekog_SELIM/r_inhalt.php">Information Retrieval 3</a></li>
+                                <li><a class="dropdown-item" href="https://www.uni-hildesheim.de/selim/miniTemplateSystem/module/evaIR/inhalt_eva.php">Evaluierung von IR Systemen</a></li>
+                                <li><a class="dropdown-item" href="https://www.uni-hildesheim.de/selim/miniTemplateSystem/module/fis/inhalt_fis.php">Fakteninformationssysteme</a></li>
+                                <li><a class="dropdown-item" href="https://www.uni-hildesheim.de/selim/miniTemplateSystem/module/mue/inhalt_mue.php">Maschinelle Übersetzung</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../6-CSS-GLOSSAR-FRMLS/glossar.html">Glossar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../6-CSS-GLOSSAR-FRMLS/formelsammlung.html">Formelsammlung</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+
+
+        <!--Seiteninhalt /// Hier könnt ihr euren Inhalt eintragen-->
+        <div id="content">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h1>Wiederholung: Information Retrieval Systeme</h1>
+ <!-- inline eingebundene SVG -->
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 622 411" preserveAspectRatio="xMidYMid meet"> <!-- Preserve Aspect ratio sorgt adfür, dass die dargestellte SVG richtig mitskaliert ohne sich zu verziehen-->
+                            <defs>
+                              <style>
+
+                              </style>
+                            </defs>
+                            <image id="Ebene_1" data-name="Ebene 1" width="619" height="346" xlink:href="data:img/png;base64,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"/>
+
+                           <g class="Funktion-1" cursor="pointer" pointer-events="all" onclick="myFunction()"> <!--das <g> umgibt den ganzen Button inklusive ausklappbarer Information pointer-eeevnts all sorgt dafür das die Umrandung und die Füllung klickbar sind-->
+                                <path id="Rechteck_1" fill="none" stroke="#000" stroke-width="1px" d="M97,16h29V39H97V16Z" />
+                                <text id="F1" class="cls-2" x="108" y="32">F</text>
+                                <text id="Info-1" class="Infotext" x="130" y="32">Aufnahme (Identifizierung) der Informationsobjekte (Dokumente)</text></g>
+
+                           <g class="Funktion-2" cursor="pointer" pointer-events="all" onclick="myFunction2()">
+                               <path id="Rechteck_2" fill="none" stroke="#000" stroke-width="1px" d="M58,166H87v23H58V166Z" />
+                               <text id="F2" class="cls-2" x="69" y="182">F</text>
+                               <text id="Info-2" class="Infotext" x="59" y="198">Analyse der <tspan x="59" y="208">Inhalte der </tspan><tspan x="59" y="218">Dokumente</tspan></text></g> <!--<tspan> dient zur Unterteilung und Neupositionierung des Texts-->
+
+                           <g class="Funktion-3" cursor="pointer" pointer-events="all" onclick="myFunction3()" >
+                               <path id="Rechteck_3" fill="none" stroke="#000" stroke-width="1px" d="M58,306H87v23H58V306Z"/>
+                               <text id="F3" class="cls-2" x="69" y="322">F</text>
+                               <text id="Info-3" class="Infotext" x="61" y="338">Erstellung <tspan x="61" y="348">einer</tspan><tspan x="61" y="358">Repräsentation der Dokumentinhalte,</tspan><tspan x="58" y="368"> die geeignet ist, mit der Anfrage verglichen zu werden.</tspan></text></g>
+
+                           <g class="Funktion-6" cursor="pointer" pointer-events="all" onclick="myFunction6()">
+                               <path id="Rechteck_6" fill="none" stroke="#000" stroke-width="1px" d="M564,210h29v23H564V210Z" />
+                               <text id="F6" class="cls-2" x="576" y="226">F</text>
+                               <text id="Info-6" class="Infotext" x="550" y="242">Analyse der <tspan x="550" y="252">Anfrage und </tspan><tspan x="550" y="262">Transformation</tspan> in eine Anfragerepräsentation</text></g>
+
+                           <g class="Funktion-4" cursor="pointer" pointer-events="all" onclick="myFunction4()">
+                               <path id="Rechteck_4" fill="none" stroke="#000" stroke-width="1px" d="M365,372h29v23H365V372Z"/>
+                               <text id="F4" class="cls-2" x="376" y="388">F</text>
+                               <text id="Info-4" class="Infotext" x="368" y="355">Suche nach Übereinstimmung von<tspan x="368" y="365">Anfragerepräsentation und Dokumentrepräsentation</tspan></text></g>
+
+                           <g class="Funktion-5" cursor="pointer" pointer-events="all" onclick="myFunction5()">
+                               <path id="Rechteck_5" fill="none" stroke="#000" stroke-width="1px" d="M377,210h29v23H377V210Z"/>
+                               <text id="F5" class="cls-2" x="388" y="226">F</text>
+                               <text id="Info-5" class="Infotext" x="378" y="242">Gewinnung der <tspan x="388" y="252">relevanten Dokumente</tspan></text></g>
+
+                          </svg>
+                          
+                          <p>Klicke auf die Felder um weitere Informationen zu erhalten!</p>
+
+
+
+
+
+                        <!--Fortschrittsanzeige-->
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="9"
+                            aria-valuemin="0" aria-valuemax="100" style="width:9%">
+                            <span class="sr-only">8,82%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+     <!--Seitenzahl-->
+        <div class="row justify-content-center">
+        <div class="col-lg-8 col-lg-offset-3 text-center">
+            <div class="page-pick">
+                <div class="btn-group dropup">
+                    <a class="btn text-left btn-lg" href="ir2_seite2.html" role="button">
+                        <span class="d-none d-lg-block"><i class="bi bi-arrow-left-circle-fill">vorherige Seite</i></span>
+                        <span class="d-lg-none"><i class="bi bi-arrow-left-circle-fill"></i></span>
+                    </a>
+                    <button type="button" class="btn btn-lg" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="d-none d-md-block">3. Wiederholung: Information Retrieval Systeme <i class="bi bi-chevron-compact-up"></i></span>
+                        <span class="d-md-none">Seite 3 <i class="bi bi-chevron-compact-up"></i></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <!--Link ändern-->
+                        <li><a class="dropdown-item " href="ir2_seite1.html" >
+                            <span class="d-none d-md-block">1. Lernziele</span>
+                            <span class="d-md-none">Seite 1</span> 
+                        </a></li>
+                        <!--Link ändern-->
+                        <li><a class="dropdown-item" href="ir2_seite2.html" >
+                            <span class="d-none d-md-block">2. Wiederholung: Was ist Information Retrieval</span>
+                            <span class="d-md-none">Seite 2</span> 
+                        </a></li>
+                        <!--Link ändern-->
+                        <li><a class="dropdown-item" href="ir2_seite3.html" >
+                            <span class="d-none d-md-block">3. Wiederholung: Information Retrieval Systeme</span>
+                            <span class="d-md-none">Seite 3</span> 
+                        </a></li>
+                        <li><a class="dropdown-item" href="ir2_seite4.html" >
+                            <span class="d-none d-md-block">4. &Uuml;bung 1: Inhaltserschließung</span>
+                            <span class="d-md-none">Seite 4</span> 
+                        </a></li>
+                        <li><a class="dropdown-item" href="ir2_seite5.html" >
+                            <span class="d-none d-md-block">5. &Uuml;bung 2: Dokumentenanalyse</span>
+                            <span class="d-md-none">Seite 5</span> 
+                        </a></li>
+                        <li><a class="dropdown-item" href="ir2_seite6.html" >
+                            <span class="d-none d-md-block">6. Retrieval</span>
+                            <span class="d-md-none">Seite 6</span> 
+                        </a></li>
+                        <li><a class="dropdown-item" href="ir2_seite7.html" >
+                            <span class="d-none d-md-block">7. &Uuml;bung 3: Wichtige Begriffe </span>
+                            <span class="d-md-none">Seite 7</span> 
+                        </a></li>
+                        <li><a class="dropdown-item" href="ir2_seite8.html" >
+                            <span class="d-none d-md-block">8. Retrieval als &Auml;hnlichkeitsmessung</span>
+                            <span class="d-md-none">Seite 8</span> 
+                        </a></li>
+                        <li><a class="dropdown-item" href="ir2_seite9.html" >
+                            <span class="d-none d-md-block">9. IR-Paradigma</span>
+                            <span class="d-md-none">Seite 9</span> 
+                        </a></li>
+                        <li><a class="dropdown-item" href="ir2_seite10.html" >
+                            <span class="d-none d-md-block">10. Boole'sches Retrieval Modell</span>
+                            <span class="d-md-none">Seite 10</span> 
+                        </a></li>
+                        <li><a class="dropdown-item" href="ir2_seite11.html" >
+                            <span class="d-none d-md-block">11. &Uuml;bung 4: Boole'sches Modell</span>
+                            <span class="d-md-none">Seite 11</span> 
+                        </a></li>
+                        <li><a class="dropdown-item" href="ir2_seite12.html" >
+                            <span class="d-none d-md-block">12. &Uuml;bung 5: Boole'sches Retrieval</span>
+                            <span class="d-md-none">Seite 12</span> 
+                        </a></li>
+                        <!--Link ändern-->
+                        <li><a class="dropdown-item" href="ir2_seite13.html" >
+                            <span class="d-none d-md-block">13. &Uuml;bung 6: Boole'sches Retrieval</span>
+                            <span class="d-md-none">Seite 13</span> 
+                        </a></li>
+                        <!--Link ändern-->
+                        <li><a class="dropdown-item" href="ir2_seite14.html" >
+                            <span class="d-none d-md-block">14. Ranking</span>
+                            <span class="d-md-none">Seite 14</span> 
+                        </a></li>
+                        
+                        <li><a class="dropdown-item" href="ir2_seite15.html" >
+                            <span class="d-none d-md-block">15. Beispiel: Ranking</span>
+                            <span class="d-md-none">Seite 15</span> 
+                        </a></li>
+                        <li><a class="dropdown-item" href="ir2_seite16.html" >
+                            <span class="d-none d-md-block">16. Gewichtete Indexierung</span>
+                            <span class="d-md-none">Seite 16</span> 
+                        </a></li>
+                        <li><a class="dropdown-item" href="ir2_seite17.html" >
+                            <span class="d-none d-md-block">17. Inverse Dokumenth&auml;ufigkeit</span>
+                            <span class="d-md-none">Seite 17</span> 
+                        </a></li>
+                        <li><a class="dropdown-item" href="ir2_seite18.html" >
+                            <span class="d-none d-md-block">18. &Uuml;bung 7: Inverse Dokumenth&auml;ufigkeit</span>
+                            <span class="d-md-none">Seite 18</span> 
+                        </a></li>
+                        <!--Link ändern-->
+                        <li><a class="dropdown-item" href="ir2_seite19.html" >
+                            <span class="d-none d-md-block">19.  &Uuml;bung 8: Inverse Dokumenth&auml;ufigkeit</span>
+                            <span class="d-md-none">Seite 19</span> 
+                        </a></li>
+                        <!--Link ändern-->
+                        <li><a class="dropdown-item" href="ir2_seite20.html" >
+                            <span class="d-none d-md-block">20. &Auml;hnlichkeitsberechnung</span>
+                            <span class="d-md-none">Seite 20</span> 
+                        </a></li>
+                        <!--Link ändern-->
+                        <li><a class="dropdown-item" href="ir2_seite21.html" >
+                            <span class="d-none d-md-block">21. Vektor Raum Modell</span>
+                            <span class="d-md-none">Seite 21 </span> 
+                        </a></li>
+                        <!--Link ändern-->
+                        <li><a class="dropdown-item" href="ir2_seite22.html" >
+                            <span class="d-none d-md-block">22. Dokument Term Matrix</span>
+                            <span class="d-md-none">Seite 22</span> 
+                        </a></li>
+                        <!--Link ändern-->
+                        <li><a class="dropdown-item" href="ir2_seite23.html" >
+                            <span class="d-none d-md-block">23. &Uuml;bung 9: Vektor Raum Modell</span>
+                            <span class="d-md-none">Seite 23</span> 
+                        </a></li>
+                        <!--Link ändern-->
+                        <li><a class="dropdown-item" href="ir2_seite24.html" >
+                            <span class="d-none d-md-block">24. &Uuml;bung 10: Retrievalmodelle</span>
+                            <span class="d-md-none">Seite 24</span> 
+                        </a></li>
+                        <!--Link ändern-->
+                        <li><a class="dropdown-item" href="ir2_seite25.html" >
+                            <span class="d-none d-md-block">25. Relevance Feedback - Methoden</span>
+                            <span class="d-md-none">Seite 25</span> 
+                        </a></li>
+                        <!--Link ändern-->
+                        <li><a class="dropdown-item" href="ir2_seite26.html" >
+                            <span class="d-none d-md-block">26. &Uuml;bung 11: Relevance Feedback</span>
+                            <span class="d-md-none">Seite 26</span> 
+                        </a></li>
+                        <!--Link ändern-->
+                        <li><a class="dropdown-item" href="ir2_seite27.html" >
+                            <span class="d-none d-md-block">27. Relevance Feedback - Methoden</span>
+                            <span class="d-md-none">Seite 27</span> 
+                        </a></li>
+                        <!--Link ändern-->
+                        <li><a class="dropdown-item" href="ir2_seite28.html" >
+                            <span class="d-none d-md-block">28. &Uuml;bung 12: Relevance Feedback nach der Rocchio Formel</span>
+                            <span class="d-md-none">Seite 28</span> 
+                        </a></li>
+                        <!--Link ändern-->
+                        <li><a class="dropdown-item" href="ir2_seite29.html" >
+                            <span class="d-none d-md-block">29. &Uuml;bung 13: Indexierung und Retrieval</span>
+                            <span class="d-md-none">Seite 29</span> 
+                        </a></li>
+                        <!--Link ändern-->
+                        <li><a class="dropdown-item" href="ir2_seite30.html" >
+                            <span class="d-none d-md-block">30. &Uuml;bung 13: Indexierung und Retrieval</span>
+                            <span class="d-md-none">Seite 30</span> 
+                        </a></li>
+                        <!--Link ändern-->
+                        <li><a class="dropdown-item" href="ir2_seite31.html" >
+                            <span class="d-none d-md-block">31. &Uuml;bung 13: Indexierung und Retrieval</span>
+                            <span class="d-md-none">Seite 31</span> 
+                        </a></li>
+                        <!--Link ändern-->
+                        <li><a class="dropdown-item" href="ir2_seite32.html" >
+                            <span class="d-none d-md-block">32. &Uuml;bung 13: Gewichtete Indexierung und Retrieval</span>
+                            <span class="d-md-none">Seite 32</span> 
+                        </a></li>
+                        <!--Link ändern-->
+                        <li><a class="dropdown-item" href="ir2_seite33.html" >
+                            <span class="d-none d-md-block">33. Exkurs: Suchmaschinen</span>
+                            <span class="d-md-none">Seite 33</span> 
+                        </a></li>
+                        <!--Link ändern-->
+                        <li><a class="dropdown-item" href="ir2_seite34.html" >
+                            <span class="d-none d-md-block">34. Zusammenfassung</span>
+                            <span class="d-md-none">Seite 34</span> 
+                        </a></li>
+                    </ul>
+
+                    <a class="btn text-left btn-lg" href="ir2_seite4.html" role="button">
+                        <span class="d-none d-lg-block"> nächste Seite <i class="bi bi-arrow-right-circle-fill"></i></span>
+                        <span class="d-lg-none"><i class="bi bi-arrow-right-circle-fill"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

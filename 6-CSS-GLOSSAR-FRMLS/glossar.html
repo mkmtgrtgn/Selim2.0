@@ -1,20 +1,21 @@
 <!doctype html>
-<html lang="de">
+<html lang="de" xmlns="http://www.w3.org/1999/html">
 <head>
-    <!-- Required meta tags -->
+    <!-- Metadaten -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS und JS Bundle -->
+    <!-- Bootstrap CSS und JS Bundle. Verbindung zum Ordner. -->
     <link href="../static/css/bootstrap.css" rel="stylesheet">
     <link href="css.css" rel="stylesheet">
+    <!--Javascript basierende Bibliothek, damit Formeln mit der Spezifikation MathML vom Brwoser richtig interpretiert werden.-->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-    <!-- Der Font muss noch importiert werden -->
+    <!-- Font Quicksand ist Lizenzfrei -->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Selim 2.0</title>
+    <title>Glossar</title>
 </head>
 <body>
 <div class="navi">
@@ -23,7 +24,16 @@
             <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon navbar-light"></span>
             </button>
-            <a class="navbar-brand" href="#">Selim</a>
+        <!-- Navbar Brand: Logo der Uni Hildesheim-->
+            <a class="navbar-brand">
+                <!--Desktop und Tablet/großer oder mittel-großer Viewport; Klick auf Bild soll dann auf die erste Seite/eine Einfürungsseite führen-->
+                <span class="d-none d-sm-block">
+                    <!--Uni-Logo links in der Ecke-->
+                    <img class="d-inline-block align-text-center" src="uni_logo.png" width="70" height="70" alt="Universität Hildesheim" style="padding-right: 20;">
+                </span>
+                <!--Handy/kleiner Viewport - Abkürzung der Bezeichnung unseres Viewports-->
+                <span class="d-sm-none">Glossar</span>
+            </a>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -34,12 +44,13 @@
                         <a class="nav-linki dropdown-toggle" href="#" id="navDrop1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Module
                         </a>
+                        <!--Verlinkungen zu den Modulen-->
                         <ul class="dropdown-menu" aria-labelledby="navDrop1">
-                            <li><a class="dropdown-item bg" href="../1-GDI/gdi.html">GDI</a></li>
-                            <li><a class="dropdown-item bg" href="../2-IR1/ir1.html">IR1</a></li>
-                            <li><a class="dropdown-item bg" href="../3-IR2/ir2.html">IR2</a></li>
-                            <li><a class="dropdown-item bg" href="../4-IR3/ir3.html">IR3</a></li>
-                            <li><a class="dropdown-item bg" href="../5-FIS/fis.html">FIS</a></li>
+                            <li><a class="dropdown-item bg" href="../1-GDI/gdi.html">Grundbegriffe IW</a></li>
+                            <li><a class="dropdown-item bg" href="../2-IR1/ir1.html">Information Retrieval 1</a></li>
+                            <li><a class="dropdown-item bg" href="../3-IR2/ir2_startseite.html">Information Retrieval 2</a></li>
+                            <li><a class="dropdown-item bg" href="../4-IR3/0_Allgemein.html">Information Retrieval 3</a></li>
+                            <li><a class="dropdown-item bg" href="../5-FIS/inhaltsverzeichnis.html">Fakteninformationssysteme</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -62,10 +73,16 @@
         <div class="row">
             <div class="col">
                 <h1>Glossar</h1>
-                <button id="btnScrollToTop">
+                <!--Hier ist der Fixed Button gesetzt-->
+                <button id="btnScrollToTop" title="Klicke um nach oben zu scrollen">
                     <i class="material-icons">arrow_upward</i>
                 </button>
-                <p>Du möchtest dein Wissen testen? Klicke auf "Vokabeltest starten" und lerne wichtige Wörter zu den Modulen auswendig.</p>
+                <p> 
+                    Du möchtest dein Wissen testen? Klicke auf "Vokabeltest starten" und lerne wichtige Wörter zu den Modulen auswendig.
+                    Falls du dir das Glossar auch offline ansehen möchtest, klicke auf "Glossar downloaden". Es öffnet sich eine PDF-Datei.
+                    Speicher die Datei auf deinem Gerät und lerne auch offline die wichtigsten Definitionen der Module.
+                </p>
+                <!--Hier haben wir das Quiz bzw. den Vokabeltest eingefügt.-->
                 <div id="quiz">
 
                     <div class="frage">
@@ -75,7 +92,6 @@
                     <div class="frage">
                         Was ist das Boole'sche Retrieval? Wähle eine oder mehrere Antworten aus. ||   Das Boole'sche Retrieval ist ein klassisches Verfahren des Information Retrieval und basiert auf dem Exact Match Paradigma. ** Es prüft, ob eine wohldefinierte Bedingung erfüllt ist, oder nicht, basierend auf der Boole'schen Algebra.  || Das Boole'sche Retrieval beschreibt ein Verfahren, um Texte zu analysieren und diese klassifizieren zu können.
                     </div>
-        
         
                     <div class="frage">
                         Was bedeutet das Akronym CLIR? ||   Cross Language Information Retrieval || Calling Line Identification Restriction
@@ -88,19 +104,32 @@
                     <div class="frage">
                         Was ist der Recall? Wähle eine oder mehrere Antworten aus. || Der Recall ist der Quotient aus allen relevanten gefundenen Dokumenten und allen relevanten Dokumenten. ** Recall beschreibt die Vollständigkeit eines Ergebnisses. || Der Recall beschreibt die Redundanz (latein. redundare"im Überfluss vorhanden sein") bezeichnet allgemein das mehrfache Vorhandensein funktionsgleicher, inhaltsgleicher oder wesensgleicher Objekte.
                     </div>
+                    
                     <div class="frage">
                         Was bedeutet das Akronym URL? || Uniform Resource Locator || Unicode Reformation Locator ** Unicorn Resource Locator
+                    </div>
+
+                    <div class="frage">
+                        HTTP ist ein Akronym für ... || Hypertext Transfer Protocol || Hypertext Transfer Powerfull ** Hypertext Texting Protocol
+                    </div>
+
+                    <div class="frage">
+                        Welches Wort wird hier beschrieben: "Der Daten- bzw. Besucherstrom auf einer Webseite." Wähle eine Antwort. || Traffic || Templates ** Stemming
                     </div>
         
                 </div>
         
                 <div class="row">
-                    <!--Button soll in der Mitte angezeigt werden-->
                     <div class="col text-center">
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                             Vokabeltest starten
                         </button>
-        
+                    </div>
+                    <div class="col">
+                        <a class="btn btn-primary" href="glossar.pdf" download target="_blank" title="Jetzt Glossar downloaden!">
+                            Glossar downloaden
+                        </a>
+
                         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content" id="modalCont">
@@ -138,161 +167,45 @@
                         </div>
                     </div>
                 </div>
-                </br>
-                <!--Test der A-Z Buttons-->
-                <div class="row buttonsLGAnsicht hidden-sm hidden-xs">
-                    <div class="col-md-12 col-lg-12">
-                        <a class="btn btn-info btn-lg" disabled='disabled' href="#Raute">#</a>
-                        <a class="btn btn-info btn-lg"  href="#A">A</a>
-                        <a class="btn btn-info btn-lg" disabled='disabled' href="#B">B</a>
-                        <a class="btn btn-info btn-lg" disabled='disabled' href="#C">C</a>
-                        <a class="btn btn-info btn-lg"  href="#D">D</a>
-                        <a class="btn btn-info btn-lg"  href="#E">E</a>
-                        <a class="btn btn-info btn-lg"  href="#F">F</a>
-                        <a class="btn btn-info btn-lg" disabled='disabled' href="#G">G</a>
-                        <a class="btn btn-info btn-lg" disabled='disabled' href="#H">H</a>
-                        <a class="btn btn-info btn-lg"  href="#I">I</a>
-                        <a class="btn btn-info btn-lg" disabled='disabled' href="#J">J</a>
-                        <a class="btn btn-info btn-lg"  href="#K">K</a>
-                        <a class="btn btn-info btn-lg"  href="#L">L</a>
-                        <a class="btn btn-info btn-lg" disabled='disabled' href="#M">M</a>
-                        <br />
-                        <br />
-                        <a class="btn btn-info btn-lg"  href="#N">N</a>
-                        <a class="btn btn-info btn-lg" disabled='disabled' href="#O">O</a>
-                        <a class="btn btn-info btn-lg"  href="#P">P</a>
-                        <a class="btn btn-info btn-lg" disabled='disabled' href="#Q">Q</a>
-                        <a class="btn btn-info btn-lg" disabled='disabled' href="#R">R</a>
-                        <a class="btn btn-info btn-lg" d href="#S">S</a>
-                        <a class="btn btn-info btn-lg"  href="#T">T</a>
-                        <a class="btn btn-info btn-lg" disabled='disabled' href="#U">U</a>
-                        <a class="btn btn-info btn-lg" disabled='disabled' href="#V">V</a>
-                        <a class="btn btn-info btn-lg" disabled='disabled' href="#W">W</a>
-                        <a class="btn btn-info btn-lg" disabled='disabled' href="#X">X</a>
-                        <a class="btn btn-info btn-lg" disabled='disabled' href="#Y">Y</a>
-                        <a class="btn btn-info btn-lg" disabled='disabled' href="#Z">Z</a>
-                        <a class="btn btn-info btn-lg" disabled='disabled' href="#Plus">+</a>
-                    </div>
-                </div>
-                </br>
-                <!--irgendwas funktioniert da nicht-->
-                <div class="container">
-                    <div class="row">
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">A</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">B</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">C</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">D</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">E</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">F</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">G</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">H</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">I</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">J</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">K</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">L</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">M</button>
-                      </div>
-                      <div class="w-100"></div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">N</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">O</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">P</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">Q</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">R</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">S</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">T</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">U</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">V</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">W</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">X</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">Y</button>
-                      </div>
-                      <div class="col">
-                        <button type="button" class="btn btn-primary">Z</button>
-                      </div>
-                    </div>
-                </div>
                     </br>
-                    <div>
-                    <a href="#A">A</a>
-                    <a href="#B">B</a>
-                    <a href="#C">C</a>
-                    <a href="#D">D</a>
-                    <a href="#E">E</a>
-                    <a href="#F">F</a>
-                    <a href="#G">G</a>
-                    <a href="#H">H</a>
-                    <a href="#I">I</a>
-                    <a href="#J">J</a>
-                    <a href="#K">K</a>
-                    <a href="#L">L</a>
-                    <a href="#M">M</a>
-                    <a href="#N">N</a>
-                    <a href="#O">O</a>
-                    <a href="#P">P</a>
-                    <a href="#Q">Q</a>
-                    <a href="#R">R</a>
-                    <a href="#S">S</a>
-                    <a href="#T">T</a>
-                    <a href="#U">U</a>
-                    <a href="#V">V</a>
-                    <a href="#W">W</a>
-                    <a href="#X">X</a>
-                    <a href="#Y">Y</a>
-                    <a href="#Z">Z</a>
-
+                    </br>
+                    <!--Buttons von A-Z responsive. Dienen zur einfacheren Navigation zu den jeweiligen Wörtern.-->
+                    <div class="row hidden-sm hidden-xs text-center">
+                        <div class="col-md-12 col-lg-12">
+                            <a class="btn btn-primary buchstaben" href="#A" title="Zu Wörtern mit A">A</a>
+                            <a class="btn btn-primary buchstaben" href="#B" title="Zu Wörtern mit B">B</a>
+                            <a class="btn btn-primary buchstaben" href="#C" title="Zu Wörtern mit C">C</a>
+                            <a class="btn btn-primary buchstaben" href="#D" title="Zu Wörtern mit D">D</a>
+                            <a class="btn btn-primary buchstaben" href="#E" title="Zu Wörtern mit E">E</a>
+                            <a class="btn btn-primary buchstaben" href="#F" title="Zu Wörtern mit F">F</a>
+                            <a class="btn btn-primary buchstaben" href="#G" title="Zu Wörtern mit G">G</a>
+                            <a class="btn btn-primary buchstaben" href="#H" title="Zu Wörtern mit H">H</a>
+                            <a class="btn btn-primary buchstaben" href="#I" title="Zu Wörtern mit I">I</a>
+                            <a class="btn btn-primary buchstaben" href="#J" title="Zu Wörtern mit J">J</a>
+                            <a class="btn btn-primary buchstaben" href="#K" title="Zu Wörtern mit K">K</a>
+                            <a class="btn btn-primary buchstaben" href="#L" title="Zu Wörtern mit L">L</a>
+                            <a class="btn btn-primary buchstaben" href="#M" title="Zu Wörtern mit M">M</a>
+                            <a class="btn btn-primary buchstaben" href="#N" title="Zu Wörtern mit N">N</a>
+                            <a class="btn btn-primary buchstaben" href="#O" title="Zu Wörtern mit O">O</a>
+                            <a class="btn btn-primary buchstaben" href="#P" title="Zu Wörtern mit P">P</a>
+                            <a class="btn btn-primary buchstaben" href="#Q" title="Zu Wörtern mit Q">Q</a>
+                            <a class="btn btn-primary buchstaben" href="#R" title="Zu Wörtern mit R">R</a>
+                            <a class="btn btn-primary buchstaben" href="#S" title="Zu Wörtern mit S">S</a>
+                            <a class="btn btn-primary buchstaben" href="#T" title="Zu Wörtern mit T">T</a>
+                            <a class="btn btn-primary buchstaben" href="#U" title="Zu Wörtern mit U">U</a>
+                            <a class="btn btn-primary buchstaben" href="#V" title="Zu Wörtern mit V">V</a>
+                            <a class="btn btn-primary buchstaben" href="#W" title="Zu Wörtern mit W">W</a>
+                            <a class="btn btn-primary buchstaben" href="#X" title="Zu Wörtern mit X">X</a>
+                            <a class="btn btn-primary buchstaben" href="#Y" title="Zu Wörtern mit Y">Y</a>
+                            <a class="btn btn-primary buchstaben" href="#Z" title="Zu Wörtern mit Z">Z</a>
+                        </div>
+                    </div>
+                    <!--Hier sind die Wörter A-Z mit ihrer jeweiligen Definition drin. Wir haben es versucht mir einfachen Klassen wie glossar wort und glossar definition darzustellen. Interne Verlinkungen werden auch getätigt.-->
                     <h2 id="A" class="page-header">   A</h2>
                     <div>
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Abstract</h2>
                         <div class="glossar-definition">
-                            <p> Ein Abstract ist ein Kurzreferat, das kurz und klar den Inhalt eines Dokuments wiedergibt. Zusätzlich ist es ein Verfahren zur Inhaltserschließung. Es  ist also eine Reduktion eines Textes auf die inhaltskennzeichnenden Inhalte. Die Suche während des IR-Prozesses erfolgt über den Abstract, was eine schnellere Suche zur Folge hat. Die Erstellung eines Abstracts erfolgt entweder manuell/intellektuell durch einen Experten oder den Autor oder automatisch durch ein  computergestütztes System.
+                            <p> Ein Abstract ist ein Kurzreferat, das kurz und klar den Inhalt eines Dokuments wiedergibt. Zusätzlich ist es ein Verfahren zur <a href="glossar.html#I" title="Begriffe mit I">Inhaltserschließung</a>. Es  ist also eine Reduktion eines Textes auf die inhaltskennzeichnenden Inhalte. Die Suche während des IR-Prozesses erfolgt über den Abstract, was eine schnellere Suche zur Folge hat. Die Erstellung eines Abstracts erfolgt entweder manuell/intellektuell durch einen Experten oder den Autor oder automatisch durch ein  computergestütztes System.
                             </p>
                         </div>
                     </div>
@@ -300,7 +213,14 @@
                     <div>
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Affix removal stemmer</h2>
                         <div class="glossar-definition">
-                            <p> Ist eine Stemming-Methode. Affix removal stemmer arbeiten regelbasiert, dabei werden Präfixe und/oder Suffixe in einer bestimmten Reihenfolge entfernt. So wird auf den Wortstamm hingearbeitet.</p>
+                            <p> Ist eine Stemming-Methode. Affix removal stemmer arbeiten regelbasiert, dabei werden Präfixe und/oder Suffixe in einer bestimmten Reihenfolge entfernt. So wird auf den Wortstamm hingearbeitet. Mehr zum <a href="glossar.html#S" title="Begriffe mit S">Stemming</a> findest du unter dem Link.</p>
+                        </div>
+                    </div>
+                    <hr class="hr-line">
+                    <div>
+                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Aggregation</h2>
+                        <div class="glossar-definition">
+                            <p>Eine Aggregation ist in der Informatik eine Verbindung zwischen Daten oder <a href="glossar.html#O" target="_blank" title="Alle Definitionen zu Buchstabe O">Objekten</a>. Anfragen an ein Datenbankmanagementsystem geben meist Mengen von Datensätzen zurück. Jedoch können durch Aggregatfunktionen auch zusammengefasste <a href="glossar.html#I" target="_blank" title="Alle Definitionen zu Buchstabe I">Informationen</a> ermittelt werden. Ein einfaches Beispiel ist die Errechnung eines Durchschnittsalters aus einer Personentabelle.</p>
                         </div>
                     </div>
                     <hr class="hr-line">
@@ -314,7 +234,7 @@
                     <div>
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Attribut</h2>
                         <div class="glossar-definition">
-                            <p> Ein Attribut ist die Eigenschaft einer Entität oder einer Relation, z.B. der Titel einer Vorlesung. In einem Entitätstyp existiert immer ein Primärschlüssel , ein Attribut (oder eine Kombination von Attributen), das die einzelnen Entitäten eindeutig identifiziert, z.B. die Matrikelnummer eines Studierenden.</p>
+                            <p> Ein Attribut ist die Eigenschaft einer <a href="glossar.html#E" title="Begriffe mit E">Entität</a> oder einer Relation, z.B. der Titel einer Vorlesung. In einem Entitätstyp existiert immer ein Primärschlüssel , ein Attribut (oder eine Kombination von Attributen), das die einzelnen Entitäten eindeutig identifiziert, z.B. die Matrikelnummer eines Studierenden.</p>
                         </div>
                     </div>
                     <hr class="hr-line">
@@ -327,9 +247,9 @@
                     </div>
                     <hr class="hr-line">
                     <div>
-                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Boole'sche Retrieval</h2>
+                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Boole'sches Retrieval</h2>
                         <div class="glossar-definition">
-                            <p>Das Boole'sche Retrieval ist ein klassisches Verfahren des Information Retrieval und basiert auf dem Exact Match Paradigma. Es prüft, ob eine wohldefinierte Bedingung erfüllt ist, oder nicht, basierend auf der Boole'schen Algebra. Die Grundidee ist es, Mengenoperationen auf Mengen von Dokumenten oder Objekten anzuwenden, die durch Attributwerte charakterisiert sind. Dabei werden die Terme der Anfragen mit Operatoren verknüpft, übliche Operatoren sind u.a.:  	AND	OR	und NOT</p>
+                            <p>Das Boole'sche Retrieval ist ein klassisches Verfahren des <a href="glossar.html#I" title="Begriffe mit I">Information Retrieval</a> und basiert auf dem Exact Match Paradigma. Es prüft, ob eine wohldefinierte Bedingung erfüllt ist, oder nicht, basierend auf der Boole'schen Algebra. Die Grundidee ist es, Mengenoperationen auf Mengen von Dokumenten oder Objekten anzuwenden, die durch Attributwerte charakterisiert sind. Dabei werden die Terme der Anfragen mit Operatoren verknüpft, übliche Operatoren sind u.a.:  	AND	OR	und NOT</p>
                         </div>
                     </div>
                     <hr class="hr-line">
@@ -337,7 +257,7 @@
                     <div>
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Clustering</h2>
                         <div class="glossar-definition">
-                            <p>Clustering beschreibt eine Art der Klassifizierung von thematisch ähnlichen Objekten und ist ein Verfahren zur Inhaltserschließung. Dokumente, die einem Cluster zugeordnet werden sind sich also ähnlich. Man kann entweder viele Dokumente in wenig Clustern oder wenig Dokumente in vielen Clustern zusammenfassen. Die einzelnen Cluster können sich auch überschneiden, das bedeutet, dass bestimmte Dokumente aufgrund ihres Inhalts zu mehreren Clustern gehören können.</p>
+                            <p>Clustering beschreibt eine Art der Klassifizierung von thematisch ähnlichen Objekten und ist ein Verfahren zur <a href="glossar.html#I" title="Begriffe mit I">Inhaltserschließung</a>. Dokumente, die einem Cluster zugeordnet werden sind sich also ähnlich. Man kann entweder viele Dokumente in wenig Clustern oder wenig Dokumente in vielen Clustern zusammenfassen. Die einzelnen Cluster können sich auch überschneiden, das bedeutet, dass bestimmte Dokumente aufgrund ihres Inhalts zu mehreren Clustern gehören können.</p>
                         </div>
                     </div>
                     <hr class="hr-line">
@@ -371,9 +291,9 @@
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Data Manipulation Language (DML)</h2>
                         <div class="glossar-definition">
                             <p>Mit der Data Manipulation Language (Datenmanipulationssprache) können Daten selektiert, geändert und gelöscht werden. Zu den wichtigsten Anweisungen gehören:
-                            INSERT
+                                <a href="glossar.html#I" target="_blank" title="Alle Definitionen zu Buchstabe I">INSERT</a>
                             UPDATE
-                            DELETE
+                                <a href="glossar.html#D" target="_blank" title="Alle Defintionen zu Buchstabe D">DELETE</a>
                             </p>
                         </div>
                     </div>
@@ -389,6 +309,20 @@
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Datenmodell</h2>
                         <div class="glossar-definition">
                             <p>Ein Datenmodell legt die Eigenschaften, Struktur und Konsistenzbedingungen für in die Datenbank zu speichernde Datenelemente fest.</p>
+                        </div>
+                    </div>
+                    <hr class="hr-line">
+                    <div>
+                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Datenmodellierung</h2>
+                        <div class="glossar-definition">
+                            <p>Unter Datenmodellierung wird bei <a href="glossar.html#D" target="_blank" title="Alle Defintionen zu Buchstabe D">Datenbanken</a> das Erstellen des Datenbankschemas verstanden. Das Datenbankschema legt fest welche Daten in der Datenbank gespeichert werden und welche Beziehungen die Daten zueinander haben. Es gibt drei Arten der Datenmodellierung: Konzeptuelles Datenbankschema (semantisches Datenmodell), logisches Datenbankschema und physisches Datenbankschema.</p>
+                        </div>
+                    </div>
+                    <hr class="hr-line">
+                    <div>
+                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">DELETE (SQL-Befehl)</h2>
+                        <div class="glossar-definition">
+                            <p>Mit dem SQL-Befehl DELETE kann man Einträge aus der <a href="glossar.html#D" target="_blank" title="Alle Definitionen zu Buchstabe D">Datenbank</a>  löschen. Mittels DELETE kann man also beliebige Einträge aus einer Tabelle löschen, doch vorsicht: Wenn man die <a href="glossar.html#W" target="_blank" title="Alle Defintionen zu Buchstabe W">WHERE-Bedingung</a>   nicht setzt, werden alle Einträge innerhalb der Tabelle gelöscht.</p>
                         </div>
                     </div>
                     <hr class="hr-line">
@@ -425,7 +359,8 @@
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">E-Maß</h2>
                         
                         <div class="glossar-definition">
-                            <p>Um eine einzige Maßzahl zu gewinnen, mit der IR-Systeme verglichen werden können, müssen die beiden Standardmaße recall und precision miteinander verknüpft werden. Dies geschieht mit Hilfe des e-Maßes.</p>
+                            <p>Um eine einzige Maßzahl zu gewinnen, mit der IR-Systeme verglichen werden können, müssen die beiden Standardmaße recall und precision miteinander verknüpft werden. Dies geschieht mit Hilfe des <a href="formelsammlung.html#E" target="_blank" title="Alle Formeln zu Buchstabe E">E-Maßes:</a></p><br>
+                            <!--Verwendung von der Spezifikation MathML-->
                             <math>
                             <mstyle displaystyle="true">
                                 <mi>e</mi>
@@ -462,14 +397,13 @@
                             </mstyle>
                             </math>
                             <p>Achtung: Falls r = 0 oder p = 0, ergibt sich immer e = 1. Man kann dem Ergebnis jedoch nicht entnehmen, welcher Wert dazu beiträgt! Falls r = p, ergeben sich auch bei variierendem ß immer gleiche Werte für e, da ß gekürzt werden kann.</p><br>
-                            <a href="formelsammlung.html#E" target="_blank" title="Formel zu E-Maß">Weitere Informationen in der Formelsammlung</a><br>
                         </div>
                     </div>
                     <hr class="hr-line">
                     <div>
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Entität</h2>
                         <div class="glossar-definition">
-                            <p>Als Entität (auch Informationsobjekt) wird in der Datenmodellierung ein eindeutig zu bestimmendes Objekt bezeichnet, über das Informationen gespeichert oder verarbeitet werden sollen.</p>
+                            <p>Als Entität (auch Informationsobjekt) wird in der <a href="glossar.html#D" target="_blank" title="Alle Definitionen zu Buchstabe D">Datenmodellierung</a> ein eindeutig zu bestimmendes Objekt bezeichnet, über das Informationen gespeichert oder verarbeitet werden sollen.</p>
                         </div>
                     </div>
                     <hr class="hr-line">
@@ -486,8 +420,38 @@
                         <div class="glossar-definition">
                             <p>Fachinformationen sind aufbereitete und zur Verfügung gehaltene Information über verschiedene Wissensbereiche, speziell Fachwissen.</p>
                         </div>
-                        <hr class="hr-line">
                     </div>
+                    <hr class="hr-line">
+                    <div>
+                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Fakteninformationssystem (FIS)</h2>
+                        <div class="glossar-definition">
+                            <p>Die Basis von Fakteninformationssystemen bilden <a href="glossar.html#D" target="_blank" title="Alle Definitionen zu Buchstabe D">Datenbanken</a>. Um <a href="glossar.html#I" target="_blank" title="Alle Definitionen zu Buchstabe I">Informationen</a> in Datenbanken verwalten zu können, muss zunächst ein 'Datenbauplan' als Implementierungsgrundlage erstellt werden. Dies geschieht mit den Instrumenten der <a href="glossar.html#D" target="_blank" title="Alle Definitionen zu Buchstabe D">Datenmodellierung</a>. Der Zugriff auf die Daten einer Datenbank erfolgt mit der Datenbanksprache SQL.</p>
+                        </div>
+                    </div>
+                    <hr class="hr-line">
+                    <div>
+                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Fremdschlüssel</h2>
+                        <div class="glossar-definition">
+                            <p>Ein Fremdschlüssel ist ein <a href="glossar.html#A" target="_blank" title="Alle Definitionen zu Buchstabe A">Attribut</a> oder eine Attributkombination einer Relation, welches auf einen <a href="glossar.html#P" target="_blank" title="Alle Definitionen zu Buchstabe P">Primärschlüssel</a> (bzw. Schlüsselkandidaten) einer anderen oder der gleichen <a href="glossar.html#R" target="_blank" title="Alle Definitionen zu Buchstabe R">Relation</a> verweist.</p>
+                        </div>
+                    </div>
+                <hr class="hr-line">
+                <div>
+                    <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">FROM (SQL-Befehl)</h2>
+                    <div class="glossar-definition">
+                        <p>Der <a href="glossar.html#S" title="Begriffe mit S">SQL</a>-Befehl FROM greift bei einer
+                            SQL-Abfrage auf eine <a href="glossar.html#T" title="Begriffe mit T">Tabelle</a> zu.
+                        </p>
+                    </div>
+                </div>
+                <hr class="hr-line">
+                    <div>
+                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Funktion</h2>
+                        <div class="glossar-definition">
+                            <p>Mit <a href="glossar.html#S" target="_blank" title="Alle Definitionen zu Buchstabe S">SQL</a> Funktionen können bestimmte Werte einer Spalte berechnet oder bestimmte Werte mittels der SQL Funktionen im Nachhinein manipuliert werden. Es existieren zwei Arten von SQL Funktionen: SQL Aggregat Funktionen und SQL Skalar Funktionen.</p>
+                        </div>
+                    </div>
+                    <hr class="hr-line">
                     <h2 id="G" class="page-header">  G</h2>
                     <div>
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">GET (HTTP Request)</h2>
@@ -574,7 +538,14 @@
                     <div>
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">IaaS</h2>
                         <div class="glossar-definition">
-                            <p>Infrastructure as a Service</p>
+                            <p>Infrastructure as a Service: Ein Provider bietet Kunden Zugang zu Speicher, Netzwerkkomponenten, Servern und weiteren IT-Ressourcen in der Cloud, die auf der Basis der Nutzung abgerechnet werden.</p>
+                        </div>
+                    </div>
+                    <hr class="hr-line">
+                    <div>
+                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Implementierung</h2>
+                        <div class="glossar-definition">
+                            <p>Eine Implementierung – auch Implementation genannt – ist das Implementieren oder das Implementiert werden, also die Realisierung oder Umsetzung von festgelegten Strukturen und Prozessabläufen in einem System unter Berücksichtigung von Rahmenbedingungen, Regeln und Zielvorgaben, im Sinne einer Spezifikation.</p>
                         </div>
                     </div>
                     <hr class="hr-line">
@@ -611,16 +582,38 @@
                     </div>
                     <hr class="hr-line">
                     <div>
+                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">INSERT (SQL-Befehl)</h2>
+                        <div class="glossar-definition">
+                            <p>Der <a href="glossar.html#S" target="_blank" title="Alle Definitionen zu Buchstabe S">SQL</a>-Befehl INSERT ermöglicht es ein oder mehrere Datensätze in eine bestehende Tabelle einzufügen.</p>
+                        </div>
+                    </div>
+                    <hr class="hr-line">
+                    <div>
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Internet</h2>
                         <div class="glossar-definition">
-                            <p>weltweite Vernetzung von lokalen Netzwerken durch standardisierte Datenprotokolle (Netzverbund).</p>
+                            <p>Ist die weltweite Vernetzung von lokalen Netzwerken durch standardisierte Datenprotokolle (Netzverbund). Die beiden Bestandteile des Begriffs Internet, nämlich Inter = zwischen und Net = Netz verweisen darauf, dass es bei dem Terminus um den Austausch von Daten zwischen Computern über Telekommunikationsnetze geht.</p>
                         </div>
                     </div>
                     <hr class="hr-line">
                     <div>
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Instanz</h2>
                         <div class="glossar-definition">
-                            <p>Eine Instanz ist eine konkrete Realisierung eines Modells. Beispiel: In der Programmierung ist ein Objekt ist eine Instanz einer Klasse.</p>
+                            <p>In der IT gibt es zwei unterschiedliche Bedeutungen für den Begriff Instanz:<br/>
+                            1. In Bezug auf Infrastruktur ist eine Instanz eine funktionsfähige Einheit einer
+                            IT-Komponente,
+                            die einem Anwenderkreis zugeordnet ist. <br/>
+                            2. In der <a href="glossar.html#O" title="Begriffe mit O">Objektorientierten
+                                Programmierung</a>
+                            ist eine Instanz eine konkrete Realisierung eines Modells.
+                            Mit anderen Worten: Ein Objekt ist eine Instanz einer Klasse.
+                            </p>
+                        </div>
+                    </div>
+                    <hr class="hr-line">
+                    <div>
+                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Information Retrieval</h2>
+                        <div class="glossar-definition">
+                            <p>Information Retrieval (IR) ist in erster Linie textuelle Analyse und Repräsentation von Texten. IR umfasst die Erschließung und das Wiederauffinden von Informationsobjekten. </p>
                         </div>
                     </div>
                     <hr class="hr-line">
@@ -635,7 +628,7 @@
                     <div>
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Java</h2>
                         <div class="glossar-definition">
-                            <p>Java ist eine objektorientierte Programmiersprache, die 1995 erschienen ist.</p>
+                            <p>Java ist eine objektorientierte Programmiersprache, die 1995 erschienen ist. Es gibt eine täglich wachsende Anzahl von Anwendungen und Websites, die nur funktionieren, wenn auf dem Endgerät Java installiert ist.</p>
                         </div>
                     </div>
                     <hr class="hr-line">
@@ -646,11 +639,25 @@
                         </div>
                     </div>
                     <hr class="hr-line">
+                    <div>
+                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">JOIN (SQL-Befehl)</h2>
+                        <div class="glossar-definition">
+                            <p>Mit JOINS kann man zwei oder mehr <a href="glossar.html#T" title="Begriffe mit T">Tabellen</a> zusammenfügen, solange es eine Verbindung zwischen den Tabellen gibt. Es gibt verschiedene JOINS: LEFT JOIN, RIGHT JOIN und UNION.</p>
+                        </div>
+                    </div>
+                    <hr class="hr-line">
                     <h2 id="K" class="page-header">  K</h2>
+                    <div>
+                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Kardinalität</h2>
+                        <div class="glossar-definition">
+                            <p>Kardinalitäten sind Mengenangaben, mit denen in der Datenmodellierung für <a href="glossar.html#E" title="Begriffe mit E">Entity-Relationship-Modell (ER-Diagramm)</a> für jeden Beziehungstyp festgelegt wird, wie viele Entitäten eines Entitätstyps mit genau einer <a href="glossar.html#E" title="Begriffe mit E">Entität</a> des anderen am Beziehungstyp beteiligten Entitätstyps (und umgekehrt) in Beziehung stehen können oder müssen.</p>
+                        </div>
+                    </div>
+                    <hr class="hr-line">
                     <div>
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Keywords</h2>
                         <div class="glossar-definition">
-                            <p>Mit Keywords kannst du Stichwörter für ein Suchprogramm bestimmen.</p>
+                            <p>Mit Keywords kannst du Stichwörter für ein Suchprogramm bestimmen. Ein Keyword, auch Suchbegriff, Schlagwort, Schlüsselwort, oder Stichwort, bezeichnet also allgemein einen Eingegebenen Begriff in der Suchmaske einer Suchmaschine. Dieses Keyword wird daraufhin von den Suchmaschinen durch ihre Suchalgorithmen behandelt und mit dem jeweiligen Index abgeglichen. </p>
                         </div>
                     </div>
                     <hr class="hr-line">
@@ -664,7 +671,7 @@
                     <div>
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Konzeptionelles Datenmodell</h2>
                         <div class="glossar-definition">
-                            <p>Das konzeptionelle Datenmodell bildet den zu betrachtenden Realitätsausschnitt implementierungsunabhängig ab, d.h. es wird nicht festgelegt, mit welcher Programmiersprache die Datenbank umgesetzt werden muss bzw. welche Datenbankart aus der Implementierung resultiert. Ein konzeptionelles Datenmodell, das sich als Standard etabliert hat, ist das Entity-Relationship-Modell.</p>
+                            <p>Das konzeptionelle Datenmodell bildet den zu betrachtenden Realitätsausschnitt implementierungsunabhängig ab, d.h. es wird nicht festgelegt, mit welcher Programmiersprache die Datenbank umgesetzt werden muss bzw. welche Datenbankart aus der <a href="glossar.html#I" target="_blank" title="Alle Definitionen zu Buchstabe I">Implementierung</a> resultiert. Ein konzeptionelles <a href="glossar.html#D" target="_blank" title="Alle Definitionen zu Buchstabe D">Datenmodell</a>, das sich als Standard etabliert hat, ist das Entity-Relationship-Modell.</p>
                         </div>
                     </div>
                     <hr class="hr-line">
@@ -699,6 +706,13 @@
                     </div>
                     <hr class="hr-line">
                     <div>
+                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Modellierung</h2>
+                        <div class="glossar-definition">
+                            <p>Eine Modellierung ist das Entwickeln eines geeigneten Modells, also einer Abbildung der Realität. Dabei werden nur die Aspekte im Modell abgebildet, die für die Aufgabe relevant sind. Die Realität wird also vereinfacht dargestellt.</p>
+                        </div>
+                    </div>
+                    <hr class="hr-line">
+                    <div>
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Morphologie</h2>
                         <div class="glossar-definition">
                             <p>In der Morphologie wird die Zusammensetzung von Wörtern analysiert.</p>
@@ -722,9 +736,35 @@
                     <hr class="hr-line">
                     <h2 id="O" class="page-header">  O</h2>
                     <div>
-                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Object- Element</h2>
+                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Object - Element</h2>
                         <div class="glossar-definition">
                             <p>Das object-Element ermöglicht es externe Dateien zu referenzieren, die dann als Grafik dargestellt oder von externen Plugins verarbeitet werden.</p>
+                        </div>
+                    </div>
+                    <hr class="hr-line">
+                    <div>
+                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Objekt</h2>
+                        <div class="glossar-definition">
+                            <p>Exemplar von Personen, Gegenständen oder nichtmateriellen Dingen, über das <a href="glossar.html#I" title="Begriffe mit I">Informationen</a> gespeichert werden sollen.</p>
+                        </div>
+                    </div>
+                    <hr class="hr-line">
+                    <div>
+                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Objektorientierte Programmierung (OOP)</h2>
+                        <div class="glossar-definition">
+                            <p>Die Objektorientierte Programmierung ist ein Programmierparadigma. In der objektorientierten
+                            Programmierung werden alle Bestandteile des Quellcodes durch Objekte beschrieben. Dieses Konzept
+                            orientiert sich an der Realität, in der Objekte physisch vorstellbare Dinge sind (siehe auch
+                                <a href="glossar.html#E" title="Begriffe mit E">Entität</a>). Wichtige Konzepte in der OOP sind
+                                <a href="glossar.html#O" title="Begriffe mit O">Objekte</a>, Klassen, Vererbung und Polymorphie.
+                            </p>
+                        </div>
+                    </div>
+                    <hr class="hr-line">
+                    <div>
+                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Objekttyp</h2>
+                        <div class="glossar-definition">
+                            <p>Eine durch einen Objekttyp-Namen eindeutig benannte Klassen von <a href="glossar.html#O" title="Begriffe mit O">Objekten</a>, über die <a href="glossar.html#I" title="Begriffe mit I">Informationen</a> gespeichert werden und die in prinzipiell gleicher Weise verarbeitet werden.</p>
                         </div>
                     </div>
                     <hr class="hr-line">
@@ -753,8 +793,22 @@
                     <div>
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Precision </h2>
                         <div class="glossar-definition">
-                            <p>Quotient aus allen gefundenen relevanten Dokumenten und allen gefundenen Dokumenten.Precision beschreibt die Genauigkeit eines Ergebnisses. Das <a href="formelsammlung.html#F" target="_blank" title="Formel zum F-Maß">F-Maß</a> ist wichtig für die Berechnung eines kombinierten Maßes aus Recall und Precision.</p><br>
-                            <a href="formelsammlung.html#P" target="_blank" title="Formel zu Precision">Weitere Informationen in der Formelsammlung</a><br>
+                            <p>Quotient aus allen gefundenen relevanten Dokumenten und allen gefundenen Dokumenten. <a href="formelsammlung.html#P" target="_blank" title="Alle Formeln zu Buchstabe P">Precision</a> beschreibt die Genauigkeit eines Ergebnisses. Das <a href="formelsammlung.html#F" target="_blank" title="Formel zum F-Maß">F-Maß</a> ist wichtig für die Berechnung eines kombinierten Maßes aus Recall und Precision.</p><br>
+                            <br>
+                        </div>
+                    </div>
+                    <hr class="hr-line">
+                    <div>
+                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Primärschlüssel</h2>
+                        <div class="glossar-definition">
+                            <p>Ein Primärschlüssel dient der eindeutigen Identifizierung der einzelnen Zeilen in einer <a href="glossar.html#T" title="Begriffe mit T">Tabelle</a>. Er kann entweder Teil des eigentlichen Datensatzes oder ein künstliches Feld sein (das mit dem Datensatz nichts zu tun hat). Ein Primärschlüssel kann aus einem oder mehreren Feldern einer Tabelle bestehen. Primärschlüssel, die aus mehreren <a href="glossar.html#A" title="Begriffe mit A">Attributen</a> bestehen, werden als zusammengesetzte <a href="glossar.html#S" title="Begriffe mit S">Schlüssel</a> bezeichnet.</p>
+                        </div>
+                    </div>
+                    <hr class="hr-line">
+                    <div>
+                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Projektion</h2>
+                        <div class="glossar-definition">
+                            <p>Ein <a href="glossar.html#F" title="Begriffe mit F">Fremdschlüssel</a> ist ein <a href="glossar.html#A" title="Begriffe mit A">Attribut</a>oder eine Attributkombination einer <a href="glossar.html#R" title="Begriffe mit R">Relation</a>, welches auf einen <a href="glossar.html#P" title="Begriffe mit P">Primärschlüssel</a> (bzw. Schlüsselkandidaten) einer anderen oder der gleichen Relation verweist.</p>
                         </div>
                     </div>
                     <hr class="hr-line">
@@ -791,8 +845,8 @@
                     <div>
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Recall</h2>
                         <div class="glossar-definition">
-                            <p>Quotient aus allen relevanten gefundenen Dokumenten und allen relevanten Dokumenten. Recall beschreibt die Vollständigkeit eines Ergebnisses. Das <a href="formelsammlung.html#F" target="_blank" title="Formel zum F-Maß">F-Maß</a> ist wichtig für die Berechnung eines kombinierten Maßes aus Recall und Precision.</p><br>
-                            <a href="formelsammlung.html#R" target="_blank" title="Formel zu Recall">Weitere Informationen in der Formelsammlung</a><br>
+                            <p>Quotient aus allen relevanten gefundenen Dokumenten und allen relevanten Dokumenten. <a href="formelsammlung.html#R" target="_blank" title="Alle Formeln zu Buchstabe R">Recall</a> beschreibt die Vollständigkeit eines Ergebnisses. Das <a href="formelsammlung.html#F" target="_blank" title="Formel zum F-Maß">F-Maß</a> ist wichtig für die Berechnung eines kombinierten Maßes aus Recall und Precision.</p><br>
+
                         </div>
                     </div>
                     <hr class="hr-line">
@@ -811,9 +865,23 @@
                     </div>
                     <hr class="hr-line">
                     <div>
+                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Relation</h2>
+                        <div class="glossar-definition">
+                            <p>Eine Relation (Beziehung) verbindet zwei oder mehrere <a href="glossar.html#E" title="Begriffe mit E">Entitäten</a> wechselseitig miteinander.</p>
+                        </div>
+                    </div>
+                    <hr class="hr-line">
+                    <div>
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Relationale Datenbank</h2>
                         <div class="glossar-definition">
                             <p>Eine relationale Datenbank verwendet Relationen oder zweidimensionale Tabellen zum Speichern von Informationen.</p>
+                        </div>
+                    </div>
+                    <hr class="hr-line">
+                    <div>
+                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Relationenmodell</h2>
+                        <div class="glossar-definition">
+                            <p>In einem Relationalen Datenmodell werden die Daten in Tabellenform gespeichert, wobei jede Spalte der <a href="glossar.html#T" title="Begriffe mit T">Tabelle</a> ein Datenelement bzw. ein <a href="glossar.html#A" title="Begriffe mit A">Attribut</a> repräsentiert. Jedem Dateielement wird ein einfacher Datentyp zugeordnet. In jeder Tabellenzeile wird ein Datensatz gespeichert, der durch einen <a href="glossar.html#P" title="Begriffe mit P">Primärschlüssel</a> eindeutig identifizierbar ist. Beziehungen zwischen mehreren Tabellen werden über <a href="glossar.html#F" title="Begriffe mit F">Fremdschlüssel</a> hergestellt.</p>
                         </div>
                     </div>
                     <hr class="hr-line">
@@ -825,8 +893,15 @@
                     </div>
                     <hr class="hr-line">
                     <h2 id="S" class="page-header">  S</h2>
+                        <div>
+                            <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Schlagwort</h2>
+                            <div class="glossar-definition">
+                                <p>Als Schlagwort wird ein Ausdruck oder Spruch bezeichnet, durch den besondere Beachtung erzeugt werden soll. Davon zu unterscheiden ist das Schlagwort in der Bedeutung „Stichwort, Deskriptor“, wie es der inhaltlichen Erschließung von Dokumenten mittels Verschlagwortung gebraucht wird, zum Beispiel in Bibliotheken.</p>
+                            </div>
+                        </div>
+                        <hr class="hr-line">
                     <div>
-                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Schluessel</h2>
+                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Schlüssel</h2>
                         <div class="glossar-definition">
                             <p>Ein Schlüssel dient in einer relationalen Datenbank dazu, die Tupel (Datensätze) einer Relation (Tabelle) eindeutig zu identifizieren, sie zu nummern. Ein Schlüssel ist dann eine Gruppe von Spalten, die so ausgewählt wird, dass jede Tabellenzeile über den Werten dieser Spaltengruppe eine einmalige Wertekombination hat.</p>
                         </div>
@@ -836,6 +911,13 @@
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Schnittstelle</h2>
                         <div class="glossar-definition">
                             <p>Die Schnittstelle, auch Interface (englisch "Grenzfläche", Begriff ursprünglich aus der Naturwissenschaft), ist ein Teil eines Systems und dient der Kommunikation.</p>
+                        </div>
+                    </div>
+                    <hr class="hr-line">
+                    <div>
+                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">SELECT (SQL-Befehl)</h2>
+                        <div class="glossar-definition">
+                            <p>Der SQL SELECT Befehl ist der Grundstein für zahlreiche <a href="glossar.html#S" title="Begriffe mit S">SQL</a> Abfragen, die auf eine <a href="glossar.html#D" title="Begriffe mit D">Datenbank</a> ausgeführt werden können. Mithilfe des SQL SELECT Befehls ist es möglich Daten aus einer oder mehreren <a href="glossar.html#T" title="Begriffe mit T">Tabellen</a> über eine <a href="glossar.html#J" title="Begriffe mit J">JOIN</a> (Verbindung) abzufragen. Zusätzlich kann der SELECT Befehl mit einem Stern, also SELECT * <a href="glossar.html#F" title="Begriffe mit F">FROM</a> Tabelle ausgeführt werden, um auf alle Spalten der SQL SELECT Abfrage zuzugreifen.</p>
                         </div>
                     </div>
                     <hr class="hr-line">
@@ -856,14 +938,46 @@
                     <div>
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Stemming</h2>
                         <div class="glossar-definition">
-                            <p>Diese führt Wortformen auf ihren Stamm zurück, der im Allgemeinen keine in der Sprache als
-                                Wort vorkommende Form ist und z.B. für ein Verb und ein Substantiv gleich sein kann. Diese
-                                Reduktion von verschiedenen Formen eines Worts auf eine Grundform oder einen Stamm wird auch
-                                Lemmatisierung oder Stemming genannt.</p>
+                            <p>Ein Stichwort ist in der Dokumentation ein Wort, das der inhaltlichen Erschließung eines Dokumentes dient. Vom Standpunkt des Suchenden aus ist es der Suchbegriff.</p>
+                        </div>
+                    </div>
+                        <hr class="hr-line">
+                        <div>
+                            <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Stichwort</h2>
+                            <div class="glossar-definition">
+                                <p>Ein Stichwort ist in der Dokumentation ein Wort, das der inhaltlichen Erschließung eines Dokumentes dient. Vom Standpunkt des Suchenden aus ist es der Suchbegriff.</p>
+                            </div>
+                        </div>
+                    <hr class="hr-line">
+                    <div>
+                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Structured Query Language (SQL)</h2>
+                        <div class="glossar-definition">
+                            <p>Die Abkürzung SQL steht für den Begriff Structured Query Language und bezeichnet eine Sprache für die Kommunikation mit relationalen <a href="glossar.html#D" title="Begriffe mit D">Datenbanken</a>. Mit SQL-Befehlen lassen sich Daten relativ einfach einfügen, verändern oder löschen.</p>
                         </div>
                     </div>
                     <hr class="hr-line">
+                        <div>
+                            <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Suchanfrage</h2>
+                            <div class="glossar-definition">
+                                <p>Die Suchanfrage ist der Ausgangspunkt des Retrievals. Es ist eine konkrete Suchanfrage des Nutzers an ein <a href="glossar.html#I" title="Begriffe mit I"> IR-System</a>.</p>
+                            </div>
+                        </div>
+                        <hr class="hr-line">
+                        <div>
+                            <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Synonymie</h2>
+                            <div class="glossar-definition">
+                                <p>Synonyme oder Synonyma sind sprachliche Ausdrücke oder Zeichen, die zueinander in der Beziehung der Synonymie stehen – einer der grundlegenden Typen von Bedeutungsbeziehungen bzw. Sinnrelationen.</p>
+                            </div>
+                        </div>
+                        <hr class="hr-line">
                     <h2 id="T" class="page-header">  T</h2>
+                    <div>
+                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Tabelle</h2>
+                        <div class="glossar-definition">
+                            <p>Eine Tabelle ist eine Zusammenstellung von Daten, die in Zeilen und Spalten angeordnet sind. So können wichtige Daten in einem strukturierten Format in einer <a href="glossar.html#D" title="Begriffe mit D">Datenbank</a> gespeichert werden. Zusätzlich können die Elemente in der Tabelle bearbeitet oder auch in <a href="glossar.html#R" title="Begriffe mit R">Relation</a> gesetzt werden.</p>
+                        </div>
+                    </div>
+                    <hr class="hr-line">
                     <div>
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">TCP IP</h2>
                         <div class="glossar-definition">
@@ -881,11 +995,25 @@
                     <div>
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Traffic </h2>
                         <div class="glossar-definition">
-                            <p>Der Daten- bzw. Besucherstrom auf einer Webseite. Der Traffic der eigenen Seite kann anhand der Logfiles bzw. eines Analysetools eingesehen werden. Für fremde Webseiten bietet Alexa einen Anhaltspunkt über den Traffic anhand des Alexa Traffic Ranks.</p>
+                            <p>Der Daten- bzw. Besucherstrom auf einer Webseite. Der Traffic der eigenen Seite kann anhand der Logfiles bzw. eines Analysetools eingesehen werden.</p>
+                        </div>
+                    </div>
+                    <hr class="hr-line">
+                    <div>
+                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Tupel</h2>
+                        <div class="glossar-definition">
+                            <p>Der Begriff Tupel wird in der Informatik für geordnete Wertesammlungen (eindimensionale Arrays) und – insbesondere in der relationalen Algebra – als Synonym für Datensatz verwendet. Seine Werte werden als Attribute (Datenfeld) bezeichnet.</p>
                         </div>
                     </div>
                     <hr class="hr-line">
                     <h2 id="U" class="page-header">  U</h2>
+                    <div>
+                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">UPDATE (SQL-Befehl)</h2>
+                        <div class="glossar-definition">
+                            <p>Mit dem <a href="glossar.html#S" title="Begriffe mit S">SQL</a>-Befehl UPDATE, kannst du Werte aktualisieren. Wenn man bei der UPDATE-Operation keine Eingrenzung mit <a href="glossar.html#W" title="Begriffe mit W">WHERE</a> setzt, werden alle Werte der Spalte für die jeweilige <a href="glossar.html#T" title="Begriffe mit T">Tabelle</a> auf den neuen Wert geändert. In der Regel möchte man aber nur den Wert einer bestimmten Zeile ändern, daher sollte man unbedingt darauf achten, die WHERE-Bedingung zu setzen.</p>
+                        </div>
+                    </div>
+                    <hr class="hr-line">
                     <div>
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Usability-Test</h2>
                         <div class="glossar-definition">
@@ -920,10 +1048,16 @@
                     <hr class="hr-line">
                     <h2 id="W" class="page-header">  W</h2>
                     <div>
+                        <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">WHERE (SQL-Befehl)</h2>
+                        <div class="glossar-definition">
+                            <p>Mithilfe des <a href="glossar.html#S" title="Begriffe mit S">SQL</a> WHERE-Befehls werden in SQL Abfragen nur bestimmten Datensätze ausgewählt. Der SQL WHERE-Befehl funktioniert im Prinzip wie ein Filter, der es ermöglicht, nur Datensätze anzuzeigen, die bestimmte Kriterien erfüllen. Soll ein SQL Statement eine bestimmte Bedingung erfüllen, muss eine WHERE-Bedingung eingebaut und erfüllt werden, damit die Abfrage eine Ergebnismenge liefern kann.</p>
+                        </div>
+                    </div>
+                    <hr class="hr-line">
+                    <div>
                         <h2 class="glossar-wort tooltip-test" title="Klicken zum Aufklappen">Wissen</h2>
                         <div class="glossar-definition">
-                            <p>Wissen definiert gespeicherte Erkenntnisse, die durch Erfahrungen oder Lernen erworben werden.
-                            </p>
+                            <p>Wissen definiert gespeicherte Erkenntnisse, die durch Erfahrungen oder Lernen erworben werden.</p>
                         </div>
                     </div>
                     <hr class="hr-line">
@@ -974,11 +1108,43 @@
                         </div>
                     </div>
                     <hr class="hr-line">
+                    <p class="page-header"></p>
             </div>
         </div>
-
-        </div>
     </div>
+    </br>
+    </br>
+    <footer>
+        <!--Liste der Unternavigation A-Z. Die Buchstaben A-Z werden nicht unterstrichen. Dies sieht schicker aus und im Handy-Modus nicht so bedrückend. Style dazu im css.-->
+        <ul>
+            <li><a href="#A" title="Zu Wörtern mit A">A</a></li>
+            <li><a href="#B" title="Zu Wörtern mit B">B</a></li>
+            <li><a href="#C" title="Zu Wörtern mit C">C</a></li>
+            <li><a href="#D" title="Zu Wörtern mit D">D</a></li>  
+            <li><a href="#E" title="Zu Wörtern mit E">E</a></li>  
+            <li><a href="#F" title="Zu Wörtern mit F">F</a></li>  
+            <li><a href="#G" title="Zu Wörtern mit G">G</a></li>  
+            <li><a href="#H" title="Zu Wörtern mit H">H</a></li>  
+            <li><a href="#I" title="Zu Wörtern mit I">I</a></li>  
+            <li><a href="#J" title="Zu Wörtern mit J">J</a></li>  
+            <li><a href="#K" title="Zu Wörtern mit K">K</a></li>  
+            <li><a href="#L" title="Zu Wörtern mit L">L</a></li>  
+            <li><a href="#M" title="Zu Wörtern mit M">M</a></li>
+            <li><a href="#N" title="Zu Wörtern mit N">N</a></li>
+            <li><a href="#O" title="Zu Wörtern mit O">O</a></li>
+            <li><a href="#P" title="Zu Wörtern mit P">P</a></li>
+            <li><a href="#Q" title="Zu Wörtern mit Q">Q</a></li>
+            <li><a href="#R" title="Zu Wörtern mit R">R</a></li>
+            <li><a href="#S" title="Zu Wörtern mit S">S</a></li>
+            <li><a href="#T" title="Zu Wörtern mit T">T</a></li>
+            <li><a href="#U" title="Zu Wörtern mit U">U</a></li>
+            <li><a href="#V" title="Zu Wörtern mit V">V</a></li>
+            <li><a href="#W" title="Zu Wörtern mit W">W</a></li>
+            <li><a href="#X" title="Zu Wörtern mit X">X</a></li>
+            <li><a href="#Y" title="Zu Wörtern mit Y">Y</a></li>
+            <li><a href="#Z" title="Zu Wörtern mit Z">Z</a></li>
+        </ul>
+    </footer>
 </div>
 <script type="text/javascript" src="fmsglo.js"></script>
 </body>
