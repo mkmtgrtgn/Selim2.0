@@ -1,20 +1,19 @@
 <!doctype html>
 <html lang="de">
-  <head>
-      <!-- Required meta tags -->
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Bootstrap CSS und JS Bundle -->
-      <link href="../static/css/bootstrap.css" rel="stylesheet">
-      <link href="main.css" rel="stylesheet">
+    <!-- Bootstrap CSS und JS Bundle -->
+    <link href="../static/css/bootstrap.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
 
-      <!-- Der Font muss noch importiert werden -->
-      <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;600;700&display=swap" rel="stylesheet">
-      <title>Selim 2.0</title>
-  </head>
-  <body>
-
+    <!-- Der Font muss noch importiert werden -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;600;700&display=swap" rel="stylesheet">
+    <title>Selim 2.0</title>
+</head>
+<body>
     <div class="navi">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
@@ -73,13 +72,13 @@
                 <p>
                   <div class="btn-group">
                     <a href="gdi.html" class="btn btn-primary">Inhaltsverzeichnis</a>
-                    <a href="gdi-evaluierung.html" class="btn btn-primary">Zurück</a>
-                    <a href="gdi-Multimedia.html" class="btn btn-primary">Vorwärts</a>
+                    <a href="gdi-mmi.html" class="btn btn-primary">Zurück</a>
+                    <a href="gdi-Informationsmangement.html" class="btn btn-primary">Vorwärts</a>
                   </div>
                 </p>
                 <div class="progress">
                   <div class="progress-bar progress-bar-striped bg-success" role="progressbar"
-                  aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                  aria-valuenow="77" aria-valuemin="0" aria-valuemax="100" style="width:77%">
                     <!--<strong>40% abgeschlossen</strong>!-->
                   </div>
                 </div>
@@ -90,24 +89,48 @@
 
         <h1 class="text-center">
           <span class="badge rounded-pill bg-warning">THEMA</span>
-          Mensch-Maschine-Interaktion
+          Multimedia
         </h1>
 
-        <p>Ein <strong>Informationssystem</strong> kann nur so gut sein wie seine Schnittstelle zum Benutzer.
-        Aufgabe des Forschungsbereiches der <strong>Mensch-Maschine-Interaktion (MMI)</strong> ist daher die aufgaben- und benutzergerechte Gestaltung dieser Schnittstelle,
-        um eine möglichst unkomplizierte, intuitive Interaktion zwischen Mensch und System zu ermöglichen.</p>
+        <p>
+          Neben natürlichsprachigen Texten gewinnt die Wissensrepräsentation durch multimediale Elemente zunehmend an Bedeutung. Medien wie Grafiken, Bilder, Ton- und Videosequenzen und Kombinationen verschiendener Elemente kommen zum Einsatz. In Hypermediasystemen sind die einzelnen Informations-Objekte nicht-linear miteinander vernetzt. Aus informationswissenschaftlicher Perspektive steht nicht
+          allein die technische Umsetzung, sondern vor allem die sinnvolle Nutzung von Multimedia zur Vermittlung
+          von Informationen im Vordergrund.
+        </p>
+        <p>
+          Für manche Inhalte sind andere Medien besser geeignet als Texte oder können diese
+          wirksam unterstützen. So wie im Beispiel unten: <br> Lies den Text und klicke
+          anschließend auf die Schaltfläche <strong>Bild anzeigen</strong>
+        </p>
 
-        <p>Vor allem auf Basis der <strong>Kriterien der Software-Ergonomie</strong>  wird die Benutzeroberfläche und der gesamte Informationsprozess gestaltet und optimiert.
-        Auch wenn diese Kriterien das Fundament für eine benutzerfreundliche Gestaltung bilden,
-        so entscheiden letztendlich die <strong>Bedürfnisse der Zielgruppe</strong>  über die Gestaltung.
-        Nutzertests sind daher eines der wichtigsten Kriterien bei der Evaluierung der MMI innerhalb eines Informationsystems.</p>
-        <p>Die Software-Ergonomie stellt Kriterien für die benutzerfreundliche Gestaltung von computerbasierten Arbeits- und Lernsystemen auf,
-        um Arbeitsabläufe so effektiv wie möglich zu gestalten.</p>
+        <p>Welchen Eindruck verschafft dir das Lesen des Textes und welchen Eindruck verschafft dir die Betrachtung des Bildes? Vergleiche.</p>
 
-        <p>Mehr über die Zusammenhänge und Verfahren des Lehrgebiets erfahren Sie im Lernmodul <strong>Software-Ergonomie</strong>.</p>
+        <br>
+        <ul>
+          <li class="list-group-item text-center">
+            <strong>Ornithorhynchus anatinus:</strong> <br>Es besitzt einen dichten Pelz und einen dicken Schwanz.
+            Namensgebend ist der gummiartige, entenähnliche Schnabel. An seinen Vorderextremitäten besitzt es eine breite Schwimmhaut.
+          </li>
+        </ul>
+        <br>
+
+        <div id="accordion">
+          <div class="card">
+            <div class="card-header">
+              <a class="btn" data-bs-toggle="collapse" href="#collapseOne">
+                <b>Bild anzeigen</b>
+              </a>
+            </div>
+            <div id="collapseOne" class="collapse" data-bs-parent="#accordion">
+              <div class="card-body">
+                <div class="text-center"><img src="schnabeltier.jpg" alt="Schnabeltier"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
-
   </body>
   <script src="../static/js/bootstrap.bundle.js"></script>
 </html>

@@ -10,13 +10,17 @@ body{
 }
 
 h1, h2, h3 {
+  padding:1vw; /*1% of view port width */
+  color: var(--schriftfarbe);
 }
 
 .navbar-brand {
+  /*
     margin-left: 1vw;
     font-weight: 600;
-    color:var(--schriftfarbe);
     font-size:42px;
+  */
+    color:var(--schriftfarbe);
 }
 
 .navi{
@@ -59,6 +63,15 @@ Hier wollte er die Farbe sonst nicht ändern
     min-height:42vh;
 }
 
+#content_lp {
+    background-color: var(--hauptfarbe);
+    padding:1%;
+    border:solid rgba(128, 128, 128, 0.42);
+    border-radius: 16px;
+    display:block;
+    overflow:auto;
+}
+
 .bg:hover {
     corner-radius:4px;
     background-image: linear-gradient(180deg, var(--hauptfarbe), var(--hintergrund));
@@ -93,4 +106,21 @@ p {
 quizbutton {
     display:inline-block;
     float:right;
+}
+
+.cirlce{
+    width:450px;
+    height:450px;
+    background:#F2F2F2;
+    margin: auto;
+    line-height: 15px;
+    border-radius: 50%;
+}
+
+.circle_content{
+    position:absolute;
+    width: inherit;
+    height: auto;
+    text-align: center;
+    padding: 30px;
 }
