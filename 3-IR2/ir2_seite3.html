@@ -19,53 +19,58 @@
 <body>
     <div class="container-fluid">
 
-        <!--Navigationsleiste-->
-        <nav class="navbar navbar-light navbar-expand-lg navbar-fixed-top">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <!-- Navbar Brand: Logo der Uni Hildesheim, sowie unser Modulname-->
-                <a class="navbar-brand">
-                    <!--Desktop und Tablet/großer oder mittel-großer Viewport; Klick auf Bild soll dann auf die erste Seite/eine Einfürungsseite führen-->
-                    <span class="d-none d-sm-block">
-                        <!--Uni-Logo sowie lange Bezweichnung unseres Moduls-->
-                        <img class="d-inline-block align-text-center" src="../uni_logo.png" width="70" height="70" alt="Universität Hildesheim" style="padding-right: 20;">
-                        SELiM - IR Retrievalstrategien
 
-                    </span>
-                    <!--Handy/kleiner Viewport - Abkürzung der Bezeichnung unseres Viewports-->
+    <!--Navigationsleiste-->
+    <div class="navi">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon navbar-light"></span>
+                </button>
+
+                <a class="navbar-brand">
+          <span class="d-none d-sm-block">
+            <img class="d-inline-block align-text-center" src="../uni_logo.png" width="70" height="70"
+                 alt="Universität Hildesheim" style="padding-right: 20;">
+            SELiM - IR Retrievalstrategien
+          </span>
                     <span class="d-sm-none">IR2</span>
                 </a>
 
-                <!--Menü für verschiedene Module-->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="https://www.uni-hildesheim.de/selim/miniTemplateSystem/index.php">Startseite</a>
+                            <a class="nav-linki active" aria-current="page" href="../home.html">Home</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Alle SELiM Module</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="https://www.uni-hildesheim.de/selim/Modul_GDI/GDI_Einstieg.php" >Grundbegriffe IW</a></li>
-                                <li><a class="dropdown-item" href="https://www.uni-hildesheim.de/selim/Modul_IR/IR_1_bekog_SELIM/inhalt.php">Information Retrieval 1</a></li>
-                                <li><a class="dropdown-item" href="https://www.uni-hildesheim.de/selim/Modul_IR/IR_3_bekog_SELIM/r_inhalt.php">Information Retrieval 3</a></li>
-                                <li><a class="dropdown-item" href="https://www.uni-hildesheim.de/selim/miniTemplateSystem/module/evaIR/inhalt_eva.php">Evaluierung von IR Systemen</a></li>
-                                <li><a class="dropdown-item" href="https://www.uni-hildesheim.de/selim/miniTemplateSystem/module/fis/inhalt_fis.php">Fakteninformationssysteme</a></li>
-                                <li><a class="dropdown-item" href="https://www.uni-hildesheim.de/selim/miniTemplateSystem/module/mue/inhalt_mue.php">Maschinelle Übersetzung</a></li>
+                            <a class="nav-linki dropdown-toggle" href="#" id="navDrop1" role="button" data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                Module
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navDrop1">
+                                <li><a class="dropdown-item bg" href="../1-GDI/gdi.html">GDI</a></li>
+                                <li><a class="dropdown-item bg" href="../2-IR1/ir1.html">IR1</a></li>
+                                <li><a class="dropdown-item bg" href="../3-IR2/ir2_startseite.html">IR2</a></li>
+                                <li><a class="dropdown-item bg" href="../4-IR3/ir3.html">IR3</a></li>
+                                <li><a class="dropdown-item bg" href="../5-FIS/inhaltsverzeichnis.html">FIS</a></li>
                             </ul>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link" href="../6-CSS-GLOSSAR-FRMLS/glossar.html">Glossar</a>
+                            <a class="nav-linki active" aria-current="page" href="../6-CSS-GLOSSAR-FRMLS/glossar.html">Glossar</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../6-CSS-GLOSSAR-FRMLS/formelsammlung.html">Formelsammlung</a>
+                            <a class="nav-linki active" aria-current="page"
+                               href="../6-CSS-GLOSSAR-FRMLS/formelsammlung.html">Formelsammlung</a>
                         </li>
                     </ul>
                 </div>
-
             </div>
         </nav>
+    </div>
+
 
 
 

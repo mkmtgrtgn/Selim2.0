@@ -18,15 +18,25 @@
 </head>
 
 <body>
+
+    <!--Navigationsleiste-->
     <div class="navi">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                        aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon navbar-light"></span>
                 </button>
-                <a class="navbar-brand" href="#">Selim</a>
+
+                <a class="navbar-brand">
+          <span class="d-none d-sm-block">
+            <img class="d-inline-block align-text-center" src="../uni_logo.png" width="70" height="70"
+                 alt="Universität Hildesheim" style="padding-right: 20;">
+            SELiM - IR Retrievalstrategien
+          </span>
+                    <span class="d-sm-none">IR2</span>
+                </a>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -34,8 +44,8 @@
                             <a class="nav-linki active" aria-current="page" href="../home.html">Home</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-linki dropdown-toggle" href="#" id="navDrop1" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-linki dropdown-toggle" href="#" id="navDrop1" role="button" data-bs-toggle="dropdown"
+                               aria-expanded="false">
                                 Module
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navDrop1">
@@ -44,37 +54,22 @@
                                 <li><a class="dropdown-item bg" href="../3-IR2/ir2_startseite.html">IR2</a></li>
                                 <li><a class="dropdown-item bg" href="../4-IR3/ir3.html">IR3</a></li>
                                 <li><a class="dropdown-item bg" href="../5-FIS/inhaltsverzeichnis.html">FIS</a></li>
-
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item bg" href="#">und was ganz anderes</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-linki dropdown-toggle" href="#" id="navDrop2" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Account?
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navDrop2">
-                                <li><a class="dropdown-item bg" href="#">Dieses Thema</a></li>
-                                <li><a class="dropdown-item bg" href="#">Jenes Thema</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item bg" href="#">und was ganz anderes</a></li>
-                            </ul>
+
+                        <li class="nav-item">
+                            <a class="nav-linki active" aria-current="page" href="../6-CSS-GLOSSAR-FRMLS/glossar.html">Glossar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-linki active" aria-current="page"
+                               href="../6-CSS-GLOSSAR-FRMLS/formelsammlung.html">Formelsammlung</a>
                         </li>
                     </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="optionale Suche?"
-                            aria-label="optionale Suche!">
-                        <button class="btn btn-outline-success" type="submit">Such!</button>
-                    </form>
                 </div>
             </div>
         </nav>
     </div>
+
 
 
     <div id="content">
