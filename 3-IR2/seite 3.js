@@ -1,3 +1,5 @@
+// mit einem Klick wird die Darstellung des Textes geändert. Standardmäßig ist dieser verborgen
+
 function myFunction() {
   var a = document.getElementById("Info-1");
   if (a.style.display === "block") {
