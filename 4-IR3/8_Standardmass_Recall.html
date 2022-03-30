@@ -25,7 +25,7 @@
                     <!--Desktop und Tablet/großer oder mittel-großer Viewport; Klick auf Bild soll dann auf die erste Seite/eine Einfürungsseite führen-->
                     <span class="d-none d-sm-block">
                         <!--Uni-Logo sowie lange Bezweichnung unseres Moduls-->
-                        <img class="d-inline-block align-text-center" src="assets/uni_logo.png" width="70" height="70" alt="Universität Hildesheim" style="padding-right: 20;">
+                        <img class="d-inline-block align-text-center" src="assets/uni_logo.png" id="uni-logo" alt="Universität Hildesheim">
                         SELiM - Evaluierung IR
                         
                     </span>
@@ -85,14 +85,16 @@
 
                     <!--Beispiel mit Text links und Bild rechts-->
                     <div class="col-md-8">
-                        <p>Die Fähigkeit eines Systems, relevante Dokumente zu liefern, wird als recall bezeichnet (wie viele der relevanten Dokumente sind gefunden?). Recall steht für das Verhältnis der relevanten Dokumente, die das System ermittelt hat (<b style="color: #8eacac">a</b>) zu allen relevanten Dokumenten einer Dokumentmenge (<a href="formelsammlung.html#R" style="text-decoration: none;"><b style="color: #8eacac;">a</b> + <b style="color: #596c6c">c</b></a>). Als Formel ausgedrückt bedeutet das:</p>
+                        <p>Die Fähigkeit eines Systems, relevante Dokumente zu liefern, wird als Recall bezeichnet (wie viele der relevanten Dokumente sind gefunden?). Recall steht für das Verhältnis der relevanten Dokumente, die das System ermittelt hat (<b style="color: #8eacac">a</b>), zu allen relevanten Dokumenten einer Dokumentmenge (<a href="formelsammlung.html#R" style="text-decoration: none;"><b style="color: #8eacac;">a</b> + <b style="color: #596c6c">c</b></a>). Als Formel ausgedrückt bedeutet das:</p>
                     <img src="assets/Grafik_RecallFormel.PNG" alt= "Recall Formel" style="height:70px; width:auto;"></img>
                     </div>
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-md-5">
                        <h4>Wichtig für den Recall</h4> 
-                            <p>Bei der Berechnung des recall ist der Elementarparameter c in der Regel unbekannt und muss geschätzt werden (z. B. mit der Pooling-Methode). Bei sehr großen Ergebnismengen ist es nicht immer möglich, a genau zu bestimmen, da nicht alle Dokumente gesichtet werden können. Daher wird die Ergebnismenge häufig 'abgeschnitten' (cut off). Wertebereich: 0 bis 1; ein guter Wert ist 1, ein schlechter Wert. Idealerweise sollte das System alle relevanten Dokumente finden. Dieses Ziel ist allerdings unrealistisch. Ein guter Wert für ein System liegt bei 60 %. Recall alleine berücksichtigt den Ballast nicht, den die Antwortmenge enthält. Deshalb muss der Precision-Wert miteinbezogen werden. Zu diesem Zweck versucht man, die beiden Maße zu koordinieren. Bei Ranking-Systemen sagt recall nichts darüber aus, wie gut das System die Dokumente sortiert hat.</p>
+                            <p>Bei der Berechnung des Recall ist der Elementarparameter <b style="color: #596c6c">c</b> in der Regel unbekannt und muss geschätzt werden (z. B. mit der Pooling-Methode). Bei sehr großen Ergebnismengen ist es nicht immer möglich, <b style="color: #8eacac">a</b> genau zu bestimmen, da nicht alle Dokumente gesichtet werden können. Daher wird die Ergebnismenge häufig 'abgeschnitten' (cut off). 
+                            </br></br>Wertebereich: 0 bis 1; ein guter Wert ist 1, ein schlechter Wert ist 0. 
+                            </br></br>Idealerweise sollte das System alle relevanten Dokumente finden. Dieses Ziel ist allerdings unrealistisch. Ein guter Wert für ein System liegt bei 60%/0,6. </br>Wird jedoch nur der Recall berechnet, so wird der Ballast der Antwortdokumentmenge des Systems in der Qualitätsbeurteilung des Retrievals nicht betrachtet. Für den Einbezug des Ballasts wird der Precision-Wert berechnet. Anschließend werden beide Werte für die Qualitätsbewertung miteinander koordiniert. Bei Ranking-Systemen sagt Recall nichts darüber aus, wie gut das System die Dokumente sortiert hat.</p>
                     </div>   
                     <div class="col-md-3">
                         <img class="img-fluid" src="assets/Grafik_Recall.svg" alt= "Effektivität Precision">

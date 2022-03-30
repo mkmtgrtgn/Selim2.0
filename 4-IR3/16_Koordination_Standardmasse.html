@@ -24,7 +24,7 @@
                     <!--Desktop und Tablet/großer oder mittel-großer Viewport; Klick auf Bild soll dann auf die erste Seite/eine Einfürungsseite führen-->
                     <span class="d-none d-sm-block hidden-xs hidden-sm">
                         <!--Uni-Logo sowie lange Bezweichnung unseres Moduls-->
-                        <img class="d-inline-block align-text-center" src="assets/uni_logo.png" width="70" height="70" alt="Universität Hildesheim" style="padding-right: 20;">
+                        <img class="d-inline-block align-text-center" src="assets/uni_logo.png" id="uni-logo" alt="Universität Hildesheim">
                         SELiM - Evaluierung IR
                         
                     </span>
@@ -78,7 +78,7 @@
                     <!--Textueller Inhalt zum Thema Koordination der Standardmaße-->
                     <div class="row justify-content-center">
                         <p>
-                            Möchte man recall-precision-Paare zweier Systeme vergleichen, gilt, dass (R1, P1) 'besser' ist als (R2, P2), wenn</br></br>
+                            Möchte man Recall-Precision-Paare zweier Systeme vergleichen, gilt: (R1, P1) ist 'besser' als (R2, P2), wenn</br></br>
     
                             R1 >= R2 & P1 > P2 </br></br>
     
@@ -86,7 +86,7 @@
     
                             R1 > R2 & P1 >= P2</br></br>
     
-                            Dabei ist allerdings zu bedenken, dass der Benutzer auch Präferenzen haben kann, die für ihn entweder recall oder precision wichtiger werden lassen. Möchte er sich umfassend und detailliert informieren, ist hoher recall entscheidend. Möchte er möglichst schnell einen Überblick gewinnen, ist gute precision wichtiger. Daher wäre es nützlich, die einzelnen Maße entsprechend gewichten zu können.
+                            Dabei ist allerdings zu beachten, dass der Benutzer auch Präferenzen haben kann, die für ihn entweder Recall oder Precision wichtiger werden lassen. Möchte er sich umfassend und detailliert informieren, ist ein hoher Recall entscheidend. Möchte er möglichst schnell einen Überblick gewinnen, ist gute Precision wichtiger. Daher wäre es nützlich, die einzelnen Maße entsprechend gewichten zu können.
     
     
                         </p>

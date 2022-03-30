@@ -22,7 +22,7 @@
                     <!--Desktop und Tablet/großer oder mittel-großer Viewport; Klick auf Bild soll dann auf die erste Seite/eine Einfürungsseite führen-->
                     <span class="d-none d-sm-block">
                         <!--Uni-Logo sowie lange Bezweichnung unseres Moduls-->
-                        <img class="d-inline-block align-text-center" src="assets/uni_logo.png" width="70" height="70" alt="Universität Hildesheim" style="padding-right: 20;">
+                        <img class="d-inline-block align-text-center" src="assets/uni_logo.png" id="uni-logo" alt="Universität Hildesheim">
                         SELiM - Evaluierung IR
                         
                     </span>
@@ -81,13 +81,14 @@
                     <!--Textueller Inhalt-->
                     <div class="row justify-content-center">
                         <p>
-                            Um eine einzige Maßzahl zu gewinnen, mit der IR-Systeme verglichen werden könnnen, müssen die beiden Standardmaße recall und precision miteinander verknüpft werden. Dies geschieht mit Hilfe des e-Maßes:</br></br>
+                            Um eine einzige Maßzahl zu gewinnen, mit der IR-Systeme verglichen werden könnnen, müssen die beiden Standardmaße Recall und Precision miteinander verknüpft werden. Dies geschieht mit Hilfe des e-Maßes:</br></br>
                             <img class="img-fluid" src="assets/Grafik_Emass.png"></img></br></br>
-                            Der Parameter ß wird je nach Situation gewählt. Er spiegelt die relative Wichtigkeit von recall und precision wieder. Bei ß = 0.5 (bzw. ß = 2.0) ist precision doppelt (bzw. halb) so stark gewichtet wie recall. Bei ß = 1.0 sind beide Maße gleich gewichtet. Der Wertebereich von e reicht von 0 bis 1. Je niedriger der ermittelte Wert, desto besser ist das System (1 ist am schlechtesten, 0 am besten).</br></br>
+                            Der Parameter ß wird je nach Situation gewählt. Er spiegelt die relative Wichtigkeit von Recall und Precision wieder. Bei ß = 0.5 (bzw. ß = 2.0) wird die Precision doppelt (bzw. halb) so stark gewichtet wie der Recall. Bei ß = 1.0 sind beide Maße gleich gewichtet. 
+                        </br></br>Der Wertebereich des e-Maßes reicht von 0 bis 1. Je niedriger der ermittelte Wert, desto besser ist das System (1 ist am schlechtesten, 0 am besten).</br></br>
     
                             Falls r = 0 oder p = 0, ergibt sich immer e = 1. Man kann dem Ergebnis jedoch nicht entnehmen, welcher Wert dazu beiträgt!
-                            Falls r = p, ergeben sich auch bei variierendem ß immer gleiche Werte für e, da ß gekürzt werden kann.
-                            ß bewegt sich sinnvollerweise im Bereich von 0 bis 10.
+                        </br>Falls r = p, ergibt sich auch bei variierendem ß immer gleiche Werte für das e-Maß, da ß gekürzt werden kann.
+                        </br>ß bewegt sich sinnvollerweise im Bereich von 0 bis 10.
     
                         </p>
                     </div>

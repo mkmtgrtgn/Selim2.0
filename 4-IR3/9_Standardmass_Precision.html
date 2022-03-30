@@ -25,7 +25,7 @@
           <!--Desktop und Tablet/großer oder mittel-großer Viewport; Klick auf Bild soll dann auf die erste Seite/eine Einfürungsseite führen-->
           <span class="d-none d-sm-block">
             <!--Uni-Logo sowie lange Bezweichnung unseres Moduls-->
-            <img class="d-inline-block align-text-center" src="assets/uni_logo.png" width="70" height="70" alt="Universität Hildesheim" style="padding-right: 20;">
+            <img class="d-inline-block align-text-center" src="assets/uni_logo.png" id="uni-logo" alt="Universität Hildesheim">
             SELiM - Evaluierung IR
 
           </span>
@@ -87,18 +87,18 @@
           <!-- Hier noch die die Formel anpassen.-->
           <img src="assets/Grafik_PrecisionFormel.png" style="height:70px; width:auto;" alt= "Precision Formel">
           <!-- Merkhilfe hat im Orginal noch farblichen Kasten-->
-          <p>Eselsbrücke: <b style="color: #DEC6AC">b</b> steht für <b>Ballast </b>
+          <p></br>Eselsbrücke: <b style="color: #DEC6AC">b</b> steht für <b>Ballast </b>
           </div>
         </div>
 
       <div class="row justify-content-center">
           <div class="col-md-5">
             <h4>Wichtig für die Precision</h4>
-            <p>Oftmals ist precision für den Benutzer das wichtigere Maß, da es zumeist nicht auf die Vollständigkeit eines Ergebnisses ankommt, sondern darauf, dass man möglichst wenig Ballast geliefert bekommt (Ausnahme z. B. Patentrecherche, hier kommt es v. a. darauf an, dass kein Dokument übersehen wird).
-              Wertebereich: 0 bis 1; ein guter Wert ist 1, ein schlechter Wert ist 0.
-              Ist eine Ergebnismenge sehr groß, wird es im Normalfall schwierig (<b style="color: #8eacac">a</b>) genau zu bestimmen, da nicht unbedingt alle Dokumente gesichtet werden können. Daher wird die Ergebnismenge häufig 'abgeschnitten' (cut off).
-              Um die Sortierleistung eines ranking-Systems zu beurteilen reicht precision alleine nicht aus; dazu benötigt man einen recall-precision-Graph, der recall und precision dokumentweise in Beziehung setzt.
-              recall und precision sind voneinander abhängig: je vollständiger das Ergebnis ist (besserer recall), desto mehr Ballast wird zwangsläufig geliefert (schlechtere precision).</p>
+            <p>Oftmals ist die Precision für den Benutzer das wichtigere Maß, da es zumeist nicht auf die Vollständigkeit eines Ergebnisses ankommt, sondern darauf, dass man möglichst wenig Ballast geliefert bekommt (Ausnahme z. B. Patentrecherche, hier kommt es v. a. darauf an, dass kein Dokument übersehen wird).
+            </br></br>Wertebereich: 0 bis 1; ein guter Wert ist 1, ein schlechter Wert ist 0.
+            </br></br>Ist eine Ergebnismenge sehr groß, wird es im Normalfall schwierig <b style="color: #8eacac">a</b> genau zu bestimmen, da nicht unbedingt alle Dokumente gesichtet werden können. Daher wird die Ergebnismenge häufig 'abgeschnitten' (cut off).
+              Um die Sortierleistung eines Ranking-Systems zu beurteilen, reicht Precision alleine nicht aus: man benötigt hierzu einen Recall-Precision-Graph, der Recall und Precision dokumentweise in Beziehung setzt.
+              Recall und Precision sind voneinander abhängig: je vollständiger das Ergebnis ist (besserer Recall), desto mehr Ballast wird zwangsläufig geliefert (schlechtere Precision).</p>
             </div>
             <!-- Hier das Bild noch einfügen-->
             <div class="col-md-3">

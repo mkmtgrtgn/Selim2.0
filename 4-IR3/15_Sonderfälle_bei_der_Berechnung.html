@@ -25,7 +25,7 @@
                     <!--Desktop und Tablet/großer oder mittel-großer Viewport; Klick auf Bild soll dann auf die erste Seite/eine Einfürungsseite führen-->
                     <span class="d-none d-sm-block">
                         <!--Uni-Logo sowie lange Bezweichnung unseres Moduls-->
-                        <img class="d-inline-block align-text-center" src="assets/uni_logo.png" width="70" height="70" alt="Universität Hildesheim" style="padding-right: 20;">
+                        <img class="d-inline-block align-text-center" src="assets/uni_logo.png" id="uni-logo" alt="Universität Hildesheim">
                         SELiM - Evaluierung IR
 
                     </span>
@@ -84,42 +84,42 @@
                     Falls ein Bild vorkommt: 2 columns/col benutzen-->
                 <div class="row justify-content-center">
                     <!--Beispiel mit Text links und Bild rechts-->
-                        <p>Es können Fälle auftreten, bei denen bei der Berechnung von recall oder precision der Nenner zu 0 wird. Da Rechnen hier unmöglich ist, muss man sich überlegen, welche Werte sinnvoller Weise festgelegt werden könnten. <br>
+                        <p>Es können Fälle auftreten, bei denen bei der Berechnung von Recall oder Precision der Nenner zu 0 wird. Da Rechnen hier unmöglich ist, muss man sich überlegen, welche Werte sinnvollerweise festgelegt werden könnten. <br>
                           Man kann die Fälle 'Nullantwort' und 'Leere Antwortmenge' unterscheiden: <br></p>
 
                           <h3><b>Nullantwort</b></h3>
                           <p>
-                            Bei einer <b>Nullantwort</b> werden keine relevanten Dokumente geliefert (aber nicht-relevante!).<br>
+                            Bei einer <b>Nullantwort</b> werden keine relevanten Dokumente geliefert (aber nicht-relevante schon!).<br>
                             <br>Es werden folgende Fälle unterschieden:<br>
                             <br>
 
                             <u> Negative Nullantwort: </u><br>
-                            a=0, b>0, c>0 <br>
+                            <b style="color: #8eacac">a</b> = 0,   <b style="color: #DEC6AC">b</b> > 0,   <b style="color: #596c6c">c</b> > 0 <br>
                             Es werden keine relevanten Dokumente geliefert, obwohl es welche gäbe.
                             In diesem Fall wird nur der Zähler zu 0, und die Maße lassen sich berechnen.
-                            Werte: r=0, p=0 <br>
+                            Werte: r = 0,   p = 0 <br>
 
                             <br><u> Positive Nullantwort: </u><br>
-                            a=0, b>0, c=0 <br>
+                            <b style="color: #8eacac">a</b> = 0,   <b style="color: #DEC6AC">b</b> > 0,   <b style="color: #596c6c">c</b> = 0 <br>
                             Es werden keine relevanten Dokumente geliefert, wobei es auch keine gibt.
-                            Hier wird der Nenner bei der recall-Berechnung zu 0. Nachdem es ohnehin keine relevanten Dokumente gibt und das System sein Bestes getan hat, kann man r=1 festlegen. Die precision kann entweder berechnet werden (p=0), oder man vereinbart - wenn der recall das wichtigere Maß ist - dass sich die precision nach dem recall richtet, und vergibt für p ebenfalls 1. <br>
-                            Werte: r=1, p=1 bzw. p=0 <br>
+                            Hier wird der Nenner bei der Recall-Berechnung zu 0. Nachdem es ohnehin keine relevanten Dokumente gibt und das System sein Bestes getan hat, kann man r = 1 festlegen. Die Precision kann entweder berechnet werden (p = 0), oder man vereinbart - wenn der Recall das wichtigere Maß ist - dass sich die Precision nach dem Recall richtet und vergibt für p ebenfalls 1. <br>
+                            Werte: r = 1,   p = 1 bzw. p = 0 <br>
                           </p>
                           <br> <h3><b>Leere Antwortmenge</b></h3>
                           <p>  In einer <b>Leeren Antwortmenge</b> befinden sich dagegen gar keine Dokumente (weder relevante noch nicht-relevante).<br>
                             <br>Es werden folgende Fälle unterschieden:<br>
 
                             <br><u> Leere Antwortmenge mit relevanten Dokumenten: </u><br>
-                            a=0, b=0, c>0 <br>
+                            <b style="color: #8eacac">a</b> = 0,   <b style="color: #DEC6AC">b</b> = 0,   <b style="color: #596c6c">c</b> > 0 <br>
                             Es werden überhaupt keine Dokumente geliefert, obwohl es relevante gäbe.
-                            Hier wird der Nenner bei der precision zu 0. Für den recall lässt sich r=0 berechnen. Ist der recall der wichtigere Wert, richtet man sich mit dem Wert für die precision nach diesem und setzt dabei p=0. Sieht man davon ab, könnte man p auch auf 1 setzen, da das System keinen Ballast liefert. <br>
-                            Werte: r=0, p=0/p=1 <br>
+                            Hier wird der Nenner bei der precision zu 0. Für den Recall lässt sich r = 0 berechnen. Ist der Recall der wichtigere Wert, richtet man sich bei dem Wert für die Precision nach diesem und setzt dabei p = 0. Sieht man davon ab, könnte man p auch auf 1 setzen, da das System keinen Ballast liefert. <br>
+                            Werte: r = 0,   p = 0 bzw. p = 1 <br>
 
                             <br><u> Leere Antwortmenge ohne relevante Dokumente: </u><br>
-                            a=0, b=0, c=0 <br>
-                            Es werden keine Dokumente geliefert (es gibt ohnehin keine relevanten).
-                            Hier wird der Nenner bei recall und precision zu 0. Nachdem das System beim Auffinden relevanter Dokumente sein Bestes getan hat und auch keinen Ballast liefert, vergibt man die bestmöglichen Werte <br>
-                            Werte: r=1, p=1
+                            <b style="color: #8eacac">a</b> = 0,   <b style="color: #DEC6AC">b</b> = 0,   <b style="color: #596c6c">c</b> = 0 <br>
+                            Es werden keine Dokumente geliefert, wobei es auch keine relevanten gibt.
+                            Hier wird der Nenner bei Recall und Precision zu 0. Nachdem das System beim Auffinden relevanter Dokumente sein Bestes getan hat und auch keinen Ballast geliefert hat, vergibt man die bestmöglichen Werte. <br>
+                            Werte: r = 1,   p = 1
                           </p>
                           <br>
                             <img class="img-fluid" src="assets/Grafik_Relevanz_Sonderfälle.png" alt= "Der Relevanzbegriff" style="height:300px; width:auto;">
