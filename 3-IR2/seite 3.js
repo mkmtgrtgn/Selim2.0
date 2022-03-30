@@ -2,7 +2,7 @@
 
 function myFunction() {
   var a = document.getElementById("Info-1"); //getElementByID such den Inhalt mit der genau passenden ID
-  if (a.style.display === "block") {
+  if (a.style.display === "block") { //Prüft ob der Displaystyle block oder none ist. Bei block wird er auf none gesetzt, bei none auf block.
     a.style.display = "none";
   } else {
     a.style.display = "block";

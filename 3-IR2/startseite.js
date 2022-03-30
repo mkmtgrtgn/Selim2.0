@@ -5,7 +5,7 @@ for (i = 0; i < acc.length; i++) { //sorgt für die Farbumstellungumstellung bei
   acc[i].addEventListener("click", function() {
     this.classList.toggle("active");
     var panel = this.nextElementSibling;
-    if (panel.style.display === "block") { //ändert die Sichtbarkeit, standardmäßig=none
+    if (panel.style.display === "block") { //ändert die Sichtbarkeit, falls style block ist wird er bei einem Klick auf none gesetzt und andersherum. standardmäßig=none
       panel.style.display = "none";
     } else {
       panel.style.display = "block";
