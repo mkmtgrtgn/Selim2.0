@@ -1,26 +1,20 @@
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abschlusstestat</title>
+    <title>16. Koordination der Standardmaße</title>
     <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
-    <!--Dieses Mal auch Quiz CSS importiert-->
     <link rel="stylesheet" href="ir3.css">
-    <link href="quiz.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-
-
 </head>
-
 <body>
     <div class="container-fluid">
 
         <!--Navigationsleiste-->
-        <nav class="navbar navbar-light navbar-expand-lg navbar-fixed-top">
+        <nav class="navbar navbar-light navbar-expand-md navbar-fixed-top">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -28,26 +22,29 @@
                 <!-- Navbar Brand: Logo der Uni Hildesheim, sowie unser Modulname-->
                 <a class="navbar-brand">
                     <!--Desktop und Tablet/großer oder mittel-großer Viewport; Klick auf Bild soll dann auf die erste Seite/eine Einfürungsseite führen-->
-                    <span class="d-none d-sm-block">
+                    <span class="d-none d-sm-block hidden-xs hidden-sm">
                         <!--Uni-Logo sowie lange Bezweichnung unseres Moduls-->
                         <img class="d-inline-block align-text-center" src="assets/uni_logo.png" width="70" height="70" alt="Universität Hildesheim" style="padding-right: 20;">
                         SELiM - Evaluierung IR
-
+                        
                     </span>
                     <!--Handy/kleiner Viewport - Abkürzung der Bezeichnung unseres Viewports-->
-                    <span class="d-sm-none">IR3</span>
+                    <span class="d-sm-none">IR3</span> 
                 </a>
-
+                
                 <!--Menü für verschiedene Module-->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link" href="https://www.uni-hildesheim.de/selim/miniTemplateSystem/index.php">Startseite</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Mein Profil</a>
+                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Alle SELiM Module</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="https://www.uni-hildesheim.de/selim/Modul_GDI/GDI_Einstieg.php">Grundbegriffe IW</a></li>
+                                <li><a class="dropdown-item" href="https://www.uni-hildesheim.de/selim/Modul_GDI/GDI_Einstieg.php" >Grundbegriffe IW</a></li>
                                 <li><a class="dropdown-item" href="https://www.uni-hildesheim.de/selim/Modul_IR/IR_1_bekog_SELIM/inhalt.php">Information Retrieval 1</a></li>
                                 <li><a class="dropdown-item" href="https://www.uni-hildesheim.de/selim/Modul_IR/IR_2_bekog_SELIM/r_inhalt.php">Information Retrieval 2</a></li>
                                 <li><a class="dropdown-item" href="0_Allgemein.html">Evaluierung von IR Systemen</a></li>
@@ -68,127 +65,39 @@
             </div>
         </nav>
 
+        
 
-
-        <!--Seiteninhalt-->
-        <!--Hier müssen die eigentlichen Fragen hin-->
+        <!--Seiteninhalt -->
         <div class="container-fluid">
-            <div id="quiz">
-                <!-- Format:
-
-                        Frage || richtigeAntwort1 ** richtigeAntwort2 ** ... ** richtige AnwtortN || falscheAntwort1 ** falscheAntwort2 **...**falsche AntwortN
-
-                -->
-                <div class="frage">
-                    Was ist die Formel für recall? || r = a / a+c || r = a / a + b ** r = a / a-c
-                </div>
-                <div class="frage">
-                    Welche Aussagen über Precision und Recall sind wahr? (P1,R1) gilt besser als (P2,R2) wenn: || R1 &gt;= R2 und P1 &gt; P2 ** R1 &gt; R2 und P1 &gt;= P2 || R1 &lt;= R2 und P1 &lt; P2 ** R1 &lt; R2 und P1 &gt;= P2 ** R1 &gt; R2 und P1 &lt; P2
-                </div>
-                <div class="frage">
-                    Welches ist die Formal für das Kombinationsmaß e-Maß? || <img src="assets/Grafik_Quiz_Emass1.png" style="height:auto; max-width: 300px"> || <img src="assets/Grafik_Quiz_Emass2.png" style="height:auto; max-width: 300px"> ** <img src="assets/Grafik_Quiz_Emass3.png" style="height:auto; max-width: 300px"> ** <img src="assets/Grafik_Quiz_Emass4.png" style="height:auto; max-width: 300px">
-                </div>
-                <div class="frage">
-                    Welchen Wertebereich hat das e-Maß und wie ist dieser zu interpretieren? || Je niedriger desto besser. ** 0 bis 1 || -1 bis +1 ** Alle positiven rationalen Zahlen. ** Je höher desto besser.
-                </div>
-
-                <div class="frage">
-                    Wozu dient die Relevanz? || Relevanz ist ein entscheidenes Kriterium für die Effektivitätsmessung || Entscheidenes Kriterium für den Benutzerstandpunkt
-                </div>
-
-                <div class="frage">
-                    Welche Aussagen über Precision und Recall sind korrekt? || Je höher die Werte, desto besser das Ergebnis|| Je niedriger die Werte, desto besser das Ergebnis ** Zur Beurteilung sind die Werte von Precision und Recall unerhblich
-                </div>
-
-                <div class="frage">
-                    Welche Eigenschaften sind der Relevanz zuzuordnen? || Relevanz ist schwer auf eine binäre Skala abzubilden ** Relevanz ist Situationsabhängig || Relevanz ist gut messbar ** Relevanz ist eine absolute Größe
-                </div>
-
-                <div class="frage">
-                    Welchen Wertebereich haben Precision und Recall? || 0 bis 1 || 1 bis 10 **  0.2 bis 0.8 ** -1 bis 1
-                </div>
-
-                <div class="frage">
-                  Welche Aussage ist bezüglich der Nullantwort korrekt? || Negative Nullantwort: a=0, b>0, c>0 Es werden keine relevanten Dokumente geliefert, obwohl es welche gäbe.
-                  In diesem Fall wird nur der Zähler zu 0, und die Maße lassen sich berechnen. Werte: r=0, p=0 || Positive Nullantwort: a=0, b>0, c>0 Es werden keine relevanten Dokumente geliefert, obwohl es welche gäbe.
-                  In diesem Fall wird nur der Zähler zu 0, und die Maße lassen sich berechnen. Werte: r=0, p=0
-                </div>
-
-                <div class="frage">
-                Welche Werte sind Recall und Precision bei der Leeren Antwortmenge mit relevanten Dokumenten zuzuordnen? || r=0, p=0/p=1 || r=1, p=0 ** r=1, p=1
-                </div>
-
-                <div class="frage">
-                  Was genau sagt die Relevanz aus? || Die Übereinstimmung von Anfrage und Dokument || Die Anfrage ist besonders wichtig ** Die Anfrage ist nur in einem bestimmten Kontext wichtig
-                </div>
-
-                <div class="frage">
-                  Von was ist die Relevanz maßgeblich abhängig? || Vom Informationsbedürfnis des Nutzenden || Relevanz ist nicht abhängig ** Es kann keine genaue Aussage getroffen werden, von was die Relevanz abhängig ist
-                </div>
-
-                <div class="frage">
-                  Was sagt der Precisionwert aus? || Precision ist die Genauigkeit eines Systems relevante Dokumente zu finden || Precision gibt Auskunft über die Trefferquote eines Systems ** Precision kombiniert Genauigkeit und Trefferquote
-                </div>
-
-                <div class="frage">
-                  Warum ist die Betrachtung des Benutzerstandpunktes wichtig? || Der Benutzerstandpunkt gibt Auskunft darüber nach welchen Kriterien Suchende bei der Sichtung der Ergebnisse abbrechen || Der Benutzerstand ist ein systemseitiges Evaluierungsmaß und gibt Auskunft über Standpunkte von Dokumenten ** Der Benutzerstandpunkt bewertet ein System global nach verschiedenen Kriterien
-                </div>
-
-            </div>
-
             <div class="row justify-content-center">
-                <div class="col text-center">
-                    <button type="button" class="button quiz-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                        Abschlusstest starten
-                    </button>
-
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content" id="modalCont">
-
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="staticBackdropLabel">Fragen</h5>
-                                    <!--D-->
-                                    <div id="quiz-close-button"></div>
-                                </div>
-
-                                <div class="modal-body">
-
-                                    <div class="container" id="fragendiv">
-
-                                        <h5 id="qfrage" class="quizfrage">Hierzu gibt es keine Fragen.</h5>
-                                    </div>
-                                    <div class="modal-footer row justify-content-center">
-                                        <button id="quizmaster" onclick="antwortChecken()" type="button" class="button quiz-button">Antwort überprüfen</button>
-                                    </div>
-                                    <div class="row justify-content-md-center">
-                                        <div id="erfolgsnachricht" class="col-md-auto"></div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col md-12">
-                                            <div class="progress">
-                                                <div class="progress-bar progress-bar-striped" role="progressbar" id="fortschritt" style="width: 1%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
+                <div class="col-md-5">
+                    <!--Titel der Seite-->
+                    <div class="row justify-content-center">
+                        <h1>Koordination der Standardmaße</h1>
+                    </div>
+                    <!--Textueller Inhalt zum Thema Koordination der Standardmaße-->
+                    <div class="row justify-content-center">
+                        <p>
+                            Möchte man recall-precision-Paare zweier Systeme vergleichen, gilt, dass (R1, P1) 'besser' ist als (R2, P2), wenn</br></br>
+    
+                            R1 >= R2 & P1 > P2 </br></br>
+    
+                            oder</br></br>
+    
+                            R1 > R2 & P1 >= P2</br></br>
+    
+                            Dabei ist allerdings zu bedenken, dass der Benutzer auch Präferenzen haben kann, die für ihn entweder recall oder precision wichtiger werden lassen. Möchte er sich umfassend und detailliert informieren, ist hoher recall entscheidend. Möchte er möglichst schnell einen Überblick gewinnen, ist gute precision wichtiger. Daher wäre es nützlich, die einzelnen Maße entsprechend gewichten zu können.
+    
+    
+                        </p>
                     </div>
                 </div>
+                <!--Grafik-->
+                <div class="col-md-3 align-self-center">
+                    <img class="img-fluid" src="assets/Grafik_Koordination.svg" alt="Koordination der Standardmaße"></img>
+                </div>
             </div>
-
         </div>
-
-
-
-
-
-
-
-
 
 
 
@@ -199,14 +108,14 @@
                 <div class="btn-group dropup">
 
                     <!--Vorherige Seite-->
-                    <a class="btn text-left btn-lg" href="23_BSP_Uebung_3.html" role="button">
+                    <a class="btn text-left btn-lg" href="15_Sonderfälle_bei_der_Berechnung.html" role="button">
                         <span class="d-none d-lg-block"><i class="bi bi-arrow-left-circle-fill"></i> vorherige Seite</i></span>
-                        <span class="d-lg-none"><i class="bi bi-arrow-left-circle-fill"></i></span>
+                        <span class="d-lg-none"><i class="bi bi-arrow-left-circle-fill"></i></span> 
                     </a>
                     <!-- Derzeitige Seite -->
                     <button type="button" class="btn btn-lg" data-bs-toggle="dropdown" aria-expanded="false">
-                        <span class="d-none d-md-block">Abschlusstestat <i class="bi bi-chevron-compact-up"></i></span>
-                        <span class="d-md-none">Abschluss <i class="bi bi-chevron-compact-up"></i></span>
+                        <span class="d-none d-md-block">16. Koordination der Standardmaße <i class="bi bi-chevron-compact-up"></i></span>
+                        <span class="d-md-none">Seite 16 <i class="bi bi-chevron-compact-up"></i></span>
                     </button>
 
 
@@ -214,134 +123,134 @@
 
                         <li><a class="dropdown-item " href="1_Einordnung_in_das_Thema.html" >
                             <span class="d-none d-md-block">1. Einordnung des Themas</span>
-                            <span class="d-md-none">Seite 1</span>
+                            <span class="d-md-none">Seite 1</span> 
                         </a></li>
                         <!--Link ändern-->
                         <li><a class="dropdown-item" href="2_Wichtige_Begriffe.html" >
                             <span class="d-none d-md-block">2. Wichtige Begriffe</span>
-                            <span class="d-md-none">Seite 2</span>
+                            <span class="d-md-none">Seite 2</span> 
                         </a></li>
                         <!--Link ändern-->
                         <li><a class="dropdown-item" href="3_Begriffszusammenhaenge.html" >
                             <span class="d-none d-md-block">3. Begriffszusammenhänge</span>
-                            <span class="d-md-none">Seite 3</span>
+                            <span class="d-md-none">Seite 3</span> 
                         </a></li>
 
                         <li><a class="dropdown-item" href="4_Allgemeine_Kriterien.html" >
                             <span class="d-none d-md-block">4. Allgemeine Bewertungskriterien</span>
-                            <span class="d-md-none">Seite 4</span>
+                            <span class="d-md-none">Seite 4</span> 
                         </a></li>
 
                         <li><a class="dropdown-item" href="5_Relevanzbegriff.html" >
                             <span class="d-none d-md-block">5. Der Relevanzbegriff</span>
-                            <span class="d-md-none">Seite 5</span>
+                            <span class="d-md-none">Seite 5</span> 
                         </a></li>
 
                         <li><a class="dropdown-item" href="6_Bewertungskriterien_Uebung.html" >
                             <span class="d-none d-md-block">6. Bewertungskriterien: Übungsaufgabe</span>
-                            <span class="d-md-none">Seite 6</span>
+                            <span class="d-md-none">Seite 6</span> 
                         </a></li>
 
                         <li><a class="dropdown-item" href="7_Elementarparameter.html" >
                             <span class="d-none d-md-block">7. Die Elementarparameter</span>
-                            <span class="d-md-none">Seite 7</span>
+                            <span class="d-md-none">Seite 7</span> 
                         </a></li>
 
                         <li><a class="dropdown-item" href="8_Standardmass_Recall.html" >
                             <span class="d-none d-md-block">8. Das Standardmaß "Recall"</span>
-                            <span class="d-md-none">Seite 8</span>
+                            <span class="d-md-none">Seite 8</span> 
                         </a></li>
 
                         <li><a class="dropdown-item" href="9_Standardmass_Precision.html" >
                             <span class="d-none d-md-block">9. Das Standardmaß "Precision"</span>
-                            <span class="d-md-none">Seite 9</span>
+                            <span class="d-md-none">Seite 9</span> 
                         </a></li>
 
                         <li><a class="dropdown-item" href="10_Elementarparameter_Uebung.html" >
                             <span class="d-none d-md-block">10. Elementarparameter: Übungsaufgabe</span>
-                            <span class="d-md-none">´Seite 10</span>
+                            <span class="d-md-none">´Seite 10</span> 
                         </a></li>
 
                         <li><a class="dropdown-item" href="11_Recall_Uebung.html" >
                             <span class="d-none d-md-block">11. Recall: Übungsaufgabe</span>
-                            <span class="d-md-none">Seite 11</span>
+                            <span class="d-md-none">Seite 11</span> 
                         </a></li>
 
                         <li><a class="dropdown-item" href="12_Precision_Uebung.html" >
                             <span class="d-none d-md-block">12. Precision: Übungsaufgabe</i></span>
-                            <span class="d-md-none">Seite 12</span>
+                            <span class="d-md-none">Seite 12</span> 
                         </a></li>
                         <!--Link einfügen-->
                         <li><a class="dropdown-item" href="13_Recall_Precision_Uebungsaufgabe1.html" >
                             <span class="d-none d-md-block">13. R + P: Übungsaufgabe 1</span>
-                            <span class="d-md-none">Seite 13</span>
+                            <span class="d-md-none">Seite 13</span> 
                         </a></li>
                         <!--Link einfügen-->
                         <li><a class="dropdown-item" href="14_Recall_Precision_Uebungsaufgabe2.html" >
                             <span class="d-none d-md-block">14. R + P: Übungsaufgabe 2</span>
-                            <span class="d-md-none">Seite 14</span>
+                            <span class="d-md-none">Seite 14</span> 
                         </a></li>
                         <!--Link einfügen-->
                         <li><a class="dropdown-item" href="15_Sonderfälle_bei_der_Berechnung.html" >
                             <span class="d-none d-md-block">15. Sonderfälle bei der Berechnung</span>
-                            <span class="d-md-none">Seite 15</span>
+                            <span class="d-md-none">Seite 15</span> 
                         </a></li>
 
                         <li><a class="dropdown-item" href="16_Koordination_Standardmasse.html" >
                             <span class="d-none d-md-block">16. Koordination der Standardmaße</span>
-                            <span class="d-md-none">Seite 16</span>
+                            <span class="d-md-none">Seite 16</span> 
                         </a></li>
 
                         <li><a class="dropdown-item" href="17_Kombination_Masszahlen_E_Mass.html" >
                             <span class="d-none d-md-block">17. Kombination der Maßzahlen: e-Maß</span>
-                            <span class="d-md-none">Seite 17</span>
+                            <span class="d-md-none">Seite 17</span> 
                         </a></li>
 
                         <li><a class="dropdown-item" href="18_E_Mass_Uebung_1.html" >
                             <span class="d-none d-md-block">18. e-Maß: Übungsaufgabe 1</span>
-                            <span class="d-md-none">Seite 18</span>
+                            <span class="d-md-none">Seite 18</span> 
                         </a></li>
                         <!--Link einfuegen-->
                         <li><a class="dropdown-item" href="19_E_Mass_Uebung_2.html" >
                             <span class="d-none d-md-block">19. e-Maß: Übungsaufgabe 2</span>
-                            <span class="d-md-none">Seite 19</span>
+                            <span class="d-md-none">Seite 19</span> 
                         </a></li>
-
+            
                         <li><a class="dropdown-item" href="20_Benutzerstandpunk.html" >
                             <span class="d-none d-md-block">20. Benutzerstandpunkt</span>
-                            <span class="d-md-none">Seite 20</span>
+                            <span class="d-md-none">Seite 20</span> 
                         </a></li>
-
+    
                         <li><a class="dropdown-item" href="21_BSP_Uebung_1.html" >
                             <span class="d-none d-md-block">21. Benutzerstandpunkt: Übung 1</span>
-                            <span class="d-md-none">Seite 21 </span>
+                            <span class="d-md-none">Seite 21 </span> 
                         </a></li>
 
                         <li><a class="dropdown-item" href="22_BSP_Uebung_2.html" >
                             <span class="d-none d-md-block">22. Benutzerstandpunkt: Übung 2</span>
-                            <span class="d-md-none">Seite 22</span>
+                            <span class="d-md-none">Seite 22</span> 
                         </a></li>
 
                         <li><a class="dropdown-item" href="23_BSP_Uebung_3.html" >
                             <span class="d-none d-md-block">23. Benutzerstandpunkt: Übung 3</span>
-                            <span class="d-md-none">Seite 23</span>
+                            <span class="d-md-none">Seite 23</span> 
                         </a></li>
 
                         <li><a class="dropdown-item" href="24_Abschlusstestat.html" >
                             <span class="d-none d-md-block">Abschlusstestat</span>
-                            <span class="d-md-none">Seite 24</span>
+                            <span class="d-md-none">Seite 24</span> 
                         </a></li>
-
+                        
                         <li><a class="dropdown-item" href="25_Fazit_Feedback.html" >
                             <span class="d-none d-md-block">Fazit und Feedback</span>
-                            <span class="d-md-none">Seite 25</span>
+                            <span class="d-md-none">Seite 25</span> 
                         </a></li>
 
                     </ul>
 
 
-                    <!--nächste Seite-->
-                    <a class="btn text-left btn-lg" href="25_Fazit_Feedback.html" role="button">
+                        <!--nächste Seite-->
+                    <a class="btn text-left btn-lg" href="17_Kombination_Masszahlen_E_Mass.html" role="button">
                         <span class="d-none d-lg-block"> nächste Seite <i class="bi bi-arrow-right-circle-fill"></i></span>
                         <span class="d-lg-none"><i class="bi bi-arrow-right-circle-fill"></i></span>
                     </a>
@@ -349,12 +258,8 @@
             </div>
         </div>
 
-
-
+    
     </div>
 </body>
-<script src="quiz_dateien/js/bootstrap.bundle.js"></script>
-
-<script src="quiz.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
 </html>
