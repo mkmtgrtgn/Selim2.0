@@ -14,6 +14,10 @@
      <!-- Der Font muss noch importiert werden -->
      <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;600;700&display=swap" rel="stylesheet">
      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <!--Link zur MathJax Java Bibliothek, damit die MathML Formeln im Web richtig dargestellt werden.-->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+	src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
     <div class="container-fluid">
@@ -76,22 +80,123 @@
             <div class="row">
                 <div class="col">
                     <h1>Inverse Dokumenthäufigkeit</h1>
-                    
-                    
-                    <p>Terme, die sehr häufig in einer Dokumentenkollektion vorkommen, erzielen für die Suche keine guten Ergebnisse. Aus diesem Wissen heraus 
-                        geht die Häufigkeit eines Terms in der Kollektion in die Gewichtung mit ein. Man nennt diese</p>
 
-                     <p class="text17"><b>inverse Dokumenthäufigkeit = inverse document frequency = idf</b></p>
-                    
-                    <p>Dazu zählt man zunächst die Dokumente, in denen ein Term vorkommt, um die Dokumenthäufigkeit des Begriffs = idf zu ermitteln.</p> 
-                    <p>Die inverse Dokumenthäufigkeit wird meist mit einem Logarithmus berechnet, um die Effekte extremer Werte abzuwenden.</br>
-                        Folgende Formel zeigt die Berechnug eines idf:</p>
-                    <!--math-Funktion, um Formeln darzustellen-->    
-                    <p class="text172"><b><math> 
-                        <mn>idf = log</mn><mfrac><mi>Anzahl Dokumente der Kollektion</mi><mi>Anzahl der Dokumente mit Term i</mi></mfrac> </math></b></p>    
-                            
-                </div>
-            </div> 
+						<p>
+							Terme, die sehr häufig in einer Dokumentenkollektion vorkommen,
+							erzielen für die Suche keine guten Ergebnisse. Aus diesem Wissen
+							heraus geht die Häufigkeit eines Terms in der Kollektion in die <a
+								href="../6-CSS-GLOSSAR-FRMLS/glossar.html" target="_blank">Gewichtung</a>
+							mit ein. Man nennt diese
+						</p>
+
+						<p class="text17">
+							<a class="nav-link"
+								href="../6-CSS-GLOSSAR-FRMLS/formelsammlung.html">inverse
+								Dokumenthäufigkeit = inverse document frequency = idf</a>
+						</p>
+
+						<p>Dazu zählt man zunächst die Dokumente, in denen ein Term
+							vorkommt, um die Dokumenthäufigkeit des Begriffs = idf zu
+							ermitteln.</p>
+						<p>
+							Die inverse Dokumenthäufigkeit wird meist mit einem Logarithmus
+							berechnet, um die Effekte extremer Werte abzuwenden.</br> Folgende
+							Formel zeigt die Berechnug eines idf:
+						</p>
+						<!--Formel Roccio-->
+						<div id="formel-32">
+							<math display="block">
+                        <mi>i</mi>
+                        <mi>d</mi>
+                            <msub>
+                                <mi>f</mi>
+                                <mi>i</mi>
+                            </msub>
+                            <mo>=</mo>
+                            <mi>log</mi>
+                        <mfrac>
+                            <mrow>
+                                <mi>A</mi>
+                                <mi>n</mi>
+                                <mi>z</mi>
+                                <mi>a</mi>
+                                <mi>h</mi>
+                                <mi>l</mi>
+                                <mo>&#xA0;</mo>
+                                <mi>d</mi>
+                                <mi>e</mi>
+                                <mi>r</mi>
+                                <mo>&#xA0;</mo>
+                                <mi>D</mi>
+                                <mi>o</mi>
+                                <mi>k</mi>
+                                <mi>u</mi>
+                                <mi>m</mi>
+                                <mi>e</mi>
+                                <mi>n</mi>
+                                <mi>t</mi>
+                                <mi>e</mi>
+                                <mo>&#xA0;</mo>
+                                <mi>a</mi>
+                                <mi>l</mi>
+                                <mi>l</mi>
+                                <mi>e</mi>
+                                <mi>r</mi>
+                                <mo>&#xA0;</mo>
+                                <mi>K</mi>
+                                <mi>o</mi>
+                                <mi>l</mi>
+                                <mi>l</mi>
+                                <mi>e</mi>
+                                <mi>k</mi>
+                                <mi>t</mi>
+                                <mi>i</mi>
+                                <mi>o</mi>
+                                <mi>n</mi>
+                                <mi>e</mi>
+                                <mi>n</mi>
+                        </mrow>
+                            <mrow>
+                                <mi>A</mi>
+                                <mi>n</mi>
+                                <mi>z</mi>
+                                <mi>a</mi>
+                                <mi>h</mi>
+                                <mi>l</mi>
+                                <mo>&#xA0;</mo>
+                                <mi>d</mi>
+                                <mi>e</mi>
+                                <mi>r</mi>
+                                <mo>&#xA0;</mo>
+                                <mi>D</mi>
+                                <mi>o</mi>
+                                <mi>k</mi>
+                                <mi>u</mi>
+                                <mi>m</mi>
+                                <mi>e</mi>
+                                <mi>n</mi>
+                                <mi>t</mi>
+                                <mi>e</mi>
+                                <mo>&#xA0;</mo>
+                                <mi>m</mi>
+                                <mi>i</mi>
+                                <mi>t</mi>
+                                <mo>&#xA0;</mo>
+                                <mi>T</mi>
+                                <mi>e</mi>
+                                <mi>r</mi>
+                                <mi>m</mi>
+                                <mi>i</mi>
+                                <mi>n</mi>
+                                <mi>i</mi>
+                            </mrow>
+                        </mfrac>
+                        
+                        </math>
+						</div>
+
+					</div>
+				</div>
                  <!--Fortschrittsanzeige -->
                     <div class="progress">
                         <div class="progress-bar" role="progressbar" aria-valuenow="50"

@@ -14,6 +14,10 @@
      <!-- Der Font muss noch importiert werden -->
      <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;600;700&display=swap" rel="stylesheet">
      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <!--Link zur MathJax Java Bibliothek, damit die MathML Formeln im Web richtig dargestellt werden.-->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+	src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
     <div class="container-fluid">
@@ -76,13 +80,76 @@
             <div class="row">
                 <div class="col">
                     <h1>Relevance Feedback - Methoden</h1>
-                    
-                    
-                    <p>Die übliche Relevance Feedback Methode ist die von Rocchio (Rocchio 1971),<span style="color:red;"> die in Verbindung mit dem Vektor-Raum-Modell genutzt wird. </span> </p>
-                    <div class="imgPage27">   
-                        <img src="images/seite27.png"/>
+
+                    <p>
+                        Die übliche Relevance Feedback Methode ist die von <a
+                            href="../6-CSS-GLOSSAR-FRMLS/formelsammlung.html"
+                            target="_blank">Roccio </a> , die in Verbindung mit dem
+                        Vektor-Raum-Modell genutzt wird.
+                    </p>
+
+                    <!--Formel Roccio-->
+                    <div id="formel-32">
+                        <math display="block">
+                            <msub>
+                                <mi>Q</mi>
+                                <mn>1</mn>
+                            </msub>
+                            <mo>=</mo>
+                            <msub>
+                                <mi>Q</mi>
+                                <mn>0</mn>
+                            </msub>
+                            <mo>+</mo>
+                            <mi>&#x3B2;</mi>
+                            <munderover>
+                                <mo>&#x2211;</mo>
+                                <mrow>
+                                    <mi>i</mi>
+                                    <mo>=</mo>
+                                    <mn>1</mn>
+                                </mrow>
+                                <msub>
+                                    <mi>n</mi>
+                                    <mn>1</mn>
+                                </msub>
+                            </munderover>
+                            <mfrac>
+                                <msub>
+                                    <mi>R</mi>
+                                    <mi>i</mi>
+                                </msub>
+                                <msub>
+                                    <mi>n</mi>
+                                    <mi>i</mi>
+                                </msub>
+                            </mfrac>
+                            <mo>-</mo>
+                            <mi>&#x3B3;</mi>
+                            <munderover>
+                                <mo>&#x2211;</mo>
+                                <mrow>
+                                    <mi>i</mi>
+                                    <mo>=</mo>
+                                    <mn>1</mn>
+                                </mrow>
+                                <msub>
+                                    <mi>n</mi>
+                                    <mn>2</mn>
+                                </msub>
+                            </munderover>
+                            <mfrac>
+                                <msub>
+                                    <mi>S</mi>
+                                    <mi>i</mi>
+                                </msub>
+                                <msub>
+                                    <mi>n</mi>
+                                    <mn>2</mn>
+                                </msub>
+                            </mfrac>       
+                        </math>
                     </div>
-                    
                     <p>wobei:</br>
                         <table class="table27">
                             <tr>
