@@ -603,7 +603,6 @@ div.desc {
     text-align: left;
     outline: none;
     font-size: 15px;
-    transition: 0.4s;
   }
 
   .active, .accordion:hover { 

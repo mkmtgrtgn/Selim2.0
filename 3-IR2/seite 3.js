@@ -1,7 +1,7 @@
 // mit einem Klick wird die Darstellung des Textes geändert. Standardmäßig ist dieser verborgen
 
 function myFunction() {
-  var a = document.getElementById("Info-1");
+  var a = document.getElementById("Info-1"); //getElementByID such den Inhalt mit der genau passenden ID
   if (a.style.display === "block") {
     a.style.display = "none";
   } else {
