@@ -104,6 +104,8 @@ table{
     text-align: center;
 }
 
+
+/**Beschränkungen der Bildergrößen**/
 #venn-diagramm {
     max-height: 450px;
     width: auto;
@@ -112,4 +114,8 @@ table{
     width: 90px; 
     height: 70px;
     padding-right: 20px; 
+}
+
+#ir3_cloud {
+    max-height: 400px;
 }
