@@ -605,9 +605,9 @@ div.desc {
     font-size: 15px;
     transition: 0.4s;
   }
-  
-  .active, .accordion:hover {
-    background-color: #B2D8D8; 
+
+  .active, .accordion:hover { 
+    background-color: #D8EBEB; 
   }
   
   .panel {
