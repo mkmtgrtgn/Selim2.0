@@ -256,6 +256,31 @@ div.desc {
     margin-right: 1%;
 }
 
+#sol8a {
+    margin-left: 2% ;
+}
+#sol8b{
+    margin-left: 2% ;
+} 
+#sol8c{
+    margin-left: 2% ;
+}
+
+@media screen and (max-width:760px) {
+    #sol8a {
+        margin-left: 2%;
+        padding: 0;
+    }
+    #sol8b{
+        margin-left: 2%;
+        padding: 0;
+    } 
+    #sol8c{
+        margin-left: 2%;
+        padding: 0;
+    }
+}
+
 /* für Seite 32, 19*/
 #exampleBox{
     border: solid;
