@@ -76,7 +76,7 @@
                 <div class="row">
                     <div class="col">
                         <form name="formular" method="POST" action="feedbackformular_abgeschickt.php?modul=IR_2_bekog_SELIM">
-                        <h2>Bitte teile uns hier dein Feedback über Selim mit.</h2>
+                        <h2>Bitte teile uns hier deine Meinung über Selim mit.</h2>
                     
                         <fieldset class="formularSet">
                             <legend>Worum handelt es sich bei deinem Feedback?</legend>
@@ -97,20 +97,43 @@
                             <input id="r7" class="right" type="radio" name="wo" value="sonst">
                             <label for="r7">sonstiges</label><br>
                         </fieldset>
-                        
+
+                        <!--persönliche Rückmeldung zum Feedback per Mail 
+                            auskommentiert weil aktuell noch nicht realisierbar
+
                         <fieldset class="formularSet">
                             <legend>Möchtest Du eine Rückmeldung?</legend> 
                             <label class="left" for="tf">Email: </label>   
                             <input id="tf" type="text" name="email"><br>
                         </fieldset>
+                        -->
                         
                         <fieldset class="formularSet">
                             <legend>Und worum geht es?</legend>  
                             <div>Bitte beschreibe hier genau, auf welche Stelle in dem Programm sich dein Feedback bezieht. Bei Fehlern auch, wann sie auftreten.</div>     
                             <textarea style="width:460px;" class="left" name="beschreibung" rows="5" cols="50" wrap="virtual"></textarea><br>
                         </fieldset>
+
+                        <!--ergänzte Fragen zur Fehlereingrenzung-->
+                        <fieldset class="formularSet">
+                            <legend>Geht es um eine fehlerhafte Darstellung? <br>Wenn ja, wähle bitte zutreffendes aus, damit wir den Fehler besser einordnen können:</legend>    
+                            <input id="r8" class="right" type="radio" name="wo" value="Modul">
+                            <label for="r8">Ich habe das Modul am PC/ Laptop bearbeitet.</label><br>
+                            <input id="r9" class="right" type="radio" name="wo" value="Programm">
+                            <label for="r9">Ich habe das Modul am Mobilgerät z.B. Smartphone, Tablet, ... bearbeitet</label><br>
+                            <input id="r10" class="right" type="radio" name="wo" value="sonst">
+                            <label for="r10">weder noch</label><br>
+
+                            <fieldset class="formularSet">
+                                <legend>Welchen Browser hast du verwendet?</legend> 
+                                <label class="left" for="tf">Internet-Browser: </label>   
+                                <input id="tf" type="text" name="browser-name"><br>
+                            </fieldset>
+
+                        </fieldset>
                         
                         <p>
+                            <!--confirm ist wie ein alert aber mit zwei Auswahlmöglichkeiten-->
                             <button type="button" class="btn btn-primary" onclick="confirm('Feedback absenden?')">senden</button>
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vielen Dank!</p>                            
                         </form>
