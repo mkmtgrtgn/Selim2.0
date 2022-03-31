@@ -103,10 +103,18 @@ h1, h2, h3, h4, p, li, button, span, .form-select {
     background-color:  var(--schriftfarbe);
 }
 
-/*Tabellenfarbe*/
+/*Tabellenfarben*/
 table{
-    background-color: var(--containerfarbe) ;
     text-align: center;
+}
+
+thead {
+    background-color: var(--schriftfarbe);
+    color: var(--containerfarbe);
+}
+
+tbody {
+    background-color: var(--containerfarbe) ;
 }
 
 
