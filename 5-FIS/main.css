@@ -2,7 +2,10 @@ body {
     font-family: Quicksand;
     --schriftfarbe:#232B2B;
     --hintergrund: #D8EBEB;
-    --hauptfarbe: #B2D8D8;
+    --hauptfarbe: #B2D8D8; 
+}
+
+table {
     hyphens: auto;
 }
 
