@@ -3,6 +3,7 @@ body {
     --schriftfarbe:#232B2B;
     --hintergrund: #D8EBEB;
     --hauptfarbe: #B2D8D8;
+    hyphens: auto;
 }
 
 #body::-webkit-scrollbar {
