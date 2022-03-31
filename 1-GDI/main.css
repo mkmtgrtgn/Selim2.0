@@ -65,7 +65,7 @@ Hier wollte er die Farbe sonst nicht ändern
 
 #content_lp {
     background-color: var(--hauptfarbe);
-    padding:1%;
+    padding:1vw;
     border:solid rgba(128, 128, 128, 0.42);
     border-radius: 16px;
     display:block;

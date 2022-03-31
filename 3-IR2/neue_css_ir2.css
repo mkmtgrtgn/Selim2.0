@@ -4,6 +4,7 @@ body {
     --containerfarbe: #D8EBEB;
     --verlinkungsfarbe: #DEC6AC;
     --verlinkungaktiv: #8EACAC;
+    overflow-x:hidden;
 }
 
 h1, h2, h3 {

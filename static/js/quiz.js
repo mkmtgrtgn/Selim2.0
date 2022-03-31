@@ -225,6 +225,8 @@ class Fragenkatalog {
             let body = document.getElementById("modalCont");
             let title = document.getElementById("staticBackdropLabel");
             title.innerHTML = "Super, du hast alles richtig beantwortet!";
+            let quizbtn = document.getElementById("quizmaster");
+            quizbtn.className ="btn btn-outline-success disabled";
 
             /* Bei Bedarf das Modal noch anders stylen und Nutzer fragen ob er weitermachen will
             body.className = "modal-content allesrichtig";

@@ -4,6 +4,7 @@ body {
     --hintergrund: #D8EBEB;
     --hauptfarbe: #B2D8D8;
     --verlinkungaktiv: #8EACAC;
+    overflow-x:hidden;
 }
 
 .navbar-brand {
