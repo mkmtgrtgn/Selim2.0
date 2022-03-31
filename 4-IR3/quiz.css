@@ -1,7 +1,10 @@
+/*Hide Quiz*/
 #quiz {
     display:none;
+    
 }
 
+/*Abbtände und Farben und Schriftart für Quizantworten*/
 .quizantwort {
     margin:12px;
     border-radius: 4px;
@@ -9,44 +12,61 @@
     padding:6px 6px 6px 16px ;
     font-size: medium;
     background-color: #D8EBEB;
+    font-family: Quicksand;
+}
+/*Quicksand bei header schrift und Fragenschrift*/
+.modal-title, h5 {
+    font-family: Quicksand;
 }
 
+/*Headerfarbe*/
+.modal-header {
+    background-color: #D8EBEB;
+}
+
+/*Richtige Antworten, die nicht ausgewählt wurden*/
 .wahreAntwort {
     background-color: rgb(212, 250, 212);
     border: none;
 }
 
+/*Farben für falsch ausgewählte Antworten*/
 .falscheAntwort {
     background-color: rgb(221, 161, 171);
     color:rgb(71, 22, 22);
     border: solid 4px rgb(155, 50, 50);
 }
 
+/*Farbe für ausgewählte/locked in Antworten*/
 .selected {
     background-color: #8EACAC;
 }
 
+/*Farben für richtig beantwrotete Antworten*/
 .richtigBeantwortet {
     border: solid 4px rgb(38, 77, 38);
     background-color: rgb(151, 187, 151);
 }
 
+/**/
 .allesrichtig {
     border: solid 2px rgb(38, 77, 38);
     background-color: rgb(151, 187, 151);
 }
 
-
+/*Farbe für korrekt ignorierte Antworten*/
 .richtigIgnoriert {
     border: none;
     background-color: lightgray;
     color: black;
 }
-
+/**Quizbutton schrift und Abstände**/
 .quiz-button {
     margin: 4vw;
+    font-family: Quicksand;
 }
 
+/**Farbe Fortschrittsbalken**/
 .progress-bar {
     background-color:#488048
 }

@@ -1,3 +1,4 @@
+/*Hauptfarben*/
 body {
     font-family: Quicksand;
     --schriftfarbe: #232B2B;
@@ -6,6 +7,8 @@ body {
     --verlinkungaktiv: #8EACAC;
     
 }
+
+/*Abstand zwischen Bootstrap Grid Zeilen*/
 .row {
     padding-top: 1vw;
 }
@@ -26,13 +29,11 @@ body {
     color: var(--verlinkungsfarbe);
 }
 
+
 /**Quicksand**/
 h1, h2, h3, h4, p, li, button, span, .form-select {
     font-family: Quicksand;
 }
-
-
-
 
 
 /**Navigationsleiste**/
@@ -42,7 +43,7 @@ h1, h2, h3, h4, p, li, button, span, .form-select {
     
 
 }
-
+/*Farbe und Position*/
 .navbar {
     background-color: var(--containerfarbe);
     position: sticky;
@@ -50,20 +51,22 @@ h1, h2, h3, h4, p, li, button, span, .form-select {
     margin-right: -1vw;
 }
 
-
+/*Menüpunkt farben und Transition zum sanftem Farbübergang bei Hover*/
 .navbar-nav > li > a{
     color: var(--schriftfarbe);
     transition: color 0.3s;
 }
+/*Moduldropdown einstellungen*/
 .navbar-nav > li > ul{
     background-color: #D8EBEB;
     border-top: none;
     border-bottom: none;
 }
-
+/*Farbe der Menüpunkte bei hover*/
 .navbar-nav > li > a:hover{
     color: var(--verlinkungaktiv);
 }
+/*Hamburger Icon Farbe bei kleinem Bildschirm*/
 .navbar-toggler-icon {
     color: var(--schriftfarbe);
 }
@@ -76,6 +79,7 @@ h1, h2, h3, h4, p, li, button, span, .form-select {
     bottom: 0px;
     background-color: #8EACAC;
 }
+/*Designfehler der alten Seite beheben durch begrenzte Höhe der Seitennavigation*/
 .dropup-navigation {
     max-height: 300px;
     overflow: auto;
@@ -86,7 +90,7 @@ h1, h2, h3, h4, p, li, button, span, .form-select {
 }
 
 
-
+/*"Überprüfen" Buttoneinstellungen*/
 .button {
     padding: 0.5vw;
     border-radius: 10px;
@@ -99,8 +103,9 @@ h1, h2, h3, h4, p, li, button, span, .form-select {
     background-color:  var(--schriftfarbe);
 }
 
+/*Tabellenfarbe*/
 table{
-    background-color: var(--containerfarbe);
+    background-color: var(--containerfarbe) ;
     text-align: center;
 }
 

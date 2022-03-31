@@ -211,7 +211,7 @@ class Fragenkatalog {
                 let title = document.getElementById("staticBackdropLabel");
                 title.innerHTML = "Super, du hast alles richtig beantwortet!";
                 /** IR3 Schließbutton einfügen**/
-                document.querySelector("#quiz-close-button").innerHTML = '"<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>'
+                document.querySelector("#quiz-close-button").innerHTML = '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>'
                 let quizbtn = document.getElementById("quizmaster");
                 let weiter = document.createElement("h6");
                 
